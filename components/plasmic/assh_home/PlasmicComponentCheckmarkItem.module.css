@@ -1,0 +1,98 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.checkItem {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+}
+.checkItem > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.checkItem > :global(.__wab_flex-container) > *,
+.checkItem > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.checkItem > :global(.__wab_flex-container) > picture > img,
+.checkItem
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.freeBox {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-left: calc(0px - 8px);
+  width: calc(100% + 8px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 8px;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #008e84;
+  width: 20px;
+  height: 15px;
+  display: block;
+  flex-shrink: 0;
+}
+.text__weiN9 {
+  display: block;
+  flex-grow: 0;
+  font-size: undefinedpx;
+  letter-spacing: 0em;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  width: auto;
+  font-weight: 700;
+}
+.text___3Jg8R {
+  display: block;
+  flex-grow: 0;
+  font-size: undefinedpx;
+  letter-spacing: 0em;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  width: auto;
+}
+.text__zQz9O {
+  display: block;
+  flex-grow: 0;
+  font-size: undefinedpx;
+  letter-spacing: 0em;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  width: auto;
+}

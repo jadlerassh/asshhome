@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--token-0VMIvMzXAOJQ);
+  min-width: 0;
+  padding: 64px;
+}
+.sliderCarousel:global(.__wab_instance) {
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  object-fit: cover;
+  min-width: 0;
+}
+.freeBox {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+  min-width: 0;
+  min-height: 0;
+  padding: 8px;
+}
+.cardNews:global(.__wab_instance) {
+  height: 390px;
+  width: auto;
+  max-width: 400px;
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+  position: sticky;
+  flex-shrink: 0;
+}

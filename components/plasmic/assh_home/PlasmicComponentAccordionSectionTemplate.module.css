@@ -1,0 +1,237 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.accordion2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+}
+.accordionButton2 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  background: none;
+  box-shadow: 0px 0px 4px 0px #00000033;
+  transition-property: transform, all;
+  transition-duration: 0.3s, 0.3s;
+  transition-timing-function: ease, ease-in-out;
+  transition-delay: 0.3s, 0s;
+  -webkit-transition-property: transform, all;
+  -webkit-transition-timing-function: ease, ease-in-out;
+  -webkit-transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+  border-radius: 5px;
+  padding: 20px;
+}
+.accordionButton2 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: calc(0px - 30px);
+  width: calc(100% + 30px);
+}
+.accordionButton2 > :global(.__wab_flex-container) > *,
+.accordionButton2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.accordionButton2 > :global(.__wab_flex-container) > picture > img,
+.accordionButton2
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 30px;
+}
+.accordionButton2openInteractions_open {
+  box-shadow: none;
+  background: var(--token-Hivuri5dcJVd);
+}
+.root:hover .accordionButton2 {
+  padding-left: 24px;
+}
+.title2 {
+  display: block;
+  flex-grow: 1;
+  font-size: 24px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: var(--token-YOr-x91EUcQe);
+  position: relative;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-delay: 0.3s;
+}
+.title2openInteractions_open {
+  color: var(--token-YLYGEwd03pX3);
+}
+.root:hover .title2 {
+  color: var(--token-WpPBw5f93wEg);
+  transform: translateX(-4px) translateY(0px) translateZ(0px);
+}
+.rootopenInteractions_open:hover .title2openInteractions_open {
+  color: var(--token-YLYGEwd03pX3);
+}
+.freeBox {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  padding: 16px;
+}
+.svg__uwOjn {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-YOr-x91EUcQe);
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+}
+.svgopenInteractions_open__uwOjNdxQpK {
+  color: var(--token-YLYGEwd03pX3);
+  display: none;
+}
+.root:hover .svg__uwOjn {
+  color: var(--token-WpPBw5f93wEg);
+}
+.svg__o6Etn {
+  object-fit: cover;
+  max-width: 100%;
+  color: #fff;
+  width: 20px;
+  height: 4px;
+  position: relative;
+  flex-shrink: 0;
+}
+.svg__gcKq5 {
+  object-fit: cover;
+  max-width: 100%;
+  color: #fff;
+  width: 20px;
+  height: 4px;
+  position: relative;
+  flex-shrink: 0;
+}
+.accordion {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+}
+.accordionopenInteractions_open {
+  display: flex;
+}
+.accordionBody {
+  background: rgba(255, 255, 255, 1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.accordionBody > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 20px);
+  width: calc(100% + 20px);
+}
+.accordionBody > :global(.__wab_flex-container) > *,
+.accordionBody > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.accordionBody > :global(.__wab_flex-container) > picture > img,
+.accordionBody
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 20px;
+}
+.membershipContentGroup {
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: row;
+}
+.membershipContentGroup > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 30px);
+  width: calc(100% + 30px);
+}
+.membershipContentGroup > :global(.__wab_flex-container) > *,
+.membershipContentGroup
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > *,
+.membershipContentGroup > :global(.__wab_flex-container) > picture > img,
+.membershipContentGroup
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 30px;
+}
+.content {
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.content > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 20px);
+  height: calc(100% + 20px);
+}
+.content > :global(.__wab_flex-container) > *,
+.content > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.content > :global(.__wab_flex-container) > picture > img,
+.content
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 20px;
+}
+.paragraph {
+  display: block;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: rgba(51, 51, 51, 1);
+  align-self: stretch;
+  position: relative;
+}

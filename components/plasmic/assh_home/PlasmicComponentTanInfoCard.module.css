@@ -1,0 +1,120 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.freeBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 1320px;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.frame3 {
+  background: rgba(244, 244, 235, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  z-index: -2;
+  min-width: 0;
+  border-radius: 10px;
+  padding: 50px;
+}
+.frame3 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-top: calc(0px - 20px);
+  height: calc(100% + 20px);
+}
+.frame3 > :global(.__wab_flex-container) > *,
+.frame3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame3 > :global(.__wab_flex-container) > picture > img,
+.frame3
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 20px;
+}
+.text__oknoo {
+  display: block;
+  font-size: 40px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 44px;
+  color: rgba(0, 0, 0, 1);
+  position: relative;
+  width: 1220px;
+}
+.text__uyPVi {
+  display: block;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 32px;
+  color: rgba(49, 51, 55, 1);
+  position: relative;
+  width: 800px;
+}
+.group5 {
+  width: 341px;
+  height: auto;
+  display: block;
+  position: absolute;
+  left: auto;
+  top: 40px;
+  z-index: -1;
+  right: 40px;
+  bottom: auto;
+}
+.svg__nwZp9 {
+  object-fit: cover;
+  max-width: 100%;
+  color: #d4dac4;
+  transform: translate(0.00006103515625px, -0.055538177490234375px);
+  width: 134.81219482421875px;
+  height: 252.97628784179688px;
+  display: block;
+  position: absolute;
+  top: 39px;
+  left: 0px;
+}
+.svg___26X7 {
+  object-fit: cover;
+  max-width: 100%;
+  color: #d4dac4;
+  transform: translate(-0.4228515625px, -0.40655517578125px);
+  width: 232.70127868652344px;
+  height: 173.3123321533203px;
+  display: block;
+  position: absolute;
+  top: 171px;
+  left: 98px;
+}
+.svg__ltcno {
+  object-fit: cover;
+  max-width: 100%;
+  color: #d4dac4;
+  transform: translate(0.39038848876953125px, 0.000020205974578857422px);
+  width: 234.60960388183594px;
+  height: 182.9752960205078px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 105px;
+}
