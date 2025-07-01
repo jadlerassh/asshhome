@@ -2005,6 +2005,58 @@
           "cssFilePath": "plasmic/assh_home/PlasmicSectionTitleBar2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "yo4cxXaLxoOm",
+          "name": "ComponentContentfulHtmlLoader",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentContentfulHtmlLoader.jsx",
+          "importSpec": {
+            "modulePath": "ComponentContentfulHtmlLoader.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentContentfulHtmlLoader.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "mj20sYUsPblw",
+          "name": "ComponentLatestMemberNewsCards",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentLatestMemberNewsCards.jsx",
+          "importSpec": {
+            "modulePath": "ComponentLatestMemberNewsCards.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentLatestMemberNewsCards.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "58JBrSEW4yoW",
+          "name": "ComponentQuicklinks",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentQuicklinks.jsx",
+          "importSpec": {
+            "modulePath": "ComponentQuicklinks.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentQuicklinks.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Fbqd2pDdEbk7",
+          "name": "ComponentLeftRightImageContent",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentLeftRightImageContent.jsx",
+          "importSpec": {
+            "modulePath": "ComponentLeftRightImageContent.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentLeftRightImageContent.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2789,6 +2841,11 @@
           "id": "xGqVoGNnd2TC",
           "name": "Column 5",
           "filePath": "../public/plasmic/assh_home/images/column5.jpg"
+        },
+        {
+          "id": "s0aKJO97TgNs",
+          "name": "Column 4",
+          "filePath": "../public/plasmic/assh_home/images/column4.jpg"
         }
       ],
       "indirect": false,

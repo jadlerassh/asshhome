@@ -32,7 +32,8 @@ export const PlasmicComponentArticleCard__VariantProps = new Array();
 export const PlasmicComponentArticleCard__ArgProps = new Array(
   "heading",
   "articleTitle",
-  "linkUrl"
+  "linkUrl",
+  "description"
 );
 
 const $$ = {};
@@ -52,7 +53,9 @@ function PlasmicComponentArticleCard__RenderFunc(props) {
         {
           heading: "Heading",
           articleTitle: "Article Title",
-          linkUrl: "https://www.assh.org"
+          linkUrl: "https://www.assh.org",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -157,15 +160,58 @@ function PlasmicComponentArticleCard__RenderFunc(props) {
             className={classNames(projectcss.all, sty.content2)}
           >
             <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text
+                sty.text__oimki
               )}
             >
-              {"Article Title"}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $props.articleTitle;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Article Title";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
+            </div>
+          </Stack__>
+          <Stack__
+            as={"div"}
+            data-plasmic-name={"content3"}
+            data-plasmic-override={overrides.content3}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.content3)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__ktlV
+              )}
+            >
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $props.description;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Article Title";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
           </Stack__>
         </Stack__>
@@ -182,7 +228,7 @@ const PlasmicDescendants = {
     "category",
     "label",
     "content2",
-    "text"
+    "content3"
   ],
 
   interactionsHover: [
@@ -191,14 +237,14 @@ const PlasmicDescendants = {
     "category",
     "label",
     "content2",
-    "text"
+    "content3"
   ],
 
-  content: ["content", "category", "label", "content2", "text"],
+  content: ["content", "category", "label", "content2", "content3"],
   category: ["category", "label"],
   label: ["label"],
-  content2: ["content2", "text"],
-  text: ["text"]
+  content2: ["content2"],
+  content3: ["content3"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -238,7 +284,7 @@ export const PlasmicComponentArticleCard = Object.assign(
     category: makeNodeComponent("category"),
     label: makeNodeComponent("label"),
     content2: makeNodeComponent("content2"),
-    text: makeNodeComponent("text"),
+    content3: makeNodeComponent("content3"),
     // Metadata about props expected for PlasmicComponentArticleCard
     internalVariantProps: PlasmicComponentArticleCard__VariantProps,
     internalArgProps: PlasmicComponentArticleCard__ArgProps

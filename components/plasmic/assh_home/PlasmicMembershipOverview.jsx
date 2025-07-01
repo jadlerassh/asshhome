@@ -12,6 +12,7 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -21,7 +22,12 @@ import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
 import SectionTitleBar2 from "../../SectionTitleBar2"; // plasmic-import: xL1xlGlXhY87/component
 import ComponentSectionTitle from "../../ComponentSectionTitle"; // plasmic-import: jaOmCC9X_Oxf/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import ComponentContentfulHtmlLoader from "../../ComponentContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import AsshButton from "../../AsshButton"; // plasmic-import: -2HqLDJqJBwh/component
+import ComponentArticleCard from "../../ComponentArticleCard"; // plasmic-import: m6xY8jJvNbEQ/component
+import SectionHighlightSection from "../../SectionHighlightSection"; // plasmic-import: yV5r8KM9AbUW/component
+import ComponentLatestMemberNewsCards from "../../ComponentLatestMemberNewsCards"; // plasmic-import: mj20sYUsPblw/component
+import ComponentQuicklinks from "../../ComponentQuicklinks"; // plasmic-import: 58JBrSEW4yoW/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -154,71 +160,195 @@ function PlasmicMembershipOverview__RenderFunc(props) {
           />
 
           <ComponentSectionTitle
-            data-plasmic-name={"componentSectionTitle"}
-            data-plasmic-override={overrides.componentSectionTitle}
-            className={classNames("__wab_instance", sty.componentSectionTitle)}
+            className={classNames(
+              "__wab_instance",
+              sty.componentSectionTitle__qrBMv
+            )}
             descriptionSection={``}
             title={"Why Join ASSH?"}
           />
 
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
+          <div className={classNames(projectcss.all, sty.freeBox___46LsI)}>
+            <ComponentContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.componentContentfulHtmlLoader__adOak
+              )}
+              title={"Membership Overview - Why Join ASSH?"}
+            />
+          </div>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__ahHX)}
           >
-            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-              (() => {
-                try {
-                  return $queries.getHtmlContent.data.response.items.find(
-                    item =>
-                      item.fields.title ===
-                      "Membership Overview - Why Join ASSH?"
-                  );
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return [];
-                  }
-                  throw e;
-                }
-              })()
-            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-              const currentItem = __plasmic_item_0;
-              const currentIndex = __plasmic_idx_0;
-              return (
-                <Embed
-                  data-plasmic-name={"embedHtml"}
-                  data-plasmic-override={overrides.embedHtml}
-                  className={classNames("__wab_instance", sty.embedHtml)}
-                  code={(() => {
-                    try {
-                      return currentItem.fields.bodyContent;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "<div>Paste your embed code via the right sidebar</div>";
-                      }
-                      throw e;
-                    }
-                  })()}
-                  key={currentIndex}
-                />
-              );
-            })}
-            <div
+            <ComponentSectionTitle
+              className={classNames(
+                "__wab_instance",
+                sty.componentSectionTitle__v748H
+              )}
+              descriptionSection={
+                "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
+              }
+              title={"Who Can Join?"}
+            />
+
+            <AsshButton
+              data-plasmic-name={"asshButton"}
+              data-plasmic-override={overrides.asshButton}
+              className={classNames("__wab_instance", sty.asshButton)}
+              text={"Member Benefits"}
+              textArrowButton={"link"}
+              url={"https://www.assh.org/membership/member-benefits"}
+            />
+
+            <Stack__
+              as={"div"}
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
+              hasGap={true}
               className={classNames(projectcss.all, sty.columns)}
             >
-              <div className={classNames(projectcss.all, sty.column__j7Tpu)} />
-              <div className={classNames(projectcss.all, sty.column__i0Ejc)} />
-              <div className={classNames(projectcss.all, sty.column__nqpw8)} />
-            </div>
-          </div>
+              <div className={classNames(projectcss.all, sty.column__eLVwB)}>
+                <ComponentArticleCard
+                  articleTitle={"Active Member"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.componentArticleCard__zaJCs
+                  )}
+                  description={
+                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                  }
+                  heading={"Membership Type"}
+                  linkUrl={"https://www.assh.org/membership/active-member"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__jMDoN)}>
+                <ComponentArticleCard
+                  articleTitle={"Candidate Member"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.componentArticleCard__qmm9P
+                  )}
+                  description={
+                    "Surgeons within 3 years of completing residency, current fellows, and practicing surgeons up to 5 years."
+                  }
+                  heading={"Membership Type"}
+                  linkUrl={"https://www.assh.org/membership/candidate-member"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__wzcnh)}>
+                <ComponentArticleCard
+                  articleTitle={"International Member"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.componentArticleCard___4JgX
+                  )}
+                  description={
+                    "Hand surgeons residing outside of the U.S. who have been in\u00a0practice minimum\u00a05 years."
+                  }
+                  heading={"Membership Type"}
+                  linkUrl={
+                    "https://www.assh.org/membership/international-member"
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__lXl7W)}>
+                <ComponentArticleCard
+                  articleTitle={"Young International Member"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.componentArticleCard__lvbBe
+                  )}
+                  description={
+                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                  }
+                  heading={"Membership Type"}
+                  linkUrl={"https://www.assh.org/membership/active-member"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__za2Y)}>
+                <ComponentArticleCard
+                  articleTitle={"Affiliate Member"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.componentArticleCard__kggH2
+                  )}
+                  description={
+                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                  }
+                  heading={"Membership Type"}
+                  linkUrl={"https://www.assh.org/membership/active-member"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__pnFh0)}>
+                <ComponentArticleCard
+                  articleTitle={"Supporting Member"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.componentArticleCard__fNk6O
+                  )}
+                  description={
+                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                  }
+                  heading={"Membership Type"}
+                  linkUrl={"https://www.assh.org/membership/active-member"}
+                />
+              </div>
+            </Stack__>
+          </Stack__>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__dwTGs)}
+          >
+            <SectionHighlightSection
+              data-plasmic-name={"sectionHighlightSection"}
+              data-plasmic-override={overrides.sectionHighlightSection}
+              className={classNames(
+                "__wab_instance",
+                sty.sectionHighlightSection
+              )}
+              title={"Membership Overview - Membership Directory"}
+            />
+
+            <ComponentLatestMemberNewsCards
+              data-plasmic-name={"componentLatestMemberNewsCards"}
+              data-plasmic-override={overrides.componentLatestMemberNewsCards}
+              className={classNames(
+                "__wab_instance",
+                sty.componentLatestMemberNewsCards
+              )}
+            />
+
+            <ComponentQuicklinks
+              data-plasmic-name={"componentQuicklinks"}
+              data-plasmic-override={overrides.componentQuicklinks}
+              className={classNames("__wab_instance", sty.componentQuicklinks)}
+            />
+
+            <ComponentSectionTitle
+              className={classNames(
+                "__wab_instance",
+                sty.componentSectionTitle__sfsZm
+              )}
+              descriptionSection={``}
+              title={"Membership Benefits at a Glance"}
+            />
+          </Stack__>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__rT0LT)}
+          >
+            <ComponentContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.componentContentfulHtmlLoader___6Geyx
+              )}
+              title={"Membership Overview - Benefits at a Glance Table"}
+            />
+          </Stack__>
         </div>
       </div>
     </React.Fragment>
@@ -230,18 +360,20 @@ const PlasmicDescendants = {
     "root",
     "sectionAsshHomeMenu",
     "sectionTitleBar2",
-    "componentSectionTitle",
-    "freeBox",
-    "embedHtml",
-    "columns"
+    "asshButton",
+    "columns",
+    "sectionHighlightSection",
+    "componentLatestMemberNewsCards",
+    "componentQuicklinks"
   ],
 
   sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
   sectionTitleBar2: ["sectionTitleBar2"],
-  componentSectionTitle: ["componentSectionTitle"],
-  freeBox: ["freeBox", "embedHtml", "columns"],
-  embedHtml: ["embedHtml"],
-  columns: ["columns"]
+  asshButton: ["asshButton"],
+  columns: ["columns"],
+  sectionHighlightSection: ["sectionHighlightSection"],
+  componentLatestMemberNewsCards: ["componentLatestMemberNewsCards"],
+  componentQuicklinks: ["componentQuicklinks"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -278,10 +410,13 @@ export const PlasmicMembershipOverview = Object.assign(
     // Helper components rendering sub-elements
     sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
     sectionTitleBar2: makeNodeComponent("sectionTitleBar2"),
-    componentSectionTitle: makeNodeComponent("componentSectionTitle"),
-    freeBox: makeNodeComponent("freeBox"),
-    embedHtml: makeNodeComponent("embedHtml"),
+    asshButton: makeNodeComponent("asshButton"),
     columns: makeNodeComponent("columns"),
+    sectionHighlightSection: makeNodeComponent("sectionHighlightSection"),
+    componentLatestMemberNewsCards: makeNodeComponent(
+      "componentLatestMemberNewsCards"
+    ),
+    componentQuicklinks: makeNodeComponent("componentQuicklinks"),
     // Metadata about props expected for PlasmicMembershipOverview
     internalVariantProps: PlasmicMembershipOverview__VariantProps,
     internalArgProps: PlasmicMembershipOverview__ArgProps,

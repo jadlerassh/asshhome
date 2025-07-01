@@ -11,6 +11,7 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
@@ -18,20 +19,20 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import AsshButton from "../../AsshButton"; // plasmic-import: -2HqLDJqJBwh/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicSectionHighlightSection.module.css"; // plasmic-import: yV5r8KM9AbUW/css
-import ContainerIcon from "./icons/PlasmicIcon__Container"; // plasmic-import: LdpaQ2yuf9hP/icon
-import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import: TKWn1DDMMFQp/icon
 
 createPlasmicElementProxy;
 
 export const PlasmicSectionHighlightSection__VariantProps = new Array();
 
-export const PlasmicSectionHighlightSection__ArgProps = new Array();
+export const PlasmicSectionHighlightSection__ArgProps = new Array("title");
 
 const $$ = {};
 
@@ -47,7 +48,9 @@ function PlasmicSectionHighlightSection__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          title: "Membership Overview - Title Card"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -62,6 +65,40 @@ function PlasmicSectionHighlightSection__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const new$Queries = {
+    getImage: usePlasmicDataOp(() => {
+      return {
+        sourceId: "n5sYZavh6xkK4D8BEueUSq",
+        opId: "0c2afc0b-6aa8-47c9-b10b-6228850bafaf",
+        userArgs: {
+          path: [
+            $queries.getHeroContent.data.response.items[0].fields
+              .backgroundImage.sys.id
+          ]
+        },
+        cacheKey: `plasmic.$.0c2afc0b-6aa8-47c9-b10b-6228850bafaf.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    }),
+    getHeroContent: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "84ab1dbe-22a0-4ab0-b1ff-3bd83c164121",
+        userArgs: {
+          params: [$props.title]
+        },
+        cacheKey: `plasmic.$.84ab1dbe-22a0-4ab0-b1ff-3bd83c164121.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsdjBtUr72ZExV()
   });
@@ -98,8 +135,34 @@ function PlasmicSectionHighlightSection__RenderFunc(props) {
             data-plasmic-name={"column"}
             data-plasmic-override={overrides.column}
             className={classNames(projectcss.all, sty.column)}
-          />
-
+          >
+            <PlasmicImg__
+              data-plasmic-name={"img"}
+              data-plasmic-override={overrides.img}
+              alt={""}
+              className={classNames(sty.img)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"auto"}
+              loading={"lazy"}
+              src={(() => {
+                try {
+                  return $queries.getImage.data.response.fields.file.url;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
+                }
+              })()}
+            />
+          </div>
           <Stack__
             as={"div"}
             data-plasmic-name={"frame3"}
@@ -121,7 +184,22 @@ function PlasmicSectionHighlightSection__RenderFunc(props) {
                   sty.text__toxqM
                 )}
               >
-                {"Test Your Knowledge"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getHeroContent.data.response.items[0]
+                        .fields.header;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Test Your Knowledge";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
             </Stack__>
             <div
@@ -131,9 +209,22 @@ function PlasmicSectionHighlightSection__RenderFunc(props) {
                 sty.text__uzl31
               )}
             >
-              {
-                "Sharpen your skills, prepare for recertification, and stay current \u2014 all on your schedule. The ASSH Self-Assessment Exam is your trusted tool for advancing upper extremity expertise with confidence."
-              }
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $queries.getHeroContent.data.response.items[0].fields
+                      .description;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Sharpen your skills, prepare for recertification, and stay current \u2014 all on your schedule. The ASSH Self-Assessment Exam is your trusted tool for advancing upper extremity expertise with confidence.";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
             <Stack__
               as={"div"}
@@ -142,57 +233,40 @@ function PlasmicSectionHighlightSection__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.frame5)}
             >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"buttonPrimaryDark"}
-                data-plasmic-override={overrides.buttonPrimaryDark}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.buttonPrimaryDark)}
-              >
-                {false ? (
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"icon12X12"}
-                    data-plasmic-override={overrides.icon12X12}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.icon12X12)}
-                  >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.svg__eBkg7)}
-                      role={"img"}
-                    />
-                  </Stack__>
-                ) : null}
-                <div
-                  data-plasmic-name={"buttonPrimaryDark2"}
-                  data-plasmic-override={overrides.buttonPrimaryDark2}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.buttonPrimaryDark2
-                  )}
-                >
-                  {"Self-Assessment Exams"}
-                </div>
-                {false ? (
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"icon12X122"}
-                    data-plasmic-override={overrides.icon12X122}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.icon12X122)}
-                  >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.svg__pp3Aq)}
-                      role={"img"}
-                    />
-                  </Stack__>
-                ) : null}
-              </Stack__>
+              <AsshButton
+                data-plasmic-name={"asshButton"}
+                data-plasmic-override={overrides.asshButton}
+                className={classNames("__wab_instance", sty.asshButton)}
+                darkInteractions={"dark"}
+                text={(() => {
+                  try {
+                    return $queries.getHeroContent.data.response.items[0].fields
+                      .cta1Text;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                url={(() => {
+                  try {
+                    return $queries.getHeroContent.data.response.items[0].fields
+                      .cta1Link;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "https://www.assh.org";
+                    }
+                    throw e;
+                  }
+                })()}
+              />
             </Stack__>
           </Stack__>
         </Stack__>
@@ -207,70 +281,40 @@ const PlasmicDescendants = {
     "row",
     "frame2",
     "column",
+    "img",
     "frame3",
     "frame4",
     "frame5",
-    "buttonPrimaryDark",
-    "icon12X12",
-    "buttonPrimaryDark2",
-    "icon12X122"
+    "asshButton"
   ],
 
   row: [
     "row",
     "frame2",
     "column",
+    "img",
     "frame3",
     "frame4",
     "frame5",
-    "buttonPrimaryDark",
-    "icon12X12",
-    "buttonPrimaryDark2",
-    "icon12X122"
+    "asshButton"
   ],
 
   frame2: [
     "frame2",
     "column",
+    "img",
     "frame3",
     "frame4",
     "frame5",
-    "buttonPrimaryDark",
-    "icon12X12",
-    "buttonPrimaryDark2",
-    "icon12X122"
+    "asshButton"
   ],
 
-  column: ["column"],
-  frame3: [
-    "frame3",
-    "frame4",
-    "frame5",
-    "buttonPrimaryDark",
-    "icon12X12",
-    "buttonPrimaryDark2",
-    "icon12X122"
-  ],
-
+  column: ["column", "img"],
+  img: ["img"],
+  frame3: ["frame3", "frame4", "frame5", "asshButton"],
   frame4: ["frame4"],
-  frame5: [
-    "frame5",
-    "buttonPrimaryDark",
-    "icon12X12",
-    "buttonPrimaryDark2",
-    "icon12X122"
-  ],
-
-  buttonPrimaryDark: [
-    "buttonPrimaryDark",
-    "icon12X12",
-    "buttonPrimaryDark2",
-    "icon12X122"
-  ],
-
-  icon12X12: ["icon12X12"],
-  buttonPrimaryDark2: ["buttonPrimaryDark2"],
-  icon12X122: ["icon12X122"]
+  frame5: ["frame5", "asshButton"],
+  asshButton: ["asshButton"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -308,13 +352,11 @@ export const PlasmicSectionHighlightSection = Object.assign(
     row: makeNodeComponent("row"),
     frame2: makeNodeComponent("frame2"),
     column: makeNodeComponent("column"),
+    img: makeNodeComponent("img"),
     frame3: makeNodeComponent("frame3"),
     frame4: makeNodeComponent("frame4"),
     frame5: makeNodeComponent("frame5"),
-    buttonPrimaryDark: makeNodeComponent("buttonPrimaryDark"),
-    icon12X12: makeNodeComponent("icon12X12"),
-    buttonPrimaryDark2: makeNodeComponent("buttonPrimaryDark2"),
-    icon12X122: makeNodeComponent("icon12X122"),
+    asshButton: makeNodeComponent("asshButton"),
     // Metadata about props expected for PlasmicSectionHighlightSection
     internalVariantProps: PlasmicSectionHighlightSection__VariantProps,
     internalArgProps: PlasmicSectionHighlightSection__ArgProps

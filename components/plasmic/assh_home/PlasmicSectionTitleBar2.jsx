@@ -33,15 +33,7 @@ createPlasmicElementProxy;
 
 export const PlasmicSectionTitleBar2__VariantProps = new Array();
 
-export const PlasmicSectionTitleBar2__ArgProps = new Array(
-  "title",
-  "subtitle",
-  "description",
-  "cta1Text",
-  "cta1Link",
-  "cta2Text",
-  "cta2Link"
-);
+export const PlasmicSectionTitleBar2__ArgProps = new Array("title");
 
 const $$ = {};
 
@@ -58,14 +50,7 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          title: "Title Text",
-          subtitle: "This is the subtitle text below the text",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-          cta1Text: "Button 1 Text",
-          cta1Link: "#",
-          cta2Text: "Button 2 Text",
-          cta2Link: "#"
+          title: "Membership Overview - Title Card"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -85,20 +70,27 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
   const new$Queries = {
     getImage: usePlasmicDataOp(() => {
       return {
-        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "0d68a81d-022d-4e35-8e12-05afea449076",
-        userArgs: {},
-        cacheKey: `plasmic.$.0d68a81d-022d-4e35-8e12-05afea449076.$.`,
+        sourceId: "n5sYZavh6xkK4D8BEueUSq",
+        opId: "0c2afc0b-6aa8-47c9-b10b-6228850bafaf",
+        userArgs: {
+          path: [
+            $queries.getHeroContent.data.response.items[0].fields
+              .backgroundImage.sys.id
+          ]
+        },
+        cacheKey: `plasmic.$.0c2afc0b-6aa8-47c9-b10b-6228850bafaf.$.`,
         invalidatedKeys: null,
         roleId: null
       };
     }),
-    getEntryById: usePlasmicDataOp(() => {
+    getHeroContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "0d68a81d-022d-4e35-8e12-05afea449076",
-        userArgs: {},
-        cacheKey: `plasmic.$.0d68a81d-022d-4e35-8e12-05afea449076.$.`,
+        opId: "84ab1dbe-22a0-4ab0-b1ff-3bd83c164121",
+        userArgs: {
+          params: [$props.title]
+        },
+        cacheKey: `plasmic.$.84ab1dbe-22a0-4ab0-b1ff-3bd83c164121.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -147,7 +139,10 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
               >
                 {(() => {
                   try {
-                    return $props.title !== undefined;
+                    return (
+                      $queries.getHeroContent.data.response.items[0].fields
+                        .header !== undefined
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -170,7 +165,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                     <React.Fragment>
                       {(() => {
                         try {
-                          return $props.title;
+                          return $queries.getHeroContent.data.response.items[0]
+                            .fields.header;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -186,7 +182,10 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                 ) : null}
                 {(() => {
                   try {
-                    return $props.subtitle !== undefined;
+                    return (
+                      $queries.getHeroContent.data.response.items[0].fields
+                        .subheader !== undefined
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -207,7 +206,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                     <React.Fragment>
                       {(() => {
                         try {
-                          return $props.subtitle;
+                          return $queries.getHeroContent.data.response.items[0]
+                            .fields.subheader;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -224,7 +224,10 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
               </Stack__>
               {(() => {
                 try {
-                  return $props.description !== undefined;
+                  return (
+                    $queries.getHeroContent.data.response.items[0].fields
+                      .description !== undefined
+                  );
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -245,7 +248,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                   <React.Fragment>
                     {(() => {
                       try {
-                        return $props.description;
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.description;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -268,7 +272,10 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
               >
                 {(() => {
                   try {
-                    return $props.cta1Text !== undefined;
+                    return (
+                      $queries.getHeroContent.data.response.items[0].fields
+                        .cta1Text !== undefined
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -287,7 +294,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                     darkInteractions={"dark"}
                     text={(() => {
                       try {
-                        return $props.cta1Text;
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.cta1Text;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -300,7 +308,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                     })()}
                     url={(() => {
                       try {
-                        return $props.cta1Link;
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.cta1Link;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -315,7 +324,10 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                 ) : null}
                 {(() => {
                   try {
-                    return $props.cta2Text !== undefined;
+                    return (
+                      $queries.getHeroContent.data.response.items[0].fields
+                        .cta2Text !== undefined
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -334,7 +346,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                     darkInteractions={"dark"}
                     text={(() => {
                       try {
-                        return $props.cta2Text;
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.cta2Text;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -347,7 +360,8 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
                     })()}
                     url={(() => {
                       try {
-                        return $props.cta2Link;
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.cta2Link;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -372,14 +386,14 @@ function PlasmicSectionTitleBar2__RenderFunc(props) {
               displayHeight={
                 hasVariant(globalVariants, "screen", "largeDesktop")
                   ? "100%"
-                  : "auto"
+                  : "100%"
               }
               displayMaxHeight={"none"}
               displayMaxWidth={"none"}
               displayMinHeight={"0"}
               displayMinWidth={"0"}
               displayWidth={"100%"}
-              loading={"lazy"}
+              loading={"eager"}
               src={{
                 src: "/plasmic/assh_home/images/column3.jpg",
                 fullWidth: 4096,
