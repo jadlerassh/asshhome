@@ -18,9 +18,8 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import AsshMenuFigmaImport from "../../AsshMenuFigmaImport"; // plasmic-import: HrBwnQh3XfKO/component
-import HeroWithLinksFigmaImport from "../../HeroWithLinksFigmaImport"; // plasmic-import: KrK4IjZZwAsd/component
-import Button from "../../Button"; // plasmic-import: pu4XgqUR8EWd/component
+import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
+import SectionHeroWithLinks from "../../SectionHeroWithLinks"; // plasmic-import: KrK4IjZZwAsd/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -120,49 +119,17 @@ function PlasmicHomepage__RenderFunc(props) {
             sty.asshHome
           )}
         >
-          <AsshMenuFigmaImport
-            data-plasmic-name={"asshMenuFigmaImport"}
-            data-plasmic-override={overrides.asshMenuFigmaImport}
-            className={classNames("__wab_instance", sty.asshMenuFigmaImport)}
+          <SectionAsshHomeMenu
+            data-plasmic-name={"sectionAsshHomeMenu"}
+            data-plasmic-override={overrides.sectionAsshHomeMenu}
+            className={classNames("__wab_instance", sty.sectionAsshHomeMenu)}
           />
 
-          <HeroWithLinksFigmaImport
-            data-plasmic-name={"heroWithLinksFigmaImport"}
-            data-plasmic-override={overrides.heroWithLinksFigmaImport}
-            className={classNames(
-              "__wab_instance",
-              sty.heroWithLinksFigmaImport
-            )}
+          <SectionHeroWithLinks
+            data-plasmic-name={"sectionHeroWithLinks"}
+            data-plasmic-override={overrides.sectionHeroWithLinks}
+            className={classNames("__wab_instance", sty.sectionHeroWithLinks)}
           />
-
-          <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
-          >
-            <div className={classNames(projectcss.all, sty.column__kkK7B)}>
-              <Button
-                data-plasmic-name={"button"}
-                data-plasmic-override={overrides.button}
-                className={classNames("__wab_instance", sty.button)}
-                label={
-                  <div
-                    data-plasmic-name={"text"}
-                    data-plasmic-override={overrides.text}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text
-                    )}
-                  >
-                    {"HTML Content Preview"}
-                  </div>
-                }
-                linkTo={`/HTML-Content`}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__l61C3)} />
-          </div>
         </div>
       </div>
     </React.Fragment>
@@ -170,20 +137,9 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  asshHome: [
-    "asshHome",
-    "asshMenuFigmaImport",
-    "heroWithLinksFigmaImport",
-    "columns",
-    "button",
-    "text"
-  ],
-
-  asshMenuFigmaImport: ["asshMenuFigmaImport"],
-  heroWithLinksFigmaImport: ["heroWithLinksFigmaImport"],
-  columns: ["columns", "button", "text"],
-  button: ["button", "text"],
-  text: ["text"]
+  asshHome: ["asshHome", "sectionAsshHomeMenu", "sectionHeroWithLinks"],
+  sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
+  sectionHeroWithLinks: ["sectionHeroWithLinks"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -218,11 +174,8 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("asshHome"),
   {
     // Helper components rendering sub-elements
-    asshMenuFigmaImport: makeNodeComponent("asshMenuFigmaImport"),
-    heroWithLinksFigmaImport: makeNodeComponent("heroWithLinksFigmaImport"),
-    columns: makeNodeComponent("columns"),
-    button: makeNodeComponent("button"),
-    text: makeNodeComponent("text"),
+    sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
+    sectionHeroWithLinks: makeNodeComponent("sectionHeroWithLinks"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

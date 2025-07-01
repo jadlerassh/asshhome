@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -73,7 +73,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -473,7 +474,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "gLnoj82AzKVVT7qXiqAbHD",
@@ -539,7 +541,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-tabs"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -565,7 +568,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "xfguyo8p9zs8FxMdioQAoN",
@@ -599,7 +603,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-contentful"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -657,7 +662,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -679,7 +685,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -887,7 +894,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -909,7 +917,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "34tvEQuyqfK98iGCjMbawB",
@@ -1099,19 +1108,6 @@
             "modulePath": "CtaRightInfo.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicCtaRightInfo.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "uZtc9KQvjCJf",
-          "name": "SectionUpcomingEvents",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEvents.jsx",
-          "importSpec": {
-            "modulePath": "SectionUpcomingEvents.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEvents.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         },
@@ -1591,32 +1587,6 @@
           "componentType": "component"
         },
         {
-          "id": "HrBwnQh3XfKO",
-          "name": "AsshMenuFigmaImport",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicAsshMenuFigmaImport.jsx",
-          "importSpec": {
-            "modulePath": "AsshMenuFigmaImport.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicAsshMenuFigmaImport.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "KrK4IjZZwAsd",
-          "name": "HeroWithLinksFigmaImport",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicHeroWithLinksFigmaImport.jsx",
-          "importSpec": {
-            "modulePath": "HeroWithLinksFigmaImport.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicHeroWithLinksFigmaImport.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "vxgZAhiQ4GBx",
           "name": "ComponentCalloutBox",
           "type": "managed",
@@ -1743,19 +1713,6 @@
             "modulePath": "ComponentEventInfo.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicComponentEventInfo.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "aDAIm3T_wfOv",
-          "name": "SectionUpcomingEvents2",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEvents2.jsx",
-          "importSpec": {
-            "modulePath": "SectionUpcomingEvents2.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEvents2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         },
@@ -1966,6 +1923,86 @@
             "modulePath": "ComponentMenuEventHighlight.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicComponentMenuEventHighlight.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "HrBwnQh3XfKO",
+          "name": "SectionAsshHomeMenu",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionAsshHomeMenu.jsx",
+          "importSpec": {
+            "modulePath": "SectionAsshHomeMenu.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionAsshHomeMenu.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "KrK4IjZZwAsd",
+          "name": "SectionHeroWithLinks",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHeroWithLinks.jsx",
+          "importSpec": {
+            "modulePath": "SectionHeroWithLinks.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHeroWithLinks.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "aDAIm3T_wfOv",
+          "name": "SectionUpcomingEvents",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEvents.jsx",
+          "importSpec": {
+            "modulePath": "SectionUpcomingEvents.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEvents.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "rK90PZBlpTXX",
+          "name": "MembershipOverview",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicMembershipOverview.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership-overview.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicMembershipOverview.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership-overview"
+        },
+        {
+          "id": "xRdwj8GIe6Bj",
+          "name": "InternalComponentList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicInternalComponentList.jsx",
+          "importSpec": {
+            "modulePath": "../pages/internal-component-list.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicInternalComponentList.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/internal-component-list"
+        },
+        {
+          "id": "xL1xlGlXhY87",
+          "name": "SectionTitleBar2",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionTitleBar2.jsx",
+          "importSpec": {
+            "modulePath": "SectionTitleBar2.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionTitleBar2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -2747,6 +2784,11 @@
           "id": "NAqOhfJ5OhZ8",
           "name": "Frame 7",
           "filePath": "../public/plasmic/assh_home/images/frame7.svg"
+        },
+        {
+          "id": "xGqVoGNnd2TC",
+          "name": "Column 5",
+          "filePath": "../public/plasmic/assh_home/images/column5.jpg"
         }
       ],
       "indirect": false,

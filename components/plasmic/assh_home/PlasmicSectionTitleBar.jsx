@@ -19,6 +19,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import AsshButton from "../../AsshButton"; // plasmic-import: -2HqLDJqJBwh/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -30,7 +31,15 @@ createPlasmicElementProxy;
 
 export const PlasmicSectionTitleBar__VariantProps = new Array();
 
-export const PlasmicSectionTitleBar__ArgProps = new Array();
+export const PlasmicSectionTitleBar__ArgProps = new Array(
+  "title",
+  "subtitle",
+  "description",
+  "cta1Text",
+  "cta1Link",
+  "cta2Text",
+  "cta2Link"
+);
 
 const $$ = {};
 
@@ -46,7 +55,16 @@ function PlasmicSectionTitleBar__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          title: "Title Text",
+          subtitle: "This is the subtitle text below the text",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+          cta1Text: "Button 1 Text",
+          cta1Link: "#",
+          cta2Text: "Button 2 Text",
+          cta2Link: "#"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -134,38 +152,222 @@ function PlasmicSectionTitleBar__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.frame4)}
             >
-              <div
-                data-plasmic-name={"educationCme"}
-                data-plasmic-override={overrides.educationCme}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.educationCme
-                )}
-              >
-                {"Education & CME "}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___8JiBy
-                )}
-              >
-                {"Advance Your Expertise in Hand and Upper Extremity Surgery"}
-              </div>
+              {(() => {
+                try {
+                  return $props.title !== undefined;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  data-plasmic-name={"educationCme"}
+                  data-plasmic-override={overrides.educationCme}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.educationCme
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $props.title;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Education & CME ";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              ) : null}
+              {(() => {
+                try {
+                  return $props.subtitle !== undefined;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___8JiBy
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $props.subtitle;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Advance Your Expertise in Hand and Upper Extremity Surgery";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              ) : null}
             </Stack__>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__fhEn
-              )}
-            >
-              {
-                "ASSH delivers trusted education for every stage of your career from board prep to advanced surgical techniques. All created by leaders in the field."
+            {(() => {
+              try {
+                return $props.description !== undefined;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
               }
-            </div>
+            })() ? (
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__fhEn
+                )}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $props.description;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "ASSH delivers trusted education for every stage of your career from board prep to advanced surgical techniques. All created by leaders in the field.";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
+            ) : null}
+            <Stack__
+              as={"div"}
+              data-plasmic-name={"frame5"}
+              data-plasmic-override={overrides.frame5}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.frame5)}
+            >
+              {(() => {
+                try {
+                  return $props.cta1Text !== undefined;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <AsshButton
+                  className={classNames(
+                    "__wab_instance",
+                    sty.asshButton__imjUu
+                  )}
+                  darkInteractions={"dark"}
+                  text={(() => {
+                    try {
+                      return $props.cta1Text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  url={(() => {
+                    try {
+                      return $props.cta1Link;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "";
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              ) : null}
+              {(() => {
+                try {
+                  return $props.cta2Text !== undefined;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <AsshButton
+                  className={classNames(
+                    "__wab_instance",
+                    sty.asshButton__ekiJa
+                  )}
+                  darkInteractions={"dark"}
+                  text={(() => {
+                    try {
+                      return $props.cta2Text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  url={(() => {
+                    try {
+                      return $props.cta2Link;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "";
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              ) : null}
+            </Stack__>
           </Stack__>
         </Stack__>
         <div
@@ -179,12 +381,32 @@ function PlasmicSectionTitleBar__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "row", "frame2", "frame3", "frame4", "educationCme", "column"],
-  row: ["row", "frame2", "frame3", "frame4", "educationCme", "column"],
-  frame2: ["frame2", "frame3", "frame4", "educationCme"],
-  frame3: ["frame3", "frame4", "educationCme"],
+  root: [
+    "root",
+    "row",
+    "frame2",
+    "frame3",
+    "frame4",
+    "educationCme",
+    "frame5",
+    "column"
+  ],
+
+  row: [
+    "row",
+    "frame2",
+    "frame3",
+    "frame4",
+    "educationCme",
+    "frame5",
+    "column"
+  ],
+
+  frame2: ["frame2", "frame3", "frame4", "educationCme", "frame5"],
+  frame3: ["frame3", "frame4", "educationCme", "frame5"],
   frame4: ["frame4", "educationCme"],
   educationCme: ["educationCme"],
+  frame5: ["frame5"],
   column: ["column"]
 };
 
@@ -225,6 +447,7 @@ export const PlasmicSectionTitleBar = Object.assign(
     frame3: makeNodeComponent("frame3"),
     frame4: makeNodeComponent("frame4"),
     educationCme: makeNodeComponent("educationCme"),
+    frame5: makeNodeComponent("frame5"),
     column: makeNodeComponent("column"),
     // Metadata about props expected for PlasmicSectionTitleBar
     internalVariantProps: PlasmicSectionTitleBar__VariantProps,

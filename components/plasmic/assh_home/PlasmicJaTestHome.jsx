@@ -14,21 +14,10 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateOnMutateForSpec,
-  generateStateOnChangePropForCodeComponents,
-  generateStateValueProp,
-  initializeCodeComponentStates,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import HeroWithCards from "../../HeroWithCards"; // plasmic-import: TLU750rHnB5j/component
-import IntroSection from "../../IntroSection"; // plasmic-import: NIscwYrOYRIH/component
-import SectionUpcomingEvents from "../../SectionUpcomingEvents"; // plasmic-import: uZtc9KQvjCJf/component
-import CardListNews from "../../CardListNews"; // plasmic-import: fVCU9z4VJi06/component
-import { RichTable } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-table";
-import { tableHelpers as RichTable_Helpers } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-table";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -71,46 +60,6 @@ function PlasmicJaTestHome__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "table.selectedRowKey",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        onMutate: generateOnMutateForSpec("selectedRowKey", RichTable_Helpers)
-      },
-      {
-        path: "table.selectedRow",
-        type: "private",
-        variableType: "object",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        onMutate: generateOnMutateForSpec("selectedRow", RichTable_Helpers)
-      },
-      {
-        path: "table.selectedRows",
-        type: "private",
-        variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        onMutate: generateOnMutateForSpec("selectedRows", RichTable_Helpers)
-      },
-      {
-        path: "table.selectedRowKeys",
-        type: "private",
-        variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-        onMutate: generateOnMutateForSpec("selectedRowKeys", RichTable_Helpers)
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: $queries,
-    $refs
-  });
   const new$Queries = {
     updatesQuery: usePlasmicDataOp(() => {
       return {
@@ -167,147 +116,14 @@ function PlasmicJaTestHome__RenderFunc(props) {
             plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.asshHome
           )}
-        >
-          <HeroWithCards
-            data-plasmic-name={"heroWithCards"}
-            data-plasmic-override={overrides.heroWithCards}
-            className={classNames("__wab_instance", sty.heroWithCards)}
-          />
-
-          <IntroSection
-            className={classNames("__wab_instance", sty.introSection__nbfG)}
-            desc={
-              "ASSH offers educational information, practice resources, and patient materials curated by expert upper extremity surgeons. Check out the newest content for your practice and surgical knowledge."
-            }
-            linkText={"View Education"}
-            linkUrl={"https://www.assh.org/new-education"}
-            showLogoBg={false}
-            title={"Newest Educational Content"}
-          />
-
-          <SectionUpcomingEvents
-            data-plasmic-name={"sectionUpcomingEvents"}
-            data-plasmic-override={overrides.sectionUpcomingEvents}
-            className={classNames("__wab_instance", sty.sectionUpcomingEvents)}
-          />
-
-          <IntroSection
-            bgColor={"var(--token-0VMIvMzXAOJQ)"}
-            className={classNames("__wab_instance", sty.introSection__viP69)}
-            desc={
-              "See the most recent updates and\u00a0news\u00a0items from the\u00a0American\u00a0Foundation for Surgery of the Hand (AFSH), including upcoming deadlines and other key dates"
-            }
-            linkText={"View All News"}
-            linkUrl={"https://www.assh.org/news"}
-            title={"News & Updates"}
-          />
-
-          <CardListNews
-            data-plasmic-name={"cardListNews"}
-            data-plasmic-override={overrides.cardListNews}
-            className={classNames("__wab_instance", sty.cardListNews)}
-          />
-
-          {(() => {
-            const child$Props = {
-              className: classNames("__wab_instance", sty.table),
-              onRowSelectionChanged: async (...eventArgs) => {
-                generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "selectedRowKey",
-                  ["table", "selectedRowKey"],
-                  RichTable_Helpers
-                ).apply(null, eventArgs);
-                generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "selectedRow",
-                  ["table", "selectedRow"],
-                  RichTable_Helpers
-                ).apply(null, eventArgs);
-                generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "selectedRows",
-                  ["table", "selectedRows"],
-                  RichTable_Helpers
-                ).apply(null, eventArgs);
-                generateStateOnChangePropForCodeComponents(
-                  $state,
-                  "selectedRowKeys",
-                  ["table", "selectedRowKeys"],
-                  RichTable_Helpers
-                ).apply(null, eventArgs);
-              },
-              scopeClassName: sty["table__instance"],
-              selectedRowKey: generateStateValueProp($state, [
-                "table",
-                "selectedRowKey"
-              ]),
-              selectedRowKeys: generateStateValueProp($state, [
-                "table",
-                "selectedRowKeys"
-              ]),
-              themeResetClassName: classNames(
-                projectcss.root_reset,
-                projectcss.root_reset_tags,
-                projectcss.plasmic_default_styles,
-                projectcss.plasmic_mixins,
-                projectcss.plasmic_tokens,
-                plasmic_antd_5_hostless_css.plasmic_tokens,
-                plasmic_plasmic_rich_components_css.plasmic_tokens
-              )
-            };
-            initializeCodeComponentStates(
-              $state,
-              [
-                {
-                  name: "selectedRowKey",
-                  plasmicStateName: "table.selectedRowKey"
-                },
-                {
-                  name: "selectedRow",
-                  plasmicStateName: "table.selectedRow"
-                },
-                {
-                  name: "selectedRows",
-                  plasmicStateName: "table.selectedRows"
-                },
-                {
-                  name: "selectedRowKeys",
-                  plasmicStateName: "table.selectedRowKeys"
-                }
-              ],
-
-              [],
-              RichTable_Helpers ?? {},
-              child$Props
-            );
-            return (
-              <RichTable
-                data-plasmic-name={"table"}
-                data-plasmic-override={overrides.table}
-                {...child$Props}
-              />
-            );
-          })()}
-        </div>
+        />
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  asshHome: [
-    "asshHome",
-    "heroWithCards",
-    "sectionUpcomingEvents",
-    "cardListNews",
-    "table"
-  ],
-
-  heroWithCards: ["heroWithCards"],
-  sectionUpcomingEvents: ["sectionUpcomingEvents"],
-  cardListNews: ["cardListNews"],
-  table: ["table"]
+  asshHome: ["asshHome"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -342,10 +158,6 @@ export const PlasmicJaTestHome = Object.assign(
   makeNodeComponent("asshHome"),
   {
     // Helper components rendering sub-elements
-    heroWithCards: makeNodeComponent("heroWithCards"),
-    sectionUpcomingEvents: makeNodeComponent("sectionUpcomingEvents"),
-    cardListNews: makeNodeComponent("cardListNews"),
-    table: makeNodeComponent("table"),
     // Metadata about props expected for PlasmicJaTestHome
     internalVariantProps: PlasmicJaTestHome__VariantProps,
     internalArgProps: PlasmicJaTestHome__ArgProps,

@@ -18,7 +18,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import AsshMenuFigmaImport from "../../AsshMenuFigmaImport"; // plasmic-import: HrBwnQh3XfKO/component
+import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
 import ComponentSectionTitle from "../../ComponentSectionTitle"; // plasmic-import: jaOmCC9X_Oxf/component
 import ComponentTanActionSection from "../../ComponentTanActionSection"; // plasmic-import: YJsN7RAC0P0B/component
 import ComponentQuoteBox from "../../ComponentQuoteBox"; // plasmic-import: pkNfPBeJPFGR/component
@@ -90,10 +90,10 @@ function PlasmicActiveMembership__RenderFunc(props) {
             sty.root
           )}
         >
-          <AsshMenuFigmaImport
-            data-plasmic-name={"asshMenuFigmaImport"}
-            data-plasmic-override={overrides.asshMenuFigmaImport}
-            className={classNames("__wab_instance", sty.asshMenuFigmaImport)}
+          <SectionAsshHomeMenu
+            data-plasmic-name={"sectionAsshHomeMenu"}
+            data-plasmic-override={overrides.sectionAsshHomeMenu}
+            className={classNames("__wab_instance", sty.sectionAsshHomeMenu)}
           />
 
           <div
@@ -152,13 +152,13 @@ function PlasmicActiveMembership__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "asshMenuFigmaImport",
+    "sectionAsshHomeMenu",
     "columns",
     "componentTanActionSection",
     "componentQuoteBox"
   ],
 
-  asshMenuFigmaImport: ["asshMenuFigmaImport"],
+  sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
   columns: ["columns", "componentTanActionSection", "componentQuoteBox"],
   componentTanActionSection: ["componentTanActionSection"],
   componentQuoteBox: ["componentQuoteBox"]
@@ -196,7 +196,7 @@ export const PlasmicActiveMembership = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    asshMenuFigmaImport: makeNodeComponent("asshMenuFigmaImport"),
+    sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
     columns: makeNodeComponent("columns"),
     componentTanActionSection: makeNodeComponent("componentTanActionSection"),
     componentQuoteBox: makeNodeComponent("componentQuoteBox"),
