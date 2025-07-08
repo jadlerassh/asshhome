@@ -24,7 +24,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
-import CardNews from "../../CardNews"; // plasmic-import: bFdWyXkJMAxJ/component
+import ItemNewsCardItem from "../../ItemNewsCardItem"; // plasmic-import: bFdWyXkJMAxJ/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -195,10 +195,13 @@ function PlasmicCardListNews__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.freeBox)}
                   key={currentIndex}
                 >
-                  <CardNews
-                    data-plasmic-name={"cardNews"}
-                    data-plasmic-override={overrides.cardNews}
-                    className={classNames("__wab_instance", sty.cardNews)}
+                  <ItemNewsCardItem
+                    data-plasmic-name={"itemNewsCardItem"}
+                    data-plasmic-override={overrides.itemNewsCardItem}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.itemNewsCardItem
+                    )}
                     entryId={(() => {
                       try {
                         return currentItem.sys.id;
@@ -224,10 +227,10 @@ function PlasmicCardListNews__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "sliderCarousel", "freeBox", "cardNews"],
-  sliderCarousel: ["sliderCarousel", "freeBox", "cardNews"],
-  freeBox: ["freeBox", "cardNews"],
-  cardNews: ["cardNews"]
+  root: ["root", "sliderCarousel", "freeBox", "itemNewsCardItem"],
+  sliderCarousel: ["sliderCarousel", "freeBox", "itemNewsCardItem"],
+  freeBox: ["freeBox", "itemNewsCardItem"],
+  itemNewsCardItem: ["itemNewsCardItem"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -264,7 +267,7 @@ export const PlasmicCardListNews = Object.assign(
     // Helper components rendering sub-elements
     sliderCarousel: makeNodeComponent("sliderCarousel"),
     freeBox: makeNodeComponent("freeBox"),
-    cardNews: makeNodeComponent("cardNews"),
+    itemNewsCardItem: makeNodeComponent("itemNewsCardItem"),
     // Metadata about props expected for PlasmicCardListNews
     internalVariantProps: PlasmicCardListNews__VariantProps,
     internalArgProps: PlasmicCardListNews__ArgProps

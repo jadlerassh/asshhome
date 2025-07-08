@@ -17,15 +17,15 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
-import SectionTitleBar from "../../SectionTitleBar"; // plasmic-import: 8dary0IReKTd/component
-import SectionCmeMoc from "../../SectionCmeMoc"; // plasmic-import: QQidogip4Svc/component
-import SectionHighlightSection from "../../SectionHighlightSection"; // plasmic-import: yV5r8KM9AbUW/component
-import SectionUpcomingEvents from "../../SectionUpcomingEvents"; // plasmic-import: aDAIm3T_wfOv/component
-import ComponentTanInfoCard from "../../ComponentTanInfoCard"; // plasmic-import: KjbcRISpC18Z/component
-import ComponentCheckboxSection from "../../ComponentCheckboxSection"; // plasmic-import: RE6X9KOLcUTN/component
-import SectionBlueMission from "../../SectionBlueMission"; // plasmic-import: oMTPDeBb_fES/component
-import SectionFooter from "../../SectionFooter"; // plasmic-import: l_IC-pMZ1T4O/component
+import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
+import SectionInternalHeroTitleSectionV1 from "../../SectionInternalHeroTitleSectionV1"; // plasmic-import: 8dary0IReKTd/component
+import SectionCmeMocSection from "../../SectionCmeMocSection"; // plasmic-import: QQidogip4Svc/component
+import SectionMidPageHighlightCtaSection from "../../SectionMidPageHighlightCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
+import BlockTanInformationLogoBlock from "../../BlockTanInformationLogoBlock"; // plasmic-import: KjbcRISpC18Z/component
+import SectionCheckboxSectionWithRightText from "../../SectionCheckboxSectionWithRightText"; // plasmic-import: RE6X9KOLcUTN/component
+import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -94,64 +94,78 @@ function PlasmicEducation__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionAsshHomeMenu
-            data-plasmic-name={"sectionAsshHomeMenu"}
-            data-plasmic-override={overrides.sectionAsshHomeMenu}
-            className={classNames("__wab_instance", sty.sectionAsshHomeMenu)}
+          <SectionHomeMenuSection
+            data-plasmic-name={"sectionHomeMenuSection"}
+            data-plasmic-override={overrides.sectionHomeMenuSection}
+            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
           />
 
-          <SectionTitleBar
-            data-plasmic-name={"sectionTitleBar"}
-            data-plasmic-override={overrides.sectionTitleBar}
-            className={classNames("__wab_instance", sty.sectionTitleBar)}
-          />
-
-          <SectionCmeMoc
-            data-plasmic-name={"sectionCmeMoc"}
-            data-plasmic-override={overrides.sectionCmeMoc}
-            className={classNames("__wab_instance", sty.sectionCmeMoc)}
-          />
-
-          <SectionHighlightSection
-            data-plasmic-name={"sectionHighlightSection"}
-            data-plasmic-override={overrides.sectionHighlightSection}
+          <SectionInternalHeroTitleSectionV1
+            data-plasmic-name={"sectionInternalHeroTitleSectionV1"}
+            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV1}
             className={classNames(
               "__wab_instance",
-              sty.sectionHighlightSection
+              sty.sectionInternalHeroTitleSectionV1
             )}
           />
 
-          <SectionUpcomingEvents
-            data-plasmic-name={"sectionUpcomingEvents"}
-            data-plasmic-override={overrides.sectionUpcomingEvents}
-            className={classNames("__wab_instance", sty.sectionUpcomingEvents)}
+          <SectionCmeMocSection
+            data-plasmic-name={"sectionCmeMocSection"}
+            data-plasmic-override={overrides.sectionCmeMocSection}
+            className={classNames("__wab_instance", sty.sectionCmeMocSection)}
           />
 
-          <ComponentTanInfoCard
-            data-plasmic-name={"componentTanInfoCard"}
-            data-plasmic-override={overrides.componentTanInfoCard}
-            className={classNames("__wab_instance", sty.componentTanInfoCard)}
-          />
-
-          <ComponentCheckboxSection
-            data-plasmic-name={"componentCheckboxSection"}
-            data-plasmic-override={overrides.componentCheckboxSection}
+          <SectionMidPageHighlightCtaSection
+            data-plasmic-name={"sectionMidPageHighlightCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageHighlightCtaSection}
             className={classNames(
               "__wab_instance",
-              sty.componentCheckboxSection
+              sty.sectionMidPageHighlightCtaSection
             )}
           />
 
-          <SectionBlueMission
-            data-plasmic-name={"sectionBlueMission"}
-            data-plasmic-override={overrides.sectionBlueMission}
-            className={classNames("__wab_instance", sty.sectionBlueMission)}
+          <SectionUpcomingCouresEventsSection
+            data-plasmic-name={"sectionUpcomingCouresEventsSection"}
+            data-plasmic-override={overrides.sectionUpcomingCouresEventsSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionUpcomingCouresEventsSection
+            )}
           />
 
-          <SectionFooter
-            data-plasmic-name={"sectionFooter"}
-            data-plasmic-override={overrides.sectionFooter}
-            className={classNames("__wab_instance", sty.sectionFooter)}
+          <BlockTanInformationLogoBlock
+            data-plasmic-name={"blockTanInformationLogoBlock"}
+            data-plasmic-override={overrides.blockTanInformationLogoBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockTanInformationLogoBlock
+            )}
+          />
+
+          <SectionCheckboxSectionWithRightText
+            data-plasmic-name={"sectionCheckboxSectionWithRightText"}
+            data-plasmic-override={
+              overrides.sectionCheckboxSectionWithRightText
+            }
+            className={classNames(
+              "__wab_instance",
+              sty.sectionCheckboxSectionWithRightText
+            )}
+          />
+
+          <BlockAsshMissionBlueBlock
+            data-plasmic-name={"blockAsshMissionBlueBlock"}
+            data-plasmic-override={overrides.blockAsshMissionBlueBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockAsshMissionBlueBlock
+            )}
+          />
+
+          <SectionFooterSection
+            data-plasmic-name={"sectionFooterSection"}
+            data-plasmic-override={overrides.sectionFooterSection}
+            className={classNames("__wab_instance", sty.sectionFooterSection)}
           />
         </div>
       </div>
@@ -162,26 +176,26 @@ function PlasmicEducation__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionAsshHomeMenu",
-    "sectionTitleBar",
-    "sectionCmeMoc",
-    "sectionHighlightSection",
-    "sectionUpcomingEvents",
-    "componentTanInfoCard",
-    "componentCheckboxSection",
-    "sectionBlueMission",
-    "sectionFooter"
+    "sectionHomeMenuSection",
+    "sectionInternalHeroTitleSectionV1",
+    "sectionCmeMocSection",
+    "sectionMidPageHighlightCtaSection",
+    "sectionUpcomingCouresEventsSection",
+    "blockTanInformationLogoBlock",
+    "sectionCheckboxSectionWithRightText",
+    "blockAsshMissionBlueBlock",
+    "sectionFooterSection"
   ],
 
-  sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
-  sectionTitleBar: ["sectionTitleBar"],
-  sectionCmeMoc: ["sectionCmeMoc"],
-  sectionHighlightSection: ["sectionHighlightSection"],
-  sectionUpcomingEvents: ["sectionUpcomingEvents"],
-  componentTanInfoCard: ["componentTanInfoCard"],
-  componentCheckboxSection: ["componentCheckboxSection"],
-  sectionBlueMission: ["sectionBlueMission"],
-  sectionFooter: ["sectionFooter"]
+  sectionHomeMenuSection: ["sectionHomeMenuSection"],
+  sectionInternalHeroTitleSectionV1: ["sectionInternalHeroTitleSectionV1"],
+  sectionCmeMocSection: ["sectionCmeMocSection"],
+  sectionMidPageHighlightCtaSection: ["sectionMidPageHighlightCtaSection"],
+  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
+  blockTanInformationLogoBlock: ["blockTanInformationLogoBlock"],
+  sectionCheckboxSectionWithRightText: ["sectionCheckboxSectionWithRightText"],
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
+  sectionFooterSection: ["sectionFooterSection"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -216,15 +230,25 @@ export const PlasmicEducation = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
-    sectionTitleBar: makeNodeComponent("sectionTitleBar"),
-    sectionCmeMoc: makeNodeComponent("sectionCmeMoc"),
-    sectionHighlightSection: makeNodeComponent("sectionHighlightSection"),
-    sectionUpcomingEvents: makeNodeComponent("sectionUpcomingEvents"),
-    componentTanInfoCard: makeNodeComponent("componentTanInfoCard"),
-    componentCheckboxSection: makeNodeComponent("componentCheckboxSection"),
-    sectionBlueMission: makeNodeComponent("sectionBlueMission"),
-    sectionFooter: makeNodeComponent("sectionFooter"),
+    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
+    sectionInternalHeroTitleSectionV1: makeNodeComponent(
+      "sectionInternalHeroTitleSectionV1"
+    ),
+    sectionCmeMocSection: makeNodeComponent("sectionCmeMocSection"),
+    sectionMidPageHighlightCtaSection: makeNodeComponent(
+      "sectionMidPageHighlightCtaSection"
+    ),
+    sectionUpcomingCouresEventsSection: makeNodeComponent(
+      "sectionUpcomingCouresEventsSection"
+    ),
+    blockTanInformationLogoBlock: makeNodeComponent(
+      "blockTanInformationLogoBlock"
+    ),
+    sectionCheckboxSectionWithRightText: makeNodeComponent(
+      "sectionCheckboxSectionWithRightText"
+    ),
+    blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
+    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicEducation
     internalVariantProps: PlasmicEducation__VariantProps,
     internalArgProps: PlasmicEducation__ArgProps,

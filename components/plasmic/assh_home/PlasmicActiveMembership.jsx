@@ -18,10 +18,10 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
-import ComponentSectionTitle from "../../ComponentSectionTitle"; // plasmic-import: jaOmCC9X_Oxf/component
-import ComponentTanActionSection from "../../ComponentTanActionSection"; // plasmic-import: YJsN7RAC0P0B/component
-import ComponentQuoteBox from "../../ComponentQuoteBox"; // plasmic-import: pkNfPBeJPFGR/component
+import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
+import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -90,10 +90,10 @@ function PlasmicActiveMembership__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionAsshHomeMenu
-            data-plasmic-name={"sectionAsshHomeMenu"}
-            data-plasmic-override={overrides.sectionAsshHomeMenu}
-            className={classNames("__wab_instance", sty.sectionAsshHomeMenu)}
+          <SectionHomeMenuSection
+            data-plasmic-name={"sectionHomeMenuSection"}
+            data-plasmic-override={overrides.sectionHomeMenuSection}
+            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
           />
 
           <div
@@ -106,10 +106,10 @@ function PlasmicActiveMembership__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.column__rtgI9)}
             >
-              <ComponentSectionTitle
+              <ItemSectionTitleDescriptionItem
                 className={classNames(
                   "__wab_instance",
-                  sty.componentSectionTitle___3LI2
+                  sty.itemSectionTitleDescriptionItem___3LI2
                 )}
                 descriptionSection={
                   "Active Membership is the core professional designation within the American Society for Surgery of the Hand (ASSH). Reserved for certified specialists committed to excellence in hand and upper extremity care, this membership level offers unparalleled access to education, research, and leadership within the field. Whether you\u2019re looking to deepen your expertise, expand your network, or shape the future of hand surgery, Active Membership is your next step."
@@ -117,29 +117,26 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 title={"Active Membership"}
               />
 
-              <ComponentTanActionSection
-                data-plasmic-name={"componentTanActionSection"}
-                data-plasmic-override={overrides.componentTanActionSection}
-                className={classNames(
-                  "__wab_instance",
-                  sty.componentTanActionSection
-                )}
+              <BlockTanCtaBlock
+                data-plasmic-name={"blockTanCtaBlock"}
+                data-plasmic-override={overrides.blockTanCtaBlock}
+                className={classNames("__wab_instance", sty.blockTanCtaBlock)}
               />
             </Stack__>
             <div className={classNames(projectcss.all, sty.column___86Tcy)}>
-              <ComponentSectionTitle
+              <ItemSectionTitleDescriptionItem
                 className={classNames(
                   "__wab_instance",
-                  sty.componentSectionTitle__paES
+                  sty.itemSectionTitleDescriptionItem__paES
                 )}
                 descriptionSection={``}
                 title={" "}
               />
 
-              <ComponentQuoteBox
-                data-plasmic-name={"componentQuoteBox"}
-                data-plasmic-override={overrides.componentQuoteBox}
-                className={classNames("__wab_instance", sty.componentQuoteBox)}
+              <BlockQuoteBlock
+                data-plasmic-name={"blockQuoteBlock"}
+                data-plasmic-override={overrides.blockQuoteBlock}
+                className={classNames("__wab_instance", sty.blockQuoteBlock)}
               />
             </div>
           </div>
@@ -152,16 +149,16 @@ function PlasmicActiveMembership__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionAsshHomeMenu",
+    "sectionHomeMenuSection",
     "columns",
-    "componentTanActionSection",
-    "componentQuoteBox"
+    "blockTanCtaBlock",
+    "blockQuoteBlock"
   ],
 
-  sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
-  columns: ["columns", "componentTanActionSection", "componentQuoteBox"],
-  componentTanActionSection: ["componentTanActionSection"],
-  componentQuoteBox: ["componentQuoteBox"]
+  sectionHomeMenuSection: ["sectionHomeMenuSection"],
+  columns: ["columns", "blockTanCtaBlock", "blockQuoteBlock"],
+  blockTanCtaBlock: ["blockTanCtaBlock"],
+  blockQuoteBlock: ["blockQuoteBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -196,10 +193,10 @@ export const PlasmicActiveMembership = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
+    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     columns: makeNodeComponent("columns"),
-    componentTanActionSection: makeNodeComponent("componentTanActionSection"),
-    componentQuoteBox: makeNodeComponent("componentQuoteBox"),
+    blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),
+    blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     // Metadata about props expected for PlasmicActiveMembership
     internalVariantProps: PlasmicActiveMembership__VariantProps,
     internalArgProps: PlasmicActiveMembership__ArgProps,

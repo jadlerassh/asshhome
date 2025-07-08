@@ -313,7 +313,7 @@
   width: 235px;
   flex-shrink: 0;
 }
-.menuSection:global(.__wab_instance):global(.__wab_instance) {
+.sectionMenuSection:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
 }
 .column__iHa6R {

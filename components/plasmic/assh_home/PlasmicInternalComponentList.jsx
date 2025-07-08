@@ -17,10 +17,10 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
-import SectionHeroWithLinks from "../../SectionHeroWithLinks"; // plasmic-import: KrK4IjZZwAsd/component
-import SectionTitleBar from "../../SectionTitleBar"; // plasmic-import: 8dary0IReKTd/component
-import SectionUpcomingEvents from "../../SectionUpcomingEvents"; // plasmic-import: aDAIm3T_wfOv/component
+import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
+import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
+import SectionInternalHeroTitleSectionV1 from "../../SectionInternalHeroTitleSectionV1"; // plasmic-import: 8dary0IReKTd/component
+import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -99,10 +99,10 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"SECTION: ASSH Home Menu"}
           </h1>
-          <SectionAsshHomeMenu
-            data-plasmic-name={"sectionAsshHomeMenu"}
-            data-plasmic-override={overrides.sectionAsshHomeMenu}
-            className={classNames("__wab_instance", sty.sectionAsshHomeMenu)}
+          <SectionHomeMenuSection
+            data-plasmic-name={"sectionHomeMenuSection"}
+            data-plasmic-override={overrides.sectionHomeMenuSection}
+            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
           />
 
           <h1
@@ -115,10 +115,13 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"SECTION: Hero with Links"}
           </h1>
-          <SectionHeroWithLinks
-            data-plasmic-name={"sectionHeroWithLinks"}
-            data-plasmic-override={overrides.sectionHeroWithLinks}
-            className={classNames("__wab_instance", sty.sectionHeroWithLinks)}
+          <SectionHomeHeroBannerWithLinkItems
+            data-plasmic-name={"sectionHomeHeroBannerWithLinkItems"}
+            data-plasmic-override={overrides.sectionHomeHeroBannerWithLinkItems}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionHomeHeroBannerWithLinkItems
+            )}
           />
 
           <h1
@@ -131,10 +134,13 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"SECTION: Title Bar"}
           </h1>
-          <SectionTitleBar
-            data-plasmic-name={"sectionTitleBar"}
-            data-plasmic-override={overrides.sectionTitleBar}
-            className={classNames("__wab_instance", sty.sectionTitleBar)}
+          <SectionInternalHeroTitleSectionV1
+            data-plasmic-name={"sectionInternalHeroTitleSectionV1"}
+            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV1}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionInternalHeroTitleSectionV1
+            )}
           />
 
           <h1
@@ -147,10 +153,13 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"SECTION: Upcoming Events"}
           </h1>
-          <SectionUpcomingEvents
-            data-plasmic-name={"sectionUpcomingEvents"}
-            data-plasmic-override={overrides.sectionUpcomingEvents}
-            className={classNames("__wab_instance", sty.sectionUpcomingEvents)}
+          <SectionUpcomingCouresEventsSection
+            data-plasmic-name={"sectionUpcomingCouresEventsSection"}
+            data-plasmic-override={overrides.sectionUpcomingCouresEventsSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionUpcomingCouresEventsSection
+            )}
           />
         </div>
       </div>
@@ -161,16 +170,16 @@ function PlasmicInternalComponentList__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionAsshHomeMenu",
-    "sectionHeroWithLinks",
-    "sectionTitleBar",
-    "sectionUpcomingEvents"
+    "sectionHomeMenuSection",
+    "sectionHomeHeroBannerWithLinkItems",
+    "sectionInternalHeroTitleSectionV1",
+    "sectionUpcomingCouresEventsSection"
   ],
 
-  sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
-  sectionHeroWithLinks: ["sectionHeroWithLinks"],
-  sectionTitleBar: ["sectionTitleBar"],
-  sectionUpcomingEvents: ["sectionUpcomingEvents"]
+  sectionHomeMenuSection: ["sectionHomeMenuSection"],
+  sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
+  sectionInternalHeroTitleSectionV1: ["sectionInternalHeroTitleSectionV1"],
+  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -205,10 +214,16 @@ export const PlasmicInternalComponentList = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
-    sectionHeroWithLinks: makeNodeComponent("sectionHeroWithLinks"),
-    sectionTitleBar: makeNodeComponent("sectionTitleBar"),
-    sectionUpcomingEvents: makeNodeComponent("sectionUpcomingEvents"),
+    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
+    sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
+      "sectionHomeHeroBannerWithLinkItems"
+    ),
+    sectionInternalHeroTitleSectionV1: makeNodeComponent(
+      "sectionInternalHeroTitleSectionV1"
+    ),
+    sectionUpcomingCouresEventsSection: makeNodeComponent(
+      "sectionUpcomingCouresEventsSection"
+    ),
     // Metadata about props expected for PlasmicInternalComponentList
     internalVariantProps: PlasmicInternalComponentList__VariantProps,
     internalArgProps: PlasmicInternalComponentList__ArgProps,

@@ -22,13 +22,13 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseSelect } from "@plasmicpkgs/react-aria/skinny/registerSelect";
-import Label from "../../Label"; // plasmic-import: oHFVXGjvCU8W/component
+import ItemLabelItem from "../../ItemLabelItem"; // plasmic-import: oHFVXGjvCU8W/component
 import { BaseButton } from "@plasmicpkgs/react-aria/skinny/registerButton";
 import { BaseSelectValue } from "@plasmicpkgs/react-aria/skinny/registerSelect";
-import Description from "../../Description"; // plasmic-import: rX1Uufz8DxVo/component
-import MenuPopover from "../../MenuPopover"; // plasmic-import: 2AExRhKGqKWq/component
-import MenuItem from "../../MenuItem"; // plasmic-import: r-76N4JTe5lX/component
-import MenuSection from "../../MenuSection"; // plasmic-import: CdLvQ31o-kaa/component
+import ItemDescriptionItem from "../../ItemDescriptionItem"; // plasmic-import: rX1Uufz8DxVo/component
+import ItemMenuPopoverItem from "../../ItemMenuPopoverItem"; // plasmic-import: 2AExRhKGqKWq/component
+import ItemMenuItem from "../../ItemMenuItem"; // plasmic-import: r-76N4JTe5lX/component
+import SectionMenuSection from "../../SectionMenuSection"; // plasmic-import: CdLvQ31o-kaa/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -171,16 +171,16 @@ function PlasmicSelect__RenderFunc(props) {
       ])}
     >
       {$props.showLabel ? (
-        <Label
-          data-plasmic-name={"label"}
-          data-plasmic-override={overrides.label}
-          className={classNames("__wab_instance", sty.label)}
+        <ItemLabelItem
+          data-plasmic-name={"itemLabelItem"}
+          data-plasmic-override={overrides.itemLabelItem}
+          className={classNames("__wab_instance", sty.itemLabelItem)}
         >
           {renderPlasmicSlot({
             defaultContents: "Label",
             value: args.label
           })}
-        </Label>
+        </ItemLabelItem>
       ) : null}
       <BaseButton
         data-plasmic-name={"ariaButton"}
@@ -229,31 +229,31 @@ function PlasmicSelect__RenderFunc(props) {
         />
       </BaseButton>
       {$props.showDescription ? (
-        <Description
-          data-plasmic-name={"description"}
-          data-plasmic-override={overrides.description}
-          className={classNames("__wab_instance", sty.description)}
+        <ItemDescriptionItem
+          data-plasmic-name={"itemDescriptionItem"}
+          data-plasmic-override={overrides.itemDescriptionItem}
+          className={classNames("__wab_instance", sty.itemDescriptionItem)}
         >
           {renderPlasmicSlot({
             defaultContents: "Description...",
             value: args.description
           })}
-        </Description>
+        </ItemDescriptionItem>
       ) : null}
-      <MenuPopover
-        data-plasmic-name={"menuPopover"}
-        data-plasmic-override={overrides.menuPopover}
-        className={classNames("__wab_instance", sty.menuPopover)}
+      <ItemMenuPopoverItem
+        data-plasmic-name={"itemMenuPopoverItem"}
+        data-plasmic-override={overrides.itemMenuPopoverItem}
+        className={classNames("__wab_instance", sty.itemMenuPopoverItem)}
         menuItems={renderPlasmicSlot({
           defaultContents: (
             <React.Fragment>
-              <MenuItem label={"Item 1"} value={"item1"} />
-              <MenuItem label={"Item 2"} value={"item2"} />
-              <MenuItem label={"Item 3"} value={"item3"} />
-              <MenuSection
+              <ItemMenuItem label={"Item 1"} value={"item1"} />
+              <ItemMenuItem label={"Item 2"} value={"item2"} />
+              <ItemMenuItem label={"Item 3"} value={"item3"} />
+              <SectionMenuSection
                 className={classNames(
                   "__wab_instance",
-                  sty.menuSection___75CDr
+                  sty.sectionMenuSection___75CDr
                 )}
                 header={
                   <div
@@ -268,17 +268,17 @@ function PlasmicSelect__RenderFunc(props) {
                 }
                 items={
                   <React.Fragment>
-                    <MenuItem
+                    <ItemMenuItem
                       label={"Section Item 1"}
                       value={"section-item-1"}
                     />
 
-                    <MenuItem
+                    <ItemMenuItem
                       label={"Section Item 2"}
                       value={"section-item-2"}
                     />
 
-                    <MenuItem
+                    <ItemMenuItem
                       label={"Section Item 3"}
                       value={"section-item-3"}
                     />
@@ -299,22 +299,22 @@ function PlasmicSelect__RenderFunc(props) {
 const PlasmicDescendants = {
   ariaSelect: [
     "ariaSelect",
-    "label",
+    "itemLabelItem",
     "ariaButton",
     "ariaSelectedValue",
     "text",
     "svg",
-    "description",
-    "menuPopover"
+    "itemDescriptionItem",
+    "itemMenuPopoverItem"
   ],
 
-  label: ["label"],
+  itemLabelItem: ["itemLabelItem"],
   ariaButton: ["ariaButton", "ariaSelectedValue", "text", "svg"],
   ariaSelectedValue: ["ariaSelectedValue", "text"],
   text: ["text"],
   svg: ["svg"],
-  description: ["description"],
-  menuPopover: ["menuPopover"]
+  itemDescriptionItem: ["itemDescriptionItem"],
+  itemMenuPopoverItem: ["itemMenuPopoverItem"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -349,13 +349,13 @@ export const PlasmicSelect = Object.assign(
   makeNodeComponent("ariaSelect"),
   {
     // Helper components rendering sub-elements
-    label: makeNodeComponent("label"),
+    itemLabelItem: makeNodeComponent("itemLabelItem"),
     ariaButton: makeNodeComponent("ariaButton"),
     ariaSelectedValue: makeNodeComponent("ariaSelectedValue"),
     text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),
-    description: makeNodeComponent("description"),
-    menuPopover: makeNodeComponent("menuPopover"),
+    itemDescriptionItem: makeNodeComponent("itemDescriptionItem"),
+    itemMenuPopoverItem: makeNodeComponent("itemMenuPopoverItem"),
     // Metadata about props expected for PlasmicSelect
     internalVariantProps: PlasmicSelect__VariantProps,
     internalArgProps: PlasmicSelect__ArgProps

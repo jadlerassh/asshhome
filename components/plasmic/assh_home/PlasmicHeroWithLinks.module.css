@@ -156,11 +156,11 @@
   > img {
   margin-left: 16px;
 }
-.asshButton__xNskv:global(.__wab_instance) {
+.buttonPrimary__xNskv:global(.__wab_instance) {
   max-width: 100%;
   width: auto;
 }
-.asshButton___3SXrJ:global(.__wab_instance) {
+.buttonPrimary___3SXrJ:global(.__wab_instance) {
   max-width: 100%;
   align-self: flex-start;
   width: auto;
@@ -264,9 +264,14 @@
   min-width: 0;
   -webkit-backdrop-filter: none;
 }
-.componentHeroLinkOld__vlXmp:global(.__wab_instance) {
+.blockHeroBannerBlockItemOld__vlXmp:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
+}
+@media (max-width: 1440px) {
+  .blockHeroBannerBlockItemOld__vlXmp:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 .column___0GbUm {
   display: flex;
@@ -283,9 +288,14 @@
   min-width: 0;
   -webkit-backdrop-filter: none;
 }
-.componentHeroLinkOld___6Mhwt:global(.__wab_instance) {
+.blockHeroBannerBlockItemOld___6Mhwt:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
+}
+@media (max-width: 1440px) {
+  .blockHeroBannerBlockItemOld___6Mhwt:global(.__wab_instance) {
+    flex-shrink: 0;
+  }
 }
 .column__tkF4 {
   display: flex;
@@ -302,7 +312,7 @@
   min-width: 0;
   -webkit-backdrop-filter: none;
 }
-.componentHeroLinkOld__sTksh:global(.__wab_instance) {
+.blockHeroBannerBlockItemOld__sTksh:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
 }
@@ -322,7 +332,7 @@
   min-width: 0;
   -webkit-backdrop-filter: none;
 }
-.componentHeroLinkOld__tsMtf:global(.__wab_instance) {
+.blockHeroBannerBlockItemOld__tsMtf:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
 }

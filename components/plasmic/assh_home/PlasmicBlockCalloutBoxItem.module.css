@@ -1,0 +1,246 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+}
+.interactionsDefault {
+  width: 308px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  background: #ffffff00;
+}
+.interactionsDefault > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.interactionsDefault > :global(.__wab_flex-container) > *,
+.interactionsDefault
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > *,
+.interactionsDefault > :global(.__wab_flex-container) > picture > img,
+.interactionsDefault
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+.container {
+  background: rgba(126, 186, 182, 1);
+  height: 230px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  overflow: hidden;
+  flex-direction: column;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  flex-shrink: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
+  border-radius: 10px;
+}
+.container > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: calc(0px - 30px);
+  height: calc(100% + 30px);
+}
+.container > :global(.__wab_flex-container) > *,
+.container > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.container > :global(.__wab_flex-container) > picture > img,
+.container
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 30px;
+}
+.root:hover .container {
+  box-shadow: 0px 10px 20px 0px #00000066;
+  padding-bottom: 10px;
+  transform: none;
+}
+.inner {
+  background: rgba(255, 255, 255, 1);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 20px 25px;
+}
+.inner > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.inner > :global(.__wab_flex-container) > *,
+.inner > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.inner > :global(.__wab_flex-container) > picture > img,
+.inner > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 10px;
+}
+.content {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+}
+.content > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.content > :global(.__wab_flex-container) > *,
+.content > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.content > :global(.__wab_flex-container) > picture > img,
+.content
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+.text__eiTrV {
+  display: block;
+  font-size: 20px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 1);
+  align-self: stretch;
+  position: relative;
+}
+.description {
+  display: block;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(49, 51, 55, 1);
+  align-self: stretch;
+  position: relative;
+}
+.navItemSimple {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  padding-top: 10px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
+  border-radius: 2px;
+}
+.navItemSimple > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: calc(0px - 5px);
+  width: calc(100% + 5px);
+}
+.navItemSimple > :global(.__wab_flex-container) > *,
+.navItemSimple > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.navItemSimple > :global(.__wab_flex-container) > picture > img,
+.navItemSimple
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 5px;
+}
+.text__vZoyQ {
+  display: block;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 20px;
+  color: rgba(0, 142, 132, 1);
+  position: relative;
+}
+.root:hover .text__vZoyQ {
+  color: var(--token-py5R6wetCsNw);
+}
+.icon12X12 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+.icon12X12 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.icon12X12 > :global(.__wab_flex-container) > *,
+.icon12X12 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.icon12X12 > :global(.__wab_flex-container) > picture > img,
+.icon12X12
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: #008e84;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.svg > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.svg > :global(.__wab_flex-container) > *,
+.svg > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.svg > :global(.__wab_flex-container) > picture > img,
+.svg > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: 10px;
+}
+.root:hover .svg {
+  color: var(--token-py5R6wetCsNw);
+}

@@ -24,8 +24,8 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import Select from "../../Select"; // plasmic-import: zB29lZra8Oul/component
-import MenuItem from "../../MenuItem"; // plasmic-import: r-76N4JTe5lX/component
-import MenuSection from "../../MenuSection"; // plasmic-import: CdLvQ31o-kaa/component
+import ItemMenuItem from "../../ItemMenuItem"; // plasmic-import: r-76N4JTe5lX/component
+import SectionMenuSection from "../../SectionMenuSection"; // plasmic-import: CdLvQ31o-kaa/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -368,9 +368,9 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                           const currentItem = __plasmic_item_0;
                           const currentIndex = __plasmic_idx_0;
                           return (
-                            <MenuItem
-                              data-plasmic-name={"menuItem"}
-                              data-plasmic-override={overrides.menuItem}
+                            <ItemMenuItem
+                              data-plasmic-name={"itemMenuItem"}
+                              data-plasmic-override={overrides.itemMenuItem}
                               description={``}
                               key={currentIndex}
                               label={(() => {
@@ -404,12 +404,12 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                             />
                           );
                         })}
-                        <MenuSection
-                          data-plasmic-name={"menuSection"}
-                          data-plasmic-override={overrides.menuSection}
+                        <SectionMenuSection
+                          data-plasmic-name={"sectionMenuSection"}
+                          data-plasmic-override={overrides.sectionMenuSection}
                           className={classNames(
                             "__wab_instance",
-                            sty.menuSection
+                            sty.sectionMenuSection
                           )}
                           header={null}
                           items={null}
@@ -551,8 +551,8 @@ const PlasmicDescendants = {
     "tagline4",
     "tagline3",
     "select",
-    "menuItem",
-    "menuSection",
+    "itemMenuItem",
+    "sectionMenuSection",
     "img"
   ],
 
@@ -565,8 +565,8 @@ const PlasmicDescendants = {
     "tagline4",
     "tagline3",
     "select",
-    "menuItem",
-    "menuSection",
+    "itemMenuItem",
+    "sectionMenuSection",
     "img"
   ],
 
@@ -578,17 +578,17 @@ const PlasmicDescendants = {
     "tagline4",
     "tagline3",
     "select",
-    "menuItem",
-    "menuSection"
+    "itemMenuItem",
+    "sectionMenuSection"
   ],
 
   tagline: ["tagline"],
   tagline2: ["tagline2"],
   tagline4: ["tagline4"],
   tagline3: ["tagline3"],
-  select: ["select", "menuItem", "menuSection"],
-  menuItem: ["menuItem"],
-  menuSection: ["menuSection"],
+  select: ["select", "itemMenuItem", "sectionMenuSection"],
+  itemMenuItem: ["itemMenuItem"],
+  sectionMenuSection: ["sectionMenuSection"],
   img: ["img"]
 };
 
@@ -632,8 +632,8 @@ export const PlasmicHeroIWantTo = Object.assign(
     tagline4: makeNodeComponent("tagline4"),
     tagline3: makeNodeComponent("tagline3"),
     select: makeNodeComponent("select"),
-    menuItem: makeNodeComponent("menuItem"),
-    menuSection: makeNodeComponent("menuSection"),
+    itemMenuItem: makeNodeComponent("itemMenuItem"),
+    sectionMenuSection: makeNodeComponent("sectionMenuSection"),
     img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicHeroIWantTo
     internalVariantProps: PlasmicHeroIWantTo__VariantProps,

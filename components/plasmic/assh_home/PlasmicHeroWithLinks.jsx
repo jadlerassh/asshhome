@@ -21,8 +21,8 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import AsshButton from "../../AsshButton"; // plasmic-import: -2HqLDJqJBwh/component
-import ComponentHeroLinkOld from "../../ComponentHeroLinkOld"; // plasmic-import: 4D_-oe1r0Jy9/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
+import BlockHeroBannerBlockItemOld from "../../BlockHeroBannerBlockItemOld"; // plasmic-import: 4D_-oe1r0Jy9/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -205,10 +205,10 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__zYdsI)}
               >
-                <AsshButton
+                <ButtonPrimary
                   className={classNames(
                     "__wab_instance",
-                    sty.asshButton__xNskv
+                    sty.buttonPrimary__xNskv
                   )}
                   darkInteractions={"dark"}
                   text={(() => {
@@ -241,10 +241,10 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                   })()}
                 />
 
-                <AsshButton
+                <ButtonPrimary
                   className={classNames(
                     "__wab_instance",
-                    sty.asshButton___3SXrJ
+                    sty.buttonPrimary___3SXrJ
                   )}
                   darkInteractions={"dark"}
                   text={(() => {
@@ -332,10 +332,10 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.column__uGvR1)}
                     key={currentIndex}
                   >
-                    <ComponentHeroLinkOld
+                    <BlockHeroBannerBlockItemOld
                       className={classNames(
                         "__wab_instance",
-                        sty.componentHeroLinkOld__vlXmp
+                        sty.blockHeroBannerBlockItemOld__vlXmp
                       )}
                       entryId={(() => {
                         try {
@@ -378,10 +378,10 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.column___0GbUm)}
                     key={currentIndex}
                   >
-                    <ComponentHeroLinkOld
+                    <BlockHeroBannerBlockItemOld
                       className={classNames(
                         "__wab_instance",
-                        sty.componentHeroLinkOld___6Mhwt
+                        sty.blockHeroBannerBlockItemOld___6Mhwt
                       )}
                       entryId={(() => {
                         try {
@@ -424,10 +424,10 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.column__tkF4)}
                     key={currentIndex}
                   >
-                    <ComponentHeroLinkOld
+                    <BlockHeroBannerBlockItemOld
                       className={classNames(
                         "__wab_instance",
-                        sty.componentHeroLinkOld__sTksh
+                        sty.blockHeroBannerBlockItemOld__sTksh
                       )}
                       entryId={(() => {
                         try {
@@ -469,10 +469,10 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.column__jVhcG)}
                     key={currentIndex}
                   >
-                    <ComponentHeroLinkOld
+                    <BlockHeroBannerBlockItemOld
                       className={classNames(
                         "__wab_instance",
-                        sty.componentHeroLinkOld__tsMtf
+                        sty.blockHeroBannerBlockItemOld__tsMtf
                       )}
                       entryId={(() => {
                         try {

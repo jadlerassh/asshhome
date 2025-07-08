@@ -18,8 +18,11 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import SectionAsshHomeMenu from "../../SectionAsshHomeMenu"; // plasmic-import: HrBwnQh3XfKO/component
-import SectionHeroWithLinks from "../../SectionHeroWithLinks"; // plasmic-import: KrK4IjZZwAsd/component
+import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
+import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
+import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
+import CardListLatestAsshNewsNoDescription from "../../CardListLatestAsshNewsNoDescription"; // plasmic-import: U6mPAYwUm4oe/component
+import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -63,12 +66,12 @@ function PlasmicHomepage__RenderFunc(props) {
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
-    updatesQuery: usePlasmicDataOp(() => {
+    getHtmlContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "cd78a920-c2ba-4464-81cc-cbd12c3ae506",
+        opId: "841e6ff4-f700-43aa-906b-ca1b0e021335",
         userArgs: {},
-        cacheKey: `plasmic.$.cd78a920-c2ba-4464-81cc-cbd12c3ae506.$.`,
+        cacheKey: `plasmic.$.841e6ff4-f700-43aa-906b-ca1b0e021335.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -119,16 +122,67 @@ function PlasmicHomepage__RenderFunc(props) {
             sty.asshHome
           )}
         >
-          <SectionAsshHomeMenu
-            data-plasmic-name={"sectionAsshHomeMenu"}
-            data-plasmic-override={overrides.sectionAsshHomeMenu}
-            className={classNames("__wab_instance", sty.sectionAsshHomeMenu)}
+          <SectionHomeMenuSection
+            data-plasmic-name={"sectionHomeMenuSection"}
+            data-plasmic-override={overrides.sectionHomeMenuSection}
+            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
           />
 
-          <SectionHeroWithLinks
-            data-plasmic-name={"sectionHeroWithLinks"}
-            data-plasmic-override={overrides.sectionHeroWithLinks}
-            className={classNames("__wab_instance", sty.sectionHeroWithLinks)}
+          <SectionHomeHeroBannerWithLinkItems
+            data-plasmic-name={"sectionHomeHeroBannerWithLinkItems"}
+            data-plasmic-override={overrides.sectionHomeHeroBannerWithLinkItems}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionHomeHeroBannerWithLinkItems
+            )}
+          />
+
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
+            >
+              <div
+                data-plasmic-name={"column"}
+                data-plasmic-override={overrides.column}
+                className={classNames(projectcss.all, sty.column)}
+              >
+                <CardListLatestAsshNewsCardList
+                  data-plasmic-name={"cardListLatestAsshNewsCardList"}
+                  data-plasmic-override={
+                    overrides.cardListLatestAsshNewsCardList
+                  }
+                  className={classNames(
+                    "__wab_instance",
+                    sty.cardListLatestAsshNewsCardList
+                  )}
+                />
+
+                <CardListLatestAsshNewsNoDescription
+                  data-plasmic-name={"cardListLatestAsshNewsNoDescription"}
+                  data-plasmic-override={
+                    overrides.cardListLatestAsshNewsNoDescription
+                  }
+                  className={classNames(
+                    "__wab_instance",
+                    sty.cardListLatestAsshNewsNoDescription
+                  )}
+                />
+              </div>
+            </div>
+          </div>
+          <BlockAsshMissionBlueBlock
+            data-plasmic-name={"blockAsshMissionBlueBlock"}
+            data-plasmic-override={overrides.blockAsshMissionBlueBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockAsshMissionBlueBlock
+            )}
           />
         </div>
       </div>
@@ -137,9 +191,44 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  asshHome: ["asshHome", "sectionAsshHomeMenu", "sectionHeroWithLinks"],
-  sectionAsshHomeMenu: ["sectionAsshHomeMenu"],
-  sectionHeroWithLinks: ["sectionHeroWithLinks"]
+  asshHome: [
+    "asshHome",
+    "sectionHomeMenuSection",
+    "sectionHomeHeroBannerWithLinkItems",
+    "freeBox",
+    "columns",
+    "column",
+    "cardListLatestAsshNewsCardList",
+    "cardListLatestAsshNewsNoDescription",
+    "blockAsshMissionBlueBlock"
+  ],
+
+  sectionHomeMenuSection: ["sectionHomeMenuSection"],
+  sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
+  freeBox: [
+    "freeBox",
+    "columns",
+    "column",
+    "cardListLatestAsshNewsCardList",
+    "cardListLatestAsshNewsNoDescription"
+  ],
+
+  columns: [
+    "columns",
+    "column",
+    "cardListLatestAsshNewsCardList",
+    "cardListLatestAsshNewsNoDescription"
+  ],
+
+  column: [
+    "column",
+    "cardListLatestAsshNewsCardList",
+    "cardListLatestAsshNewsNoDescription"
+  ],
+
+  cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
+  cardListLatestAsshNewsNoDescription: ["cardListLatestAsshNewsNoDescription"],
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -174,8 +263,20 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("asshHome"),
   {
     // Helper components rendering sub-elements
-    sectionAsshHomeMenu: makeNodeComponent("sectionAsshHomeMenu"),
-    sectionHeroWithLinks: makeNodeComponent("sectionHeroWithLinks"),
+    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
+    sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
+      "sectionHomeHeroBannerWithLinkItems"
+    ),
+    freeBox: makeNodeComponent("freeBox"),
+    columns: makeNodeComponent("columns"),
+    column: makeNodeComponent("column"),
+    cardListLatestAsshNewsCardList: makeNodeComponent(
+      "cardListLatestAsshNewsCardList"
+    ),
+    cardListLatestAsshNewsNoDescription: makeNodeComponent(
+      "cardListLatestAsshNewsNoDescription"
+    ),
+    blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,

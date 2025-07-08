@@ -19,7 +19,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import Button from "../../Button"; // plasmic-import: pu4XgqUR8EWd/component
+import ButtonOld from "../../ButtonOld"; // plasmic-import: pu4XgqUR8EWd/component
 import CommentSection from "../../CommentSection"; // plasmic-import: wXiUMPEVPV1E/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -110,10 +110,10 @@ function PlasmicCodeQuestion__RenderFunc(props) {
           )}
         >
           <div className={classNames(projectcss.all, sty.freeBox__sFdW9)}>
-            <Button
-              data-plasmic-name={"button"}
-              data-plasmic-override={overrides.button}
-              className={classNames("__wab_instance", sty.button)}
+            <ButtonOld
+              data-plasmic-name={"buttonOld"}
+              data-plasmic-override={overrides.buttonOld}
+              className={classNames("__wab_instance", sty.buttonOld)}
               label={
                 <div
                   className={classNames(
@@ -296,8 +296,8 @@ function PlasmicCodeQuestion__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "button", "svg", "h3", "commentSection"],
-  button: ["button", "svg"],
+  root: ["root", "buttonOld", "svg", "h3", "commentSection"],
+  buttonOld: ["buttonOld", "svg"],
   svg: ["svg"],
   h3: ["h3"],
   commentSection: ["commentSection"]
@@ -335,7 +335,7 @@ export const PlasmicCodeQuestion = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    button: makeNodeComponent("button"),
+    buttonOld: makeNodeComponent("buttonOld"),
     svg: makeNodeComponent("svg"),
     h3: makeNodeComponent("h3"),
     commentSection: makeNodeComponent("commentSection"),

@@ -21,7 +21,7 @@
 .root > * {
   grid-column: 4;
 }
-.sectionAsshHomeMenu:global(.__wab_instance) {
+.sectionHomeMenuSection:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;
@@ -89,10 +89,10 @@
   > img {
   margin-top: 20px;
 }
-.componentSectionTitle___3LI2:global(.__wab_instance) {
+.itemSectionTitleDescriptionItem___3LI2:global(.__wab_instance) {
   max-width: 100%;
 }
-.componentTanActionSection:global(.__wab_instance) {
+.blockTanCtaBlock:global(.__wab_instance) {
   max-width: 100%;
 }
 .column___86Tcy {
@@ -106,9 +106,9 @@
   align-items: center;
   min-width: 0;
 }
-.componentSectionTitle__paES:global(.__wab_instance) {
+.itemSectionTitleDescriptionItem__paES:global(.__wab_instance) {
   max-width: 100%;
 }
-.componentQuoteBox:global(.__wab_instance) {
+.blockQuoteBlock:global(.__wab_instance) {
   max-width: 100%;
 }

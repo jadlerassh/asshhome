@@ -10,7 +10,7 @@
 .ariaTextField[data-disabled]:global(.__wab_instance) {
   opacity: 0.5;
 }
-.label:global(.__wab_instance):global(.__wab_instance) {
+.itemLabelItem:global(.__wab_instance):global(.__wab_instance) {
   position: relative;
 }
 .freeBox__rmnoU {
@@ -66,6 +66,6 @@
   position: relative;
   height: 1em;
 }
-.description:global(.__wab_instance):global(.__wab_instance) {
+.itemDescriptionItem:global(.__wab_instance):global(.__wab_instance) {
   position: relative;
 }

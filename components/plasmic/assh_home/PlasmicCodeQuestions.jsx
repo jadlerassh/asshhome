@@ -20,7 +20,7 @@ import {
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import AsshMenuV2 from "../../AsshMenuV2"; // plasmic-import: mv8TRZhS1g6m/component
+import MenuMegaMenuV2 from "../../MenuMegaMenuV2"; // plasmic-import: mv8TRZhS1g6m/component
 import CodingQA from "../../CodingQA"; // plasmic-import: 5lsDz6wBi_P0/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -108,7 +108,7 @@ function PlasmicCodeQuestions__RenderFunc(props) {
             sty.root
           )}
         >
-          <AsshMenuV2
+          <MenuMegaMenuV2
             data-plasmic-name={"asshMenuV2"}
             data-plasmic-override={overrides.asshMenuV2}
             className={classNames("__wab_instance", sty.asshMenuV2)}

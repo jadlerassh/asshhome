@@ -24,7 +24,7 @@ import {
   useDataEnv
 } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import AsshMenuV2 from "../../AsshMenuV2"; // plasmic-import: mv8TRZhS1g6m/component
+import MenuMegaMenuV2 from "../../MenuMegaMenuV2"; // plasmic-import: mv8TRZhS1g6m/component
 import { TabsContainer } from "@plasmicpkgs/plasmic-tabs";
 import { TabButton } from "@plasmicpkgs/plasmic-tabs";
 import Button from "../../Button"; // plasmic-import: lBHNzts6tFyj/component
@@ -147,7 +147,7 @@ function PlasmicNewPage__RenderFunc(props) {
             sty.root
           )}
         >
-          <AsshMenuV2
+          <MenuMegaMenuV2
             data-plasmic-name={"asshMenuV2"}
             data-plasmic-override={overrides.asshMenuV2}
             className={classNames("__wab_instance", sty.asshMenuV2)}

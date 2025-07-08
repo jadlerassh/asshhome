@@ -33,7 +33,7 @@
   min-height: 0;
   padding: 8px;
 }
-.cardNews:global(.__wab_instance) {
+.itemNewsCardItem:global(.__wab_instance) {
   height: 390px;
   width: auto;
   max-width: 400px;

@@ -18,7 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import CardEducation from "../../CardEducation"; // plasmic-import: i0BFqBqONz3g/component
+import ItemEducationCardItem from "../../ItemEducationCardItem"; // plasmic-import: i0BFqBqONz3g/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -111,10 +111,10 @@ function PlasmicCardListEducation__RenderFunc(props) {
           data-plasmic-override={overrides.column}
           className={classNames(projectcss.all, sty.column)}
         >
-          <CardEducation
-            data-plasmic-name={"cardEducation"}
-            data-plasmic-override={overrides.cardEducation}
-            className={classNames("__wab_instance", sty.cardEducation)}
+          <ItemEducationCardItem
+            data-plasmic-name={"itemEducationCardItem"}
+            data-plasmic-override={overrides.itemEducationCardItem}
+            className={classNames("__wab_instance", sty.itemEducationCardItem)}
           />
         </div>
       </Stack__>
@@ -123,10 +123,10 @@ function PlasmicCardListEducation__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "columns", "column", "cardEducation"],
-  columns: ["columns", "column", "cardEducation"],
-  column: ["column", "cardEducation"],
-  cardEducation: ["cardEducation"]
+  root: ["root", "columns", "column", "itemEducationCardItem"],
+  columns: ["columns", "column", "itemEducationCardItem"],
+  column: ["column", "itemEducationCardItem"],
+  itemEducationCardItem: ["itemEducationCardItem"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -163,7 +163,7 @@ export const PlasmicCardListEducation = Object.assign(
     // Helper components rendering sub-elements
     columns: makeNodeComponent("columns"),
     column: makeNodeComponent("column"),
-    cardEducation: makeNodeComponent("cardEducation"),
+    itemEducationCardItem: makeNodeComponent("itemEducationCardItem"),
     // Metadata about props expected for PlasmicCardListEducation
     internalVariantProps: PlasmicCardListEducation__VariantProps,
     internalArgProps: PlasmicCardListEducation__ArgProps

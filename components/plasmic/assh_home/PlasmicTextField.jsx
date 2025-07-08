@@ -22,10 +22,10 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { BaseTextField } from "@plasmicpkgs/react-aria/skinny/registerTextField";
-import Label from "../../Label"; // plasmic-import: oHFVXGjvCU8W/component
+import ItemLabelItem from "../../ItemLabelItem"; // plasmic-import: oHFVXGjvCU8W/component
 import TextInput from "../../TextInput"; // plasmic-import: pHEipOYmMSGQ/component
 import TextAreaInput from "../../TextAreaInput"; // plasmic-import: pTZvhWVIYt0F/component
-import Description from "../../Description"; // plasmic-import: rX1Uufz8DxVo/component
+import ItemDescriptionItem from "../../ItemDescriptionItem"; // plasmic-import: rX1Uufz8DxVo/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -205,12 +205,16 @@ function PlasmicTextField__RenderFunc(props) {
       value={generateStateValueProp($state, ["ariaTextField", "value"])}
     >
       {$props.showLabel ? (
-        <Label
-          data-plasmic-name={"label"}
-          data-plasmic-override={overrides.label}
+        <ItemLabelItem
+          data-plasmic-name={"itemLabelItem"}
+          data-plasmic-override={overrides.itemLabelItem}
           children={null}
-          className={classNames("__wab_instance", sty.label, {
-            [sty.labelmultiLine]: hasVariant($state, "multiLine", "multiLine")
+          className={classNames("__wab_instance", sty.itemLabelItem, {
+            [sty.itemLabelItemmultiLine]: hasVariant(
+              $state,
+              "multiLine",
+              "multiLine"
+            )
           })}
         />
       ) : null}
@@ -361,16 +365,16 @@ function PlasmicTextField__RenderFunc(props) {
         </div>
       </div>
       {$props.showDescription ? (
-        <Description
-          data-plasmic-name={"description"}
-          data-plasmic-override={overrides.description}
-          className={classNames("__wab_instance", sty.description)}
+        <ItemDescriptionItem
+          data-plasmic-name={"itemDescriptionItem"}
+          data-plasmic-override={overrides.itemDescriptionItem}
+          className={classNames("__wab_instance", sty.itemDescriptionItem)}
         >
           {renderPlasmicSlot({
             defaultContents: "Description...",
             value: args.description
           })}
-        </Description>
+        </ItemDescriptionItem>
       ) : null}
     </BaseTextField>
   );
@@ -379,16 +383,16 @@ function PlasmicTextField__RenderFunc(props) {
 const PlasmicDescendants = {
   ariaTextField: [
     "ariaTextField",
-    "label",
+    "itemLabelItem",
     "textInput",
     "textAreaInput",
-    "description"
+    "itemDescriptionItem"
   ],
 
-  label: ["label"],
+  itemLabelItem: ["itemLabelItem"],
   textInput: ["textInput"],
   textAreaInput: ["textAreaInput"],
-  description: ["description"]
+  itemDescriptionItem: ["itemDescriptionItem"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -423,10 +427,10 @@ export const PlasmicTextField = Object.assign(
   makeNodeComponent("ariaTextField"),
   {
     // Helper components rendering sub-elements
-    label: makeNodeComponent("label"),
+    itemLabelItem: makeNodeComponent("itemLabelItem"),
     textInput: makeNodeComponent("textInput"),
     textAreaInput: makeNodeComponent("textAreaInput"),
-    description: makeNodeComponent("description"),
+    itemDescriptionItem: makeNodeComponent("itemDescriptionItem"),
     // Metadata about props expected for PlasmicTextField
     internalVariantProps: PlasmicTextField__VariantProps,
     internalArgProps: PlasmicTextField__ArgProps

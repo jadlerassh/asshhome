@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+}
+.navigationItem2 {
+  display: block;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 32px;
+  color: rgba(49, 51, 55, 1);
+  width: auto;
+  text-align: left;
+}
+.root:hover .navigationItem2 {
+  color: var(--token-YOr-x91EUcQe);
+}
