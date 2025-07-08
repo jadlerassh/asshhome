@@ -17,7 +17,6 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
-  get as $stateGet,
   hasVariant,
   set as $stateSet,
   useDollarState
@@ -71,25 +70,16 @@ import ThreadsIcon from "./icons/PlasmicIcon__Threads"; // plasmic-import: XXUcg
 
 createPlasmicElementProxy;
 
-export const PlasmicSectionHomeMenuSection__VariantProps = new Array(
-  "dropdown1",
-  "dropdown2",
-  "dropdown3",
-  "dropdown4",
-  "dropdown5",
-  "dropdown6",
-  "dropdown7",
-  "resourcesFor",
-  "exploreAssh",
-  "userDropdown"
-);
+export const PlasmicSectionHomeMenuSection__VariantProps = new Array("menus");
 
 export const PlasmicSectionHomeMenuSection__ArgProps = new Array(
   "userName",
   "member",
   "asshId",
   "memberType",
-  "userImageUrl"
+  "userImageUrl",
+  "openDropdown",
+  "onOpenDropdownChange"
 );
 
 const $$ = {};
@@ -130,54 +120,6 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "dropdown1",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown1
-      },
-      {
-        path: "dropdown2",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown2
-      },
-      {
-        path: "dropdown3",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown3
-      },
-      {
-        path: "dropdown4",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown4
-      },
-      {
-        path: "dropdown5",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown5
-      },
-      {
-        path: "dropdown6",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown6
-      },
-      {
-        path: "dropdown7",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.dropdown7
-      },
-      {
-        path: "resourcesFor",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.resourcesFor
-      },
-      {
         path: "resourceLinks",
         type: "private",
         variableType: "object",
@@ -212,12 +154,6 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               throw e;
             }
           })()
-      },
-      {
-        path: "exploreAssh",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.exploreAssh
       },
       {
         path: "menu1Links",
@@ -486,12 +422,6 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           })()
       },
       {
-        path: "userDropdown",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.userDropdown
-      },
-      {
         path: "profileLinks",
         type: "private",
         variableType: "array",
@@ -526,6 +456,38 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               throw e;
             }
           })()
+      },
+      {
+        path: "menus",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.openDropdown;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })() ?? $props.menus
+      },
+      {
+        path: "openDropdown",
+        type: "writable",
+        variableType: "text",
+        valueProp: "openDropdown",
+        onChangeProp: "onOpenDropdownChange"
+      },
+      {
+        path: "variable2",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
       }
     ],
 
@@ -672,27 +634,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
-          [sty.rootdropdown1]: hasVariant($state, "dropdown1", "dropdown1"),
-          [sty.rootdropdown2]: hasVariant($state, "dropdown2", "dropdown2"),
-          [sty.rootdropdown3]: hasVariant($state, "dropdown3", "dropdown3"),
-          [sty.rootdropdown4]: hasVariant($state, "dropdown4", "dropdown4"),
-          [sty.rootdropdown5]: hasVariant($state, "dropdown5", "dropdown5"),
-          [sty.rootdropdown6]: hasVariant($state, "dropdown6", "dropdown6"),
-          [sty.rootdropdown7]: hasVariant($state, "dropdown7", "dropdown7"),
-          [sty.rootexploreAssh]: hasVariant(
+          [sty.rootmenus_allclosed]: hasVariant($state, "menus", "allclosed"),
+          [sty.rootmenus_dropdown1]: hasVariant($state, "menus", "dropdown1"),
+          [sty.rootmenus_dropdown2]: hasVariant($state, "menus", "dropdown2"),
+          [sty.rootmenus_dropdown3]: hasVariant($state, "menus", "dropdown3"),
+          [sty.rootmenus_dropdown4]: hasVariant($state, "menus", "dropdown4"),
+          [sty.rootmenus_dropdown5]: hasVariant($state, "menus", "dropdown5"),
+          [sty.rootmenus_dropdown6]: hasVariant($state, "menus", "dropdown6"),
+          [sty.rootmenus_dropdown7]: hasVariant($state, "menus", "dropdown7"),
+          [sty.rootmenus_dropdownexplore]: hasVariant(
             $state,
-            "exploreAssh",
-            "exploreAssh"
+            "menus",
+            "dropdownexplore"
           ),
-          [sty.rootresourcesFor]: hasVariant(
+          [sty.rootmenus_dropdownresources]: hasVariant(
             $state,
-            "resourcesFor",
-            "resourcesFor"
+            "menus",
+            "dropdownresources"
           ),
-          [sty.rootuserDropdown]: hasVariant(
+          [sty.rootmenus_dropdownuser]: hasVariant(
             $state,
-            "userDropdown",
-            "userDropdown"
+            "menus",
+            "dropdownuser"
           )
         }
       )}
@@ -714,13 +677,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             data-plasmic-name={"frame4"}
             data-plasmic-override={overrides.frame4}
             hasGap={true}
-            className={classNames(projectcss.all, sty.frame4, {
-              [sty.frame4exploreAssh]: hasVariant(
-                $state,
-                "exploreAssh",
-                "exploreAssh"
-              )
-            })}
+            className={classNames(projectcss.all, sty.frame4)}
           >
             <Stack__
               as={"div"}
@@ -728,12 +685,50 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               data-plasmic-override={overrides.navigationItem}
               hasGap={true}
               className={classNames(projectcss.all, sty.navigationItem, {
-                [sty.navigationItemexploreAssh]: hasVariant(
+                [sty.navigationItemmenus_dropdownexplore]: hasVariant(
                   $state,
-                  "exploreAssh",
-                  "exploreAssh"
+                  "menus",
+                  "dropdownexplore"
                 )
               })}
+              onClick={async event => {
+                const $steps = {};
+                $steps["updateOpenMenus"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["openDropdown"]
+                        },
+                        operation: 0,
+                        value:
+                          $state.openDropdown === "dropdownexplore"
+                            ? "allclosed"
+                            : "dropdownexplore"
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateOpenMenus"] != null &&
+                  typeof $steps["updateOpenMenus"] === "object" &&
+                  typeof $steps["updateOpenMenus"].then === "function"
+                ) {
+                  $steps["updateOpenMenus"] = await $steps["updateOpenMenus"];
+                }
+              }}
             >
               <div
                 data-plasmic-name={"layer1"}
@@ -759,42 +754,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text___8H8Tm
+                  sty.text___8H8Tm,
+                  {
+                    [sty.textmenus_dropdownexplore___8H8TmHsxwy]: hasVariant(
+                      $state,
+                      "menus",
+                      "dropdownexplore"
+                    )
+                  }
                 )}
               >
                 {"Explore ASSH"}
               </div>
               <ChevronIcon
-                className={classNames(projectcss.all, sty.svg__nnjjz, {
-                  [sty.svgexploreAssh__nnjjzpX9Ih]: hasVariant(
-                    $state,
-                    "exploreAssh",
-                    "exploreAssh"
-                  )
-                })}
+                className={classNames(projectcss.all, sty.svg__nnjjz)}
                 role={"img"}
               />
 
               {(
-                hasVariant($state, "exploreAssh", "exploreAssh")
-                  ? true
-                  : hasVariant($state, "resourcesFor", "resourcesFor")
-                  ? true
-                  : false
+                hasVariant($state, "menus", "dropdownexplore") ? true : false
               ) ? (
                 <div
                   data-plasmic-name={"resourcesMenu2"}
                   data-plasmic-override={overrides.resourcesMenu2}
                   className={classNames(projectcss.all, sty.resourcesMenu2, {
-                    [sty.resourcesMenu2exploreAssh]: hasVariant(
+                    [sty.resourcesMenu2menus_dropdownexplore]: hasVariant(
                       $state,
-                      "exploreAssh",
-                      "exploreAssh"
-                    ),
-                    [sty.resourcesMenu2resourcesFor]: hasVariant(
-                      $state,
-                      "resourcesFor",
-                      "resourcesFor"
+                      "menus",
+                      "dropdownexplore"
                     )
                   })}
                 >
@@ -823,11 +810,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           projectcss.all,
                           sty.navItemMenu75,
                           {
-                            [sty.navItemMenu75resourcesFor]: hasVariant(
-                              $state,
-                              "resourcesFor",
-                              "resourcesFor"
-                            )
+                            [sty.navItemMenu75menus_dropdownexplore]:
+                              hasVariant($state, "menus", "dropdownexplore")
                           }
                         )}
                         key={currentIndex}
@@ -955,12 +939,12 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   </Stack__>
                 ) : null}
                 <div
-                  data-plasmic-name={"navigationItem2"}
-                  data-plasmic-override={overrides.navigationItem2}
+                  data-plasmic-name={"navigationItem5"}
+                  data-plasmic-override={overrides.navigationItem5}
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.navigationItem2
+                    sty.navigationItem5
                   )}
                 >
                   {"Foundation"}
@@ -1245,83 +1229,95 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               data-plasmic-name={"frame8"}
               data-plasmic-override={overrides.frame8}
               hasGap={true}
-              className={classNames(projectcss.all, sty.frame8, {
-                [sty.frame8userDropdown]: hasVariant(
-                  $state,
-                  "userDropdown",
-                  "userDropdown"
-                )
-              })}
+              className={classNames(projectcss.all, sty.frame8)}
             >
-              <ItemMenuCurrentUser
-                data-plasmic-name={"itemMenuCurrentUser"}
-                data-plasmic-override={overrides.itemMenuCurrentUser}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemMenuCurrentUser,
-                  {
-                    [sty.itemMenuCurrentUseruserDropdown]: hasVariant(
-                      $state,
-                      "userDropdown",
-                      "userDropdown"
-                    )
+              <div
+                data-plasmic-name={"freeBox"}
+                data-plasmic-override={overrides.freeBox}
+                className={classNames(projectcss.all, sty.freeBox)}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateOpenMenus"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["openDropdown"]
+                          },
+                          operation: 0,
+                          value:
+                            $state.openDropdown === "dropdownuser"
+                              ? "allclosed"
+                              : "dropdownuser"
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateOpenMenus"] != null &&
+                    typeof $steps["updateOpenMenus"] === "object" &&
+                    typeof $steps["updateOpenMenus"].then === "function"
+                  ) {
+                    $steps["updateOpenMenus"] = await $steps["updateOpenMenus"];
                   }
-                )}
-                userImageUrl={(() => {
-                  try {
-                    return $props.userImageUrl;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
+                }}
+              >
+                <ItemMenuCurrentUser
+                  data-plasmic-name={"itemMenuCurrentUser"}
+                  data-plasmic-override={overrides.itemMenuCurrentUser}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemMenuCurrentUser
+                  )}
+                  userImageUrl={(() => {
+                    try {
+                      return $props.userImageUrl;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
                     }
-                    throw e;
-                  }
-                })()}
-                userName={(() => {
-                  try {
-                    return $props.userName;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
+                  })()}
+                  userName={(() => {
+                    try {
+                      return $props.userName;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
                     }
-                    throw e;
-                  }
-                })()}
-              />
-
-              {(
-                hasVariant($state, "userDropdown", "userDropdown")
-                  ? true
-                  : hasVariant($state, "exploreAssh", "exploreAssh")
-                  ? true
-                  : hasVariant($state, "resourcesFor", "resourcesFor")
-                  ? true
-                  : false
-              ) ? (
+                  })()}
+                />
+              </div>
+              {(hasVariant($state, "menus", "dropdownuser") ? true : false) ? (
                 <div
                   data-plasmic-name={"userMenu"}
                   data-plasmic-override={overrides.userMenu}
                   className={classNames(projectcss.all, sty.userMenu, {
-                    [sty.userMenuexploreAssh]: hasVariant(
+                    [sty.userMenumenus_dropdownuser]: hasVariant(
                       $state,
-                      "exploreAssh",
-                      "exploreAssh"
-                    ),
-                    [sty.userMenuresourcesFor]: hasVariant(
-                      $state,
-                      "resourcesFor",
-                      "resourcesFor"
-                    ),
-                    [sty.userMenuuserDropdown]: hasVariant(
-                      $state,
-                      "userDropdown",
-                      "userDropdown"
+                      "menus",
+                      "dropdownuser"
                     )
                   })}
                 >
@@ -1350,15 +1346,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           projectcss.all,
                           sty.navItemMenu76,
                           {
-                            [sty.navItemMenu76exploreAssh]: hasVariant(
+                            [sty.navItemMenu76menus_dropdownuser]: hasVariant(
                               $state,
-                              "exploreAssh",
-                              "exploreAssh"
-                            ),
-                            [sty.navItemMenu76resourcesFor]: hasVariant(
-                              $state,
-                              "resourcesFor",
-                              "resourcesFor"
+                              "menus",
+                              "dropdownuser"
                             )
                           }
                         )}
@@ -1367,7 +1358,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         <ItemMegaMenuSubitem
                           className={classNames(
                             "__wab_instance",
-                            sty.itemMegaMenuSubitem__s7K3P
+                            sty.itemMegaMenuSubitem__s7K3P,
+                            {
+                              [sty.itemMegaMenuSubitemmenus_dropdownuser__s7K3PdPr1B]:
+                                hasVariant($state, "menus", "dropdownuser")
+                            }
                           )}
                           label={(() => {
                             try {
@@ -1431,18 +1426,18 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           data-plasmic-name={"frame9"}
           data-plasmic-override={overrides.frame9}
           hasGap={true}
-          className={classNames(projectcss.all, sty.frame9)}
+          className={classNames(projectcss.all, sty.frame9, {
+            [sty.frame9menus_dropdown1]: hasVariant(
+              $state,
+              "menus",
+              "dropdown1"
+            )
+          })}
         >
           <div
             data-plasmic-name={"navigation"}
             data-plasmic-override={overrides.navigation}
-            className={classNames(projectcss.all, sty.navigation, {
-              [sty.navigationdropdown6]: hasVariant(
-                $state,
-                "dropdown6",
-                "dropdown6"
-              )
-            })}
+            className={classNames(projectcss.all, sty.navigation)}
           >
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
               (() => {
@@ -1468,88 +1463,49 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   data-plasmic-override={overrides.navMenu}
                   hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu, {
-                    [sty.navMenudropdown1]: hasVariant(
+                    [sty.navMenumenus_dropdown1]: hasVariant(
                       $state,
-                      "dropdown1",
+                      "menus",
                       "dropdown1"
                     )
                   })}
                   key={currentIndex}
                   onClick={async event => {
                     const $steps = {};
-                    $steps["updateDropdown1"] = true
+                    $steps["openMenu1"] = true
                       ? (() => {
                           const actionArgs = {
-                            vgroup: "dropdown1",
-                            operation: 2,
-                            value: "dropdown1"
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown1"
+                                ? "allclosed"
+                                : "dropdown1"
                           };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
                             }
-                            const oldValue = $stateGet($state, vgroup);
-                            $stateSet($state, vgroup, !oldValue);
-                            return !oldValue;
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
                           })?.apply(null, [actionArgs]);
                         })()
                       : undefined;
                     if (
-                      $steps["updateDropdown1"] != null &&
-                      typeof $steps["updateDropdown1"] === "object" &&
-                      typeof $steps["updateDropdown1"].then === "function"
+                      $steps["openMenu1"] != null &&
+                      typeof $steps["openMenu1"] === "object" &&
+                      typeof $steps["openMenu1"].then === "function"
                     ) {
-                      $steps["updateDropdown1"] = await $steps[
-                        "updateDropdown1"
-                      ];
-                    }
-                    $steps["updateDropdown2"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "dropdown2",
-                            operation: 6
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            $stateSet($state, vgroup, false);
-                            return false;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDropdown2"] != null &&
-                      typeof $steps["updateDropdown2"] === "object" &&
-                      typeof $steps["updateDropdown2"].then === "function"
-                    ) {
-                      $steps["updateDropdown2"] = await $steps[
-                        "updateDropdown2"
-                      ];
-                    }
-                    $steps["updateDropdown3"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "dropdown3",
-                            operation: 6
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            $stateSet($state, vgroup, false);
-                            return false;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDropdown3"] != null &&
-                      typeof $steps["updateDropdown3"] === "object" &&
-                      typeof $steps["updateDropdown3"].then === "function"
-                    ) {
-                      $steps["updateDropdown3"] = await $steps[
-                        "updateDropdown3"
-                      ];
+                      $steps["openMenu1"] = await $steps["openMenu1"];
                     }
                   }}
                 >
@@ -1558,11 +1514,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem__uyOst,
                       {
-                        [sty.itemMegaMenuItemdropdown1__uyOstwLNaE]: hasVariant(
-                          $state,
-                          "dropdown1",
-                          "dropdown1"
-                        )
+                        [sty.itemMegaMenuItemmenus_dropdown1__uyOstuiCmH]:
+                          hasVariant($state, "menus", "dropdown1")
                       }
                     )}
                     label={(() => {
@@ -1622,77 +1575,41 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   key={currentIndex}
                   onClick={async event => {
                     const $steps = {};
-                    $steps["updateDropdown2"] = true
+                    $steps["updateOpenMenus"] = true
                       ? (() => {
                           const actionArgs = {
-                            vgroup: "dropdown2",
-                            operation: 2
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown2"
+                                ? "allclosed"
+                                : "dropdown2"
                           };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
                             }
-                            const oldValue = $stateGet($state, vgroup);
-                            $stateSet($state, vgroup, !oldValue);
-                            return !oldValue;
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
                           })?.apply(null, [actionArgs]);
                         })()
                       : undefined;
                     if (
-                      $steps["updateDropdown2"] != null &&
-                      typeof $steps["updateDropdown2"] === "object" &&
-                      typeof $steps["updateDropdown2"].then === "function"
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
                     ) {
-                      $steps["updateDropdown2"] = await $steps[
-                        "updateDropdown2"
-                      ];
-                    }
-                    $steps["updateDropdown1"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "dropdown1",
-                            operation: 6
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            $stateSet($state, vgroup, false);
-                            return false;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDropdown1"] != null &&
-                      typeof $steps["updateDropdown1"] === "object" &&
-                      typeof $steps["updateDropdown1"].then === "function"
-                    ) {
-                      $steps["updateDropdown1"] = await $steps[
-                        "updateDropdown1"
-                      ];
-                    }
-                    $steps["updateDropdown3"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "dropdown3",
-                            operation: 6
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            $stateSet($state, vgroup, false);
-                            return false;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDropdown3"] != null &&
-                      typeof $steps["updateDropdown3"] === "object" &&
-                      typeof $steps["updateDropdown3"].then === "function"
-                    ) {
-                      $steps["updateDropdown3"] = await $steps[
-                        "updateDropdown3"
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
                       ];
                     }
                   }}
@@ -1759,78 +1676,41 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   key={currentIndex}
                   onClick={async event => {
                     const $steps = {};
-                    $steps["updateDropdown3"] = true
+                    $steps["updateOpenMenus"] = true
                       ? (() => {
                           const actionArgs = {
-                            vgroup: "dropdown3",
-                            operation: 2
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown3"
+                                ? "allclosed"
+                                : "dropdown3"
                           };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
                             }
-                            const oldValue = $stateGet($state, vgroup);
-                            $stateSet($state, vgroup, !oldValue);
-                            return !oldValue;
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
                           })?.apply(null, [actionArgs]);
                         })()
                       : undefined;
                     if (
-                      $steps["updateDropdown3"] != null &&
-                      typeof $steps["updateDropdown3"] === "object" &&
-                      typeof $steps["updateDropdown3"].then === "function"
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
                     ) {
-                      $steps["updateDropdown3"] = await $steps[
-                        "updateDropdown3"
-                      ];
-                    }
-                    $steps["updateDropdown1"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "dropdown1",
-                            operation: 6,
-                            value: "dropdown1"
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            $stateSet($state, vgroup, false);
-                            return false;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDropdown1"] != null &&
-                      typeof $steps["updateDropdown1"] === "object" &&
-                      typeof $steps["updateDropdown1"].then === "function"
-                    ) {
-                      $steps["updateDropdown1"] = await $steps[
-                        "updateDropdown1"
-                      ];
-                    }
-                    $steps["updateDropdown2"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            vgroup: "dropdown2",
-                            operation: 6
-                          };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
-                            }
-                            $stateSet($state, vgroup, false);
-                            return false;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateDropdown2"] != null &&
-                      typeof $steps["updateDropdown2"] === "object" &&
-                      typeof $steps["updateDropdown2"].then === "function"
-                    ) {
-                      $steps["updateDropdown2"] = await $steps[
-                        "updateDropdown2"
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
                       ];
                     }
                   }}
@@ -1838,7 +1718,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   <ItemMegaMenuItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemMegaMenuItem__hjQc9
+                      sty.itemMegaMenuItem__hjQc9,
+                      {
+                        [sty.itemMegaMenuItemmenus_dropdown3__hjQc9K1XK4]:
+                          hasVariant($state, "menus", "dropdown3")
+                      }
                     )}
                     label={(() => {
                       try {
@@ -1895,6 +1779,46 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu4)}
                   key={currentIndex}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateOpenMenus"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown4"
+                                ? "allclosed"
+                                : "dropdown4"
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
+                    ) {
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
+                      ];
+                    }
+                  }}
                 >
                   <ItemMegaMenuItem
                     className={classNames(
@@ -1956,6 +1880,46 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu5)}
                   key={currentIndex}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateOpenMenus"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown5"
+                                ? "allclosed"
+                                : "dropdown5"
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
+                    ) {
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
+                      ];
+                    }
+                  }}
                 >
                   <ItemMegaMenuItem
                     className={classNames(
@@ -2017,6 +1981,46 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu6)}
                   key={currentIndex}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateOpenMenus"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown6"
+                                ? "allclosed"
+                                : "dropdown6"
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
+                    ) {
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
+                      ];
+                    }
+                  }}
                 >
                   <ItemMegaMenuItem
                     className={classNames(
@@ -2078,6 +2082,46 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu7)}
                   key={currentIndex}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateOpenMenus"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdown7"
+                                ? "allclosed"
+                                : "dropdown7"
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
+                    ) {
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
+                      ];
+                    }
+                  }}
                 >
                   <ItemMegaMenuItem
                     className={classNames(
@@ -2134,42 +2178,48 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               return (
                 <Stack__
                   as={"div"}
-                  data-plasmic-name={"navMenu9"}
-                  data-plasmic-override={overrides.navMenu9}
+                  data-plasmic-name={"navMenuResources"}
+                  data-plasmic-override={overrides.navMenuResources}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.navMenu9, {
-                    [sty.navMenu9resourcesFor]: hasVariant(
-                      $state,
-                      "resourcesFor",
-                      "resourcesFor"
-                    )
-                  })}
+                  className={classNames(projectcss.all, sty.navMenuResources)}
                   key={currentIndex}
                   onClick={async event => {
                     const $steps = {};
-                    $steps["updateResourcesFor"] = true
+                    $steps["updateOpenMenus"] = true
                       ? (() => {
                           const actionArgs = {
-                            vgroup: "resourcesFor",
-                            operation: 2
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdownresources"
+                                ? "allclosed"
+                                : "dropdownresources"
                           };
-                          return (({ vgroup, value }) => {
-                            if (typeof value === "string") {
-                              value = [value];
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
                             }
-                            const oldValue = $stateGet($state, vgroup);
-                            $stateSet($state, vgroup, !oldValue);
-                            return !oldValue;
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
                           })?.apply(null, [actionArgs]);
                         })()
                       : undefined;
                     if (
-                      $steps["updateResourcesFor"] != null &&
-                      typeof $steps["updateResourcesFor"] === "object" &&
-                      typeof $steps["updateResourcesFor"].then === "function"
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
                     ) {
-                      $steps["updateResourcesFor"] = await $steps[
-                        "updateResourcesFor"
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
                       ];
                     }
                   }}
@@ -2208,7 +2258,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   />
 
                   {(
-                    hasVariant($state, "resourcesFor", "resourcesFor")
+                    hasVariant($state, "menus", "dropdownresources")
                       ? true
                       : false
                   ) ? (
@@ -2216,10 +2266,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       data-plasmic-name={"resourcesMenu"}
                       data-plasmic-override={overrides.resourcesMenu}
                       className={classNames(projectcss.all, sty.resourcesMenu, {
-                        [sty.resourcesMenuresourcesFor]: hasVariant(
+                        [sty.resourcesMenumenus_dropdownresources]: hasVariant(
                           $state,
-                          "resourcesFor",
-                          "resourcesFor"
+                          "menus",
+                          "dropdownresources"
                         )
                       })}
                     >
@@ -2301,20 +2351,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           data-plasmic-name={"mobileHeader"}
           data-plasmic-override={overrides.mobileHeader}
           className={classNames(projectcss.all, sty.mobileHeader, {
-            [sty.mobileHeaderdropdown2]: hasVariant(
+            [sty.mobileHeadermenus_dropdownexplore]: hasVariant(
               $state,
-              "dropdown2",
-              "dropdown2"
-            ),
-            [sty.mobileHeaderdropdown3]: hasVariant(
-              $state,
-              "dropdown3",
-              "dropdown3"
-            ),
-            [sty.mobileHeaderdropdown6]: hasVariant(
-              $state,
-              "dropdown6",
-              "dropdown6"
+              "menus",
+              "dropdownexplore"
             )
           })}
         >
@@ -2335,7 +2375,18 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 data-plasmic-name={"navigationItem75"}
                 data-plasmic-override={overrides.navigationItem75}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.navigationItem75)}
+                className={classNames(projectcss.all, sty.navigationItem75, {
+                  [sty.navigationItem75menus_dropdownexplore]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdownexplore"
+                  ),
+                  [sty.navigationItem75menus_dropdownresources]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdownresources"
+                  )
+                })}
               >
                 <div
                   data-plasmic-name={"layer13"}
@@ -2361,7 +2412,14 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__gIYyH
+                    sty.text__gIYyH,
+                    {
+                      [sty.textmenus_dropdownexplore__gIYyHHsxwy]: hasVariant(
+                        $state,
+                        "menus",
+                        "dropdownexplore"
+                      )
+                    }
                   )}
                 >
                   {"Explore ASSH"}
@@ -2761,7 +2819,13 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           <div
             data-plasmic-name={"mobileNavMenu"}
             data-plasmic-override={overrides.mobileNavMenu}
-            className={classNames(projectcss.all, sty.mobileNavMenu)}
+            className={classNames(projectcss.all, sty.mobileNavMenu, {
+              [sty.mobileNavMenumenus_dropdownresources]: hasVariant(
+                $state,
+                "menus",
+                "dropdownresources"
+              )
+            })}
           >
             <div
               data-plasmic-name={"mobileNavAccordion"}
@@ -7854,43 +7918,48 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         </div>
       ) : null}
       <div
-        data-plasmic-name={"megaMenuDropOne"}
-        data-plasmic-override={overrides.megaMenuDropOne}
-        className={classNames(projectcss.all, sty.megaMenuDropOne, {
-          [sty.megaMenuDropOnedropdown1]: hasVariant(
+        data-plasmic-name={"megaMenuDropdown"}
+        data-plasmic-override={overrides.megaMenuDropdown}
+        className={classNames(projectcss.all, sty.megaMenuDropdown, {
+          [sty.megaMenuDropdownmenus_dropdown1]: hasVariant(
             $state,
-            "dropdown1",
+            "menus",
             "dropdown1"
           ),
-          [sty.megaMenuDropOnedropdown2]: hasVariant(
+          [sty.megaMenuDropdownmenus_dropdown2]: hasVariant(
             $state,
-            "dropdown2",
+            "menus",
             "dropdown2"
           ),
-          [sty.megaMenuDropOnedropdown3]: hasVariant(
+          [sty.megaMenuDropdownmenus_dropdown3]: hasVariant(
             $state,
-            "dropdown3",
+            "menus",
             "dropdown3"
           ),
-          [sty.megaMenuDropOnedropdown4]: hasVariant(
+          [sty.megaMenuDropdownmenus_dropdown4]: hasVariant(
             $state,
-            "dropdown4",
+            "menus",
             "dropdown4"
           ),
-          [sty.megaMenuDropOnedropdown5]: hasVariant(
+          [sty.megaMenuDropdownmenus_dropdown5]: hasVariant(
             $state,
-            "dropdown5",
+            "menus",
             "dropdown5"
           ),
-          [sty.megaMenuDropOnedropdown6]: hasVariant(
+          [sty.megaMenuDropdownmenus_dropdown6]: hasVariant(
             $state,
-            "dropdown6",
+            "menus",
             "dropdown6"
           ),
-          [sty.megaMenuDropOnedropdown7]: hasVariant(
+          [sty.megaMenuDropdownmenus_dropdown7]: hasVariant(
             $state,
-            "dropdown7",
+            "menus",
             "dropdown7"
+          ),
+          [sty.megaMenuDropdownmenus_dropdownresources]: hasVariant(
+            $state,
+            "menus",
+            "dropdownresources"
           )
         })}
       >
@@ -7900,32 +7969,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           data-plasmic-override={overrides.frame53}
           hasGap={true}
           className={classNames(projectcss.all, sty.frame53, {
-            [sty.frame53dropdown1]: hasVariant(
+            [sty.frame53menus_dropdown1]: hasVariant(
               $state,
-              "dropdown1",
+              "menus",
               "dropdown1"
-            ),
-            [sty.frame53dropdown2]: hasVariant(
-              $state,
-              "dropdown2",
-              "dropdown2"
-            ),
-            [sty.frame53dropdown3]: hasVariant(
-              $state,
-              "dropdown3",
-              "dropdown3"
-            ),
-            [sty.frame53dropdown4]: hasVariant(
-              $state,
-              "dropdown4",
-              "dropdown4"
-            ),
-            [sty.frame53dropdown5]: hasVariant(
-              $state,
-              "dropdown5",
-              "dropdown5"
-            ),
-            [sty.frame53dropdown7]: hasVariant($state, "dropdown7", "dropdown7")
+            )
           })}
         >
           <Stack__
@@ -7934,30 +7982,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             data-plasmic-override={overrides.frame54}
             hasGap={true}
             className={classNames(projectcss.all, sty.frame54, {
-              [sty.frame54dropdown1]: hasVariant(
+              [sty.frame54menus_dropdown1]: hasVariant(
                 $state,
-                "dropdown1",
+                "menus",
                 "dropdown1"
               ),
-              [sty.frame54dropdown2]: hasVariant(
+              [sty.frame54menus_dropdown2]: hasVariant(
                 $state,
-                "dropdown2",
+                "menus",
                 "dropdown2"
-              ),
-              [sty.frame54dropdown3]: hasVariant(
-                $state,
-                "dropdown3",
-                "dropdown3"
-              ),
-              [sty.frame54dropdown4]: hasVariant(
-                $state,
-                "dropdown4",
-                "dropdown4"
-              ),
-              [sty.frame54dropdown5]: hasVariant(
-                $state,
-                "dropdown5",
-                "dropdown5"
               )
             })}
           >
@@ -7967,57 +8000,186 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 projectcss.__wab_text,
                 sty.text__wXomI,
                 {
-                  [sty.textdropdown1__wXomIwLNaE]: hasVariant(
+                  [sty.textmenus_dropdown1__wXomIuiCmH]: hasVariant(
                     $state,
-                    "dropdown1",
+                    "menus",
                     "dropdown1"
                   ),
-                  [sty.textdropdown2__wXomIrwAmm]: hasVariant(
+                  [sty.textmenus_dropdown2__wXomId5KWg]: hasVariant(
                     $state,
-                    "dropdown2",
+                    "menus",
                     "dropdown2"
                   ),
-                  [sty.textdropdown3__wXomIc1Ig]: hasVariant(
+                  [sty.textmenus_dropdown3__wXomIk1XK4]: hasVariant(
                     $state,
-                    "dropdown3",
+                    "menus",
                     "dropdown3"
                   ),
-                  [sty.textdropdown4__wXomIajXtF]: hasVariant(
+                  [sty.textmenus_dropdown4__wXomIdFasb]: hasVariant(
                     $state,
-                    "dropdown4",
+                    "menus",
                     "dropdown4"
                   ),
-                  [sty.textdropdown5__wXomIllPSu]: hasVariant(
+                  [sty.textmenus_dropdown5__wXomIwub2S]: hasVariant(
                     $state,
-                    "dropdown5",
+                    "menus",
                     "dropdown5"
                   ),
-                  [sty.textdropdown6__wXomIwq0Uc]: hasVariant(
+                  [sty.textmenus_dropdown6__wXomIKvHmc]: hasVariant(
                     $state,
-                    "dropdown6",
+                    "menus",
                     "dropdown6"
                   ),
-                  [sty.textdropdown7__wXomI6Z5G8]: hasVariant(
+                  [sty.textmenus_dropdown7__wXomItRh99]: hasVariant(
                     $state,
-                    "dropdown7",
+                    "menus",
                     "dropdown7"
+                  ),
+                  [sty.textmenus_dropdownresources__wXomIl7QVr]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdownresources"
                   )
                 }
               )}
             >
-              {hasVariant($state, "dropdown7", "dropdown7")
-                ? "About"
-                : hasVariant($state, "dropdown6", "dropdown6")
-                ? "News & Publications"
-                : hasVariant($state, "dropdown5", "dropdown5")
-                ? "Grants & Awards"
-                : hasVariant($state, "dropdown4", "dropdown4")
-                ? "Advocacy"
-                : hasVariant($state, "dropdown3", "dropdown3")
-                ? "Annual Meeting"
-                : hasVariant($state, "dropdown2", "dropdown2")
-                ? "Membership"
-                : "Education"}
+              {hasVariant($state, "menus", "dropdownresources") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuResources.data.response
+                        .items[0].fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : hasVariant($state, "menus", "dropdown7") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuSeven.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : hasVariant($state, "menus", "dropdown6") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMeganMenuSix.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : hasVariant($state, "menus", "dropdown5") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuFive.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : hasVariant($state, "menus", "dropdown4") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuFour.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : hasVariant($state, "menus", "dropdown3") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuThree.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : hasVariant($state, "menus", "dropdown2") ? (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuTwo.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getMegaMenuOne.data.response.items[0]
+                        .fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Education";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              )}
             </div>
           </Stack__>
           <Stack__
@@ -8026,35 +8188,20 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             data-plasmic-override={overrides.frame55}
             hasGap={true}
             className={classNames(projectcss.all, sty.frame55, {
-              [sty.frame55dropdown1]: hasVariant(
+              [sty.frame55menus_dropdown1]: hasVariant(
                 $state,
-                "dropdown1",
+                "menus",
                 "dropdown1"
               ),
-              [sty.frame55dropdown2]: hasVariant(
+              [sty.frame55menus_dropdown2]: hasVariant(
                 $state,
-                "dropdown2",
+                "menus",
                 "dropdown2"
               ),
-              [sty.frame55dropdown3]: hasVariant(
+              [sty.frame55menus_dropdown5]: hasVariant(
                 $state,
-                "dropdown3",
-                "dropdown3"
-              ),
-              [sty.frame55dropdown4]: hasVariant(
-                $state,
-                "dropdown4",
-                "dropdown4"
-              ),
-              [sty.frame55dropdown5]: hasVariant(
-                $state,
-                "dropdown5",
+                "menus",
                 "dropdown5"
-              ),
-              [sty.frame55dropdown6]: hasVariant(
-                $state,
-                "dropdown6",
-                "dropdown6"
               )
             })}
           >
@@ -8064,40 +8211,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               data-plasmic-override={overrides.frame56}
               hasGap={true}
               className={classNames(projectcss.all, sty.frame56, {
-                [sty.frame56dropdown1]: hasVariant(
+                [sty.frame56menus_dropdown1]: hasVariant(
                   $state,
-                  "dropdown1",
+                  "menus",
                   "dropdown1"
                 ),
-                [sty.frame56dropdown2]: hasVariant(
+                [sty.frame56menus_dropdown2]: hasVariant(
                   $state,
-                  "dropdown2",
+                  "menus",
                   "dropdown2"
-                ),
-                [sty.frame56dropdown3]: hasVariant(
-                  $state,
-                  "dropdown3",
-                  "dropdown3"
-                ),
-                [sty.frame56dropdown4]: hasVariant(
-                  $state,
-                  "dropdown4",
-                  "dropdown4"
-                ),
-                [sty.frame56dropdown5]: hasVariant(
-                  $state,
-                  "dropdown5",
-                  "dropdown5"
-                ),
-                [sty.frame56dropdown6]: hasVariant(
-                  $state,
-                  "dropdown6",
-                  "dropdown6"
-                ),
-                [sty.frame56dropdown7]: hasVariant(
-                  $state,
-                  "dropdown7",
-                  "dropdown7"
                 )
               })}
             >
@@ -8128,15 +8250,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuOneColumnONe,
                       {
-                        [sty.menuOneColumnONedropdown1]: hasVariant(
+                        [sty.menuOneColumnONemenus_dropdown1]: hasVariant(
                           $state,
-                          "dropdown1",
+                          "menus",
                           "dropdown1"
-                        ),
-                        [sty.menuOneColumnONedropdown2]: hasVariant(
-                          $state,
-                          "dropdown2",
-                          "dropdown2"
                         )
                       }
                     )}
@@ -8145,13 +8262,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     <ItemMegaMenuSubitem
                       className={classNames(
                         "__wab_instance",
-                        sty.itemMegaMenuSubitem__xfmrq,
-                        {
-                          [sty.itemMegaMenuSubitemdropdown1__xfmrqwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2__xfmrqrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2")
-                        }
+                        sty.itemMegaMenuSubitem__xfmrq
                       )}
                       label={`${currentItem.label} `}
                       url={(() => {
@@ -8198,20 +8309,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuTwoColumnOne,
                       {
-                        [sty.menuTwoColumnOnedropdown1]: hasVariant(
+                        [sty.menuTwoColumnOnemenus_dropdown2]: hasVariant(
                           $state,
-                          "dropdown1",
-                          "dropdown1"
-                        ),
-                        [sty.menuTwoColumnOnedropdown2]: hasVariant(
-                          $state,
-                          "dropdown2",
+                          "menus",
                           "dropdown2"
-                        ),
-                        [sty.menuTwoColumnOnedropdown4]: hasVariant(
-                          $state,
-                          "dropdown4",
-                          "dropdown4"
                         )
                       }
                     )}
@@ -8220,13 +8321,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     <ItemMegaMenuSubitem
                       className={classNames(
                         "__wab_instance",
-                        sty.itemMegaMenuSubitem__c7K3G,
-                        {
-                          [sty.itemMegaMenuSubitemdropdown1__c7K3GwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2__c7K3GrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2")
-                        }
+                        sty.itemMegaMenuSubitem__c7K3G
                       )}
                       label={`${currentItem.label} `}
                       url={(() => {
@@ -8273,25 +8368,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuThreeColumnOne,
                       {
-                        [sty.menuThreeColumnOnedropdown1]: hasVariant(
+                        [sty.menuThreeColumnOnemenus_dropdown3]: hasVariant(
                           $state,
-                          "dropdown1",
-                          "dropdown1"
-                        ),
-                        [sty.menuThreeColumnOnedropdown2]: hasVariant(
-                          $state,
-                          "dropdown2",
-                          "dropdown2"
-                        ),
-                        [sty.menuThreeColumnOnedropdown3]: hasVariant(
-                          $state,
-                          "dropdown3",
+                          "menus",
                           "dropdown3"
-                        ),
-                        [sty.menuThreeColumnOnedropdown4]: hasVariant(
-                          $state,
-                          "dropdown4",
-                          "dropdown4"
                         )
                       }
                     )}
@@ -8300,17 +8380,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     <ItemMegaMenuSubitem
                       className={classNames(
                         "__wab_instance",
-                        sty.itemMegaMenuSubitem___8Sftf,
-                        {
-                          [sty.itemMegaMenuSubitemdropdown1___8SftfwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2___8SftfrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2"),
-                          [sty.itemMegaMenuSubitemdropdown3___8SftfC1Ig]:
-                            hasVariant($state, "dropdown3", "dropdown3"),
-                          [sty.itemMegaMenuSubitemdropdown4___8SftfAjXtF]:
-                            hasVariant($state, "dropdown4", "dropdown4")
-                        }
+                        sty.itemMegaMenuSubitem___8Sftf
                       )}
                       label={`${currentItem.label} `}
                       url={(() => {
@@ -8357,40 +8427,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuFourColumnOne,
                       {
-                        [sty.menuFourColumnOnedropdown1]: hasVariant(
+                        [sty.menuFourColumnOnemenus_dropdown1]: hasVariant(
                           $state,
-                          "dropdown1",
+                          "menus",
                           "dropdown1"
                         ),
-                        [sty.menuFourColumnOnedropdown2]: hasVariant(
+                        [sty.menuFourColumnOnemenus_dropdown4]: hasVariant(
                           $state,
-                          "dropdown2",
-                          "dropdown2"
-                        ),
-                        [sty.menuFourColumnOnedropdown3]: hasVariant(
-                          $state,
-                          "dropdown3",
-                          "dropdown3"
-                        ),
-                        [sty.menuFourColumnOnedropdown4]: hasVariant(
-                          $state,
-                          "dropdown4",
+                          "menus",
                           "dropdown4"
-                        ),
-                        [sty.menuFourColumnOnedropdown5]: hasVariant(
-                          $state,
-                          "dropdown5",
-                          "dropdown5"
-                        ),
-                        [sty.menuFourColumnOnedropdown6]: hasVariant(
-                          $state,
-                          "dropdown6",
-                          "dropdown6"
-                        ),
-                        [sty.menuFourColumnOnedropdown7]: hasVariant(
-                          $state,
-                          "dropdown7",
-                          "dropdown7"
                         )
                       }
                     )}
@@ -8399,21 +8444,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     <ItemMegaMenuSubitem
                       className={classNames(
                         "__wab_instance",
-                        sty.itemMegaMenuSubitem__zmBaW,
-                        {
-                          [sty.itemMegaMenuSubitemdropdown1__zmBaWwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2__zmBaWrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2"),
-                          [sty.itemMegaMenuSubitemdropdown3__zmBaWc1Ig]:
-                            hasVariant($state, "dropdown3", "dropdown3"),
-                          [sty.itemMegaMenuSubitemdropdown4__zmBaWajXtF]:
-                            hasVariant($state, "dropdown4", "dropdown4"),
-                          [sty.itemMegaMenuSubitemdropdown5__zmBaWllPSu]:
-                            hasVariant($state, "dropdown5", "dropdown5"),
-                          [sty.itemMegaMenuSubitemdropdown7__zmBaW6Z5G8]:
-                            hasVariant($state, "dropdown7", "dropdown7")
-                        }
+                        sty.itemMegaMenuSubitem__zmBaW
                       )}
                       label={`${currentItem.label} `}
                       url={(() => {
@@ -8460,35 +8491,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuFiveColumnOne,
                       {
-                        [sty.menuFiveColumnOnedropdown1]: hasVariant(
+                        [sty.menuFiveColumnOnemenus_dropdown5]: hasVariant(
                           $state,
-                          "dropdown1",
-                          "dropdown1"
-                        ),
-                        [sty.menuFiveColumnOnedropdown2]: hasVariant(
-                          $state,
-                          "dropdown2",
-                          "dropdown2"
-                        ),
-                        [sty.menuFiveColumnOnedropdown3]: hasVariant(
-                          $state,
-                          "dropdown3",
-                          "dropdown3"
-                        ),
-                        [sty.menuFiveColumnOnedropdown4]: hasVariant(
-                          $state,
-                          "dropdown4",
-                          "dropdown4"
-                        ),
-                        [sty.menuFiveColumnOnedropdown5]: hasVariant(
-                          $state,
-                          "dropdown5",
+                          "menus",
                           "dropdown5"
-                        ),
-                        [sty.menuFiveColumnOnedropdown6]: hasVariant(
-                          $state,
-                          "dropdown6",
-                          "dropdown6"
                         )
                       }
                     )}
@@ -8497,19 +8503,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     <ItemMegaMenuSubitem
                       className={classNames(
                         "__wab_instance",
-                        sty.itemMegaMenuSubitem__l31P2,
-                        {
-                          [sty.itemMegaMenuSubitemdropdown1__l31P2WLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2__l31P2RwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2"),
-                          [sty.itemMegaMenuSubitemdropdown3__l31P2C1Ig]:
-                            hasVariant($state, "dropdown3", "dropdown3"),
-                          [sty.itemMegaMenuSubitemdropdown4__l31P2AjXtF]:
-                            hasVariant($state, "dropdown4", "dropdown4"),
-                          [sty.itemMegaMenuSubitemdropdown5__l31P2LlPSu]:
-                            hasVariant($state, "dropdown5", "dropdown5")
-                        }
+                        sty.itemMegaMenuSubitem__l31P2
                       )}
                       label={`${currentItem.label} `}
                       url={(() => {
@@ -8556,40 +8550,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuSixColumnOne,
                       {
-                        [sty.menuSixColumnOnedropdown1]: hasVariant(
+                        [sty.menuSixColumnOnemenus_dropdown6]: hasVariant(
                           $state,
-                          "dropdown1",
-                          "dropdown1"
-                        ),
-                        [sty.menuSixColumnOnedropdown2]: hasVariant(
-                          $state,
-                          "dropdown2",
-                          "dropdown2"
-                        ),
-                        [sty.menuSixColumnOnedropdown3]: hasVariant(
-                          $state,
-                          "dropdown3",
-                          "dropdown3"
-                        ),
-                        [sty.menuSixColumnOnedropdown4]: hasVariant(
-                          $state,
-                          "dropdown4",
-                          "dropdown4"
-                        ),
-                        [sty.menuSixColumnOnedropdown5]: hasVariant(
-                          $state,
-                          "dropdown5",
-                          "dropdown5"
-                        ),
-                        [sty.menuSixColumnOnedropdown6]: hasVariant(
-                          $state,
-                          "dropdown6",
+                          "menus",
                           "dropdown6"
-                        ),
-                        [sty.menuSixColumnOnedropdown7]: hasVariant(
-                          $state,
-                          "dropdown7",
-                          "dropdown7"
                         )
                       }
                     )}
@@ -8598,21 +8562,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     <ItemMegaMenuSubitem
                       className={classNames(
                         "__wab_instance",
-                        sty.itemMegaMenuSubitem__meEzp,
-                        {
-                          [sty.itemMegaMenuSubitemdropdown1__meEzpwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2__meEzprwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2"),
-                          [sty.itemMegaMenuSubitemdropdown3__meEzpC1Ig]:
-                            hasVariant($state, "dropdown3", "dropdown3"),
-                          [sty.itemMegaMenuSubitemdropdown4__meEzpAjXtF]:
-                            hasVariant($state, "dropdown4", "dropdown4"),
-                          [sty.itemMegaMenuSubitemdropdown5__meEzpllPSu]:
-                            hasVariant($state, "dropdown5", "dropdown5"),
-                          [sty.itemMegaMenuSubitemdropdown6__meEzpwq0Uc]:
-                            hasVariant($state, "dropdown6", "dropdown6")
-                        }
+                        sty.itemMegaMenuSubitem__meEzp
                       )}
                       label={`${currentItem.label} `}
                       url={(() => {
@@ -8659,40 +8609,35 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       projectcss.all,
                       sty.menuSevenColumnOne,
                       {
-                        [sty.menuSevenColumnOnedropdown1]: hasVariant(
+                        [sty.menuSevenColumnOnemenus_dropdown1]: hasVariant(
                           $state,
-                          "dropdown1",
+                          "menus",
                           "dropdown1"
                         ),
-                        [sty.menuSevenColumnOnedropdown2]: hasVariant(
+                        [sty.menuSevenColumnOnemenus_dropdown2]: hasVariant(
                           $state,
-                          "dropdown2",
+                          "menus",
                           "dropdown2"
                         ),
-                        [sty.menuSevenColumnOnedropdown3]: hasVariant(
+                        [sty.menuSevenColumnOnemenus_dropdown3]: hasVariant(
                           $state,
-                          "dropdown3",
+                          "menus",
                           "dropdown3"
                         ),
-                        [sty.menuSevenColumnOnedropdown4]: hasVariant(
+                        [sty.menuSevenColumnOnemenus_dropdown4]: hasVariant(
                           $state,
-                          "dropdown4",
+                          "menus",
                           "dropdown4"
                         ),
-                        [sty.menuSevenColumnOnedropdown5]: hasVariant(
+                        [sty.menuSevenColumnOnemenus_dropdown5]: hasVariant(
                           $state,
-                          "dropdown5",
+                          "menus",
                           "dropdown5"
                         ),
-                        [sty.menuSevenColumnOnedropdown6]: hasVariant(
+                        [sty.menuSevenColumnOnemenus_dropdown6]: hasVariant(
                           $state,
-                          "dropdown6",
+                          "menus",
                           "dropdown6"
-                        ),
-                        [sty.menuSevenColumnOnedropdown7]: hasVariant(
-                          $state,
-                          "dropdown7",
-                          "dropdown7"
                         )
                       }
                     )}
@@ -8703,18 +8648,16 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         "__wab_instance",
                         sty.itemMegaMenuSubitem__gn6XZ,
                         {
-                          [sty.itemMegaMenuSubitemdropdown1__gn6XZwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemMegaMenuSubitemdropdown2__gn6XZrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2"),
-                          [sty.itemMegaMenuSubitemdropdown3__gn6XZc1Ig]:
-                            hasVariant($state, "dropdown3", "dropdown3"),
-                          [sty.itemMegaMenuSubitemdropdown4__gn6XZajXtF]:
-                            hasVariant($state, "dropdown4", "dropdown4"),
-                          [sty.itemMegaMenuSubitemdropdown5__gn6XZllPSu]:
-                            hasVariant($state, "dropdown5", "dropdown5"),
-                          [sty.itemMegaMenuSubitemdropdown6__gn6XZwq0Uc]:
-                            hasVariant($state, "dropdown6", "dropdown6")
+                          [sty.itemMegaMenuSubitemmenus_dropdown1__gn6XZuiCmH]:
+                            hasVariant($state, "menus", "dropdown1"),
+                          [sty.itemMegaMenuSubitemmenus_dropdown2__gn6XZd5KWg]:
+                            hasVariant($state, "menus", "dropdown2"),
+                          [sty.itemMegaMenuSubitemmenus_dropdown4__gn6XZdFasb]:
+                            hasVariant($state, "menus", "dropdown4"),
+                          [sty.itemMegaMenuSubitemmenus_dropdown6__gn6XZKvHmc]:
+                            hasVariant($state, "menus", "dropdown6"),
+                          [sty.itemMegaMenuSubitemmenus_dropdown7__gn6XZtRh99]:
+                            hasVariant($state, "menus", "dropdown7")
                         }
                       )}
                       label={`${currentItem.label} `}
@@ -8741,41 +8684,14 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               data-plasmic-name={"frame57"}
               data-plasmic-override={overrides.frame57}
               hasGap={true}
-              className={classNames(projectcss.all, sty.frame57, {
-                [sty.frame57dropdown5]: hasVariant(
-                  $state,
-                  "dropdown5",
-                  "dropdown5"
-                ),
-                [sty.frame57dropdown6]: hasVariant(
-                  $state,
-                  "dropdown6",
-                  "dropdown6"
-                )
-              })}
+              className={classNames(projectcss.all, sty.frame57)}
             >
               <Stack__
                 as={"div"}
                 data-plasmic-name={"frame71"}
                 data-plasmic-override={overrides.frame71}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.frame71, {
-                  [sty.frame71dropdown1]: hasVariant(
-                    $state,
-                    "dropdown1",
-                    "dropdown1"
-                  ),
-                  [sty.frame71dropdown2]: hasVariant(
-                    $state,
-                    "dropdown2",
-                    "dropdown2"
-                  ),
-                  [sty.frame71dropdown6]: hasVariant(
-                    $state,
-                    "dropdown6",
-                    "dropdown6"
-                  )
-                })}
+                className={classNames(projectcss.all, sty.frame71)}
               >
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                   (() => {
@@ -8806,15 +8722,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         projectcss.all,
                         sty.menuOneColumnTwo,
                         {
-                          [sty.menuOneColumnTwodropdown1]: hasVariant(
+                          [sty.menuOneColumnTwomenus_dropdown1]: hasVariant(
                             $state,
-                            "dropdown1",
+                            "menus",
                             "dropdown1"
-                          ),
-                          [sty.menuOneColumnTwodropdown2]: hasVariant(
-                            $state,
-                            "dropdown2",
-                            "dropdown2"
                           )
                         }
                       )}
@@ -8823,13 +8734,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       <ItemMegaMenuSubitem
                         className={classNames(
                           "__wab_instance",
-                          sty.itemMegaMenuSubitem__tuim4,
-                          {
-                            [sty.itemMegaMenuSubitemdropdown1__tuim4WLNaE]:
-                              hasVariant($state, "dropdown1", "dropdown1"),
-                            [sty.itemMegaMenuSubitemdropdown2__tuim4RwAmm]:
-                              hasVariant($state, "dropdown2", "dropdown2")
-                          }
+                          sty.itemMegaMenuSubitem__tuim4
                         )}
                         label={(() => {
                           try {
@@ -8890,14 +8795,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         projectcss.all,
                         sty.menuTwoColumnTwo,
                         {
-                          [sty.menuTwoColumnTwodropdown1]: hasVariant(
+                          [sty.menuTwoColumnTwomenus_dropdown2]: hasVariant(
                             $state,
-                            "dropdown1",
-                            "dropdown1"
-                          ),
-                          [sty.menuTwoColumnTwodropdown2]: hasVariant(
-                            $state,
-                            "dropdown2",
+                            "menus",
                             "dropdown2"
                           )
                         }
@@ -8907,11 +8807,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       <ItemMegaMenuSubitem
                         className={classNames(
                           "__wab_instance",
-                          sty.itemMegaMenuSubitem__dxRv,
-                          {
-                            [sty.itemMegaMenuSubitemdropdown1__dxRvWLNaE]:
-                              hasVariant($state, "dropdown1", "dropdown1")
-                          }
+                          sty.itemMegaMenuSubitem__dxRv
                         )}
                         label={(() => {
                           try {
@@ -8972,39 +8868,39 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         projectcss.all,
                         sty.menuThreeColumnTwo,
                         {
-                          [sty.menuThreeColumnTwodropdown1]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown1]: hasVariant(
                             $state,
-                            "dropdown1",
+                            "menus",
                             "dropdown1"
                           ),
-                          [sty.menuThreeColumnTwodropdown2]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown2]: hasVariant(
                             $state,
-                            "dropdown2",
+                            "menus",
                             "dropdown2"
                           ),
-                          [sty.menuThreeColumnTwodropdown3]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown3]: hasVariant(
                             $state,
-                            "dropdown3",
+                            "menus",
                             "dropdown3"
                           ),
-                          [sty.menuThreeColumnTwodropdown4]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown4]: hasVariant(
                             $state,
-                            "dropdown4",
+                            "menus",
                             "dropdown4"
                           ),
-                          [sty.menuThreeColumnTwodropdown5]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown5]: hasVariant(
                             $state,
-                            "dropdown5",
+                            "menus",
                             "dropdown5"
                           ),
-                          [sty.menuThreeColumnTwodropdown6]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown6]: hasVariant(
                             $state,
-                            "dropdown6",
+                            "menus",
                             "dropdown6"
                           ),
-                          [sty.menuThreeColumnTwodropdown7]: hasVariant(
+                          [sty.menuThreeColumnTwomenus_dropdown7]: hasVariant(
                             $state,
-                            "dropdown7",
+                            "menus",
                             "dropdown7"
                           )
                         }
@@ -9016,14 +8912,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           "__wab_instance",
                           sty.itemMegaMenuSubitem__o9BD,
                           {
-                            [sty.itemMegaMenuSubitemdropdown1__o9BDwLNaE]:
-                              hasVariant($state, "dropdown1", "dropdown1"),
-                            [sty.itemMegaMenuSubitemdropdown2__o9BDrwAmm]:
-                              hasVariant($state, "dropdown2", "dropdown2"),
-                            [sty.itemMegaMenuSubitemdropdown4__o9BDAjXtF]:
-                              hasVariant($state, "dropdown4", "dropdown4"),
-                            [sty.itemMegaMenuSubitemdropdown5__o9BDllPSu]:
-                              hasVariant($state, "dropdown5", "dropdown5")
+                            [sty.itemMegaMenuSubitemmenus_dropdown4__o9BDdFasb]:
+                              hasVariant($state, "menus", "dropdown4")
                           }
                         )}
                         label={(() => {
@@ -9085,39 +8975,39 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         projectcss.all,
                         sty.menuFourColumnTwo2,
                         {
-                          [sty.menuFourColumnTwo2dropdown1]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown1]: hasVariant(
                             $state,
-                            "dropdown1",
+                            "menus",
                             "dropdown1"
                           ),
-                          [sty.menuFourColumnTwo2dropdown2]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown2]: hasVariant(
                             $state,
-                            "dropdown2",
+                            "menus",
                             "dropdown2"
                           ),
-                          [sty.menuFourColumnTwo2dropdown3]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown3]: hasVariant(
                             $state,
-                            "dropdown3",
+                            "menus",
                             "dropdown3"
                           ),
-                          [sty.menuFourColumnTwo2dropdown4]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown4]: hasVariant(
                             $state,
-                            "dropdown4",
+                            "menus",
                             "dropdown4"
                           ),
-                          [sty.menuFourColumnTwo2dropdown5]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown5]: hasVariant(
                             $state,
-                            "dropdown5",
+                            "menus",
                             "dropdown5"
                           ),
-                          [sty.menuFourColumnTwo2dropdown6]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown6]: hasVariant(
                             $state,
-                            "dropdown6",
+                            "menus",
                             "dropdown6"
                           ),
-                          [sty.menuFourColumnTwo2dropdown7]: hasVariant(
+                          [sty.menuFourColumnTwo2menus_dropdown7]: hasVariant(
                             $state,
-                            "dropdown7",
+                            "menus",
                             "dropdown7"
                           )
                         }
@@ -9127,19 +9017,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       <ItemMegaMenuSubitem
                         className={classNames(
                           "__wab_instance",
-                          sty.itemMegaMenuSubitem__gM8Pw,
-                          {
-                            [sty.itemMegaMenuSubitemdropdown1__gM8PWwLNaE]:
-                              hasVariant($state, "dropdown1", "dropdown1"),
-                            [sty.itemMegaMenuSubitemdropdown2__gM8PWrwAmm]:
-                              hasVariant($state, "dropdown2", "dropdown2"),
-                            [sty.itemMegaMenuSubitemdropdown3__gM8Pwc1Ig]:
-                              hasVariant($state, "dropdown3", "dropdown3"),
-                            [sty.itemMegaMenuSubitemdropdown4__gM8PwajXtF]:
-                              hasVariant($state, "dropdown4", "dropdown4"),
-                            [sty.itemMegaMenuSubitemdropdown7__gM8Pw6Z5G8]:
-                              hasVariant($state, "dropdown7", "dropdown7")
-                          }
+                          sty.itemMegaMenuSubitem__gM8Pw
                         )}
                         label={(() => {
                           try {
@@ -9200,39 +9078,39 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         projectcss.all,
                         sty.menuFiveColumnTwo,
                         {
-                          [sty.menuFiveColumnTwodropdown1]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown1]: hasVariant(
                             $state,
-                            "dropdown1",
+                            "menus",
                             "dropdown1"
                           ),
-                          [sty.menuFiveColumnTwodropdown2]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown2]: hasVariant(
                             $state,
-                            "dropdown2",
+                            "menus",
                             "dropdown2"
                           ),
-                          [sty.menuFiveColumnTwodropdown3]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown3]: hasVariant(
                             $state,
-                            "dropdown3",
+                            "menus",
                             "dropdown3"
                           ),
-                          [sty.menuFiveColumnTwodropdown4]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown4]: hasVariant(
                             $state,
-                            "dropdown4",
+                            "menus",
                             "dropdown4"
                           ),
-                          [sty.menuFiveColumnTwodropdown5]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown5]: hasVariant(
                             $state,
-                            "dropdown5",
+                            "menus",
                             "dropdown5"
                           ),
-                          [sty.menuFiveColumnTwodropdown6]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown6]: hasVariant(
                             $state,
-                            "dropdown6",
+                            "menus",
                             "dropdown6"
                           ),
-                          [sty.menuFiveColumnTwodropdown7]: hasVariant(
+                          [sty.menuFiveColumnTwomenus_dropdown7]: hasVariant(
                             $state,
-                            "dropdown7",
+                            "menus",
                             "dropdown7"
                           )
                         }
@@ -9242,17 +9120,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       <ItemMegaMenuSubitem
                         className={classNames(
                           "__wab_instance",
-                          sty.itemMegaMenuSubitem__qz82F,
-                          {
-                            [sty.itemMegaMenuSubitemdropdown1__qz82FwLNaE]:
-                              hasVariant($state, "dropdown1", "dropdown1"),
-                            [sty.itemMegaMenuSubitemdropdown2__qz82FrwAmm]:
-                              hasVariant($state, "dropdown2", "dropdown2"),
-                            [sty.itemMegaMenuSubitemdropdown4__qz82FAjXtF]:
-                              hasVariant($state, "dropdown4", "dropdown4"),
-                            [sty.itemMegaMenuSubitemdropdown6__qz82Fwq0Uc]:
-                              hasVariant($state, "dropdown6", "dropdown6")
-                          }
+                          sty.itemMegaMenuSubitem__qz82F
                         )}
                         label={(() => {
                           try {
@@ -9313,39 +9181,39 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         projectcss.all,
                         sty.menuSixColumnTwo,
                         {
-                          [sty.menuSixColumnTwodropdown1]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown1]: hasVariant(
                             $state,
-                            "dropdown1",
+                            "menus",
                             "dropdown1"
                           ),
-                          [sty.menuSixColumnTwodropdown2]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown2]: hasVariant(
                             $state,
-                            "dropdown2",
+                            "menus",
                             "dropdown2"
                           ),
-                          [sty.menuSixColumnTwodropdown3]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown3]: hasVariant(
                             $state,
-                            "dropdown3",
+                            "menus",
                             "dropdown3"
                           ),
-                          [sty.menuSixColumnTwodropdown4]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown4]: hasVariant(
                             $state,
-                            "dropdown4",
+                            "menus",
                             "dropdown4"
                           ),
-                          [sty.menuSixColumnTwodropdown5]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown5]: hasVariant(
                             $state,
-                            "dropdown5",
+                            "menus",
                             "dropdown5"
                           ),
-                          [sty.menuSixColumnTwodropdown6]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown6]: hasVariant(
                             $state,
-                            "dropdown6",
+                            "menus",
                             "dropdown6"
                           ),
-                          [sty.menuSixColumnTwodropdown7]: hasVariant(
+                          [sty.menuSixColumnTwomenus_dropdown7]: hasVariant(
                             $state,
-                            "dropdown7",
+                            "menus",
                             "dropdown7"
                           )
                         }
@@ -9357,16 +9225,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           "__wab_instance",
                           sty.itemMegaMenuSubitem__wjk9Y,
                           {
-                            [sty.itemMegaMenuSubitemdropdown1__wjk9YwLNaE]:
-                              hasVariant($state, "dropdown1", "dropdown1"),
-                            [sty.itemMegaMenuSubitemdropdown2__wjk9YrwAmm]:
-                              hasVariant($state, "dropdown2", "dropdown2"),
-                            [sty.itemMegaMenuSubitemdropdown4__wjk9YajXtF]:
-                              hasVariant($state, "dropdown4", "dropdown4"),
-                            [sty.itemMegaMenuSubitemdropdown5__wjk9YllPSu]:
-                              hasVariant($state, "dropdown5", "dropdown5"),
-                            [sty.itemMegaMenuSubitemdropdown6__wjk9Ywq0Uc]:
-                              hasVariant($state, "dropdown6", "dropdown6")
+                            [sty.itemMegaMenuSubitemmenus_dropdown1__wjk9YuiCmH]:
+                              hasVariant($state, "menus", "dropdown1")
                           }
                         )}
                         label={(() => {
@@ -9399,19 +9259,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     </Stack__>
                   );
                 })}
-                {(
-                  hasVariant($state, "dropdown7", "dropdown7")
-                    ? true
-                    : hasVariant($state, "dropdown4", "dropdown4")
-                    ? true
-                    : hasVariant($state, "dropdown3", "dropdown3")
-                    ? true
-                    : hasVariant($state, "dropdown2", "dropdown2")
-                    ? true
-                    : hasVariant($state, "dropdown1", "dropdown1")
-                    ? true
-                    : false
-                )
+                {(hasVariant($state, "menus", "dropdown7") ? true : false)
                   ? (_par =>
                       !_par ? [] : Array.isArray(_par) ? _par : [_par])(
                       (() => {
@@ -9442,41 +9290,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                             projectcss.all,
                             sty.menuSevenColumnTwo,
                             {
-                              [sty.menuSevenColumnTwodropdown1]: hasVariant(
-                                $state,
-                                "dropdown1",
-                                "dropdown1"
-                              ),
-                              [sty.menuSevenColumnTwodropdown2]: hasVariant(
-                                $state,
-                                "dropdown2",
-                                "dropdown2"
-                              ),
-                              [sty.menuSevenColumnTwodropdown3]: hasVariant(
-                                $state,
-                                "dropdown3",
-                                "dropdown3"
-                              ),
-                              [sty.menuSevenColumnTwodropdown4]: hasVariant(
-                                $state,
-                                "dropdown4",
-                                "dropdown4"
-                              ),
-                              [sty.menuSevenColumnTwodropdown5]: hasVariant(
-                                $state,
-                                "dropdown5",
-                                "dropdown5"
-                              ),
-                              [sty.menuSevenColumnTwodropdown6]: hasVariant(
-                                $state,
-                                "dropdown6",
-                                "dropdown6"
-                              ),
-                              [sty.menuSevenColumnTwodropdown7]: hasVariant(
-                                $state,
-                                "dropdown7",
-                                "dropdown7"
-                              )
+                              [sty.menuSevenColumnTwomenus_dropdown7]:
+                                hasVariant($state, "menus", "dropdown7")
                             }
                           )}
                           key={currentIndex}
@@ -9484,17 +9299,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           <ItemMegaMenuSubitem
                             className={classNames(
                               "__wab_instance",
-                              sty.itemMegaMenuSubitem___38OdQ,
-                              {
-                                [sty.itemMegaMenuSubitemdropdown1___38OdQwLNaE]:
-                                  hasVariant($state, "dropdown1", "dropdown1"),
-                                [sty.itemMegaMenuSubitemdropdown2___38OdQrwAmm]:
-                                  hasVariant($state, "dropdown2", "dropdown2"),
-                                [sty.itemMegaMenuSubitemdropdown4___38OdQajXtF]:
-                                  hasVariant($state, "dropdown4", "dropdown4"),
-                                [sty.itemMegaMenuSubitemdropdown6___38OdQwq0Uc]:
-                                  hasVariant($state, "dropdown6", "dropdown6")
-                              }
+                              sty.itemMegaMenuSubitem___38OdQ
                             )}
                             label={(() => {
                               try {
@@ -9537,307 +9342,132 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           data-plasmic-override={overrides.frame58}
           hasGap={true}
           className={classNames(projectcss.all, sty.frame58, {
-            [sty.frame58dropdown1]: hasVariant(
+            [sty.frame58menus_dropdown2]: hasVariant(
               $state,
-              "dropdown1",
-              "dropdown1"
-            ),
-            [sty.frame58dropdown2]: hasVariant(
-              $state,
-              "dropdown2",
+              "menus",
               "dropdown2"
             ),
-            [sty.frame58dropdown3]: hasVariant(
+            [sty.frame58menus_dropdown4]: hasVariant(
               $state,
-              "dropdown3",
-              "dropdown3"
-            ),
-            [sty.frame58dropdown4]: hasVariant(
-              $state,
-              "dropdown4",
+              "menus",
               "dropdown4"
-            ),
-            [sty.frame58dropdown6]: hasVariant(
-              $state,
-              "dropdown6",
-              "dropdown6"
-            ),
-            [sty.frame58dropdown7]: hasVariant($state, "dropdown7", "dropdown7")
+            )
           })}
         >
-          {(
-            hasVariant($state, "dropdown7", "dropdown7")
-              ? false
-              : hasVariant($state, "dropdown6", "dropdown6")
-              ? true
-              : hasVariant($state, "dropdown5", "dropdown5")
-              ? false
-              : hasVariant($state, "dropdown4", "dropdown4")
-              ? false
-              : hasVariant($state, "dropdown3", "dropdown3")
-              ? true
-              : hasVariant($state, "dropdown2", "dropdown2")
-              ? true
-              : hasVariant($state, "dropdown1", "dropdown1")
-              ? (() => {
-                  try {
-                    return $queries.getMegaMenuOne.data.response.includes.Entry.some(
-                      entry => entry.sys.contentType.sys.type === "Link"
-                    );
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return false;
-                    }
-                    throw e;
-                  }
-                })()
-              : (() => {
-                  try {
-                    return $state.menu1Links.filter(link => link.column === 3);
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return false;
-                    }
-                    throw e;
-                  }
-                })()
-          )
-            ? (_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $queries.getMegaMenuOne.data.response.includes.Entry.filter(
-                      entry => entry.fields.column === 3
-                    );
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"menuOneColumn3"}
-                    data-plasmic-override={overrides.menuOneColumn3}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.menuOneColumn3, {
-                      [sty.menuOneColumn3dropdown1]: hasVariant(
-                        $state,
-                        "dropdown1",
-                        "dropdown1"
-                      ),
-                      [sty.menuOneColumn3dropdown2]: hasVariant(
-                        $state,
-                        "dropdown2",
-                        "dropdown2"
-                      ),
-                      [sty.menuOneColumn3dropdown3]: hasVariant(
-                        $state,
-                        "dropdown3",
-                        "dropdown3"
-                      ),
-                      [sty.menuOneColumn3dropdown4]: hasVariant(
-                        $state,
-                        "dropdown4",
-                        "dropdown4"
-                      ),
-                      [sty.menuOneColumn3dropdown5]: hasVariant(
-                        $state,
-                        "dropdown5",
-                        "dropdown5"
-                      ),
-                      [sty.menuOneColumn3dropdown6]: hasVariant(
-                        $state,
-                        "dropdown6",
-                        "dropdown6"
-                      ),
-                      [sty.menuOneColumn3dropdown7]: hasVariant(
-                        $state,
-                        "dropdown7",
-                        "dropdown7"
-                      )
-                    })}
-                    key={currentIndex}
-                  >
-                    <ItemExternalLinkCardItemWithLogo
-                      articleSubtitle={(() => {
-                        try {
-                          return currentItem.fields.subText;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      articleTitle={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.label;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.label;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
-                      className={classNames(
-                        "__wab_instance",
-                        sty.itemExternalLinkCardItemWithLogo__oLsHk,
-                        {
-                          [sty.itemExternalLinkCardItemWithLogodropdown1__oLsHKwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown2__oLsHKrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown3__oLsHkc1Ig]:
-                            hasVariant($state, "dropdown3", "dropdown3"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown4__oLsHkajXtF]:
-                            hasVariant($state, "dropdown4", "dropdown4"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown5__oLsHKllPSu]:
-                            hasVariant($state, "dropdown5", "dropdown5"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown6__oLsHKwq0Uc]:
-                            hasVariant($state, "dropdown6", "dropdown6"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown7__oLsHk6Z5G8]:
-                            hasVariant($state, "dropdown7", "dropdown7"),
-                          [sty.itemExternalLinkCardItemWithLogoexploreAssh__oLsHKpX9Ih]:
-                            hasVariant($state, "exploreAssh", "exploreAssh")
-                        }
-                      )}
-                      iconImageId={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.icon.sys.id;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.icon.sys.id;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
-                      linkUrl={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.url;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.url;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
-                      showIcon={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.showExternalIcon;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.showExternalIcon;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
-                    />
-                  </Stack__>
+          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+            (() => {
+              try {
+                return $queries.getMegaMenuOne.data.response.includes.Entry.filter(
+                  entry => entry.fields.column === 3
                 );
-              })
-            : null}
-          {(
-            hasVariant($state, "dropdown6", "dropdown6")
-              ? true
-              : hasVariant($state, "dropdown2", "dropdown2")
-              ? true
-              : hasVariant($state, "dropdown1", "dropdown1")
-              ? true
-              : false
-          )
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return [];
+                }
+                throw e;
+              }
+            })()
+          ).map((__plasmic_item_0, __plasmic_idx_0) => {
+            const currentItem = __plasmic_item_0;
+            const currentIndex = __plasmic_idx_0;
+            return (
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"menuOneColumn3"}
+                data-plasmic-override={overrides.menuOneColumn3}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.menuOneColumn3, {
+                  [sty.menuOneColumn3menus_dropdown1]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdown1"
+                  ),
+                  [sty.menuOneColumn3menus_dropdown2]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdown2"
+                  )
+                })}
+                key={currentIndex}
+              >
+                <ItemExternalLinkCardItemWithLogo
+                  articleSubtitle={(() => {
+                    try {
+                      return currentItem.fields.subText;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  articleTitle={(() => {
+                    try {
+                      return currentItem.fields.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemExternalLinkCardItemWithLogo__oLsHk
+                  )}
+                  iconImageId={(() => {
+                    try {
+                      return currentItem.fields.icon.sys.id;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  linkUrl={(() => {
+                    try {
+                      return currentItem.fields.url;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  showIcon={(() => {
+                    try {
+                      return currentItem.fields.showExternalIcon;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              </Stack__>
+            );
+          })}
+          {false
             ? (_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
                   try {
@@ -9863,23 +9493,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     data-plasmic-name={"menuSixColumn3"}
                     data-plasmic-override={overrides.menuSixColumn3}
                     hasGap={true}
-                    className={classNames(projectcss.all, sty.menuSixColumn3, {
-                      [sty.menuSixColumn3dropdown1]: hasVariant(
-                        $state,
-                        "dropdown1",
-                        "dropdown1"
-                      ),
-                      [sty.menuSixColumn3dropdown2]: hasVariant(
-                        $state,
-                        "dropdown2",
-                        "dropdown2"
-                      ),
-                      [sty.menuSixColumn3dropdown6]: hasVariant(
-                        $state,
-                        "dropdown6",
-                        "dropdown6"
-                      )
-                    })}
+                    className={classNames(projectcss.all, sty.menuSixColumn3)}
                     key={currentIndex}
                   >
                     <ItemExternalLinkCardItemWithLogo
@@ -9896,157 +9510,68 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           throw e;
                         }
                       })()}
-                      articleTitle={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.label;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.label;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
+                      articleTitle={(() => {
+                        try {
+                          return currentItem.fields.label;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
                       className={classNames(
                         "__wab_instance",
-                        sty.itemExternalLinkCardItemWithLogo__kkPap,
-                        {
-                          [sty.itemExternalLinkCardItemWithLogodropdown1__kkPapwLNaE]:
-                            hasVariant($state, "dropdown1", "dropdown1"),
-                          [sty.itemExternalLinkCardItemWithLogodropdown2__kkPaprwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2")
-                        }
+                        sty.itemExternalLinkCardItemWithLogo__kkPap
                       )}
-                      iconImageId={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.icon.sys.id;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.icon.sys.id;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
-                      linkUrl={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.url;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.url;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return undefined;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
-                      showIcon={
-                        hasVariant($state, "dropdown1", "dropdown1")
-                          ? (() => {
-                              try {
-                                return currentItem.fields.showExternalIcon;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()
-                          : (() => {
-                              try {
-                                return currentItem.fields.showExternalIcon;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()
-                      }
+                      iconImageId={(() => {
+                        try {
+                          return currentItem.fields.icon.sys.id;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      linkUrl={(() => {
+                        try {
+                          return currentItem.fields.url;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      showIcon={(() => {
+                        try {
+                          return currentItem.fields.showExternalIcon;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
                     />
                   </Stack__>
                 );
               })
             : null}
-          {(
-            hasVariant($state, "dropdown2", "dropdown2")
-              ? (() => {
-                  try {
-                    return (
-                      $queries.getMegaMenuTwo.data.response.items[0].fields
-                        .featuredContent !== undefined
-                    );
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return true;
-                    }
-                    throw e;
-                  }
-                })()
-              : false
-          )
+          {(hasVariant($state, "menus", "dropdown2") ? true : false)
             ? (_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
                   try {
@@ -10068,24 +9593,14 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 return (
                   <Stack__
                     as={"div"}
-                    data-plasmic-name={"menuTwoColumn3"}
-                    data-plasmic-override={overrides.menuTwoColumn3}
+                    data-plasmic-name={"menuTwoColumn"}
+                    data-plasmic-override={overrides.menuTwoColumn}
                     hasGap={true}
-                    className={classNames(projectcss.all, sty.menuTwoColumn3, {
-                      [sty.menuTwoColumn3dropdown1]: hasVariant(
+                    className={classNames(projectcss.all, sty.menuTwoColumn, {
+                      [sty.menuTwoColumnmenus_dropdown2]: hasVariant(
                         $state,
-                        "dropdown1",
-                        "dropdown1"
-                      ),
-                      [sty.menuTwoColumn3dropdown2]: hasVariant(
-                        $state,
-                        "dropdown2",
+                        "menus",
                         "dropdown2"
-                      ),
-                      [sty.menuTwoColumn3dropdown3]: hasVariant(
-                        $state,
-                        "dropdown3",
-                        "dropdown3"
                       )
                     })}
                     key={currentIndex}
@@ -10095,8 +9610,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         "__wab_instance",
                         sty.itemMenuFeaturedHighlightItem__yfKgb,
                         {
-                          [sty.itemMenuFeaturedHighlightItemdropdown2__yfKgbrwAmm]:
-                            hasVariant($state, "dropdown2", "dropdown2")
+                          [sty.itemMenuFeaturedHighlightItemmenus_dropdown2__yfKgbd5KWg]:
+                            hasVariant($state, "menus", "dropdown2")
                         }
                       )}
                       entryId={(() => {
@@ -10142,40 +9657,20 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 data-plasmic-override={overrides.menuFourColumn3}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.menuFourColumn3, {
-                  [sty.menuFourColumn3dropdown1]: hasVariant(
+                  [sty.menuFourColumn3menus_dropdown1]: hasVariant(
                     $state,
-                    "dropdown1",
+                    "menus",
                     "dropdown1"
                   ),
-                  [sty.menuFourColumn3dropdown2]: hasVariant(
+                  [sty.menuFourColumn3menus_dropdown2]: hasVariant(
                     $state,
-                    "dropdown2",
+                    "menus",
                     "dropdown2"
                   ),
-                  [sty.menuFourColumn3dropdown3]: hasVariant(
+                  [sty.menuFourColumn3menus_dropdown4]: hasVariant(
                     $state,
-                    "dropdown3",
-                    "dropdown3"
-                  ),
-                  [sty.menuFourColumn3dropdown4]: hasVariant(
-                    $state,
-                    "dropdown4",
+                    "menus",
                     "dropdown4"
-                  ),
-                  [sty.menuFourColumn3dropdown5]: hasVariant(
-                    $state,
-                    "dropdown5",
-                    "dropdown5"
-                  ),
-                  [sty.menuFourColumn3dropdown6]: hasVariant(
-                    $state,
-                    "dropdown6",
-                    "dropdown6"
-                  ),
-                  [sty.menuFourColumn3dropdown7]: hasVariant(
-                    $state,
-                    "dropdown7",
-                    "dropdown7"
                   )
                 })}
                 key={currentIndex}
@@ -10183,19 +9678,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 <ItemMenuFeaturedHighlightItem
                   className={classNames(
                     "__wab_instance",
-                    sty.itemMenuFeaturedHighlightItem__ndHk0,
-                    {
-                      [sty.itemMenuFeaturedHighlightItemdropdown1__ndHk0WLNaE]:
-                        hasVariant($state, "dropdown1", "dropdown1"),
-                      [sty.itemMenuFeaturedHighlightItemdropdown2__ndHk0RwAmm]:
-                        hasVariant($state, "dropdown2", "dropdown2"),
-                      [sty.itemMenuFeaturedHighlightItemdropdown5__ndHk0LlPSu]:
-                        hasVariant($state, "dropdown5", "dropdown5"),
-                      [sty.itemMenuFeaturedHighlightItemdropdown6__ndHk0Wq0Uc]:
-                        hasVariant($state, "dropdown6", "dropdown6"),
-                      [sty.itemMenuFeaturedHighlightItemdropdown7__ndHk06Z5G8]:
-                        hasVariant($state, "dropdown7", "dropdown7")
-                    }
+                    sty.itemMenuFeaturedHighlightItem__ndHk0
                   )}
                   entryId={(() => {
                     try {
@@ -10214,17 +9697,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               </Stack__>
             );
           })}
-          {(hasVariant($state, "dropdown7", "dropdown7") ? true : false) ? (
+          {false ? (
             <div
               data-plasmic-name={"figmaPaste"}
               data-plasmic-override={overrides.figmaPaste}
-              className={classNames(projectcss.all, sty.figmaPaste, {
-                [sty.figmaPastedropdown7]: hasVariant(
-                  $state,
-                  "dropdown7",
-                  "dropdown7"
-                )
-              })}
+              className={classNames(projectcss.all, sty.figmaPaste)}
             >
               <div
                 className={classNames(
@@ -10261,13 +9738,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   <Stack__
                     as={FacebookIcon}
                     hasGap={true}
-                    className={classNames(projectcss.all, sty.svg__igxfI, {
-                      [sty.svgdropdown7__igxfI6Z5G8]: hasVariant(
-                        $state,
-                        "dropdown7",
-                        "dropdown7"
-                      )
-                    })}
+                    className={classNames(projectcss.all, sty.svg__igxfI)}
                     role={"img"}
                   />
                 </Stack__>
@@ -10281,13 +9752,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   <Stack__
                     as={LinkedInIcon}
                     hasGap={true}
-                    className={classNames(projectcss.all, sty.svg___27H2P, {
-                      [sty.svgdropdown7___27H2P6Z5G8]: hasVariant(
-                        $state,
-                        "dropdown7",
-                        "dropdown7"
-                      )
-                    })}
+                    className={classNames(projectcss.all, sty.svg___27H2P)}
                     role={"img"}
                   />
                 </Stack__>
@@ -10298,19 +9763,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon8)}
                 >
-                  {(
-                    hasVariant($state, "dropdown7", "dropdown7") ? true : false
-                  ) ? (
+                  {false ? (
                     <Stack__
                       as={XIcon}
                       hasGap={true}
-                      className={classNames(projectcss.all, sty.svg__fXbJj, {
-                        [sty.svgdropdown7__fXbJj6Z5G8]: hasVariant(
-                          $state,
-                          "dropdown7",
-                          "dropdown7"
-                        )
-                      })}
+                      className={classNames(projectcss.all, sty.svg__fXbJj)}
                       role={"img"}
                     />
                   ) : null}
@@ -10322,19 +9779,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon9)}
                 >
-                  {(
-                    hasVariant($state, "dropdown7", "dropdown7") ? true : false
-                  ) ? (
+                  {false ? (
                     <Stack__
                       as={YouTubeIcon}
                       hasGap={true}
-                      className={classNames(projectcss.all, sty.svg__j15QN, {
-                        [sty.svgdropdown7__j15QN6Z5G8]: hasVariant(
-                          $state,
-                          "dropdown7",
-                          "dropdown7"
-                        )
-                      })}
+                      className={classNames(projectcss.all, sty.svg__j15QN)}
                       role={"img"}
                     />
                   ) : null}
@@ -10349,13 +9798,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   <Stack__
                     as={ThreadsIcon}
                     hasGap={true}
-                    className={classNames(projectcss.all, sty.svg__t4Jnt, {
-                      [sty.svgdropdown7__t4Jnt6Z5G8]: hasVariant(
-                        $state,
-                        "dropdown7",
-                        "dropdown7"
-                      )
-                    })}
+                    className={classNames(projectcss.all, sty.svg__t4Jnt)}
                     role={"img"}
                   />
                 </Stack__>
@@ -10384,7 +9827,7 @@ const PlasmicDescendants = {
     "frame7",
     "navItemMenu",
     "icon12X12",
-    "navigationItem2",
+    "navigationItem5",
     "icon12X122",
     "menuBar",
     "navItemMenu2",
@@ -10406,6 +9849,7 @@ const PlasmicDescendants = {
     "text3",
     "icon12X12188",
     "frame8",
+    "freeBox",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -10420,7 +9864,7 @@ const PlasmicDescendants = {
     "navMenu5",
     "navMenu6",
     "navMenu7",
-    "navMenu9",
+    "navMenuResources",
     "resourcesMenu",
     "navItemMenu74",
     "mobileHeader",
@@ -10830,7 +10274,7 @@ const PlasmicDescendants = {
     "icon12X12161",
     "navigationItem74",
     "icon12X12162",
-    "megaMenuDropOne",
+    "megaMenuDropdown",
     "frame53",
     "frame54",
     "frame55",
@@ -10854,7 +10298,7 @@ const PlasmicDescendants = {
     "frame58",
     "menuOneColumn3",
     "menuSixColumn3",
-    "menuTwoColumn3",
+    "menuTwoColumn",
     "menuFourColumn3",
     "figmaPaste",
     "social2",
@@ -10879,7 +10323,7 @@ const PlasmicDescendants = {
     "frame7",
     "navItemMenu",
     "icon12X12",
-    "navigationItem2",
+    "navigationItem5",
     "icon12X122",
     "menuBar",
     "navItemMenu2",
@@ -10901,6 +10345,7 @@ const PlasmicDescendants = {
     "text3",
     "icon12X12188",
     "frame8",
+    "freeBox",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -10915,7 +10360,7 @@ const PlasmicDescendants = {
     "navMenu5",
     "navMenu6",
     "navMenu7",
-    "navMenu9",
+    "navMenuResources",
     "resourcesMenu",
     "navItemMenu74"
   ],
@@ -10954,7 +10399,7 @@ const PlasmicDescendants = {
     "frame7",
     "navItemMenu",
     "icon12X12",
-    "navigationItem2",
+    "navigationItem5",
     "icon12X122",
     "menuBar",
     "navItemMenu2",
@@ -10976,6 +10421,7 @@ const PlasmicDescendants = {
     "text3",
     "icon12X12188",
     "frame8",
+    "freeBox",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -10989,7 +10435,7 @@ const PlasmicDescendants = {
     "frame7",
     "navItemMenu",
     "icon12X12",
-    "navigationItem2",
+    "navigationItem5",
     "icon12X122",
     "menuBar",
     "navItemMenu2",
@@ -11011,6 +10457,7 @@ const PlasmicDescendants = {
     "text3",
     "icon12X12188",
     "frame8",
+    "freeBox",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -11022,7 +10469,7 @@ const PlasmicDescendants = {
     "frame7",
     "navItemMenu",
     "icon12X12",
-    "navigationItem2",
+    "navigationItem5",
     "icon12X122",
     "menuBar",
     "navItemMenu2",
@@ -11037,9 +10484,9 @@ const PlasmicDescendants = {
     "icon12X126"
   ],
 
-  navItemMenu: ["navItemMenu", "icon12X12", "navigationItem2", "icon12X122"],
+  navItemMenu: ["navItemMenu", "icon12X12", "navigationItem5", "icon12X122"],
   icon12X12: ["icon12X12"],
-  navigationItem2: ["navigationItem2"],
+  navigationItem5: ["navigationItem5"],
   icon12X122: ["icon12X122"],
   menuBar: ["menuBar"],
   navItemMenu2: ["navItemMenu2", "icon12X123", "navigationItem3", "icon12X124"],
@@ -11075,6 +10522,7 @@ const PlasmicDescendants = {
   icon12X12188: ["icon12X12188"],
   frame8: [
     "frame8",
+    "freeBox",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -11082,6 +10530,7 @@ const PlasmicDescendants = {
     "icon24X24"
   ],
 
+  freeBox: ["freeBox", "itemMenuCurrentUser"],
   itemMenuCurrentUser: ["itemMenuCurrentUser"],
   userMenu: ["userMenu", "navItemMenu76"],
   navItemMenu76: ["navItemMenu76"],
@@ -11097,7 +10546,7 @@ const PlasmicDescendants = {
     "navMenu5",
     "navMenu6",
     "navMenu7",
-    "navMenu9",
+    "navMenuResources",
     "resourcesMenu",
     "navItemMenu74"
   ],
@@ -11111,7 +10560,7 @@ const PlasmicDescendants = {
     "navMenu5",
     "navMenu6",
     "navMenu7",
-    "navMenu9",
+    "navMenuResources",
     "resourcesMenu",
     "navItemMenu74"
   ],
@@ -11123,7 +10572,7 @@ const PlasmicDescendants = {
   navMenu5: ["navMenu5"],
   navMenu6: ["navMenu6"],
   navMenu7: ["navMenu7"],
-  navMenu9: ["navMenu9", "resourcesMenu", "navItemMenu74"],
+  navMenuResources: ["navMenuResources", "resourcesMenu", "navItemMenu74"],
   resourcesMenu: ["resourcesMenu", "navItemMenu74"],
   navItemMenu74: ["navItemMenu74"],
   mobileHeader: [
@@ -14145,8 +13594,8 @@ const PlasmicDescendants = {
   icon12X12161: ["icon12X12161"],
   navigationItem74: ["navigationItem74"],
   icon12X12162: ["icon12X12162"],
-  megaMenuDropOne: [
-    "megaMenuDropOne",
+  megaMenuDropdown: [
+    "megaMenuDropdown",
     "frame53",
     "frame54",
     "frame55",
@@ -14170,7 +13619,7 @@ const PlasmicDescendants = {
     "frame58",
     "menuOneColumn3",
     "menuSixColumn3",
-    "menuTwoColumn3",
+    "menuTwoColumn",
     "menuFourColumn3",
     "figmaPaste",
     "social2",
@@ -14278,7 +13727,7 @@ const PlasmicDescendants = {
     "frame58",
     "menuOneColumn3",
     "menuSixColumn3",
-    "menuTwoColumn3",
+    "menuTwoColumn",
     "menuFourColumn3",
     "figmaPaste",
     "social2",
@@ -14291,7 +13740,7 @@ const PlasmicDescendants = {
 
   menuOneColumn3: ["menuOneColumn3"],
   menuSixColumn3: ["menuSixColumn3"],
-  menuTwoColumn3: ["menuTwoColumn3"],
+  menuTwoColumn: ["menuTwoColumn"],
   menuFourColumn3: ["menuFourColumn3"],
   figmaPaste: [
     "figmaPaste",
@@ -14364,7 +13813,7 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     frame7: makeNodeComponent("frame7"),
     navItemMenu: makeNodeComponent("navItemMenu"),
     icon12X12: makeNodeComponent("icon12X12"),
-    navigationItem2: makeNodeComponent("navigationItem2"),
+    navigationItem5: makeNodeComponent("navigationItem5"),
     icon12X122: makeNodeComponent("icon12X122"),
     menuBar: makeNodeComponent("menuBar"),
     navItemMenu2: makeNodeComponent("navItemMenu2"),
@@ -14386,6 +13835,7 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     text3: makeNodeComponent("text3"),
     icon12X12188: makeNodeComponent("icon12X12188"),
     frame8: makeNodeComponent("frame8"),
+    freeBox: makeNodeComponent("freeBox"),
     itemMenuCurrentUser: makeNodeComponent("itemMenuCurrentUser"),
     userMenu: makeNodeComponent("userMenu"),
     navItemMenu76: makeNodeComponent("navItemMenu76"),
@@ -14400,7 +13850,7 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     navMenu5: makeNodeComponent("navMenu5"),
     navMenu6: makeNodeComponent("navMenu6"),
     navMenu7: makeNodeComponent("navMenu7"),
-    navMenu9: makeNodeComponent("navMenu9"),
+    navMenuResources: makeNodeComponent("navMenuResources"),
     resourcesMenu: makeNodeComponent("resourcesMenu"),
     navItemMenu74: makeNodeComponent("navItemMenu74"),
     mobileHeader: makeNodeComponent("mobileHeader"),
@@ -14810,7 +14260,7 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     icon12X12161: makeNodeComponent("icon12X12161"),
     navigationItem74: makeNodeComponent("navigationItem74"),
     icon12X12162: makeNodeComponent("icon12X12162"),
-    megaMenuDropOne: makeNodeComponent("megaMenuDropOne"),
+    megaMenuDropdown: makeNodeComponent("megaMenuDropdown"),
     frame53: makeNodeComponent("frame53"),
     frame54: makeNodeComponent("frame54"),
     frame55: makeNodeComponent("frame55"),
@@ -14834,7 +14284,7 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     frame58: makeNodeComponent("frame58"),
     menuOneColumn3: makeNodeComponent("menuOneColumn3"),
     menuSixColumn3: makeNodeComponent("menuSixColumn3"),
-    menuTwoColumn3: makeNodeComponent("menuTwoColumn3"),
+    menuTwoColumn: makeNodeComponent("menuTwoColumn"),
     menuFourColumn3: makeNodeComponent("menuFourColumn3"),
     figmaPaste: makeNodeComponent("figmaPaste"),
     social2: makeNodeComponent("social2"),

@@ -15,7 +15,10 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -70,6 +73,24 @@ function PlasmicMembershipOverview__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "sectionHomeMenuSection.openDropdown",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
       return {
@@ -151,6 +172,23 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             data-plasmic-name={"sectionHomeMenuSection"}
             data-plasmic-override={overrides.sectionHomeMenuSection}
             className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
+            onOpenDropdownChange={async (...eventArgs) => {
+              generateStateOnChangeProp($state, [
+                "sectionHomeMenuSection",
+                "openDropdown"
+              ]).apply(null, eventArgs);
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+            openDropdown={generateStateValueProp($state, [
+              "sectionHomeMenuSection",
+              "openDropdown"
+            ])}
           />
 
           <SectionInternalHeroTitleSectionV2

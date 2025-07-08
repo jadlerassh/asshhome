@@ -140,6 +140,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   flex-shrink: 0;
 }
 .svg__cM8GH > :global(.__wab_flex-container) {

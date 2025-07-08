@@ -14,7 +14,10 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
@@ -62,6 +65,24 @@ function PlasmicInternalComponentList__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "sectionHomeMenuSection.openDropdown",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   return (
     <React.Fragment>
       <Head></Head>
@@ -103,6 +124,23 @@ function PlasmicInternalComponentList__RenderFunc(props) {
             data-plasmic-name={"sectionHomeMenuSection"}
             data-plasmic-override={overrides.sectionHomeMenuSection}
             className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
+            onOpenDropdownChange={async (...eventArgs) => {
+              generateStateOnChangeProp($state, [
+                "sectionHomeMenuSection",
+                "openDropdown"
+              ]).apply(null, eventArgs);
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+            openDropdown={generateStateValueProp($state, [
+              "sectionHomeMenuSection",
+              "openDropdown"
+            ])}
           />
 
           <h1
