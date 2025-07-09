@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  PlasmicImg as PlasmicImg__,
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
@@ -20,6 +19,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -122,156 +122,153 @@ function PlasmicSectionMidPageHighlightCtaSection__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
-        data-plasmic-name={"row"}
-        data-plasmic-override={overrides.row}
-        className={classNames(projectcss.all, sty.row)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__rSzDg)}>
         <Stack__
           as={"div"}
-          data-plasmic-name={"frame2"}
-          data-plasmic-override={overrides.frame2}
+          data-plasmic-name={"columns"}
+          data-plasmic-override={overrides.columns}
           hasGap={true}
-          className={classNames(projectcss.all, sty.frame2)}
+          className={classNames(projectcss.all, sty.columns)}
         >
-          <div
-            data-plasmic-name={"column"}
-            data-plasmic-override={overrides.column}
-            className={classNames(projectcss.all, sty.column)}
-          >
-            <PlasmicImg__
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={(() => {
-                try {
-                  return $queries.getImage.data.response.fields.file.url;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return undefined;
+          <div className={classNames(projectcss.all, sty.column__dNeJ)}>
+            <div className={classNames(projectcss.all, sty.freeBox__xgCuB)}>
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml)}
+                code={(() => {
+                  try {
+                    return (() => {
+                      return `<div style="
+  width: 100%;
+  height: 100%;
+  background-image: url(${$queries.getImage.data.response.fields.file.url});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+"></div>`;
+                    })();
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "";
+                    }
+                    throw e;
                   }
-                  throw e;
-                }
-              })()}
-            />
+                })()}
+              />
+            </div>
           </div>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"frame3"}
-            data-plasmic-override={overrides.frame3}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.frame3)}
-          >
+          <div className={classNames(projectcss.all, sty.column__ecu2U)}>
             <Stack__
               as={"div"}
-              data-plasmic-name={"frame4"}
-              data-plasmic-override={overrides.frame4}
+              data-plasmic-name={"frame7"}
+              data-plasmic-override={overrides.frame7}
               hasGap={true}
-              className={classNames(projectcss.all, sty.frame4)}
+              className={classNames(projectcss.all, sty.frame7)}
             >
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"frame8"}
+                data-plasmic-override={overrides.frame8}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.frame8)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__fM2B
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.header;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Test Your Knowledge";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </Stack__>
               <div
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__toxqM
+                  sty.text__uZzfk
                 )}
               >
                 <React.Fragment>
                   {(() => {
                     try {
                       return $queries.getHeroContent.data.response.items[0]
-                        .fields.header;
+                        .fields.description;
                     } catch (e) {
                       if (
                         e instanceof TypeError ||
                         e?.plasmicType === "PlasmicUndefinedDataError"
                       ) {
-                        return "Test Your Knowledge";
+                        return "Sharpen your skills, prepare for recertification, and stay current \u2014 all on your schedule. The ASSH Self-Assessment Exam is your trusted tool for advancing upper extremity expertise with confidence.";
                       }
                       throw e;
                     }
                   })()}
                 </React.Fragment>
               </div>
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"frame9"}
+                data-plasmic-override={overrides.frame9}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.frame9)}
+              >
+                <ButtonPrimary
+                  data-plasmic-name={"buttonPrimary"}
+                  data-plasmic-override={overrides.buttonPrimary}
+                  className={classNames("__wab_instance", sty.buttonPrimary)}
+                  darkInteractions={"dark"}
+                  text={(() => {
+                    try {
+                      return $queries.getHeroContent.data.response.items[0]
+                        .fields.cta1Text;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                  url={(() => {
+                    try {
+                      return $queries.getHeroContent.data.response.items[0]
+                        .fields.cta1Link;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "https://www.assh.org";
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              </Stack__>
             </Stack__>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__uzl31
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.getHeroContent.data.response.items[0].fields
-                      .description;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Sharpen your skills, prepare for recertification, and stay current \u2014 all on your schedule. The ASSH Self-Assessment Exam is your trusted tool for advancing upper extremity expertise with confidence.";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"frame5"}
-              data-plasmic-override={overrides.frame5}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.frame5)}
-            >
-              <ButtonPrimary
-                data-plasmic-name={"buttonPrimary"}
-                data-plasmic-override={overrides.buttonPrimary}
-                className={classNames("__wab_instance", sty.buttonPrimary)}
-                darkInteractions={"dark"}
-                text={(() => {
-                  try {
-                    return $queries.getHeroContent.data.response.items[0].fields
-                      .cta1Text;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
-                  }
-                })()}
-                url={(() => {
-                  try {
-                    return $queries.getHeroContent.data.response.items[0].fields
-                      .cta1Link;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "https://www.assh.org";
-                    }
-                    throw e;
-                  }
-                })()}
-              />
-            </Stack__>
-          </Stack__>
+          </div>
         </Stack__>
       </div>
     </div>
@@ -281,42 +278,27 @@ function PlasmicSectionMidPageHighlightCtaSection__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "row",
-    "frame2",
-    "column",
-    "img",
-    "frame3",
-    "frame4",
-    "frame5",
+    "columns",
+    "embedHtml",
+    "frame7",
+    "frame8",
+    "frame9",
     "buttonPrimary"
   ],
 
-  row: [
-    "row",
-    "frame2",
-    "column",
-    "img",
-    "frame3",
-    "frame4",
-    "frame5",
+  columns: [
+    "columns",
+    "embedHtml",
+    "frame7",
+    "frame8",
+    "frame9",
     "buttonPrimary"
   ],
 
-  frame2: [
-    "frame2",
-    "column",
-    "img",
-    "frame3",
-    "frame4",
-    "frame5",
-    "buttonPrimary"
-  ],
-
-  column: ["column", "img"],
-  img: ["img"],
-  frame3: ["frame3", "frame4", "frame5", "buttonPrimary"],
-  frame4: ["frame4"],
-  frame5: ["frame5", "buttonPrimary"],
+  embedHtml: ["embedHtml"],
+  frame7: ["frame7", "frame8", "frame9", "buttonPrimary"],
+  frame8: ["frame8"],
+  frame9: ["frame9", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"]
 };
 
@@ -354,13 +336,11 @@ export const PlasmicSectionMidPageHighlightCtaSection = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    row: makeNodeComponent("row"),
-    frame2: makeNodeComponent("frame2"),
-    column: makeNodeComponent("column"),
-    img: makeNodeComponent("img"),
-    frame3: makeNodeComponent("frame3"),
-    frame4: makeNodeComponent("frame4"),
-    frame5: makeNodeComponent("frame5"),
+    columns: makeNodeComponent("columns"),
+    embedHtml: makeNodeComponent("embedHtml"),
+    frame7: makeNodeComponent("frame7"),
+    frame8: makeNodeComponent("frame8"),
+    frame9: makeNodeComponent("frame9"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicSectionMidPageHighlightCtaSection
     internalVariantProps:

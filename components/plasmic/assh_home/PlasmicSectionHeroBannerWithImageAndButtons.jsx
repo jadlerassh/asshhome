@@ -16,6 +16,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -62,6 +63,37 @@ function PlasmicSectionHeroBannerWithImageAndButtons__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const new$Queries = {
+    getHeroContent: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "5304698c-f220-49f7-ad25-1011b675379d",
+        userArgs: {
+          params: [$props.title]
+        },
+        cacheKey: `plasmic.$.5304698c-f220-49f7-ad25-1011b675379d.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    }),
+    getImage: usePlasmicDataOp(() => {
+      return {
+        sourceId: "n5sYZavh6xkK4D8BEueUSq",
+        opId: "95899acc-470a-4259-8b31-bb74ad20b09c",
+        userArgs: {
+          path: [$queries.getHeroContent.data.response.items]
+        },
+        cacheKey: `plasmic.$.95899acc-470a-4259-8b31-bb74ad20b09c.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   return (
     <div
       data-plasmic-name={"root"}

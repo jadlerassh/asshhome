@@ -239,7 +239,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               data-plasmic-override={overrides.buttonPrimary}
               className={classNames("__wab_instance", sty.buttonPrimary)}
               text={"Member Benefits"}
-              textArrowButton={"link"}
+              textArrowButton={true}
               url={"https://www.assh.org/membership/member-benefits"}
             />
 

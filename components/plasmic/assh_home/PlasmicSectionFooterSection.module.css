@@ -83,6 +83,31 @@
     margin-top: 0px;
   }
 }
+@media (max-width: 414px) {
+  .frame5 > :global(.__wab_flex-container) {
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    align-content: flex-start;
+    margin-left: calc(0px - 30px);
+    width: calc(100% + 30px);
+    margin-top: calc(0px - 30px);
+    height: calc(100% + 30px);
+  }
+}
+@media (max-width: 414px) {
+  .frame5 > :global(.__wab_flex-container) > *,
+  .frame5 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .frame5 > :global(.__wab_flex-container) > picture > img,
+  .frame5
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
 .group1 {
   width: 165px;
   height: 61px;
@@ -1152,9 +1177,10 @@
   max-width: 1320px;
   flex-shrink: 1;
   flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 30px;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
-  padding: 8px;
 }
 .columns > :global(.__wab_flex-container) {
   align-items: stretch;
@@ -1189,7 +1215,7 @@
 }
 @media (max-width: 1024px) {
   .columns {
-    padding: 0px 30px;
+    padding: 30px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -1219,6 +1245,12 @@
     width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
   }
 }
+@media (max-width: 414px) {
+  .columns {
+    max-width: none;
+    flex-shrink: 0;
+  }
+}
 .column__pusMq {
   display: flex;
   flex-direction: column;
@@ -1230,6 +1262,18 @@
   align-items: center;
   min-width: 0;
 }
+@media (max-width: 1024px) {
+  .column__pusMq {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 414px) {
+  .column__pusMq {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
 .freeBox__suvqz {
   display: flex;
   flex-direction: column;
@@ -1240,6 +1284,12 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
+}
+@media (max-width: 414px) {
+  .freeBox__suvqz {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 }
 .frame7 {
   height: auto;
@@ -1461,6 +1511,11 @@
   > picture
   > img {
   margin-left: 10px;
+}
+@media (max-width: 1024px) {
+  .navItemMenu2 {
+    margin-bottom: 0px;
+  }
 }
 .icon16X162 {
   background: rgba(239, 242, 245, 1);

@@ -420,11 +420,25 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
           </div>
         </div>
         <div className={classNames(projectcss.all, sty.column__gzOb4)}>
-          <div className={classNames(projectcss.all, sty.freeBox__vEBwV)}>
+          <div
+            className={classNames(projectcss.all, sty.freeBox__vEBwV, {
+              [sty.freeBoxunnamedVariant__vEBwVJr2CU]: hasVariant(
+                $state,
+                "unnamedVariant",
+                "unnamedVariant"
+              )
+            })}
+          >
             <Embed
               data-plasmic-name={"embedHtml"}
               data-plasmic-override={overrides.embedHtml}
-              className={classNames("__wab_instance", sty.embedHtml)}
+              className={classNames("__wab_instance", sty.embedHtml, {
+                [sty.embedHtmlunnamedVariant]: hasVariant(
+                  $state,
+                  "unnamedVariant",
+                  "unnamedVariant"
+                )
+              })}
               code={(() => {
                 try {
                   return (() => {

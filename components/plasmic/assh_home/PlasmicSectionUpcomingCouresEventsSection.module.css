@@ -104,6 +104,7 @@
   flex-shrink: 0;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
+  padding: 15px;
 }
 .row > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -203,9 +204,14 @@
   height: auto;
   max-width: 100%;
   justify-content: center;
-  align-items: flex-end;
-  padding-right: 50px;
+  align-items: center;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .column__pgAlg {
+    align-items: center;
+    justify-content: center;
+  }
 }
 .column__i6Z77 {
   display: flex;
@@ -216,6 +222,8 @@
   max-width: 100%;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 30px;
+  padding-left: 30px;
   min-width: 0;
 }
 .frame5 {

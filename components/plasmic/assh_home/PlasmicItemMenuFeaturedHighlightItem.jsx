@@ -177,7 +177,7 @@ function PlasmicItemMenuFeaturedHighlightItem__RenderFunc(props) {
                 throw e;
               }
             })()}
-            textArrowButton={"link"}
+            textArrowButton={true}
             url={(() => {
               try {
                 return $queries.getEntry.data.response.fields.link;

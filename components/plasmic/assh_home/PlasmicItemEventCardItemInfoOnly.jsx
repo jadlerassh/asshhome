@@ -334,7 +334,7 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
                 data-plasmic-override={overrides.buttonPrimary}
                 className={classNames("__wab_instance", sty.buttonPrimary)}
                 text={"Register Now"}
-                textArrowButton={"link"}
+                textArrowButton={true}
                 url={"https://www.assh.org/meeting/register"}
               />
             </Stack__>

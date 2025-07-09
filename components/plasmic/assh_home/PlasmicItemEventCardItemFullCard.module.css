@@ -8,12 +8,24 @@
   align-items: flex-end;
   min-width: 0;
 }
+@media (max-width: 1440px) {
+  .root {
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
 @media (max-width: 1024px) {
   .root {
     flex-shrink: 1;
     width: 100%;
     justify-self: flex-start;
     min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 .articleImageCard {

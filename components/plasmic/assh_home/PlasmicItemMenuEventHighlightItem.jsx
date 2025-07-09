@@ -192,7 +192,7 @@ function PlasmicItemMenuEventHighlightItem__RenderFunc(props) {
             data-plasmic-override={overrides.buttonPrimary}
             className={classNames("__wab_instance", sty.buttonPrimary)}
             text={"Annual Meeting Overview"}
-            textArrowButton={"link"}
+            textArrowButton={true}
             url={(() => {
               try {
                 return $queries.getEntry.data.response.fields.infoLink;

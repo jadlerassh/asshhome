@@ -39,7 +39,8 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "secondaryInteractions",
   "darkNoBgInteractions",
   "megaMenuLink",
-  "memberQuicklinks"
+  "memberQuicklinks",
+  "whiteButtonBlackSurround"
 );
 
 export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
@@ -124,6 +125,13 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props.memberQuicklinks
+      },
+      {
+        path: "whiteButtonBlackSurround",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          $props.whiteButtonBlackSurround
       }
     ],
 
@@ -156,11 +164,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             "darkInteractions",
             "dark"
           ),
-          [sty.rootdarkInteractions_hover]: hasVariant(
-            $state,
-            "darkInteractions",
-            "hover"
-          ),
           [sty.rootdarkNoBgInteractions_unnamedVariant]: hasVariant(
             $state,
             "darkNoBgInteractions",
@@ -171,30 +174,25 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             "fullWidthBlueInteractions",
             "brandBlue"
           ),
-          [sty.rootfullWidthBlueInteractions_hover]: hasVariant(
-            $state,
-            "fullWidthBlueInteractions",
-            "hover"
-          ),
           [sty.rootmegaMenuLink_unnamedVariant]: hasVariant(
             $state,
             "megaMenuLink",
             "unnamedVariant"
           ),
-          [sty.rootsecondaryInteractions_hover]: hasVariant(
+          [sty.rootsecondaryInteractions_secondary]: hasVariant(
             $state,
             "secondaryInteractions",
-            "hover"
+            "secondary"
           ),
-          [sty.roottextArrowButton_hover]: hasVariant(
+          [sty.roottextArrowButton]: hasVariant(
             $state,
             "textArrowButton",
-            "hover"
+            "textArrowButton"
           ),
-          [sty.roottextArrowButton_link]: hasVariant(
+          [sty.rootwhiteButtonBlackSurround]: hasVariant(
             $state,
-            "textArrowButton",
-            "link"
+            "whiteButtonBlackSurround",
+            "whiteButtonBlackSurround"
           )
         }
       )}
@@ -214,30 +212,18 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "darkInteractions",
               "dark"
             ),
-            [sty.buttonHighlight2darkInteractions_hover]: hasVariant(
-              $state,
-              "darkInteractions",
-              "hover"
-            ),
             [sty.buttonHighlight2darkNoBgInteractions_hover]: hasVariant(
               $state,
               "darkNoBgInteractions",
               "hover"
             ),
+            [sty.buttonHighlight2darkNoBgInteractions_hover_textArrowButton]:
+              hasVariant($state, "textArrowButton", "textArrowButton") &&
+              hasVariant($state, "darkNoBgInteractions", "hover"),
             [sty.buttonHighlight2darkNoBgInteractions_unnamedVariant]:
               hasVariant($state, "darkNoBgInteractions", "unnamedVariant"),
             [sty.buttonHighlight2fullWidthBlueInteractions_brandBlue]:
               hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
-            [sty.buttonHighlight2fullWidthBlueInteractions_hover]: hasVariant(
-              $state,
-              "fullWidthBlueInteractions",
-              "hover"
-            ),
-            [sty.buttonHighlight2megaMenuLink_unnamedVariant2]: hasVariant(
-              $state,
-              "megaMenuLink",
-              "unnamedVariant2"
-            ),
             [sty.buttonHighlight2megaMenuLink_unnamedVariant]: hasVariant(
               $state,
               "megaMenuLink",
@@ -253,25 +239,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "memberQuicklinks",
               "quicklink"
             ),
-            [sty.buttonHighlight2secondaryInteractions_hover]: hasVariant(
-              $state,
-              "secondaryInteractions",
-              "hover"
-            ),
             [sty.buttonHighlight2secondaryInteractions_secondary]: hasVariant(
               $state,
               "secondaryInteractions",
               "secondary"
             ),
-            [sty.buttonHighlight2textArrowButton_hover]: hasVariant(
+            [sty.buttonHighlight2textArrowButton]: hasVariant(
               $state,
               "textArrowButton",
-              "hover"
+              "textArrowButton"
             ),
-            [sty.buttonHighlight2textArrowButton_link]: hasVariant(
+            [sty.buttonHighlight2whiteButtonBlackSurround]: hasVariant(
               $state,
-              "textArrowButton",
-              "link"
+              "whiteButtonBlackSurround",
+              "whiteButtonBlackSurround"
             )
           }
         )}
@@ -297,6 +278,14 @@ function PlasmicButtonPrimary__RenderFunc(props) {
           data-plasmic-override={overrides.icon12X12}
           hasGap={true}
           className={classNames(projectcss.all, sty.icon12X12, {
+            [sty.icon12X12darkInteractions_dark]: hasVariant(
+              $state,
+              "darkInteractions",
+              "dark"
+            ),
+            [sty.icon12X12darkNoBgInteractions_hover_textArrowButton]:
+              hasVariant($state, "textArrowButton", "textArrowButton") &&
+              hasVariant($state, "darkNoBgInteractions", "hover"),
             [sty.icon12X12fullWidthBlueInteractions_brandBlue]: hasVariant(
               $state,
               "fullWidthBlueInteractions",
@@ -311,6 +300,21 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "memberQuicklinks",
               "quicklink"
+            ),
+            [sty.icon12X12secondaryInteractions_secondary]: hasVariant(
+              $state,
+              "secondaryInteractions",
+              "secondary"
+            ),
+            [sty.icon12X12textArrowButton]: hasVariant(
+              $state,
+              "textArrowButton",
+              "textArrowButton"
+            ),
+            [sty.icon12X12whiteButtonBlackSurround]: hasVariant(
+              $state,
+              "whiteButtonBlackSurround",
+              "whiteButtonBlackSurround"
             )
           })}
         >
@@ -329,6 +333,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "memberQuicklinks",
                 "quicklink"
+              ),
+              [sty.svgtextArrowButton__gs5CpuQaqx]: hasVariant(
+                $state,
+                "textArrowButton",
+                "textArrowButton"
               )
             })}
             role={"img"}
@@ -347,16 +356,14 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "darkInteractions",
                 "dark"
               ),
-              [sty.text2darkInteractions_hover]: hasVariant(
-                $state,
-                "darkInteractions",
-                "hover"
-              ),
               [sty.text2darkNoBgInteractions_hover]: hasVariant(
                 $state,
                 "darkNoBgInteractions",
                 "hover"
               ),
+              [sty.text2darkNoBgInteractions_hover_textArrowButton]:
+                hasVariant($state, "textArrowButton", "textArrowButton") &&
+                hasVariant($state, "darkNoBgInteractions", "hover"),
               [sty.text2darkNoBgInteractions_unnamedVariant]: hasVariant(
                 $state,
                 "darkNoBgInteractions",
@@ -366,16 +373,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "fullWidthBlueInteractions",
                 "brandBlue"
-              ),
-              [sty.text2fullWidthBlueInteractions_hover]: hasVariant(
-                $state,
-                "fullWidthBlueInteractions",
-                "hover"
-              ),
-              [sty.text2megaMenuLink_unnamedVariant2]: hasVariant(
-                $state,
-                "megaMenuLink",
-                "unnamedVariant2"
               ),
               [sty.text2megaMenuLink_unnamedVariant]: hasVariant(
                 $state,
@@ -392,25 +389,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "memberQuicklinks",
                 "quicklink"
               ),
-              [sty.text2secondaryInteractions_hover]: hasVariant(
-                $state,
-                "secondaryInteractions",
-                "hover"
-              ),
               [sty.text2secondaryInteractions_secondary]: hasVariant(
                 $state,
                 "secondaryInteractions",
                 "secondary"
               ),
-              [sty.text2textArrowButton_hover]: hasVariant(
+              [sty.text2textArrowButton]: hasVariant(
                 $state,
                 "textArrowButton",
-                "hover"
+                "textArrowButton"
               ),
-              [sty.text2textArrowButton_link]: hasVariant(
+              [sty.text2whiteButtonBlackSurround]: hasVariant(
                 $state,
-                "textArrowButton",
-                "link"
+                "whiteButtonBlackSurround",
+                "whiteButtonBlackSurround"
               )
             }
           )}
@@ -431,111 +423,145 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             })()}
           </React.Fragment>
         </div>
-        {(
-          hasVariant($state, "megaMenuLink", "unnamedVariant2")
-            ? true
-            : hasVariant($state, "textArrowButton", "hover")
-            ? true
-            : false
-        ) ? (
+        <Stack__
+          as={"div"}
+          data-plasmic-name={"icon12X125"}
+          data-plasmic-override={overrides.icon12X125}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.icon12X125, {
+            [sty.icon12X125darkNoBgInteractions_hover_textArrowButton]:
+              hasVariant($state, "textArrowButton", "textArrowButton") &&
+              hasVariant($state, "darkNoBgInteractions", "hover"),
+            [sty.icon12X125textArrowButton]: hasVariant(
+              $state,
+              "textArrowButton",
+              "textArrowButton"
+            )
+          })}
+        >
           <Stack__
-            as={"div"}
-            data-plasmic-name={"icon12X125"}
-            data-plasmic-override={overrides.icon12X125}
+            as={Container2Icon}
             hasGap={true}
-            className={classNames(projectcss.all, sty.icon12X125, {
-              [sty.icon12X125megaMenuLink_unnamedVariant2]: hasVariant(
-                $state,
-                "megaMenuLink",
-                "unnamedVariant2"
-              ),
-              [sty.icon12X125textArrowButton_hover]: hasVariant(
+            className={classNames(projectcss.all, sty.svg__bsMdx, {
+              [sty.svgdarkNoBgInteractions_hover_textArrowButton__bsMdxAyj9OUQaqx]:
+                hasVariant($state, "textArrowButton", "textArrowButton") &&
+                hasVariant($state, "darkNoBgInteractions", "hover"),
+              [sty.svgtextArrowButton__bsMdxuQaqx]: hasVariant(
                 $state,
                 "textArrowButton",
-                "hover"
+                "textArrowButton"
               )
+            })}
+            role={"img"}
+          />
+        </Stack__>
+        <Stack__
+          as={"div"}
+          data-plasmic-name={"navItemSimple"}
+          data-plasmic-override={overrides.navItemSimple}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.navItemSimple, {
+            [sty.navItemSimpledarkNoBgInteractions_hover_textArrowButton]:
+              hasVariant($state, "textArrowButton", "textArrowButton") &&
+              hasVariant($state, "darkNoBgInteractions", "hover"),
+            [sty.navItemSimpletextArrowButton]: hasVariant(
+              $state,
+              "textArrowButton",
+              "textArrowButton"
+            )
+          })}
+        >
+          {(
+            hasVariant($state, "textArrowButton", "textArrowButton")
+              ? true
+              : false
+          ) ? (
+            <Stack__
+              as={"div"}
+              data-plasmic-name={"icon12X123"}
+              data-plasmic-override={overrides.icon12X123}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.icon12X123, {
+                [sty.icon12X123textArrowButton]: hasVariant(
+                  $state,
+                  "textArrowButton",
+                  "textArrowButton"
+                )
+              })}
+            >
+              <Stack__
+                as={ContainerIcon}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.svg__b3Ibr, {
+                  [sty.svgtextArrowButton__b3IbruQaqx]: hasVariant(
+                    $state,
+                    "textArrowButton",
+                    "textArrowButton"
+                  )
+                })}
+                role={"img"}
+              />
+            </Stack__>
+          ) : null}
+          <div
+            data-plasmic-name={"navigationItem2"}
+            data-plasmic-override={overrides.navigationItem2}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.navigationItem2,
+              {
+                [sty.navigationItem2darkNoBgInteractions_hover_textArrowButton]:
+                  hasVariant($state, "textArrowButton", "textArrowButton") &&
+                  hasVariant($state, "darkNoBgInteractions", "hover"),
+                [sty.navigationItem2textArrowButton]: hasVariant(
+                  $state,
+                  "textArrowButton",
+                  "textArrowButton"
+                )
+              }
+            )}
+          >
+            <React.Fragment>
+              {(() => {
+                try {
+                  return $props.text;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "Get Registered";
+                  }
+                  throw e;
+                }
+              })()}
+            </React.Fragment>
+          </div>
+          <Stack__
+            as={"div"}
+            data-plasmic-name={"icon12X124"}
+            data-plasmic-override={overrides.icon12X124}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.icon12X124, {
+              [sty.icon12X124darkNoBgInteractions_hover_textArrowButton]:
+                hasVariant($state, "textArrowButton", "textArrowButton") &&
+                hasVariant($state, "darkNoBgInteractions", "hover")
             })}
           >
             <Stack__
               as={Container2Icon}
               hasGap={true}
-              className={classNames(projectcss.all, sty.svg__bsMdx)}
+              className={classNames(projectcss.all, sty.svg__bmUtj)}
               role={"img"}
             />
           </Stack__>
-        ) : null}
-        {(hasVariant($state, "textArrowButton", "link") ? true : false) ? (
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"navItemSimple"}
-            data-plasmic-override={overrides.navItemSimple}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.navItemSimple, {
-              [sty.navItemSimpletextArrowButton_link]: hasVariant(
-                $state,
-                "textArrowButton",
-                "link"
-              )
-            })}
-          >
-            {false ? (
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"icon12X123"}
-                data-plasmic-override={overrides.icon12X123}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.icon12X123)}
-              >
-                <Stack__
-                  as={ContainerIcon}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.svg__b3Ibr)}
-                  role={"img"}
-                />
-              </Stack__>
-            ) : null}
-            <div
-              data-plasmic-name={"navigationItem2"}
-              data-plasmic-override={overrides.navigationItem2}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.navigationItem2
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $props.text;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Register Now";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"icon12X124"}
-              data-plasmic-override={overrides.icon12X124}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.icon12X124)}
-            >
-              <Stack__
-                as={Container2Icon}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.svg__bmUtj)}
-                role={"img"}
-              />
-            </Stack__>
-          </Stack__>
-        ) : null}
-        {false ? (
+        </Stack__>
+        {(
+          hasVariant($state, "textArrowButton", "textArrowButton")
+            ? true
+            : false
+        ) ? (
           <Stack__
             as={"div"}
             data-plasmic-name={"icon12X122"}
@@ -551,6 +577,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "fullWidthBlueInteractions",
                 "brandBlue"
+              ),
+              [sty.icon12X122textArrowButton]: hasVariant(
+                $state,
+                "textArrowButton",
+                "textArrowButton"
               )
             })}
           >

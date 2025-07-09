@@ -2174,6 +2174,46 @@
           "cssFilePath": "plasmic/assh_home/PlasmicSectionHeroBannerWithImageAndButtons.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "MLTXT8c5yXI2",
+          "name": "ForPatients",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicForPatients.jsx",
+          "importSpec": {
+            "modulePath": "../pages/for-patients.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicForPatients.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/for-patients"
+        },
+        {
+          "id": "MWRaB-Trol6D",
+          "name": "SectionAdPlaceholder",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionAdPlaceholder.jsx",
+          "importSpec": {
+            "modulePath": "SectionAdPlaceholder.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionAdPlaceholder.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "UkJ-zcT0QvMv",
+          "name": "BlockPublicationHIghlight",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockPublicationHIghlight.jsx",
+          "importSpec": {
+            "modulePath": "BlockPublicationHIghlight.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockPublicationHIghlight.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2973,6 +3013,21 @@
           "id": "zdM9tMNrqvU3",
           "name": "JHS-Logo_2016_whiteBackground-1.png",
           "filePath": "../public/plasmic/assh_home/images/jhsLogo2016WhiteBackground1Png.png"
+        },
+        {
+          "id": "Tz38luOMsH9o",
+          "name": "Column 6",
+          "filePath": "../public/plasmic/assh_home/images/column6.png"
+        },
+        {
+          "id": "gZsmJlzMlqhA",
+          "name": "image 11",
+          "filePath": "../public/plasmic/assh_home/images/image11.jpg"
+        },
+        {
+          "id": "PLwt2rjWugEL",
+          "name": "Column 7",
+          "filePath": "../public/plasmic/assh_home/images/column7.png"
         }
       ],
       "indirect": false,
