@@ -97,89 +97,93 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
           data-plasmic-override={overrides.row}
           className={classNames(projectcss.all, sty.row)}
         >
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"frame3"}
-            data-plasmic-override={overrides.frame3}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.frame3)}
-          >
+          <div className={classNames(projectcss.all, sty.column__oI4O)}>
             <Stack__
               as={"div"}
-              data-plasmic-name={"frame4"}
-              data-plasmic-override={overrides.frame4}
+              data-plasmic-name={"frame3"}
+              data-plasmic-override={overrides.frame3}
               hasGap={true}
-              className={classNames(projectcss.all, sty.frame4)}
+              className={classNames(projectcss.all, sty.frame3)}
             >
-              <div
-                data-plasmic-name={"frame5"}
-                data-plasmic-override={overrides.frame5}
-                className={classNames(projectcss.all, sty.frame5)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__qn6Qx
-                  )}
-                >
-                  {"Join. Connect. Grow:"}
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__tft5J
-                  )}
-                >
-                  {"The ASSH Advantage"}
-                </div>
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___1YPEw
-                )}
-              >
-                {
-                  "Discover how the ASSH helps you grow clinically, professionally, and personally."
-                }
-              </div>
               <Stack__
                 as={"div"}
-                data-plasmic-name={"frame6"}
-                data-plasmic-override={overrides.frame6}
+                data-plasmic-name={"frame4"}
+                data-plasmic-override={overrides.frame4}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.frame6)}
+                className={classNames(projectcss.all, sty.frame4)}
               >
-                <ButtonPrimary
+                <div
+                  data-plasmic-name={"frame5"}
+                  data-plasmic-override={overrides.frame5}
+                  className={classNames(projectcss.all, sty.frame5)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__qn6Qx
+                    )}
+                  >
+                    {"Join. Connect. Grow:"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__tft5J
+                    )}
+                  >
+                    {"The ASSH Advantage"}
+                  </div>
+                </div>
+                <div
                   className={classNames(
-                    "__wab_instance",
-                    sty.buttonPrimary___8T3UC
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___1YPEw
                   )}
-                  darkInteractions={"dark"}
-                  text={"Find a Surgeon"}
-                  url={"https://www.handcare.org/fahs"}
-                />
+                >
+                  {
+                    "Discover how the ASSH helps you grow clinically, professionally, and personally."
+                  }
+                </div>
+                <Stack__
+                  as={"div"}
+                  data-plasmic-name={"frame6"}
+                  data-plasmic-override={overrides.frame6}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.frame6)}
+                >
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary___8T3UC
+                    )}
+                    darkInteractions={"dark"}
+                    text={"Find a Surgeon"}
+                    url={"https://www.handcare.org/fahs"}
+                  />
 
-                <ButtonPrimary
-                  className={classNames(
-                    "__wab_instance",
-                    sty.buttonPrimary___0Qdhs
-                  )}
-                  darkInteractions={"dark"}
-                  text={"Join ASSH"}
-                  url={"https://www.assh.org/membership/join-assh"}
-                />
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary___0Qdhs
+                    )}
+                    darkInteractions={"dark"}
+                    text={"Join ASSH"}
+                    url={"https://www.assh.org/membership/join-assh"}
+                  />
+                </Stack__>
               </Stack__>
             </Stack__>
-          </Stack__>
-          <div
-            data-plasmic-name={"column"}
-            data-plasmic-override={overrides.column}
-            className={classNames(projectcss.all, sty.column)}
-          />
+          </div>
+          <div className={classNames(projectcss.all, sty.column__f9WDi)}>
+            <div
+              data-plasmic-name={"column"}
+              data-plasmic-override={overrides.column}
+              className={classNames(projectcss.all, sty.column)}
+            />
+          </div>
         </div>
         <Stack__
           as={"div"}
@@ -193,254 +197,6 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
             data-plasmic-override={overrides.row2}
             className={classNames(projectcss.all, sty.row2)}
           >
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"calloutBoxTeal"}
-              data-plasmic-override={overrides.calloutBoxTeal}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.calloutBoxTeal)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"container"}
-                data-plasmic-override={overrides.container}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.container)}
-              >
-                <Stack__
-                  as={"div"}
-                  data-plasmic-name={"inner"}
-                  data-plasmic-override={overrides.inner}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.inner)}
-                >
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"content"}
-                    data-plasmic-override={overrides.content}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.content)}
-                  >
-                    <div
-                      data-plasmic-name={"heading"}
-                      data-plasmic-override={overrides.heading}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.heading
-                      )}
-                    >
-                      {"ASSH Coding App"}
-                    </div>
-                    <Stack__
-                      as={PlasmicImg__}
-                      hasGap={true}
-                      alt={""}
-                      className={classNames(sty.img__sKxsm)}
-                      displayHeight={"30px"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"30px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/assh_home/images/frame3.svg",
-                        fullWidth: 30,
-                        fullHeight: 30,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </Stack__>
-                </Stack__>
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"calloutBoxTeal2"}
-              data-plasmic-override={overrides.calloutBoxTeal2}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.calloutBoxTeal2)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"container2"}
-                data-plasmic-override={overrides.container2}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.container2)}
-              >
-                <Stack__
-                  as={"div"}
-                  data-plasmic-name={"inner2"}
-                  data-plasmic-override={overrides.inner2}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.inner2)}
-                >
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"content2"}
-                    data-plasmic-override={overrides.content2}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.content2)}
-                  >
-                    <div
-                      data-plasmic-name={"heading2"}
-                      data-plasmic-override={overrides.heading2}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.heading2
-                      )}
-                    >
-                      {"Practice Management Resources"}
-                    </div>
-                    <Stack__
-                      as={PlasmicImg__}
-                      hasGap={true}
-                      alt={""}
-                      className={classNames(sty.img__xEu4X)}
-                      displayHeight={"30px"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"30px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/assh_home/images/frame4.svg",
-                        fullWidth: 30,
-                        fullHeight: 30,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </Stack__>
-                </Stack__>
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"calloutBoxTeal3"}
-              data-plasmic-override={overrides.calloutBoxTeal3}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.calloutBoxTeal3)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"container3"}
-                data-plasmic-override={overrides.container3}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.container3)}
-              >
-                <Stack__
-                  as={"div"}
-                  data-plasmic-name={"inner3"}
-                  data-plasmic-override={overrides.inner3}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.inner3)}
-                >
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"content3"}
-                    data-plasmic-override={overrides.content3}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.content3)}
-                  >
-                    <div
-                      data-plasmic-name={"heading3"}
-                      data-plasmic-override={overrides.heading3}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.heading3
-                      )}
-                    >
-                      {"Surgical Education"}
-                    </div>
-                    <Stack__
-                      as={PlasmicImg__}
-                      hasGap={true}
-                      alt={""}
-                      className={classNames(sty.img__w9JC3)}
-                      displayHeight={"30px"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"30px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/assh_home/images/frame3.svg",
-                        fullWidth: 30,
-                        fullHeight: 30,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </Stack__>
-                </Stack__>
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"calloutBoxTeal4"}
-              data-plasmic-override={overrides.calloutBoxTeal4}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.calloutBoxTeal4)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"container4"}
-                data-plasmic-override={overrides.container4}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.container4)}
-              >
-                <Stack__
-                  as={"div"}
-                  data-plasmic-name={"inner4"}
-                  data-plasmic-override={overrides.inner4}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.inner4)}
-                >
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"content4"}
-                    data-plasmic-override={overrides.content4}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.content4)}
-                  >
-                    <div
-                      data-plasmic-name={"heading4"}
-                      data-plasmic-override={overrides.heading4}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.heading4
-                      )}
-                    >
-                      {"ASSH Annual Meeting"}
-                    </div>
-                    <Stack__
-                      as={PlasmicImg__}
-                      hasGap={true}
-                      alt={""}
-                      className={classNames(sty.img__bkOq)}
-                      displayHeight={"30px"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"30px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/assh_home/images/frame4.svg",
-                        fullWidth: 30,
-                        fullHeight: 30,
-                        aspectRatio: undefined
-                      }}
-                    />
-                  </Stack__>
-                </Stack__>
-              </Stack__>
-            </Stack__>
             <BlockHeroBannerBlockItem
               _1={["_1"]}
               className={classNames(
@@ -855,26 +611,6 @@ const PlasmicDescendants = {
     "column",
     "section2",
     "row2",
-    "calloutBoxTeal",
-    "container",
-    "inner",
-    "content",
-    "heading",
-    "calloutBoxTeal2",
-    "container2",
-    "inner2",
-    "content2",
-    "heading2",
-    "calloutBoxTeal3",
-    "container3",
-    "inner3",
-    "content3",
-    "heading3",
-    "calloutBoxTeal4",
-    "container4",
-    "inner4",
-    "content4",
-    "heading4",
     "row3",
     "column2",
     "frame7",
@@ -909,27 +645,7 @@ const PlasmicDescendants = {
     "frame6",
     "column",
     "section2",
-    "row2",
-    "calloutBoxTeal",
-    "container",
-    "inner",
-    "content",
-    "heading",
-    "calloutBoxTeal2",
-    "container2",
-    "inner2",
-    "content2",
-    "heading2",
-    "calloutBoxTeal3",
-    "container3",
-    "inner3",
-    "content3",
-    "heading3",
-    "calloutBoxTeal4",
-    "container4",
-    "inner4",
-    "content4",
-    "heading4"
+    "row2"
   ],
 
   row: ["row", "frame3", "frame4", "frame5", "frame6", "column"],
@@ -938,103 +654,8 @@ const PlasmicDescendants = {
   frame5: ["frame5"],
   frame6: ["frame6"],
   column: ["column"],
-  section2: [
-    "section2",
-    "row2",
-    "calloutBoxTeal",
-    "container",
-    "inner",
-    "content",
-    "heading",
-    "calloutBoxTeal2",
-    "container2",
-    "inner2",
-    "content2",
-    "heading2",
-    "calloutBoxTeal3",
-    "container3",
-    "inner3",
-    "content3",
-    "heading3",
-    "calloutBoxTeal4",
-    "container4",
-    "inner4",
-    "content4",
-    "heading4"
-  ],
-
-  row2: [
-    "row2",
-    "calloutBoxTeal",
-    "container",
-    "inner",
-    "content",
-    "heading",
-    "calloutBoxTeal2",
-    "container2",
-    "inner2",
-    "content2",
-    "heading2",
-    "calloutBoxTeal3",
-    "container3",
-    "inner3",
-    "content3",
-    "heading3",
-    "calloutBoxTeal4",
-    "container4",
-    "inner4",
-    "content4",
-    "heading4"
-  ],
-
-  calloutBoxTeal: [
-    "calloutBoxTeal",
-    "container",
-    "inner",
-    "content",
-    "heading"
-  ],
-
-  container: ["container", "inner", "content", "heading"],
-  inner: ["inner", "content", "heading"],
-  content: ["content", "heading"],
-  heading: ["heading"],
-  calloutBoxTeal2: [
-    "calloutBoxTeal2",
-    "container2",
-    "inner2",
-    "content2",
-    "heading2"
-  ],
-
-  container2: ["container2", "inner2", "content2", "heading2"],
-  inner2: ["inner2", "content2", "heading2"],
-  content2: ["content2", "heading2"],
-  heading2: ["heading2"],
-  calloutBoxTeal3: [
-    "calloutBoxTeal3",
-    "container3",
-    "inner3",
-    "content3",
-    "heading3"
-  ],
-
-  container3: ["container3", "inner3", "content3", "heading3"],
-  inner3: ["inner3", "content3", "heading3"],
-  content3: ["content3", "heading3"],
-  heading3: ["heading3"],
-  calloutBoxTeal4: [
-    "calloutBoxTeal4",
-    "container4",
-    "inner4",
-    "content4",
-    "heading4"
-  ],
-
-  container4: ["container4", "inner4", "content4", "heading4"],
-  inner4: ["inner4", "content4", "heading4"],
-  content4: ["content4", "heading4"],
-  heading4: ["heading4"],
+  section2: ["section2", "row2"],
+  row2: ["row2"],
   row3: [
     "row3",
     "column2",
@@ -1177,26 +798,6 @@ export const PlasmicSectionHomeHeroBannerWithLinkItems = Object.assign(
     column: makeNodeComponent("column"),
     section2: makeNodeComponent("section2"),
     row2: makeNodeComponent("row2"),
-    calloutBoxTeal: makeNodeComponent("calloutBoxTeal"),
-    container: makeNodeComponent("container"),
-    inner: makeNodeComponent("inner"),
-    content: makeNodeComponent("content"),
-    heading: makeNodeComponent("heading"),
-    calloutBoxTeal2: makeNodeComponent("calloutBoxTeal2"),
-    container2: makeNodeComponent("container2"),
-    inner2: makeNodeComponent("inner2"),
-    content2: makeNodeComponent("content2"),
-    heading2: makeNodeComponent("heading2"),
-    calloutBoxTeal3: makeNodeComponent("calloutBoxTeal3"),
-    container3: makeNodeComponent("container3"),
-    inner3: makeNodeComponent("inner3"),
-    content3: makeNodeComponent("content3"),
-    heading3: makeNodeComponent("heading3"),
-    calloutBoxTeal4: makeNodeComponent("calloutBoxTeal4"),
-    container4: makeNodeComponent("container4"),
-    inner4: makeNodeComponent("inner4"),
-    content4: makeNodeComponent("content4"),
-    heading4: makeNodeComponent("heading4"),
     row3: makeNodeComponent("row3"),
     column2: makeNodeComponent("column2"),
     frame7: makeNodeComponent("frame7"),

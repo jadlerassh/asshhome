@@ -12,6 +12,7 @@ import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  PlasmicIcon as PlasmicIcon__,
   PlasmicLink as PlasmicLink__,
   Stack as Stack__,
   classNames,
@@ -37,7 +38,8 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "textArrowButton",
   "secondaryInteractions",
   "darkNoBgInteractions",
-  "megaMenuLink"
+  "megaMenuLink",
+  "memberQuicklinks"
 );
 
 export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
@@ -115,6 +117,13 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.megaMenuLink
+      },
+      {
+        path: "memberQuicklinks",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          $props.memberQuicklinks
       }
     ],
 
@@ -234,6 +243,16 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "megaMenuLink",
               "unnamedVariant"
             ),
+            [sty.buttonHighlight2memberQuicklinks_quicklinkHover]: hasVariant(
+              $state,
+              "memberQuicklinks",
+              "quicklinkHover"
+            ),
+            [sty.buttonHighlight2memberQuicklinks_quicklink]: hasVariant(
+              $state,
+              "memberQuicklinks",
+              "quicklink"
+            ),
             [sty.buttonHighlight2secondaryInteractions_hover]: hasVariant(
               $state,
               "secondaryInteractions",
@@ -287,15 +306,30 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "megaMenuLink",
               "unnamedVariant"
+            ),
+            [sty.icon12X12memberQuicklinks_quicklink]: hasVariant(
+              $state,
+              "memberQuicklinks",
+              "quicklink"
             )
           })}
         >
           <Stack__
-            as={ContainerIcon}
+            as={PlasmicIcon__}
             hasGap={true}
+            PlasmicIconType={
+              hasVariant($state, "memberQuicklinks", "quicklink")
+                ? Container2Icon
+                : ContainerIcon
+            }
             className={classNames(projectcss.all, sty.svg__gs5Cp, {
               [sty.svgfullWidthBlueInteractions_brandBlue__gs5CpudmXr]:
-                hasVariant($state, "fullWidthBlueInteractions", "brandBlue")
+                hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
+              [sty.svgmemberQuicklinks_quicklink__gs5CpTwLim]: hasVariant(
+                $state,
+                "memberQuicklinks",
+                "quicklink"
+              )
             })}
             role={"img"}
           />
@@ -348,6 +382,16 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "megaMenuLink",
                 "unnamedVariant"
               ),
+              [sty.text2memberQuicklinks_quicklinkHover]: hasVariant(
+                $state,
+                "memberQuicklinks",
+                "quicklinkHover"
+              ),
+              [sty.text2memberQuicklinks_quicklink]: hasVariant(
+                $state,
+                "memberQuicklinks",
+                "quicklink"
+              ),
               [sty.text2secondaryInteractions_hover]: hasVariant(
                 $state,
                 "secondaryInteractions",
@@ -387,13 +431,24 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             })()}
           </React.Fragment>
         </div>
-        {(hasVariant($state, "textArrowButton", "hover") ? true : false) ? (
+        {(
+          hasVariant($state, "megaMenuLink", "unnamedVariant2")
+            ? true
+            : hasVariant($state, "textArrowButton", "hover")
+            ? true
+            : false
+        ) ? (
           <Stack__
             as={"div"}
             data-plasmic-name={"icon12X125"}
             data-plasmic-override={overrides.icon12X125}
             hasGap={true}
             className={classNames(projectcss.all, sty.icon12X125, {
+              [sty.icon12X125megaMenuLink_unnamedVariant2]: hasVariant(
+                $state,
+                "megaMenuLink",
+                "unnamedVariant2"
+              ),
               [sty.icon12X125textArrowButton_hover]: hasVariant(
                 $state,
                 "textArrowButton",

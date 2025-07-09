@@ -8,31 +8,17 @@
   align-items: center;
   min-width: 0;
 }
-.freeBox {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  position: relative;
-  min-width: 0;
-  min-height: 0;
-  padding: 8px;
-}
 .columns {
   display: flex;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   align-items: stretch;
   flex-shrink: 1;
   max-width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
-  min-height: 0;
   --plsmc-rc-col-gap: 0px;
   padding: 8px;
 }
@@ -56,23 +42,7 @@
     width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
-.column__tn9Zf {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: center;
-  align-items: flex-end;
-  background: #ffffff;
-  min-width: 0;
-  padding: 8px;
-}
-.itemArticleCardItemWithDescription:global(.__wab_instance) {
-  max-width: 100%;
-}
-.column__toS2 {
+.column__p1Xp2 {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -84,15 +54,72 @@
   min-width: 0;
   padding: 8px;
 }
-.img {
-  object-fit: cover;
-  max-width: 100%;
+.freeBox__shxZd {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
   width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__tahKq {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox___5DlBm {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.text__dZWsy {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   min-width: 0;
 }
-.img > picture > img {
-  object-fit: cover;
-}
-.componentMembershipQuicklinks:global(.__wab_instance) {
+.text__uIq5H {
+  position: relative;
+  width: 100%;
+  height: auto;
   max-width: 100%;
+  min-width: 0;
+}
+.text__lR1S {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.column__tc3Ly {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
 }

@@ -183,86 +183,80 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
           className={classNames(projectcss.all, sty.row)}
         >
           <div className={classNames(projectcss.all, sty.column__pgAlg)}>
-            <div
-              data-plasmic-name={"articleImageCard"}
-              data-plasmic-override={overrides.articleImageCard}
-              className={classNames(projectcss.all, sty.articleImageCard)}
-            >
-              <ItemEventCardItemFullCard
-                data-plasmic-name={"itemEventCardItemFullCard"}
-                data-plasmic-override={overrides.itemEventCardItemFullCard}
-                dates={(() => {
-                  try {
-                    return $queries.latestAnnualMeeting.data.response.items[0]
-                      .fields.dates;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
+            <ItemEventCardItemFullCard
+              data-plasmic-name={"itemEventCardItemFullCard"}
+              data-plasmic-override={overrides.itemEventCardItemFullCard}
+              dates={(() => {
+                try {
+                  return $queries.latestAnnualMeeting.data.response.items[0]
+                    .fields.dates;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
                   }
-                })()}
-                imageUrl={(() => {
-                  try {
-                    return $state.amImage;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "";
-                    }
-                    throw e;
+                  throw e;
+                }
+              })()}
+              imageUrl={(() => {
+                try {
+                  return $state.amImage;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "";
                   }
-                })()}
-                infoUrl={(() => {
-                  try {
-                    return $queries.latestAnnualMeeting.data.response.items[0]
-                      .fields.infoLink;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
+                  throw e;
+                }
+              })()}
+              infoUrl={(() => {
+                try {
+                  return $queries.latestAnnualMeeting.data.response.items[0]
+                    .fields.infoLink;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
                   }
-                })()}
-                location={(() => {
-                  try {
-                    return $queries.latestAnnualMeeting.data.response.items[0]
-                      .fields.locationName;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
+                  throw e;
+                }
+              })()}
+              location={(() => {
+                try {
+                  return $queries.latestAnnualMeeting.data.response.items[0]
+                    .fields.locationName;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
                   }
-                })()}
-                regUrl={` ${$queries.latestAnnualMeeting.data.response.items[0].fields.registrationLink}`}
-                title={(() => {
-                  try {
-                    return $queries.latestAnnualMeeting.data.response.items[0]
-                      .fields.title;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
+                  throw e;
+                }
+              })()}
+              regUrl={` ${$queries.latestAnnualMeeting.data.response.items[0].fields.registrationLink}`}
+              title={(() => {
+                try {
+                  return $queries.latestAnnualMeeting.data.response.items[0]
+                    .fields.title;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
                   }
-                })()}
-              />
-            </div>
+                  throw e;
+                }
+              })()}
+            />
           </div>
           <div className={classNames(projectcss.all, sty.column__i6Z77)}>
             <div
@@ -552,7 +546,6 @@ const PlasmicDescendants = {
     "frame2",
     "text",
     "row",
-    "articleImageCard",
     "itemEventCardItemFullCard",
     "frame5",
     "articleCard",
@@ -565,7 +558,6 @@ const PlasmicDescendants = {
     "frame2",
     "text",
     "row",
-    "articleImageCard",
     "itemEventCardItemFullCard",
     "frame5",
     "articleCard",
@@ -577,7 +569,6 @@ const PlasmicDescendants = {
   text: ["text"],
   row: [
     "row",
-    "articleImageCard",
     "itemEventCardItemFullCard",
     "frame5",
     "articleCard",
@@ -585,7 +576,6 @@ const PlasmicDescendants = {
     "articleCard3"
   ],
 
-  articleImageCard: ["articleImageCard", "itemEventCardItemFullCard"],
   itemEventCardItemFullCard: ["itemEventCardItemFullCard"],
   frame5: ["frame5", "articleCard", "articleCard2", "articleCard3"],
   articleCard: ["articleCard"],
@@ -631,7 +621,6 @@ export const PlasmicSectionUpcomingCouresEventsSection = Object.assign(
     frame2: makeNodeComponent("frame2"),
     text: makeNodeComponent("text"),
     row: makeNodeComponent("row"),
-    articleImageCard: makeNodeComponent("articleImageCard"),
     itemEventCardItemFullCard: makeNodeComponent("itemEventCardItemFullCard"),
     frame5: makeNodeComponent("frame5"),
     articleCard: makeNodeComponent("articleCard"),

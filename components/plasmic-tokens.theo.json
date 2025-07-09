@@ -2761,6 +2761,16 @@
       }
     },
     {
+      "name": "Unnamed Style Token 5",
+      "type": "spacing",
+      "value": "70px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "Ct3NTpx85r8d"
+      }
+    },
+    {
       "name": "Warning/Warning",
       "type": "color",
       "value": "#FACC15",

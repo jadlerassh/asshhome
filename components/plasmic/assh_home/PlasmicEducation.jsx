@@ -21,12 +21,13 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
-import SectionInternalHeroTitleSectionV1 from "../../SectionInternalHeroTitleSectionV1"; // plasmic-import: 8dary0IReKTd/component
+import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import SectionCmeMocSection from "../../SectionCmeMocSection"; // plasmic-import: QQidogip4Svc/component
 import SectionMidPageHighlightCtaSection from "../../SectionMidPageHighlightCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
 import BlockTanInformationLogoBlock from "../../BlockTanInformationLogoBlock"; // plasmic-import: KjbcRISpC18Z/component
-import SectionCheckboxSectionWithRightText from "../../SectionCheckboxSectionWithRightText"; // plasmic-import: RE6X9KOLcUTN/component
+import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -138,12 +139,12 @@ function PlasmicEducation__RenderFunc(props) {
             ])}
           />
 
-          <SectionInternalHeroTitleSectionV1
-            data-plasmic-name={"sectionInternalHeroTitleSectionV1"}
-            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV1}
+          <SectionInternalHeroTitleSectionV2
+            data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
+            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
             className={classNames(
               "__wab_instance",
-              sty.sectionInternalHeroTitleSectionV1
+              sty.sectionInternalHeroTitleSectionV2
             )}
           />
 
@@ -180,17 +181,48 @@ function PlasmicEducation__RenderFunc(props) {
             )}
           />
 
-          <SectionCheckboxSectionWithRightText
-            data-plasmic-name={"sectionCheckboxSectionWithRightText"}
-            data-plasmic-override={
-              overrides.sectionCheckboxSectionWithRightText
-            }
-            className={classNames(
-              "__wab_instance",
-              sty.sectionCheckboxSectionWithRightText
-            )}
-          />
-
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <div
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text
+              )}
+            >
+              {"What Sets Us Apart"}
+            </div>
+          </div>
+          <div
+            data-plasmic-name={"columns"}
+            data-plasmic-override={overrides.columns}
+            className={classNames(projectcss.all, sty.columns)}
+          >
+            <div className={classNames(projectcss.all, sty.column__cbYfl)}>
+              <HtmlContentfulHtmlLoader
+                data-plasmic-name={"htmlContentfulHtmlLoader"}
+                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+                className={classNames(
+                  "__wab_instance",
+                  sty.htmlContentfulHtmlLoader
+                )}
+                title={"What Sets Us Apart"}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.column__j6C61)}>
+              <BlockQuoteBlock
+                data-plasmic-name={"blockQuoteBlock"}
+                data-plasmic-override={overrides.blockQuoteBlock}
+                className={classNames("__wab_instance", sty.blockQuoteBlock)}
+                quote={"singleLine"}
+              />
+            </div>
+          </div>
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -215,23 +247,31 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionHomeMenuSection",
-    "sectionInternalHeroTitleSectionV1",
+    "sectionInternalHeroTitleSectionV2",
     "sectionCmeMocSection",
     "sectionMidPageHighlightCtaSection",
     "sectionUpcomingCouresEventsSection",
     "blockTanInformationLogoBlock",
-    "sectionCheckboxSectionWithRightText",
+    "freeBox",
+    "text",
+    "columns",
+    "htmlContentfulHtmlLoader",
+    "blockQuoteBlock",
     "blockAsshMissionBlueBlock",
     "sectionFooterSection"
   ],
 
   sectionHomeMenuSection: ["sectionHomeMenuSection"],
-  sectionInternalHeroTitleSectionV1: ["sectionInternalHeroTitleSectionV1"],
+  sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionCmeMocSection: ["sectionCmeMocSection"],
   sectionMidPageHighlightCtaSection: ["sectionMidPageHighlightCtaSection"],
   sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
   blockTanInformationLogoBlock: ["blockTanInformationLogoBlock"],
-  sectionCheckboxSectionWithRightText: ["sectionCheckboxSectionWithRightText"],
+  freeBox: ["freeBox", "text"],
+  text: ["text"],
+  columns: ["columns", "htmlContentfulHtmlLoader", "blockQuoteBlock"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
+  blockQuoteBlock: ["blockQuoteBlock"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
   sectionFooterSection: ["sectionFooterSection"]
 };
@@ -269,8 +309,8 @@ export const PlasmicEducation = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
-    sectionInternalHeroTitleSectionV1: makeNodeComponent(
-      "sectionInternalHeroTitleSectionV1"
+    sectionInternalHeroTitleSectionV2: makeNodeComponent(
+      "sectionInternalHeroTitleSectionV2"
     ),
     sectionCmeMocSection: makeNodeComponent("sectionCmeMocSection"),
     sectionMidPageHighlightCtaSection: makeNodeComponent(
@@ -282,9 +322,11 @@ export const PlasmicEducation = Object.assign(
     blockTanInformationLogoBlock: makeNodeComponent(
       "blockTanInformationLogoBlock"
     ),
-    sectionCheckboxSectionWithRightText: makeNodeComponent(
-      "sectionCheckboxSectionWithRightText"
-    ),
+    freeBox: makeNodeComponent("freeBox"),
+    text: makeNodeComponent("text"),
+    columns: makeNodeComponent("columns"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
+    blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicEducation

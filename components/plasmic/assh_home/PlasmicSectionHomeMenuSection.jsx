@@ -609,6 +609,16 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         invalidatedKeys: null,
         roleId: null
       };
+    }),
+    getExploreMenu: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "4a40962f-4470-4a32-92a8-68a382da0141",
+        userArgs: {},
+        cacheKey: `plasmic.$.4a40962f-4470-4a32-92a8-68a382da0141.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
     })
   };
   if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
@@ -9342,6 +9352,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           data-plasmic-override={overrides.frame58}
           hasGap={true}
           className={classNames(projectcss.all, sty.frame58, {
+            [sty.frame58menus_dropdown1]: hasVariant(
+              $state,
+              "menus",
+              "dropdown1"
+            ),
             [sty.frame58menus_dropdown2]: hasVariant(
               $state,
               "menus",

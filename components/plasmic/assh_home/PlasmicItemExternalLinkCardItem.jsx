@@ -142,13 +142,13 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
         >
           {(() => {
             try {
-              return $props.iconImageId !== undefined;
+              return $props.iconImageId !== "";
             } catch (e) {
               if (
                 e instanceof TypeError ||
                 e?.plasmicType === "PlasmicUndefinedDataError"
               ) {
-                return true;
+                return false;
               }
               throw e;
             }

@@ -15,9 +15,11 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemExternalLinkCardItem from "../../ItemExternalLinkCardItem"; // plasmic-import: ie8FiHmZHhtB/component
 import ItemCalloutItem from "../../ItemCalloutItem"; // plasmic-import: ntQQTfdTjzvC/component
@@ -63,6 +65,122 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "cmeMocChildLinks",
+        type: "private",
+        variableType: "array",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                const entryMap = Object.fromEntries(
+                  $queries.getCmemocLinks.data.response.includes.Entry.map(
+                    entry => [entry.sys.id, entry]
+                  )
+                );
+                return $queries.getCmemocLinks.data.response.items[0].fields.childLinks
+                  .map(link => {
+                    const entry = entryMap[link.sys.id];
+                    return {
+                      id: link.sys.id,
+                      label: entry?.fields.label || "Label missing",
+                      order: entry?.fields.order ?? 0,
+                      column: entry?.fields.column ?? 0,
+                      url: entry?.fields.url || "#",
+                      showExternalIcon: entry?.fields.showExternalIcon || false
+                    };
+                  })
+                  .sort((a, b) => a.order - b.order);
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "educationLinks",
+        type: "private",
+        variableType: "array",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                const entryMap = Object.fromEntries(
+                  $queries.getEducationLinks.data.response.includes.Entry.map(
+                    entry => [entry.sys.id, entry]
+                  )
+                );
+                return $queries.getEducationLinks.data.response.items[0].fields.childLinks
+                  .map(link => {
+                    const entry = entryMap[link.sys.id];
+                    return {
+                      id: link.sys.id,
+                      label: entry?.fields.label || "Label missing",
+                      order: Number(entry?.fields.order) || 0,
+                      column: entry?.fields.column ?? 0,
+                      url: entry?.fields.url || "#",
+                      showExternalIcon: entry?.fields.showExternalIcon || false,
+                      subText: entry?.fields.subText || ""
+                    };
+                  })
+                  .sort((a, b) => a.order - b.order);
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
+            }
+          })()
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
+  const new$Queries = {
+    getCmemocLinks: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "fade47be-c763-4db0-b522-572147a29f6d",
+        userArgs: {},
+        cacheKey: `plasmic.$.fade47be-c763-4db0-b522-572147a29f6d.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    }),
+    getEducationLinks: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "ec0289a9-9a88-4848-9d68-3e4e03d22b2d",
+        userArgs: {},
+        cacheKey: `plasmic.$.ec0289a9-9a88-4848-9d68-3e4e03d22b2d.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsdjBtUr72ZExV()
   });
@@ -105,10 +223,34 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                 "__wab_instance",
                 sty.itemSectionTitleDescriptionItem
               )}
-              descriptionSection={
-                "Continuing medical education (CME)\u00a0and Maintenance of Certification (MOC) are important to help advance the science and practice of hand and upper extremity surgery and reconstructive microsurgery."
-              }
-              title={"CME & MOC"}
+              descriptionSection={(() => {
+                try {
+                  return $queries.getCmemocLinks.data.response.items[0].fields
+                    .subText;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
+                }
+              })()}
+              title={(() => {
+                try {
+                  return $queries.getCmemocLinks.data.response.items[0].fields
+                    .label;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
+                }
+              })()}
             />
           </Stack__>
           <Stack__
@@ -123,61 +265,81 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.columns__yhaLl)}
             >
-              <div className={classNames(projectcss.all, sty.column__glO8J)}>
-                <ItemExternalLinkCardItem
-                  articleTitle={"Online CME Portal"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItem__u5EqJ
-                  )}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___4IyPy)}>
-                <ItemExternalLinkCardItem
-                  articleTitle={"Journal CME Credit Exams"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItem__dQ4IC
-                  )}
-                  showIcon={false}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___1MItR)}>
-                <ItemExternalLinkCardItem
-                  articleTitle={"Practice Management Webinars"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItem__nacUl
-                  )}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___9NWrO)}>
-                <ItemExternalLinkCardItem
-                  articleTitle={"Self-Assessment Practice Exams"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItem__ywiL8
-                  )}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__ugsrT)}>
-                <ItemExternalLinkCardItem
-                  articleTitle={"Self-Assessment Bundled Practice Exams"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItem__f3DN2
-                  )}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___7Nqdr)}>
-                <ItemExternalLinkCardItem
-                  articleTitle={"Claim CME Credits"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItem__ubCw
-                  )}
-                />
-              </div>
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $state.cmeMocChildLinks;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <div
+                    className={classNames(projectcss.all, sty.column__glO8J)}
+                    key={currentIndex}
+                  >
+                    <ItemExternalLinkCardItem
+                      data-plasmic-name={"itemExternalLinkCardItem"}
+                      data-plasmic-override={overrides.itemExternalLinkCardItem}
+                      articleTitle={(() => {
+                        try {
+                          return currentItem.label;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.itemExternalLinkCardItem
+                      )}
+                      iconImageId={``}
+                      linkUrl={(() => {
+                        try {
+                          return currentItem.url;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      showIcon={(() => {
+                        try {
+                          return currentItem.showExternalIcon;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return false;
+                          }
+                          throw e;
+                        }
+                      })()}
+                    />
+                  </div>
+                );
+              })}
+              <div className={classNames(projectcss.all, sty.column__k437)} />
+              <div className={classNames(projectcss.all, sty.column___8Fai7)} />
             </Stack__>
           </Stack__>
           <Stack__
@@ -196,7 +358,22 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                 sty.text
               )}
             >
-              {"ASSH Education"}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $queries.getEducationLinks.data.response.items[0]
+                      .fields.label;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "ASSH Education";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
             <div className={classNames(projectcss.all, sty.freeBox__hnpaT)}>
               <div className={classNames(projectcss.all, sty.columns__qByit)}>
@@ -206,6 +383,45 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemCalloutItem__vbNE
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[0].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[0].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[0].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__jw77J)}>
@@ -214,6 +430,45 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemCalloutItem__nWTs5
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[1].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[1].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[1].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__uhdu)}>
@@ -222,14 +477,92 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemCalloutItem___3HGo9
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[2].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[2].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[2].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__zOIcY)}>
                   <ItemCalloutItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemCalloutItem__zQbth
+                      sty.itemCalloutItem___47Qa2
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[3].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[3].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[3].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
               </div>
@@ -238,32 +571,188 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                   <ItemCalloutItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemCalloutItem__ypcOt
+                      sty.itemCalloutItem___9LXy5
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[4].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[4].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[4].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__wAMa)}>
                   <ItemCalloutItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemCalloutItem__oVla
+                      sty.itemCalloutItem__aoKFy
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[5].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[5].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[5].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__j0Qn6)}>
                   <ItemCalloutItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemCalloutItem__iJToE
+                      sty.itemCalloutItem__rRuCe
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[6].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[6].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[6].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__i2ID)}>
                   <ItemCalloutItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemCalloutItem__snu8P
+                      sty.itemCalloutItem__x18Yv
                     )}
+                    desc={(() => {
+                      try {
+                        return $state.educationLinks[7].subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return $state.educationLinks[7].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    name={(() => {
+                      try {
+                        return $state.educationLinks[7].label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
                   />
                 </div>
               </div>
@@ -282,6 +771,7 @@ const PlasmicDescendants = {
     "frame2",
     "itemSectionTitleDescriptionItem",
     "frame4",
+    "itemExternalLinkCardItem",
     "calloutBar",
     "text"
   ],
@@ -291,13 +781,15 @@ const PlasmicDescendants = {
     "frame2",
     "itemSectionTitleDescriptionItem",
     "frame4",
+    "itemExternalLinkCardItem",
     "calloutBar",
     "text"
   ],
 
   frame2: ["frame2", "itemSectionTitleDescriptionItem"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  frame4: ["frame4"],
+  frame4: ["frame4", "itemExternalLinkCardItem"],
+  itemExternalLinkCardItem: ["itemExternalLinkCardItem"],
   calloutBar: ["calloutBar", "text"],
   text: ["text"]
 };
@@ -340,6 +832,7 @@ export const PlasmicSectionCmeMocSection = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     frame4: makeNodeComponent("frame4"),
+    itemExternalLinkCardItem: makeNodeComponent("itemExternalLinkCardItem"),
     calloutBar: makeNodeComponent("calloutBar"),
     text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicSectionCmeMocSection

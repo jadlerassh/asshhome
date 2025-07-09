@@ -18,6 +18,8 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
+import ComponentMembershipQuicklinks from "../../ComponentMembershipQuicklinks"; // plasmic-import: FGT9utqXA6R0/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -126,9 +128,28 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__k8WbZ)}>
-        <div className={classNames(projectcss.all, sty.columns__e2Rnz)}>
-          <div className={classNames(projectcss.all, sty.column__tn9Zf)} />
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
+        <div
+          data-plasmic-name={"columns"}
+          data-plasmic-override={overrides.columns}
+          className={classNames(projectcss.all, sty.columns)}
+        >
+          <div className={classNames(projectcss.all, sty.column__tn9Zf)}>
+            <ItemArticleCardItemWithDescription
+              data-plasmic-name={"itemArticleCardItemWithDescription"}
+              data-plasmic-override={
+                overrides.itemArticleCardItemWithDescription
+              }
+              className={classNames(
+                "__wab_instance",
+                sty.itemArticleCardItemWithDescription
+              )}
+            />
+          </div>
           <div className={classNames(projectcss.all, sty.column__toS2)}>
             <PlasmicImg__
               data-plasmic-name={"img"}
@@ -157,37 +178,14 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
               })()}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__zhX4E)}>
-              <div className={classNames(projectcss.all, sty.columns__ez5Mm)}>
-                <div className={classNames(projectcss.all, sty.column__loke6)}>
-                  <div
-                    data-plasmic-name={"text"}
-                    data-plasmic-override={overrides.text}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return undefined;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ComponentMembershipQuicklinks
+              data-plasmic-name={"componentMembershipQuicklinks"}
+              data-plasmic-override={overrides.componentMembershipQuicklinks}
+              className={classNames(
+                "__wab_instance",
+                sty.componentMembershipQuicklinks
+              )}
+            />
           </div>
         </div>
       </div>
@@ -196,9 +194,33 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img", "text"],
+  root: [
+    "root",
+    "freeBox",
+    "columns",
+    "itemArticleCardItemWithDescription",
+    "img",
+    "componentMembershipQuicklinks"
+  ],
+
+  freeBox: [
+    "freeBox",
+    "columns",
+    "itemArticleCardItemWithDescription",
+    "img",
+    "componentMembershipQuicklinks"
+  ],
+
+  columns: [
+    "columns",
+    "itemArticleCardItemWithDescription",
+    "img",
+    "componentMembershipQuicklinks"
+  ],
+
+  itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"],
   img: ["img"],
-  text: ["text"]
+  componentMembershipQuicklinks: ["componentMembershipQuicklinks"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -236,8 +258,15 @@ export const PlasmicSectionMidHomepageMembershipInfoWithQuicklinks =
     makeNodeComponent("root"),
     {
       // Helper components rendering sub-elements
+      freeBox: makeNodeComponent("freeBox"),
+      columns: makeNodeComponent("columns"),
+      itemArticleCardItemWithDescription: makeNodeComponent(
+        "itemArticleCardItemWithDescription"
+      ),
       img: makeNodeComponent("img"),
-      text: makeNodeComponent("text"),
+      componentMembershipQuicklinks: makeNodeComponent(
+        "componentMembershipQuicklinks"
+      ),
       // Metadata about props expected for PlasmicSectionMidHomepageMembershipInfoWithQuicklinks
       internalVariantProps:
         PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__VariantProps,

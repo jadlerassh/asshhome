@@ -13,6 +13,7 @@
   object-fit: cover;
   max-width: 100%;
   margin-right: 8px;
+  display: none;
 }
 .img > picture > img {
   object-fit: cover;

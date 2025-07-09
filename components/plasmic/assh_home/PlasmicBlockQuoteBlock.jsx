@@ -15,9 +15,12 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -27,14 +30,9 @@ import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import:
 
 createPlasmicElementProxy;
 
-export const PlasmicBlockQuoteBlock__VariantProps = new Array();
+export const PlasmicBlockQuoteBlock__VariantProps = new Array("quote");
 
-export const PlasmicBlockQuoteBlock__ArgProps = new Array(
-  "quoteText",
-  "drName",
-  "title",
-  "tagline"
-);
+export const PlasmicBlockQuoteBlock__ArgProps = new Array("name");
 
 const $$ = {};
 
@@ -51,11 +49,7 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          quoteText:
-            "Being an ASSH member means instant connection to the best minds in hand surgery. The collaborative spirit is invaluable.",
-          drName: "Dr. Jane Doe",
-          title: "ASSH Membership",
-          tagline: "Join a Community Shaping the Future of Hand Surgery"
+          name: "ASSH Membership Quote Test"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -71,6 +65,43 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "quote",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.quote
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
+  const new$Queries = {
+    getQuoteData: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "572d563e-66cd-4298-b01c-3d2af49b1c27",
+        userArgs: {
+          params: [undefined]
+        },
+        cacheKey: `plasmic.$.572d563e-66cd-4298-b01c-3d2af49b1c27.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   return (
     <div
       data-plasmic-name={"root"}
@@ -85,20 +116,36 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootquote_full]: hasVariant($state, "quote", "full"),
+          [sty.rootquote_singleLine]: hasVariant($state, "quote", "singleLine")
+        }
       )}
     >
       <div
         data-plasmic-name={"calloutBar"}
         data-plasmic-override={overrides.calloutBar}
-        className={classNames(projectcss.all, sty.calloutBar)}
+        className={classNames(projectcss.all, sty.calloutBar, {
+          [sty.calloutBarquote_singleLine]: hasVariant(
+            $state,
+            "quote",
+            "singleLine"
+          )
+        })}
       >
         <Stack__
           as={"div"}
           data-plasmic-name={"frame6"}
           data-plasmic-override={overrides.frame6}
           hasGap={true}
-          className={classNames(projectcss.all, sty.frame6)}
+          className={classNames(projectcss.all, sty.frame6, {
+            [sty.frame6quote_singleLine]: hasVariant(
+              $state,
+              "quote",
+              "singleLine"
+            )
+          })}
         >
           <Stack__
             as={PlasmicImg__}
@@ -106,7 +153,13 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             data-plasmic-override={overrides.img}
             hasGap={true}
             alt={""}
-            className={classNames(sty.img)}
+            className={classNames(sty.img, {
+              [sty.imgquote_singleLine]: hasVariant(
+                $state,
+                "quote",
+                "singleLine"
+              )
+            })}
             displayHeight={"60px"}
             displayMaxHeight={"none"}
             displayMaxWidth={"100%"}
@@ -126,13 +179,26 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text___3AtRy
+              sty.text___3AtRy,
+              {
+                [sty.textquote_full___3AtRyPkj0]: hasVariant(
+                  $state,
+                  "quote",
+                  "full"
+                ),
+                [sty.textquote_singleLine___3AtRyHh4AV]: hasVariant(
+                  $state,
+                  "quote",
+                  "singleLine"
+                )
+              }
             )}
           >
             <React.Fragment>
               {(() => {
                 try {
-                  return $props.quoteText;
+                  return $queries.getQuoteData.data.response.items[0].fields
+                    .quoteText;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -149,13 +215,21 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text__uUlOi
+              sty.text__uUlOi,
+              {
+                [sty.textquote_singleLine__uUlOiHh4AV]: hasVariant(
+                  $state,
+                  "quote",
+                  "singleLine"
+                )
+              }
             )}
           >
             <React.Fragment>
               {(() => {
                 try {
-                  return $props.drName;
+                  return $queries.getQuoteData.data.response.items[0].fields
+                    .person;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -174,7 +248,13 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
           data-plasmic-name={"frame7"}
           data-plasmic-override={overrides.frame7}
           hasGap={true}
-          className={classNames(projectcss.all, sty.frame7)}
+          className={classNames(projectcss.all, sty.frame7, {
+            [sty.frame7quote_singleLine]: hasVariant(
+              $state,
+              "quote",
+              "singleLine"
+            )
+          })}
         >
           <Stack__
             as={"div"}
@@ -205,13 +285,21 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.navigationItem
+                sty.navigationItem,
+                {
+                  [sty.navigationItemquote_singleLine]: hasVariant(
+                    $state,
+                    "quote",
+                    "singleLine"
+                  )
+                }
               )}
             >
               <React.Fragment>
                 {(() => {
                   try {
-                    return $props.title;
+                    return $queries.getQuoteData.data.response.items[0].fields
+                      .title;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -245,13 +333,21 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text___7QtU3
+              sty.text___7QtU3,
+              {
+                [sty.textquote_full___7QtU3Pkj0]: hasVariant(
+                  $state,
+                  "quote",
+                  "full"
+                )
+              }
             )}
           >
             <React.Fragment>
               {(() => {
                 try {
-                  return $props.tagline;
+                  return $queries.getQuoteData.data.response.items[0].fields
+                    .tagLine;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||

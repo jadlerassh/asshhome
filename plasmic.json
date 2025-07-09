@@ -2109,6 +2109,71 @@
           "cssFilePath": "plasmic/assh_home/PlasmicComponentMembershipQuicklinks.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "CnWCC_7WGfjm",
+          "name": "SectionPublication",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionPublication.jsx",
+          "importSpec": {
+            "modulePath": "SectionPublication.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionPublication.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "yRPTvlAZWP7M",
+          "name": "SectionFeaturedEducation",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionFeaturedEducation.jsx",
+          "importSpec": {
+            "modulePath": "SectionFeaturedEducation.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionFeaturedEducation.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ugEjS8u4W4nq",
+          "name": "ItemImageWithText",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemImageWithText.jsx",
+          "importSpec": {
+            "modulePath": "ItemImageWithText.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemImageWithText.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "S10MkWO4JPIS",
+          "name": "ItemBackgroundImage",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemBackgroundImage.jsx",
+          "importSpec": {
+            "modulePath": "ItemBackgroundImage.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemBackgroundImage.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "z02B7qTMdRRy",
+          "name": "SectionHeroBannerWithImageAndButtons",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHeroBannerWithImageAndButtons.jsx",
+          "importSpec": {
+            "modulePath": "SectionHeroBannerWithImageAndButtons.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHeroBannerWithImageAndButtons.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2898,6 +2963,16 @@
           "id": "s0aKJO97TgNs",
           "name": "Column 4",
           "filePath": "../public/plasmic/assh_home/images/column4.jpg"
+        },
+        {
+          "id": "lk6PZLawU94M",
+          "name": "JHS_GO_banner_HighRes_FromElsevier-1.png",
+          "filePath": "../public/plasmic/assh_home/images/jhsGoBannerHighResFromElsevier1Png.png"
+        },
+        {
+          "id": "zdM9tMNrqvU3",
+          "name": "JHS-Logo_2016_whiteBackground-1.png",
+          "filePath": "../public/plasmic/assh_home/images/jhsLogo2016WhiteBackground1Png.png"
         }
       ],
       "indirect": false,

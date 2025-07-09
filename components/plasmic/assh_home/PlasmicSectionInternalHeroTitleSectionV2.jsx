@@ -11,17 +11,18 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  PlasmicImg as PlasmicImg__,
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
-  hasVariant
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -31,8 +32,9 @@ import sty from "./PlasmicSectionInternalHeroTitleSectionV2.module.css"; // plas
 
 createPlasmicElementProxy;
 
-export const PlasmicSectionInternalHeroTitleSectionV2__VariantProps =
-  new Array();
+export const PlasmicSectionInternalHeroTitleSectionV2__VariantProps = new Array(
+  "unnamedVariant"
+);
 
 export const PlasmicSectionInternalHeroTitleSectionV2__ArgProps = new Array(
   "title"
@@ -70,6 +72,24 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "unnamedVariant",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.unnamedVariant
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getImage: usePlasmicDataOp(() => {
       return {
@@ -120,11 +140,22 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootunnamedVariant]: hasVariant(
+            $state,
+            "unnamedVariant",
+            "unnamedVariant"
+          )
+        }
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__eYdXb)}>
-        <div className={classNames(projectcss.all, sty.freeBox__ay6Qh)}>
+      <div
+        data-plasmic-name={"columns"}
+        data-plasmic-override={overrides.columns}
+        className={classNames(projectcss.all, sty.columns)}
+      >
+        <div className={classNames(projectcss.all, sty.column___7JJd)}>
           <div className={classNames(projectcss.all, sty.freeBox__pUzSn)}>
             <Stack__
               as={"div"}
@@ -162,7 +193,14 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.educationCme3
+                      sty.educationCme3,
+                      {
+                        [sty.educationCme3unnamedVariant]: hasVariant(
+                          $state,
+                          "unnamedVariant",
+                          "unnamedVariant"
+                        )
+                      }
                     )}
                   >
                     <React.Fragment>
@@ -380,29 +418,35 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
               </Stack__>
             </Stack__>
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__iJaPm)}>
-            <PlasmicImg__
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={
-                hasVariant(globalVariants, "screen", "largeDesktop")
-                  ? "100%"
-                  : "100%"
-              }
-              displayMaxHeight={"none"}
-              displayMaxWidth={"none"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"100%"}
-              loading={"eager"}
-              src={{
-                src: "/plasmic/assh_home/images/column3.jpg",
-                fullWidth: 4096,
-                fullHeight: 2633,
-                aspectRatio: undefined
-              }}
+        </div>
+        <div className={classNames(projectcss.all, sty.column__gzOb4)}>
+          <div className={classNames(projectcss.all, sty.freeBox__vEBwV)}>
+            <Embed
+              data-plasmic-name={"embedHtml"}
+              data-plasmic-override={overrides.embedHtml}
+              className={classNames("__wab_instance", sty.embedHtml)}
+              code={(() => {
+                try {
+                  return (() => {
+                    return `<div style="
+  width: 100%;
+  height: 100%;
+  background-image: url(${$queries.getImage.data.response.fields.file.url});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+"></div>`;
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "";
+                  }
+                  throw e;
+                }
+              })()}
             />
           </div>
         </div>
@@ -412,12 +456,30 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "frame9", "frame10", "educationCme3", "frame11", "img"],
+  root: [
+    "root",
+    "columns",
+    "frame9",
+    "frame10",
+    "educationCme3",
+    "frame11",
+    "embedHtml"
+  ],
+
+  columns: [
+    "columns",
+    "frame9",
+    "frame10",
+    "educationCme3",
+    "frame11",
+    "embedHtml"
+  ],
+
   frame9: ["frame9", "frame10", "educationCme3", "frame11"],
   frame10: ["frame10", "educationCme3"],
   educationCme3: ["educationCme3"],
   frame11: ["frame11"],
-  img: ["img"]
+  embedHtml: ["embedHtml"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -454,11 +516,12 @@ export const PlasmicSectionInternalHeroTitleSectionV2 = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    columns: makeNodeComponent("columns"),
     frame9: makeNodeComponent("frame9"),
     frame10: makeNodeComponent("frame10"),
     educationCme3: makeNodeComponent("educationCme3"),
     frame11: makeNodeComponent("frame11"),
-    img: makeNodeComponent("img"),
+    embedHtml: makeNodeComponent("embedHtml"),
     // Metadata about props expected for PlasmicSectionInternalHeroTitleSectionV2
     internalVariantProps:
       PlasmicSectionInternalHeroTitleSectionV2__VariantProps,

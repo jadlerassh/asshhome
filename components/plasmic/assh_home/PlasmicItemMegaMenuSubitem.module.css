@@ -19,6 +19,16 @@
   width: auto;
   text-align: left;
 }
+.navigationItem2unnamedGroupOfVariants_footer {
+  font-size: 12px;
+  padding-bottom: 0px;
+  line-height: 15px;
+}
+.navigationItem2unnamedGroupOfVariants_hover {
+  font-size: 12px;
+  color: var(--token-YOr-x91EUcQe);
+  line-height: 15px;
+}
 .root:hover .navigationItem2 {
   color: var(--token-YOr-x91EUcQe);
 }

@@ -13,6 +13,8 @@
   height: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
   min-width: 0;
 }
 .frame3 > :global(.__wab_flex-container) {

@@ -14,7 +14,9 @@ import {
   PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -27,7 +29,9 @@ import sty from "./PlasmicItemMenuLinkItem.module.css"; // plasmic-import: MET00
 
 createPlasmicElementProxy;
 
-export const PlasmicItemMenuLinkItem__VariantProps = new Array();
+export const PlasmicItemMenuLinkItem__VariantProps = new Array(
+  "unnamedVariant"
+);
 
 export const PlasmicItemMenuLinkItem__ArgProps = new Array(
   "assetId",
@@ -70,6 +74,24 @@ function PlasmicItemMenuLinkItem__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "unnamedVariant",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.unnamedVariant
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getImage: usePlasmicDataOp(() => {
       return {
@@ -102,53 +124,53 @@ function PlasmicItemMenuLinkItem__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootunnamedVariant]: hasVariant(
+            $state,
+            "unnamedVariant",
+            "unnamedVariant"
+          )
+        }
       )}
     >
-      {(() => {
-        try {
-          return $props.assetId !== undefined;
-        } catch (e) {
-          if (
-            e instanceof TypeError ||
-            e?.plasmicType === "PlasmicUndefinedDataError"
-          ) {
-            return true;
-          }
-          throw e;
-        }
-      })() ? (
-        <PlasmicImg__
-          data-plasmic-name={"img"}
-          data-plasmic-override={overrides.img}
-          alt={""}
-          className={classNames(sty.img)}
-          displayHeight={"auto"}
-          displayMaxHeight={"none"}
-          displayMaxWidth={"100%"}
-          displayMinHeight={"0"}
-          displayMinWidth={"0"}
-          displayWidth={"auto"}
-          loading={"lazy"}
-          src={(() => {
-            try {
-              return $queries.getImage.data.response.fields.file.url;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return undefined;
-              }
-              throw e;
+      <PlasmicImg__
+        data-plasmic-name={"img"}
+        data-plasmic-override={overrides.img}
+        alt={""}
+        className={classNames(sty.img)}
+        displayHeight={"auto"}
+        displayMaxHeight={"none"}
+        displayMaxWidth={"100%"}
+        displayMinHeight={"0"}
+        displayMinWidth={"0"}
+        displayWidth={"auto"}
+        loading={"lazy"}
+        src={(() => {
+          try {
+            return $queries.getImage.data.response.fields.file.url;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
             }
-          })()}
-        />
-      ) : null}
+            throw e;
+          }
+        })()}
+      />
+
       <Embed
         data-plasmic-name={"embedHtml"}
         data-plasmic-override={overrides.embedHtml}
-        className={classNames("__wab_instance", sty.embedHtml)}
+        className={classNames("__wab_instance", sty.embedHtml, {
+          [sty.embedHtmlunnamedVariant]: hasVariant(
+            $state,
+            "unnamedVariant",
+            "unnamedVariant"
+          )
+        })}
         code={(() => {
           try {
             return `<a href="${$props.url}" style="color: ${$props.textColor}">${$props.label}</a>`;

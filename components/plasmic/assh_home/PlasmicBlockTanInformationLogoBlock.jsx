@@ -17,6 +17,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -50,7 +51,7 @@ function PlasmicBlockTanInformationLogoBlock__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          title: "Section Title Here",
+          title: "Membership Overview - Title Card",
           desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         Object.fromEntries(
@@ -67,6 +68,25 @@ function PlasmicBlockTanInformationLogoBlock__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const new$Queries = {
+    getHeroContent: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "a2c30def-a015-4a3f-a91a-b5d7686ced12",
+        userArgs: {
+          params: [$props.title]
+        },
+        cacheKey: `plasmic.$.a2c30def-a015-4a3f-a91a-b5d7686ced12.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   return (
     <div
       data-plasmic-name={"root"}
@@ -106,7 +126,8 @@ function PlasmicBlockTanInformationLogoBlock__RenderFunc(props) {
             <React.Fragment>
               {(() => {
                 try {
-                  return $props.title;
+                  return $queries.getHeroContent.data.response.items[0].fields
+                    .header;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -129,7 +150,8 @@ function PlasmicBlockTanInformationLogoBlock__RenderFunc(props) {
             <React.Fragment>
               {(() => {
                 try {
-                  return $props.desc;
+                  return $queries.getHeroContent.data.response.items[0].fields
+                    .description;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||

@@ -105,12 +105,20 @@ function PlasmicBlockLeftRightImageBlockWithTitleDescription__RenderFunc(
         data-plasmic-name={"frame3"}
         data-plasmic-override={overrides.frame3}
         hasGap={true}
-        className={classNames(projectcss.all, sty.frame3)}
+        className={classNames(projectcss.all, sty.frame3, {
+          [sty.frame3rightImage]: hasVariant($state, "rightImage", "rightImage")
+        })}
       >
         <div
           data-plasmic-name={"column"}
           data-plasmic-override={overrides.column}
-          className={classNames(projectcss.all, sty.column)}
+          className={classNames(projectcss.all, sty.column, {
+            [sty.columnrightImage]: hasVariant(
+              $state,
+              "rightImage",
+              "rightImage"
+            )
+          })}
         />
 
         <Stack__
@@ -118,13 +126,26 @@ function PlasmicBlockLeftRightImageBlockWithTitleDescription__RenderFunc(
           data-plasmic-name={"frame7"}
           data-plasmic-override={overrides.frame7}
           hasGap={true}
-          className={classNames(projectcss.all, sty.frame7)}
+          className={classNames(projectcss.all, sty.frame7, {
+            [sty.frame7rightImage]: hasVariant(
+              $state,
+              "rightImage",
+              "rightImage"
+            )
+          })}
         >
           <div
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text__aS8AM
+              sty.text__aS8AM,
+              {
+                [sty.textrightImage__aS8AMaRrzf]: hasVariant(
+                  $state,
+                  "rightImage",
+                  "rightImage"
+                )
+              }
             )}
           >
             {"Job Market for Hand Surgeons"}

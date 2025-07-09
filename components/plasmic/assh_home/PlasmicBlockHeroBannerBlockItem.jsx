@@ -129,34 +129,49 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
         }
       )}
     >
-      <Stack__
-        as={"div"}
-        data-plasmic-name={"calloutBox"}
-        data-plasmic-override={overrides.calloutBox}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.calloutBox, {
-          [sty.calloutBox_1_hover]: hasVariant($state, "_1", "hover"),
-          [sty.calloutBox_2_hover]: hasVariant($state, "_2", "hover"),
-          [sty.calloutBox_3_hover]: hasVariant($state, "_3", "hover"),
-          [sty.calloutBox_4__4]: hasVariant($state, "_4", "_4"),
-          [sty.calloutBox_4_hover]: hasVariant($state, "_4", "hover")
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox, {
+          [sty.freeBox_1__1]: hasVariant($state, "_1", "_1"),
+          [sty.freeBox_1_hover]: hasVariant($state, "_1", "hover"),
+          [sty.freeBox_2__2]: hasVariant($state, "_2", "_2"),
+          [sty.freeBox_2_hover]: hasVariant($state, "_2", "hover"),
+          [sty.freeBox_3__3]: hasVariant($state, "_3", "_3"),
+          [sty.freeBox_3_hover]: hasVariant($state, "_3", "hover"),
+          [sty.freeBox_4__4]: hasVariant($state, "_4", "_4"),
+          [sty.freeBox_4_hover]: hasVariant($state, "_4", "hover")
         })}
       >
         <Stack__
           as={"div"}
-          data-plasmic-name={"container"}
-          data-plasmic-override={overrides.container}
+          data-plasmic-name={"calloutBox"}
+          data-plasmic-override={overrides.calloutBox}
           hasGap={true}
-          className={classNames(projectcss.all, sty.container, {
-            [sty.container_1__1]: hasVariant($state, "_1", "_1"),
-            [sty.container_1_hover]: hasVariant($state, "_1", "hover"),
-            [sty.container_2__2]: hasVariant($state, "_2", "_2"),
-            [sty.container_2_hover]: hasVariant($state, "_2", "hover"),
-            [sty.container_3_hover]: hasVariant($state, "_3", "hover"),
-            [sty.container_4__4]: hasVariant($state, "_4", "_4"),
-            [sty.container_4_hover]: hasVariant($state, "_4", "hover")
+          className={classNames(projectcss.all, sty.calloutBox, {
+            [sty.calloutBox_1_hover]: hasVariant($state, "_1", "hover"),
+            [sty.calloutBox_2_hover]: hasVariant($state, "_2", "hover"),
+            [sty.calloutBox_3_hover]: hasVariant($state, "_3", "hover"),
+            [sty.calloutBox_4__4]: hasVariant($state, "_4", "_4"),
+            [sty.calloutBox_4_hover]: hasVariant($state, "_4", "hover")
           })}
         >
+          <Stack__
+            as={"div"}
+            data-plasmic-name={"container"}
+            data-plasmic-override={overrides.container}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.container, {
+              [sty.container_1__1]: hasVariant($state, "_1", "_1"),
+              [sty.container_1_hover]: hasVariant($state, "_1", "hover"),
+              [sty.container_2__2]: hasVariant($state, "_2", "_2"),
+              [sty.container_2_hover]: hasVariant($state, "_2", "hover"),
+              [sty.container_3_hover]: hasVariant($state, "_3", "hover"),
+              [sty.container_4__4]: hasVariant($state, "_4", "_4"),
+              [sty.container_4_hover]: hasVariant($state, "_4", "hover")
+            })}
+          />
+
           <Stack__
             as={"div"}
             data-plasmic-name={"inner"}
@@ -220,7 +235,7 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
             </Stack__>
           </Stack__>
         </Stack__>
-      </Stack__>
+      </div>
     </div>
   );
 }
@@ -228,6 +243,18 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "freeBox",
+    "calloutBox",
+    "container",
+    "inner",
+    "content",
+    "heading",
+    "section",
+    "svg"
+  ],
+
+  freeBox: [
+    "freeBox",
     "calloutBox",
     "container",
     "inner",
@@ -247,7 +274,7 @@ const PlasmicDescendants = {
     "svg"
   ],
 
-  container: ["container", "inner", "content", "heading", "section", "svg"],
+  container: ["container"],
   inner: ["inner", "content", "heading", "section", "svg"],
   content: ["content", "heading", "section", "svg"],
   heading: ["heading"],
@@ -288,6 +315,7 @@ export const PlasmicBlockHeroBannerBlockItem = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     calloutBox: makeNodeComponent("calloutBox"),
     container: makeNodeComponent("container"),
     inner: makeNodeComponent("inner"),

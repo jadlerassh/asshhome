@@ -3,10 +3,12 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  justify-self: flex-start;
   min-width: 0;
+  min-height: 0;
 }
 .freeBox___8Fx4 {
   display: flex;
@@ -18,7 +20,7 @@
   height: auto;
   max-width: 1320px;
   min-width: 0;
-  padding: 8px;
+  padding: 8px 733px 8px 8px;
 }
 .section {
   display: flex;
@@ -58,6 +60,7 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  background: var(--token-nOBcGT_YRXnw);
   min-width: 0;
   padding: 8px;
 }
@@ -66,6 +69,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  color: var(--token-YLYGEwd03pX3);
   min-width: 0;
 }
 .freeBox___4PUrY {
@@ -90,7 +94,7 @@
   flex-shrink: 1;
   max-width: 100%;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
   padding: 8px;
@@ -122,12 +126,12 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-width: 0;
   padding: 8px;
 }
-.buttonPrimary:global(.__wab_instance) {
+.buttonPrimary__qqb17:global(.__wab_instance) {
   max-width: 100%;
 }
 .column__uzIZd {
@@ -141,4 +145,67 @@
   align-items: center;
   min-width: 0;
   padding: 8px;
+}
+.buttonPrimary__gzEZa:global(.__wab_instance) {
+  max-width: 100%;
+}
+.column__a0IF {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.buttonPrimary___0EkSk:global(.__wab_instance) {
+  max-width: 100%;
+}
+.column__pYpiY {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.buttonPrimary__loQUh:global(.__wab_instance) {
+  max-width: 100%;
+}
+.column__eZ5FD {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.buttonPrimary__nCsLv:global(.__wab_instance) {
+  max-width: 100%;
+}
+.column__uQqkP {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.buttonPrimary___3Rpq1:global(.__wab_instance) {
+  max-width: 100%;
 }

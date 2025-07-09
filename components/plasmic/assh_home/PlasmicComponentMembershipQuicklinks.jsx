@@ -14,7 +14,8 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -63,6 +64,24 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "subLinks",
+        type: "private",
+        variableType: "array",
+        initFunc: ({ $props, $state, $queries, $ctx }) => []
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getQuickLinks: usePlasmicDataOp(() => {
       return {
@@ -141,15 +160,60 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
               >
                 <div className={classNames(projectcss.all, sty.column__cotVi)}>
                   <ButtonPrimary
-                    data-plasmic-name={"buttonPrimary"}
-                    data-plasmic-override={overrides.buttonPrimary}
-                    className={classNames("__wab_instance", sty.buttonPrimary)}
-                    darkNoBgInteractions={["unnamedVariant"]}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__qqb17
+                    )}
+                    darkNoBgInteractions={[]}
+                    memberQuicklinks={"quicklink"}
+                    text={"Button Text"}
                   />
                 </div>
-                <div
-                  className={classNames(projectcss.all, sty.column__uzIZd)}
-                />
+                <div className={classNames(projectcss.all, sty.column__uzIZd)}>
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__gzEZa
+                    )}
+                    memberQuicklinks={"quicklink"}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__a0IF)}>
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary___0EkSk
+                    )}
+                    memberQuicklinks={"quicklink"}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__pYpiY)}>
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__loQUh
+                    )}
+                    memberQuicklinks={"quicklink"}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__eZ5FD)}>
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__nCsLv
+                    )}
+                    memberQuicklinks={"quicklink"}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__uQqkP)}>
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary___3Rpq1
+                    )}
+                    memberQuicklinks={"quicklink"}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -160,11 +224,10 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "text", "columns", "buttonPrimary"],
-  section: ["section", "text", "columns", "buttonPrimary"],
+  root: ["root", "section", "text", "columns"],
+  section: ["section", "text", "columns"],
   text: ["text"],
-  columns: ["columns", "buttonPrimary"],
-  buttonPrimary: ["buttonPrimary"]
+  columns: ["columns"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -203,7 +266,6 @@ export const PlasmicComponentMembershipQuicklinks = Object.assign(
     section: makeNodeComponent("section"),
     text: makeNodeComponent("text"),
     columns: makeNodeComponent("columns"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicComponentMembershipQuicklinks
     internalVariantProps: PlasmicComponentMembershipQuicklinks__VariantProps,
     internalArgProps: PlasmicComponentMembershipQuicklinks__ArgProps

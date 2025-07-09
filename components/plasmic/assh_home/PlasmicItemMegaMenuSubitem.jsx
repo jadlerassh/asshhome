@@ -16,6 +16,7 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -27,7 +28,9 @@ import sty from "./PlasmicItemMegaMenuSubitem.module.css"; // plasmic-import: JN
 
 createPlasmicElementProxy;
 
-export const PlasmicItemMegaMenuSubitem__VariantProps = new Array();
+export const PlasmicItemMegaMenuSubitem__VariantProps = new Array(
+  "unnamedGroupOfVariants"
+);
 
 export const PlasmicItemMegaMenuSubitem__ArgProps = new Array("label", "url");
 
@@ -97,7 +100,19 @@ function PlasmicItemMegaMenuSubitem__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        {
+          [sty.rootunnamedGroupOfVariants_footer]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants",
+            "footer"
+          ),
+          [sty.rootunnamedGroupOfVariants_hover]: hasVariant(
+            $state,
+            "unnamedGroupOfVariants",
+            "hover"
+          )
+        }
       )}
       component={Link}
       href={(() => {
@@ -121,7 +136,19 @@ function PlasmicItemMegaMenuSubitem__RenderFunc(props) {
         className={classNames(
           projectcss.all,
           projectcss.__wab_text,
-          sty.navigationItem2
+          sty.navigationItem2,
+          {
+            [sty.navigationItem2unnamedGroupOfVariants_footer]: hasVariant(
+              $state,
+              "unnamedGroupOfVariants",
+              "footer"
+            ),
+            [sty.navigationItem2unnamedGroupOfVariants_hover]: hasVariant(
+              $state,
+              "unnamedGroupOfVariants",
+              "hover"
+            )
+          }
         )}
       >
         <React.Fragment>
