@@ -27,6 +27,7 @@
   min-width: 0;
 }
 .columns {
+  display: flex;
   width: 100%;
   height: auto;
   flex-shrink: 1;
@@ -35,7 +36,6 @@
   background: none;
   min-height: 150px;
   min-width: 0;
-  display: none;
   --plsmc-rc-col-gap: 0px;
 }
 .columns > :global(.__wab_flex-container) {
@@ -63,11 +63,6 @@
 .columns > :global(.__wab_flex-container) > :nth-child(2n + 2) {
   width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 7 / 12);
 }
-@media (max-width: 1440px) {
-  .columns {
-    display: flex;
-  }
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .columns {
     width: 100%;
@@ -89,6 +84,7 @@
   }
 }
 .column__dNeJ {
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -97,12 +93,6 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
-  display: none;
-}
-@media (max-width: 1440px) {
-  .column__dNeJ {
-    display: flex;
-  }
 }
 .freeBox__xgCuB {
   display: flex;
@@ -129,6 +119,7 @@
   min-width: 0;
 }
 .column__ecu2U {
+  display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -137,12 +128,6 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
-  display: none;
-}
-@media (max-width: 1440px) {
-  .column__ecu2U {
-    display: flex;
-  }
 }
 .frame7 {
   width: 610px;
@@ -174,7 +159,7 @@
   .frame7 {
     align-self: auto;
     width: 100%;
-    padding-left: 0px;
+    padding-left: 15px;
     padding-right: 0px;
     min-width: 0;
   }

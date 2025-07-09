@@ -2214,6 +2214,59 @@
           "cssFilePath": "plasmic/assh_home/PlasmicBlockPublicationHIghlight.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "9Gl1zMekNuhO",
+          "name": "AdvocacyOverview",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyOverview.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy-overview.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyOverview.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy-overview"
+        },
+        {
+          "id": "HfgRxg6hxFsA",
+          "name": "BlockArticleCardList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockArticleCardList.jsx",
+          "importSpec": {
+            "modulePath": "BlockArticleCardList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockArticleCardList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "GN0Rszdi6Y-X",
+          "name": "ItemAd",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemAd.jsx",
+          "importSpec": {
+            "modulePath": "ItemAd.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemAd.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "dzBXgCr_C9up",
+          "name": "SectionQuicklinksTable",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionQuicklinksTable.jsx",
+          "importSpec": {
+            "modulePath": "SectionQuicklinksTable.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionQuicklinksTable.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2716,6 +2769,11 @@
           "id": "CVi8xEyvKenj",
           "name": "RightChevronSvgIcon",
           "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__RightChevronSvg.jsx"
+        },
+        {
+          "id": "TySuoJlWGjIs",
+          "name": "ChevronRight2Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__ChevronRight2.jsx"
         }
       ],
       "images": [
@@ -3028,6 +3086,16 @@
           "id": "PLwt2rjWugEL",
           "name": "Column 7",
           "filePath": "../public/plasmic/assh_home/images/column7.png"
+        },
+        {
+          "id": "f0KiktyFKfvE",
+          "name": "image 5",
+          "filePath": "../public/plasmic/assh_home/images/image5.jpg"
+        },
+        {
+          "id": "9v_wxc2qJ3aS",
+          "name": "Ad 2",
+          "filePath": "../public/plasmic/assh_home/images/ad2.png"
         }
       ],
       "indirect": false,

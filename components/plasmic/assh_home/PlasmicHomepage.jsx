@@ -23,11 +23,13 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
+import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
 import CardListLatestAsshNewsNoDescription from "../../CardListLatestAsshNewsNoDescription"; // plasmic-import: U6mPAYwUm4oe/component
-import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
-import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
+import SectionMidHomepageMembershipInfoWithQuicklinks from "../../SectionMidHomepageMembershipInfoWithQuicklinks"; // plasmic-import: XmsGLZyds9Te/component
 import SectionFeaturedEducation from "../../SectionFeaturedEducation"; // plasmic-import: yRPTvlAZWP7M/component
+import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
+import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -179,21 +181,10 @@ function PlasmicHomepage__RenderFunc(props) {
             )}
           />
 
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div
-                data-plasmic-name={"column"}
-                data-plasmic-override={overrides.column}
-                className={classNames(projectcss.all, sty.column)}
-              >
+          <ItemAd className={classNames("__wab_instance", sty.itemAd__ah4Ac)} />
+          <div className={classNames(projectcss.all, sty.freeBox__r0558)}>
+            <div className={classNames(projectcss.all, sty.columns___7Hlld)}>
+              <div className={classNames(projectcss.all, sty.column__ktEg5)}>
                 <CardListLatestAsshNewsCardList
                   data-plasmic-name={"cardListLatestAsshNewsCardList"}
                   data-plasmic-override={
@@ -215,27 +206,26 @@ function PlasmicHomepage__RenderFunc(props) {
                     sty.cardListLatestAsshNewsNoDescription
                   )}
                 />
-
-                <SectionUpcomingCouresEventsSection
-                  data-plasmic-name={"sectionUpcomingCouresEventsSection"}
-                  data-plasmic-override={
-                    overrides.sectionUpcomingCouresEventsSection
-                  }
-                  className={classNames(
-                    "__wab_instance",
-                    sty.sectionUpcomingCouresEventsSection
-                  )}
-                />
-
-                <SectionPublication
-                  data-plasmic-name={"sectionPublication"}
-                  data-plasmic-override={overrides.sectionPublication}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.sectionPublication
-                  )}
-                />
-
+              </div>
+            </div>
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox___4JgfP)}>
+            <SectionMidHomepageMembershipInfoWithQuicklinks
+              data-plasmic-name={
+                "sectionMidHomepageMembershipInfoWithQuicklinks"
+              }
+              data-plasmic-override={
+                overrides.sectionMidHomepageMembershipInfoWithQuicklinks
+              }
+              className={classNames(
+                "__wab_instance",
+                sty.sectionMidHomepageMembershipInfoWithQuicklinks
+              )}
+            />
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__sN7NJ)}>
+            <div className={classNames(projectcss.all, sty.columns__b7VoV)}>
+              <div className={classNames(projectcss.all, sty.column___2XgYv)}>
                 <SectionFeaturedEducation
                   data-plasmic-name={"sectionFeaturedEducation"}
                   data-plasmic-override={overrides.sectionFeaturedEducation}
@@ -246,7 +236,34 @@ function PlasmicHomepage__RenderFunc(props) {
                 />
               </div>
             </div>
+            <div className={classNames(projectcss.all, sty.columns__hhsus)}>
+              <div className={classNames(projectcss.all, sty.column___1DcZz)}>
+                <SectionPublication
+                  data-plasmic-name={"sectionPublication"}
+                  data-plasmic-override={overrides.sectionPublication}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.sectionPublication
+                  )}
+                />
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.columns___6Y0Wh)}>
+              <div className={classNames(projectcss.all, sty.column__r3GJd)}>
+                <SectionUpcomingCouresEventsSection
+                  data-plasmic-name={"sectionUpcomingCouresEventsSection"}
+                  data-plasmic-override={
+                    overrides.sectionUpcomingCouresEventsSection
+                  }
+                  className={classNames(
+                    "__wab_instance",
+                    sty.sectionUpcomingCouresEventsSection
+                  )}
+                />
+              </div>
+            </div>
           </div>
+          <ItemAd className={classNames("__wab_instance", sty.itemAd__lTfPm)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -272,55 +289,27 @@ const PlasmicDescendants = {
     "asshHome",
     "sectionHomeMenuSection",
     "sectionHomeHeroBannerWithLinkItems",
-    "freeBox",
-    "columns",
-    "column",
     "cardListLatestAsshNewsCardList",
     "cardListLatestAsshNewsNoDescription",
-    "sectionUpcomingCouresEventsSection",
-    "sectionPublication",
+    "sectionMidHomepageMembershipInfoWithQuicklinks",
     "sectionFeaturedEducation",
+    "sectionPublication",
+    "sectionUpcomingCouresEventsSection",
     "blockAsshMissionBlueBlock",
     "sectionFooterSection"
   ],
 
   sectionHomeMenuSection: ["sectionHomeMenuSection"],
   sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
-  freeBox: [
-    "freeBox",
-    "columns",
-    "column",
-    "cardListLatestAsshNewsCardList",
-    "cardListLatestAsshNewsNoDescription",
-    "sectionUpcomingCouresEventsSection",
-    "sectionPublication",
-    "sectionFeaturedEducation"
-  ],
-
-  columns: [
-    "columns",
-    "column",
-    "cardListLatestAsshNewsCardList",
-    "cardListLatestAsshNewsNoDescription",
-    "sectionUpcomingCouresEventsSection",
-    "sectionPublication",
-    "sectionFeaturedEducation"
-  ],
-
-  column: [
-    "column",
-    "cardListLatestAsshNewsCardList",
-    "cardListLatestAsshNewsNoDescription",
-    "sectionUpcomingCouresEventsSection",
-    "sectionPublication",
-    "sectionFeaturedEducation"
-  ],
-
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
   cardListLatestAsshNewsNoDescription: ["cardListLatestAsshNewsNoDescription"],
-  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
-  sectionPublication: ["sectionPublication"],
+  sectionMidHomepageMembershipInfoWithQuicklinks: [
+    "sectionMidHomepageMembershipInfoWithQuicklinks"
+  ],
+
   sectionFeaturedEducation: ["sectionFeaturedEducation"],
+  sectionPublication: ["sectionPublication"],
+  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
   sectionFooterSection: ["sectionFooterSection"]
 };
@@ -361,20 +350,20 @@ export const PlasmicHomepage = Object.assign(
     sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
       "sectionHomeHeroBannerWithLinkItems"
     ),
-    freeBox: makeNodeComponent("freeBox"),
-    columns: makeNodeComponent("columns"),
-    column: makeNodeComponent("column"),
     cardListLatestAsshNewsCardList: makeNodeComponent(
       "cardListLatestAsshNewsCardList"
     ),
     cardListLatestAsshNewsNoDescription: makeNodeComponent(
       "cardListLatestAsshNewsNoDescription"
     ),
+    sectionMidHomepageMembershipInfoWithQuicklinks: makeNodeComponent(
+      "sectionMidHomepageMembershipInfoWithQuicklinks"
+    ),
+    sectionFeaturedEducation: makeNodeComponent("sectionFeaturedEducation"),
+    sectionPublication: makeNodeComponent("sectionPublication"),
     sectionUpcomingCouresEventsSection: makeNodeComponent(
       "sectionUpcomingCouresEventsSection"
     ),
-    sectionPublication: makeNodeComponent("sectionPublication"),
-    sectionFeaturedEducation: makeNodeComponent("sectionFeaturedEducation"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicHomepage

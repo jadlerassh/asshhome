@@ -514,6 +514,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 [sty.navigationItem2darkNoBgInteractions_hover_textArrowButton]:
                   hasVariant($state, "textArrowButton", "textArrowButton") &&
                   hasVariant($state, "darkNoBgInteractions", "hover"),
+                [sty.navigationItem2secondaryInteractions_secondary]:
+                  hasVariant($state, "secondaryInteractions", "secondary"),
+                [sty.navigationItem2secondaryInteractions_unnamedVariant]:
+                  hasVariant($state, "secondaryInteractions", "unnamedVariant"),
                 [sty.navigationItem2textArrowButton]: hasVariant(
                   $state,
                   "textArrowButton",

@@ -13,7 +13,7 @@
     {
       "name": "ASSH/Blue Secondary",
       "type": "color",
-      "value": "#2E5774",
+      "value": "#2E5774F2",
       "category": "color",
       "meta": {
         "projectId": "34tvEQuyqfK98iGCjMbawB",
@@ -98,6 +98,16 @@
       "meta": {
         "projectId": "34tvEQuyqfK98iGCjMbawB",
         "id": "py5R6wetCsNw"
+      }
+    },
+    {
+      "name": "ASSH/Triary BG",
+      "type": "color",
+      "value": "#F4F4EB",
+      "category": "color",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "XTtGF6uDHM3z"
       }
     },
     {

@@ -11,20 +11,20 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  PlasmicImg as PlasmicImg__,
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
-import ComponentMembershipQuicklinks from "../../ComponentMembershipQuicklinks"; // plasmic-import: FGT9utqXA6R0/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicSectionMidHomepageMembershipInfoWithQuicklinks.module.css"; // plasmic-import: XmsGLZyds9Te/css
+import ChevronRight2Icon from "./icons/PlasmicIcon__ChevronRight2"; // plasmic-import: TySuoJlWGjIs/icon
 
 createPlasmicElementProxy;
 
@@ -128,66 +128,234 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
         sty.root
       )}
     >
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__k8WbZ)}>
         <div
           data-plasmic-name={"columns"}
           data-plasmic-override={overrides.columns}
           className={classNames(projectcss.all, sty.columns)}
         >
           <div className={classNames(projectcss.all, sty.column__tn9Zf)}>
-            <ItemArticleCardItemWithDescription
-              data-plasmic-name={"itemArticleCardItemWithDescription"}
-              data-plasmic-override={
-                overrides.itemArticleCardItemWithDescription
+            <Stack__
+              as={"div"}
+              data-plasmic-name={"frame12"}
+              data-plasmic-override={overrides.frame12}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.frame12)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__fdoAh
+                )}
+              >
+                {"MEMBERSHIP"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__sZEk
+                )}
+              >
+                {"New for Members: Shoulder CPT Codes in ASSH Coding App"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__bdDWq
+                )}
+              >
+                {
+                  "Shoulder-based CPT codes have now been added to the ASSH\u2019s Coding App! Free for members, the Coding App contains thousands of CPT codes with other built-in tools to help you code easier and more efficiently."
+                }
+              </div>
+            </Stack__>
+            <ButtonPrimary
+              data-plasmic-name={"buttonPrimary"}
+              data-plasmic-override={overrides.buttonPrimary}
+              className={classNames("__wab_instance", sty.buttonPrimary)}
+              megaMenuLink={[]}
+              text={"View the Shoulder CPT Codes"}
+              url={
+                "https://coding.assh.org/category?name=Shoulder&id=aDf5b0000004CVSCA2"
               }
-              className={classNames(
-                "__wab_instance",
-                sty.itemArticleCardItemWithDescription
-              )}
             />
           </div>
           <div className={classNames(projectcss.all, sty.column__toS2)}>
-            <PlasmicImg__
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"100%"}
-              loading={"lazy"}
-              src={(() => {
-                try {
-                  return $queries.getImage.data.response.fields.file.url;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return undefined;
-                  }
-                  throw e;
-                }
-              })()}
-            />
+            <div className={classNames(projectcss.all, sty.freeBox__qTskc)}>
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"memberQuicklinks"}
+                data-plasmic-override={overrides.memberQuicklinks}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.memberQuicklinks)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___6ZuMq
+                  )}
+                >
+                  {"Quick Links for Members"}
+                </div>
+                <Stack__
+                  as={"div"}
+                  data-plasmic-name={"column"}
+                  data-plasmic-override={overrides.column}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.column)}
+                >
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"linkItem"}
+                    data-plasmic-override={overrides.linkItem}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.linkItem)}
+                  >
+                    <ChevronRight2Icon
+                      className={classNames(projectcss.all, sty.svg__se6Jl)}
+                      role={"img"}
+                    />
 
-            <ComponentMembershipQuicklinks
-              data-plasmic-name={"componentMembershipQuicklinks"}
-              data-plasmic-override={overrides.componentMembershipQuicklinks}
-              className={classNames(
-                "__wab_instance",
-                sty.componentMembershipQuicklinks
-              )}
-            />
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dw7Yf
+                      )}
+                    >
+                      {"MyASSH"}
+                    </div>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"linkItem2"}
+                    data-plasmic-override={overrides.linkItem2}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.linkItem2)}
+                  >
+                    <ChevronRight2Icon
+                      className={classNames(projectcss.all, sty.svg__cdbla)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__p0Hkz
+                      )}
+                    >
+                      {"My Membership"}
+                    </div>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"linkItem3"}
+                    data-plasmic-override={overrides.linkItem3}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.linkItem3)}
+                  >
+                    <ChevronRight2Icon
+                      className={classNames(projectcss.all, sty.svg__zLd5K)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5Qa8Z
+                      )}
+                    >
+                      {"Member Resources"}
+                    </div>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"linkItem4"}
+                    data-plasmic-override={overrides.linkItem4}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.linkItem4)}
+                  >
+                    <ChevronRight2Icon
+                      className={classNames(projectcss.all, sty.svg__lMbTu)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vdZg1
+                      )}
+                    >
+                      {"Become a Member"}
+                    </div>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"linkItem5"}
+                    data-plasmic-override={overrides.linkItem5}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.linkItem5)}
+                  >
+                    <ChevronRight2Icon
+                      className={classNames(projectcss.all, sty.svg___5Tzb6)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___7Dq
+                      )}
+                    >
+                      {"Member Directory"}
+                    </div>
+                  </Stack__>
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"linkItem6"}
+                    data-plasmic-override={overrides.linkItem6}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.linkItem6)}
+                  >
+                    <ChevronRight2Icon
+                      className={classNames(projectcss.all, sty.svg___0Krdj)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__pMOi9
+                      )}
+                    >
+                      {"CME & MOC"}
+                    </div>
+                  </Stack__>
+                </Stack__>
+              </Stack__>
+            </div>
           </div>
         </div>
+      </div>
+      <div
+        data-plasmic-name={"members"}
+        data-plasmic-override={overrides.members}
+        className={classNames(projectcss.all, sty.members)}
+      >
+        <div
+          data-plasmic-name={"rectangle23"}
+          data-plasmic-override={overrides.rectangle23}
+          className={classNames(projectcss.all, sty.rectangle23)}
+        />
       </div>
     </div>
   );
@@ -196,31 +364,66 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
 const PlasmicDescendants = {
   root: [
     "root",
-    "freeBox",
     "columns",
-    "itemArticleCardItemWithDescription",
-    "img",
-    "componentMembershipQuicklinks"
-  ],
-
-  freeBox: [
-    "freeBox",
-    "columns",
-    "itemArticleCardItemWithDescription",
-    "img",
-    "componentMembershipQuicklinks"
+    "frame12",
+    "buttonPrimary",
+    "memberQuicklinks",
+    "column",
+    "linkItem",
+    "linkItem2",
+    "linkItem3",
+    "linkItem4",
+    "linkItem5",
+    "linkItem6",
+    "members",
+    "rectangle23"
   ],
 
   columns: [
     "columns",
-    "itemArticleCardItemWithDescription",
-    "img",
-    "componentMembershipQuicklinks"
+    "frame12",
+    "buttonPrimary",
+    "memberQuicklinks",
+    "column",
+    "linkItem",
+    "linkItem2",
+    "linkItem3",
+    "linkItem4",
+    "linkItem5",
+    "linkItem6"
   ],
 
-  itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"],
-  img: ["img"],
-  componentMembershipQuicklinks: ["componentMembershipQuicklinks"]
+  frame12: ["frame12"],
+  buttonPrimary: ["buttonPrimary"],
+  memberQuicklinks: [
+    "memberQuicklinks",
+    "column",
+    "linkItem",
+    "linkItem2",
+    "linkItem3",
+    "linkItem4",
+    "linkItem5",
+    "linkItem6"
+  ],
+
+  column: [
+    "column",
+    "linkItem",
+    "linkItem2",
+    "linkItem3",
+    "linkItem4",
+    "linkItem5",
+    "linkItem6"
+  ],
+
+  linkItem: ["linkItem"],
+  linkItem2: ["linkItem2"],
+  linkItem3: ["linkItem3"],
+  linkItem4: ["linkItem4"],
+  linkItem5: ["linkItem5"],
+  linkItem6: ["linkItem6"],
+  members: ["members", "rectangle23"],
+  rectangle23: ["rectangle23"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -258,15 +461,19 @@ export const PlasmicSectionMidHomepageMembershipInfoWithQuicklinks =
     makeNodeComponent("root"),
     {
       // Helper components rendering sub-elements
-      freeBox: makeNodeComponent("freeBox"),
       columns: makeNodeComponent("columns"),
-      itemArticleCardItemWithDescription: makeNodeComponent(
-        "itemArticleCardItemWithDescription"
-      ),
-      img: makeNodeComponent("img"),
-      componentMembershipQuicklinks: makeNodeComponent(
-        "componentMembershipQuicklinks"
-      ),
+      frame12: makeNodeComponent("frame12"),
+      buttonPrimary: makeNodeComponent("buttonPrimary"),
+      memberQuicklinks: makeNodeComponent("memberQuicklinks"),
+      column: makeNodeComponent("column"),
+      linkItem: makeNodeComponent("linkItem"),
+      linkItem2: makeNodeComponent("linkItem2"),
+      linkItem3: makeNodeComponent("linkItem3"),
+      linkItem4: makeNodeComponent("linkItem4"),
+      linkItem5: makeNodeComponent("linkItem5"),
+      linkItem6: makeNodeComponent("linkItem6"),
+      members: makeNodeComponent("members"),
+      rectangle23: makeNodeComponent("rectangle23"),
       // Metadata about props expected for PlasmicSectionMidHomepageMembershipInfoWithQuicklinks
       internalVariantProps:
         PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__VariantProps,

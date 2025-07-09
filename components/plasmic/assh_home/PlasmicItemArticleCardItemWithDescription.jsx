@@ -16,9 +16,14 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  hasVariant
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -34,7 +39,8 @@ export const PlasmicItemArticleCardItemWithDescription__ArgProps = new Array(
   "heading",
   "articleTitle",
   "linkUrl",
-  "description"
+  "description",
+  "imageId"
 );
 
 const $$ = {};
@@ -72,6 +78,28 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const new$Queries = {
+    getImage: usePlasmicDataOp(() => {
+      return {
+        sourceId: "n5sYZavh6xkK4D8BEueUSq",
+        opId: "0c2afc0b-6aa8-47c9-b10b-6228850bafaf",
+        userArgs: {
+          path: [$props.imageId]
+        },
+        cacheKey: `plasmic.$.0c2afc0b-6aa8-47c9-b10b-6228850bafaf.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -113,109 +141,228 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
         })()}
         platform={"nextjs"}
       >
-        <Stack__
-          as={"div"}
-          data-plasmic-name={"content"}
-          data-plasmic-override={overrides.content}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.content)}
-        >
+        {(
+          hasVariant(globalVariants, "screen", "largeDesktop")
+            ? (() => {
+                try {
+                  return $props.imageId === undefined;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
+            : (() => {
+                try {
+                  return $props.imageId === undefined;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
+        ) ? (
           <Stack__
             as={"div"}
-            data-plasmic-name={"category"}
-            data-plasmic-override={overrides.category}
+            data-plasmic-name={"content"}
+            data-plasmic-override={overrides.content}
             hasGap={true}
-            className={classNames(projectcss.all, sty.category)}
+            className={classNames(projectcss.all, sty.content)}
           >
-            <div
-              data-plasmic-name={"label"}
-              data-plasmic-override={overrides.label}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.label
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $props.heading;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Advocacy";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
+            {(() => {
+              try {
+                return $props.heading !== undefined;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"category"}
+                data-plasmic-override={overrides.category}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.category)}
+              >
+                <div
+                  data-plasmic-name={"label"}
+                  data-plasmic-override={overrides.label}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.label
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $props.heading;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Advocacy";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </Stack__>
+            ) : null}
+            {(() => {
+              try {
+                return $props.articleTitle !== undefined;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"content2"}
+                data-plasmic-override={overrides.content2}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.content2)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__oimki
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $props.articleTitle;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Article Title";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </Stack__>
+            ) : null}
+            {(() => {
+              try {
+                return $props.description !== undefined;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <Stack__
+                as={"div"}
+                data-plasmic-name={"content3"}
+                data-plasmic-override={overrides.content3}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.content3)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__ktlV
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $props.description;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "Article Title";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </Stack__>
+            ) : null}
           </Stack__>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"content2"}
-            data-plasmic-override={overrides.content2}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.content2)}
+        ) : null}
+        {(() => {
+          try {
+            return $props.imageId !== undefined;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return true;
+            }
+            throw e;
+          }
+        })() ? (
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__oimki
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $props.articleTitle;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Article Title";
-                    }
-                    throw e;
+            <Embed
+              data-plasmic-name={"embedHtml"}
+              data-plasmic-override={overrides.embedHtml}
+              className={classNames("__wab_instance", sty.embedHtml)}
+              code={(() => {
+                try {
+                  return (() => {
+                    return `<div style="
+  width: 100%;
+  height: 100%;
+  background-image: url(${$queries.getImage.data.response.fields.file.url});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+"></div>`;
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "";
                   }
-                })()}
-              </React.Fragment>
-            </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"content3"}
-            data-plasmic-override={overrides.content3}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.content3)}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__ktlV
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $props.description;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Article Title";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
-          </Stack__>
-        </Stack__>
+                  throw e;
+                }
+              })()}
+            />
+          </div>
+        ) : null}
       </PlasmicLink__>
     </div>
   );
@@ -229,7 +376,9 @@ const PlasmicDescendants = {
     "category",
     "label",
     "content2",
-    "content3"
+    "content3",
+    "freeBox",
+    "embedHtml"
   ],
 
   interactionsHover: [
@@ -238,14 +387,18 @@ const PlasmicDescendants = {
     "category",
     "label",
     "content2",
-    "content3"
+    "content3",
+    "freeBox",
+    "embedHtml"
   ],
 
   content: ["content", "category", "label", "content2", "content3"],
   category: ["category", "label"],
   label: ["label"],
   content2: ["content2"],
-  content3: ["content3"]
+  content3: ["content3"],
+  freeBox: ["freeBox", "embedHtml"],
+  embedHtml: ["embedHtml"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -288,6 +441,8 @@ export const PlasmicItemArticleCardItemWithDescription = Object.assign(
     label: makeNodeComponent("label"),
     content2: makeNodeComponent("content2"),
     content3: makeNodeComponent("content3"),
+    freeBox: makeNodeComponent("freeBox"),
+    embedHtml: makeNodeComponent("embedHtml"),
     // Metadata about props expected for PlasmicItemArticleCardItemWithDescription
     internalVariantProps:
       PlasmicItemArticleCardItemWithDescription__VariantProps,

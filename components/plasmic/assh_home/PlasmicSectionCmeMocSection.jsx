@@ -22,7 +22,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemExternalLinkCardItem from "../../ItemExternalLinkCardItem"; // plasmic-import: ie8FiHmZHhtB/component
-import ItemCalloutItem from "../../ItemCalloutItem"; // plasmic-import: ntQQTfdTjzvC/component
+import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -201,7 +201,11 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__zvCPt)}>
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
         <Stack__
           as={"div"}
           data-plasmic-name={"section10"}
@@ -262,8 +266,10 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
           >
             <Stack__
               as={"div"}
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
               hasGap={true}
-              className={classNames(projectcss.all, sty.columns__yhaLl)}
+              className={classNames(projectcss.all, sty.columns)}
             >
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
@@ -342,422 +348,12 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
               <div className={classNames(projectcss.all, sty.column___8Fai7)} />
             </Stack__>
           </Stack__>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"calloutBar"}
-            data-plasmic-override={overrides.calloutBar}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.calloutBar)}
-          >
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.getEducationLinks.data.response.items[0]
-                      .fields.label;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "ASSH Education";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
-            <div className={classNames(projectcss.all, sty.freeBox__hnpaT)}>
-              <div className={classNames(projectcss.all, sty.columns__qByit)}>
-                <div className={classNames(projectcss.all, sty.column__gaUsS)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem__vbNE
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[0].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[0].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[0].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__jw77J)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem__nWTs5
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[1].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[1].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[1].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__uhdu)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem___3HGo9
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[2].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[2].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[2].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__zOIcY)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem___47Qa2
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[3].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[3].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[3].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.columns__bNcsV)}>
-                <div className={classNames(projectcss.all, sty.column__ntqNp)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem___9LXy5
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[4].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[4].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[4].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__wAMa)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem__aoKFy
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[5].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[5].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[5].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__j0Qn6)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem__rRuCe
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[6].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[6].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[6].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__i2ID)}>
-                  <ItemCalloutItem
-                    className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem__x18Yv
-                    )}
-                    desc={(() => {
-                      try {
-                        return $state.educationLinks[7].subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return $state.educationLinks[7].url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return $state.educationLinks[7].label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-              </div>
-            </div>
-          </Stack__>
+          <SectionQuicklinksTable
+            data-plasmic-name={"sectionQuicklinksTable"}
+            data-plasmic-override={overrides.sectionQuicklinksTable}
+            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
+            columns={"_4Column"}
+          />
         </Stack__>
       </div>
     </div>
@@ -767,13 +363,25 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "freeBox",
     "section10",
     "frame2",
     "itemSectionTitleDescriptionItem",
     "frame4",
+    "columns",
     "itemExternalLinkCardItem",
-    "calloutBar",
-    "text"
+    "sectionQuicklinksTable"
+  ],
+
+  freeBox: [
+    "freeBox",
+    "section10",
+    "frame2",
+    "itemSectionTitleDescriptionItem",
+    "frame4",
+    "columns",
+    "itemExternalLinkCardItem",
+    "sectionQuicklinksTable"
   ],
 
   section10: [
@@ -781,17 +389,17 @@ const PlasmicDescendants = {
     "frame2",
     "itemSectionTitleDescriptionItem",
     "frame4",
+    "columns",
     "itemExternalLinkCardItem",
-    "calloutBar",
-    "text"
+    "sectionQuicklinksTable"
   ],
 
   frame2: ["frame2", "itemSectionTitleDescriptionItem"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  frame4: ["frame4", "itemExternalLinkCardItem"],
+  frame4: ["frame4", "columns", "itemExternalLinkCardItem"],
+  columns: ["columns", "itemExternalLinkCardItem"],
   itemExternalLinkCardItem: ["itemExternalLinkCardItem"],
-  calloutBar: ["calloutBar", "text"],
-  text: ["text"]
+  sectionQuicklinksTable: ["sectionQuicklinksTable"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -826,15 +434,16 @@ export const PlasmicSectionCmeMocSection = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     section10: makeNodeComponent("section10"),
     frame2: makeNodeComponent("frame2"),
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
     frame4: makeNodeComponent("frame4"),
+    columns: makeNodeComponent("columns"),
     itemExternalLinkCardItem: makeNodeComponent("itemExternalLinkCardItem"),
-    calloutBar: makeNodeComponent("calloutBar"),
-    text: makeNodeComponent("text"),
+    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     // Metadata about props expected for PlasmicSectionCmeMocSection
     internalVariantProps: PlasmicSectionCmeMocSection__VariantProps,
     internalArgProps: PlasmicSectionCmeMocSection__ArgProps
