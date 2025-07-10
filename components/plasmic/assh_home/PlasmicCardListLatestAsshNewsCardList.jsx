@@ -11,6 +11,7 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -105,9 +106,11 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
         title={"News from ASSH"}
       />
 
-      <div
+      <Stack__
+        as={"div"}
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
+        hasGap={true}
         className={classNames(projectcss.all, sty.columns)}
       >
         {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -129,9 +132,7 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
           const currentIndex = __plasmic_idx_0;
           return (
             <div
-              data-plasmic-name={"column"}
-              data-plasmic-override={overrides.column}
-              className={classNames(projectcss.all, sty.column)}
+              className={classNames(projectcss.all, sty.column__cuhZ5)}
               key={currentIndex}
             >
               <ItemArticleCardItemWithImage
@@ -210,7 +211,9 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
             </div>
           );
         })}
-      </div>
+        <div className={classNames(projectcss.all, sty.column__zROq3)} />
+        <div className={classNames(projectcss.all, sty.column__dJyvr)} />
+      </Stack__>
     </div>
   );
 }
@@ -220,13 +223,11 @@ const PlasmicDescendants = {
     "root",
     "itemSectionTitleDescriptionItem",
     "columns",
-    "column",
     "itemArticleCardItemWithImage"
   ],
 
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "column", "itemArticleCardItemWithImage"],
-  column: ["column", "itemArticleCardItemWithImage"],
+  columns: ["columns", "itemArticleCardItemWithImage"],
   itemArticleCardItemWithImage: ["itemArticleCardItemWithImage"]
 };
 
@@ -267,7 +268,6 @@ export const PlasmicCardListLatestAsshNewsCardList = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     columns: makeNodeComponent("columns"),
-    column: makeNodeComponent("column"),
     itemArticleCardItemWithImage: makeNodeComponent(
       "itemArticleCardItemWithImage"
     ),

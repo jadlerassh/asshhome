@@ -229,12 +229,21 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
                   className={classNames(
                     projectcss.all,
                     sty.freeBox__v0LlI,
-                    "quicklinkItem",
+                    hasVariant($state, "columns", "_4Column")
+                      ? "quicklinkItem quicklinkItemFour"
+                      : hasVariant($state, "columns", "_3Column")
+                      ? "quicklinkItem quicklinkItemThree"
+                      : "quicklinkItem",
                     {
                       [sty.freeBoxcolumns__3Column__v0LlIe7MI]: hasVariant(
                         $state,
                         "columns",
                         "_3Column"
+                      ),
+                      [sty.freeBoxcolumns__4Column__v0LlIGa6JV]: hasVariant(
+                        $state,
+                        "columns",
+                        "_4Column"
                       )
                     }
                   )}
@@ -245,7 +254,14 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
                     data-plasmic-override={overrides.itemCalloutItem}
                     className={classNames(
                       "__wab_instance",
-                      sty.itemCalloutItem
+                      sty.itemCalloutItem,
+                      {
+                        [sty.itemCalloutItemcolumns__3Column]: hasVariant(
+                          $state,
+                          "columns",
+                          "_3Column"
+                        )
+                      }
                     )}
                     desc={(() => {
                       try {

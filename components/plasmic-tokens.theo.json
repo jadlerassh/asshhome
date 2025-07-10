@@ -61,6 +61,16 @@
       }
     },
     {
+      "name": "ASSH/Link",
+      "type": "color",
+      "value": "#008E84",
+      "category": "color",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "j3urVBXa9jtJ"
+      }
+    },
+    {
       "name": "ASSH/Secondary BG",
       "type": "color",
       "value": "#D4DAC4",

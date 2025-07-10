@@ -33,7 +33,7 @@ import sty from "./PlasmicSectionInternalHeroTitleSectionV2.module.css"; // plas
 createPlasmicElementProxy;
 
 export const PlasmicSectionInternalHeroTitleSectionV2__VariantProps = new Array(
-  "unnamedVariant"
+  "base"
 );
 
 export const PlasmicSectionInternalHeroTitleSectionV2__ArgProps = new Array(
@@ -75,10 +75,10 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "unnamedVariant",
+        path: "base",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.unnamedVariant
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.base
       }
     ],
 
@@ -141,13 +141,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
-        {
-          [sty.rootunnamedVariant]: hasVariant(
-            $state,
-            "unnamedVariant",
-            "unnamedVariant"
-          )
-        }
+        { [sty.rootbase]: hasVariant($state, "base", "base") }
       )}
     >
       <div
@@ -195,10 +189,10 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                       projectcss.__wab_text,
                       sty.educationCme3,
                       {
-                        [sty.educationCme3unnamedVariant]: hasVariant(
+                        [sty.educationCme3base]: hasVariant(
                           $state,
-                          "unnamedVariant",
-                          "unnamedVariant"
+                          "base",
+                          "base"
                         )
                       }
                     )}
@@ -422,22 +416,14 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
         <div className={classNames(projectcss.all, sty.column__gzOb4)}>
           <div
             className={classNames(projectcss.all, sty.freeBox__vEBwV, {
-              [sty.freeBoxunnamedVariant__vEBwVJr2CU]: hasVariant(
-                $state,
-                "unnamedVariant",
-                "unnamedVariant"
-              )
+              [sty.freeBoxbase__vEBwVJr2CU]: hasVariant($state, "base", "base")
             })}
           >
             <Embed
               data-plasmic-name={"embedHtml"}
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml, {
-                [sty.embedHtmlunnamedVariant]: hasVariant(
-                  $state,
-                  "unnamedVariant",
-                  "unnamedVariant"
-                )
+                [sty.embedHtmlbase]: hasVariant($state, "base", "base")
               })}
               code={(() => {
                 try {

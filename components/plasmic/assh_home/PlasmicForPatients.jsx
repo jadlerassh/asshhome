@@ -27,7 +27,7 @@ import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSec
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
-import SectionMidPageHighlightCtaSection from "../../SectionMidPageHighlightCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import BlockPublicationHIghlight from "../../BlockPublicationHIghlight"; // plasmic-import: UkJ-zcT0QvMv/component
@@ -205,12 +205,12 @@ function PlasmicForPatients__RenderFunc(props) {
               />
             </div>
           </div>
-          <SectionMidPageHighlightCtaSection
-            data-plasmic-name={"sectionMidPageHighlightCtaSection"}
-            data-plasmic-override={overrides.sectionMidPageHighlightCtaSection}
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
             className={classNames(
               "__wab_instance",
-              sty.sectionMidPageHighlightCtaSection
+              sty.sectionMidPageCtaSection
             )}
           />
 
@@ -367,7 +367,7 @@ const PlasmicDescendants = {
     "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
     "blockQuoteBlock",
-    "sectionMidPageHighlightCtaSection",
+    "sectionMidPageCtaSection",
     "content",
     "text",
     "column",
@@ -384,7 +384,7 @@ const PlasmicDescendants = {
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuoteBlock: ["blockQuoteBlock"],
-  sectionMidPageHighlightCtaSection: ["sectionMidPageHighlightCtaSection"],
+  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   content: ["content", "text", "column", "description", "buttonPrimary"],
   text: ["text"],
   column: ["column"],
@@ -437,9 +437,7 @@ export const PlasmicForPatients = Object.assign(
     ),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
-    sectionMidPageHighlightCtaSection: makeNodeComponent(
-      "sectionMidPageHighlightCtaSection"
-    ),
+    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     content: makeNodeComponent("content"),
     text: makeNodeComponent("text"),
     column: makeNodeComponent("column"),

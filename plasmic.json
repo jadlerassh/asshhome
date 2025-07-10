@@ -1409,32 +1409,6 @@
           "componentType": "component"
         },
         {
-          "id": "ODQZZ0K2m6aT",
-          "name": "BlockCtaRightInfo",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockCtaRightInfo.jsx",
-          "importSpec": {
-            "modulePath": "BlockCtaRightInfo.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicBlockCtaRightInfo.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "PDBoM43wxd7a",
-          "name": "BlockCtaLeftInfo",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockCtaLeftInfo.jsx",
-          "importSpec": {
-            "modulePath": "BlockCtaLeftInfo.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicBlockCtaLeftInfo.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "gIWI4imbKnCD",
           "name": "MenuEducationDropdown",
           "type": "managed",
@@ -1756,19 +1730,6 @@
             "modulePath": "ItemCalloutItem.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicItemCalloutItem.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "yV5r8KM9AbUW",
-          "name": "SectionMidPageHighlightCtaSection",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionMidPageHighlightCtaSection.jsx",
-          "importSpec": {
-            "modulePath": "SectionMidPageHighlightCtaSection.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionMidPageHighlightCtaSection.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         },
@@ -2265,6 +2226,126 @@
             "modulePath": "SectionQuicklinksTable.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicSectionQuicklinksTable.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "yV5r8KM9AbUW",
+          "name": "SectionMidPageCtaSection",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionMidPageCtaSection.jsx",
+          "importSpec": {
+            "modulePath": "SectionMidPageCtaSection.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionMidPageCtaSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "AMBO1nxxIDXz",
+          "name": "CoursesEvents",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCoursesEvents.jsx",
+          "importSpec": {
+            "modulePath": "../pages/courses-events.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCoursesEvents.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/courses-events"
+        },
+        {
+          "id": "9B7ukqwaDf9R",
+          "name": "SectionQuestion",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionQuestion.jsx",
+          "importSpec": {
+            "modulePath": "SectionQuestion.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionQuestion.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kWFNkIbMjGR3",
+          "name": "JobBoard",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicJobBoard.jsx",
+          "importSpec": {
+            "modulePath": "../pages/job-board.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicJobBoard.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/job-board"
+        },
+        {
+          "id": "99rw1b5F2OHC",
+          "name": "SectionTopPageHighlightCtaSection",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionTopPageHighlightCtaSection.jsx",
+          "importSpec": {
+            "modulePath": "SectionTopPageHighlightCtaSection.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionTopPageHighlightCtaSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "2ndlyHmTeyX5",
+          "name": "ItemCourseList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemCourseList.jsx",
+          "importSpec": {
+            "modulePath": "ItemCourseList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemCourseList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "v6Ygz6zUA71l",
+          "name": "BecomeAHandSurgeon",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBecomeAHandSurgeon.jsx",
+          "importSpec": {
+            "modulePath": "../pages/become-a-hand-surgeon.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBecomeAHandSurgeon.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/become-a-hand-surgeon"
+        },
+        {
+          "id": "ooBF5SQo3_hl",
+          "name": "SectionMidPageLeftRightSection",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionMidPageLeftRightSection.jsx",
+          "importSpec": {
+            "modulePath": "SectionMidPageLeftRightSection.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionMidPageLeftRightSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "VNr8286wioLR",
+          "name": "BlockHr",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockHr.jsx",
+          "importSpec": {
+            "modulePath": "BlockHr.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockHr.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -2774,6 +2855,36 @@
           "id": "TySuoJlWGjIs",
           "name": "ChevronRight2Icon",
           "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__ChevronRight2.jsx"
+        },
+        {
+          "id": "0PMr0kSHFTTU",
+          "name": "_9056784ChevronDownIcon1Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon___9056784ChevronDownIcon1.jsx"
+        },
+        {
+          "id": "GrYdOfcgUBm3",
+          "name": "Vector11Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Vector11.jsx"
+        },
+        {
+          "id": "YqNzCip2afL4",
+          "name": "Line23Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Line23.jsx"
+        },
+        {
+          "id": "-QPuoYK6GHTf",
+          "name": "CalendarIcon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Calendar.jsx"
+        },
+        {
+          "id": "wDy45ufG8BQV",
+          "name": "Vector12Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Vector12.jsx"
+        },
+        {
+          "id": "ew_w6hxTtqNB",
+          "name": "Line21Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Line21.jsx"
         }
       ],
       "images": [

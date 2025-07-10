@@ -19,7 +19,8 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   hasVariant,
-  useDollarState
+  useDollarState,
+  useTrigger
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -40,7 +41,8 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "darkNoBgInteractions",
   "megaMenuLink",
   "memberQuicklinks",
-  "whiteButtonBlackSurround"
+  "whiteButtonBlackSurround",
+  "quicklinkOption"
 );
 
 export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
@@ -132,6 +134,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props.whiteButtonBlackSurround
+      },
+      {
+        path: "quicklinkOption",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.quicklinkOption
       }
     ],
 
@@ -143,6 +151,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const [isRootHover, triggerRootHoverProps] = useTrigger("useHover", {});
+  const triggers = {
+    hover_root: isRootHover
+  };
   return (
     <div
       data-plasmic-name={"root"}
@@ -174,10 +186,15 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             "fullWidthBlueInteractions",
             "brandBlue"
           ),
-          [sty.rootmegaMenuLink_unnamedVariant]: hasVariant(
+          [sty.rootmegaMenuLink_megaMenu]: hasVariant(
             $state,
             "megaMenuLink",
-            "unnamedVariant"
+            "megaMenu"
+          ),
+          [sty.rootquicklinkOption]: hasVariant(
+            $state,
+            "quicklinkOption",
+            "quicklinkOption"
           ),
           [sty.rootsecondaryInteractions_secondary]: hasVariant(
             $state,
@@ -196,6 +213,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
           )
         }
       )}
+      data-plasmic-trigger-props={[triggerRootHoverProps]}
     >
       <Stack__
         as={PlasmicLink__}
@@ -224,10 +242,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               hasVariant($state, "darkNoBgInteractions", "unnamedVariant"),
             [sty.buttonHighlight2fullWidthBlueInteractions_brandBlue]:
               hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
-            [sty.buttonHighlight2megaMenuLink_unnamedVariant]: hasVariant(
+            [sty.buttonHighlight2megaMenuLink_megaMenu]: hasVariant(
               $state,
               "megaMenuLink",
-              "unnamedVariant"
+              "megaMenu"
             ),
             [sty.buttonHighlight2memberQuicklinks_quicklinkHover]: hasVariant(
               $state,
@@ -238,6 +256,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "memberQuicklinks",
               "quicklink"
+            ),
+            [sty.buttonHighlight2quicklinkOption]: hasVariant(
+              $state,
+              "quicklinkOption",
+              "quicklinkOption"
             ),
             [sty.buttonHighlight2secondaryInteractions_secondary]: hasVariant(
               $state,
@@ -291,15 +314,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "fullWidthBlueInteractions",
               "brandBlue"
             ),
-            [sty.icon12X12megaMenuLink_unnamedVariant]: hasVariant(
+            [sty.icon12X12megaMenuLink_megaMenu]: hasVariant(
               $state,
               "megaMenuLink",
-              "unnamedVariant"
+              "megaMenu"
             ),
             [sty.icon12X12memberQuicklinks_quicklink]: hasVariant(
               $state,
               "memberQuicklinks",
               "quicklink"
+            ),
+            [sty.icon12X12quicklinkOption]: hasVariant(
+              $state,
+              "quicklinkOption",
+              "quicklinkOption"
             ),
             [sty.icon12X12secondaryInteractions_secondary]: hasVariant(
               $state,
@@ -322,7 +350,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             as={PlasmicIcon__}
             hasGap={true}
             PlasmicIconType={
-              hasVariant($state, "memberQuicklinks", "quicklink")
+              hasVariant($state, "quicklinkOption", "quicklinkOption")
+                ? Container2Icon
+                : hasVariant($state, "memberQuicklinks", "quicklink")
                 ? Container2Icon
                 : ContainerIcon
             }
@@ -333,6 +363,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "memberQuicklinks",
                 "quicklink"
+              ),
+              [sty.svgquicklinkOption__gs5CpLiRO]: hasVariant(
+                $state,
+                "quicklinkOption",
+                "quicklinkOption"
               ),
               [sty.svgtextArrowButton__gs5CpuQaqx]: hasVariant(
                 $state,
@@ -374,10 +409,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "fullWidthBlueInteractions",
                 "brandBlue"
               ),
-              [sty.text2megaMenuLink_unnamedVariant]: hasVariant(
+              [sty.text2megaMenuLink_megaMenu]: hasVariant(
                 $state,
                 "megaMenuLink",
-                "unnamedVariant"
+                "megaMenu"
               ),
               [sty.text2memberQuicklinks_quicklinkHover]: hasVariant(
                 $state,
@@ -388,6 +423,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "memberQuicklinks",
                 "quicklink"
+              ),
+              [sty.text2quicklinkOption]: hasVariant(
+                $state,
+                "quicklinkOption",
+                "quicklinkOption"
               ),
               [sty.text2secondaryInteractions_secondary]: hasVariant(
                 $state,
@@ -432,6 +472,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             [sty.icon12X125darkNoBgInteractions_hover_textArrowButton]:
               hasVariant($state, "textArrowButton", "textArrowButton") &&
               hasVariant($state, "darkNoBgInteractions", "hover"),
+            [sty.icon12X125quicklinkOption]: hasVariant(
+              $state,
+              "quicklinkOption",
+              "quicklinkOption"
+            ),
             [sty.icon12X125textArrowButton]: hasVariant(
               $state,
               "textArrowButton",
@@ -464,6 +509,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             [sty.navItemSimpledarkNoBgInteractions_hover_textArrowButton]:
               hasVariant($state, "textArrowButton", "textArrowButton") &&
               hasVariant($state, "darkNoBgInteractions", "hover"),
+            [sty.navItemSimplequicklinkOption]: hasVariant(
+              $state,
+              "quicklinkOption",
+              "quicklinkOption"
+            ),
             [sty.navItemSimpletextArrowButton]: hasVariant(
               $state,
               "textArrowButton",
@@ -503,66 +553,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               />
             </Stack__>
           ) : null}
-          <div
-            data-plasmic-name={"navigationItem2"}
-            data-plasmic-override={overrides.navigationItem2}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.navigationItem2,
-              {
-                [sty.navigationItem2darkNoBgInteractions_hover_textArrowButton]:
-                  hasVariant($state, "textArrowButton", "textArrowButton") &&
-                  hasVariant($state, "darkNoBgInteractions", "hover"),
-                [sty.navigationItem2secondaryInteractions_secondary]:
-                  hasVariant($state, "secondaryInteractions", "secondary"),
-                [sty.navigationItem2secondaryInteractions_unnamedVariant]:
-                  hasVariant($state, "secondaryInteractions", "unnamedVariant"),
-                [sty.navigationItem2textArrowButton]: hasVariant(
-                  $state,
-                  "textArrowButton",
-                  "textArrowButton"
-                )
-              }
-            )}
-          >
-            <React.Fragment>
-              {(() => {
-                try {
-                  return $props.text;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "Get Registered";
-                  }
-                  throw e;
-                }
-              })()}
-            </React.Fragment>
-          </div>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"icon12X124"}
-            data-plasmic-override={overrides.icon12X124}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.icon12X124, {
-              [sty.icon12X124darkNoBgInteractions_hover_textArrowButton]:
-                hasVariant($state, "textArrowButton", "textArrowButton") &&
-                hasVariant($state, "darkNoBgInteractions", "hover")
-            })}
-          >
-            <Stack__
-              as={Container2Icon}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.svg__bmUtj)}
-              role={"img"}
-            />
-          </Stack__>
         </Stack__>
         {(
-          hasVariant($state, "textArrowButton", "textArrowButton")
+          hasVariant($state, "quicklinkOption", "quicklinkOption")
+            ? true
+            : hasVariant($state, "textArrowButton", "textArrowButton")
             ? true
             : false
         ) ? (
@@ -581,6 +576,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "fullWidthBlueInteractions",
                 "brandBlue"
+              ),
+              [sty.icon12X122quicklinkOption]: hasVariant(
+                $state,
+                "quicklinkOption",
+                "quicklinkOption"
               ),
               [sty.icon12X122textArrowButton]: hasVariant(
                 $state,
@@ -614,8 +614,6 @@ const PlasmicDescendants = {
     "icon12X125",
     "navItemSimple",
     "icon12X123",
-    "navigationItem2",
-    "icon12X124",
     "icon12X122"
   ],
 
@@ -626,24 +624,14 @@ const PlasmicDescendants = {
     "icon12X125",
     "navItemSimple",
     "icon12X123",
-    "navigationItem2",
-    "icon12X124",
     "icon12X122"
   ],
 
   icon12X12: ["icon12X12"],
   text2: ["text2"],
   icon12X125: ["icon12X125"],
-  navItemSimple: [
-    "navItemSimple",
-    "icon12X123",
-    "navigationItem2",
-    "icon12X124"
-  ],
-
+  navItemSimple: ["navItemSimple", "icon12X123"],
   icon12X123: ["icon12X123"],
-  navigationItem2: ["navigationItem2"],
-  icon12X124: ["icon12X124"],
   icon12X122: ["icon12X122"]
 };
 
@@ -685,8 +673,6 @@ export const PlasmicButtonPrimary = Object.assign(
     icon12X125: makeNodeComponent("icon12X125"),
     navItemSimple: makeNodeComponent("navItemSimple"),
     icon12X123: makeNodeComponent("icon12X123"),
-    navigationItem2: makeNodeComponent("navigationItem2"),
-    icon12X124: makeNodeComponent("icon12X124"),
     icon12X122: makeNodeComponent("icon12X122"),
     // Metadata about props expected for PlasmicButtonPrimary
     internalVariantProps: PlasmicButtonPrimary__VariantProps,

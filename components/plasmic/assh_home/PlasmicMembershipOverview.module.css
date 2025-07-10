@@ -296,7 +296,7 @@
   > img {
   margin-top: 50px;
 }
-.sectionMidPageHighlightCtaSection:global(.__wab_instance) {
+.sectionMidPageCtaSection:global(.__wab_instance) {
   width: 100%;
   min-width: 0;
 }
@@ -346,4 +346,22 @@
 }
 .htmlContentfulHtmlLoader___6Geyx:global(.__wab_instance) {
   max-width: 100%;
+}
+.itemAd:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
+.blockAsshMissionBlueBlock:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
+.sectionFooterSection:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
 }

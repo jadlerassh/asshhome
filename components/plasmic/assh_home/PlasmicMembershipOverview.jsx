@@ -28,9 +28,12 @@ import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionIt
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
-import SectionMidPageHighlightCtaSection from "../../SectionMidPageHighlightCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListMemberNewsWithDescription from "../../CardListMemberNewsWithDescription"; // plasmic-import: mj20sYUsPblw/component
 import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
+import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -343,14 +346,12 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__dwTGs)}
           >
-            <SectionMidPageHighlightCtaSection
-              data-plasmic-name={"sectionMidPageHighlightCtaSection"}
-              data-plasmic-override={
-                overrides.sectionMidPageHighlightCtaSection
-              }
+            <SectionMidPageCtaSection
+              data-plasmic-name={"sectionMidPageCtaSection"}
+              data-plasmic-override={overrides.sectionMidPageCtaSection}
               className={classNames(
                 "__wab_instance",
-                sty.sectionMidPageHighlightCtaSection
+                sty.sectionMidPageCtaSection
               )}
               title={"Membership Overview - Membership Directory"}
             />
@@ -397,6 +398,26 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               title={"Membership Overview - Benefits at a Glance Table"}
             />
           </Stack__>
+          <ItemAd
+            data-plasmic-name={"itemAd"}
+            data-plasmic-override={overrides.itemAd}
+            className={classNames("__wab_instance", sty.itemAd)}
+          />
+
+          <BlockAsshMissionBlueBlock
+            data-plasmic-name={"blockAsshMissionBlueBlock"}
+            data-plasmic-override={overrides.blockAsshMissionBlueBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockAsshMissionBlueBlock
+            )}
+          />
+
+          <SectionFooterSection
+            data-plasmic-name={"sectionFooterSection"}
+            data-plasmic-override={overrides.sectionFooterSection}
+            className={classNames("__wab_instance", sty.sectionFooterSection)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -410,18 +431,24 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "buttonPrimary",
     "columns",
-    "sectionMidPageHighlightCtaSection",
+    "sectionMidPageCtaSection",
     "cardListMemberNewsWithDescription",
-    "blockQuicklinksTanBox"
+    "blockQuicklinksTanBox",
+    "itemAd",
+    "blockAsshMissionBlueBlock",
+    "sectionFooterSection"
   ],
 
   sectionHomeMenuSection: ["sectionHomeMenuSection"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   buttonPrimary: ["buttonPrimary"],
   columns: ["columns"],
-  sectionMidPageHighlightCtaSection: ["sectionMidPageHighlightCtaSection"],
+  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   cardListMemberNewsWithDescription: ["cardListMemberNewsWithDescription"],
-  blockQuicklinksTanBox: ["blockQuicklinksTanBox"]
+  blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
+  itemAd: ["itemAd"],
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
+  sectionFooterSection: ["sectionFooterSection"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -462,13 +489,14 @@ export const PlasmicMembershipOverview = Object.assign(
     ),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     columns: makeNodeComponent("columns"),
-    sectionMidPageHighlightCtaSection: makeNodeComponent(
-      "sectionMidPageHighlightCtaSection"
-    ),
+    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     cardListMemberNewsWithDescription: makeNodeComponent(
       "cardListMemberNewsWithDescription"
     ),
     blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
+    itemAd: makeNodeComponent("itemAd"),
+    blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
+    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicMembershipOverview
     internalVariantProps: PlasmicMembershipOverview__VariantProps,
     internalArgProps: PlasmicMembershipOverview__ArgProps,
