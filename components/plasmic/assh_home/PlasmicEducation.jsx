@@ -146,6 +146,7 @@ function PlasmicEducation__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
+            title={"Education Overview - Title Card"}
           />
 
           <SectionCmeMocSection
@@ -161,6 +162,7 @@ function PlasmicEducation__RenderFunc(props) {
               "__wab_instance",
               sty.sectionMidPageCtaSection
             )}
+            title={"Education Overview - Mid-page CTA"}
           />
 
           <SectionUpcomingCouresEventsSection
@@ -179,6 +181,8 @@ function PlasmicEducation__RenderFunc(props) {
               "__wab_instance",
               sty.blockTanInformationLogoBlock
             )}
+            desc={``}
+            title={"Education Overview - Tan information logo block"}
           />
 
           <div

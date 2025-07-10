@@ -353,7 +353,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                 "__wab_instance",
                 sty.sectionMidPageCtaSection
               )}
-              title={"Membership Overview - Membership Directory"}
+              title={"Membership Overview - Mid-page CTA"}
             />
 
             <CardListMemberNewsWithDescription

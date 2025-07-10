@@ -164,7 +164,6 @@
   flex-wrap: nowrap;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
-  padding: 8px;
 }
 .columns__b7VoV > :nth-child(1n + 1) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
@@ -193,7 +192,6 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
-  padding: 8px;
 }
 .sectionFeaturedEducation:global(.__wab_instance) {
   max-width: 100%;
@@ -210,7 +208,6 @@
   flex-wrap: nowrap;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
-  padding: 8px;
 }
 .columns__hhsus > :nth-child(1n + 1) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
@@ -239,7 +236,6 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
-  padding: 8px;
 }
 .sectionPublication:global(.__wab_instance) {
   max-width: 100%;
@@ -258,7 +254,6 @@
   flex-wrap: nowrap;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
-  padding: 8px;
 }
 .columns___6Y0Wh > :nth-child(1n + 1) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
@@ -287,7 +282,6 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
-  padding: 8px;
 }
 .sectionUpcomingCouresEventsSection:global(.__wab_instance) {
   max-width: 100%;

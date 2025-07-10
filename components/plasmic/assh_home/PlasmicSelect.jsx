@@ -16,7 +16,6 @@ import {
   deriveRenderOpts,
   generateStateOnChangeProp,
   generateStateValueProp,
-  hasVariant,
   renderPlasmicSlot,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -38,13 +37,11 @@ import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-impor
 
 createPlasmicElementProxy;
 
-export const PlasmicSelect__VariantProps = new Array("type");
+export const PlasmicSelect__VariantProps = new Array();
 
 export const PlasmicSelect__ArgProps = new Array(
   "onChange",
   "placeholder",
-  "showLabel",
-  "showDescription",
   "initialSelectedValue",
   "disabled",
   "ariaLabel",
@@ -68,9 +65,7 @@ function PlasmicSelect__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          placeholder: "Select an item",
-          showLabel: true,
-          showDescription: false
+          placeholder: "Select an item"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -146,8 +141,7 @@ function PlasmicSelect__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.ariaSelect,
-        { [sty.ariaSelecttype_soft]: hasVariant($state, "type", "soft") }
+        sty.ariaSelect
       )}
       defaultSelectedKey={args.initialSelectedValue}
       isDisabled={args.disabled}
@@ -170,7 +164,19 @@ function PlasmicSelect__RenderFunc(props) {
         "selectedValue"
       ])}
     >
-      {$props.showLabel ? (
+      {(() => {
+        try {
+          return $props.ariaLabel !== undefined;
+        } catch (e) {
+          if (
+            e instanceof TypeError ||
+            e?.plasmicType === "PlasmicUndefinedDataError"
+          ) {
+            return true;
+          }
+          throw e;
+        }
+      })() ? (
         <ItemLabelItem
           data-plasmic-name={"itemLabelItem"}
           data-plasmic-override={overrides.itemLabelItem}
@@ -185,9 +191,7 @@ function PlasmicSelect__RenderFunc(props) {
       <BaseButton
         data-plasmic-name={"ariaButton"}
         data-plasmic-override={overrides.ariaButton}
-        className={classNames("__wab_instance", sty.ariaButton, {
-          [sty.ariaButtontype_soft]: hasVariant($state, "type", "soft")
-        })}
+        className={classNames("__wab_instance", sty.ariaButton)}
       >
         <BaseSelectValue
           data-plasmic-name={"ariaSelectedValue"}
@@ -228,7 +232,7 @@ function PlasmicSelect__RenderFunc(props) {
           role={"img"}
         />
       </BaseButton>
-      {$props.showDescription ? (
+      {undefined ? (
         <ItemDescriptionItem
           data-plasmic-name={"itemDescriptionItem"}
           data-plasmic-override={overrides.itemDescriptionItem}

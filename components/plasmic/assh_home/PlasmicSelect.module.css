@@ -18,16 +18,15 @@
   box-shadow: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  background: var(--token-lJvlCWpx5zk3);
+  justify-content: space-around;
+  background: none;
   min-width: 200px;
   align-items: center;
-  outline-style: none;
-  height: 52px;
+  height: 50px;
   color: var(--token-TYi5l69jClib);
-  border-radius: 50px;
+  border-radius: 10px;
   padding: var(--token-SHYrfqQuFlWP) var(--token-mj_AjoGEZNER);
-  border-style: none;
+  border: 1px none var(--token-dhz6eQ3B9RE7);
 }
 .ariaSelect[data-focus-visible] .ariaButton:global(.__wab_instance) {
   outline-style: solid;
@@ -37,7 +36,7 @@
 }
 .ariaSelectedValue:global(.__wab_instance) {
   line-height: var(--token-Y-b2LrU_Kywe);
-  color: var(--token-YLYGEwd03pX3);
+  color: var(--token-py5R6wetCsNw);
   font-size: 18px;
 }
 .text {
@@ -45,7 +44,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  color: var(--token-TYi5l69jClib);
+  color: var(--token-py5R6wetCsNw);
   font-weight: 300;
   padding-left: 8px;
   min-width: 0;

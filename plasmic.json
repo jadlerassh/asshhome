@@ -2348,6 +2348,33 @@
           "cssFilePath": "plasmic/assh_home/PlasmicBlockHr.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "1fDCMPissikx",
+          "name": "Webinars",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicWebinars.jsx",
+          "importSpec": {
+            "modulePath": "../pages/webinars.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicWebinars.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/webinars"
+        },
+        {
+          "id": "AdcE_rcczjFf",
+          "name": "SectionUpcomingEventsList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEventsList.jsx",
+          "importSpec": {
+            "modulePath": "SectionUpcomingEventsList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEventsList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
