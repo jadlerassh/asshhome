@@ -38,7 +38,7 @@
   -webkit-transition-timing-function: ease-in-out;
   -webkit-transition-duration: 0.3s;
   border-radius: 10px;
-  margin: 5px;
+  margin: 0px;
 }
 .root:hover .interactionsHover {
   box-shadow: 0px 0px 50px 0px #00000026;
