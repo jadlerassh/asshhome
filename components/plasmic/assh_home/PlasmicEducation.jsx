@@ -146,7 +146,7 @@ function PlasmicEducation__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
-            title={"Education Overview - Title Card"}
+            title={"Hero: Education Overview - Title Card"}
           />
 
           <SectionCmeMocSection

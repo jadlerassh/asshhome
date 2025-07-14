@@ -1282,7 +1282,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicActiveMembership.jsx",
           "importSpec": {
-            "modulePath": "../pages/active-membership.jsx"
+            "modulePath": "../pages/membership/active.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicActiveMembership.module.css",
           "scheme": "blackbox",
@@ -1296,7 +1296,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicMembershipOverview.jsx",
           "importSpec": {
-            "modulePath": "../pages/membership-overview.jsx"
+            "modulePath": "../pages/membership.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicMembershipOverview.module.css",
           "scheme": "blackbox",
@@ -2183,7 +2183,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyOverview.jsx",
           "importSpec": {
-            "modulePath": "../pages/advocacy-overview.jsx"
+            "modulePath": "../pages/advocacy.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyOverview.module.css",
           "scheme": "blackbox",
@@ -2276,7 +2276,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicJobBoard.jsx",
           "importSpec": {
-            "modulePath": "../pages/job-board.jsx"
+            "modulePath": "../pages/membership/job-portal.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicJobBoard.module.css",
           "scheme": "blackbox",

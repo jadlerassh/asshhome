@@ -18,7 +18,6 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ContentfulContents from "../../ContentfulContents"; // plasmic-import: xnR31SmiTDW4/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -111,12 +110,10 @@ function PlasmicSectionQuestion__RenderFunc(props) {
           className={classNames(projectcss.all, sty.frame6)}
         >
           <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text
+              sty.text__o7Z5K
             )}
           >
             <React.Fragment>
@@ -136,25 +133,30 @@ function PlasmicSectionQuestion__RenderFunc(props) {
               })()}
             </React.Fragment>
           </div>
-          <ContentfulContents
-            data-plasmic-name={"contentfulContents"}
-            data-plasmic-override={overrides.contentfulContents}
-            className={classNames("__wab_instance", sty.contentfulContents)}
-            contents={(() => {
-              try {
-                return $queries.getSectionContent.data.response.items[0].fields
-                  .content.content;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__xrq3O
+            )}
+          >
+            <React.Fragment>
+              {(() => {
+                try {
+                  return $queries.getSectionContent.data.response.items[0]
+                    .fields.content.content[0].content[0].value;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "";
+                  }
+                  throw e;
                 }
-                throw e;
-              }
-            })()}
-          />
+              })()}
+            </React.Fragment>
+          </div>
         </Stack__>
       </div>
     </div>
@@ -162,11 +164,10 @@ function PlasmicSectionQuestion__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "frame6", "text", "contentfulContents"],
-  freeBox: ["freeBox", "frame6", "text", "contentfulContents"],
-  frame6: ["frame6", "text", "contentfulContents"],
-  text: ["text"],
-  contentfulContents: ["contentfulContents"]
+  root: ["root", "freeBox", "frame6", "link"],
+  freeBox: ["freeBox", "frame6", "link"],
+  frame6: ["frame6", "link"],
+  link: ["link"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -203,8 +204,7 @@ export const PlasmicSectionQuestion = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     frame6: makeNodeComponent("frame6"),
-    text: makeNodeComponent("text"),
-    contentfulContents: makeNodeComponent("contentfulContents"),
+    link: makeNodeComponent("link"),
     // Metadata about props expected for PlasmicSectionQuestion
     internalVariantProps: PlasmicSectionQuestion__VariantProps,
     internalArgProps: PlasmicSectionQuestion__ArgProps

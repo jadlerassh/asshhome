@@ -168,6 +168,7 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
+            title={"Hero: Advocacy Overview - Title Card"}
           />
 
           <div
@@ -203,7 +204,9 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
                     "__wab_instance",
                     sty.htmlContentfulHtmlLoader
                   )}
-                  title={"How ASSH Helps Patients"}
+                  title={
+                    "Advocacy Overview - Supporting Hand Surgery Community"
+                  }
                 />
               </div>
             </div>
@@ -213,6 +216,7 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
               "__wab_instance",
               sty.blockArticleCardList__tjuFi
             )}
+            name={"Advocacy Overview: Current Issues Links"}
           />
 
           <SectionMidPageCtaSection
@@ -222,6 +226,7 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
               "__wab_instance",
               sty.sectionMidPageCtaSection
             )}
+            title={"Advocacy Overview - Mid-page CTA"}
           />
 
           <BlockArticleCardList
@@ -229,7 +234,7 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
               "__wab_instance",
               sty.blockArticleCardList__dUIcu
             )}
-            name={"Advocacy: News & Updates Links"}
+            name={"Advocacy Overview: News & Updates Links"}
           />
 
           <SectionQuicklinksTable
@@ -237,7 +242,7 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
             data-plasmic-override={overrides.sectionQuicklinksTable}
             className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
             columns={"_3Column"}
-            name={"Advocacy Quicklinks"}
+            name={"Advocacy Overview: Quicklinks"}
           />
 
           <SectionQuestion

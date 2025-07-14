@@ -201,6 +201,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
+            title={"Hero: Membership Overview - Title Card"}
           />
 
           <ItemSectionTitleDescriptionItem
@@ -502,7 +503,7 @@ export const PlasmicMembershipOverview = Object.assign(
     internalArgProps: PlasmicMembershipOverview__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "Membership Overview",
+      title: "Membership | ASSH",
       description: "Membership Overview",
       ogImageSrc: "",
       canonical: ""

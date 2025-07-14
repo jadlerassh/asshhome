@@ -164,6 +164,7 @@ function PlasmicJobBoard__RenderFunc(props) {
               "__wab_instance",
               sty.sectionTopPageHighlightCtaSection
             )}
+            title={"Hero: Job Board - Title Card"}
           />
 
           <BlockArticleCardList
@@ -184,7 +185,7 @@ function PlasmicJobBoard__RenderFunc(props) {
                 "__wab_instance",
                 sty.blockArticleCardList__eaJxv
               )}
-              name={"Advocacy: News & Updates Links"}
+              name={"Job Board: Employees Recruiters Links"}
             />
           </div>
           <SectionQuestion
