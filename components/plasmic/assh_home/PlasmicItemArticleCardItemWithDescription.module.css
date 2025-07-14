@@ -9,6 +9,7 @@
   background: #ffffff00;
   min-width: 0;
   min-height: 0;
+  padding: 10px;
 }
 .root:hover {
   background: #ffffff00;
@@ -26,15 +27,18 @@
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   box-shadow: 0px 0px 3px 0px #0000004d;
-  outline-width: medium;
+  outline-width: thin;
   outline-style: solid;
   outline-color: #e1e1e1;
+  outline-offset: 0px;
+  padding-top: 0px;
   min-width: 0;
   min-height: 0;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
   -webkit-transition-duration: 0.3s;
   border-radius: 10px;
+  margin: 5px;
 }
 .root:hover .interactionsHover {
   box-shadow: 0px 0px 50px 0px #00000026;
@@ -48,6 +52,7 @@
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+  margin-right: 0px;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
   -webkit-transition-duration: 0.3s;

@@ -2276,7 +2276,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicJobBoard.jsx",
           "importSpec": {
-            "modulePath": "../pages/membership/job-portal.jsx"
+            "modulePath": "../pages/membership/job-board.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicJobBoard.module.css",
           "scheme": "blackbox",
