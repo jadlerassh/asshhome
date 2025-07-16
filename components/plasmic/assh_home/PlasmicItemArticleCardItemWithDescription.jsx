@@ -179,7 +179,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
           >
             {(() => {
               try {
-                return $props.heading !== undefined;
+                return $props.heading !== undefined && $props.heading !== "";
               } catch (e) {
                 if (
                   e instanceof TypeError ||

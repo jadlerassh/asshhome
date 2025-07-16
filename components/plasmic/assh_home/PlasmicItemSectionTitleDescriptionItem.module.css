@@ -57,7 +57,6 @@
   }
 }
 .text__fT4O3 {
-  display: block;
   font-size: 22px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -66,6 +65,7 @@
   color: rgba(49, 51, 55, 1);
   position: relative;
   width: 800px;
+  display: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__fT4O3 {

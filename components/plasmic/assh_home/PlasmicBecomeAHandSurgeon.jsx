@@ -28,6 +28,7 @@ import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionIt
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockHr from "../../BlockHr"; // plasmic-import: VNr8286wioLR/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import SectionQuestion from "../../SectionQuestion"; // plasmic-import: 9B7ukqwaDf9R/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -171,6 +172,7 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
               "__wab_instance",
               sty.sectionTopPageHighlightCtaSection
             )}
+            title={"Hero: Membership Overview - Title Card"}
           />
 
           <Stack__
@@ -243,10 +245,18 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
               sty.sectionMidPageLeftRightSection__cLoo
             )}
             leftOrRight={"right"}
+            title={"Hero: Become a Hand Surgeon - Job Market for Hand Surgeons"}
           />
 
           <BlockHr
             className={classNames("__wab_instance", sty.blockHr__nDeup)}
+          />
+
+          <Embed
+            data-plasmic-name={"embedHtml"}
+            data-plasmic-override={overrides.embedHtml}
+            className={classNames("__wab_instance", sty.embedHtml)}
+            code={"<h2>Questions?</h2>"}
           />
 
           <SectionQuestion
@@ -300,6 +310,7 @@ const PlasmicDescendants = {
     "sectionTopPageHighlightCtaSection",
     "itemSectionTitleDescriptionItem",
     "columns",
+    "embedHtml",
     "sectionQuestion",
     "buttonPrimary",
     "blockAsshMissionBlueBlock",
@@ -310,6 +321,7 @@ const PlasmicDescendants = {
   sectionTopPageHighlightCtaSection: ["sectionTopPageHighlightCtaSection"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns"],
+  embedHtml: ["embedHtml"],
   sectionQuestion: ["sectionQuestion"],
   buttonPrimary: ["buttonPrimary"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
@@ -356,6 +368,7 @@ export const PlasmicBecomeAHandSurgeon = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     columns: makeNodeComponent("columns"),
+    embedHtml: makeNodeComponent("embedHtml"),
     sectionQuestion: makeNodeComponent("sectionQuestion"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

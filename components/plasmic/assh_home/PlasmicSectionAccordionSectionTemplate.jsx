@@ -21,6 +21,7 @@ import {
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -36,7 +37,9 @@ export const PlasmicSectionAccordionSectionTemplate__VariantProps = new Array(
 );
 
 export const PlasmicSectionAccordionSectionTemplate__ArgProps = new Array(
-  "openAccordion"
+  "openAccordion",
+  "title",
+  "bodyContent"
 );
 
 const $$ = {};
@@ -53,7 +56,10 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          title: "Title",
+          bodyContent: "Body Content"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -187,7 +193,21 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
               }
             )}
           >
-            {"Eligibility"}
+            <React.Fragment>
+              {(() => {
+                try {
+                  return $props.title;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "Eligibility";
+                  }
+                  throw e;
+                }
+              })()}
+            </React.Fragment>
           </div>
           <div
             data-plasmic-name={"freeBox"}
@@ -238,55 +258,86 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
           </div>
         </Stack__>
       </div>
-      {(hasVariant($state, "openInteractions", "open") ? true : false) ? (
-        <div
-          data-plasmic-name={"accordion"}
-          data-plasmic-override={overrides.accordion}
-          className={classNames(projectcss.all, sty.accordion, {
-            [sty.accordionopenInteractions_open]: hasVariant(
-              $state,
-              "openInteractions",
-              "open"
-            )
-          })}
+      <div
+        data-plasmic-name={"accordion"}
+        data-plasmic-override={overrides.accordion}
+        className={classNames(projectcss.all, sty.accordion, {
+          [sty.accordionopenInteractions_open]: hasVariant(
+            $state,
+            "openInteractions",
+            "open"
+          )
+        })}
+      >
+        <Stack__
+          as={"div"}
+          data-plasmic-name={"accordionBody"}
+          data-plasmic-override={overrides.accordionBody}
+          hasGap={true}
+          className={classNames(projectcss.all, sty.accordionBody)}
         >
           <Stack__
             as={"div"}
-            data-plasmic-name={"accordionBody"}
-            data-plasmic-override={overrides.accordionBody}
+            data-plasmic-name={"membershipContentGroup"}
+            data-plasmic-override={overrides.membershipContentGroup}
             hasGap={true}
-            className={classNames(projectcss.all, sty.accordionBody)}
+            className={classNames(projectcss.all, sty.membershipContentGroup)}
           >
             <Stack__
               as={"div"}
-              data-plasmic-name={"membershipContentGroup"}
-              data-plasmic-override={overrides.membershipContentGroup}
+              data-plasmic-name={"content"}
+              data-plasmic-override={overrides.content}
               hasGap={true}
-              className={classNames(projectcss.all, sty.membershipContentGroup)}
+              className={classNames(projectcss.all, sty.content)}
             >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"content"}
-                data-plasmic-override={overrides.content}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.content)}
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml)}
+                code={(() => {
+                  try {
+                    return $props.bodyContent;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "<div>Paste your embed code via the right sidebar</div>";
+                    }
+                    throw e;
+                  }
+                })()}
+              />
+
+              <div
+                data-plasmic-name={"paragraph"}
+                data-plasmic-override={overrides.paragraph}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.paragraph
+                )}
               >
-                <div
-                  data-plasmic-name={"paragraph"}
-                  data-plasmic-override={overrides.paragraph}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.paragraph
-                  )}
-                >
-                  {"Insert Content Here"}
-                </div>
-              </Stack__>
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $props.bodyContent;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Insert Content Here";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
             </Stack__>
           </Stack__>
-        </div>
-      ) : null}
+        </Stack__>
+      </div>
     </div>
   );
 }
@@ -302,6 +353,7 @@ const PlasmicDescendants = {
     "accordionBody",
     "membershipContentGroup",
     "content",
+    "embedHtml",
     "paragraph"
   ],
 
@@ -314,6 +366,7 @@ const PlasmicDescendants = {
     "accordionBody",
     "membershipContentGroup",
     "content",
+    "embedHtml",
     "paragraph"
   ],
 
@@ -321,11 +374,19 @@ const PlasmicDescendants = {
     "accordionBody",
     "membershipContentGroup",
     "content",
+    "embedHtml",
     "paragraph"
   ],
 
-  membershipContentGroup: ["membershipContentGroup", "content", "paragraph"],
-  content: ["content", "paragraph"],
+  membershipContentGroup: [
+    "membershipContentGroup",
+    "content",
+    "embedHtml",
+    "paragraph"
+  ],
+
+  content: ["content", "embedHtml", "paragraph"],
+  embedHtml: ["embedHtml"],
   paragraph: ["paragraph"]
 };
 
@@ -371,6 +432,7 @@ export const PlasmicSectionAccordionSectionTemplate = Object.assign(
     accordionBody: makeNodeComponent("accordionBody"),
     membershipContentGroup: makeNodeComponent("membershipContentGroup"),
     content: makeNodeComponent("content"),
+    embedHtml: makeNodeComponent("embedHtml"),
     paragraph: makeNodeComponent("paragraph"),
     // Metadata about props expected for PlasmicSectionAccordionSectionTemplate
     internalVariantProps: PlasmicSectionAccordionSectionTemplate__VariantProps,

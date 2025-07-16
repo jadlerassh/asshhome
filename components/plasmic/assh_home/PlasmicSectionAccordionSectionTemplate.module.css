@@ -135,11 +135,11 @@
 .accordion {
   width: 100%;
   height: auto;
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   min-width: 0;
+  display: none;
 }
 .accordionopenInteractions_open {
   display: flex;
@@ -224,8 +224,11 @@
   > img {
   margin-top: 20px;
 }
+.embedHtml:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .paragraph {
-  display: block;
   font-size: 18px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -234,4 +237,5 @@
   color: rgba(51, 51, 51, 1);
   align-self: stretch;
   position: relative;
+  display: none;
 }

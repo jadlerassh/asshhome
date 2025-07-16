@@ -11,13 +11,13 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import ContentfulContents from "../../ContentfulContents"; // plasmic-import: xnR31SmiTDW4/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -97,77 +97,60 @@ function PlasmicSectionQuestion__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
-        <Stack__
-          as={"div"}
-          data-plasmic-name={"frame6"}
-          data-plasmic-override={overrides.frame6}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.frame6)}
-        >
+      {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+        (() => {
+          try {
+            return $queries.getSectionContent.data.response.items[0].fields
+              .content;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return [];
+            }
+            throw e;
+          }
+        })()
+      ).map((__plasmic_item_0, __plasmic_idx_0) => {
+        const currentItem = __plasmic_item_0;
+        const currentIndex = __plasmic_idx_0;
+        return (
           <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__o7Z5K
-            )}
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+            key={currentIndex}
           >
-            <React.Fragment>
-              {(() => {
+            <ContentfulContents
+              data-plasmic-name={"contentfulContents"}
+              data-plasmic-override={overrides.contentfulContents}
+              className={classNames("__wab_instance", sty.contentfulContents)}
+              contents={(() => {
                 try {
-                  return $queries.getSectionContent.data.response.items[0]
-                    .fields.title;
+                  return currentItem.content;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
                     e?.plasmicType === "PlasmicUndefinedDataError"
                   ) {
-                    return "Questions?";
+                    return undefined;
                   }
                   throw e;
                 }
               })()}
-            </React.Fragment>
+            />
           </div>
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__xrq3O
-            )}
-          >
-            <React.Fragment>
-              {(() => {
-                try {
-                  return $queries.getSectionContent.data.response.items[0]
-                    .fields.content.content[0].content[0].value;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "";
-                  }
-                  throw e;
-                }
-              })()}
-            </React.Fragment>
-          </div>
-        </Stack__>
-      </div>
+        );
+      })}
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "frame6", "link"],
-  freeBox: ["freeBox", "frame6", "link"],
-  frame6: ["frame6", "link"],
-  link: ["link"]
+  root: ["root", "freeBox", "contentfulContents"],
+  freeBox: ["freeBox", "contentfulContents"],
+  contentfulContents: ["contentfulContents"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -203,8 +186,7 @@ export const PlasmicSectionQuestion = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
-    frame6: makeNodeComponent("frame6"),
-    link: makeNodeComponent("link"),
+    contentfulContents: makeNodeComponent("contentfulContents"),
     // Metadata about props expected for PlasmicSectionQuestion
     internalVariantProps: PlasmicSectionQuestion__VariantProps,
     internalArgProps: PlasmicSectionQuestion__ArgProps

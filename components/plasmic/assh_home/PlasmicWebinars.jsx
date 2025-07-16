@@ -12,6 +12,7 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -24,7 +25,7 @@ import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import SectionUpcomingEventsList from "../../SectionUpcomingEventsList"; // plasmic-import: AdcE_rcczjFf/component
-import Select from "../../Select"; // plasmic-import: zB29lZra8Oul/component
+import ItemAsshSelectNew from "../../ItemAsshSelectNew"; // plasmic-import: n30EpbAc0Gwf/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
@@ -79,10 +80,10 @@ function PlasmicWebinars__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
       },
       {
-        path: "select.value",
+        path: "itemAsshSelectNew.selectedOptions",
         type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ({})
       }
     ],
 
@@ -192,9 +193,11 @@ function PlasmicWebinars__RenderFunc(props) {
             ])}
           />
 
-          <div
+          <Stack__
+            as={"div"}
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
+            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
             <div className={classNames(projectcss.all, sty.column__cTX)}>
@@ -230,14 +233,17 @@ function PlasmicWebinars__RenderFunc(props) {
                 />
 
                 <div className={classNames(projectcss.all, sty.freeBox__eHD4)}>
-                  <Select
-                    data-plasmic-name={"select"}
-                    data-plasmic-override={overrides.select}
-                    className={classNames("__wab_instance", sty.select)}
-                    onChange={async (...eventArgs) => {
+                  <ItemAsshSelectNew
+                    data-plasmic-name={"itemAsshSelectNew"}
+                    data-plasmic-override={overrides.itemAsshSelectNew}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.itemAsshSelectNew
+                    )}
+                    onSelectedOptionsChange={async (...eventArgs) => {
                       generateStateOnChangeProp($state, [
-                        "select",
-                        "value"
+                        "itemAsshSelectNew",
+                        "selectedOptions"
                       ]).apply(null, eventArgs);
                       if (
                         eventArgs.length > 1 &&
@@ -247,12 +253,17 @@ function PlasmicWebinars__RenderFunc(props) {
                         return;
                       }
                     }}
+                    selectedOptions={generateStateValueProp($state, [
+                      "itemAsshSelectNew",
+                      "selectedOptions"
+                    ])}
                   />
                 </div>
               </div>
+              <div className={classNames(projectcss.all, sty.freeBox__nlth6)} />
             </div>
             <div className={classNames(projectcss.all, sty.column__aub4)} />
-          </div>
+          </Stack__>
           <ItemAd
             data-plasmic-name={"itemAd"}
             data-plasmic-override={overrides.itemAd}
@@ -285,16 +296,16 @@ const PlasmicDescendants = {
     "sectionHomeMenuSection",
     "columns",
     "sectionUpcomingEventsList",
-    "select",
+    "itemAsshSelectNew",
     "itemAd",
     "blockAsshMissionBlueBlock",
     "sectionFooterSection"
   ],
 
   sectionHomeMenuSection: ["sectionHomeMenuSection"],
-  columns: ["columns", "sectionUpcomingEventsList", "select"],
+  columns: ["columns", "sectionUpcomingEventsList", "itemAsshSelectNew"],
   sectionUpcomingEventsList: ["sectionUpcomingEventsList"],
-  select: ["select"],
+  itemAsshSelectNew: ["itemAsshSelectNew"],
   itemAd: ["itemAd"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
   sectionFooterSection: ["sectionFooterSection"]
@@ -335,7 +346,7 @@ export const PlasmicWebinars = Object.assign(
     sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     columns: makeNodeComponent("columns"),
     sectionUpcomingEventsList: makeNodeComponent("sectionUpcomingEventsList"),
-    select: makeNodeComponent("select"),
+    itemAsshSelectNew: makeNodeComponent("itemAsshSelectNew"),
     itemAd: makeNodeComponent("itemAd"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     sectionFooterSection: makeNodeComponent("sectionFooterSection"),

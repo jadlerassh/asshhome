@@ -2316,7 +2316,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicBecomeAHandSurgeon.jsx",
           "importSpec": {
-            "modulePath": "../pages/become-a-hand-surgeon.jsx"
+            "modulePath": "../pages/membership/become-hand-surgeon.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicBecomeAHandSurgeon.module.css",
           "scheme": "blackbox",
@@ -2373,6 +2373,59 @@
             "modulePath": "SectionUpcomingEventsList.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEventsList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "n30EpbAc0Gwf",
+          "name": "ItemAsshSelectNew",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemAsshSelectNew.jsx",
+          "importSpec": {
+            "modulePath": "ItemAsshSelectNew.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemAsshSelectNew.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "sJH8ILrUGtVF",
+          "name": "ItemQuicklinksForMembershipPages",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemQuicklinksForMembershipPages.jsx",
+          "importSpec": {
+            "modulePath": "ItemQuicklinksForMembershipPages.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemQuicklinksForMembershipPages.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "r0dvtROcf4XG",
+          "name": "ResourcesForPatients",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicResourcesForPatients.jsx",
+          "importSpec": {
+            "modulePath": "../pages/resources-for-patients.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicResourcesForPatients.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/resources-for-patients"
+        },
+        {
+          "id": "Eq7lpuWOmRGs",
+          "name": "SectionPastEventsList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionPastEventsList.jsx",
+          "importSpec": {
+            "modulePath": "SectionPastEventsList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionPastEventsList.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -2912,6 +2965,16 @@
           "id": "ew_w6hxTtqNB",
           "name": "Line21Icon",
           "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Line21.jsx"
+        },
+        {
+          "id": "GSPM-Y7-E6dE",
+          "name": "CaretDownIconSvgIcon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__CaretDownIconSvg.jsx"
+        },
+        {
+          "id": "lROpjuqVwwWu",
+          "name": "ArrowIcon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Arrow.jsx"
         }
       ],
       "images": [
@@ -3234,6 +3297,11 @@
           "id": "9v_wxc2qJ3aS",
           "name": "Ad 2",
           "filePath": "../public/plasmic/assh_home/images/ad2.png"
+        },
+        {
+          "id": "3fEzWai8ghWj",
+          "name": "Arrow.png",
+          "filePath": "../public/plasmic/assh_home/images/arrowPng.png"
         }
       ],
       "indirect": false,
@@ -3263,6 +3331,18 @@
         "name": "Screen",
         "projectId": "34tvEQuyqfK98iGCjMbawB",
         "contextFilePath": "plasmic/assh_home/PlasmicGlobalVariant__Screen.jsx"
+      },
+      {
+        "id": "Cr_xgEeRRQEa",
+        "name": "UnnamedGlobalGroupOfVariants",
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "contextFilePath": "plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants.jsx"
+      },
+      {
+        "id": "MepFML_UVuQE",
+        "name": "UnnamedGlobalGroupOfVariants2",
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "contextFilePath": "plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2.jsx"
       }
     ]
   },

@@ -24,7 +24,6 @@ import { BaseSelect } from "@plasmicpkgs/react-aria/skinny/registerSelect";
 import ItemLabelItem from "../../ItemLabelItem"; // plasmic-import: oHFVXGjvCU8W/component
 import { BaseButton } from "@plasmicpkgs/react-aria/skinny/registerButton";
 import { BaseSelectValue } from "@plasmicpkgs/react-aria/skinny/registerSelect";
-import ItemDescriptionItem from "../../ItemDescriptionItem"; // plasmic-import: rX1Uufz8DxVo/component
 import ItemMenuPopoverItem from "../../ItemMenuPopoverItem"; // plasmic-import: 2AExRhKGqKWq/component
 import ItemMenuItem from "../../ItemMenuItem"; // plasmic-import: r-76N4JTe5lX/component
 import SectionMenuSection from "../../SectionMenuSection"; // plasmic-import: CdLvQ31o-kaa/component
@@ -33,7 +32,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css";
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicSelect.module.css"; // plasmic-import: zB29lZra8Oul/css
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: r4GsAl932zAm/icon
+import CaretDownIconSvgIcon from "./icons/PlasmicIcon__CaretDownIconSvg"; // plasmic-import: GSPM-Y7-E6dE/icon
 
 createPlasmicElementProxy;
 
@@ -46,7 +45,6 @@ export const PlasmicSelect__ArgProps = new Array(
   "disabled",
   "ariaLabel",
   "label",
-  "description",
   "items"
 );
 
@@ -225,25 +223,13 @@ function PlasmicSelect__RenderFunc(props) {
             </React.Fragment>
           </div>
         </BaseSelectValue>
-        <ChevronDownIcon
+        <CaretDownIconSvgIcon
           data-plasmic-name={"svg"}
           data-plasmic-override={overrides.svg}
           className={classNames(projectcss.all, sty.svg)}
           role={"img"}
         />
       </BaseButton>
-      {undefined ? (
-        <ItemDescriptionItem
-          data-plasmic-name={"itemDescriptionItem"}
-          data-plasmic-override={overrides.itemDescriptionItem}
-          className={classNames("__wab_instance", sty.itemDescriptionItem)}
-        >
-          {renderPlasmicSlot({
-            defaultContents: "Description...",
-            value: args.description
-          })}
-        </ItemDescriptionItem>
-      ) : null}
       <ItemMenuPopoverItem
         data-plasmic-name={"itemMenuPopoverItem"}
         data-plasmic-override={overrides.itemMenuPopoverItem}
@@ -294,7 +280,6 @@ function PlasmicSelect__RenderFunc(props) {
 
           value: args.items
         })}
-        offset={2}
       />
     </BaseSelect>
   );
@@ -308,7 +293,6 @@ const PlasmicDescendants = {
     "ariaSelectedValue",
     "text",
     "svg",
-    "itemDescriptionItem",
     "itemMenuPopoverItem"
   ],
 
@@ -317,7 +301,6 @@ const PlasmicDescendants = {
   ariaSelectedValue: ["ariaSelectedValue", "text"],
   text: ["text"],
   svg: ["svg"],
-  itemDescriptionItem: ["itemDescriptionItem"],
   itemMenuPopoverItem: ["itemMenuPopoverItem"]
 };
 
@@ -358,7 +341,6 @@ export const PlasmicSelect = Object.assign(
     ariaSelectedValue: makeNodeComponent("ariaSelectedValue"),
     text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),
-    itemDescriptionItem: makeNodeComponent("itemDescriptionItem"),
     itemMenuPopoverItem: makeNodeComponent("itemMenuPopoverItem"),
     // Metadata about props expected for PlasmicSelect
     internalVariantProps: PlasmicSelect__VariantProps,

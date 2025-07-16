@@ -21,9 +21,12 @@ import {
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
+import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -66,6 +69,7 @@ function PlasmicActiveMembership__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -81,9 +85,25 @@ function PlasmicActiveMembership__RenderFunc(props) {
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
-    $queries: {},
+    $queries: $queries,
     $refs
   });
+  const new$Queries = {
+    getContent: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "5be0d887-6398-485e-8fa5-1e4cfebbeec1",
+        userArgs: {},
+        cacheKey: `plasmic.$.5be0d887-6398-485e-8fa5-1e4cfebbeec1.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   return (
     <React.Fragment>
       <Head></Head>
@@ -134,9 +154,11 @@ function PlasmicActiveMembership__RenderFunc(props) {
             ])}
           />
 
-          <div
+          <Stack__
+            as={"div"}
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
+            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
             <Stack__
@@ -155,11 +177,73 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 title={"Active Membership"}
               />
 
+              <HtmlContentfulHtmlLoader
+                data-plasmic-name={"htmlContentfulHtmlLoader"}
+                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+                className={classNames(
+                  "__wab_instance",
+                  sty.htmlContentfulHtmlLoader
+                )}
+                title={"Active Membership"}
+              />
+
               <BlockTanCtaBlock
                 data-plasmic-name={"blockTanCtaBlock"}
                 data-plasmic-override={overrides.blockTanCtaBlock}
                 className={classNames("__wab_instance", sty.blockTanCtaBlock)}
               />
+
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.getContent.data.response.items;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <div
+                    data-plasmic-name={"freeBox"}
+                    data-plasmic-override={overrides.freeBox}
+                    className={classNames(projectcss.all, sty.freeBox)}
+                    key={currentIndex}
+                  >
+                    <SectionAccordionSectionTemplate
+                      data-plasmic-name={"sectionAccordionSectionTemplate"}
+                      data-plasmic-override={
+                        overrides.sectionAccordionSectionTemplate
+                      }
+                      bodyContent={`Body Content${currentItem.fields.bodyContent}`}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.sectionAccordionSectionTemplate
+                      )}
+                      title={(() => {
+                        try {
+                          return currentItem.fields.title;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                    />
+                  </div>
+                );
+              })}
             </Stack__>
             <div className={classNames(projectcss.all, sty.column___86Tcy)}>
               <ItemSectionTitleDescriptionItem
@@ -177,7 +261,7 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 className={classNames("__wab_instance", sty.blockQuoteBlock)}
               />
             </div>
-          </div>
+          </Stack__>
         </div>
       </div>
     </React.Fragment>
@@ -189,13 +273,27 @@ const PlasmicDescendants = {
     "root",
     "sectionHomeMenuSection",
     "columns",
+    "htmlContentfulHtmlLoader",
     "blockTanCtaBlock",
+    "freeBox",
+    "sectionAccordionSectionTemplate",
     "blockQuoteBlock"
   ],
 
   sectionHomeMenuSection: ["sectionHomeMenuSection"],
-  columns: ["columns", "blockTanCtaBlock", "blockQuoteBlock"],
+  columns: [
+    "columns",
+    "htmlContentfulHtmlLoader",
+    "blockTanCtaBlock",
+    "freeBox",
+    "sectionAccordionSectionTemplate",
+    "blockQuoteBlock"
+  ],
+
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockTanCtaBlock: ["blockTanCtaBlock"],
+  freeBox: ["freeBox", "sectionAccordionSectionTemplate"],
+  sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   blockQuoteBlock: ["blockQuoteBlock"]
 };
 
@@ -233,7 +331,12 @@ export const PlasmicActiveMembership = Object.assign(
     // Helper components rendering sub-elements
     sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     columns: makeNodeComponent("columns"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),
+    freeBox: makeNodeComponent("freeBox"),
+    sectionAccordionSectionTemplate: makeNodeComponent(
+      "sectionAccordionSectionTemplate"
+    ),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     // Metadata about props expected for PlasmicActiveMembership
     internalVariantProps: PlasmicActiveMembership__VariantProps,
