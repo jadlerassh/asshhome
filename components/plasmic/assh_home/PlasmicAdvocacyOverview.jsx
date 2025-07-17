@@ -14,13 +14,9 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
@@ -30,7 +26,6 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import SectionQuestion from "../../SectionQuestion"; // plasmic-import: 9B7ukqwaDf9R/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -72,24 +67,6 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "sectionHomeMenuSection.openDropdown",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
   return (
     <React.Fragment>
       <Head>
@@ -131,29 +108,6 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
@@ -266,12 +220,6 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
               sty.blockAsshMissionBlueBlock
             )}
           />
-
-          <SectionFooterSection
-            data-plasmic-name={"sectionFooterSection"}
-            data-plasmic-override={overrides.sectionFooterSection}
-            className={classNames("__wab_instance", sty.sectionFooterSection)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -281,7 +229,6 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionHomeMenuSection",
     "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "itemSectionTitleDescriptionItem",
@@ -291,11 +238,9 @@ const PlasmicDescendants = {
     "sectionMidPageCtaSection",
     "sectionQuicklinksTable",
     "sectionQuestion",
-    "blockAsshMissionBlueBlock",
-    "sectionFooterSection"
+    "blockAsshMissionBlueBlock"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   freeBox: [
     "freeBox",
@@ -312,8 +257,7 @@ const PlasmicDescendants = {
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionQuestion: ["sectionQuestion"],
-  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
-  sectionFooterSection: ["sectionFooterSection"]
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -348,7 +292,6 @@ export const PlasmicAdvocacyOverview = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
@@ -363,13 +306,12 @@ export const PlasmicAdvocacyOverview = Object.assign(
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     sectionQuestion: makeNodeComponent("sectionQuestion"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
-    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicAdvocacyOverview
     internalVariantProps: PlasmicAdvocacyOverview__VariantProps,
     internalArgProps: PlasmicAdvocacyOverview__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "Advocacy Overview",
+      title: "Advocacy",
       description: "",
       ogImageSrc: "",
       canonical: ""

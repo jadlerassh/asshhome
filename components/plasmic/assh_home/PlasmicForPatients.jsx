@@ -16,13 +16,9 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -33,7 +29,6 @@ import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDes
 import BlockPublicationHIghlight from "../../BlockPublicationHIghlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -76,24 +71,6 @@ function PlasmicForPatients__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "sectionHomeMenuSection.openDropdown",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsdjBtUr72ZExV()
   });
@@ -138,29 +115,6 @@ function PlasmicForPatients__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -347,12 +301,6 @@ function PlasmicForPatients__RenderFunc(props) {
               sty.blockAsshMissionBlueBlock
             )}
           />
-
-          <SectionFooterSection
-            data-plasmic-name={"sectionFooterSection"}
-            data-plasmic-override={overrides.sectionFooterSection}
-            className={classNames("__wab_instance", sty.sectionFooterSection)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -362,7 +310,6 @@ function PlasmicForPatients__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionHomeMenuSection",
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
@@ -375,11 +322,9 @@ const PlasmicDescendants = {
     "buttonPrimary",
     "blockPublicationHIghlight",
     "sectionAdPlaceholder",
-    "blockAsshMissionBlueBlock",
-    "sectionFooterSection"
+    "blockAsshMissionBlueBlock"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
@@ -392,8 +337,7 @@ const PlasmicDescendants = {
   buttonPrimary: ["buttonPrimary"],
   blockPublicationHIghlight: ["blockPublicationHIghlight"],
   sectionAdPlaceholder: ["sectionAdPlaceholder"],
-  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
-  sectionFooterSection: ["sectionFooterSection"]
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -428,7 +372,6 @@ export const PlasmicForPatients = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
@@ -446,7 +389,6 @@ export const PlasmicForPatients = Object.assign(
     blockPublicationHIghlight: makeNodeComponent("blockPublicationHIghlight"),
     sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
-    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicForPatients
     internalVariantProps: PlasmicForPatients__VariantProps,
     internalArgProps: PlasmicForPatients__ArgProps,

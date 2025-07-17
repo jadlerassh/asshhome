@@ -22,13 +22,11 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import SectionUpcomingEventsList from "../../SectionUpcomingEventsList"; // plasmic-import: AdcE_rcczjFf/component
 import ItemAsshSelectNew from "../../ItemAsshSelectNew"; // plasmic-import: n30EpbAc0Gwf/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -73,12 +71,6 @@ function PlasmicWebinars__RenderFunc(props) {
   let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
-      {
-        path: "sectionHomeMenuSection.openDropdown",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
-      },
       {
         path: "itemAsshSelectNew.selectedOptions",
         type: "private",
@@ -170,29 +162,6 @@ function PlasmicWebinars__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <Stack__
             as={"div"}
             data-plasmic-name={"columns"}
@@ -278,12 +247,6 @@ function PlasmicWebinars__RenderFunc(props) {
               sty.blockAsshMissionBlueBlock
             )}
           />
-
-          <SectionFooterSection
-            data-plasmic-name={"sectionFooterSection"}
-            data-plasmic-override={overrides.sectionFooterSection}
-            className={classNames("__wab_instance", sty.sectionFooterSection)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -293,22 +256,18 @@ function PlasmicWebinars__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionHomeMenuSection",
     "columns",
     "sectionUpcomingEventsList",
     "itemAsshSelectNew",
     "itemAd",
-    "blockAsshMissionBlueBlock",
-    "sectionFooterSection"
+    "blockAsshMissionBlueBlock"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
   columns: ["columns", "sectionUpcomingEventsList", "itemAsshSelectNew"],
   sectionUpcomingEventsList: ["sectionUpcomingEventsList"],
   itemAsshSelectNew: ["itemAsshSelectNew"],
   itemAd: ["itemAd"],
-  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
-  sectionFooterSection: ["sectionFooterSection"]
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -343,13 +302,11 @@ export const PlasmicWebinars = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     columns: makeNodeComponent("columns"),
     sectionUpcomingEventsList: makeNodeComponent("sectionUpcomingEventsList"),
     itemAsshSelectNew: makeNodeComponent("itemAsshSelectNew"),
     itemAd: makeNodeComponent("itemAd"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
-    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicWebinars
     internalVariantProps: PlasmicWebinars__VariantProps,
     internalArgProps: PlasmicWebinars__ArgProps,

@@ -46,6 +46,7 @@
   line-height: 28px;
   color: rgba(49, 51, 55, 1);
   position: relative;
+  width: auto;
 }
 .buttonPrimary:global(.__wab_instance) {
   max-width: 100%;

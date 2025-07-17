@@ -15,14 +15,10 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
@@ -70,24 +66,6 @@ function PlasmicActiveMembership__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "sectionHomeMenuSection.openDropdown",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: $queries,
-    $refs
-  });
   const new$Queries = {
     getContent: usePlasmicDataOp(() => {
       return {
@@ -131,29 +109,6 @@ function PlasmicActiveMembership__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <Stack__
             as={"div"}
             data-plasmic-name={"columns"}
@@ -271,7 +226,6 @@ function PlasmicActiveMembership__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionHomeMenuSection",
     "columns",
     "htmlContentfulHtmlLoader",
     "blockTanCtaBlock",
@@ -280,7 +234,6 @@ const PlasmicDescendants = {
     "blockQuoteBlock"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
   columns: [
     "columns",
     "htmlContentfulHtmlLoader",
@@ -329,7 +282,6 @@ export const PlasmicActiveMembership = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     columns: makeNodeComponent("columns"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),

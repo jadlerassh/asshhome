@@ -942,20 +942,6 @@
           "path": "/"
         },
         {
-          "id": "6RM9Yx7ew8l2",
-          "name": "AboutUs",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicAboutUs.jsx",
-          "importSpec": {
-            "modulePath": "../pages/about-us.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicAboutUs.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/about-us"
-        },
-        {
           "id": "bPHrZd60jASU",
           "name": "DropdownMenu",
           "type": "managed",
@@ -2428,6 +2414,20 @@
           "cssFilePath": "plasmic/assh_home/PlasmicSectionPastEventsList.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "cReG5KaMuqz_",
+          "name": "GrantsAwards",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicGrantsAwards.jsx",
+          "importSpec": {
+            "modulePath": "../pages/grants-awards.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicGrantsAwards.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/grants-awards"
         }
       ],
       "icons": [

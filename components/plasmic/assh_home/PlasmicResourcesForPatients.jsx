@@ -14,13 +14,9 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockLeftRightImageBlockWithTitleDescription from "../../BlockLeftRightImageBlockWithTitleDescription"; // plasmic-import: Fbqd2pDdEbk7/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -64,24 +60,6 @@ function PlasmicResourcesForPatients__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "sectionHomeMenuSection.openDropdown",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
   return (
     <React.Fragment>
       <Head></Head>
@@ -109,29 +87,6 @@ function PlasmicResourcesForPatients__RenderFunc(props) {
             sty.root
           )}
         >
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <ItemAd
             data-plasmic-name={"itemAd"}
             data-plasmic-override={overrides.itemAd}
@@ -155,14 +110,7 @@ function PlasmicResourcesForPatients__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "sectionHomeMenuSection",
-    "itemAd",
-    "blockLeftRightImageBlockWithTitleDescription"
-  ],
-
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
+  root: ["root", "itemAd", "blockLeftRightImageBlockWithTitleDescription"],
   itemAd: ["itemAd"],
   blockLeftRightImageBlockWithTitleDescription: [
     "blockLeftRightImageBlockWithTitleDescription"
@@ -201,7 +149,6 @@ export const PlasmicResourcesForPatients = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     itemAd: makeNodeComponent("itemAd"),
     blockLeftRightImageBlockWithTitleDescription: makeNodeComponent(
       "blockLeftRightImageBlockWithTitleDescription"

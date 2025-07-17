@@ -14,14 +14,10 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
@@ -31,7 +27,6 @@ import SectionFeaturedEducation from "../../SectionFeaturedEducation"; // plasmi
 import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
 import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -74,24 +69,6 @@ function PlasmicHomepage__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "sectionHomeMenuSection.openDropdown",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: $queries,
-    $refs
-  });
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
       return {
@@ -149,29 +126,6 @@ function PlasmicHomepage__RenderFunc(props) {
             sty.asshHome
           )}
         >
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <SectionHomeHeroBannerWithLinkItems
             data-plasmic-name={"sectionHomeHeroBannerWithLinkItems"}
             data-plasmic-override={overrides.sectionHomeHeroBannerWithLinkItems}
@@ -272,12 +226,6 @@ function PlasmicHomepage__RenderFunc(props) {
               sty.blockAsshMissionBlueBlock
             )}
           />
-
-          <SectionFooterSection
-            data-plasmic-name={"sectionFooterSection"}
-            data-plasmic-override={overrides.sectionFooterSection}
-            className={classNames("__wab_instance", sty.sectionFooterSection)}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -287,7 +235,6 @@ function PlasmicHomepage__RenderFunc(props) {
 const PlasmicDescendants = {
   asshHome: [
     "asshHome",
-    "sectionHomeMenuSection",
     "sectionHomeHeroBannerWithLinkItems",
     "cardListLatestAsshNewsCardList",
     "cardListLatestAsshNewsNoDescription",
@@ -295,11 +242,9 @@ const PlasmicDescendants = {
     "sectionFeaturedEducation",
     "sectionPublication",
     "sectionUpcomingCouresEventsSection",
-    "blockAsshMissionBlueBlock",
-    "sectionFooterSection"
+    "blockAsshMissionBlueBlock"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
   sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
   cardListLatestAsshNewsNoDescription: ["cardListLatestAsshNewsNoDescription"],
@@ -310,8 +255,7 @@ const PlasmicDescendants = {
   sectionFeaturedEducation: ["sectionFeaturedEducation"],
   sectionPublication: ["sectionPublication"],
   sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
-  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
-  sectionFooterSection: ["sectionFooterSection"]
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -346,7 +290,6 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("asshHome"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
       "sectionHomeHeroBannerWithLinkItems"
     ),
@@ -365,7 +308,6 @@ export const PlasmicHomepage = Object.assign(
       "sectionUpcomingCouresEventsSection"
     ),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
-    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
     internalArgProps: PlasmicHomepage__ArgProps,
