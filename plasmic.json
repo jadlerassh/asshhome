@@ -894,7 +894,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -2438,6 +2439,19 @@
             "modulePath": "SectionHomeMenuSectionGaTest.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGaTest.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "hkh0n1IPVLnY",
+          "name": "SectionHomeMenuSectionGatest22",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest22.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionGatest22.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest22.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

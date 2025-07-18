@@ -384,6 +384,7 @@
   height: auto;
   display: flex;
   flex-direction: row;
+  margin-top: calc(5px + 10px) !important;
   border-radius: 2px;
 }
 .regButtonSection > :global(.__wab_flex-container) {
