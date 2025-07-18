@@ -11,6 +11,7 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -94,9 +95,11 @@ function PlasmicCardListLatestAsshNewsNoDescription__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
+      <Stack__
+        as={"div"}
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
+        hasGap={true}
         className={classNames(projectcss.all, sty.columns)}
       >
         {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -163,7 +166,7 @@ function PlasmicCardListLatestAsshNewsNoDescription__RenderFunc(props) {
             </div>
           );
         })}
-      </div>
+      </Stack__>
     </div>
   );
 }

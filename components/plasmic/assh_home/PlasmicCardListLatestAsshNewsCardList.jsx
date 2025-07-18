@@ -79,11 +79,13 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
     $queries = new$Queries;
   }
   return (
-    <div
+    <Stack__
+      as={"div"}
       data-plasmic-name={"root"}
       data-plasmic-override={overrides.root}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
+      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -214,7 +216,7 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
         <div className={classNames(projectcss.all, sty.column__zROq3)} />
         <div className={classNames(projectcss.all, sty.column__dJyvr)} />
       </Stack__>
-    </div>
+    </Stack__>
   );
 }
 

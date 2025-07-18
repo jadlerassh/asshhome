@@ -104,7 +104,6 @@
   flex-shrink: 0;
   min-width: 0;
   --plsmc-rc-col-gap: 0px;
-  padding: 15px;
 }
 .row > :global(.__wab_flex-container) {
   flex-direction: row;
@@ -112,15 +111,15 @@
   justify-content: flex-start;
   flex-wrap: nowrap;
   min-width: 0;
-  margin-left: calc(0px - 0px);
-  width: calc(100% + 0px);
-  --plsmc-rc-col-gap: 0px;
+  margin-left: calc(0px - 30px);
+  width: calc(100% + 30px);
+  --plsmc-rc-col-gap: 30px;
 }
 .row > :global(.__wab_flex-container) > *,
 .row > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
 .row > :global(.__wab_flex-container) > picture > img,
 .row > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-left: 0px;
+  margin-left: 30px;
 }
 .row > :global(.__wab_flex-container) > :nth-child(2n + 1) {
   width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);

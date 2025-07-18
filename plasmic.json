@@ -894,8 +894,7 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -2428,6 +2427,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/grants-awards"
+        },
+        {
+          "id": "1mGH4yMUKlBw",
+          "name": "SectionHomeMenuSectionGaTest",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGaTest.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionGaTest.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGaTest.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

@@ -15,6 +15,7 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -28,7 +29,9 @@ import sty from "./PlasmicComponentMembershipQuicklinks.module.css"; // plasmic-
 
 createPlasmicElementProxy;
 
-export const PlasmicComponentMembershipQuicklinks__VariantProps = new Array();
+export const PlasmicComponentMembershipQuicklinks__VariantProps = new Array(
+  "unnamedVariant"
+);
 
 export const PlasmicComponentMembershipQuicklinks__ArgProps = new Array("name");
 
@@ -71,6 +74,12 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
         type: "private",
         variableType: "array",
         initFunc: ({ $props, $state, $queries, $ctx }) => []
+      },
+      {
+        path: "unnamedVariant",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.unnamedVariant
       }
     ],
 
@@ -132,7 +141,14 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text
+                sty.text,
+                {
+                  [sty.textunnamedVariant]: hasVariant(
+                    $state,
+                    "unnamedVariant",
+                    "unnamedVariant"
+                  )
+                }
               )}
             >
               <React.Fragment>
@@ -158,7 +174,15 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
                 data-plasmic-override={overrides.columns}
                 className={classNames(projectcss.all, sty.columns)}
               >
-                <div className={classNames(projectcss.all, sty.column__cotVi)}>
+                <div
+                  className={classNames(projectcss.all, sty.column__cotVi, {
+                    [sty.columnunnamedVariant__cotVi03UyK]: hasVariant(
+                      $state,
+                      "unnamedVariant",
+                      "unnamedVariant"
+                    )
+                  })}
+                >
                   <ButtonPrimary
                     className={classNames(
                       "__wab_instance",
@@ -169,11 +193,23 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
                     text={"Button Text"}
                   />
                 </div>
-                <div className={classNames(projectcss.all, sty.column__uzIZd)}>
+                <div
+                  className={classNames(projectcss.all, sty.column__uzIZd, {
+                    [sty.columnunnamedVariant__uzIZd03UyK]: hasVariant(
+                      $state,
+                      "unnamedVariant",
+                      "unnamedVariant"
+                    )
+                  })}
+                >
                   <ButtonPrimary
                     className={classNames(
                       "__wab_instance",
-                      sty.buttonPrimary__gzEZa
+                      sty.buttonPrimary__gzEZa,
+                      {
+                        [sty.buttonPrimaryunnamedVariant__gzEZa03UyK]:
+                          hasVariant($state, "unnamedVariant", "unnamedVariant")
+                      }
                     )}
                     memberQuicklinks={"quicklink"}
                   />
@@ -187,7 +223,15 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
                     memberQuicklinks={"quicklink"}
                   />
                 </div>
-                <div className={classNames(projectcss.all, sty.column__pYpiY)}>
+                <div
+                  className={classNames(projectcss.all, sty.column__pYpiY, {
+                    [sty.columnunnamedVariant__pYpiY03UyK]: hasVariant(
+                      $state,
+                      "unnamedVariant",
+                      "unnamedVariant"
+                    )
+                  })}
+                >
                   <ButtonPrimary
                     className={classNames(
                       "__wab_instance",
@@ -196,7 +240,15 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
                     memberQuicklinks={"quicklink"}
                   />
                 </div>
-                <div className={classNames(projectcss.all, sty.column__eZ5FD)}>
+                <div
+                  className={classNames(projectcss.all, sty.column__eZ5FD, {
+                    [sty.columnunnamedVariant__eZ5FD03UyK]: hasVariant(
+                      $state,
+                      "unnamedVariant",
+                      "unnamedVariant"
+                    )
+                  })}
+                >
                   <ButtonPrimary
                     className={classNames(
                       "__wab_instance",
@@ -205,11 +257,23 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
                     memberQuicklinks={"quicklink"}
                   />
                 </div>
-                <div className={classNames(projectcss.all, sty.column__uQqkP)}>
+                <div
+                  className={classNames(projectcss.all, sty.column__uQqkP, {
+                    [sty.columnunnamedVariant__uQqkP03UyK]: hasVariant(
+                      $state,
+                      "unnamedVariant",
+                      "unnamedVariant"
+                    )
+                  })}
+                >
                   <ButtonPrimary
                     className={classNames(
                       "__wab_instance",
-                      sty.buttonPrimary___3Rpq1
+                      sty.buttonPrimary___3Rpq1,
+                      {
+                        [sty.buttonPrimaryunnamedVariant___3Rpq103UyK]:
+                          hasVariant($state, "unnamedVariant", "unnamedVariant")
+                      }
                     )}
                     memberQuicklinks={"quicklink"}
                   />
