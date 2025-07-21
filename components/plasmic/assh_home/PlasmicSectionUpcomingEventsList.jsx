@@ -51,8 +51,7 @@ function PlasmicSectionUpcomingEventsList__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          category: "Webinar",
-          num: 3
+          num: 15
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -117,14 +116,19 @@ function PlasmicSectionUpcomingEventsList__RenderFunc(props) {
         roleId: null
       };
     }),
-    latestEvents: usePlasmicDataOp(() => {
+    upcomingEvents: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "0387f75c-621a-4bf9-97f2-86c5060c5d82",
+        opId: "b16467cc-1227-4723-a6c5-d3676863d405",
         userArgs: {
-          params: [$props.categoryNot, $props.num, $props.category]
+          params: [
+            $props.categoryNot,
+            $props.num,
+            $props.category,
+            new Date().toISOString()
+          ]
         },
-        cacheKey: `plasmic.$.0387f75c-621a-4bf9-97f2-86c5060c5d82.$.`,
+        cacheKey: `plasmic.$.b16467cc-1227-4723-a6c5-d3676863d405.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -166,7 +170,7 @@ function PlasmicSectionUpcomingEventsList__RenderFunc(props) {
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
             (() => {
               try {
-                return $queries.latestEvents.data.response.items;
+                return $queries.upcomingEvents.data.response.items;
               } catch (e) {
                 if (
                   e instanceof TypeError ||

@@ -43,7 +43,7 @@
   max-width: 100%;
   width: 100%;
   margin-top: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
@@ -74,7 +74,7 @@
 }
 .htmlContentfulHtmlLoader__adOak:global(.__wab_instance) {
   max-width: 100%;
-  margin: 0px 20px;
+  margin: 30px 0px 0px 20px;
 }
 .freeBox__ahHX {
   display: flex;

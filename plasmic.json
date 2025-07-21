@@ -894,8 +894,7 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -2443,15 +2442,29 @@
           "componentType": "component"
         },
         {
-          "id": "hkh0n1IPVLnY",
-          "name": "SectionHomeMenuSectionGatest22",
+          "id": "iXMIhIKquoqQ",
+          "name": "YoungLeadersProgram",
           "type": "managed",
           "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest22.jsx",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicYoungLeadersProgram.jsx",
           "importSpec": {
-            "modulePath": "SectionHomeMenuSectionGatest22.jsx"
+            "modulePath": "../pages/membership/young-leaders.jsx"
           },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest22.module.css",
+          "cssFilePath": "plasmic/assh_home/PlasmicYoungLeadersProgram.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/young-leaders"
+        },
+        {
+          "id": "OEXK8zWEzGew",
+          "name": "SectionHomeMenuSectionGatest2",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest2.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionGatest2.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

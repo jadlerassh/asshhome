@@ -277,9 +277,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                 sty.itemSectionTitleDescriptionItem__qKhPf
               )}
               descriptionSection={``}
-              title={
-                "How to Support Our Grants, Awards, and Scholarship Programs"
-              }
+              title={"How to Support Our Grants & Awards"}
             />
           </Stack__>
           <Stack__
