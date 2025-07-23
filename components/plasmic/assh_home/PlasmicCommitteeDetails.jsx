@@ -78,6 +78,12 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => "2"
+      },
+      {
+        path: "componentTabSet.activeTab",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
 
@@ -415,6 +421,19 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
                 data-plasmic-name={"componentTabSet"}
                 data-plasmic-override={overrides.componentTabSet}
                 className={classNames("__wab_instance", sty.componentTabSet)}
+                onActiveTabChange={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "componentTabSet",
+                    "activeTab"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
               />
             </div>
           </Stack__>

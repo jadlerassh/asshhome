@@ -2605,6 +2605,20 @@
           "cssFilePath": "plasmic/assh_home/PlasmicComponentTabSet.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "lgopSYIiJM2m",
+          "name": "About",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAbout.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAbout.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about"
         }
       ],
       "icons": [
