@@ -590,16 +590,6 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         roleId: null
       };
     }),
-    getMegaMenuNav: usePlasmicDataOp(() => {
-      return {
-        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "11e609d8-3288-4794-8af4-59c33cb35748",
-        userArgs: {},
-        cacheKey: `plasmic.$.11e609d8-3288-4794-8af4-59c33cb35748.$.`,
-        invalidatedKeys: null,
-        roleId: null
-      };
-    }),
     getUserMenu: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",

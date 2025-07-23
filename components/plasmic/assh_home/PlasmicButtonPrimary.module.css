@@ -209,8 +209,8 @@
   color: rgba(255, 255, 255, 1);
   position: relative;
   width: auto;
-  flex-grow: 1;
-  flex-shrink: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 .text2darkInteractions_dark {
   color: var(--token-py5R6wetCsNw);

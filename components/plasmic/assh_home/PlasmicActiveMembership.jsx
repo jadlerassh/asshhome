@@ -177,7 +177,19 @@ function PlasmicActiveMembership__RenderFunc(props) {
                       data-plasmic-override={
                         overrides.sectionAccordionSectionTemplate
                       }
-                      bodyContent={`Body Content${currentItem.fields.bodyContent}`}
+                      bodyContent={(() => {
+                        try {
+                          return currentItem.fields.bodyContent;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
                       className={classNames(
                         "__wab_instance",
                         sty.sectionAccordionSectionTemplate

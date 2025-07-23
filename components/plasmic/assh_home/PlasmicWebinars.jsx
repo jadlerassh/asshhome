@@ -183,7 +183,7 @@ function PlasmicWebinars__RenderFunc(props) {
                 data-plasmic-name={"sectionUpcomingEventsList"}
                 data-plasmic-override={overrides.sectionUpcomingEventsList}
                 category={"Webinar"}
-                categoryNot={'""'}
+                categoryNot={"''"}
                 className={classNames(
                   "__wab_instance",
                   sty.sectionUpcomingEventsList

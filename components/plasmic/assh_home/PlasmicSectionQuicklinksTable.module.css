@@ -24,6 +24,12 @@
     flex-direction: column;
   }
 }
+@media (max-width: 1024px) {
+  .quickLinks {
+    width: 100%;
+    min-width: 0;
+  }
+}
 .quickLinksContainer2 {
   display: flex;
   flex-direction: column;
@@ -113,6 +119,16 @@
   max-width: 100%;
   min-width: 0;
   padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__g3XRs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 414px) {
+  .freeBox__g3XRs {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 .freeBoxcolumns__3Column__g3XRse7MI {
   grid-template-columns: repeat(3, minmax(0, 1fr));

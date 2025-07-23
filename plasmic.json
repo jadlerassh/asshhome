@@ -894,7 +894,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -2442,7 +2443,20 @@
           "componentType": "component"
         },
         {
-          "id": "iXMIhIKquoqQ",
+          "id": "PkPz97V9sC49",
+          "name": "SectionHomeMenuSectionGa2",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGa2.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionGa2.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGa2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "32FVDxclaZh-",
           "name": "YoungLeadersProgram",
           "type": "managed",
           "projectId": "34tvEQuyqfK98iGCjMbawB",
@@ -2456,15 +2470,139 @@
           "path": "/membership/young-leaders"
         },
         {
-          "id": "OEXK8zWEzGew",
-          "name": "SectionHomeMenuSectionGatest2",
+          "id": "2-UXMuSxPrvx",
+          "name": "TemplateInternalPage",
           "type": "managed",
           "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest2.jsx",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTemplateInternalPage.jsx",
           "importSpec": {
-            "modulePath": "SectionHomeMenuSectionGatest2.jsx"
+            "modulePath": "../pages/template-internal.jsx"
           },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionGatest2.module.css",
+          "cssFilePath": "plasmic/assh_home/PlasmicTemplateInternalPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/template-internal"
+        },
+        {
+          "id": "MgLIRMM0fnXn",
+          "name": "TemplateInternalPageWithAccordion",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion.jsx",
+          "importSpec": {
+            "modulePath": "../pages/template-internal-accordion.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/template-internal-accordion"
+        },
+        {
+          "id": "cfKosQT03FI3",
+          "name": "MissionValuesVision",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicMissionValuesVision.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/mission.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicMissionValuesVision.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/mission"
+        },
+        {
+          "id": "3lBQEPJ9EcfO",
+          "name": "Policies",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPolicies.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/policies.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPolicies.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/policies"
+        },
+        {
+          "id": "WKlDBvmW7DJS",
+          "name": "ItemPersonCard",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemPersonCard.jsx",
+          "importSpec": {
+            "modulePath": "ItemPersonCard.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemPersonCard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "iDBweRM0TfMc",
+          "name": "Committees",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommittees.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/committees.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCommittees.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/committees"
+        },
+        {
+          "id": "_YaPVT-9kvvZ",
+          "name": "ComponentVerticalPageList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentVerticalPageList.jsx",
+          "importSpec": {
+            "modulePath": "ComponentVerticalPageList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentVerticalPageList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "IQYqp__6SC3M",
+          "name": "CommitteesListing",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteesListing.jsx",
+          "importSpec": {
+            "modulePath": "../pages/committees/committees-listing.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCommitteesListing.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/committees/committees-listing"
+        },
+        {
+          "id": "EKz9QG4RGt_-",
+          "name": "CommitteeDetails",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetails.jsx",
+          "importSpec": {
+            "modulePath": "../pages/committees/committees-details.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetails.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/committees/committees-details"
+        },
+        {
+          "id": "jXQ3iNzBSIE_",
+          "name": "ComponentTabSet",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentTabSet.jsx",
+          "importSpec": {
+            "modulePath": "ComponentTabSet.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentTabSet.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -3341,6 +3479,11 @@
           "id": "3fEzWai8ghWj",
           "name": "Arrow.png",
           "filePath": "../public/plasmic/assh_home/images/arrowPng.png"
+        },
+        {
+          "id": "eduqR-yhhU_I",
+          "name": "Image 10",
+          "filePath": "../public/plasmic/assh_home/images/image10.png"
         }
       ],
       "indirect": false,

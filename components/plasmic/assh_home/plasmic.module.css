@@ -165,6 +165,8 @@
   --plasmic-token-assh-triary-bg: var(--token-XTtGF6uDHM3z);
   --token-j3urVBXa9jtJ: var(--token-YOr-x91EUcQe);
   --plasmic-token-assh-link: var(--token-j3urVBXa9jtJ);
+  --token-qlu48Znff4s0: #eff2f5;
+  --plasmic-token-assh-grey-background-light: var(--token-qlu48Znff4s0);
 }
 
 .plasmic_tokens {

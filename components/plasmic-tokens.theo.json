@@ -41,6 +41,16 @@
       }
     },
     {
+      "name": "ASSH/Grey Background Light",
+      "type": "color",
+      "value": "#EFF2F5",
+      "category": "color",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "qlu48Znff4s0"
+      }
+    },
+    {
       "name": "ASSH/Grey Bar",
       "type": "color",
       "value": "#D6DBE0",
