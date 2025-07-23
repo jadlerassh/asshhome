@@ -25,6 +25,7 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css";
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicItemMegaMenuSubitem.module.css"; // plasmic-import: JNcUMWnpd-Gl/css
+import Container5Icon from "./icons/PlasmicIcon__Container5"; // plasmic-import: GWToR6ifk0cK/icon
 
 createPlasmicElementProxy;
 
@@ -32,7 +33,11 @@ export const PlasmicItemMegaMenuSubitem__VariantProps = new Array(
   "unnamedGroupOfVariants"
 );
 
-export const PlasmicItemMegaMenuSubitem__ArgProps = new Array("label", "url");
+export const PlasmicItemMegaMenuSubitem__ArgProps = new Array(
+  "label",
+  "url",
+  "showExternalIcon"
+);
 
 const $$ = {};
 
@@ -50,7 +55,8 @@ function PlasmicItemMegaMenuSubitem__RenderFunc(props) {
       Object.assign(
         {
           label: "Label Text",
-          url: "https://www.assh.org"
+          url: "https://www.assh.org",
+          showExternalIcon: false
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -130,50 +136,75 @@ function PlasmicItemMegaMenuSubitem__RenderFunc(props) {
       })()}
       platform={"nextjs"}
     >
-      <div
-        data-plasmic-name={"navigationItem2"}
-        data-plasmic-override={overrides.navigationItem2}
-        className={classNames(
-          projectcss.all,
-          projectcss.__wab_text,
-          sty.navigationItem2,
-          {
-            [sty.navigationItem2unnamedGroupOfVariants_footer]: hasVariant(
-              $state,
-              "unnamedGroupOfVariants",
-              "footer"
-            ),
-            [sty.navigationItem2unnamedGroupOfVariants_hover]: hasVariant(
-              $state,
-              "unnamedGroupOfVariants",
-              "hover"
-            )
-          }
-        )}
-      >
-        <React.Fragment>
-          {(() => {
-            try {
-              return $props.label;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return "Education Overview";
-              }
-              throw e;
+      <div className={classNames(projectcss.all, sty.freeBox___3LWzw)}>
+        <div
+          data-plasmic-name={"navigationItem2"}
+          data-plasmic-override={overrides.navigationItem2}
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.navigationItem2,
+            {
+              [sty.navigationItem2unnamedGroupOfVariants_footer]: hasVariant(
+                $state,
+                "unnamedGroupOfVariants",
+                "footer"
+              ),
+              [sty.navigationItem2unnamedGroupOfVariants_hover]: hasVariant(
+                $state,
+                "unnamedGroupOfVariants",
+                "hover"
+              )
             }
-          })()}
-        </React.Fragment>
+          )}
+        >
+          <React.Fragment>
+            {(() => {
+              try {
+                return $props.label;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "Education Overview";
+                }
+                throw e;
+              }
+            })()}
+          </React.Fragment>
+        </div>
+        {(() => {
+          try {
+            return $props.showExternalIcon;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return true;
+            }
+            throw e;
+          }
+        })() ? (
+          <div className={classNames(projectcss.all, sty.freeBox__dnVbD)}>
+            <Container5Icon
+              data-plasmic-name={"svg"}
+              data-plasmic-override={overrides.svg}
+              className={classNames(projectcss.all, sty.svg)}
+              role={"img"}
+            />
+          </div>
+        ) : null}
       </div>
     </PlasmicLink__>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navigationItem2"],
-  navigationItem2: ["navigationItem2"]
+  root: ["root", "navigationItem2", "svg"],
+  navigationItem2: ["navigationItem2"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -209,6 +240,7 @@ export const PlasmicItemMegaMenuSubitem = Object.assign(
   {
     // Helper components rendering sub-elements
     navigationItem2: makeNodeComponent("navigationItem2"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicItemMegaMenuSubitem
     internalVariantProps: PlasmicItemMegaMenuSubitem__VariantProps,
     internalArgProps: PlasmicItemMegaMenuSubitem__ArgProps

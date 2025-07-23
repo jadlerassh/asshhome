@@ -1317,19 +1317,6 @@
           "componentType": "component"
         },
         {
-          "id": "dp8ix0xSB-By",
-          "name": "MenuMegaMenuV1",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuV1.jsx",
-          "importSpec": {
-            "modulePath": "MenuMegaMenuV1.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuV1.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "oHFVXGjvCU8W",
           "name": "ItemLabelItem",
           "type": "managed",
@@ -1447,19 +1434,6 @@
           "componentType": "component"
         },
         {
-          "id": "mv8TRZhS1g6m",
-          "name": "MenuMegaMenuV2",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuV2.jsx",
-          "importSpec": {
-            "modulePath": "MenuMegaMenuV2.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuV2.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "MET00VyMH6Cv",
           "name": "ItemMenuLinkItem",
           "type": "managed",
@@ -1538,19 +1512,6 @@
           "componentType": "component"
         },
         {
-          "id": "JkFIcWlNPkDe",
-          "name": "MenuMegaMenuV3",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuV3.jsx",
-          "importSpec": {
-            "modulePath": "MenuMegaMenuV3.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuV3.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "zbpbv6MhDowI",
           "name": "ItemMenuCurrentUser",
           "type": "managed",
@@ -1573,19 +1534,6 @@
             "modulePath": "ButtonPrimary.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicButtonPrimary.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "kBvjOsoSkGDp",
-          "name": "MenuMegaMenuJakeTest",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuJakeTest.jsx",
-          "importSpec": {
-            "modulePath": "MenuMegaMenuJakeTest.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicMenuMegaMenuJakeTest.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         },
@@ -2619,6 +2567,76 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/about"
+        },
+        {
+          "id": "ZSRevdKF-Ctv",
+          "name": "Affiliate",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAffiliate.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/affiliate.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAffiliate.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/affiliate"
+        },
+        {
+          "id": "B6tIB3aZ7bHN",
+          "name": "Bylaws",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBylaws.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/bylaws.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBylaws.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/bylaws"
+        },
+        {
+          "id": "tXDIVywaBv1e",
+          "name": "PrivacyPolicy",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPrivacyPolicy.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/privacy-policy.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPrivacyPolicy.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/privacy-policy"
+        },
+        {
+          "id": "Px6f9sCMm9cF",
+          "name": "NpiDataCollection",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicNpiDataCollection.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/npi-data-collection.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicNpiDataCollection.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/npi-data-collection"
+        },
+        {
+          "id": "6TOwshJOQ5_r",
+          "name": "Sustainability",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSustainability.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/sustainability.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSustainability.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/sustainability"
         }
       ],
       "icons": [

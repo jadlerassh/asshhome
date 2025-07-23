@@ -16,6 +16,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -1312,6 +1313,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {
@@ -1540,6 +1563,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {
@@ -1774,6 +1819,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {
@@ -2002,6 +2069,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {
@@ -2230,6 +2319,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {
@@ -2464,6 +2575,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {
@@ -2691,6 +2824,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                   throw e;
                                 }
                               })()}
+                              showExternalIcon={
+                                hasVariant(
+                                  globalVariants,
+                                  "screen",
+                                  "smallDesktop"
+                                )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  : undefined
+                              }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
                                 try {

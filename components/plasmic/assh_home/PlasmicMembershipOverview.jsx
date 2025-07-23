@@ -16,8 +16,10 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
   generateStateOnChangeProp,
   generateStateValueProp,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -34,6 +36,7 @@ import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-impo
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -110,6 +113,9 @@ function PlasmicMembershipOverview__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <React.Fragment>
       <Head>
@@ -233,9 +239,19 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                 sty.itemSectionTitleDescriptionItem__v748H
               )}
               descriptionSection={
-                "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
+                hasVariant(globalVariants, "screen", "largeDesktop")
+                  ? "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
+                  : "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
               }
               title={"Who Can Join?"}
+            />
+
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader___9NkJ
+              )}
+              title={"Membership Overview - Who Can Join"}
             />
 
             <ButtonPrimary
@@ -306,7 +322,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__lvbBe
                   )}
                   description={
-                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                    "Surgeons\u00a0within 5\u00a0years of completing\u00a0a post-graduate program in disorders of the upper limbs."
                   }
                   heading={"Membership Type"}
                   linkUrl={"https://www.assh.org/membership/active-member"}
@@ -320,7 +336,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__kggH2
                   )}
                   description={
-                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                    "Fully licensed allied healthcare professionals (i.e., hand therapist, OT, PT, PA, NP or RN)."
                   }
                   heading={"Membership Type"}
                   linkUrl={"https://www.assh.org/membership/active-member"}
@@ -334,7 +350,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__fNk6O
                   )}
                   description={
-                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
+                    "Non-surgeons who have contributed to the understanding and/or treatment of disorders of the upper limbs."
                   }
                   heading={"Membership Type"}
                   linkUrl={"https://www.assh.org/membership/active-member"}

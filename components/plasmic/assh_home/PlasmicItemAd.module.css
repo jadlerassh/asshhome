@@ -23,7 +23,7 @@
 }
 .ad {
   background: url("/plasmic/assh_home/images/ad2.png") center center / cover no-repeat;
-  width: 728px;
+  width: 50%;
   height: 90px;
   display: block;
   flex-shrink: 0;

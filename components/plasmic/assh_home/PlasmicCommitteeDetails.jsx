@@ -26,9 +26,9 @@ import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ComponentVerticalPageList from "../../ComponentVerticalPageList"; // plasmic-import: _YaPVT-9kvvZ/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import { AntdTabs } from "@plasmicpkgs/antd5/skinny/registerTabs";
-import { AntdTabItem } from "@plasmicpkgs/antd5/skinny/registerTabs";
 import ComponentTabSet from "../../ComponentTabSet"; // plasmic-import: jXQ3iNzBSIE_/component
+import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -39,7 +39,7 @@ createPlasmicElementProxy;
 
 export const PlasmicCommitteeDetails__VariantProps = new Array();
 
-export const PlasmicCommitteeDetails__ArgProps = new Array();
+export const PlasmicCommitteeDetails__ArgProps = new Array("selectedItem");
 
 const $$ = {};
 
@@ -74,16 +74,45 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "tabs.activeKey",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2"
-      },
-      {
         path: "componentTabSet.activeTab",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "selectedItemPage",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                const decode = str =>
+                  str
+                    .replace(/%20/g, " ")
+                    .replace(/%2C/g, ",")
+                    .replace(/%26/g, "&")
+                    .replace(/%3A/g, ":")
+                    .replace(/%2F/g, "/");
+                const raw = $ctx.query.name || "";
+                return decode(raw);
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "componentVerticalPageList.activeNav",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ``
       }
     ],
 
@@ -101,35 +130,9 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
         opId: "7a7810bf-0623-46e4-86ef-0da1afa44954",
         userArgs: {
-          params: [$ctx.query.name]
+          params: [$state.selectedItemPage]
         },
         cacheKey: `plasmic.$.7a7810bf-0623-46e4-86ef-0da1afa44954.$.`,
-        invalidatedKeys: null,
-        roleId: null
-      };
-    }),
-    getTabResponsibilities: usePlasmicDataOp(() => {
-      return {
-        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "b0033ac1-01a7-4e22-bcc4-013cd1f12f7a",
-        userArgs: {
-          params: ["HTML: " + $ctx.query.name + " - Tab - Responsibilities"]
-        },
-        cacheKey: `plasmic.$.b0033ac1-01a7-4e22-bcc4-013cd1f12f7a.$.`,
-        invalidatedKeys: null,
-        roleId: null
-      };
-    }),
-    getTabComposition: usePlasmicDataOp(() => {
-      return {
-        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "b0033ac1-01a7-4e22-bcc4-013cd1f12f7a",
-        userArgs: {
-          params: [
-            "HTML: " + $ctx.query.name + " - Tab - Composition and Reporting"
-          ]
-        },
-        cacheKey: `plasmic.$.b0033ac1-01a7-4e22-bcc4-013cd1f12f7a.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -207,224 +210,18 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
               <ComponentVerticalPageList
                 data-plasmic-name={"componentVerticalPageList"}
                 data-plasmic-override={overrides.componentVerticalPageList}
+                activeNav={generateStateValueProp($state, [
+                  "componentVerticalPageList",
+                  "activeNav"
+                ])}
                 className={classNames(
                   "__wab_instance",
                   sty.componentVerticalPageList
                 )}
-                selectedItem={(() => {
-                  try {
-                    return $ctx.query.name;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
-                  }
-                })()}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__msRo8)}>
-              <Embed
-                className={classNames("__wab_instance", sty.embedHtml___70Sau)}
-                code={(() => {
-                  try {
-                    return $queries.getHtml.data.response.items[0].fields
-                      .bodyContent;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "";
-                    }
-                    throw e;
-                  }
-                })()}
-              />
-
-              <AntdTabs
-                data-plasmic-name={"tabs"}
-                data-plasmic-override={overrides.tabs}
-                activeKey={generateStateValueProp($state, [
-                  "tabs",
-                  "activeKey"
-                ])}
-                animateTabBar={true}
-                animateTabContent={false}
-                animated={true}
-                centered={false}
-                className={classNames("__wab_instance", sty.tabs)}
-                defaultActiveKey={"2"}
-                destroyInactiveTabPane={false}
-                items={
-                  <React.Fragment>
-                    <AntdTabItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.tabItem__b8FyX
-                      )}
-                      key={"1"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__duTWo
-                          )}
-                        >
-                          {"Responsibilities"}
-                        </div>
-                      }
-                    >
-                      <Embed
-                        className={classNames(
-                          "__wab_instance",
-                          sty.embedHtml__m85Jt
-                        )}
-                        code={(() => {
-                          try {
-                            return $queries.getTabResponsibilities.data.response
-                              .items[0].fields.bodyContent;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      />
-                    </AntdTabItem>
-                    <AntdTabItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.tabItem___8Pwkz
-                      )}
-                      key={"2"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__v7Qm
-                          )}
-                        >
-                          {"Composition & Reporting"}
-                        </div>
-                      }
-                    >
-                      <Embed
-                        className={classNames(
-                          "__wab_instance",
-                          sty.embedHtml__yexc5
-                        )}
-                        code={(() => {
-                          try {
-                            return $queries.getTabComposition.data.response
-                              .items[0].fields.bodyContent;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      />
-                    </AntdTabItem>
-                    <AntdTabItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.tabItem__hg8Hv
-                      )}
-                      key={"3"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___1TZzZ
-                          )}
-                        >
-                          {"Subcommittees"}
-                        </div>
-                      }
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___0KaF3
-                        )}
-                      >
-                        {"Tab Children 3"}
-                      </div>
-                    </AntdTabItem>
-                    <AntdTabItem
-                      className={classNames(
-                        "__wab_instance",
-                        sty.tabItem__zwLYt
-                      )}
-                      key={"4"}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__vb3Wh
-                          )}
-                        >
-                          {"Schedule"}
-                        </div>
-                      }
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__v0Sgl
-                        )}
-                      >
-                        {"Tab Children 4"}
-                      </div>
-                    </AntdTabItem>
-                  </React.Fragment>
-                }
-                onChange={async (...eventArgs) => {
+                onActiveNavChange2={async (...eventArgs) => {
                   generateStateOnChangeProp($state, [
-                    "tabs",
-                    "activeKey"
-                  ]).apply(null, eventArgs);
-                }}
-                size={"small"}
-                sticky={false}
-                tabBarBackground={"#FFF"}
-                tabBarClassName={classNames({
-                  [sty["pcls_hTS1tLRTbzMs"]]: true
-                })}
-                tabsDropdownClassName={classNames({
-                  [sty["pcls_MTrAqKksTe8q"]]: true
-                })}
-                tabsDropdownScopeClassName={sty["tabs__tabsDropdown"]}
-                tabsScopeClassName={sty["tabs__tabs"]}
-                type={"line"}
-              />
-
-              <ComponentTabSet
-                data-plasmic-name={"componentTabSet"}
-                data-plasmic-override={overrides.componentTabSet}
-                className={classNames("__wab_instance", sty.componentTabSet)}
-                onActiveTabChange={async (...eventArgs) => {
-                  generateStateOnChangeProp($state, [
-                    "componentTabSet",
-                    "activeTab"
+                    "componentVerticalPageList",
+                    "activeNav"
                   ]).apply(null, eventArgs);
                   if (
                     eventArgs.length > 1 &&
@@ -436,7 +233,143 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
                 }}
               />
             </div>
+            {(() => {
+              try {
+                return true;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <div className={classNames(projectcss.all, sty.column__msRo8)}>
+                {(() => {
+                  try {
+                    return $ctx.query.name !== "";
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })() ? (
+                  <Embed
+                    data-plasmic-name={"embedHtml"}
+                    data-plasmic-override={overrides.embedHtml}
+                    className={classNames("__wab_instance", sty.embedHtml)}
+                    code={(() => {
+                      try {
+                        return $queries.getHtml.data.response.items[0].fields
+                          .bodyContent;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                ) : null}
+                {(() => {
+                  try {
+                    return $ctx.query.name !== "";
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })() ? (
+                  <ComponentTabSet
+                    data-plasmic-name={"componentTabSet"}
+                    data-plasmic-override={overrides.componentTabSet}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.componentTabSet
+                    )}
+                    navName={(() => {
+                      try {
+                        return $state.selectedItemPage;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    onActiveTabChange={async (...eventArgs) => {
+                      generateStateOnChangeProp($state, [
+                        "componentTabSet",
+                        "activeTab"
+                      ]).apply(null, eventArgs);
+                      if (
+                        eventArgs.length > 1 &&
+                        eventArgs[1] &&
+                        eventArgs[1]._plasmic_state_init_
+                      ) {
+                        return;
+                      }
+                    }}
+                  />
+                ) : null}
+                {(() => {
+                  try {
+                    return $ctx.query.name === "";
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })() ? (
+                  <div
+                    data-plasmic-name={"text"}
+                    data-plasmic-override={overrides.text}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text
+                    )}
+                  >
+                    {"Please select a committee."}
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
           </Stack__>
+          <BlockAsshMissionBlueBlock
+            data-plasmic-name={"blockAsshMissionBlueBlock"}
+            data-plasmic-override={overrides.blockAsshMissionBlueBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockAsshMissionBlueBlock
+            )}
+          />
+
+          <SectionFooterSection
+            data-plasmic-name={"sectionFooterSection"}
+            data-plasmic-override={overrides.sectionFooterSection}
+            className={classNames("__wab_instance", sty.sectionFooterSection)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -450,16 +383,29 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "columns",
     "componentVerticalPageList",
-    "tabs",
-    "componentTabSet"
+    "embedHtml",
+    "componentTabSet",
+    "text",
+    "blockAsshMissionBlueBlock",
+    "sectionFooterSection"
   ],
 
   itemAd: ["itemAd"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  columns: ["columns", "componentVerticalPageList", "tabs", "componentTabSet"],
+  columns: [
+    "columns",
+    "componentVerticalPageList",
+    "embedHtml",
+    "componentTabSet",
+    "text"
+  ],
+
   componentVerticalPageList: ["componentVerticalPageList"],
-  tabs: ["tabs"],
-  componentTabSet: ["componentTabSet"]
+  embedHtml: ["embedHtml"],
+  componentTabSet: ["componentTabSet"],
+  text: ["text"],
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
+  sectionFooterSection: ["sectionFooterSection"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -500,8 +446,11 @@ export const PlasmicCommitteeDetails = Object.assign(
     ),
     columns: makeNodeComponent("columns"),
     componentVerticalPageList: makeNodeComponent("componentVerticalPageList"),
-    tabs: makeNodeComponent("tabs"),
+    embedHtml: makeNodeComponent("embedHtml"),
     componentTabSet: makeNodeComponent("componentTabSet"),
+    text: makeNodeComponent("text"),
+    blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
+    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicCommitteeDetails
     internalVariantProps: PlasmicCommitteeDetails__VariantProps,
     internalArgProps: PlasmicCommitteeDetails__ArgProps,

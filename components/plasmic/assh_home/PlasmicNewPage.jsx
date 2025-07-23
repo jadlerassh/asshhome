@@ -14,22 +14,10 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
-import {
-  DataCtxReader as DataCtxReader__,
-  useDataEnv
-} from "@plasmicapp/react-web/lib/host";
+import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import MenuMegaMenuV2 from "../../MenuMegaMenuV2"; // plasmic-import: mv8TRZhS1g6m/component
-import { TabsContainer } from "@plasmicpkgs/plasmic-tabs";
-import { TabButton } from "@plasmicpkgs/plasmic-tabs";
-import Button from "../../Button"; // plasmic-import: lBHNzts6tFyj/component
-import { TabUnderline } from "@plasmicpkgs/plasmic-tabs";
-import { TabContent } from "@plasmicpkgs/plasmic-tabs";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -72,24 +60,6 @@ function PlasmicNewPage__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "asshMenuV2.exploreOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: $queries,
-    $refs
-  });
   const new$Queries = {
     getPage: usePlasmicDataOp(() => {
       return {
@@ -146,159 +116,14 @@ function PlasmicNewPage__RenderFunc(props) {
             plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
-        >
-          <MenuMegaMenuV2
-            data-plasmic-name={"asshMenuV2"}
-            data-plasmic-override={overrides.asshMenuV2}
-            className={classNames("__wab_instance", sty.asshMenuV2)}
-            exploreOpen={generateStateValueProp($state, [
-              "asshMenuV2",
-              "exploreOpen"
-            ])}
-            onExploreOpenChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "asshMenuV2",
-                "exploreOpen"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-          />
-
-          <div className={classNames(projectcss.all, sty.freeBox___0DRsy)}>
-            <TabsContainer
-              data-plasmic-name={"tabsContainer"}
-              data-plasmic-override={overrides.tabsContainer}
-              initialKey={"tab1"}
-            >
-              <DataCtxReader__>
-                {$ctx => (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__mZ72)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__vFcPu)}
-                    >
-                      <TabButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.tabButton__miKew
-                        )}
-                        tabKey={"tab1"}
-                      >
-                        <Button>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__pN8Zu
-                            )}
-                          >
-                            {"Tab 1"}
-                          </div>
-                        </Button>
-                      </TabButton>
-                      <TabButton
-                        className={classNames(
-                          "__wab_instance",
-                          sty.tabButton__gwvZx
-                        )}
-                        tabKey={"tab2"}
-                      >
-                        <Button>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__nWm1W
-                            )}
-                          >
-                            {"Tab 2"}
-                          </div>
-                        </Button>
-                      </TabButton>
-                      <TabUnderline
-                        data-plasmic-name={"tabUnderline"}
-                        data-plasmic-override={overrides.tabUnderline}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.tabUnderline
-                        )}
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__wgVrj)}
-                    >
-                      <TabContent
-                        className={classNames(
-                          "__wab_instance",
-                          sty.tabContent__dWMtS
-                        )}
-                        tabKey={"tab1"}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__lcPxC
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__eIjjk
-                            )}
-                          >
-                            {"Some content for tab 1"}
-                          </div>
-                        </div>
-                      </TabContent>
-                      <TabContent
-                        className={classNames(
-                          "__wab_instance",
-                          sty.tabContent___49Gp
-                        )}
-                        tabKey={"tab2"}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___782Ch
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__gjLFq
-                            )}
-                          >
-                            {"Some content for tab 2"}
-                          </div>
-                        </div>
-                      </TabContent>
-                    </div>
-                  </div>
-                )}
-              </DataCtxReader__>
-            </TabsContainer>
-          </div>
-        </div>
+        />
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  root: ["root", "asshMenuV2", "tabsContainer", "tabUnderline"],
-  asshMenuV2: ["asshMenuV2"],
-  tabsContainer: ["tabsContainer", "tabUnderline"],
-  tabUnderline: ["tabUnderline"]
+  root: ["root"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -333,9 +158,6 @@ export const PlasmicNewPage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    asshMenuV2: makeNodeComponent("asshMenuV2"),
-    tabsContainer: makeNodeComponent("tabsContainer"),
-    tabUnderline: makeNodeComponent("tabUnderline"),
     // Metadata about props expected for PlasmicNewPage
     internalVariantProps: PlasmicNewPage__VariantProps,
     internalArgProps: PlasmicNewPage__ArgProps,

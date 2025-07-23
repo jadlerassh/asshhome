@@ -89,6 +89,9 @@
     min-width: 0;
   }
 }
+.htmlContentfulHtmlLoader:global(.__wab_instance) {
+  max-width: 100%;
+}
 .frame4 {
   width: 100%;
   height: auto;

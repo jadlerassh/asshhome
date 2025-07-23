@@ -80,22 +80,28 @@ function PlasmicComponentTabSet__RenderFunc(props) {
           (() => {
             try {
               return (() => {
+                const response = $queries.getNav.data.response;
                 const entryMap = Object.fromEntries(
-                  $queries.getNav.data.response.includes.Entry.map(entry => [
-                    entry.sys.id,
-                    entry
-                  ])
+                  response.includes.Entry.map(entry => [entry.sys.id, entry])
                 );
-                return $queries.getNav.data.response.items[0].fields.childLinks
+                return response.items[0].fields.childLinks
                   .map(link => {
                     const entry = entryMap[link.sys.id];
+                    // Get htmlContent.sys.id from this entry
+                    const htmlContentId = entry?.fields?.htmlContent?.sys?.id;
+                    // Lookup the referenced htmlContent entry
+                    const htmlEntry = htmlContentId
+                      ? entryMap[htmlContentId]
+                      : null;
+                    const bodyContent = htmlEntry?.fields?.bodyContent || null;
                     return {
                       id: link.sys.id,
                       label: entry?.fields.label || "Label missing",
                       order: entry?.fields.order ?? 0,
                       column: entry?.fields.column ?? 0,
                       url: entry?.fields.url || "#",
-                      showExternalIcon: entry?.fields.showExternalIcon || false
+                      showExternalIcon: entry?.fields.showExternalIcon || false,
+                      bodyContent
                     };
                   })
                   .sort((a, b) => a.order - b.order);
@@ -162,8 +168,8 @@ function PlasmicComponentTabSet__RenderFunc(props) {
   return (
     <Stack__
       as={"div"}
-      data-plasmic-name={"tabsetEventDetails"}
-      data-plasmic-override={overrides.tabsetEventDetails}
+      data-plasmic-name={"tabset"}
+      data-plasmic-override={overrides.tabset}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       hasGap={true}
@@ -175,137 +181,206 @@ function PlasmicComponentTabSet__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.tabsetEventDetails
+        sty.tabset
       )}
     >
-      <div
-        data-plasmic-name={"tabGroup"}
-        data-plasmic-override={overrides.tabGroup}
-        className={classNames(projectcss.all, sty.tabGroup)}
-      >
-        {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-          (() => {
-            try {
-              return $state.tabs;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
-            }
-          })()
-        ).map((__plasmic_item_0, __plasmic_idx_0) => {
-          const currentItem = __plasmic_item_0;
-          const currentIndex = __plasmic_idx_0;
-          return (
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"tab"}
-              data-plasmic-override={overrides.tab}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.tab)}
-              key={currentIndex}
-              onClick={async event => {
-                const $steps = {};
-                $steps["updateActiveTab"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["activeTab"]
-                        },
-                        operation: 0,
-                        value: currentItem.label
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
+      {(() => {
+        try {
+          return $state.tabs.length > 0;
+        } catch (e) {
+          if (
+            e instanceof TypeError ||
+            e?.plasmicType === "PlasmicUndefinedDataError"
+          ) {
+            return true;
+          }
+          throw e;
+        }
+      })() ? (
+        <div
+          data-plasmic-name={"tabGroup"}
+          data-plasmic-override={overrides.tabGroup}
+          className={classNames(projectcss.all, sty.tabGroup)}
+        >
+          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+            (() => {
+              try {
+                return $state.tabs;
+              } catch (e) {
                 if (
-                  $steps["updateActiveTab"] != null &&
-                  typeof $steps["updateActiveTab"] === "object" &&
-                  typeof $steps["updateActiveTab"].then === "function"
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
                 ) {
-                  $steps["updateActiveTab"] = await $steps["updateActiveTab"];
+                  return [];
                 }
-              }}
-            >
+                throw e;
+              }
+            })()
+          ).map((__plasmic_item_0, __plasmic_idx_0) => {
+            const currentItem = __plasmic_item_0;
+            const currentIndex = __plasmic_idx_0;
+            return (
               <Stack__
                 as={"div"}
-                data-plasmic-name={"cta"}
-                data-plasmic-override={overrides.cta}
+                data-plasmic-name={"tab"}
+                data-plasmic-override={overrides.tab}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.cta)}
-              >
-                {false ? (
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"icon12X12"}
-                    data-plasmic-override={overrides.icon12X12}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.icon12X12)}
-                  >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.svg__a0Ncd)}
-                      role={"img"}
-                    />
-                  </Stack__>
-                ) : null}
-                {(() => {
-                  try {
-                    return currentItem.label !== $state.activeTab;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return true;
-                    }
-                    throw e;
-                  }
-                })() ? (
-                  <div
-                    data-plasmic-name={"navigationItem"}
-                    data-plasmic-override={overrides.navigationItem}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.navigationItem
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return currentItem.label;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return " ";
+                className={classNames(projectcss.all, sty.tab)}
+                key={currentIndex}
+                onClick={async event => {
+                  const $steps = {};
+                  $steps["updateActiveTab"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["activeTab"]
+                          },
+                          operation: 0,
+                          value: currentItem.label
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
                           }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                ) : null}
+                          const { objRoot, variablePath } = variable;
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateActiveTab"] != null &&
+                    typeof $steps["updateActiveTab"] === "object" &&
+                    typeof $steps["updateActiveTab"].then === "function"
+                  ) {
+                    $steps["updateActiveTab"] = await $steps["updateActiveTab"];
+                  }
+                }}
+              >
+                <Stack__
+                  as={"div"}
+                  data-plasmic-name={"cta"}
+                  data-plasmic-override={overrides.cta}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.cta)}
+                >
+                  {false ? (
+                    <Stack__
+                      as={"div"}
+                      data-plasmic-name={"icon12X12"}
+                      data-plasmic-override={overrides.icon12X12}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.icon12X12)}
+                    >
+                      <Stack__
+                        as={ContainerIcon}
+                        hasGap={true}
+                        className={classNames(projectcss.all, sty.svg__a0Ncd)}
+                        role={"img"}
+                      />
+                    </Stack__>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return currentItem.label !== $state.activeTab;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"navigationItem"}
+                      data-plasmic-override={overrides.navigationItem}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.navigationItem
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return currentItem.label;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return " ";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  ) : null}
+                  {(() => {
+                    try {
+                      return currentItem.label === $state.activeTab;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })() ? (
+                    <div
+                      data-plasmic-name={"navigationItemActive"}
+                      data-plasmic-override={overrides.navigationItemActive}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.navigationItemActive
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return currentItem.label;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return " ";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                  ) : null}
+                  {false ? (
+                    <Stack__
+                      as={"div"}
+                      data-plasmic-name={"icon12X122"}
+                      data-plasmic-override={overrides.icon12X122}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.icon12X122)}
+                    >
+                      <Stack__
+                        as={Container2Icon}
+                        hasGap={true}
+                        className={classNames(projectcss.all, sty.svg__tkstD)}
+                        role={"img"}
+                      />
+                    </Stack__>
+                  ) : null}
+                </Stack__>
                 {(() => {
                   try {
                     return currentItem.label === $state.activeTab;
@@ -320,134 +395,65 @@ function PlasmicComponentTabSet__RenderFunc(props) {
                   }
                 })() ? (
                   <div
-                    data-plasmic-name={"navigationItemActive"}
-                    data-plasmic-override={overrides.navigationItemActive}
+                    data-plasmic-name={"activeStyleBg"}
+                    data-plasmic-override={overrides.activeStyleBg}
+                    className={classNames(projectcss.all, sty.activeStyleBg)}
+                  />
+                ) : null}
+                <div
+                  data-plasmic-name={"underTab"}
+                  data-plasmic-override={overrides.underTab}
+                  className={classNames(projectcss.all, sty.underTab)}
+                >
+                  <Embed
                     className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.navigationItemActive
+                      "__wab_instance",
+                      sty.embedHtml__mSfMb
                     )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return currentItem.label;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return " ";
-                          }
-                          throw e;
+                    code={(() => {
+                      try {
+                        return currentItem.label === $state.activeTab
+                          ? "<div class='active-tab-under'></div>"
+                          : "<div class='tab-under'></div>";
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "";
                         }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                ) : null}
-                {false ? (
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"icon12X122"}
-                    data-plasmic-override={overrides.icon12X122}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.icon12X122)}
-                  >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.svg__tkstD)}
-                      role={"img"}
-                    />
-                  </Stack__>
-                ) : null}
+                        throw e;
+                      }
+                    })()}
+                  />
+                </div>
               </Stack__>
-              {(() => {
+            );
+          })}
+          <div
+            data-plasmic-name={"underTab2"}
+            data-plasmic-override={overrides.underTab2}
+            className={classNames(projectcss.all, sty.underTab2)}
+          >
+            <Embed
+              className={classNames("__wab_instance", sty.embedHtml__tbF2)}
+              code={(() => {
                 try {
-                  return currentItem.label === $state.activeTab;
+                  return "<div class='tab-under'></div>";
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
                     e?.plasmicType === "PlasmicUndefinedDataError"
                   ) {
-                    return true;
+                    return "";
                   }
                   throw e;
                 }
-              })() ? (
-                <div
-                  data-plasmic-name={"activeStyleBg"}
-                  data-plasmic-override={overrides.activeStyleBg}
-                  className={classNames(projectcss.all, sty.activeStyleBg)}
-                />
-              ) : null}
-              <div
-                data-plasmic-name={"underTab"}
-                data-plasmic-override={overrides.underTab}
-                className={classNames(projectcss.all, sty.underTab)}
-              >
-                <Embed
-                  data-plasmic-name={"embedHtml"}
-                  data-plasmic-override={overrides.embedHtml}
-                  className={classNames("__wab_instance", sty.embedHtml)}
-                  code={(() => {
-                    try {
-                      return currentItem.label === $state.activeTab
-                        ? "<div class='active-tab-under'></div>"
-                        : "<div class='tab-under'></div>";
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "";
-                      }
-                      throw e;
-                    }
-                  })()}
-                />
-              </div>
-            </Stack__>
-          );
-        })}
-        <Stack__
-          as={"div"}
-          data-plasmic-name={"tab2"}
-          data-plasmic-override={overrides.tab2}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.tab2)}
-          onClick={async event => {
-            const $steps = {};
-            $steps["updateActiveTab"] = true
-              ? (() => {
-                  const actionArgs = {
-                    variable: {
-                      objRoot: $state,
-                      variablePath: ["activeTab"]
-                    },
-                    operation: 0,
-                    value: currentItem.label
-                  };
-                  return (({ variable, value, startIndex, deleteCount }) => {
-                    if (!variable) {
-                      return;
-                    }
-                    const { objRoot, variablePath } = variable;
-                    $stateSet(objRoot, variablePath, value);
-                    return value;
-                  })?.apply(null, [actionArgs]);
-                })()
-              : undefined;
-            if (
-              $steps["updateActiveTab"] != null &&
-              typeof $steps["updateActiveTab"] === "object" &&
-              typeof $steps["updateActiveTab"].then === "function"
-            ) {
-              $steps["updateActiveTab"] = await $steps["updateActiveTab"];
-            }
-          }}
-        />
-      </div>
+              })()}
+            />
+          </div>
+        </div>
+      ) : null}
       <Stack__
         as={"div"}
         data-plasmic-name={"content"}
@@ -455,158 +461,31 @@ function PlasmicComponentTabSet__RenderFunc(props) {
         hasGap={true}
         className={classNames(projectcss.all, sty.content)}
       >
-        <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text
-          )}
-        >
-          {
-            "The ASSH Young Members Steering Committee is excited to offer young members the third annual oral examination prep course. This FREE resource is offered to all ASSH candidate members who plan to take oral boards this year.\u00a0The summer offering will be for\u00a0orthopaedic surgeons\u00a0who will be taking the ABOS exam in the summer of 2025. A separate offering in the fall will be available to plastic surgeons and general surgeons.\nThis virtual course is planned for Saturday, June 21, 2025. Participants will be paired with mentors and will be invited to present their most challenging cases in a mock oral board examination format. Examinees will get the opportunity to practice their presentations, field questions from mock examiners, and get advice on final preparations for the oral board exam.\nThe objectives of this webinar are to:"
-          }
-        </div>
-        <Stack__
-          as={"div"}
-          data-plasmic-name={"frame10"}
-          data-plasmic-override={overrides.frame10}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.frame10)}
-        >
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"listItem"}
-            data-plasmic-override={overrides.listItem}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.listItem)}
-          >
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"bullet"}
-              data-plasmic-override={overrides.bullet}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.bullet)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"icon12X129"}
-                data-plasmic-override={overrides.icon12X129}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.icon12X129)}
-              >
-                <Stack__
-                  as={Container2Icon}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.svg__ua6Rj)}
-                  role={"img"}
-                />
-              </Stack__>
-            </Stack__>
-            <div
-              data-plasmic-name={"unorderedListItem"}
-              data-plasmic-override={overrides.unorderedListItem}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.unorderedListItem
-              )}
-            >
-              {"Automatic for Active Members for 30 or more years."}
-            </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"listItem2"}
-            data-plasmic-override={overrides.listItem2}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.listItem2)}
-          >
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"bullet2"}
-              data-plasmic-override={overrides.bullet2}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.bullet2)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"icon12X1210"}
-                data-plasmic-override={overrides.icon12X1210}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.icon12X1210)}
-              >
-                <Stack__
-                  as={Container2Icon}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.svg__k2FMr)}
-                  role={"img"}
-                />
-              </Stack__>
-            </Stack__>
-            <div
-              data-plasmic-name={"unorderedListItem2"}
-              data-plasmic-override={overrides.unorderedListItem2}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.unorderedListItem2
-              )}
-            >
-              {"You will keep your full Active Membership Benefits."}
-            </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"listItem3"}
-            data-plasmic-override={overrides.listItem3}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.listItem3)}
-          >
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"bullet3"}
-              data-plasmic-override={overrides.bullet3}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.bullet3)}
-            >
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"icon12X1211"}
-                data-plasmic-override={overrides.icon12X1211}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.icon12X1211)}
-              >
-                <Stack__
-                  as={Container2Icon}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.svg___9ORvp)}
-                  role={"img"}
-                />
-              </Stack__>
-            </Stack__>
-            <div
-              data-plasmic-name={"unorderedListItem3"}
-              data-plasmic-override={overrides.unorderedListItem3}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.unorderedListItem3
-              )}
-            >
-              {"Dues: $420"}
-            </div>
-          </Stack__>
-        </Stack__>
+        <Embed
+          className={classNames("__wab_instance", sty.embedHtml__mFYhZ)}
+          code={(() => {
+            try {
+              return $state.tabs.find(tab => tab.label === $state.activeTab)
+                .bodyContent;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return "";
+              }
+              throw e;
+            }
+          })()}
+        />
       </Stack__>
     </Stack__>
   );
 }
 
 const PlasmicDescendants = {
-  tabsetEventDetails: [
-    "tabsetEventDetails",
+  tabset: [
+    "tabset",
     "tabGroup",
     "tab",
     "cta",
@@ -616,23 +495,8 @@ const PlasmicDescendants = {
     "icon12X122",
     "activeStyleBg",
     "underTab",
-    "embedHtml",
-    "tab2",
-    "content",
-    "text",
-    "frame10",
-    "listItem",
-    "bullet",
-    "icon12X129",
-    "unorderedListItem",
-    "listItem2",
-    "bullet2",
-    "icon12X1210",
-    "unorderedListItem2",
-    "listItem3",
-    "bullet3",
-    "icon12X1211",
-    "unorderedListItem3"
+    "underTab2",
+    "content"
   ],
 
   tabGroup: [
@@ -645,8 +509,7 @@ const PlasmicDescendants = {
     "icon12X122",
     "activeStyleBg",
     "underTab",
-    "embedHtml",
-    "tab2"
+    "underTab2"
   ],
 
   tab: [
@@ -657,8 +520,7 @@ const PlasmicDescendants = {
     "navigationItemActive",
     "icon12X122",
     "activeStyleBg",
-    "underTab",
-    "embedHtml"
+    "underTab"
   ],
 
   cta: [
@@ -674,56 +536,9 @@ const PlasmicDescendants = {
   navigationItemActive: ["navigationItemActive"],
   icon12X122: ["icon12X122"],
   activeStyleBg: ["activeStyleBg"],
-  underTab: ["underTab", "embedHtml"],
-  embedHtml: ["embedHtml"],
-  tab2: ["tab2"],
-  content: [
-    "content",
-    "text",
-    "frame10",
-    "listItem",
-    "bullet",
-    "icon12X129",
-    "unorderedListItem",
-    "listItem2",
-    "bullet2",
-    "icon12X1210",
-    "unorderedListItem2",
-    "listItem3",
-    "bullet3",
-    "icon12X1211",
-    "unorderedListItem3"
-  ],
-
-  text: ["text"],
-  frame10: [
-    "frame10",
-    "listItem",
-    "bullet",
-    "icon12X129",
-    "unorderedListItem",
-    "listItem2",
-    "bullet2",
-    "icon12X1210",
-    "unorderedListItem2",
-    "listItem3",
-    "bullet3",
-    "icon12X1211",
-    "unorderedListItem3"
-  ],
-
-  listItem: ["listItem", "bullet", "icon12X129", "unorderedListItem"],
-  bullet: ["bullet", "icon12X129"],
-  icon12X129: ["icon12X129"],
-  unorderedListItem: ["unorderedListItem"],
-  listItem2: ["listItem2", "bullet2", "icon12X1210", "unorderedListItem2"],
-  bullet2: ["bullet2", "icon12X1210"],
-  icon12X1210: ["icon12X1210"],
-  unorderedListItem2: ["unorderedListItem2"],
-  listItem3: ["listItem3", "bullet3", "icon12X1211", "unorderedListItem3"],
-  bullet3: ["bullet3", "icon12X1211"],
-  icon12X1211: ["icon12X1211"],
-  unorderedListItem3: ["unorderedListItem3"]
+  underTab: ["underTab"],
+  underTab2: ["underTab2"],
+  content: ["content"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -745,7 +560,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "tabsetEventDetails") {
+  if (nodeName === "tabset") {
     func.displayName = "PlasmicComponentTabSet";
   } else {
     func.displayName = `PlasmicComponentTabSet.${nodeName}`;
@@ -755,7 +570,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicComponentTabSet = Object.assign(
   // Top-level PlasmicComponentTabSet renders the root element
-  makeNodeComponent("tabsetEventDetails"),
+  makeNodeComponent("tabset"),
   {
     // Helper components rendering sub-elements
     tabGroup: makeNodeComponent("tabGroup"),
@@ -767,23 +582,8 @@ export const PlasmicComponentTabSet = Object.assign(
     icon12X122: makeNodeComponent("icon12X122"),
     activeStyleBg: makeNodeComponent("activeStyleBg"),
     underTab: makeNodeComponent("underTab"),
-    embedHtml: makeNodeComponent("embedHtml"),
-    tab2: makeNodeComponent("tab2"),
+    underTab2: makeNodeComponent("underTab2"),
     content: makeNodeComponent("content"),
-    text: makeNodeComponent("text"),
-    frame10: makeNodeComponent("frame10"),
-    listItem: makeNodeComponent("listItem"),
-    bullet: makeNodeComponent("bullet"),
-    icon12X129: makeNodeComponent("icon12X129"),
-    unorderedListItem: makeNodeComponent("unorderedListItem"),
-    listItem2: makeNodeComponent("listItem2"),
-    bullet2: makeNodeComponent("bullet2"),
-    icon12X1210: makeNodeComponent("icon12X1210"),
-    unorderedListItem2: makeNodeComponent("unorderedListItem2"),
-    listItem3: makeNodeComponent("listItem3"),
-    bullet3: makeNodeComponent("bullet3"),
-    icon12X1211: makeNodeComponent("icon12X1211"),
-    unorderedListItem3: makeNodeComponent("unorderedListItem3"),
     // Metadata about props expected for PlasmicComponentTabSet
     internalVariantProps: PlasmicComponentTabSet__VariantProps,
     internalArgProps: PlasmicComponentTabSet__ArgProps

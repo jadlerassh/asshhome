@@ -23,10 +23,10 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -164,15 +164,6 @@ function PlasmicYoungLeadersProgram__RenderFunc(props) {
             title={"Hero: Young Leaders Program - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem__bbXmM
-            )}
-            descriptionSection={``}
-            title={``}
-          />
-
           <div className={classNames(projectcss.all, sty.freeBox___0IyNh)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
@@ -227,9 +218,11 @@ function PlasmicYoungLeadersProgram__RenderFunc(props) {
             className={classNames(projectcss.all, sty.freeBox___8GYw)}
           >
             <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem__rApt
+                sty.itemSectionTitleDescriptionItem
               )}
               descriptionSection={``}
               title={"How to Support Our Grants & Awards"}
@@ -297,6 +290,7 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "sectionAccordionSectionTemplate",
     "sectionMidPageCtaSection",
+    "itemSectionTitleDescriptionItem",
     "columns",
     "embedHtml",
     "buttonPrimary",
@@ -306,6 +300,7 @@ const PlasmicDescendants = {
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns", "embedHtml", "buttonPrimary"],
   embedHtml: ["embedHtml"],
   buttonPrimary: ["buttonPrimary"],
@@ -351,6 +346,9 @@ export const PlasmicYoungLeadersProgram = Object.assign(
       "sectionAccordionSectionTemplate"
     ),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
     columns: makeNodeComponent("columns"),
     embedHtml: makeNodeComponent("embedHtml"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),

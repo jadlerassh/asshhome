@@ -16,6 +16,7 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  set as $stateSet,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -33,7 +34,8 @@ export const PlasmicComponentVerticalPageList__VariantProps = new Array();
 
 export const PlasmicComponentVerticalPageList__ArgProps = new Array(
   "name",
-  "selectedItem"
+  "activeNav",
+  "onActiveNavChange2"
 );
 
 const $$ = {};
@@ -78,6 +80,11 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
           (() => {
             try {
               return (() => {
+                const encode = str =>
+                  str
+                    .replace(/ /g, "%20")
+                    .replace(/,/g, "%2C")
+                    .replace(/&/g, "%26");
                 const entryMap = Object.fromEntries(
                   $queries.getNav.data.response.includes.Entry.map(entry => [
                     entry.sys.id,
@@ -87,11 +94,19 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
                 return $queries.getNav.data.response.items[0].fields.childLinks
                   .map(link => {
                     const entry = entryMap[link.sys.id];
+                    const rawUrl = entry?.fields.url || "#";
+                    const encodedUrl = rawUrl.includes("?name=")
+                      ? rawUrl.replace(
+                          /(\?name=)(.*)/,
+                          (_, prefix, name) => prefix + encode(name)
+                        )
+                      : rawUrl;
                     return {
+                      name: entry?.fields.name,
                       id: link.sys.id,
                       label: entry?.fields.label || "Label missing",
                       order: entry?.fields.order ?? 0,
-                      url: entry?.fields.url || "#",
+                      url: encodedUrl,
                       showExternalIcon: entry?.fields.showExternalIcon || false
                     };
                   })
@@ -107,6 +122,13 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
               throw e;
             }
           })()
+      },
+      {
+        path: "activeNav",
+        type: "writable",
+        variableType: "text",
+        valueProp: "activeNav",
+        onChangeProp: "onActiveNavChange2"
       }
     ],
 
@@ -154,9 +176,7 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
       )}
     >
       <PlasmicLink__
-        data-plasmic-name={"link"}
-        data-plasmic-override={overrides.link}
-        className={classNames(projectcss.all, projectcss.a, sty.link)}
+        className={classNames(projectcss.all, projectcss.a, sty.link__bh5Rp)}
         component={Link}
         href={(() => {
           try {
@@ -174,18 +194,58 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
         platform={"nextjs"}
       >
         <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text
+            sty.text___95OF
           )}
         >
           <React.Fragment>
             {(() => {
               try {
                 return $queries.getNav.data.response.items[0].fields.label;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "";
+                }
+                throw e;
+              }
+            })()}
+          </React.Fragment>
+        </div>
+      </PlasmicLink__>
+      <PlasmicLink__
+        className={classNames(projectcss.all, projectcss.a, sty.link___5NEy)}
+        component={Link}
+        href={(() => {
+          try {
+            return $queries.getNav.data.response.items[0].fields.url;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
+            }
+            throw e;
+          }
+        })()}
+        platform={"nextjs"}
+      >
+        <div
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text__mWy9T
+          )}
+        >
+          <React.Fragment>
+            {(() => {
+              try {
+                return undefined;
               } catch (e) {
                 if (
                   e instanceof TypeError ||
@@ -222,6 +282,36 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
             data-plasmic-override={overrides.freeBox}
             className={classNames(projectcss.all, sty.freeBox)}
             key={currentIndex}
+            onClick={async event => {
+              const $steps = {};
+              $steps["updateActiveNav"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["activeNav"]
+                      },
+                      operation: 0,
+                      value: currentItem.name
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateActiveNav"] != null &&
+                typeof $steps["updateActiveNav"] === "object" &&
+                typeof $steps["updateActiveNav"].then === "function"
+              ) {
+                $steps["updateActiveNav"] = await $steps["updateActiveNav"];
+              }
+            }}
           >
             <ButtonPrimary
               data-plasmic-name={"buttonPrimary"}
@@ -230,7 +320,7 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
               megaMenuLink={["megaMenu"]}
               quicklinkOption={(() => {
                 try {
-                  return $props.selectedItem === currentItem.label;
+                  return $state.activeNav === currentItem.name;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -254,19 +344,7 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
                   throw e;
                 }
               })()}
-              url={(() => {
-                try {
-                  return currentItem.url;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "";
-                  }
-                  throw e;
-                }
-              })()}
+              url={""}
             />
           </div>
         );
@@ -276,9 +354,7 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "link", "text", "freeBox", "buttonPrimary"],
-  link: ["link", "text"],
-  text: ["text"],
+  root: ["root", "freeBox", "buttonPrimary"],
   freeBox: ["freeBox", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"]
 };
@@ -316,8 +392,6 @@ export const PlasmicComponentVerticalPageList = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    link: makeNodeComponent("link"),
-    text: makeNodeComponent("text"),
     freeBox: makeNodeComponent("freeBox"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicComponentVerticalPageList

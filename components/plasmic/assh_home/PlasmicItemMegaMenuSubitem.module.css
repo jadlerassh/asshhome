@@ -8,6 +8,17 @@
   align-items: flex-start;
   min-width: 0;
 }
+.freeBox___3LWzw {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
 .navigationItem2 {
   display: block;
   font-size: 22px;
@@ -31,4 +42,22 @@
 }
 .root:hover .navigationItem2 {
   color: var(--token-YOr-x91EUcQe);
+}
+.freeBox__dnVbD {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-py5R6wetCsNw);
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
 }

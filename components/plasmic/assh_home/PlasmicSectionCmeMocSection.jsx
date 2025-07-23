@@ -21,6 +21,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import ItemExternalLinkCardItem from "../../ItemExternalLinkCardItem"; // plasmic-import: ie8FiHmZHhtB/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
@@ -256,6 +257,16 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                 }
               })()}
             />
+
+            <HtmlContentfulHtmlLoader
+              data-plasmic-name={"htmlContentfulHtmlLoader"}
+              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader
+              )}
+              title={"Education - CME & MOC Copy"}
+            />
           </Stack__>
           <Stack__
             as={"div"}
@@ -367,6 +378,7 @@ const PlasmicDescendants = {
     "section10",
     "frame2",
     "itemSectionTitleDescriptionItem",
+    "htmlContentfulHtmlLoader",
     "frame4",
     "columns",
     "itemExternalLinkCardItem",
@@ -378,6 +390,7 @@ const PlasmicDescendants = {
     "section10",
     "frame2",
     "itemSectionTitleDescriptionItem",
+    "htmlContentfulHtmlLoader",
     "frame4",
     "columns",
     "itemExternalLinkCardItem",
@@ -388,14 +401,21 @@ const PlasmicDescendants = {
     "section10",
     "frame2",
     "itemSectionTitleDescriptionItem",
+    "htmlContentfulHtmlLoader",
     "frame4",
     "columns",
     "itemExternalLinkCardItem",
     "sectionQuicklinksTable"
   ],
 
-  frame2: ["frame2", "itemSectionTitleDescriptionItem"],
+  frame2: [
+    "frame2",
+    "itemSectionTitleDescriptionItem",
+    "htmlContentfulHtmlLoader"
+  ],
+
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   frame4: ["frame4", "columns", "itemExternalLinkCardItem"],
   columns: ["columns", "itemExternalLinkCardItem"],
   itemExternalLinkCardItem: ["itemExternalLinkCardItem"],
@@ -440,6 +460,7 @@ export const PlasmicSectionCmeMocSection = Object.assign(
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     frame4: makeNodeComponent("frame4"),
     columns: makeNodeComponent("columns"),
     itemExternalLinkCardItem: makeNodeComponent("itemExternalLinkCardItem"),

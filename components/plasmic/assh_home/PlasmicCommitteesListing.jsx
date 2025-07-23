@@ -15,7 +15,10 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -65,6 +68,24 @@ function PlasmicCommitteesListing__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "componentVerticalPageList.activeNav",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ``
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getHtml: usePlasmicDataOp(() => {
       return {
@@ -149,10 +170,27 @@ function PlasmicCommitteesListing__RenderFunc(props) {
               <ComponentVerticalPageList
                 data-plasmic-name={"componentVerticalPageList"}
                 data-plasmic-override={overrides.componentVerticalPageList}
+                activeNav={generateStateValueProp($state, [
+                  "componentVerticalPageList",
+                  "activeNav"
+                ])}
                 className={classNames(
                   "__wab_instance",
                   sty.componentVerticalPageList
                 )}
+                onActiveNavChange2={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "componentVerticalPageList",
+                    "activeNav"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
               />
             </div>
             <div className={classNames(projectcss.all, sty.column__rcGk)}>

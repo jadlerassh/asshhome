@@ -15,10 +15,12 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -88,6 +90,9 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -112,50 +117,54 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
         hasGap={true}
         className={classNames(projectcss.all, sty.frame6)}
       >
-        <div
-          data-plasmic-name={"text"}
-          data-plasmic-override={overrides.text}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text
-          )}
-        >
-          <React.Fragment>
-            {(() => {
+        <div className={classNames(projectcss.all, sty.column__us6HX)}>
+          <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text
+            )}
+          >
+            <React.Fragment>
+              {(() => {
+                try {
+                  return $props.text2;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "The 2025 Active Membership Application submission deadline is open until February 3, 2025.";
+                  }
+                  throw e;
+                }
+              })()}
+            </React.Fragment>
+          </div>
+        </div>
+        <div className={classNames(projectcss.all, sty.column___2Sw2O)}>
+          <ButtonPrimary
+            data-plasmic-name={"buttonPrimary"}
+            data-plasmic-override={overrides.buttonPrimary}
+            className={classNames("__wab_instance", sty.buttonPrimary)}
+            secondaryInteractions={"secondary"}
+            text={(() => {
               try {
-                return $props.text2;
+                return $props.linkText;
               } catch (e) {
                 if (
                   e instanceof TypeError ||
                   e?.plasmicType === "PlasmicUndefinedDataError"
                 ) {
-                  return "The 2025 Active Membership Application submission deadline is open until February 3, 2025.";
+                  return undefined;
                 }
                 throw e;
               }
             })()}
-          </React.Fragment>
+          />
         </div>
-        <ButtonPrimary
-          data-plasmic-name={"buttonPrimary"}
-          data-plasmic-override={overrides.buttonPrimary}
-          className={classNames("__wab_instance", sty.buttonPrimary)}
-          secondaryInteractions={"secondary"}
-          text={(() => {
-            try {
-              return $props.linkText;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return undefined;
-              }
-              throw e;
-            }
-          })()}
-        />
       </Stack__>
     </div>
   );

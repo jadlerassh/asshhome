@@ -20,6 +20,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -204,6 +205,20 @@ function PlasmicCardListMemberNewsWithDescription__RenderFunc(props) {
           );
         })}
       </Stack__>
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
+        <ButtonPrimary
+          data-plasmic-name={"buttonPrimary"}
+          data-plasmic-override={overrides.buttonPrimary}
+          className={classNames("__wab_instance", sty.buttonPrimary)}
+          text={"All Member News"}
+          textArrowButton={true}
+          url={"/membership/news"}
+        />
+      </div>
     </div>
   );
 }
@@ -214,13 +229,17 @@ const PlasmicDescendants = {
     "itemSectionTitleDescriptionItem",
     "columns",
     "column",
-    "itemArticleCardItemWithDescription"
+    "itemArticleCardItemWithDescription",
+    "freeBox",
+    "buttonPrimary"
   ],
 
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns", "column", "itemArticleCardItemWithDescription"],
   column: ["column", "itemArticleCardItemWithDescription"],
-  itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"]
+  itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"],
+  freeBox: ["freeBox", "buttonPrimary"],
+  buttonPrimary: ["buttonPrimary"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -265,6 +284,8 @@ export const PlasmicCardListMemberNewsWithDescription = Object.assign(
     itemArticleCardItemWithDescription: makeNodeComponent(
       "itemArticleCardItemWithDescription"
     ),
+    freeBox: makeNodeComponent("freeBox"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicCardListMemberNewsWithDescription
     internalVariantProps:
       PlasmicCardListMemberNewsWithDescription__VariantProps,
