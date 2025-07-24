@@ -15,12 +15,14 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
   set as $stateSet,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -165,6 +167,9 @@ function PlasmicComponentTabSet__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <Stack__
       as={"div"}

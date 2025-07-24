@@ -19,10 +19,10 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -70,9 +70,9 @@ function PlasmicActiveMembership__RenderFunc(props) {
     getContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "5be0d887-6398-485e-8fa5-1e4cfebbeec1",
+        opId: "bfe65bec-8b92-4488-92c8-8cdb48d83b3c",
         userArgs: {},
-        cacheKey: `plasmic.$.5be0d887-6398-485e-8fa5-1e4cfebbeec1.$.`,
+        cacheKey: `plasmic.$.bfe65bec-8b92-4488-92c8-8cdb48d83b3c.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -121,17 +121,6 @@ function PlasmicActiveMembership__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.column__rtgI9)}
             >
-              <ItemSectionTitleDescriptionItem
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemSectionTitleDescriptionItem___3LI2
-                )}
-                descriptionSection={
-                  "Active Membership is the core professional designation within the American Society for Surgery of the Hand (ASSH). Reserved for certified specialists committed to excellence in hand and upper extremity care, this membership level offers unparalleled access to education, research, and leadership within the field. Whether you\u2019re looking to deepen your expertise, expand your network, or shape the future of hand surgery, Active Membership is your next step."
-                }
-                title={"Active Membership"}
-              />
-
               <HtmlContentfulHtmlLoader
                 data-plasmic-name={"htmlContentfulHtmlLoader"}
                 data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -139,7 +128,7 @@ function PlasmicActiveMembership__RenderFunc(props) {
                   "__wab_instance",
                   sty.htmlContentfulHtmlLoader
                 )}
-                title={"Active Membership"}
+                title={"Active Membership Description with Title"}
               />
 
               <BlockTanCtaBlock
@@ -214,9 +203,13 @@ function PlasmicActiveMembership__RenderFunc(props) {
             </Stack__>
             <div className={classNames(projectcss.all, sty.column___86Tcy)}>
               <ItemSectionTitleDescriptionItem
+                data-plasmic-name={"itemSectionTitleDescriptionItem"}
+                data-plasmic-override={
+                  overrides.itemSectionTitleDescriptionItem
+                }
                 className={classNames(
                   "__wab_instance",
-                  sty.itemSectionTitleDescriptionItem__paES
+                  sty.itemSectionTitleDescriptionItem
                 )}
                 descriptionSection={``}
                 title={" "}
@@ -243,6 +236,7 @@ const PlasmicDescendants = {
     "blockTanCtaBlock",
     "freeBox",
     "sectionAccordionSectionTemplate",
+    "itemSectionTitleDescriptionItem",
     "blockQuoteBlock"
   ],
 
@@ -252,6 +246,7 @@ const PlasmicDescendants = {
     "blockTanCtaBlock",
     "freeBox",
     "sectionAccordionSectionTemplate",
+    "itemSectionTitleDescriptionItem",
     "blockQuoteBlock"
   ],
 
@@ -259,6 +254,7 @@ const PlasmicDescendants = {
   blockTanCtaBlock: ["blockTanCtaBlock"],
   freeBox: ["freeBox", "sectionAccordionSectionTemplate"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   blockQuoteBlock: ["blockQuoteBlock"]
 };
 
@@ -300,6 +296,9 @@ export const PlasmicActiveMembership = Object.assign(
     freeBox: makeNodeComponent("freeBox"),
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
+    ),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
     ),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     // Metadata about props expected for PlasmicActiveMembership

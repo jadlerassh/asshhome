@@ -696,18 +696,32 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
               data-plasmic-name={"navigationItem"}
               data-plasmic-override={overrides.navigationItem}
               hasGap={true}
-              className={classNames(projectcss.all, sty.navigationItem, {
-                [sty.navigationItemmenus_dropdown1]: hasVariant(
-                  $state,
-                  "menus",
-                  "dropdown1"
-                ),
-                [sty.navigationItemmenus_dropdownexplore]: hasVariant(
-                  $state,
-                  "menus",
-                  "dropdownexplore"
-                )
-              })}
+              className={classNames(
+                projectcss.all,
+                sty.navigationItem,
+                hasVariant($state, "menus", "dropdown2")
+                  ? "plasmic-dropdownga"
+                  : hasVariant($state, "menus", "dropdown1")
+                  ? "dropdownmenu-explore"
+                  : "dropdownmenu-explore",
+                {
+                  [sty.navigationItemmenus_dropdown1]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdown1"
+                  ),
+                  [sty.navigationItemmenus_dropdown2]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdown2"
+                  ),
+                  [sty.navigationItemmenus_dropdownexplore]: hasVariant(
+                    $state,
+                    "menus",
+                    "dropdownexplore"
+                  )
+                }
+              )}
               onClick={async event => {
                 const $steps = {};
                 $steps["updateOpenMenus"] = true
@@ -758,7 +772,13 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                 />
 
                 <Group4Icon
-                  className={classNames(projectcss.all, sty.svg__e6Nff)}
+                  className={classNames(projectcss.all, sty.svg__e6Nff, {
+                    [sty.svgmenus_dropdown1__e6NfFslrbi]: hasVariant(
+                      $state,
+                      "menus",
+                      "dropdown1"
+                    )
+                  })}
                   role={"img"}
                 />
 
@@ -772,7 +792,20 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                   projectcss.all,
                   projectcss.__wab_text,
                   sty.text__n5Dmg,
+                  hasVariant($state, "menus", "dropdown1")
+                    ? "dropdownexplore"
+                    : "dropdownmenu_dropdownexplore",
                   {
+                    [sty.textmenus_dropdown1__n5Dmgslrbi]: hasVariant(
+                      $state,
+                      "menus",
+                      "dropdown1"
+                    ),
+                    [sty.textmenus_dropdown2__n5Dmg9GMtT]: hasVariant(
+                      $state,
+                      "menus",
+                      "dropdown2"
+                    ),
                     [sty.textmenus_dropdownexplore__n5Dmg06Tk]: hasVariant(
                       $state,
                       "menus",
@@ -1532,7 +1565,9 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       sty.itemMegaMenuItem__tqrLz,
                       {
                         [sty.itemMegaMenuItemmenus_dropdown1__tqrLZslrbi]:
-                          hasVariant($state, "menus", "dropdown1")
+                          hasVariant($state, "menus", "dropdown1"),
+                        [sty.itemMegaMenuItemmenus_dropdown2__tqrLz9GMtT]:
+                          hasVariant($state, "menus", "dropdown2")
                       }
                     )}
                     label={(() => {
@@ -1737,6 +1772,8 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem___6FKyr,
                       {
+                        [sty.itemMegaMenuItemmenus_dropdown2___6FKyr9GMtT]:
+                          hasVariant($state, "menus", "dropdown2"),
                         [sty.itemMegaMenuItemmenus_dropdown3___6FKyrbnLeh]:
                           hasVariant($state, "menus", "dropdown3")
                       }
@@ -2762,46 +2799,6 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.frame51)}
               >
                 <div
-                  data-plasmic-name={"isolationMode2"}
-                  data-plasmic-override={overrides.isolationMode2}
-                  className={classNames(projectcss.all, sty.isolationMode2)}
-                >
-                  <Group12Icon
-                    className={classNames(projectcss.all, sty.svg__nbHhu)}
-                    role={"img"}
-                  />
-
-                  <Group13Icon
-                    className={classNames(projectcss.all, sty.svg__vn6Hj)}
-                    role={"img"}
-                  />
-
-                  <Group14Icon
-                    className={classNames(projectcss.all, sty.svg___0IOg)}
-                    role={"img"}
-                  />
-
-                  <Group15Icon
-                    className={classNames(projectcss.all, sty.svg__iq4Ql)}
-                    role={"img"}
-                  />
-
-                  <Group16Icon
-                    className={classNames(projectcss.all, sty.svg__a68Jj)}
-                    role={"img"}
-                  />
-
-                  <Group17Icon
-                    className={classNames(projectcss.all, sty.svg__etAv0)}
-                    role={"img"}
-                  />
-
-                  <Vector9Icon
-                    className={classNames(projectcss.all, sty.svg__yAlyX)}
-                    role={"img"}
-                  />
-                </div>
-                <div
                   data-plasmic-name={"menuIcon"}
                   data-plasmic-override={overrides.menuIcon}
                   className={classNames(projectcss.all, sty.menuIcon)}
@@ -2831,6 +2828,46 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                   </div>
                 </div>
               </Stack__>
+              <div
+                data-plasmic-name={"isolationMode2"}
+                data-plasmic-override={overrides.isolationMode2}
+                className={classNames(projectcss.all, sty.isolationMode2)}
+              >
+                <Group12Icon
+                  className={classNames(projectcss.all, sty.svg__nbHhu)}
+                  role={"img"}
+                />
+
+                <Group13Icon
+                  className={classNames(projectcss.all, sty.svg__vn6Hj)}
+                  role={"img"}
+                />
+
+                <Group14Icon
+                  className={classNames(projectcss.all, sty.svg___0IOg)}
+                  role={"img"}
+                />
+
+                <Group15Icon
+                  className={classNames(projectcss.all, sty.svg__iq4Ql)}
+                  role={"img"}
+                />
+
+                <Group16Icon
+                  className={classNames(projectcss.all, sty.svg__a68Jj)}
+                  role={"img"}
+                />
+
+                <Group17Icon
+                  className={classNames(projectcss.all, sty.svg__etAv0)}
+                  role={"img"}
+                />
+
+                <Vector9Icon
+                  className={classNames(projectcss.all, sty.svg__yAlyX)}
+                  role={"img"}
+                />
+              </div>
             </Stack__>
           </div>
           <div
@@ -9919,12 +9956,12 @@ const PlasmicDescendants = {
     "iconButton2",
     "icon24X242",
     "frame51",
-    "isolationMode2",
     "menuIcon",
     "menuIcon2",
     "_3",
     "_2",
     "_1",
+    "isolationMode2",
     "mobileNavMenu",
     "mobileNavAccordion",
     "accordion",
@@ -10628,12 +10665,12 @@ const PlasmicDescendants = {
     "iconButton2",
     "icon24X242",
     "frame51",
-    "isolationMode2",
     "menuIcon",
     "menuIcon2",
     "_3",
     "_2",
     "_1",
+    "isolationMode2",
     "mobileNavMenu",
     "mobileNavAccordion",
     "accordion",
@@ -11037,12 +11074,12 @@ const PlasmicDescendants = {
     "iconButton2",
     "icon24X242",
     "frame51",
-    "isolationMode2",
     "menuIcon",
     "menuIcon2",
     "_3",
     "_2",
-    "_1"
+    "_1",
+    "isolationMode2"
   ],
 
   frame45: ["frame45", "navigationItem75", "layer13"],
@@ -11074,12 +11111,12 @@ const PlasmicDescendants = {
     "iconButton2",
     "icon24X242",
     "frame51",
-    "isolationMode2",
     "menuIcon",
     "menuIcon2",
     "_3",
     "_2",
-    "_1"
+    "_1",
+    "isolationMode2"
   ],
 
   frame47: [
@@ -11177,22 +11214,13 @@ const PlasmicDescendants = {
   userBadge2: ["userBadge2"],
   iconButton2: ["iconButton2", "icon24X242"],
   icon24X242: ["icon24X242"],
-  frame51: [
-    "frame51",
-    "isolationMode2",
-    "menuIcon",
-    "menuIcon2",
-    "_3",
-    "_2",
-    "_1"
-  ],
-
-  isolationMode2: ["isolationMode2"],
+  frame51: ["frame51", "menuIcon", "menuIcon2", "_3", "_2", "_1"],
   menuIcon: ["menuIcon", "menuIcon2", "_3", "_2", "_1"],
   menuIcon2: ["menuIcon2", "_3", "_2", "_1"],
   _3: ["_3"],
   _2: ["_2"],
   _1: ["_1"],
+  isolationMode2: ["isolationMode2"],
   mobileNavMenu: [
     "mobileNavMenu",
     "mobileNavAccordion",
@@ -13906,12 +13934,12 @@ export const PlasmicSectionHomeMenuSectionGa2 = Object.assign(
     iconButton2: makeNodeComponent("iconButton2"),
     icon24X242: makeNodeComponent("icon24X242"),
     frame51: makeNodeComponent("frame51"),
-    isolationMode2: makeNodeComponent("isolationMode2"),
     menuIcon: makeNodeComponent("menuIcon"),
     menuIcon2: makeNodeComponent("menuIcon2"),
     _3: makeNodeComponent("_3"),
     _2: makeNodeComponent("_2"),
     _1: makeNodeComponent("_1"),
+    isolationMode2: makeNodeComponent("isolationMode2"),
     mobileNavMenu: makeNodeComponent("mobileNavMenu"),
     mobileNavAccordion: makeNodeComponent("mobileNavAccordion"),
     accordion: makeNodeComponent("accordion"),

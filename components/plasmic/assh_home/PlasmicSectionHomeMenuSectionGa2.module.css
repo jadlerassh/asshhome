@@ -2740,6 +2740,50 @@
   > img {
   margin-left: 10px;
 }
+.menuIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.menuIcon2 {
+  width: 30px;
+  height: 27px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+._3 {
+  background: rgba(49, 51, 55, 1);
+  width: 30px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+._2 {
+  background: rgba(49, 51, 55, 1);
+  width: 30px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 0px;
+}
+._1 {
+  background: rgba(49, 51, 55, 1);
+  width: 30px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 0px;
+}
 .isolationMode2 {
   width: 254px;
   height: 50px;
@@ -2866,50 +2910,6 @@
   .svg__yAlyX {
     display: block;
   }
-}
-.menuIcon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.menuIcon2 {
-  width: 30px;
-  height: 27px;
-  display: block;
-  position: relative;
-  flex-shrink: 0;
-}
-._3 {
-  background: rgba(49, 51, 55, 1);
-  width: 30px;
-  height: 3px;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-._2 {
-  background: rgba(49, 51, 55, 1);
-  width: 30px;
-  height: 3px;
-  display: block;
-  position: absolute;
-  top: 12px;
-  left: 0px;
-}
-._1 {
-  background: rgba(49, 51, 55, 1);
-  width: 30px;
-  height: 3px;
-  display: block;
-  position: absolute;
-  top: 24px;
-  left: 0px;
 }
 .mobileNavMenu {
   background: rgba(255, 255, 255, 1);

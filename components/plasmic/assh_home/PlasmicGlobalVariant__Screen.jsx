@@ -22,6 +22,7 @@ export const useScreenVariants = createUseScreenVariants(true, {
   smallDesktop: "(max-width:1024px)",
   smallMobile: "(max-width:414px)",
   largeDesktop: "(max-width:1440px)",
+  miniMobile: "(max-width:240px)",
 });
 
 export default ScreenContext;

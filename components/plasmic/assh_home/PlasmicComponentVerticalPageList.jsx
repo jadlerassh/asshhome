@@ -16,7 +16,6 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  set as $stateSet,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -34,8 +33,8 @@ export const PlasmicComponentVerticalPageList__VariantProps = new Array();
 
 export const PlasmicComponentVerticalPageList__ArgProps = new Array(
   "name",
-  "activeNav",
-  "onActiveNavChange2"
+  "pagePath",
+  "navName"
 );
 
 const $$ = {};
@@ -53,7 +52,8 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          name: "Committee Menu"
+          name: "Committee Menu",
+          navName: "Annual Meeting Program Committee"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -85,29 +85,29 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
                     .replace(/ /g, "%20")
                     .replace(/,/g, "%2C")
                     .replace(/&/g, "%26");
+                const baseUrl = window.location.origin;
+                const pagePath = $props.pagePath || "";
+                const entries =
+                  $queries.getNav?.data?.response?.includes?.Entry ?? [];
                 const entryMap = Object.fromEntries(
-                  $queries.getNav.data.response.includes.Entry.map(entry => [
-                    entry.sys.id,
-                    entry
-                  ])
+                  entries.map(entry => [entry.sys.id, entry])
                 );
-                return $queries.getNav.data.response.items[0].fields.childLinks
+                const childLinks =
+                  $queries.getNav?.data?.response?.items?.[0]?.fields
+                    ?.childLinks ?? [];
+                return childLinks
                   .map(link => {
                     const entry = entryMap[link.sys.id];
-                    const rawUrl = entry?.fields.url || "#";
-                    const encodedUrl = rawUrl.includes("?name=")
-                      ? rawUrl.replace(
-                          /(\?name=)(.*)/,
-                          (_, prefix, name) => prefix + encode(name)
-                        )
-                      : rawUrl;
+                    const name = (entry?.fields?.name || "").trim();
+                    const encodedName = encode(name);
+                    const fullUrl = `${baseUrl}${pagePath}?name=${encodedName}`;
                     return {
-                      name: entry?.fields.name,
+                      name,
                       id: link.sys.id,
-                      label: entry?.fields.label || "Label missing",
-                      order: entry?.fields.order ?? 0,
-                      url: encodedUrl,
-                      showExternalIcon: entry?.fields.showExternalIcon || false
+                      label: entry?.fields?.label || "Label missing",
+                      order: entry?.fields?.order ?? 0,
+                      url: fullUrl,
+                      showExternalIcon: entry?.fields?.showExternalIcon || false
                     };
                   })
                   .sort((a, b) => a.order - b.order);
@@ -125,10 +125,22 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
       },
       {
         path: "activeNav",
-        type: "writable",
+        type: "private",
         variableType: "text",
-        valueProp: "activeNav",
-        onChangeProp: "onActiveNavChange2"
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $props.navName;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
       }
     ],
 
@@ -282,36 +294,6 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
             data-plasmic-override={overrides.freeBox}
             className={classNames(projectcss.all, sty.freeBox)}
             key={currentIndex}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateActiveNav"] = true
-                ? (() => {
-                    const actionArgs = {
-                      variable: {
-                        objRoot: $state,
-                        variablePath: ["activeNav"]
-                      },
-                      operation: 0,
-                      value: currentItem.name
-                    };
-                    return (({ variable, value, startIndex, deleteCount }) => {
-                      if (!variable) {
-                        return;
-                      }
-                      const { objRoot, variablePath } = variable;
-                      $stateSet(objRoot, variablePath, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateActiveNav"] != null &&
-                typeof $steps["updateActiveNav"] === "object" &&
-                typeof $steps["updateActiveNav"].then === "function"
-              ) {
-                $steps["updateActiveNav"] = await $steps["updateActiveNav"];
-              }
-            }}
           >
             <ButtonPrimary
               data-plasmic-name={"buttonPrimary"}
@@ -320,7 +302,7 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
               megaMenuLink={["megaMenu"]}
               quicklinkOption={(() => {
                 try {
-                  return $state.activeNav === currentItem.name;
+                  return currentItem.name === $state.activeNav;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -344,7 +326,19 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
                   throw e;
                 }
               })()}
-              url={""}
+              url={(() => {
+                try {
+                  return currentItem.url;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "";
+                  }
+                  throw e;
+                }
+              })()}
             />
           </div>
         );

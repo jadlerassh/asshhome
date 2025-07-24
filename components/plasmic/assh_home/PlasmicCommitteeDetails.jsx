@@ -17,7 +17,6 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   generateStateOnChangeProp,
-  generateStateValueProp,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -107,12 +106,6 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
               throw e;
             }
           })()
-      },
-      {
-        path: "componentVerticalPageList.activeNav",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
       }
     ],
 
@@ -210,27 +203,36 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
               <ComponentVerticalPageList
                 data-plasmic-name={"componentVerticalPageList"}
                 data-plasmic-override={overrides.componentVerticalPageList}
-                activeNav={generateStateValueProp($state, [
-                  "componentVerticalPageList",
-                  "activeNav"
-                ])}
                 className={classNames(
                   "__wab_instance",
                   sty.componentVerticalPageList
                 )}
-                onActiveNavChange2={async (...eventArgs) => {
-                  generateStateOnChangeProp($state, [
-                    "componentVerticalPageList",
-                    "activeNav"
-                  ]).apply(null, eventArgs);
-                  if (
-                    eventArgs.length > 1 &&
-                    eventArgs[1] &&
-                    eventArgs[1]._plasmic_state_init_
-                  ) {
-                    return;
+                navName={(() => {
+                  try {
+                    return $state.selectedItemPage;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
                   }
-                }}
+                })()}
+                pagePath={(() => {
+                  try {
+                    return $ctx.pagePath;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
               />
             </div>
             {(() => {
@@ -330,7 +332,9 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
                 ) : null}
                 {(() => {
                   try {
-                    return $ctx.query.name === "";
+                    return (
+                      $ctx.query.name === "" || $ctx.query.name === undefined
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||

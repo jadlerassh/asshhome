@@ -2637,6 +2637,34 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/about/sustainability"
+        },
+        {
+          "id": "oUDT_QRNoMZw",
+          "name": "Candidate",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCandidate.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/candidate.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCandidate.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/candidate"
+        },
+        {
+          "id": "Xo7uEi7oD2aU",
+          "name": "PartnerWithAssh",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerWithAssh.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerWithAssh.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner"
         }
       ],
       "icons": [

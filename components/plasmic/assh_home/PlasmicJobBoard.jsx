@@ -142,6 +142,18 @@ function PlasmicJobBoard__RenderFunc(props) {
               name={"Job Board: Employees Recruiters Links"}
             />
           </div>
+          <h3
+            data-plasmic-name={"h3"}
+            data-plasmic-override={overrides.h3}
+            className={classNames(
+              projectcss.all,
+              projectcss.h3,
+              projectcss.__wab_text,
+              sty.h3
+            )}
+          >
+            {"Need help?"}
+          </h3>
           <SectionQuestion
             data-plasmic-name={"sectionQuestion"}
             data-plasmic-override={overrides.sectionQuestion}
@@ -175,12 +187,14 @@ const PlasmicDescendants = {
     "root",
     "sectionTopPageHighlightCtaSection",
     "freeBox",
+    "h3",
     "sectionQuestion",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionTopPageHighlightCtaSection: ["sectionTopPageHighlightCtaSection"],
   freeBox: ["freeBox"],
+  h3: ["h3"],
   sectionQuestion: ["sectionQuestion"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -221,6 +235,7 @@ export const PlasmicJobBoard = Object.assign(
       "sectionTopPageHighlightCtaSection"
     ),
     freeBox: makeNodeComponent("freeBox"),
+    h3: makeNodeComponent("h3"),
     sectionQuestion: makeNodeComponent("sectionQuestion"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicJobBoard
