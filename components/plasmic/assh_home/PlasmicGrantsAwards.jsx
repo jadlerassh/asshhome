@@ -23,8 +23,8 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
@@ -160,15 +160,6 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               sty.sectionInternalHeroTitleSectionV2
             )}
             title={"Hero: Grants and Awards Overview - Title Card"}
-          />
-
-          <ItemSectionTitleDescriptionItem
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem___94Ho
-            )}
-            descriptionSection={``}
-            title={``}
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__cg5F)}>

@@ -284,7 +284,9 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
                 ) : null}
                 {(() => {
                   try {
-                    return $ctx.query.name !== "";
+                    return (
+                      $ctx.query.name !== "" && $ctx.query.name !== undefined
+                    );
                   } catch (e) {
                     if (
                       e instanceof TypeError ||

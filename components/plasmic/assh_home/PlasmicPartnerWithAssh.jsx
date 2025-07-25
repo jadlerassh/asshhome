@@ -15,21 +15,15 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  ensureGlobalVariants,
-  hasVariant
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
-import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
+import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -88,9 +82,6 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <React.Fragment>
       <Head>
@@ -167,7 +158,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader__dPgr2
               )}
-              title={"Partner with ASSH"}
+              title={"Partner with ASSH - Intro"}
             />
           </div>
           <Stack__
@@ -175,69 +166,201 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__klvCo)}
           >
-            <SectionMidPageCtaSection
-              data-plasmic-name={"sectionMidPageCtaSection"}
-              data-plasmic-override={overrides.sectionMidPageCtaSection}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionMidPageCtaSection
-              )}
-              title={"Grants and Awards - Mid-page CTA"}
-            />
+            <Stack__
+              as={"div"}
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.columns)}
+            >
+              <div className={classNames(projectcss.all, sty.column__nHh2Y)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Annual Meeting"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__lhnAt
+                  )}
+                  description={
+                    "At the ASSH Annual Meeting, we offer a variety of ways for you to connect with hand surgeons and promote your brand."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={
+                    "https://www.assh.org/annualmeeting/s/solutions-providers"
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column___7WXeQ)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Educational Events"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__vx0F
+                  )}
+                  description={
+                    "Reach engaged hand and upper extremity specialists through accredited, peer-reviewed learning opportunities."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/education"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__hzXl6)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Email"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__iXdo8
+                  )}
+                  description={
+                    "Whether in the ASSH's weekly member newsletter or a standalone email, we offer customized email advertising opportunities."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/email"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__t320R)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Hand.e"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__j6Mt4
+                  )}
+                  description={
+                    "Collaborate with our surgical video library to promote your brand alongside thousands of hand and upper extremity videos."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/hande"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__vUq0Y)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Hand-P Podcast"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__dHwe0
+                  )}
+                  description={
+                    "This opportunity allows partners to share their message with our highly engaged surgeon and medical professionals."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/handp-podcast"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__idsfi)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Journal of Hand Surgery"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__fTyI0
+                  )}
+                  description={
+                    "Reach hand and upper extremity specialists through high-impact, peer-reviewed content and advertising."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={
+                    "https://www.elsmediakits.com/specialty-audiences/surgery/journal-hand-surgery/yjhsu/2025"
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__zxVuP)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Mailing Lists"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__s0MDh
+                  )}
+                  description={
+                    "Connect with targeted audiences in both hand and upper extremity care by renting the ASSH's detailed mailing lists."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/mailing-lists"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__azLV)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Outreach Missions"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__rrpYy
+                  )}
+                  description={
+                    "Help expand access to hand surgery worldwide through sponsorships, donations, and more."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={
+                    "https://www.assh.org/touchinghands/s/partner-with-us"
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column___5RBv8)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Scholarship Program"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription___2ZyS7
+                  )}
+                  description={
+                    "Support scholarships to trainees and active duty military surgeons to attend the ASSH Annual Meeting."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/scholarship"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__mmBHx)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Sponsored Surveys"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription___3W33Z
+                  )}
+                  description={
+                    "Learn how to send a survey to ASSH membership, giving you unique access to response data."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/surveys"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__u0Z6I)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Web"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__qUeIt
+                  )}
+                  description={
+                    "Highlight your products and services by advertising on ASSH.org, which serves as a website both for the public and our members."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/web"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__lMixd)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Young Leaders"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__whe94
+                  )}
+                  description={
+                    "Support the growth of future leaders in hand surgery by partnering with ASSH\u2019s Young Leaders Program."
+                  }
+                  heading={"Advertising"}
+                  linkUrl={"https://www.assh.org/s/about/partner/young-leaders"}
+                />
+              </div>
+            </Stack__>
           </Stack__>
           <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__gtwmn)}
           >
-            <ItemSectionTitleDescriptionItem
-              data-plasmic-name={"itemSectionTitleDescriptionItem"}
-              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+            <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem
+                sty.htmlContentfulHtmlLoader__oshuc
               )}
-              descriptionSection={``}
-              title={"How to Support Our Grants & Awards"}
+              title={"Partner with ASSH - Partner Program"}
             />
-
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div className={classNames(projectcss.all, sty.column__xIJow)}>
-                <Embed
-                  data-plasmic-name={"embedHtml"}
-                  data-plasmic-override={overrides.embedHtml}
-                  className={classNames("__wab_instance", sty.embedHtml)}
-                  code={
-                    hasVariant(globalVariants, "screen", "smallDesktop")
-                      ? '<iframe width="100%" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                      : '<iframe width="560" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__vuvEp)}>
-                <HtmlContentfulHtmlLoader
-                  className={classNames(
-                    "__wab_instance",
-                    sty.htmlContentfulHtmlLoader___4B27K
-                  )}
-                  title={"Grants and Awards - Support"}
-                />
-
-                <ButtonPrimary
-                  data-plasmic-name={"buttonPrimary"}
-                  data-plasmic-override={overrides.buttonPrimary}
-                  className={classNames("__wab_instance", sty.buttonPrimary)}
-                  darkNoBgInteractions={[]}
-                  secondaryInteractions={"secondary"}
-                  text={"Donate Now"}
-                  url={"https://www.assh.org/afsh/s/donate"}
-                />
-              </div>
-            </div>
           </Stack__>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__i8GC)} />
           <BlockAsshMissionBlueBlock
@@ -258,20 +381,12 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
-    "sectionMidPageCtaSection",
-    "itemSectionTitleDescriptionItem",
     "columns",
-    "embedHtml",
-    "buttonPrimary",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "embedHtml", "buttonPrimary"],
-  embedHtml: ["embedHtml"],
-  buttonPrimary: ["buttonPrimary"],
+  columns: ["columns"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -310,13 +425,7 @@ export const PlasmicPartnerWithAssh = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
     columns: makeNodeComponent("columns"),
-    embedHtml: makeNodeComponent("embedHtml"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicPartnerWithAssh
     internalVariantProps: PlasmicPartnerWithAssh__VariantProps,

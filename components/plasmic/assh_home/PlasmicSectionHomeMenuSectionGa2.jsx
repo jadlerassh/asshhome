@@ -689,7 +689,13 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
             data-plasmic-name={"frame4"}
             data-plasmic-override={overrides.frame4}
             hasGap={true}
-            className={classNames(projectcss.all, sty.frame4)}
+            className={classNames(projectcss.all, sty.frame4, {
+              [sty.frame4menus_dropdown1]: hasVariant(
+                $state,
+                "menus",
+                "dropdown1"
+              )
+            })}
           >
             <Stack__
               as={"div"}
