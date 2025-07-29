@@ -39,7 +39,7 @@
     padding: 16px;
   }
 }
-.text__fhuE8 {
+.h2 {
   display: block;
   font-size: 40px;
   font-family: "Manrope", sans-serif;
@@ -51,12 +51,12 @@
   width: 1320px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .text__fhuE8 {
+  .h2 {
     width: 100%;
     min-width: 0;
   }
 }
-.text__fT4O3 {
+.text {
   font-size: 22px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -68,7 +68,7 @@
   display: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .text__fT4O3 {
+  .text {
     width: 100%;
     min-width: 0;
   }

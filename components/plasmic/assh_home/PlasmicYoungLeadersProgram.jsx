@@ -176,14 +176,27 @@ function PlasmicYoungLeadersProgram__RenderFunc(props) {
             <SectionAccordionSectionTemplate
               data-plasmic-name={"sectionAccordionSectionTemplate"}
               data-plasmic-override={overrides.sectionAccordionSectionTemplate}
-              bodyContent={`Body Content${$queries.getHtmlContent.data.response.items[0].fields.bodyContent}`}
+              bodyContent={(() => {
+                try {
+                  return $queries.getHtmlContent.data.response.items[1].fields
+                    .bodyContent;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
+                }
+              })()}
               className={classNames(
                 "__wab_instance",
                 sty.sectionAccordionSectionTemplate
               )}
               title={(() => {
                 try {
-                  return $queries.getHtmlContent.data.response.items[0].fields
+                  return $queries.getHtmlContent.data.response.items[1].fields
                     .title;
                 } catch (e) {
                   if (

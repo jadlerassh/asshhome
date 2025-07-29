@@ -58,6 +58,7 @@
   height: auto;
   max-width: 1320px;
   background: none;
+  margin-top: 50px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   border-radius: 10px;
@@ -74,7 +75,7 @@
   }
 }
 .htmlContentfulHtmlLoader__dPgr2:global(.__wab_instance) {
-  margin-bottom: 0px;
+  margin-bottom: 25px;
 }
 @media (max-width: 1440px) {
   .htmlContentfulHtmlLoader__dPgr2:global(.__wab_instance) {

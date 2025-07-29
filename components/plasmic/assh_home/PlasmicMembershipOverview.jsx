@@ -25,6 +25,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
+import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -33,7 +34,6 @@ import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDes
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListMemberNewsWithDescription from "../../CardListMemberNewsWithDescription"; // plasmic-import: mj20sYUsPblw/component
 import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
@@ -200,6 +200,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             ])}
           />
 
+          <ItemAd className={classNames("__wab_instance", sty.itemAd__p7LtJ)} />
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -228,6 +229,28 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               title={"Membership Overview - Why Join ASSH?"}
             />
           </div>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__rT0LT)}
+          >
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem__sfsZm
+              )}
+              descriptionSection={``}
+              title={"Membership Benefits at a Glance"}
+            />
+
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader___6Geyx
+              )}
+              title={"Membership Overview - Benefits at a Glance Table"}
+            />
+          </Stack__>
           <Stack__
             as={"div"}
             hasGap={true}
@@ -392,35 +415,8 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                 sty.blockQuicklinksTanBox
               )}
             />
-
-            <ItemSectionTitleDescriptionItem
-              className={classNames(
-                "__wab_instance",
-                sty.itemSectionTitleDescriptionItem__sfsZm
-              )}
-              descriptionSection={``}
-              title={"Membership Benefits at a Glance"}
-            />
           </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__rT0LT)}
-          >
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader___6Geyx
-              )}
-              title={"Membership Overview - Benefits at a Glance Table"}
-            />
-          </Stack__>
-          <ItemAd
-            data-plasmic-name={"itemAd"}
-            data-plasmic-override={overrides.itemAd}
-            className={classNames("__wab_instance", sty.itemAd)}
-          />
-
+          <ItemAd className={classNames("__wab_instance", sty.itemAd__nVOmJ)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -451,7 +447,6 @@ const PlasmicDescendants = {
     "sectionMidPageCtaSection",
     "cardListMemberNewsWithDescription",
     "blockQuicklinksTanBox",
-    "itemAd",
     "blockAsshMissionBlueBlock",
     "sectionFooterSection"
   ],
@@ -463,7 +458,6 @@ const PlasmicDescendants = {
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   cardListMemberNewsWithDescription: ["cardListMemberNewsWithDescription"],
   blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
-  itemAd: ["itemAd"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
   sectionFooterSection: ["sectionFooterSection"]
 };
@@ -511,7 +505,6 @@ export const PlasmicMembershipOverview = Object.assign(
       "cardListMemberNewsWithDescription"
     ),
     blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
-    itemAd: makeNodeComponent("itemAd"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicMembershipOverview

@@ -53,9 +53,10 @@
   justify-content: flex-start;
   align-items: center;
   justify-self: flex-start;
+  margin-top: 50px;
   grid-column-start: 3 !important;
   grid-column-end: -3 !important;
-  padding: 8px;
+  padding: 0px;
 }
 .htmlContentfulHtmlLoader__jvf6:global(.__wab_instance) {
   max-width: 100%;

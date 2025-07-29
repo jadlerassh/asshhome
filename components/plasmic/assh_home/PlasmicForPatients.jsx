@@ -19,6 +19,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -27,7 +28,6 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import BlockPublicationHIghlight from "../../BlockPublicationHIghlight"; // plasmic-import: UkJ-zcT0QvMv/component
-import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -115,6 +115,13 @@ function PlasmicForPatients__RenderFunc(props) {
             sty.root
           )}
         >
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__dGpGy
+            )}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -183,17 +190,18 @@ function PlasmicForPatients__RenderFunc(props) {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.content)}
               >
-                <div
-                  data-plasmic-name={"text"}
-                  data-plasmic-override={overrides.text}
+                <h2
+                  data-plasmic-name={"h2"}
+                  data-plasmic-override={overrides.h2}
                   className={classNames(
                     projectcss.all,
+                    projectcss.h2,
                     projectcss.__wab_text,
-                    sty.text
+                    sty.h2
                   )}
                 >
                   {"Handcare.org"}
-                </div>
+                </h2>
                 <div
                   data-plasmic-name={"column"}
                   data-plasmic-override={overrides.column}
@@ -218,7 +226,8 @@ function PlasmicForPatients__RenderFunc(props) {
                   data-plasmic-override={overrides.buttonPrimary}
                   className={classNames("__wab_instance", sty.buttonPrimary)}
                   secondaryInteractions={"secondary"}
-                  text={"Learn About Conditions"}
+                  text={"Learn about Conditions"}
+                  url={"https://www.assh.org/handcare/conditions"}
                 />
               </Stack__>
             </div>
@@ -236,8 +245,8 @@ function PlasmicForPatients__RenderFunc(props) {
                 description={
                   "Detailed information on common conditions like carpal tunnel syndrome, arthritis, fractures, and nerve injuries, as well as less common ones."
                 }
-                heading={"Resource"}
-                linkUrl={"https://www.handcare.org"}
+                heading={"Resources"}
+                linkUrl={"https://www.assh.org/handcare/conditions"}
               />
 
               <ItemArticleCardItemWithDescription
@@ -250,6 +259,7 @@ function PlasmicForPatients__RenderFunc(props) {
                   "Explanations of what these specialties entail and what patients can expect."
                 }
                 heading={"Resources"}
+                linkUrl={"https://www.assh.org/handcare/about"}
               />
             </Stack__>
             <Stack__
@@ -265,6 +275,7 @@ function PlasmicForPatients__RenderFunc(props) {
                 )}
                 description={"Tips and resources on preventing hand injuries."}
                 heading={"Resources"}
+                linkUrl={"https://www.assh.org/handcare/blog"}
               />
 
               <ItemArticleCardItemWithDescription
@@ -276,7 +287,8 @@ function PlasmicForPatients__RenderFunc(props) {
                 description={
                   "Learn hand anatomy including bones, joints, muscles and more."
                 }
-                heading={"Resource"}
+                heading={"Resources"}
+                linkUrl={"https://www.assh.org/handcare/anatomy"}
               />
             </Stack__>
           </Stack__>
@@ -290,9 +302,10 @@ function PlasmicForPatients__RenderFunc(props) {
           />
 
           <SectionAdPlaceholder
-            data-plasmic-name={"sectionAdPlaceholder"}
-            data-plasmic-override={overrides.sectionAdPlaceholder}
-            className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__sDAqL
+            )}
           />
 
           <BlockAsshMissionBlueBlock
@@ -318,12 +331,11 @@ const PlasmicDescendants = {
     "blockQuoteBlock",
     "sectionMidPageCtaSection",
     "content",
-    "text",
+    "h2",
     "column",
     "description",
     "buttonPrimary",
     "blockPublicationHIghlight",
-    "sectionAdPlaceholder",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -332,13 +344,12 @@ const PlasmicDescendants = {
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuoteBlock: ["blockQuoteBlock"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  content: ["content", "text", "column", "description", "buttonPrimary"],
-  text: ["text"],
+  content: ["content", "h2", "column", "description", "buttonPrimary"],
+  h2: ["h2"],
   column: ["column"],
   description: ["description"],
   buttonPrimary: ["buttonPrimary"],
   blockPublicationHIghlight: ["blockPublicationHIghlight"],
-  sectionAdPlaceholder: ["sectionAdPlaceholder"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -384,12 +395,11 @@ export const PlasmicForPatients = Object.assign(
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     content: makeNodeComponent("content"),
-    text: makeNodeComponent("text"),
+    h2: makeNodeComponent("h2"),
     column: makeNodeComponent("column"),
     description: makeNodeComponent("description"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockPublicationHIghlight: makeNodeComponent("blockPublicationHIghlight"),
-    sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicForPatients
     internalVariantProps: PlasmicForPatients__VariantProps,

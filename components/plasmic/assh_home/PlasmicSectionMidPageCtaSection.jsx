@@ -173,11 +173,14 @@ function PlasmicSectionMidPageCtaSection__RenderFunc(props) {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.frame8)}
               >
-                <div
+                <h2
+                  data-plasmic-name={"h2"}
+                  data-plasmic-override={overrides.h2}
                   className={classNames(
                     projectcss.all,
+                    projectcss.h2,
                     projectcss.__wab_text,
-                    sty.text__fM2B
+                    sty.h2
                   )}
                 >
                   <React.Fragment>
@@ -196,13 +199,15 @@ function PlasmicSectionMidPageCtaSection__RenderFunc(props) {
                       }
                     })()}
                   </React.Fragment>
-                </div>
+                </h2>
               </Stack__>
               <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__uZzfk
+                  sty.text
                 )}
               >
                 <React.Fragment>
@@ -279,6 +284,8 @@ const PlasmicDescendants = {
     "embedHtml",
     "frame7",
     "frame8",
+    "h2",
+    "text",
     "frame9",
     "buttonPrimary"
   ],
@@ -288,13 +295,17 @@ const PlasmicDescendants = {
     "embedHtml",
     "frame7",
     "frame8",
+    "h2",
+    "text",
     "frame9",
     "buttonPrimary"
   ],
 
   embedHtml: ["embedHtml"],
-  frame7: ["frame7", "frame8", "frame9", "buttonPrimary"],
-  frame8: ["frame8"],
+  frame7: ["frame7", "frame8", "h2", "text", "frame9", "buttonPrimary"],
+  frame8: ["frame8", "h2"],
+  h2: ["h2"],
+  text: ["text"],
   frame9: ["frame9", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"]
 };
@@ -336,6 +347,8 @@ export const PlasmicSectionMidPageCtaSection = Object.assign(
     embedHtml: makeNodeComponent("embedHtml"),
     frame7: makeNodeComponent("frame7"),
     frame8: makeNodeComponent("frame8"),
+    h2: makeNodeComponent("h2"),
+    text: makeNodeComponent("text"),
     frame9: makeNodeComponent("frame9"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicSectionMidPageCtaSection

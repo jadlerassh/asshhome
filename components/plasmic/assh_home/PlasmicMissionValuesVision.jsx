@@ -23,9 +23,9 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -145,15 +145,6 @@ function PlasmicMissionValuesVision__RenderFunc(props) {
             title={"Hero: Mission Values Vision - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem__z4Yyg
-            )}
-            descriptionSection={``}
-            title={``}
-          />
-
           <div className={classNames(projectcss.all, sty.freeBox__l8Kv)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
@@ -184,9 +175,11 @@ function PlasmicMissionValuesVision__RenderFunc(props) {
             className={classNames(projectcss.all, sty.freeBox___5Dgf)}
           >
             <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem__i8Csx
+                sty.itemSectionTitleDescriptionItem
               )}
               descriptionSection={``}
               title={"How to Support Our Grants & Awards"}
@@ -250,6 +243,7 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "sectionMidPageCtaSection",
+    "itemSectionTitleDescriptionItem",
     "columns",
     "embedHtml",
     "buttonPrimary",
@@ -258,6 +252,7 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns", "embedHtml", "buttonPrimary"],
   embedHtml: ["embedHtml"],
   buttonPrimary: ["buttonPrimary"],
@@ -300,6 +295,9 @@ export const PlasmicMissionValuesVision = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
     columns: makeNodeComponent("columns"),
     embedHtml: makeNodeComponent("embedHtml"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),

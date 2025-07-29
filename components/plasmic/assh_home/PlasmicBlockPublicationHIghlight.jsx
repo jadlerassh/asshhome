@@ -119,11 +119,14 @@ function PlasmicBlockPublicationHIghlight__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.frame7)}
             >
-              <div
+              <h2
+                data-plasmic-name={"h2"}
+                data-plasmic-override={overrides.h2}
                 className={classNames(
                   projectcss.all,
+                  projectcss.h2,
                   projectcss.__wab_text,
-                  sty.text__sfn6W
+                  sty.h2
                 )}
               >
                 <React.Fragment>
@@ -142,12 +145,14 @@ function PlasmicBlockPublicationHIghlight__RenderFunc(props) {
                     }
                   })()}
                 </React.Fragment>
-              </div>
+              </h2>
               <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__uhkHn
+                  sty.text
                 )}
               >
                 <React.Fragment>
@@ -263,10 +268,33 @@ function PlasmicBlockPublicationHIghlight__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "columns", "frame2", "frame7", "frame8", "column", "img"],
-  columns: ["columns", "frame2", "frame7", "frame8", "column", "img"],
-  frame2: ["frame2", "frame7", "frame8"],
-  frame7: ["frame7", "frame8"],
+  root: [
+    "root",
+    "columns",
+    "frame2",
+    "frame7",
+    "h2",
+    "text",
+    "frame8",
+    "column",
+    "img"
+  ],
+
+  columns: [
+    "columns",
+    "frame2",
+    "frame7",
+    "h2",
+    "text",
+    "frame8",
+    "column",
+    "img"
+  ],
+
+  frame2: ["frame2", "frame7", "h2", "text", "frame8"],
+  frame7: ["frame7", "h2", "text", "frame8"],
+  h2: ["h2"],
+  text: ["text"],
   frame8: ["frame8"],
   column: ["column", "img"],
   img: ["img"]
@@ -308,6 +336,8 @@ export const PlasmicBlockPublicationHIghlight = Object.assign(
     columns: makeNodeComponent("columns"),
     frame2: makeNodeComponent("frame2"),
     frame7: makeNodeComponent("frame7"),
+    h2: makeNodeComponent("h2"),
+    text: makeNodeComponent("text"),
     frame8: makeNodeComponent("frame8"),
     column: makeNodeComponent("column"),
     img: makeNodeComponent("img"),

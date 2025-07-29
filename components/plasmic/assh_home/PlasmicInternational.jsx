@@ -22,6 +22,8 @@ import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -163,17 +165,62 @@ function PlasmicInternational__RenderFunc(props) {
                       data-plasmic-override={
                         overrides.sectionAccordionSectionTemplate
                       }
+                      bodyContent={(() => {
+                        try {
+                          return currentItem.fields.bodyContent;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
                       className={classNames(
                         "__wab_instance",
                         sty.sectionAccordionSectionTemplate
                       )}
                       key={currentIndex}
+                      title={(() => {
+                        try {
+                          return currentItem.fields.title;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
                     />
                   );
                 })}
               </div>
             </Stack__>
-            <div className={classNames(projectcss.all, sty.column__qnqnZ)} />
+            <div className={classNames(projectcss.all, sty.column__qnqnZ)}>
+              <ItemSectionTitleDescriptionItem
+                data-plasmic-name={"itemSectionTitleDescriptionItem"}
+                data-plasmic-override={
+                  overrides.itemSectionTitleDescriptionItem
+                }
+                className={classNames(
+                  "__wab_instance",
+                  sty.itemSectionTitleDescriptionItem
+                )}
+                descriptionSection={``}
+                title={``}
+              />
+
+              <BlockQuoteBlock
+                data-plasmic-name={"blockQuoteBlock"}
+                data-plasmic-override={overrides.blockQuoteBlock}
+                className={classNames("__wab_instance", sty.blockQuoteBlock)}
+              />
+            </div>
           </Stack__>
         </div>
       </div>
@@ -188,7 +235,9 @@ const PlasmicDescendants = {
     "htmlContentfulHtmlLoader",
     "blockTanCtaBlock",
     "freeBox",
-    "sectionAccordionSectionTemplate"
+    "sectionAccordionSectionTemplate",
+    "itemSectionTitleDescriptionItem",
+    "blockQuoteBlock"
   ],
 
   columns: [
@@ -196,13 +245,17 @@ const PlasmicDescendants = {
     "htmlContentfulHtmlLoader",
     "blockTanCtaBlock",
     "freeBox",
-    "sectionAccordionSectionTemplate"
+    "sectionAccordionSectionTemplate",
+    "itemSectionTitleDescriptionItem",
+    "blockQuoteBlock"
   ],
 
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockTanCtaBlock: ["blockTanCtaBlock"],
   freeBox: ["freeBox", "sectionAccordionSectionTemplate"],
-  sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"]
+  sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  blockQuoteBlock: ["blockQuoteBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -244,6 +297,10 @@ export const PlasmicInternational = Object.assign(
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
     ),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
+    blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     // Metadata about props expected for PlasmicInternational
     internalVariantProps: PlasmicInternational__VariantProps,
     internalArgProps: PlasmicInternational__ArgProps,

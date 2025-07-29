@@ -89,11 +89,14 @@ function PlasmicItemSectionTitleDescriptionItem__RenderFunc(props) {
         hasGap={true}
         className={classNames(projectcss.all, sty.frame2)}
       >
-        <div
+        <h2
+          data-plasmic-name={"h2"}
+          data-plasmic-override={overrides.h2}
           className={classNames(
             projectcss.all,
+            projectcss.h2,
             projectcss.__wab_text,
-            sty.text__fhuE8
+            sty.h2
           )}
         >
           <React.Fragment>
@@ -111,12 +114,14 @@ function PlasmicItemSectionTitleDescriptionItem__RenderFunc(props) {
               }
             })()}
           </React.Fragment>
-        </div>
+        </h2>
         <div
+          data-plasmic-name={"text"}
+          data-plasmic-override={overrides.text}
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.text__fT4O3
+            sty.text
           )}
         >
           <React.Fragment>
@@ -141,8 +146,10 @@ function PlasmicItemSectionTitleDescriptionItem__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "frame2"],
-  frame2: ["frame2"]
+  root: ["root", "frame2", "h2", "text"],
+  frame2: ["frame2", "h2", "text"],
+  h2: ["h2"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -180,6 +187,8 @@ export const PlasmicItemSectionTitleDescriptionItem = Object.assign(
   {
     // Helper components rendering sub-elements
     frame2: makeNodeComponent("frame2"),
+    h2: makeNodeComponent("h2"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicItemSectionTitleDescriptionItem
     internalVariantProps: PlasmicItemSectionTitleDescriptionItem__VariantProps,
     internalArgProps: PlasmicItemSectionTitleDescriptionItem__ArgProps

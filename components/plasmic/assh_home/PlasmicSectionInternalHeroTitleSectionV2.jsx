@@ -181,11 +181,12 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                     throw e;
                   }
                 })() ? (
-                  <div
+                  <h1
                     data-plasmic-name={"educationCme3"}
                     data-plasmic-override={overrides.educationCme3}
                     className={classNames(
                       projectcss.all,
+                      projectcss.h1,
                       projectcss.__wab_text,
                       sty.educationCme3,
                       {
@@ -213,7 +214,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                         }
                       })()}
                     </React.Fragment>
-                  </div>
+                  </h1>
                 ) : null}
                 {(() => {
                   try {
@@ -235,7 +236,14 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__kYkY2
+                      sty.text__kYkY2,
+                      {
+                        [sty.textbase__kYkY2Jr2CU]: hasVariant(
+                          $state,
+                          "base",
+                          "base"
+                        )
+                      }
                     )}
                   >
                     <React.Fragment>
