@@ -5,23 +5,23 @@ import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-we
 import GlobalContextsProvider from "../../components/plasmic/assh_home/PlasmicGlobalContextsProvider";
 import { UnnamedGlobalGroupOfVariantsContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants";
 import { UnnamedGlobalGroupOfVariants2ContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2";
-import { PlasmicCandidate } from "../../components/plasmic/assh_home/PlasmicCandidate";
+import { PlasmicCandidateMembership } from "../../components/plasmic/assh_home/PlasmicCandidateMembership";
 import { useRouter } from "next/router";
 
-function Candidate() {
-  // Use PlasmicCandidate to render this component as it was
+function CandidateMembership() {
+  // Use PlasmicCandidateMembership to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicCandidate are:
+  // Props you can pass into PlasmicCandidateMembership are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicCandidate is wrapped by your project's global
+  // By default, PlasmicCandidateMembership is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
@@ -34,7 +34,7 @@ function Candidate() {
             params={useRouter()?.query}
             query={useRouter()?.query}
           >
-            <PlasmicCandidate />
+            <PlasmicCandidateMembership />
           </PageParamsProvider__>
         </GlobalContextsProvider>
       </UnnamedGlobalGroupOfVariantsContextProvider>
@@ -42,4 +42,4 @@ function Candidate() {
   );
 }
 
-export default Candidate;
+export default CandidateMembership;

@@ -27,7 +27,7 @@ import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJ
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
-import BlockPublicationHIghlight from "../../BlockPublicationHIghlight"; // plasmic-import: UkJ-zcT0QvMv/component
+import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -292,12 +292,12 @@ function PlasmicForPatients__RenderFunc(props) {
               />
             </Stack__>
           </Stack__>
-          <BlockPublicationHIghlight
-            data-plasmic-name={"blockPublicationHIghlight"}
-            data-plasmic-override={overrides.blockPublicationHIghlight}
+          <BlockPublicationHighlight
+            data-plasmic-name={"blockPublicationHighlight"}
+            data-plasmic-override={overrides.blockPublicationHighlight}
             className={classNames(
               "__wab_instance",
-              sty.blockPublicationHIghlight
+              sty.blockPublicationHighlight
             )}
           />
 
@@ -335,7 +335,7 @@ const PlasmicDescendants = {
     "column",
     "description",
     "buttonPrimary",
-    "blockPublicationHIghlight",
+    "blockPublicationHighlight",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -349,7 +349,7 @@ const PlasmicDescendants = {
   column: ["column"],
   description: ["description"],
   buttonPrimary: ["buttonPrimary"],
-  blockPublicationHIghlight: ["blockPublicationHIghlight"],
+  blockPublicationHighlight: ["blockPublicationHighlight"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -399,7 +399,7 @@ export const PlasmicForPatients = Object.assign(
     column: makeNodeComponent("column"),
     description: makeNodeComponent("description"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
-    blockPublicationHIghlight: makeNodeComponent("blockPublicationHIghlight"),
+    blockPublicationHighlight: makeNodeComponent("blockPublicationHighlight"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicForPatients
     internalVariantProps: PlasmicForPatients__VariantProps,

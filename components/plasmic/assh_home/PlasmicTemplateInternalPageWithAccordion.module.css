@@ -68,10 +68,11 @@
   .freeBox__opEN {
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: auto;
+    width: 100%;
     justify-self: flex-start;
+    grid-column-start: 3 !important;
+    grid-column-end: -3 !important;
+    margin: 50px 0px 0px;
   }
 }
 .htmlContentfulHtmlLoader__sHHpO:global(.__wab_instance) {

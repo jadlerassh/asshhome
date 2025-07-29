@@ -98,11 +98,11 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
     getHeroContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "1774e4b2-fd8d-4d5b-b65d-0de52572490d",
+        opId: "a2c30def-a015-4a3f-a91a-b5d7686ced12",
         userArgs: {
           params: [$props.title]
         },
-        cacheKey: `plasmic.$.1774e4b2-fd8d-4d5b-b65d-0de52572490d.$.`,
+        cacheKey: `plasmic.$.a2c30def-a015-4a3f-a91a-b5d7686ced12.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -152,7 +152,8 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
             <React.Fragment>
               {(() => {
                 try {
-                  return $props.text2;
+                  return $queries.getHeroContent.data.response.items[0].fields
+                    .description;
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -174,13 +175,28 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
             secondaryInteractions={"secondary"}
             text={(() => {
               try {
-                return $props.linkText;
+                return $queries.getHeroContent.data.response.items[0].fields
+                  .cta1Text;
               } catch (e) {
                 if (
                   e instanceof TypeError ||
                   e?.plasmicType === "PlasmicUndefinedDataError"
                 ) {
                   return undefined;
+                }
+                throw e;
+              }
+            })()}
+            url={(() => {
+              try {
+                return $queries.getHeroContent.data.response.items[0].fields
+                  .cta1link;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return `/membership/active`;
                 }
                 throw e;
               }

@@ -68,10 +68,12 @@
   .freeBox__ikA3 {
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
     justify-self: flex-start;
+    grid-column-start: 1 !important;
+    grid-column-end: -1 !important;
   }
 }
 .htmlContentfulHtmlLoader__yqom:global(.__wab_instance) {

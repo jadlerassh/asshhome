@@ -19,11 +19,13 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
+import ComponentMembershipQuicklinks from "../../ComponentMembershipQuicklinks"; // plasmic-import: O2TSODJiol19/component
+import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -109,6 +111,13 @@ function PlasmicActiveMembership__RenderFunc(props) {
             sty.root
           )}
         >
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__vSo3
+            )}
+          />
+
           <Stack__
             as={"div"}
             data-plasmic-name={"columns"}
@@ -135,6 +144,10 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 data-plasmic-name={"blockTanCtaBlock"}
                 data-plasmic-override={overrides.blockTanCtaBlock}
                 className={classNames("__wab_instance", sty.blockTanCtaBlock)}
+                linkText={``}
+                linkUrl={``}
+                text2={``}
+                title={"Tan CTA Block - Active Membership"}
               />
 
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -202,26 +215,37 @@ function PlasmicActiveMembership__RenderFunc(props) {
               })}
             </Stack__>
             <div className={classNames(projectcss.all, sty.column___86Tcy)}>
-              <ItemSectionTitleDescriptionItem
-                data-plasmic-name={"itemSectionTitleDescriptionItem"}
-                data-plasmic-override={
-                  overrides.itemSectionTitleDescriptionItem
-                }
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemSectionTitleDescriptionItem
-                )}
-                descriptionSection={``}
-                title={" "}
-              />
-
               <BlockQuoteBlock
                 data-plasmic-name={"blockQuoteBlock"}
                 data-plasmic-override={overrides.blockQuoteBlock}
                 className={classNames("__wab_instance", sty.blockQuoteBlock)}
               />
+
+              <ComponentMembershipQuicklinks
+                data-plasmic-name={"componentMembershipQuicklinks"}
+                data-plasmic-override={overrides.componentMembershipQuicklinks}
+                className={classNames(
+                  "__wab_instance",
+                  sty.componentMembershipQuicklinks
+                )}
+              />
             </div>
           </Stack__>
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__xlY9T
+            )}
+          />
+
+          <BlockAsshMissionBlueBlock
+            data-plasmic-name={"blockAsshMissionBlueBlock"}
+            data-plasmic-override={overrides.blockAsshMissionBlueBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockAsshMissionBlueBlock
+            )}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -236,8 +260,9 @@ const PlasmicDescendants = {
     "blockTanCtaBlock",
     "freeBox",
     "sectionAccordionSectionTemplate",
-    "itemSectionTitleDescriptionItem",
-    "blockQuoteBlock"
+    "blockQuoteBlock",
+    "componentMembershipQuicklinks",
+    "blockAsshMissionBlueBlock"
   ],
 
   columns: [
@@ -246,16 +271,17 @@ const PlasmicDescendants = {
     "blockTanCtaBlock",
     "freeBox",
     "sectionAccordionSectionTemplate",
-    "itemSectionTitleDescriptionItem",
-    "blockQuoteBlock"
+    "blockQuoteBlock",
+    "componentMembershipQuicklinks"
   ],
 
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockTanCtaBlock: ["blockTanCtaBlock"],
   freeBox: ["freeBox", "sectionAccordionSectionTemplate"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  blockQuoteBlock: ["blockQuoteBlock"]
+  blockQuoteBlock: ["blockQuoteBlock"],
+  componentMembershipQuicklinks: ["componentMembershipQuicklinks"],
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -297,10 +323,11 @@ export const PlasmicActiveMembership = Object.assign(
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
     ),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
+    componentMembershipQuicklinks: makeNodeComponent(
+      "componentMembershipQuicklinks"
+    ),
+    blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicActiveMembership
     internalVariantProps: PlasmicActiveMembership__VariantProps,
     internalArgProps: PlasmicActiveMembership__ArgProps,

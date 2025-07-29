@@ -227,48 +227,40 @@ function PlasmicSectionMidPageCtaSection__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-              <Stack__
-                as={"div"}
-                data-plasmic-name={"frame9"}
-                data-plasmic-override={overrides.frame9}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.frame9)}
-              >
-                <ButtonPrimary
-                  data-plasmic-name={"buttonPrimary"}
-                  data-plasmic-override={overrides.buttonPrimary}
-                  className={classNames("__wab_instance", sty.buttonPrimary)}
-                  darkInteractions={"dark"}
-                  text={(() => {
-                    try {
-                      return $queries.getHeroContent.data.response.items[0]
-                        .fields.cta1Text;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
+              <ButtonPrimary
+                data-plasmic-name={"buttonPrimary"}
+                data-plasmic-override={overrides.buttonPrimary}
+                className={classNames("__wab_instance", sty.buttonPrimary)}
+                darkInteractions={"dark"}
+                text={(() => {
+                  try {
+                    return $queries.getHeroContent.data.response.items[0].fields
+                      .cta1Text;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
                     }
-                  })()}
-                  url={(() => {
-                    try {
-                      return $queries.getHeroContent.data.response.items[0]
-                        .fields.cta1Link;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "https://www.assh.org";
-                      }
-                      throw e;
+                    throw e;
+                  }
+                })()}
+                url={(() => {
+                  try {
+                    return $queries.getHeroContent.data.response.items[0].fields
+                      .cta1Link;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "https://www.assh.org";
                     }
-                  })()}
-                />
-              </Stack__>
+                    throw e;
+                  }
+                })()}
+              />
             </Stack__>
           </div>
         </Stack__>
@@ -286,7 +278,6 @@ const PlasmicDescendants = {
     "frame8",
     "h2",
     "text",
-    "frame9",
     "buttonPrimary"
   ],
 
@@ -297,16 +288,14 @@ const PlasmicDescendants = {
     "frame8",
     "h2",
     "text",
-    "frame9",
     "buttonPrimary"
   ],
 
   embedHtml: ["embedHtml"],
-  frame7: ["frame7", "frame8", "h2", "text", "frame9", "buttonPrimary"],
+  frame7: ["frame7", "frame8", "h2", "text", "buttonPrimary"],
   frame8: ["frame8", "h2"],
   h2: ["h2"],
   text: ["text"],
-  frame9: ["frame9", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"]
 };
 
@@ -349,7 +338,6 @@ export const PlasmicSectionMidPageCtaSection = Object.assign(
     frame8: makeNodeComponent("frame8"),
     h2: makeNodeComponent("h2"),
     text: makeNodeComponent("text"),
-    frame9: makeNodeComponent("frame9"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicSectionMidPageCtaSection
     internalVariantProps: PlasmicSectionMidPageCtaSection__VariantProps,

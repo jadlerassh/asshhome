@@ -90,7 +90,7 @@
   }
 }
 .htmlContentfulHtmlLoader:global(.__wab_instance) {
-  max-width: 100%;
+  max-width: 800px;
 }
 .frame4 {
   width: 100%;
@@ -98,6 +98,8 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  margin-top: calc(0px + 50px) !important;
+  padding-top: 0px;
   min-width: 0;
 }
 .frame4 > :global(.__wab_flex-container) {
@@ -117,6 +119,11 @@
   > picture
   > img {
   margin-top: 16px;
+}
+@media (max-width: 1440px) {
+  .frame4 {
+    margin-top: calc(0px + 50px) !important;
+  }
 }
 .columns {
   display: flex;

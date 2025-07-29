@@ -196,6 +196,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             "quicklinkOption",
             "quicklinkOption"
           ),
+          [sty.rootsecondaryInteractions_brandBlue2]: hasVariant(
+            $state,
+            "secondaryInteractions",
+            "brandBlue2"
+          ),
           [sty.rootsecondaryInteractions_secondary]: hasVariant(
             $state,
             "secondaryInteractions",
@@ -261,6 +266,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "quicklinkOption",
               "quicklinkOption"
+            ),
+            [sty.buttonHighlight2secondaryInteractions_brandBlue2]: hasVariant(
+              $state,
+              "secondaryInteractions",
+              "brandBlue2"
             ),
             [sty.buttonHighlight2secondaryInteractions_secondary]: hasVariant(
               $state,
@@ -329,6 +339,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "quicklinkOption",
               "quicklinkOption"
             ),
+            [sty.icon12X12secondaryInteractions_brandBlue2]: hasVariant(
+              $state,
+              "secondaryInteractions",
+              "brandBlue2"
+            ),
             [sty.icon12X12secondaryInteractions_secondary]: hasVariant(
               $state,
               "secondaryInteractions",
@@ -368,6 +383,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "quicklinkOption",
                 "quicklinkOption"
+              ),
+              [sty.svgsecondaryInteractions_brandBlue2__gs5CpAa0Hf]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "brandBlue2"
               ),
               [sty.svgtextArrowButton__gs5CpuQaqx]: hasVariant(
                 $state,
@@ -428,6 +448,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "quicklinkOption",
                 "quicklinkOption"
+              ),
+              [sty.text2secondaryInteractions_brandBlue2]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "brandBlue2"
               ),
               [sty.text2secondaryInteractions_secondary]: hasVariant(
                 $state,
@@ -582,6 +607,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "quicklinkOption",
                 "quicklinkOption"
               ),
+              [sty.icon12X122secondaryInteractions_brandBlue2]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "brandBlue2"
+              ),
               [sty.icon12X122textArrowButton]: hasVariant(
                 $state,
                 "textArrowButton",
@@ -594,7 +624,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.svg__zDfRv, {
                 [sty.svgfullWidthBlueInteractions_brandBlue__zDfRvudmXr]:
-                  hasVariant($state, "fullWidthBlueInteractions", "brandBlue")
+                  hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
+                [sty.svgsecondaryInteractions_brandBlue2__zDfRvAa0Hf]:
+                  hasVariant($state, "secondaryInteractions", "brandBlue2")
               })}
               role={"img"}
             />

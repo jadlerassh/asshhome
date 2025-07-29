@@ -381,21 +381,21 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               </div>
             </Stack__>
           </Stack__>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"Membership Overview - Mid-page CTA"}
+          />
+
           <Stack__
             as={"div"}
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__dwTGs)}
           >
-            <SectionMidPageCtaSection
-              data-plasmic-name={"sectionMidPageCtaSection"}
-              data-plasmic-override={overrides.sectionMidPageCtaSection}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionMidPageCtaSection
-              )}
-              title={"Membership Overview - Mid-page CTA"}
-            />
-
             <CardListMemberNewsWithDescription
               data-plasmic-name={"cardListMemberNewsWithDescription"}
               data-plasmic-override={
