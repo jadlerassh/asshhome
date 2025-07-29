@@ -27,6 +27,7 @@
   flex-direction: column;
   padding-top: 2px;
   width: 100%;
+  padding-bottom: 0px;
   min-width: 0;
 }
 .frame3 > :global(.__wab_flex-container) {
@@ -170,6 +171,7 @@
   line-height: 18px;
   color: rgba(255, 255, 255, 1);
   position: relative;
+  padding-left: 0px;
 }
 .svg__upDc7 {
   object-fit: cover;

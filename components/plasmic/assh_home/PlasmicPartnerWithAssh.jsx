@@ -362,6 +362,19 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
               title={"Partner with ASSH - Partner Program"}
             />
           </Stack__>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__yHrp)}
+          >
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader__q48Rk
+              )}
+              title={"Our Partners"}
+            />
+          </Stack__>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__i8GC)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

@@ -755,7 +755,13 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   projectcss.all,
                   projectcss.__wab_text,
                   sty.text___8H8Tm,
+                  " plasmicdropdpwn menu_dropdownexplore",
                   {
+                    [sty.textmenus_dropdown1___8H8TmuiCmH]: hasVariant(
+                      $state,
+                      "menus",
+                      "dropdown1"
+                    ),
                     [sty.textmenus_dropdownexplore___8H8TmHsxwy]: hasVariant(
                       $state,
                       "menus",
@@ -1518,6 +1524,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           hasVariant($state, "menus", "dropdown1")
                       }
                     )}
+                    classname={
+                      hasVariant($state, "menus", "dropdown1")
+                        ? "plasmicdropdpwn menu_dropdown1"
+                        : "plasmicdropdpwn menu_dropdown1"
+                    }
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -1619,6 +1630,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem__udzYw
                     )}
+                    classname={"plasmicdropdpwn menu_dropdown2"}
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -1724,6 +1736,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           hasVariant($state, "menus", "dropdown3")
                       }
                     )}
+                    classname={"plasmicdropdpwn menu_dropdown3"}
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -1825,6 +1838,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem__oYiNw
                     )}
+                    classname={"plasmicdropdpwn menu_dropdown4"}
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -1926,6 +1940,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem__t8Qrv
                     )}
+                    classname={"plasmicdropdpwn menu_dropdown5"}
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -2027,6 +2042,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem__mu01A
                     )}
+                    classname={"plasmicdropdpwn menu_dropdown6"}
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -2128,6 +2144,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "__wab_instance",
                       sty.itemMegaMenuItem__kBa48
                     )}
+                    classname={"plasmicdropdpwn menu_dropdown7"}
                     label={(() => {
                       try {
                         return currentItem.fields.label;
@@ -2227,8 +2244,17 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   <ItemMegaMenuItem
                     className={classNames(
                       "__wab_instance",
-                      sty.itemMegaMenuItem___8S1Pr
+                      sty.itemMegaMenuItem___8S1Pr,
+                      {
+                        [sty.itemMegaMenuItemmenus_dropdownresources___8S1PRl7QVr]:
+                          hasVariant($state, "menus", "dropdownresources")
+                      }
                     )}
+                    classname={
+                      hasVariant($state, "menus", "dropdownresources")
+                        ? "plasmicdropdpwn menu_dropdownresources"
+                        : "plasmicdropdpwn menu_dropdownresources"
+                    }
                     label={(() => {
                       try {
                         return currentItem.fields.label;

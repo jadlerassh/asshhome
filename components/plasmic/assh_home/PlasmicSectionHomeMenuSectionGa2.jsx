@@ -800,7 +800,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                   sty.text__n5Dmg,
                   hasVariant($state, "menus", "dropdown1")
                     ? "dropdownexplore"
-                    : "dropdownmenu_dropdownexplore",
+                    : " plasmicdropdpwn menu_dropdownexplore",
                   {
                     [sty.textmenus_dropdown1__n5Dmgslrbi]: hasVariant(
                       $state,

@@ -122,6 +122,7 @@ function PlasmicForPatients__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
+            title={"Hero: For Patients - Title Card"}
           />
 
           <ItemSectionTitleDescriptionItem
@@ -166,6 +167,7 @@ function PlasmicForPatients__RenderFunc(props) {
               "__wab_instance",
               sty.sectionMidPageCtaSection
             )}
+            title={"For Patients - Mid-page CTA"}
           />
 
           <Stack__

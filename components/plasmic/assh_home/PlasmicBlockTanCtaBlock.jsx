@@ -19,6 +19,7 @@ import {
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -34,7 +35,8 @@ export const PlasmicBlockTanCtaBlock__VariantProps = new Array();
 export const PlasmicBlockTanCtaBlock__ArgProps = new Array(
   "text2",
   "linkText",
-  "linkUrl"
+  "linkUrl",
+  "title"
 );
 
 const $$ = {};
@@ -55,7 +57,8 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
           text2:
             "The 2025 Active Membership Application submission deadline is open until February 3, 2025.",
           linkText: "Apply for Active Membership",
-          linkUrl: "https://www.assh.org"
+          linkUrl: "https://www.assh.org",
+          title: "Active Membership- Button CTA"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -71,6 +74,7 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -87,9 +91,27 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
-    $queries: {},
+    $queries: $queries,
     $refs
   });
+  const new$Queries = {
+    getHeroContent: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "1774e4b2-fd8d-4d5b-b65d-0de52572490d",
+        userArgs: {
+          params: [$props.title]
+        },
+        cacheKey: `plasmic.$.1774e4b2-fd8d-4d5b-b65d-0de52572490d.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsdjBtUr72ZExV()
   });

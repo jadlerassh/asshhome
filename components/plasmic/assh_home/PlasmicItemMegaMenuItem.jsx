@@ -36,7 +36,8 @@ export const PlasmicItemMegaMenuItem__VariantProps = new Array();
 export const PlasmicItemMegaMenuItem__ArgProps = new Array(
   "label",
   "url",
-  "showChevron"
+  "showChevron",
+  "classname"
 );
 
 const $$ = {};
@@ -56,7 +57,8 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
         {
           label: "Label Text",
           url: "https://www.assh.org",
-          showChevron: true
+          showChevron: true,
+          classname: "plasmicdropdpwn"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -140,7 +142,20 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
           className={classNames(
             projectcss.all,
             projectcss.__wab_text,
-            sty.navigationItem
+            sty.navigationItem,
+            (() => {
+              try {
+                return $props.classname;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()
           )}
         >
           <React.Fragment>
