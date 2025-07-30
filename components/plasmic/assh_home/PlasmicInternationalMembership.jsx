@@ -24,7 +24,7 @@ import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmi
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
-import BlockMemberRenewDashboard from "../../BlockMemberRenewDashboard"; // plasmic-import: O2TSODJiol19/component
+import BlockMemberDashboard from "../../BlockMemberDashboard"; // plasmic-import: O2TSODJiol19/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -150,9 +150,11 @@ function PlasmicInternationalMembership__RenderFunc(props) {
                 title={"Tan CTA Block - International Membership"}
               />
 
-              <div
+              <Stack__
+                as={"div"}
                 data-plasmic-name={"freeBox"}
                 data-plasmic-override={overrides.freeBox}
+                hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox)}
               >
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -212,7 +214,7 @@ function PlasmicInternationalMembership__RenderFunc(props) {
                     />
                   );
                 })}
-              </div>
+              </Stack__>
             </Stack__>
             <div className={classNames(projectcss.all, sty.column__qnqnZ)}>
               <BlockQuoteBlock
@@ -221,12 +223,12 @@ function PlasmicInternationalMembership__RenderFunc(props) {
                 className={classNames("__wab_instance", sty.blockQuoteBlock)}
               />
 
-              <BlockMemberRenewDashboard
-                data-plasmic-name={"blockMemberRenewDashboard"}
-                data-plasmic-override={overrides.blockMemberRenewDashboard}
+              <BlockMemberDashboard
+                data-plasmic-name={"blockMemberDashboard"}
+                data-plasmic-override={overrides.blockMemberDashboard}
                 className={classNames(
                   "__wab_instance",
-                  sty.blockMemberRenewDashboard
+                  sty.blockMemberDashboard
                 )}
               />
             </div>
@@ -261,7 +263,7 @@ const PlasmicDescendants = {
     "freeBox",
     "sectionAccordionSectionTemplate",
     "blockQuoteBlock",
-    "blockMemberRenewDashboard",
+    "blockMemberDashboard",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -272,7 +274,7 @@ const PlasmicDescendants = {
     "freeBox",
     "sectionAccordionSectionTemplate",
     "blockQuoteBlock",
-    "blockMemberRenewDashboard"
+    "blockMemberDashboard"
   ],
 
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
@@ -280,7 +282,7 @@ const PlasmicDescendants = {
   freeBox: ["freeBox", "sectionAccordionSectionTemplate"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   blockQuoteBlock: ["blockQuoteBlock"],
-  blockMemberRenewDashboard: ["blockMemberRenewDashboard"],
+  blockMemberDashboard: ["blockMemberDashboard"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -324,7 +326,7 @@ export const PlasmicInternationalMembership = Object.assign(
       "sectionAccordionSectionTemplate"
     ),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
-    blockMemberRenewDashboard: makeNodeComponent("blockMemberRenewDashboard"),
+    blockMemberDashboard: makeNodeComponent("blockMemberDashboard"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicInternationalMembership
     internalVariantProps: PlasmicInternationalMembership__VariantProps,

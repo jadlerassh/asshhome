@@ -5,23 +5,23 @@ import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-we
 import GlobalContextsProvider from "../../components/plasmic/assh_home/PlasmicGlobalContextsProvider";
 import { UnnamedGlobalGroupOfVariantsContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants";
 import { UnnamedGlobalGroupOfVariants2ContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2";
-import { PlasmicYoungInternational } from "../../components/plasmic/assh_home/PlasmicYoungInternational";
+import { PlasmicYoungInternationalMembership } from "../../components/plasmic/assh_home/PlasmicYoungInternationalMembership";
 import { useRouter } from "next/router";
 
-function YoungInternational() {
-  // Use PlasmicYoungInternational to render this component as it was
+function YoungInternationalMembership() {
+  // Use PlasmicYoungInternationalMembership to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicYoungInternational are:
+  // Props you can pass into PlasmicYoungInternationalMembership are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicYoungInternational is wrapped by your project's global
+  // By default, PlasmicYoungInternationalMembership is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
@@ -34,7 +34,7 @@ function YoungInternational() {
             params={useRouter()?.query}
             query={useRouter()?.query}
           >
-            <PlasmicYoungInternational />
+            <PlasmicYoungInternationalMembership />
           </PageParamsProvider__>
         </GlobalContextsProvider>
       </UnnamedGlobalGroupOfVariantsContextProvider>
@@ -42,4 +42,4 @@ function YoungInternational() {
   );
 }
 
-export default YoungInternational;
+export default YoungInternationalMembership;

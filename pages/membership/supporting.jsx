@@ -5,23 +5,23 @@ import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-we
 import GlobalContextsProvider from "../../components/plasmic/assh_home/PlasmicGlobalContextsProvider";
 import { UnnamedGlobalGroupOfVariantsContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants";
 import { UnnamedGlobalGroupOfVariants2ContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2";
-import { PlasmicSupporting } from "../../components/plasmic/assh_home/PlasmicSupporting";
+import { PlasmicSupportingMembership } from "../../components/plasmic/assh_home/PlasmicSupportingMembership";
 import { useRouter } from "next/router";
 
-function Supporting() {
-  // Use PlasmicSupporting to render this component as it was
+function SupportingMembership() {
+  // Use PlasmicSupportingMembership to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicSupporting are:
+  // Props you can pass into PlasmicSupportingMembership are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicSupporting is wrapped by your project's global
+  // By default, PlasmicSupportingMembership is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
@@ -34,7 +34,7 @@ function Supporting() {
             params={useRouter()?.query}
             query={useRouter()?.query}
           >
-            <PlasmicSupporting />
+            <PlasmicSupportingMembership />
           </PageParamsProvider__>
         </GlobalContextsProvider>
       </UnnamedGlobalGroupOfVariantsContextProvider>
@@ -42,4 +42,4 @@ function Supporting() {
   );
 }
 
-export default Supporting;
+export default SupportingMembership;

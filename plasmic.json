@@ -2682,20 +2682,6 @@
           "path": "/committees/committees-details-2"
         },
         {
-          "id": "5WC8tr3Or6w0",
-          "name": "Supporting",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSupporting.jsx",
-          "importSpec": {
-            "modulePath": "../pages/membership/supporting.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSupporting.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/membership/supporting"
-        },
-        {
           "id": "FGT9utqXA6R0",
           "name": "ComponentQuicklinks",
           "type": "managed",
@@ -2764,29 +2750,43 @@
           "path": "/membership/international"
         },
         {
-          "id": "aPhMMkbvb3aC",
-          "name": "YoungInternational",
+          "id": "5WC8tr3Or6w0",
+          "name": "SupportingMembership",
           "type": "managed",
           "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicYoungInternational.jsx",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSupportingMembership.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/supporting.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSupportingMembership.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/supporting"
+        },
+        {
+          "id": "aPhMMkbvb3aC",
+          "name": "YoungInternationalMembership",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicYoungInternationalMembership.jsx",
           "importSpec": {
             "modulePath": "../pages/membership/young-international.jsx"
           },
-          "cssFilePath": "plasmic/assh_home/PlasmicYoungInternational.module.css",
+          "cssFilePath": "plasmic/assh_home/PlasmicYoungInternationalMembership.module.css",
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/membership/young-international"
         },
         {
           "id": "O2TSODJiol19",
-          "name": "BlockMemberRenewDashboard",
+          "name": "BlockMemberDashboard",
           "type": "managed",
           "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockMemberRenewDashboard.jsx",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockMemberDashboard.jsx",
           "importSpec": {
-            "modulePath": "BlockMemberRenewDashboard.jsx"
+            "modulePath": "BlockMemberDashboard.jsx"
           },
-          "cssFilePath": "plasmic/assh_home/PlasmicBlockMemberRenewDashboard.module.css",
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockMemberDashboard.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
