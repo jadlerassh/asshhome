@@ -129,7 +129,7 @@
   font-weight: 600;
   letter-spacing: 0em;
   line-height: 18px;
-  color: rgba(0, 0, 0, 1);
+  color: #313337;
   align-self: stretch;
   position: relative;
 }
@@ -164,7 +164,7 @@
   font-weight: 600;
   letter-spacing: 0em;
   line-height: 28px;
-  color: rgba(0, 0, 0, 1);
+  color: #313337;
   align-self: stretch;
   position: relative;
   transition-property: color;
@@ -208,7 +208,7 @@
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 24px;
-  color: rgba(0, 0, 0, 1);
+  color: #313337;
   align-self: stretch;
   position: relative;
   transition-property: color;
@@ -219,7 +219,7 @@
   -webkit-transition-duration: 0.3s;
 }
 .root:hover .text__ktlV {
-  color: var(--token-YOr-x91EUcQe);
+  color: #313337;
 }
 .freeBox {
   display: flex;

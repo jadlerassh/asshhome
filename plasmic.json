@@ -2789,6 +2789,20 @@
           "cssFilePath": "plasmic/assh_home/PlasmicBlockMemberDashboard.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "3vxtnKv3ZtqD",
+          "name": "InMemoriam",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicInMemoriam.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/in-memoriam.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicInMemoriam.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/in-memoriam"
         }
       ],
       "icons": [

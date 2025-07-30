@@ -211,46 +211,26 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             title={"Hero: Membership Overview - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem__qrBMv
-            )}
-            descriptionSection={``}
-            title={"Why Join ASSH?"}
-          />
-
-          <div className={classNames(projectcss.all, sty.freeBox___46LsI)}>
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader__adOak
-              )}
-              title={"Membership Overview - Why Join ASSH?"}
-            />
-          </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__rT0LT)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox___1B1Yh)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem__sfsZm
+                sty.itemSectionTitleDescriptionItem__qrBMv
               )}
               descriptionSection={``}
-              title={"Membership Benefits at a Glance"}
+              title={"Why Join ASSH?"}
             />
 
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader___6Geyx
-              )}
-              title={"Membership Overview - Benefits at a Glance Table"}
-            />
-          </Stack__>
+            <div className={classNames(projectcss.all, sty.freeBox___46LsI)}>
+              <HtmlContentfulHtmlLoader
+                className={classNames(
+                  "__wab_instance",
+                  sty.htmlContentfulHtmlLoader__adOak
+                )}
+                title={"Membership Overview - Why Join ASSH?"}
+              />
+            </div>
+          </div>
           <Stack__
             as={"div"}
             hasGap={true}
@@ -304,7 +284,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
                   }
                   heading={"Membership Type"}
-                  linkUrl={"https://www.assh.org/membership/active-member"}
+                  linkUrl={"/membership/active"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__jMDoN)}>
@@ -318,7 +298,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     "Surgeons within 3 years of completing residency, current fellows, and practicing surgeons up to 5 years."
                   }
                   heading={"Membership Type"}
-                  linkUrl={"https://www.assh.org/membership/candidate-member"}
+                  linkUrl={"/membership/candidate"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__wzcnh)}>
@@ -332,9 +312,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     "Hand surgeons residing outside of the U.S. who have been in\u00a0practice minimum\u00a05 years."
                   }
                   heading={"Membership Type"}
-                  linkUrl={
-                    "https://www.assh.org/membership/international-member"
-                  }
+                  linkUrl={"/membership/international"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__lXl7W)}>
@@ -348,7 +326,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     "Surgeons\u00a0within 5\u00a0years of completing\u00a0a post-graduate program in disorders of the upper limbs."
                   }
                   heading={"Membership Type"}
-                  linkUrl={"https://www.assh.org/membership/active-member"}
+                  linkUrl={"/membership/young-international"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__za2Y)}>
@@ -362,7 +340,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     "Fully licensed allied healthcare professionals (i.e., hand therapist, OT, PT, PA, NP or RN)."
                   }
                   heading={"Membership Type"}
-                  linkUrl={"https://www.assh.org/membership/active-member"}
+                  linkUrl={"/membership/affiliate"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__pnFh0)}>
@@ -376,7 +354,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                     "Non-surgeons who have contributed to the understanding and/or treatment of disorders of the upper limbs."
                   }
                   heading={"Membership Type"}
-                  linkUrl={"https://www.assh.org/membership/active-member"}
+                  linkUrl={"/membership/supporting-member"}
                 />
               </div>
             </Stack__>
@@ -414,6 +392,28 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                 "__wab_instance",
                 sty.blockQuicklinksTanBox
               )}
+            />
+          </Stack__>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__rT0LT)}
+          >
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem__sfsZm
+              )}
+              descriptionSection={``}
+              title={"Membership Benefits at a Glance"}
+            />
+
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader___6Geyx
+              )}
+              title={"Membership Overview - Benefits at a Glance Table"}
             />
           </Stack__>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__nVOmJ)} />
