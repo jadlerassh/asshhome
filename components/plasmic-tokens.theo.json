@@ -2801,6 +2801,16 @@
       }
     },
     {
+      "name": "Unnamed Style Token 6",
+      "type": "color",
+      "value": "#008E84",
+      "category": "color",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "7sC8F62mRz_G"
+      }
+    },
+    {
       "name": "Warning/Warning",
       "type": "color",
       "value": "#FACC15",

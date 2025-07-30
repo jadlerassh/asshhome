@@ -272,6 +272,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "secondaryInteractions",
               "brandBlue2"
             ),
+            [sty.buttonHighlight2secondaryInteractions_hover]: hasVariant(
+              $state,
+              "secondaryInteractions",
+              "hover"
+            ),
             [sty.buttonHighlight2secondaryInteractions_secondary]: hasVariant(
               $state,
               "secondaryInteractions",
@@ -343,6 +348,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "secondaryInteractions",
               "brandBlue2"
+            ),
+            [sty.icon12X12secondaryInteractions_hover]: hasVariant(
+              $state,
+              "secondaryInteractions",
+              "hover"
             ),
             [sty.icon12X12secondaryInteractions_secondary]: hasVariant(
               $state,
@@ -453,6 +463,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "secondaryInteractions",
                 "brandBlue2"
+              ),
+              [sty.text2secondaryInteractions_hover]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "hover"
               ),
               [sty.text2secondaryInteractions_secondary]: hasVariant(
                 $state,

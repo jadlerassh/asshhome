@@ -16,7 +16,6 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -78,13 +77,17 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
     >
       <div className={classNames(projectcss.all, sty.freeBox__kZy8)}>
         <div className={classNames(projectcss.all, sty.freeBox__aWu3R)}>
-          <Embed
-            data-plasmic-name={"embedHtml"}
-            data-plasmic-override={overrides.embedHtml}
-            className={classNames("__wab_instance", sty.embedHtml)}
-            code={"<p>Already a Member?</p>"}
-          />
-
+          <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text
+            )}
+          >
+            {"Already a Member?"}
+          </div>
           <ButtonPrimary
             className={classNames("__wab_instance", sty.buttonPrimary___4Ci2N)}
             quicklinkOption={true}
@@ -103,8 +106,8 @@ function PlasmicComponentMembershipQuicklinks__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "embedHtml"],
-  embedHtml: ["embedHtml"]
+  root: ["root", "text"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -140,7 +143,7 @@ export const PlasmicComponentMembershipQuicklinks = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    embedHtml: makeNodeComponent("embedHtml"),
+    text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicComponentMembershipQuicklinks
     internalVariantProps: PlasmicComponentMembershipQuicklinks__VariantProps,
     internalArgProps: PlasmicComponentMembershipQuicklinks__ArgProps

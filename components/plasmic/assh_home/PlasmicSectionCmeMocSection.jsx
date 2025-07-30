@@ -267,14 +267,7 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
               )}
               title={"Education - CME & MOC Copy"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            data-plasmic-name={"frame4"}
-            data-plasmic-override={overrides.frame4}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.frame4)}
-          >
+
             <Stack__
               as={"div"}
               data-plasmic-name={"columns"}
@@ -379,7 +372,6 @@ const PlasmicDescendants = {
     "frame2",
     "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
-    "frame4",
     "columns",
     "itemExternalLinkCardItem",
     "sectionQuicklinksTable"
@@ -391,7 +383,6 @@ const PlasmicDescendants = {
     "frame2",
     "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
-    "frame4",
     "columns",
     "itemExternalLinkCardItem",
     "sectionQuicklinksTable"
@@ -402,7 +393,6 @@ const PlasmicDescendants = {
     "frame2",
     "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
-    "frame4",
     "columns",
     "itemExternalLinkCardItem",
     "sectionQuicklinksTable"
@@ -411,12 +401,13 @@ const PlasmicDescendants = {
   frame2: [
     "frame2",
     "itemSectionTitleDescriptionItem",
-    "htmlContentfulHtmlLoader"
+    "htmlContentfulHtmlLoader",
+    "columns",
+    "itemExternalLinkCardItem"
   ],
 
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
-  frame4: ["frame4", "columns", "itemExternalLinkCardItem"],
   columns: ["columns", "itemExternalLinkCardItem"],
   itemExternalLinkCardItem: ["itemExternalLinkCardItem"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"]
@@ -461,7 +452,6 @@ export const PlasmicSectionCmeMocSection = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
-    frame4: makeNodeComponent("frame4"),
     columns: makeNodeComponent("columns"),
     itemExternalLinkCardItem: makeNodeComponent("itemExternalLinkCardItem"),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),

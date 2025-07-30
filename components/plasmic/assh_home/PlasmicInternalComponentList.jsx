@@ -12,18 +12,38 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
   generateStateOnChangeProp,
-  generateStateValueProp,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
 import SectionInternalHeroTitleSectionV1 from "../../SectionInternalHeroTitleSectionV1"; // plasmic-import: 8dary0IReKTd/component
 import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
+import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
+import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
+import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
+import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
+import ComponentMembershipQuicklinks from "../../ComponentMembershipQuicklinks"; // plasmic-import: O2TSODJiol19/component
+import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
+import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
+import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
+import BlockHr from "../../BlockHr"; // plasmic-import: VNr8286wioLR/component
+import ComponentVerticalPageList from "../../ComponentVerticalPageList"; // plasmic-import: _YaPVT-9kvvZ/component
+import ComponentTabSet from "../../ComponentTabSet"; // plasmic-import: jXQ3iNzBSIE_/component
+import ItemExternalLinkCardItem from "../../ItemExternalLinkCardItem"; // plasmic-import: ie8FiHmZHhtB/component
+import ItemExternalLinkCardItemWithLogo from "../../ItemExternalLinkCardItemWithLogo"; // plasmic-import: rLtSCz5xy5NR/component
+import BlockTanInformationLogoBlock from "../../BlockTanInformationLogoBlock"; // plasmic-import: KjbcRISpC18Z/component
+import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
+import SectionCardListOneImageCard from "../../SectionCardListOneImageCard"; // plasmic-import: ye2KKK7EZOXw/component
+import SectionMidHomepageMembershipInfoWithQuicklinks from "../../SectionMidHomepageMembershipInfoWithQuicklinks"; // plasmic-import: XmsGLZyds9Te/component
+import SectionFeaturedEducation from "../../SectionFeaturedEducation"; // plasmic-import: yRPTvlAZWP7M/component
+import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -68,10 +88,10 @@ function PlasmicInternalComponentList__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "sectionHomeMenuSection.openDropdown",
+        path: "componentTabSet.activeTab",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
 
@@ -110,39 +130,6 @@ function PlasmicInternalComponentList__RenderFunc(props) {
             sty.root
           )}
         >
-          <h1
-            className={classNames(
-              projectcss.all,
-              projectcss.h1,
-              projectcss.__wab_text,
-              sty.h1__maZh4
-            )}
-          >
-            {"SECTION: ASSH Home Menu"}
-          </h1>
-          <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
-            onOpenDropdownChange={async (...eventArgs) => {
-              generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
-                "openDropdown"
-              ]).apply(null, eventArgs);
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
-              "openDropdown"
-            ])}
-          />
-
           <h1
             className={classNames(
               projectcss.all,
@@ -199,6 +186,462 @@ function PlasmicInternalComponentList__RenderFunc(props) {
               sty.sectionUpcomingCouresEventsSection
             )}
           />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__g4Qm3
+            )}
+          >
+            {"SECTION: Quicklinks Table"}
+          </h1>
+          <SectionQuicklinksTable
+            data-plasmic-name={"sectionQuicklinksTable"}
+            data-plasmic-override={overrides.sectionQuicklinksTable}
+            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
+            columns={"_4Column"}
+            name={"ASSH About Quicklinks"}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__psjF1
+            )}
+          >
+            {"SECTION: Mid-page CTA Section"}
+          </h1>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"About Overview - Mid-page CTA"}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__iykmT
+            )}
+          >
+            {"Block: Tan CTA Block"}
+          </h1>
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <BlockTanCtaBlock
+              data-plasmic-name={"blockTanCtaBlock"}
+              data-plasmic-override={overrides.blockTanCtaBlock}
+              className={classNames("__wab_instance", sty.blockTanCtaBlock)}
+              linkText={``}
+              linkUrl={``}
+              text2={``}
+              title={"Tan CTA Block - Active Membership"}
+            />
+          </div>
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__uYmq
+            )}
+          >
+            {"Block: Quote Block"}
+          </h1>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.columns___26Xdm)}
+          >
+            <div className={classNames(projectcss.all, sty.column__jaAKx)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___8Rkz6
+                )}
+              >
+                {"Full"}
+              </div>
+              <BlockQuoteBlock
+                className={classNames(
+                  "__wab_instance",
+                  sty.blockQuoteBlock__nVxG
+                )}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.column__sivFv)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__u2NUx
+                )}
+              >
+                {"Single Line"}
+              </div>
+              <BlockQuoteBlock
+                className={classNames(
+                  "__wab_instance",
+                  sty.blockQuoteBlock___05XjI
+                )}
+                quote={"singleLine"}
+              />
+            </div>
+          </Stack__>
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__niw6A
+            )}
+          >
+            {"Section: Accordion Section"}
+          </h1>
+          <SectionAccordionSectionTemplate
+            data-plasmic-name={"sectionAccordionSectionTemplate"}
+            data-plasmic-override={overrides.sectionAccordionSectionTemplate}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAccordionSectionTemplate
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__ztlMy
+            )}
+          >
+            {"Component - membership quicklinks"}
+          </h1>
+          <ComponentMembershipQuicklinks
+            data-plasmic-name={"componentMembershipQuicklinks"}
+            data-plasmic-override={overrides.componentMembershipQuicklinks}
+            className={classNames(
+              "__wab_instance",
+              sty.componentMembershipQuicklinks
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__nAiqZ
+            )}
+          >
+            {"Checkbox section"}
+          </h1>
+          <HtmlContentfulHtmlLoader
+            data-plasmic-name={"htmlContentfulHtmlLoader"}
+            data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+            className={classNames(
+              "__wab_instance",
+              sty.htmlContentfulHtmlLoader
+            )}
+            title={"Advocacy Overview - Supporting Hand Surgery Community"}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1___7Aav
+            )}
+          >
+            {"Block - Article Card List (3 examples)"}
+          </h1>
+          <BlockArticleCardList
+            className={classNames(
+              "__wab_instance",
+              sty.blockArticleCardList__qQ2A8
+            )}
+            name={"Advocacy Overview: Current Issues Links"}
+          />
+
+          <BlockArticleCardList
+            className={classNames(
+              "__wab_instance",
+              sty.blockArticleCardList__stNTq
+            )}
+            name={"Advocacy Overview: News & Updates Links"}
+          />
+
+          <CardListLatestAsshNewsCardList
+            data-plasmic-name={"cardListLatestAsshNewsCardList"}
+            data-plasmic-override={overrides.cardListLatestAsshNewsCardList}
+            className={classNames(
+              "__wab_instance",
+              sty.cardListLatestAsshNewsCardList
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__quqPy
+            )}
+          >
+            {"Section: Mid-page left-right section"}
+          </h1>
+          <SectionMidPageLeftRightSection
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageLeftRightSection___7Ivr4
+            )}
+            leftOrRight={"left"}
+          />
+
+          <BlockHr
+            data-plasmic-name={"blockHr"}
+            data-plasmic-override={overrides.blockHr}
+            className={classNames("__wab_instance", sty.blockHr)}
+          />
+
+          <SectionMidPageLeftRightSection
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageLeftRightSection___9S7L
+            )}
+            leftOrRight={"right"}
+            title={"Hero: Become a Hand Surgeon - Job Market for Hand Surgeons"}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__w1Vjj
+            )}
+          >
+            {"Component: Vertical Page List"}
+          </h1>
+          <ComponentVerticalPageList
+            data-plasmic-name={"componentVerticalPageList"}
+            data-plasmic-override={overrides.componentVerticalPageList}
+            className={classNames(
+              "__wab_instance",
+              sty.componentVerticalPageList
+            )}
+            pagePath={(() => {
+              try {
+                return $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__rHv3G
+            )}
+          >
+            {"Component: Tab Set"}
+          </h1>
+          <ComponentTabSet
+            data-plasmic-name={"componentTabSet"}
+            data-plasmic-override={overrides.componentTabSet}
+            className={classNames("__wab_instance", sty.componentTabSet)}
+            onActiveTabChange={async (...eventArgs) => {
+              generateStateOnChangeProp($state, [
+                "componentTabSet",
+                "activeTab"
+              ]).apply(null, eventArgs);
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__ra8DO
+            )}
+          >
+            {"External Link Card Item & External Link Card Item with Logo"}
+          </h1>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.columns__oOxg6)}
+          >
+            <div className={classNames(projectcss.all, sty.column__mtrE6)}>
+              <ItemExternalLinkCardItem
+                data-plasmic-name={"itemExternalLinkCardItem"}
+                data-plasmic-override={overrides.itemExternalLinkCardItem}
+                className={classNames(
+                  "__wab_instance",
+                  sty.itemExternalLinkCardItem
+                )}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.column__kpNLm)} />
+            <div className={classNames(projectcss.all, sty.column__zhPxl)}>
+              <ItemExternalLinkCardItemWithLogo
+                data-plasmic-name={"itemExternalLinkCardItemWithLogo"}
+                data-plasmic-override={
+                  overrides.itemExternalLinkCardItemWithLogo
+                }
+                className={classNames(
+                  "__wab_instance",
+                  sty.itemExternalLinkCardItemWithLogo
+                )}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.column___43E38)} />
+          </Stack__>
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__lvWU
+            )}
+          >
+            {"Block - Tan information logo block"}
+          </h1>
+          <BlockTanInformationLogoBlock
+            data-plasmic-name={"blockTanInformationLogoBlock"}
+            data-plasmic-override={overrides.blockTanInformationLogoBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockTanInformationLogoBlock
+            )}
+            desc={``}
+            title={"Education Overview - Tan information logo block"}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__zySbz
+            )}
+          >
+            {"Block - Publication Highlight"}
+          </h1>
+          <BlockPublicationHighlight
+            data-plasmic-name={"blockPublicationHighlight"}
+            data-plasmic-override={overrides.blockPublicationHighlight}
+            className={classNames(
+              "__wab_instance",
+              sty.blockPublicationHighlight
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1___2NiSj
+            )}
+          >
+            {"Section - Card List - One Image Card"}
+          </h1>
+          <SectionCardListOneImageCard
+            data-plasmic-name={"sectionCardListOneImageCard"}
+            data-plasmic-override={overrides.sectionCardListOneImageCard}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionCardListOneImageCard
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__d2I7O
+            )}
+          >
+            {"Section - Mid-homepage membership info"}
+          </h1>
+          <SectionMidHomepageMembershipInfoWithQuicklinks
+            data-plasmic-name={"sectionMidHomepageMembershipInfoWithQuicklinks"}
+            data-plasmic-override={
+              overrides.sectionMidHomepageMembershipInfoWithQuicklinks
+            }
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidHomepageMembershipInfoWithQuicklinks
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__oVAzj
+            )}
+          >
+            {"Section - Featured Education"}
+          </h1>
+          <SectionFeaturedEducation
+            data-plasmic-name={"sectionFeaturedEducation"}
+            data-plasmic-override={overrides.sectionFeaturedEducation}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionFeaturedEducation
+            )}
+          />
+
+          <h1
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1__gFmwR
+            )}
+          >
+            {"Section - Publication"}
+          </h1>
+          <SectionPublication
+            data-plasmic-name={"sectionPublication"}
+            data-plasmic-override={overrides.sectionPublication}
+            className={classNames("__wab_instance", sty.sectionPublication)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -208,16 +651,55 @@ function PlasmicInternalComponentList__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionHomeMenuSection",
     "sectionHomeHeroBannerWithLinkItems",
     "sectionInternalHeroTitleSectionV1",
-    "sectionUpcomingCouresEventsSection"
+    "sectionUpcomingCouresEventsSection",
+    "sectionQuicklinksTable",
+    "sectionMidPageCtaSection",
+    "freeBox",
+    "blockTanCtaBlock",
+    "sectionAccordionSectionTemplate",
+    "componentMembershipQuicklinks",
+    "htmlContentfulHtmlLoader",
+    "cardListLatestAsshNewsCardList",
+    "blockHr",
+    "componentVerticalPageList",
+    "componentTabSet",
+    "itemExternalLinkCardItem",
+    "itemExternalLinkCardItemWithLogo",
+    "blockTanInformationLogoBlock",
+    "blockPublicationHighlight",
+    "sectionCardListOneImageCard",
+    "sectionMidHomepageMembershipInfoWithQuicklinks",
+    "sectionFeaturedEducation",
+    "sectionPublication"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
   sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
   sectionInternalHeroTitleSectionV1: ["sectionInternalHeroTitleSectionV1"],
-  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"]
+  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
+  sectionQuicklinksTable: ["sectionQuicklinksTable"],
+  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
+  freeBox: ["freeBox", "blockTanCtaBlock"],
+  blockTanCtaBlock: ["blockTanCtaBlock"],
+  sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
+  componentMembershipQuicklinks: ["componentMembershipQuicklinks"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
+  cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
+  blockHr: ["blockHr"],
+  componentVerticalPageList: ["componentVerticalPageList"],
+  componentTabSet: ["componentTabSet"],
+  itemExternalLinkCardItem: ["itemExternalLinkCardItem"],
+  itemExternalLinkCardItemWithLogo: ["itemExternalLinkCardItemWithLogo"],
+  blockTanInformationLogoBlock: ["blockTanInformationLogoBlock"],
+  blockPublicationHighlight: ["blockPublicationHighlight"],
+  sectionCardListOneImageCard: ["sectionCardListOneImageCard"],
+  sectionMidHomepageMembershipInfoWithQuicklinks: [
+    "sectionMidHomepageMembershipInfoWithQuicklinks"
+  ],
+
+  sectionFeaturedEducation: ["sectionFeaturedEducation"],
+  sectionPublication: ["sectionPublication"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -252,7 +734,6 @@ export const PlasmicInternalComponentList = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
     sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
       "sectionHomeHeroBannerWithLinkItems"
     ),
@@ -262,6 +743,39 @@ export const PlasmicInternalComponentList = Object.assign(
     sectionUpcomingCouresEventsSection: makeNodeComponent(
       "sectionUpcomingCouresEventsSection"
     ),
+    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
+    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
+    freeBox: makeNodeComponent("freeBox"),
+    blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),
+    sectionAccordionSectionTemplate: makeNodeComponent(
+      "sectionAccordionSectionTemplate"
+    ),
+    componentMembershipQuicklinks: makeNodeComponent(
+      "componentMembershipQuicklinks"
+    ),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
+    cardListLatestAsshNewsCardList: makeNodeComponent(
+      "cardListLatestAsshNewsCardList"
+    ),
+    blockHr: makeNodeComponent("blockHr"),
+    componentVerticalPageList: makeNodeComponent("componentVerticalPageList"),
+    componentTabSet: makeNodeComponent("componentTabSet"),
+    itemExternalLinkCardItem: makeNodeComponent("itemExternalLinkCardItem"),
+    itemExternalLinkCardItemWithLogo: makeNodeComponent(
+      "itemExternalLinkCardItemWithLogo"
+    ),
+    blockTanInformationLogoBlock: makeNodeComponent(
+      "blockTanInformationLogoBlock"
+    ),
+    blockPublicationHighlight: makeNodeComponent("blockPublicationHighlight"),
+    sectionCardListOneImageCard: makeNodeComponent(
+      "sectionCardListOneImageCard"
+    ),
+    sectionMidHomepageMembershipInfoWithQuicklinks: makeNodeComponent(
+      "sectionMidHomepageMembershipInfoWithQuicklinks"
+    ),
+    sectionFeaturedEducation: makeNodeComponent("sectionFeaturedEducation"),
+    sectionPublication: makeNodeComponent("sectionPublication"),
     // Metadata about props expected for PlasmicInternalComponentList
     internalVariantProps: PlasmicInternalComponentList__VariantProps,
     internalArgProps: PlasmicInternalComponentList__ArgProps,

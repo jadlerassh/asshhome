@@ -115,13 +115,17 @@
 .navigationItem {
   display: block;
   flex-grow: 1;
-  font-size: 28px;
+  font-size: 24px;
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   letter-spacing: 0em;
   line-height: 32px;
   color: rgba(49, 51, 55, 1);
   position: relative;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: calc(0px + 5px) !important;
 }
 .icon12X122 {
   width: auto;

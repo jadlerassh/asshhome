@@ -172,6 +172,7 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
             data-plasmic-name={"buttonPrimary"}
             data-plasmic-override={overrides.buttonPrimary}
             className={classNames("__wab_instance", sty.buttonPrimary)}
+            darkNoBgInteractions={[]}
             secondaryInteractions={"secondary"}
             text={(() => {
               try {

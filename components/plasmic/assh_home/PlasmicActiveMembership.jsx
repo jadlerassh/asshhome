@@ -219,6 +219,7 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 data-plasmic-name={"blockQuoteBlock"}
                 data-plasmic-override={overrides.blockQuoteBlock}
                 className={classNames("__wab_instance", sty.blockQuoteBlock)}
+                quote={"full"}
               />
 
               <ComponentMembershipQuicklinks

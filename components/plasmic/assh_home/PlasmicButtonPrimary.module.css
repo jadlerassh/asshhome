@@ -60,6 +60,7 @@
 }
 .buttonHighlight2fullWidthBlueInteractions_brandBlue {
   width: 100%;
+  background: var(--token-Hivuri5dcJVd);
   min-width: 0;
 }
 .buttonHighlight2fullWidthBlueInteractions_brandBlue
@@ -80,6 +81,9 @@
 .buttonHighlight2secondaryInteractions_brandBlue2
   > :global(.__wab_flex-container) {
   min-width: 0;
+}
+.buttonHighlight2secondaryInteractions_hover {
+  background: #245862;
 }
 .buttonHighlight2darkNoBgInteractions_unnamedVariant {
   background: #2e577400;
@@ -233,9 +237,12 @@
 }
 .text2fullWidthBlueInteractions_brandBlue {
   text-align: center;
+  background: none;
+  color: var(--token-YLYGEwd03pX3);
 }
 .text2textArrowButton {
-  color: var(--token-j3urVBXa9jtJ);
+  color: var(--token-7sC8F62mRz_G);
+  font-size: 16px;
 }
 .text2secondaryInteractions_secondary {
   font-weight: 400;
@@ -243,6 +250,9 @@
 }
 .text2secondaryInteractions_brandBlue2 {
   text-align: center;
+}
+.text2secondaryInteractions_hover {
+  font-weight: 400;
 }
 .text2darkNoBgInteractions_hover {
   color: var(--token-H7ML1IxERkQO);
