@@ -24,7 +24,7 @@ import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmi
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
-import ComponentMembershipQuicklinks from "../../ComponentMembershipQuicklinks"; // plasmic-import: O2TSODJiol19/component
+import BlockMemberRenewDashboard from "../../BlockMemberRenewDashboard"; // plasmic-import: O2TSODJiol19/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -222,12 +222,12 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 quote={"full"}
               />
 
-              <ComponentMembershipQuicklinks
-                data-plasmic-name={"componentMembershipQuicklinks"}
-                data-plasmic-override={overrides.componentMembershipQuicklinks}
+              <BlockMemberRenewDashboard
+                data-plasmic-name={"blockMemberRenewDashboard"}
+                data-plasmic-override={overrides.blockMemberRenewDashboard}
                 className={classNames(
                   "__wab_instance",
-                  sty.componentMembershipQuicklinks
+                  sty.blockMemberRenewDashboard
                 )}
               />
             </div>
@@ -262,7 +262,7 @@ const PlasmicDescendants = {
     "freeBox",
     "sectionAccordionSectionTemplate",
     "blockQuoteBlock",
-    "componentMembershipQuicklinks",
+    "blockMemberRenewDashboard",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -273,7 +273,7 @@ const PlasmicDescendants = {
     "freeBox",
     "sectionAccordionSectionTemplate",
     "blockQuoteBlock",
-    "componentMembershipQuicklinks"
+    "blockMemberRenewDashboard"
   ],
 
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
@@ -281,7 +281,7 @@ const PlasmicDescendants = {
   freeBox: ["freeBox", "sectionAccordionSectionTemplate"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   blockQuoteBlock: ["blockQuoteBlock"],
-  componentMembershipQuicklinks: ["componentMembershipQuicklinks"],
+  blockMemberRenewDashboard: ["blockMemberRenewDashboard"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -325,9 +325,7 @@ export const PlasmicActiveMembership = Object.assign(
       "sectionAccordionSectionTemplate"
     ),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
-    componentMembershipQuicklinks: makeNodeComponent(
-      "componentMembershipQuicklinks"
-    ),
+    blockMemberRenewDashboard: makeNodeComponent("blockMemberRenewDashboard"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicActiveMembership
     internalVariantProps: PlasmicActiveMembership__VariantProps,

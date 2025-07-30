@@ -2779,14 +2779,14 @@
         },
         {
           "id": "O2TSODJiol19",
-          "name": "ComponentMembershipQuicklinks",
+          "name": "BlockMemberRenewDashboard",
           "type": "managed",
           "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentMembershipQuicklinks.jsx",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockMemberRenewDashboard.jsx",
           "importSpec": {
-            "modulePath": "ComponentMembershipQuicklinks.jsx"
+            "modulePath": "BlockMemberRenewDashboard.jsx"
           },
-          "cssFilePath": "plasmic/assh_home/PlasmicComponentMembershipQuicklinks.module.css",
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockMemberRenewDashboard.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

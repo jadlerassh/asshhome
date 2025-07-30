@@ -28,7 +28,7 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
-import ComponentMembershipQuicklinks from "../../ComponentMembershipQuicklinks"; // plasmic-import: O2TSODJiol19/component
+import BlockMemberRenewDashboard from "../../BlockMemberRenewDashboard"; // plasmic-import: O2TSODJiol19/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
@@ -330,12 +330,12 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"Component - membership quicklinks"}
           </h1>
-          <ComponentMembershipQuicklinks
-            data-plasmic-name={"componentMembershipQuicklinks"}
-            data-plasmic-override={overrides.componentMembershipQuicklinks}
+          <BlockMemberRenewDashboard
+            data-plasmic-name={"blockMemberRenewDashboard"}
+            data-plasmic-override={overrides.blockMemberRenewDashboard}
             className={classNames(
               "__wab_instance",
-              sty.componentMembershipQuicklinks
+              sty.blockMemberRenewDashboard
             )}
           />
 
@@ -659,7 +659,7 @@ const PlasmicDescendants = {
     "freeBox",
     "blockTanCtaBlock",
     "sectionAccordionSectionTemplate",
-    "componentMembershipQuicklinks",
+    "blockMemberRenewDashboard",
     "htmlContentfulHtmlLoader",
     "cardListLatestAsshNewsCardList",
     "blockHr",
@@ -683,7 +683,7 @@ const PlasmicDescendants = {
   freeBox: ["freeBox", "blockTanCtaBlock"],
   blockTanCtaBlock: ["blockTanCtaBlock"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
-  componentMembershipQuicklinks: ["componentMembershipQuicklinks"],
+  blockMemberRenewDashboard: ["blockMemberRenewDashboard"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
   blockHr: ["blockHr"],
@@ -750,9 +750,7 @@ export const PlasmicInternalComponentList = Object.assign(
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
     ),
-    componentMembershipQuicklinks: makeNodeComponent(
-      "componentMembershipQuicklinks"
-    ),
+    blockMemberRenewDashboard: makeNodeComponent("blockMemberRenewDashboard"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     cardListLatestAsshNewsCardList: makeNodeComponent(
       "cardListLatestAsshNewsCardList"
