@@ -143,6 +143,7 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
+  border-width: 0px;
 }
 .itemCalloutItem:global(.__wab_instance) {
   max-width: 100%;

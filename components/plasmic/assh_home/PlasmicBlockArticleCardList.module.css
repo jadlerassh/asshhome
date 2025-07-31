@@ -36,12 +36,13 @@
 }
 @media (max-width: 1024px) {
   .freeBox__wHb3H {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0px 15px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__wHb3H {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 @media (max-width: 414px) {

@@ -28,6 +28,7 @@ import ItemMenuCurrentUser from "../../ItemMenuCurrentUser"; // plasmic-import: 
 import ItemMegaMenuItem from "../../ItemMegaMenuItem"; // plasmic-import: PuojKIT8N0Q4/component
 import ItemExternalLinkCardItemWithLogo from "../../ItemExternalLinkCardItemWithLogo"; // plasmic-import: rLtSCz5xy5NR/component
 import ItemMenuFeaturedHighlightItem from "../../ItemMenuFeaturedHighlightItem"; // plasmic-import: i3mM-1cWYoIK/component
+import { useUnnamedGlobalGroupOfVariants } from "./PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants"; // plasmic-import: Cr_xgEeRRQEa/globalVariant
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -616,6 +617,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
     $queries = new$Queries;
   }
   const globalVariants = ensureGlobalVariants({
+    unnamedGlobalGroupOfVariants: useUnnamedGlobalGroupOfVariants(),
     screen: useScreenVariantsdjBtUr72ZExV()
   });
   return (
@@ -634,6 +636,12 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
+          [sty.rootglobal_unnamedGlobalGroupOfVariants_unnamedVariant]:
+            hasVariant(
+              globalVariants,
+              "unnamedGlobalGroupOfVariants",
+              "unnamedVariant"
+            ),
           [sty.rootmenus_allclosed]: hasVariant($state, "menus", "allclosed"),
           [sty.rootmenus_dropdown1]: hasVariant($state, "menus", "dropdown1"),
           [sty.rootmenus_dropdown2]: hasVariant($state, "menus", "dropdown2"),
@@ -912,7 +920,14 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             data-plasmic-name={"frame6"}
             data-plasmic-override={overrides.frame6}
             hasGap={true}
-            className={classNames(projectcss.all, sty.frame6)}
+            className={classNames(projectcss.all, sty.frame6, {
+              [sty.frame6global_unnamedGlobalGroupOfVariants_unnamedVariant]:
+                hasVariant(
+                  globalVariants,
+                  "unnamedGlobalGroupOfVariants",
+                  "unnamedVariant"
+                )
+            })}
           >
             <Stack__
               as={"div"}
@@ -1285,7 +1300,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   data-plasmic-override={overrides.itemMenuCurrentUser}
                   className={classNames(
                     "__wab_instance",
-                    sty.itemMenuCurrentUser
+                    sty.itemMenuCurrentUser,
+                    {
+                      [sty.itemMenuCurrentUserglobal_unnamedGlobalGroupOfVariants_unnamedVariant]:
+                        hasVariant(
+                          globalVariants,
+                          "unnamedGlobalGroupOfVariants",
+                          "unnamedVariant"
+                        )
+                    }
                   )}
                   userImageUrl={(() => {
                     try {

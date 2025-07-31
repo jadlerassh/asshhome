@@ -18,7 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
-import SectionTopPageHighlightCtaSection from "../../SectionTopPageHighlightCtaSection"; // plasmic-import: 99rw1b5F2OHC/component
+import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionQuestion from "../../SectionQuestion"; // plasmic-import: 9B7ukqwaDf9R/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -111,12 +111,12 @@ function PlasmicJobBoard__RenderFunc(props) {
             )}
           />
 
-          <SectionTopPageHighlightCtaSection
-            data-plasmic-name={"sectionTopPageHighlightCtaSection"}
-            data-plasmic-override={overrides.sectionTopPageHighlightCtaSection}
+          <SectionInternalHeroTitleSectionV2
+            data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
+            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
             className={classNames(
               "__wab_instance",
-              sty.sectionTopPageHighlightCtaSection
+              sty.sectionInternalHeroTitleSectionV2
             )}
             title={"Hero: Job Board - Title Card"}
           />
@@ -185,14 +185,14 @@ function PlasmicJobBoard__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionTopPageHighlightCtaSection",
+    "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "h3",
     "sectionQuestion",
     "blockAsshMissionBlueBlock"
   ],
 
-  sectionTopPageHighlightCtaSection: ["sectionTopPageHighlightCtaSection"],
+  sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   freeBox: ["freeBox"],
   h3: ["h3"],
   sectionQuestion: ["sectionQuestion"],
@@ -231,8 +231,8 @@ export const PlasmicJobBoard = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionTopPageHighlightCtaSection: makeNodeComponent(
-      "sectionTopPageHighlightCtaSection"
+    sectionInternalHeroTitleSectionV2: makeNodeComponent(
+      "sectionInternalHeroTitleSectionV2"
     ),
     freeBox: makeNodeComponent("freeBox"),
     h3: makeNodeComponent("h3"),

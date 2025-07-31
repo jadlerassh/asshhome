@@ -116,7 +116,7 @@
   background: none;
 }
 .root:hover .buttonHighlight2 {
-  background: var(--token-nOBcGT_YRXnw);
+  background: var(--token-TYi5l69jClib);
 }
 .rootdarkInteractions_dark:hover .buttonHighlight2darkInteractions_dark {
   background: var(--token-su3a1cgfgi_y);
@@ -276,6 +276,12 @@
 .text2quicklinkOption {
   color: var(--token-j3urVBXa9jtJ);
 }
+.text2upcomingEvents {
+  color: var(--token-j3urVBXa9jtJ);
+}
+.root:hover .text2 {
+  color: var(--token-py5R6wetCsNw);
+}
 .rootmegaMenuLink_megaMenu:hover .text2megaMenuLink_megaMenu {
   color: var(--token-YOr-x91EUcQe);
 }
@@ -315,7 +321,13 @@
 .icon12X125quicklinkOption {
   display: none;
 }
+.icon12X125upcomingEvents {
+  display: flex;
+}
 .icon12X125darkNoBgInteractions_hover_textArrowButton {
+  display: flex;
+}
+.root:hover .icon12X125 {
   display: flex;
 }
 .svg__bsMdx {
@@ -348,6 +360,12 @@
 }
 .svgtextArrowButton__bsMdxuQaqx {
   color: var(--token-YOr-x91EUcQe);
+}
+.svgupcomingEvents__bsMdxzyCs3 {
+  color: var(--token-j3urVBXa9jtJ);
+}
+.root:hover .svg__bsMdx {
+  color: var(--token-j3urVBXa9jtJ);
 }
 .navItemSimple {
   width: auto;

@@ -15,9 +15,10 @@
   max-width: 100%;
   object-fit: cover;
   height: auto;
-  width: 402px;
+  width: 100%;
   font-family: "Inter", sans-serif;
   color: var(--token-H7ML1IxERkQO);
   font-size: 18px;
+  min-width: 0;
   margin: 0px auto auto;
 }

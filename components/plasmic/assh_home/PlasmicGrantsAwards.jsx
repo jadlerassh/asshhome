@@ -15,9 +15,7 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  ensureGlobalVariants,
-  hasVariant
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -26,11 +24,11 @@ import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSec
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
+import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import YouTube from "@plasmicpkgs/react-youtube";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -89,9 +87,6 @@ function PlasmicGrantsAwards__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <React.Fragment>
       <Head>
@@ -182,7 +177,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                 sty.itemSectionTitleDescriptionItem__xa51
               )}
               descriptionSection={``}
-              title={"Four Pillars of the ASSH & AFSH"}
+              title={"Four Pillars of the AFSH"}
             />
 
             <Stack__
@@ -200,7 +195,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                   description={
                     "We support innovative research initiatives that advance the science, techniques, and future of hand and upper extremity care, ensuring continuous progress for the profession and better outcomes for patients."
                   }
-                  heading={``}
+                  heading={"Pillar"}
                   linkUrl={"https://www.assh.org/afsh/s/research"}
                 />
               </div>
@@ -214,7 +209,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                   description={
                     "We invest in high-impact educational programs, training resources, and learning opportunities that connect surgeons with leading-edge knowledge throughout their careers."
                   }
-                  heading={``}
+                  heading={"Pillar"}
                   linkUrl={"https://www.assh.org/afsh/s/education"}
                 />
               </div>
@@ -228,7 +223,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                   description={
                     "Through international and domestic outreach programs, we fund volunteer-led missions and empower local providers to deliver sustainable hand care in underserved communities worldwide."
                   }
-                  heading={``}
+                  heading={"Pillar"}
                   linkUrl={"https://www.assh.org/afsh/s/outreach"}
                 />
               </div>
@@ -242,12 +237,19 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                   description={
                     "Our practice pillar supports surgeons in private practice settings by funding initiatives that improve access, efficiency, safety, and the overall delivery of hand care."
                   }
-                  heading={``}
+                  heading={"Pillar"}
                   linkUrl={"https://www.assh.org/afsh/s/practice"}
                 />
               </div>
             </Stack__>
           </Stack__>
+          <SectionQuicklinksTable
+            data-plasmic-name={"sectionQuicklinksTable"}
+            data-plasmic-override={overrides.sectionQuicklinksTable}
+            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
+            name={"ASSH Grants and Awards Quicklinks"}
+          />
+
           <Stack__
             as={"div"}
             hasGap={true}
@@ -279,15 +281,15 @@ function PlasmicGrantsAwards__RenderFunc(props) {
 
             <div className={classNames(projectcss.all, sty.columns___2Jf0)}>
               <div className={classNames(projectcss.all, sty.column___9BWg1)}>
-                <Embed
-                  data-plasmic-name={"embedHtml"}
-                  data-plasmic-override={overrides.embedHtml}
-                  className={classNames("__wab_instance", sty.embedHtml)}
-                  code={
-                    hasVariant(globalVariants, "screen", "smallDesktop")
-                      ? '<iframe width="100%" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                      : '<iframe width="560" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                  }
+                <YouTube
+                  data-plasmic-name={"youTube"}
+                  data-plasmic-override={overrides.youTube}
+                  className={classNames("__wab_instance", sty.youTube)}
+                  color={"white"}
+                  fs={true}
+                  modestbranding={false}
+                  rel={false}
+                  videoId={"NjNXWgUtAoA"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__g2HDg)}>
@@ -333,15 +335,17 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
+    "sectionQuicklinksTable",
     "sectionMidPageCtaSection",
-    "embedHtml",
+    "youTube",
     "buttonPrimary",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
+  sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  embedHtml: ["embedHtml"],
+  youTube: ["youTube"],
   buttonPrimary: ["buttonPrimary"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -381,8 +385,9 @@ export const PlasmicGrantsAwards = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
+    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    embedHtml: makeNodeComponent("embedHtml"),
+    youTube: makeNodeComponent("youTube"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicGrantsAwards

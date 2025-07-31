@@ -108,10 +108,9 @@
 .sectionMidPageCtaSection:global(.__wab_instance) {
   width: 100%;
   min-height: 300px;
-  margin-top: 50px;
-  margin-bottom: 50px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
+  margin: 70px 0px;
 }
 .blockArticleCardList__dUIcu:global(.__wab_instance) {
   position: relative;
@@ -124,9 +123,25 @@
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
+.h3 {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-self: flex-start;
+  text-align: center;
+  color: #313337;
+  font-family: "Manrope", sans-serif;
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom: 32px;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
 .sectionQuestion:global(.__wab_instance) {
   position: relative;
   margin-bottom: 50px;
+  width: 100%;
+  min-width: 0;
 }
 .sectionAdPlaceholder__qkbtr:global(.__wab_instance) {
   max-width: 100%;

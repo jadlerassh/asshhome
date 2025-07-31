@@ -98,8 +98,10 @@ function PlasmicItemMenuCurrentUser__RenderFunc(props) {
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
+        ``,
         { [sty.rootmenuOpen]: hasVariant($state, "menuOpen", "menuOpen") }
       )}
+      id={``}
     >
       <section
         data-plasmic-name={"section"}
@@ -151,9 +153,13 @@ function PlasmicItemMenuCurrentUser__RenderFunc(props) {
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}
           alt={""}
-          className={classNames(sty.img, {
-            [sty.imgmenuOpen]: hasVariant($state, "menuOpen", "menuOpen")
-          })}
+          className={classNames(
+            sty.img,
+            hasVariant($state, "menuOpen", "menuOpen")
+              ? "plasmicdropdpwn menu_dropdownuser"
+              : "plasmicdropdpwn menu_dropdownuser",
+            { [sty.imgmenuOpen]: hasVariant($state, "menuOpen", "menuOpen") }
+          )}
           displayHeight={"40px"}
           displayMaxHeight={"none"}
           displayMaxWidth={"none"}

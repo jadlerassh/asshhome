@@ -22,6 +22,7 @@
     "@plasmicpkgs/plasmic-tabs": "^0.0.63",
     "@plasmicpkgs/react-aria": "^0.0.146",
     "@plasmicpkgs/react-slick": "^0.0.243",
+    "@plasmicpkgs/react-youtube": "^7.13.227",
     "next": "14.2.30",
     "react": "^18",
     "react-dom": "^18",

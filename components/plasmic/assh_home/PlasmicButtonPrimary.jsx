@@ -18,11 +18,13 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
   hasVariant,
   useDollarState,
   useTrigger
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { useUnnamedGlobalGroupOfVariants2 } from "./PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2"; // plasmic-import: MepFML_UVuQE/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -42,7 +44,8 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "megaMenuLink",
   "memberQuicklinks",
   "whiteButtonBlackSurround",
-  "quicklinkOption"
+  "quicklinkOption",
+  "upcomingEvents"
 );
 
 export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
@@ -140,6 +143,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.quicklinkOption
+      },
+      {
+        path: "upcomingEvents",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.upcomingEvents
       }
     ],
 
@@ -155,6 +164,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
   const triggers = {
     hover_root: isRootHover
   };
+  const globalVariants = ensureGlobalVariants({
+    unnamedGlobalGroupOfVariants2: useUnnamedGlobalGroupOfVariants2()
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -186,6 +198,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             "fullWidthBlueInteractions",
             "brandBlue"
           ),
+          [sty.rootglobal_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+            hasVariant(
+              globalVariants,
+              "unnamedGlobalGroupOfVariants2",
+              "upcomingEvents"
+            ),
           [sty.rootmegaMenuLink_megaMenu]: hasVariant(
             $state,
             "megaMenuLink",
@@ -247,6 +265,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               hasVariant($state, "darkNoBgInteractions", "unnamedVariant"),
             [sty.buttonHighlight2fullWidthBlueInteractions_brandBlue]:
               hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
+            [sty.buttonHighlight2global_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+              hasVariant(
+                globalVariants,
+                "unnamedGlobalGroupOfVariants2",
+                "upcomingEvents"
+              ),
             [sty.buttonHighlight2megaMenuLink_megaMenu]: hasVariant(
               $state,
               "megaMenuLink",
@@ -286,6 +310,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "textArrowButton",
               "textArrowButton"
+            ),
+            [sty.buttonHighlight2upcomingEvents]: hasVariant(
+              $state,
+              "upcomingEvents",
+              "upcomingEvents"
             ),
             [sty.buttonHighlight2whiteButtonBlackSurround]: hasVariant(
               $state,
@@ -479,6 +508,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "textArrowButton",
                 "textArrowButton"
               ),
+              [sty.text2upcomingEvents]: hasVariant(
+                $state,
+                "upcomingEvents",
+                "upcomingEvents"
+              ),
               [sty.text2whiteButtonBlackSurround]: hasVariant(
                 $state,
                 "whiteButtonBlackSurround",
@@ -521,6 +555,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "textArrowButton",
               "textArrowButton"
+            ),
+            [sty.icon12X125upcomingEvents]: hasVariant(
+              $state,
+              "upcomingEvents",
+              "upcomingEvents"
             )
           })}
         >
@@ -535,6 +574,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "textArrowButton",
                 "textArrowButton"
+              ),
+              [sty.svgupcomingEvents__bsMdxzyCs3]: hasVariant(
+                $state,
+                "upcomingEvents",
+                "upcomingEvents"
               )
             })}
             role={"img"}

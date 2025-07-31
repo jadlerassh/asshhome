@@ -183,7 +183,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "At the ASSH Annual Meeting, we offer a variety of ways for you to connect with hand surgeons and promote your brand."
                   }
-                  heading={"Advertising"}
+                  heading={"Exhibition"}
                   linkUrl={
                     "https://www.assh.org/annualmeeting/s/solutions-providers"
                   }
@@ -199,7 +199,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "Reach engaged hand and upper extremity specialists through accredited, peer-reviewed learning opportunities."
                   }
-                  heading={"Advertising"}
+                  heading={"Engagement"}
                   linkUrl={"https://www.assh.org/s/about/partner/education"}
                 />
               </div>
@@ -271,7 +271,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "Connect with targeted audiences in both hand and upper extremity care by renting the ASSH's detailed mailing lists."
                   }
-                  heading={"Advertising"}
+                  heading={"Engagement"}
                   linkUrl={"https://www.assh.org/s/about/partner/mailing-lists"}
                 />
               </div>
@@ -285,7 +285,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "Help expand access to hand surgery worldwide through sponsorships, donations, and more."
                   }
-                  heading={"Advertising"}
+                  heading={"Sponsorship"}
                   linkUrl={
                     "https://www.assh.org/touchinghands/s/partner-with-us"
                   }
@@ -301,7 +301,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "Support scholarships to trainees and active duty military surgeons to attend the ASSH Annual Meeting."
                   }
-                  heading={"Advertising"}
+                  heading={"Sponsorship"}
                   linkUrl={"https://www.assh.org/s/about/partner/scholarship"}
                 />
               </div>
@@ -315,7 +315,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "Learn how to send a survey to ASSH membership, giving you unique access to response data."
                   }
-                  heading={"Advertising"}
+                  heading={"Sponsorship"}
                   linkUrl={"https://www.assh.org/s/about/partner/surveys"}
                 />
               </div>
@@ -343,7 +343,7 @@ function PlasmicPartnerWithAssh__RenderFunc(props) {
                   description={
                     "Support the growth of future leaders in hand surgery by partnering with ASSH\u2019s Young Leaders Program."
                   }
-                  heading={"Advertising"}
+                  heading={"Sponsorship"}
                   linkUrl={"https://www.assh.org/s/about/partner/young-leaders"}
                 />
               </div>

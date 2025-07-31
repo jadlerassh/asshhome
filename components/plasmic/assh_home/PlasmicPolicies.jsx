@@ -15,9 +15,7 @@ import {
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  ensureGlobalVariants,
-  hasVariant
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -25,12 +23,7 @@ import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
-import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -89,9 +82,6 @@ function PlasmicPolicies__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <React.Fragment>
       <Head>
@@ -164,9 +154,11 @@ function PlasmicPolicies__RenderFunc(props) {
 
           <div className={classNames(projectcss.all, sty.freeBox__mzidT)}>
             <HtmlContentfulHtmlLoader
+              data-plasmic-name={"htmlContentfulHtmlLoader"}
+              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
               className={classNames(
                 "__wab_instance",
-                sty.htmlContentfulHtmlLoader__m6Lgy
+                sty.htmlContentfulHtmlLoader
               )}
               title={"Policies"}
             />
@@ -189,7 +181,9 @@ function PlasmicPolicies__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <div
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__sIaK5)}
                   key={currentIndex}
                 >
@@ -229,79 +223,10 @@ function PlasmicPolicies__RenderFunc(props) {
                       }
                     })()}
                   />
-                </div>
+                </Stack__>
               );
             })}
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__xk9X3)}
-          >
-            <SectionMidPageCtaSection
-              data-plasmic-name={"sectionMidPageCtaSection"}
-              data-plasmic-override={overrides.sectionMidPageCtaSection}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionMidPageCtaSection
-              )}
-              title={"Grants and Awards - Mid-page CTA"}
-            />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__onqHx)}
-          >
-            <ItemSectionTitleDescriptionItem
-              data-plasmic-name={"itemSectionTitleDescriptionItem"}
-              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-              className={classNames(
-                "__wab_instance",
-                sty.itemSectionTitleDescriptionItem
-              )}
-              descriptionSection={``}
-              title={"How to Support Our Grants & Awards"}
-            />
-
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div className={classNames(projectcss.all, sty.column___0XqJv)}>
-                <Embed
-                  data-plasmic-name={"embedHtml"}
-                  data-plasmic-override={overrides.embedHtml}
-                  className={classNames("__wab_instance", sty.embedHtml)}
-                  code={
-                    hasVariant(globalVariants, "screen", "smallDesktop")
-                      ? '<iframe width="100%" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                      : '<iframe width="560" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__ttTt8)}>
-                <HtmlContentfulHtmlLoader
-                  className={classNames(
-                    "__wab_instance",
-                    sty.htmlContentfulHtmlLoader___8Dc98
-                  )}
-                  title={"Grants and Awards - Support"}
-                />
-
-                <ButtonPrimary
-                  data-plasmic-name={"buttonPrimary"}
-                  data-plasmic-override={overrides.buttonPrimary}
-                  className={classNames("__wab_instance", sty.buttonPrimary)}
-                  darkNoBgInteractions={[]}
-                  secondaryInteractions={"secondary"}
-                  text={"Donate Now"}
-                  url={"https://www.assh.org/afsh/s/donate"}
-                />
-              </div>
-            </div>
-          </Stack__>
           <ItemAd
             className={classNames("__wab_instance", sty.itemAd___8N8Ia)}
           />
@@ -324,22 +249,14 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
+    "htmlContentfulHtmlLoader",
     "sectionAccordionSectionTemplate",
-    "sectionMidPageCtaSection",
-    "itemSectionTitleDescriptionItem",
-    "columns",
-    "embedHtml",
-    "buttonPrimary",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
-  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "embedHtml", "buttonPrimary"],
-  embedHtml: ["embedHtml"],
-  buttonPrimary: ["buttonPrimary"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -378,16 +295,10 @@ export const PlasmicPolicies = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
     ),
-    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
-    columns: makeNodeComponent("columns"),
-    embedHtml: makeNodeComponent("embedHtml"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicPolicies
     internalVariantProps: PlasmicPolicies__VariantProps,
