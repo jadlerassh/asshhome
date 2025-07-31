@@ -171,11 +171,15 @@ function PlasmicTemplateInternalPageWithAccordion__RenderFunc(props) {
             title={"Hero: Young Leaders Program - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__opEN)}>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__kCqWj)}
+          >
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
-                sty.htmlContentfulHtmlLoader__sHHpO
+                sty.htmlContentfulHtmlLoader__sjzT
               )}
               title={"Young Leaders Program"}
             />
@@ -203,7 +207,7 @@ function PlasmicTemplateInternalPageWithAccordion__RenderFunc(props) {
                 }
               })()}
             />
-          </div>
+          </Stack__>
           <Stack__
             as={"div"}
             hasGap={true}

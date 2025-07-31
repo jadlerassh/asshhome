@@ -41,7 +41,7 @@
     grid-column: 4;
   }
 }
-.itemAd__aCho:global(.__wab_instance) {
+.itemAd__n61Uc:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;
@@ -53,7 +53,7 @@
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
-.freeBox__fPoxD {
+.freeBox__oP6HO {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -66,28 +66,37 @@
   grid-column-end: -1 !important;
   padding: 0px 25px 20px;
 }
-.freeBox__fPoxD > :global(.__wab_flex-container) {
+.freeBox__oP6HO > :global(.__wab_flex-container) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: calc(0px - 20px);
   height: calc(100% + 20px);
 }
-.freeBox__fPoxD > :global(.__wab_flex-container) > *,
-.freeBox__fPoxD > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__fPoxD > :global(.__wab_flex-container) > picture > img,
-.freeBox__fPoxD
+.freeBox__oP6HO > :global(.__wab_flex-container) > *,
+.freeBox__oP6HO > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__oP6HO > :global(.__wab_flex-container) > picture > img,
+.freeBox__oP6HO
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
   > img {
   margin-top: 20px;
 }
-.htmlContentfulHtmlLoader__yqom:global(.__wab_instance) {
+.htmlContentfulHtmlLoader__jhCw2:global(.__wab_instance) {
   max-width: 100%;
   margin-bottom: 50px;
+  position: relative;
+  left: auto;
+  top: auto;
 }
-.freeBox__fVvqW {
+@media (max-width: 1440px) {
+  .htmlContentfulHtmlLoader__jhCw2:global(.__wab_instance) {
+    left: auto;
+    top: auto;
+  }
+}
+.freeBox__wunQ {
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -98,17 +107,17 @@
   grid-column-end: -1 !important;
   display: none;
 }
-.freeBox__fVvqW > :global(.__wab_flex-container) {
+.freeBox__wunQ > :global(.__wab_flex-container) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: calc(0px - 50px);
   height: calc(100% + 50px);
 }
-.freeBox__fVvqW > :global(.__wab_flex-container) > *,
-.freeBox__fVvqW > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__fVvqW > :global(.__wab_flex-container) > picture > img,
-.freeBox__fVvqW
+.freeBox__wunQ > :global(.__wab_flex-container) > *,
+.freeBox__wunQ > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__wunQ > :global(.__wab_flex-container) > picture > img,
+.freeBox__wunQ
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
@@ -119,7 +128,7 @@
   width: 100%;
   min-width: 0;
 }
-.freeBox__nZ5Uk {
+.freeBox__g62Mu {
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -131,17 +140,17 @@
   grid-column-end: -1 !important;
   display: none;
 }
-.freeBox__nZ5Uk > :global(.__wab_flex-container) {
+.freeBox__g62Mu > :global(.__wab_flex-container) {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-top: calc(0px - 50px);
   height: calc(100% + 50px);
 }
-.freeBox__nZ5Uk > :global(.__wab_flex-container) > *,
-.freeBox__nZ5Uk > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__nZ5Uk > :global(.__wab_flex-container) > picture > img,
-.freeBox__nZ5Uk
+.freeBox__g62Mu > :global(.__wab_flex-container) > *,
+.freeBox__g62Mu > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__g62Mu > :global(.__wab_flex-container) > picture > img,
+.freeBox__g62Mu
   > :global(.__wab_flex-container)
   > :global(.__wab_slot)
   > picture
@@ -185,7 +194,7 @@
     width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
-.column__qdDaO {
+.column__e5DSh {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -206,7 +215,7 @@
     width: 442px;
   }
 }
-.column__oaPUw {
+.column__m6Ivh {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -218,7 +227,7 @@
   min-width: 0;
   padding: 15px;
 }
-.htmlContentfulHtmlLoader__b1DpT:global(.__wab_instance) {
+.htmlContentfulHtmlLoader__hvlIr:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   min-width: 0;
@@ -227,7 +236,7 @@
   max-width: 100%;
   align-self: flex-start;
 }
-.itemAd__vazFu:global(.__wab_instance) {
+.itemAd___3V0VB:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;

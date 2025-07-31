@@ -2586,20 +2586,6 @@
           "path": "/about/sustainability"
         },
         {
-          "id": "Xo7uEi7oD2aU",
-          "name": "PartnerWithAssh",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerWithAssh.jsx",
-          "importSpec": {
-            "modulePath": "../pages/about/partner.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicPartnerWithAssh.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/about/partner"
-        },
-        {
           "id": "Rx4N9IdmvRrH",
           "name": "ForSurgeons",
           "type": "managed",
@@ -2803,6 +2789,146 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/membership/in-memoriam"
+        },
+        {
+          "id": "Xo7uEi7oD2aU",
+          "name": "Partner",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartner.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartner.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner"
+        },
+        {
+          "id": "POj7jgqY6i1g",
+          "name": "PartnerEducation",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerEducation.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/education.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerEducation.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/education"
+        },
+        {
+          "id": "gxTQfdx_BnWL",
+          "name": "PartnerEmail",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerEmail.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/email.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerEmail.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/email"
+        },
+        {
+          "id": "LQ7dL9T4Og_l",
+          "name": "PartnerSurgicalEducation",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerSurgicalEducation.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/surgical-education.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerSurgicalEducation.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/surgical-education"
+        },
+        {
+          "id": "QJY-_EjGSXvr",
+          "name": "PartnerHandPPodcast",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerHandPPodcast.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/handp-podcast.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerHandPPodcast.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/handp-podcast"
+        },
+        {
+          "id": "cRyvkSsQTGRv",
+          "name": "PartnerMailingLists",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerMailingLists.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/mailing-lists.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerMailingLists.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/mailing-lists"
+        },
+        {
+          "id": "sWSGh8WlgtIr",
+          "name": "PartnerScholarshipProgram",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerScholarshipProgram.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/scholarship.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerScholarshipProgram.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/scholarship"
+        },
+        {
+          "id": "Zn2SD4-2xwz_",
+          "name": "PartnerSponsoredSurveys",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerSponsoredSurveys.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/sponsored-surveys.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerSponsoredSurveys.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/sponsored-surveys"
+        },
+        {
+          "id": "v-sT_5d4LT5z",
+          "name": "PartnerWeb",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerWeb.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/web.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerWeb.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/web"
+        },
+        {
+          "id": "MmNXYcfEUXEf",
+          "name": "PartnerYoungLeaders",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerYoungLeaders.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/partner/young-leaders.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPartnerYoungLeaders.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/partner/young-leaders"
         }
       ],
       "icons": [

@@ -118,7 +118,7 @@ function PlasmicAbout__RenderFunc(props) {
             title={"Hero: About Overview - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__wrJxV)}>
+          <div className={classNames(projectcss.all, sty.freeBox___1XpGv)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -148,38 +148,39 @@ function PlasmicAbout__RenderFunc(props) {
             title={"About Overview - Mid-page CTA"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__xwvHi)}>
+          <div className={classNames(projectcss.all, sty.freeBox__uwWh0)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
-                sty.htmlContentfulHtmlLoader__ruZb
+                sty.htmlContentfulHtmlLoader__bcxca
               )}
               title={"About ASSH Overview Bottom"}
             />
-          </div>
-          <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
-          >
-            <div className={classNames(projectcss.all, sty.column__dr6Qr)}>
-              <Embed
-                data-plasmic-name={"embedHtml"}
-                data-plasmic-override={overrides.embedHtml}
-                className={classNames("__wab_instance", sty.embedHtml)}
-                code={
-                  '<p><img alt="The Founding Members of the American Society for Surgery of the Hand (ASSH) pictured in 1946" src="https://www.assh.org/servlet/servlet.FileDownload?file=00P0a00000mOKSnEAO" style="height:auto; width:100%" /></p>\r\n<p><em>Left to right: Darrel T. Shaw, Joseph H. Boyes, Lot D. Howard, S. Benjamin Fowler, Sterling Bunnell, Arthur Barsky, Donald D. Slocum, Walter C. Graham, J. William Littler, William Metcalf, Richard H. Mellen, Gilbert Hyroop, Donald R. Pratt, William F. Frackelton, Robert L. Payne, Jr. &mdash; Not Pictured: Harvey S. Allen, Hugh Auchincloss, Julian M. Brunner, Condict W. Cutler, Homer D. Dudley, Alfred W. Farmer, Gerald Gill, Edward Hamlin, Deryl Hart, Sumner L. Koch, William M. Krigsten, Clarence A. Luckey, Henry C. Marble, Michael L. Mason, Joseph I. McDonald, James T. Mills, George S. Phalen, William H. Requarth, Thomas W. Stevenson, George V. Webster</em></p>'
-                }
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__b7T)}>
-              <BlockQuoteBlock
-                data-plasmic-name={"blockQuoteBlock"}
-                data-plasmic-override={overrides.blockQuoteBlock}
-                className={classNames("__wab_instance", sty.blockQuoteBlock)}
-                name={"ASSH About Quote"}
-                quote={"singleLine"}
-              />
+
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
+            >
+              <div className={classNames(projectcss.all, sty.column__r4Vig)}>
+                <Embed
+                  data-plasmic-name={"embedHtml"}
+                  data-plasmic-override={overrides.embedHtml}
+                  className={classNames("__wab_instance", sty.embedHtml)}
+                  code={
+                    '<p><img alt="The Founding Members of the American Society for Surgery of the Hand (ASSH) pictured in 1946" src="https://www.assh.org/servlet/servlet.FileDownload?file=00P0a00000mOKSnEAO" style="height:auto; width:100%" /></p>\r\n<p><em>Left to right: Darrel T. Shaw, Joseph H. Boyes, Lot D. Howard, S. Benjamin Fowler, Sterling Bunnell, Arthur Barsky, Donald D. Slocum, Walter C. Graham, J. William Littler, William Metcalf, Richard H. Mellen, Gilbert Hyroop, Donald R. Pratt, William F. Frackelton, Robert L. Payne, Jr. &mdash; Not Pictured: Harvey S. Allen, Hugh Auchincloss, Julian M. Brunner, Condict W. Cutler, Homer D. Dudley, Alfred W. Farmer, Gerald Gill, Edward Hamlin, Deryl Hart, Sumner L. Koch, William M. Krigsten, Clarence A. Luckey, Henry C. Marble, Michael L. Mason, Joseph I. McDonald, James T. Mills, George S. Phalen, William H. Requarth, Thomas W. Stevenson, George V. Webster</em></p>'
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__rd6H)}>
+                <BlockQuoteBlock
+                  data-plasmic-name={"blockQuoteBlock"}
+                  data-plasmic-override={overrides.blockQuoteBlock}
+                  className={classNames("__wab_instance", sty.blockQuoteBlock)}
+                  name={"ASSH About Quote"}
+                  quote={"singleLine"}
+                />
+              </div>
             </div>
           </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__jYxje)} />
