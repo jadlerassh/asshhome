@@ -16,7 +16,9 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
   generateStateOnChangeProp,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -28,6 +30,7 @@ import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ComponentTabSet from "../../ComponentTabSet"; // plasmic-import: jXQ3iNzBSIE_/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
+import { useUnnamedGlobalGroupOfVariants2 } from "./PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2"; // plasmic-import: MepFML_UVuQE/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -38,7 +41,10 @@ createPlasmicElementProxy;
 
 export const PlasmicCommitteeDetailsTest__VariantProps = new Array();
 
-export const PlasmicCommitteeDetailsTest__ArgProps = new Array("selectedItem");
+export const PlasmicCommitteeDetailsTest__ArgProps = new Array(
+  "selectedItem",
+  "tabname"
+);
 
 const $$ = {};
 
@@ -123,7 +129,7 @@ function PlasmicCommitteeDetailsTest__RenderFunc(props) {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
         opId: "7a7810bf-0623-46e4-86ef-0da1afa44954",
         userArgs: {
-          params: [$state.selectedItemPage]
+          params: [$props.tabname]
         },
         cacheKey: `plasmic.$.7a7810bf-0623-46e4-86ef-0da1afa44954.$.`,
         invalidatedKeys: null,
@@ -135,6 +141,9 @@ function PlasmicCommitteeDetailsTest__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = ensureGlobalVariants({
+    unnamedGlobalGroupOfVariants2: useUnnamedGlobalGroupOfVariants2()
+  });
   return (
     <React.Fragment>
       <Head>
@@ -175,7 +184,15 @@ function PlasmicCommitteeDetailsTest__RenderFunc(props) {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.root,
+            {
+              [sty.rootglobal_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+                hasVariant(
+                  globalVariants,
+                  "unnamedGlobalGroupOfVariants2",
+                  "upcomingEvents"
+                )
+            }
           )}
         >
           <ItemAd
@@ -207,11 +224,19 @@ function PlasmicCommitteeDetailsTest__RenderFunc(props) {
                 data-plasmic-override={overrides.componentVerticalPageList}
                 className={classNames(
                   "__wab_instance",
-                  sty.componentVerticalPageList
+                  sty.componentVerticalPageList,
+                  {
+                    [sty.componentVerticalPageListglobal_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+                      hasVariant(
+                        globalVariants,
+                        "unnamedGlobalGroupOfVariants2",
+                        "upcomingEvents"
+                      )
+                  }
                 )}
                 navName={(() => {
                   try {
-                    return $state.selectedItemPage;
+                    return $props.tabname;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||

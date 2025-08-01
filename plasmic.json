@@ -73,8 +73,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -474,8 +473,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "gLnoj82AzKVVT7qXiqAbHD",
@@ -541,8 +539,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-tabs"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -568,8 +565,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "xfguyo8p9zs8FxMdioQAoN",
@@ -603,8 +599,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-contentful"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -662,8 +657,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -685,8 +679,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -894,8 +887,7 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -917,8 +909,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "34tvEQuyqfK98iGCjMbawB",
@@ -2660,7 +2651,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsTest.jsx",
           "importSpec": {
-            "modulePath": "../pages/committees/committees-details-2.jsx"
+            "modulePath": "../pages/s/committeedetails.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsTest.module.css",
           "scheme": "blackbox",
@@ -2929,6 +2920,48 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/about/partner/young-leaders"
+        },
+        {
+          "id": "4sVxlULRtaDO",
+          "name": "ForResidentsAndFellows",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicForResidentsAndFellows.jsx",
+          "importSpec": {
+            "modulePath": "../pages/for-residents-fellows.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicForResidentsAndFellows.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/for-residents-fellows"
+        },
+        {
+          "id": "Wk0pOjLaYGpf",
+          "name": "InternationalTravelingFellowsProgram",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicInternationalTravelingFellowsProgram.jsx",
+          "importSpec": {
+            "modulePath": "../pages/grants-awards/international-traveling-fellows.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicInternationalTravelingFellowsProgram.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/grants-awards/international-traveling-fellows"
+        },
+        {
+          "id": "xepp4bHUpvhi",
+          "name": "InternationalVisitingProfessorProgram",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicInternationalVisitingProfessorProgram.jsx",
+          "importSpec": {
+            "modulePath": "../pages/grants-awards/international-visiting-professor.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicInternationalVisitingProfessorProgram.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/grants-awards/international-visiting-professor"
         }
       ],
       "icons": [
@@ -3849,8 +3882,7 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     }
   ],
   "globalVariants": {
