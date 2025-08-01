@@ -2971,6 +2971,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/grants-awards/international-visiting-professor"
+        },
+        {
+          "id": "WLZQOyitmwZ0",
+          "name": "LendingAHandProgram",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicLendingAHandProgram.jsx",
+          "importSpec": {
+            "modulePath": "../pages/grants-awards/lending-hand-program.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicLendingAHandProgram.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/grants-awards/lending-hand-program"
         }
       ],
       "icons": [
