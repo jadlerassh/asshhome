@@ -23,7 +23,6 @@ import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
-import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -210,30 +209,6 @@ function PlasmicInternationalVisitingProfessorProgram__RenderFunc(props) {
               )}
               title={"International Visiting Professor Program - Body"}
             />
-
-            <SectionAccordionSectionTemplate
-              data-plasmic-name={"sectionAccordionSectionTemplate"}
-              data-plasmic-override={overrides.sectionAccordionSectionTemplate}
-              bodyContent={`Body Content${$queries.getHtmlContent.data.response.items[0].fields.bodyContent}`}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionAccordionSectionTemplate
-              )}
-              title={(() => {
-                try {
-                  return $queries.getHtmlContent.data.response.items[0].fields
-                    .title;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return undefined;
-                  }
-                  throw e;
-                }
-              })()}
-            />
           </Stack__>
           <ItemAd
             className={classNames("__wab_instance", sty.itemAd___0JMpO)}
@@ -260,21 +235,13 @@ const PlasmicDescendants = {
     "freeBox",
     "columns",
     "blockQuoteBlock",
-    "sectionAccordionSectionTemplate",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  freeBox: [
-    "freeBox",
-    "columns",
-    "blockQuoteBlock",
-    "sectionAccordionSectionTemplate"
-  ],
-
+  freeBox: ["freeBox", "columns", "blockQuoteBlock"],
   columns: ["columns", "blockQuoteBlock"],
   blockQuoteBlock: ["blockQuoteBlock"],
-  sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -318,9 +285,6 @@ export const PlasmicInternationalVisitingProfessorProgram = Object.assign(
     freeBox: makeNodeComponent("freeBox"),
     columns: makeNodeComponent("columns"),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
-    sectionAccordionSectionTemplate: makeNodeComponent(
-      "sectionAccordionSectionTemplate"
-    ),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicInternationalVisitingProfessorProgram
     internalVariantProps:
