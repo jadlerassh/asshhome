@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -180,11 +179,9 @@ function PlasmicUpdateCard__RenderFunc(props) {
               useHtml={false}
             />
           ) : null}
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
-            hasGap={true}
             className={classNames(projectcss.all, sty.freeBox)}
           >
             <div
@@ -285,7 +282,7 @@ function PlasmicUpdateCard__RenderFunc(props) {
                 </React.Fragment>
               </div>
             </section>
-          </Stack__>
+          </div>
         </section>
       </section>
     </div>

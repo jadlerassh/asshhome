@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -82,11 +81,9 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame5"}
           data-plasmic-override={overrides.frame5}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame5)}
         >
           <div
@@ -98,26 +95,20 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
           >
             {"What Sets Us Apart"}
           </div>
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame6"}
             data-plasmic-override={overrides.frame6}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame6)}
           >
             <div className={classNames(projectcss.all, sty.column__xgVrU)}>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame3"}
                 data-plasmic-override={overrides.frame3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame3)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"checkItem"}
                   data-plasmic-override={overrides.checkItem}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.checkItem)}
                 >
                   <ItemCheckmarkItem
@@ -126,12 +117,10 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
                       sty.itemCheckmarkItem__qFoy
                     )}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"checkItem2"}
                   data-plasmic-override={overrides.checkItem2}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.checkItem2)}
                 >
                   <ItemCheckmarkItem
@@ -140,12 +129,10 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
                       sty.itemCheckmarkItem__bre96
                     )}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"checkItem3"}
                   data-plasmic-override={overrides.checkItem3}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.checkItem3)}
                 >
                   <ItemCheckmarkItem
@@ -154,12 +141,10 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
                       sty.itemCheckmarkItem__soksj
                     )}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"checkItem4"}
                   data-plasmic-override={overrides.checkItem4}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.checkItem4)}
                 >
                   <ItemCheckmarkItem
@@ -168,15 +153,13 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
                       sty.itemCheckmarkItem___6Awaj
                     )}
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </div>
             <div className={classNames(projectcss.all, sty.column__q0DjL)}>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame7"}
                 data-plasmic-override={overrides.frame7}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame7)}
               >
                 <div
@@ -190,10 +173,10 @@ function PlasmicSectionCheckboxSectionWithRightText__RenderFunc(props) {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                   }
                 </div>
-              </Stack__>
+              </div>
             </div>
-          </Stack__>
-        </Stack__>
+          </div>
+        </div>
       </div>
     </div>
   );

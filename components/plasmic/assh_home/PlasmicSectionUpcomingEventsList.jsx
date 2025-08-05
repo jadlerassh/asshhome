@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -160,11 +159,9 @@ function PlasmicSectionUpcomingEventsList__RenderFunc(props) {
         data-plasmic-override={overrides.section7}
         className={classNames(projectcss.all, sty.section7)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame5"}
           data-plasmic-override={overrides.frame5}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame5)}
         >
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -258,7 +255,7 @@ function PlasmicSectionUpcomingEventsList__RenderFunc(props) {
               </div>
             );
           })}
-        </Stack__>
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -149,11 +148,7 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
       >
         <div className={classNames(projectcss.all, sty.freeBox__inJb2)}>
           <div className={classNames(projectcss.all, sty.columns__tZAmF)}>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__yLTf)}
-            >
+            <div className={classNames(projectcss.all, sty.column__yLTf)}>
               <Embed
                 data-plasmic-name={"embedHtml"}
                 data-plasmic-override={overrides.embedHtml}
@@ -200,11 +195,7 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__zYdsI)}
-              >
+              <div className={classNames(projectcss.all, sty.freeBox__zYdsI)}>
                 <ButtonPrimary
                   className={classNames(
                     "__wab_instance",
@@ -276,8 +267,8 @@ function PlasmicHeroWithLinks__RenderFunc(props) {
                     }
                   })()}
                 />
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
             <div className={classNames(projectcss.all, sty.column__wb8Wk)}>
               <PlasmicImg__
                 data-plasmic-name={"img"}

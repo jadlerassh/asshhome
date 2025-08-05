@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -149,18 +148,14 @@ function PlasmicBlockQuicklinksTanBox__RenderFunc(props) {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox__wzAhz)}>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"section10"}
           data-plasmic-override={overrides.section10}
-          hasGap={true}
           className={classNames(projectcss.all, sty.section10)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"calloutBar"}
             data-plasmic-override={overrides.calloutBar}
-            hasGap={true}
             className={classNames(projectcss.all, sty.calloutBar)}
           >
             <div
@@ -338,8 +333,8 @@ function PlasmicBlockQuicklinksTanBox__RenderFunc(props) {
                 </div>
               </div>
             </div>
-          </Stack__>
-        </Stack__>
+          </div>
+        </div>
       </div>
     </div>
   );

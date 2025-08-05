@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -207,18 +206,14 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"section10"}
           data-plasmic-override={overrides.section10}
-          hasGap={true}
           className={classNames(projectcss.all, sty.section10)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame2"}
             data-plasmic-override={overrides.frame2}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame2)}
           >
             <ItemSectionTitleDescriptionItem
@@ -268,11 +263,9 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
               title={"Education - CME & MOC Copy"}
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
-              hasGap={true}
               className={classNames(projectcss.all, sty.columns)}
             >
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -350,15 +343,15 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
               })}
               <div className={classNames(projectcss.all, sty.column__k437)} />
               <div className={classNames(projectcss.all, sty.column___8Fai7)} />
-            </Stack__>
-          </Stack__>
+            </div>
+          </div>
           <SectionQuicklinksTable
             data-plasmic-name={"sectionQuicklinksTable"}
             data-plasmic-override={overrides.sectionQuicklinksTable}
             className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
             columns={"_4Column"}
           />
-        </Stack__>
+        </div>
       </div>
     </div>
   );

@@ -11,11 +11,9 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -23,7 +21,6 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -123,9 +120,6 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -151,18 +145,14 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
       >
         <div className={classNames(projectcss.all, sty.column___7JJd)}>
           <div className={classNames(projectcss.all, sty.freeBox__pUzSn)}>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame9"}
               data-plasmic-override={overrides.frame9}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame9)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame10"}
                 data-plasmic-override={overrides.frame10}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame10)}
               >
                 {(() => {
@@ -264,7 +254,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                     </React.Fragment>
                   </div>
                 ) : null}
-              </Stack__>
+              </div>
               {(() => {
                 try {
                   return (
@@ -306,11 +296,9 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                   </React.Fragment>
                 </div>
               ) : null}
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame11"}
                 data-plasmic-override={overrides.frame11}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame11)}
               >
                 {(() => {
@@ -417,8 +405,8 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                     })()}
                   />
                 ) : null}
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
           </div>
         </div>
         <div className={classNames(projectcss.all, sty.column__gzOb4)}>

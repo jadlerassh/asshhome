@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -99,11 +98,9 @@ function PlasmicBlockPublicationHighlight__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
-        hasGap={true}
         className={classNames(projectcss.all, sty.columns)}
       >
         <div className={classNames(projectcss.all, sty.column__hz5Rh)}>
@@ -112,11 +109,9 @@ function PlasmicBlockPublicationHighlight__RenderFunc(props) {
             data-plasmic-override={overrides.frame2}
             className={classNames(projectcss.all, sty.frame2)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame7"}
               data-plasmic-override={overrides.frame7}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame7)}
             >
               <h2
@@ -172,11 +167,9 @@ function PlasmicBlockPublicationHighlight__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame8"}
                 data-plasmic-override={overrides.frame8}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame8)}
               >
                 <ButtonPrimary
@@ -215,16 +208,58 @@ function PlasmicBlockPublicationHighlight__RenderFunc(props) {
                   })()}
                 />
 
-                <ButtonPrimary
-                  className={classNames(
-                    "__wab_instance",
-                    sty.buttonPrimary__dpOIh
-                  )}
-                  text={"More About The Book"}
-                  whiteButtonBlackSurround={true}
-                />
-              </Stack__>
-            </Stack__>
+                {(() => {
+                  try {
+                    return $queries.getHeroContent.data.response.items[0].fields
+                      .cta2Text;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })() ? (
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__dpOIh
+                    )}
+                    text={(() => {
+                      try {
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.cta2Text;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return ``;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    url={(() => {
+                      try {
+                        return $queries.getHeroContent.data.response.items[0]
+                          .fields.cta2Link;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "";
+                        }
+                        throw e;
+                      }
+                    })()}
+                    whiteButtonBlackSurround={true}
+                  />
+                ) : null}
+              </div>
+            </div>
           </div>
         </div>
         <div className={classNames(projectcss.all, sty.column__w23T)}>
@@ -262,7 +297,7 @@ function PlasmicBlockPublicationHighlight__RenderFunc(props) {
             />
           </div>
         </div>
-      </Stack__>
+      </div>
     </div>
   );
 }

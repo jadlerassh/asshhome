@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -100,11 +99,9 @@ function PlasmicItemCourseList__RenderFunc(props) {
                 "The American Society for Surgery of the Hand delivers cutting-edge continuing medical education designed to advance the knowledge, skill, and impact of hand and upper extremity care. ASSH courses empower surgeons and healthcare professionals to elevate their clinical expertise and improve patient outcomes through enhanced competence and performance."
               }
             </div>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"container5"}
               data-plasmic-override={overrides.container5}
-              hasGap={true}
               className={classNames(projectcss.all, sty.container5)}
             >
               <div
@@ -123,18 +120,14 @@ function PlasmicItemCourseList__RenderFunc(props) {
                 role={"img"}
               />
 
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"column"}
                 data-plasmic-override={overrides.column}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.column)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"linkItem"}
                   data-plasmic-override={overrides.linkItem}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.linkItem)}
                 >
                   <div
@@ -192,38 +185,30 @@ function PlasmicItemCourseList__RenderFunc(props) {
                       text={"Non-ASSH Courses"}
                     />
                   </div>
-                </Stack__>
-              </Stack__>
-            </Stack__>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"_2Column"}
         data-plasmic-override={overrides._2Column}
-        hasGap={true}
         className={classNames(projectcss.all, sty._2Column)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"main"}
           data-plasmic-override={overrides.main}
-          hasGap={true}
           className={classNames(projectcss.all, sty.main)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"filterBar"}
             data-plasmic-override={overrides.filterBar}
-            hasGap={true}
             className={classNames(projectcss.all, sty.filterBar)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"filterBtn"}
               data-plasmic-override={overrides.filterBtn}
-              hasGap={true}
               className={classNames(projectcss.all, sty.filterBtn)}
             >
               <div
@@ -239,12 +224,10 @@ function PlasmicItemCourseList__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.svg__ufLt)}
                 role={"img"}
               />
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"filterBtn2"}
               data-plasmic-override={overrides.filterBtn2}
-              hasGap={true}
               className={classNames(projectcss.all, sty.filterBtn2)}
             >
               <div
@@ -260,27 +243,21 @@ function PlasmicItemCourseList__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.svg__f3Pa)}
                 role={"img"}
               />
-            </Stack__>
-          </Stack__>
-          <Stack__
-            as={"div"}
+            </div>
+          </div>
+          <div
             data-plasmic-name={"list"}
             data-plasmic-override={overrides.list}
-            hasGap={true}
             className={classNames(projectcss.all, sty.list)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"newsItem"}
               data-plasmic-override={overrides.newsItem}
-              hasGap={true}
               className={classNames(projectcss.all, sty.newsItem)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"container"}
                 data-plasmic-override={overrides.container}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.container)}
               >
                 {false ? (
@@ -314,11 +291,9 @@ function PlasmicItemCourseList__RenderFunc(props) {
                     {"Short description text"}
                   </div>
                 ) : null}
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame18"}
                   data-plasmic-override={overrides.frame18}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame18)}
                 >
                   <Vector11Icon
@@ -335,8 +310,8 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   >
                     {"On Demand"}
                   </div>
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
               {false ? (
                 <div
                   data-plasmic-name={"rectangle26"}
@@ -344,24 +319,20 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.rectangle26)}
                 />
               ) : null}
-            </Stack__>
+            </div>
             <Line23Icon
               className={classNames(projectcss.all, sty.svg__fdnf)}
               role={"img"}
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"newsItem2"}
               data-plasmic-override={overrides.newsItem2}
-              hasGap={true}
               className={classNames(projectcss.all, sty.newsItem2)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"container2"}
                 data-plasmic-override={overrides.container2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.container2)}
               >
                 {false ? (
@@ -384,11 +355,9 @@ function PlasmicItemCourseList__RenderFunc(props) {
                 >
                   {"2025 IFSSH and IFSHT Triennial Congress"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame19"}
                   data-plasmic-override={overrides.frame19}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame19)}
                 >
                   <CalendarIcon
@@ -405,12 +374,10 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   >
                     {"March 24-28, 2025"}
                   </div>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"frame20"}
                   data-plasmic-override={overrides.frame20}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame20)}
                 >
                   <Vector12Icon
@@ -427,31 +394,27 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   >
                     {"Washington, D.C., USA"}
                   </div>
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
               <div
                 data-plasmic-name={"rectangle27"}
                 data-plasmic-override={overrides.rectangle27}
                 className={classNames(projectcss.all, sty.rectangle27)}
               />
-            </Stack__>
+            </div>
             <Line23Icon
               className={classNames(projectcss.all, sty.svg__e2MD)}
               role={"img"}
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"newsItem3"}
               data-plasmic-override={overrides.newsItem3}
-              hasGap={true}
               className={classNames(projectcss.all, sty.newsItem3)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"container3"}
                 data-plasmic-override={overrides.container3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.container3)}
               >
                 {false ? (
@@ -474,11 +437,9 @@ function PlasmicItemCourseList__RenderFunc(props) {
                 >
                   {"80th Annual Meeting of the ASSH"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame21"}
                   data-plasmic-override={overrides.frame21}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame21)}
                 >
                   <CalendarIcon
@@ -497,12 +458,10 @@ function PlasmicItemCourseList__RenderFunc(props) {
                       "Thursday, October 9, 2025 \u2013 Saturday, October 11, 2025"
                     }
                   </div>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"frame22"}
                   data-plasmic-override={overrides.frame22}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame22)}
                 >
                   <Vector12Icon
@@ -519,31 +478,27 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   >
                     {"Vancouver Convention Centre \u2013 Vancouver, BC, Canada"}
                   </div>
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
               <div
                 data-plasmic-name={"rectangle28"}
                 data-plasmic-override={overrides.rectangle28}
                 className={classNames(projectcss.all, sty.rectangle28)}
               />
-            </Stack__>
+            </div>
             <Line23Icon
               className={classNames(projectcss.all, sty.svg___5AnLv)}
               role={"img"}
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"newsItem4"}
               data-plasmic-override={overrides.newsItem4}
-              hasGap={true}
               className={classNames(projectcss.all, sty.newsItem4)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"container4"}
                 data-plasmic-override={overrides.container4}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.container4)}
               >
                 {false ? (
@@ -568,11 +523,9 @@ function PlasmicItemCourseList__RenderFunc(props) {
                     "ASSH CME Webinar: Osteochondral Reconstruction of Scaphoid Proximal Pole Nonunions: Technique Tips, and Tricks"
                   }
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame23"}
                   data-plasmic-override={overrides.frame23}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame23)}
                 >
                   <CalendarIcon
@@ -589,8 +542,8 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   >
                     {"Tuesday, May 13, 2025"}
                   </div>
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
               {false ? (
                 <div
                   data-plasmic-name={"rectangle29"}
@@ -598,17 +551,15 @@ function PlasmicItemCourseList__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.rectangle29)}
                 />
               ) : null}
-            </Stack__>
+            </div>
             <Line23Icon
               className={classNames(projectcss.all, sty.svg__es5VC)}
               role={"img"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
+          </div>
+          <div
             data-plasmic-name={"pagination"}
             data-plasmic-override={overrides.pagination}
-            hasGap={true}
             className={classNames(projectcss.all, sty.pagination)}
           >
             <div
@@ -674,16 +625,14 @@ function PlasmicItemCourseList__RenderFunc(props) {
             >
               {"4"}
             </div>
-          </Stack__>
-        </Stack__>
-        <Stack__
-          as={"div"}
+          </div>
+        </div>
+        <div
           data-plasmic-name={"right"}
           data-plasmic-override={overrides.right}
-          hasGap={true}
           className={classNames(projectcss.all, sty.right)}
         />
-      </Stack__>
+      </div>
     </div>
   );
 }

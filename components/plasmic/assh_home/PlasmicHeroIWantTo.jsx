@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -160,18 +159,12 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
           className={classNames(projectcss.all, sty.section)}
         />
 
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"columns"}
           data-plasmic-override={overrides.columns}
-          hasGap={true}
           className={classNames(projectcss.all, sty.columns)}
         >
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.column__fMj1H)}
-          >
+          <div className={classNames(projectcss.all, sty.column__fMj1H)}>
             <div className={classNames(projectcss.all, sty.freeBox__wZtBe)}>
               <div className={classNames(projectcss.all, sty.freeBox__m8M41)}>
                 <div
@@ -506,9 +499,9 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                 </div>
               </div>
             </div>
-          </Stack__>
+          </div>
           <div className={classNames(projectcss.all, sty.column__iHa6R)} />
-        </Stack__>
+        </div>
         <PlasmicImg__
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}

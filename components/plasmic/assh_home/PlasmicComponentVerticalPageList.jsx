@@ -16,11 +16,14 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
+import { useUnnamedGlobalGroupOfVariants2 } from "./PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2"; // plasmic-import: MepFML_UVuQE/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -170,6 +173,9 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = ensureGlobalVariants({
+    unnamedGlobalGroupOfVariants2: useUnnamedGlobalGroupOfVariants2()
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -298,7 +304,14 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
             <ButtonPrimary
               data-plasmic-name={"buttonPrimary"}
               data-plasmic-override={overrides.buttonPrimary}
-              className={classNames("__wab_instance", sty.buttonPrimary)}
+              className={classNames("__wab_instance", sty.buttonPrimary, {
+                [sty.buttonPrimaryglobal_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+                  hasVariant(
+                    globalVariants,
+                    "unnamedGlobalGroupOfVariants2",
+                    "upcomingEvents"
+                  )
+              })}
               megaMenuLink={["megaMenu"]}
               quicklinkOption={(() => {
                 try {
@@ -328,7 +341,22 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
               })()}
               url={(() => {
                 try {
-                  return currentItem.url;
+                  return (() => {
+                    return (() => {
+                      const map = {
+                        " ": "%20",
+                        ",": "%2C",
+                        "&": "%26",
+                        ":": "%3A",
+                        "/": "%2F"
+                      };
+                      const raw = String(currentItem.label || "");
+                      const encode = str =>
+                        str.replaceAll(/[ ,&:/]/g, ch => map[ch]);
+                      const param = encode(raw);
+                      return `/s/committeedetails?name=${param}`;
+                    })();
+                  })();
                 } catch (e) {
                   if (
                     e instanceof TypeError ||

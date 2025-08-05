@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -138,11 +137,9 @@ function PlasmicCommitteesListing__RenderFunc(props) {
             title={"Hero: Committees - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
-            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
             <div className={classNames(projectcss.all, sty.column__eZg67)}>
@@ -176,7 +173,7 @@ function PlasmicCommitteesListing__RenderFunc(props) {
                 })()}
               />
             </div>
-          </Stack__>
+          </div>
         </div>
       </div>
     </React.Fragment>

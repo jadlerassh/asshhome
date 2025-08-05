@@ -70,10 +70,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
-  --plsmc-rc-col-gap: 0px;
 }
 .columns___7Hlld > :nth-child(1n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  width: calc(100% * 12 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns___7Hlld {
@@ -86,7 +85,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns___7Hlld > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column__ktEg5 {
@@ -153,10 +152,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
-  --plsmc-rc-col-gap: 0px;
 }
 .columns__b7VoV > :nth-child(1n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  width: calc(100% * 12 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__b7VoV {
@@ -169,7 +167,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__b7VoV > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column___2XgYv {
@@ -197,10 +195,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
-  --plsmc-rc-col-gap: 0px;
 }
 .columns__hhsus > :nth-child(1n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  width: calc(100% * 12 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__hhsus {
@@ -213,7 +210,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__hhsus > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column___1DcZz {
@@ -243,10 +240,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
-  --plsmc-rc-col-gap: 0px;
 }
 .columns___6Y0Wh > :nth-child(1n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  width: calc(100% * 12 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns___6Y0Wh {
@@ -259,7 +255,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns___6Y0Wh > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column__r3GJd {

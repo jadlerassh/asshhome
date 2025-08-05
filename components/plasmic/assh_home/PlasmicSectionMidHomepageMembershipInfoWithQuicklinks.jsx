@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -135,11 +134,9 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
           className={classNames(projectcss.all, sty.columns)}
         >
           <div className={classNames(projectcss.all, sty.column__tn9Zf)}>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame12"}
               data-plasmic-override={overrides.frame12}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame12)}
             >
               <div
@@ -171,7 +168,7 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                   "Shoulder-based CPT codes have now been added to the ASSH\u2019s Coding App! Free for members, the Coding App contains thousands of CPT codes with other built-in tools to help you code easier and more efficiently."
                 }
               </div>
-            </Stack__>
+            </div>
             <ButtonPrimary
               data-plasmic-name={"buttonPrimary"}
               data-plasmic-override={overrides.buttonPrimary}
@@ -185,11 +182,9 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
           </div>
           <div className={classNames(projectcss.all, sty.column__toS2)}>
             <div className={classNames(projectcss.all, sty.freeBox__qTskc)}>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"memberQuicklinks"}
                 data-plasmic-override={overrides.memberQuicklinks}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.memberQuicklinks)}
               >
                 <div
@@ -201,18 +196,14 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                 >
                   {"Quick Links for Members"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"column"}
                   data-plasmic-override={overrides.column}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.column)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"linkItem"}
                     data-plasmic-override={overrides.linkItem}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.linkItem)}
                   >
                     <ChevronRight2Icon
@@ -229,12 +220,10 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                     >
                       {"MyASSH"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"linkItem2"}
                     data-plasmic-override={overrides.linkItem2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.linkItem2)}
                   >
                     <ChevronRight2Icon
@@ -251,12 +240,10 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                     >
                       {"My Membership"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"linkItem3"}
                     data-plasmic-override={overrides.linkItem3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.linkItem3)}
                   >
                     <ChevronRight2Icon
@@ -273,12 +260,10 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                     >
                       {"Member Resources"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"linkItem4"}
                     data-plasmic-override={overrides.linkItem4}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.linkItem4)}
                   >
                     <ChevronRight2Icon
@@ -295,12 +280,10 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                     >
                       {"Become a Member"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"linkItem5"}
                     data-plasmic-override={overrides.linkItem5}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.linkItem5)}
                   >
                     <ChevronRight2Icon
@@ -317,12 +300,10 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                     >
                       {"Member Directory"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"linkItem6"}
                     data-plasmic-override={overrides.linkItem6}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.linkItem6)}
                   >
                     <ChevronRight2Icon
@@ -339,9 +320,9 @@ function PlasmicSectionMidHomepageMembershipInfoWithQuicklinks__RenderFunc(
                     >
                       {"CME & MOC"}
                     </div>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

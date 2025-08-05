@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -162,11 +161,9 @@ function PlasmicWebinars__RenderFunc(props) {
             sty.root
           )}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
-            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
             <div className={classNames(projectcss.all, sty.column__cTX)}>
@@ -232,7 +229,7 @@ function PlasmicWebinars__RenderFunc(props) {
               <div className={classNames(projectcss.all, sty.freeBox__nlth6)} />
             </div>
             <div className={classNames(projectcss.all, sty.column__aub4)} />
-          </Stack__>
+          </div>
           <ItemAd
             data-plasmic-name={"itemAd"}
             data-plasmic-override={overrides.itemAd}

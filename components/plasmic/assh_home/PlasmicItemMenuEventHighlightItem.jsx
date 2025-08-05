@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -98,11 +97,9 @@ function PlasmicItemMenuEventHighlightItem__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"frame4"}
         data-plasmic-override={overrides.frame4}
-        hasGap={true}
         className={classNames(projectcss.all, sty.frame4)}
       >
         <div
@@ -180,11 +177,9 @@ function PlasmicItemMenuEventHighlightItem__RenderFunc(props) {
             </React.Fragment>
           </div>
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"navItemSimple"}
           data-plasmic-override={overrides.navItemSimple}
-          hasGap={true}
           className={classNames(projectcss.all, sty.navItemSimple)}
         >
           <ButtonPrimary
@@ -207,8 +202,8 @@ function PlasmicItemMenuEventHighlightItem__RenderFunc(props) {
               }
             })()}
           />
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

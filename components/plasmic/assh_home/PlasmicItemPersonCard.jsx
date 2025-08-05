@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -87,11 +86,9 @@ function PlasmicItemPersonCard__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"articleImageCard"}
         data-plasmic-override={overrides.articleImageCard}
-        hasGap={true}
         className={classNames(projectcss.all, sty.articleImageCard)}
       >
         <div
@@ -126,18 +123,14 @@ function PlasmicItemPersonCard__RenderFunc(props) {
             })()}
           />
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"content"}
           data-plasmic-override={overrides.content}
-          hasGap={true}
           className={classNames(projectcss.all, sty.content)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"content2"}
             data-plasmic-override={overrides.content2}
-            hasGap={true}
             className={classNames(projectcss.all, sty.content2)}
           >
             <div
@@ -221,9 +214,9 @@ function PlasmicItemPersonCard__RenderFunc(props) {
                 </React.Fragment>
               </div>
             </div>
-          </Stack__>
-        </Stack__>
-      </Stack__>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

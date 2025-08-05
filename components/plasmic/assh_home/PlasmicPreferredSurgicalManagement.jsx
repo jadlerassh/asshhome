@@ -15,7 +15,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -90,11 +89,7 @@ function PlasmicPreferredSurgicalManagement__RenderFunc(props) {
           )}
         >
           <div className={classNames(projectcss.all, sty.columns__l9U3F)}>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__yEb7D)}
-            >
+            <div className={classNames(projectcss.all, sty.column__yEb7D)}>
               <h2
                 data-plasmic-name={"h2"}
                 data-plasmic-override={overrides.h2}
@@ -392,12 +387,8 @@ function PlasmicPreferredSurgicalManagement__RenderFunc(props) {
                   </div>
                 </div>
               </div>
-            </Stack__>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__od4Cn)}
-            >
+            </div>
+            <div className={classNames(projectcss.all, sty.column__od4Cn)}>
               <section
                 className={classNames(projectcss.all, sty.section__jvRco)}
               >
@@ -578,7 +569,7 @@ function PlasmicPreferredSurgicalManagement__RenderFunc(props) {
                   }}
                 />
               </section>
-            </Stack__>
+            </div>
           </div>
         </div>
       </div>

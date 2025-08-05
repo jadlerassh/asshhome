@@ -3,26 +3,11 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  position: relative;
-  min-width: 0;
-}
-.tabset > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
+  row-gap: 5px;
   min-width: 0;
-  margin-top: calc(0px - 5px);
-  height: calc(100% + 5px);
-}
-.tabset > :global(.__wab_flex-container) > *,
-.tabset > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.tabset > :global(.__wab_flex-container) > picture > img,
-.tabset
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 5px;
 }
 .tabGroup {
   height: 60px;
@@ -62,39 +47,24 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  min-height: 0;
-  padding: 20px;
-}
-.tab > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: 20px;
   min-height: 0;
-  margin-top: calc(0px - 20px);
-  height: calc(100% + 20px);
-}
-.tab > :global(.__wab_flex-container) > *,
-.tab > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.tab > :global(.__wab_flex-container) > picture > img,
-.tab > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-top: 20px;
+  padding: 20px;
 }
 @media (max-width: 414px) {
   .tab {
     width: auto;
-    padding: 5px;
-  }
-}
-@media (max-width: 414px) {
-  .tab > :global(.__wab_flex-container) {
     flex-wrap: nowrap;
     align-items: center;
     align-content: stretch;
     justify-content: center;
+    padding: 5px;
   }
 }
 @media (max-width: 240px) {
-  .tab > :global(.__wab_flex-container) {
+  .tab {
     align-items: center;
     justify-content: flex-start;
   }
@@ -105,40 +75,25 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  border-radius: 2px;
-}
-.cta > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-left: calc(0px - 5px);
-  width: calc(100% + 5px);
-}
-.cta > :global(.__wab_flex-container) > *,
-.cta > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.cta > :global(.__wab_flex-container) > picture > img,
-.cta > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-left: 5px;
+  column-gap: 5px;
+  border-radius: 2px;
 }
 @media (max-width: 414px) {
   .cta {
     width: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    min-width: 0;
-  }
-}
-@media (max-width: 414px) {
-  .cta > :global(.__wab_flex-container) {
     flex-wrap: nowrap;
     align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
     justify-content: center;
     align-content: stretch;
     min-width: 0;
   }
 }
 @media (max-width: 240px) {
-  .cta > :global(.__wab_flex-container) {
+  .cta {
     justify-content: center;
     align-items: center;
   }
@@ -149,23 +104,9 @@
   display: flex;
   position: relative;
   flex-direction: row;
-}
-.icon12X12 > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.icon12X12 > :global(.__wab_flex-container) > *,
-.icon12X12 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.icon12X12 > :global(.__wab_flex-container) > picture > img,
-.icon12X12
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 10px;
+  column-gap: 10px;
 }
 .svg__a0Ncd {
   object-fit: cover;
@@ -176,24 +117,10 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  flex-shrink: 0;
-}
-.svg__a0Ncd > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.svg__a0Ncd > :global(.__wab_flex-container) > *,
-.svg__a0Ncd > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.svg__a0Ncd > :global(.__wab_flex-container) > picture > img,
-.svg__a0Ncd
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 10px;
+  column-gap: 10px;
+  flex-shrink: 0;
 }
 .navigationItem {
   display: block;
@@ -264,23 +191,9 @@
   display: flex;
   position: relative;
   flex-direction: row;
-}
-.icon12X122 > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.icon12X122 > :global(.__wab_flex-container) > *,
-.icon12X122 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.icon12X122 > :global(.__wab_flex-container) > picture > img,
-.icon12X122
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 10px;
+  column-gap: 10px;
 }
 .svg__tkstD {
   object-fit: cover;
@@ -291,24 +204,10 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  flex-shrink: 0;
-}
-.svg__tkstD > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.svg__tkstD > :global(.__wab_flex-container) > *,
-.svg__tkstD > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.svg__tkstD > :global(.__wab_flex-container) > picture > img,
-.svg__tkstD
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 10px;
+  column-gap: 10px;
+  flex-shrink: 0;
 }
 .activeStyleBg {
   display: block;
@@ -408,23 +307,9 @@
   position: relative;
   align-self: stretch;
   flex-direction: column;
-}
-.content > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: calc(0px - 20px);
-  height: calc(100% + 20px);
-}
-.content > :global(.__wab_flex-container) > *,
-.content > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.content > :global(.__wab_flex-container) > picture > img,
-.content
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 20px;
+  row-gap: 20px;
 }
 .embedHtml__mFYhZ:global(.__wab_instance) {
   max-width: 100%;

@@ -16,27 +16,12 @@
   display: flex;
   overflow: hidden;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
   min-width: 0;
   border-radius: 10px;
   padding: 30px;
-}
-.articleImageCard > :global(.__wab_flex-container) {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
-  margin-left: calc(0px - 30px);
-  width: calc(100% + 30px);
-}
-.articleImageCard > :global(.__wab_flex-container) > *,
-.articleImageCard > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.articleImageCard > :global(.__wab_flex-container) > picture > img,
-.articleImageCard
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 30px;
 }
 .image {
   background: none;
@@ -69,23 +54,9 @@
   position: relative;
   flex-grow: 1;
   flex-direction: column;
-}
-.content > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: calc(0px - 15px);
-  height: calc(100% + 15px);
-}
-.content > :global(.__wab_flex-container) > *,
-.content > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.content > :global(.__wab_flex-container) > picture > img,
-.content
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 15px;
+  row-gap: 15px;
 }
 .content2 {
   height: auto;
@@ -93,23 +64,9 @@
   position: relative;
   align-self: stretch;
   flex-direction: column;
-}
-.content2 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: calc(0px - 15px);
-  height: calc(100% + 15px);
-}
-.content2 > :global(.__wab_flex-container) > *,
-.content2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.content2 > :global(.__wab_flex-container) > picture > img,
-.content2
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 15px;
+  row-gap: 15px;
 }
 .text {
   display: block;

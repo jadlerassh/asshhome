@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicIcon as PlasmicIcon__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -238,11 +237,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
       )}
       data-plasmic-trigger-props={[triggerRootHoverProps]}
     >
-      <Stack__
-        as={PlasmicLink__}
+      <PlasmicLink__
         data-plasmic-name={"buttonHighlight2"}
         data-plasmic-override={overrides.buttonHighlight2}
-        hasGap={true}
         className={classNames(
           projectcss.all,
           projectcss.a,
@@ -339,11 +336,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         })()}
         platform={"nextjs"}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"icon12X12"}
           data-plasmic-override={overrides.icon12X12}
-          hasGap={true}
           className={classNames(projectcss.all, sty.icon12X12, {
             [sty.icon12X12darkInteractions_dark]: hasVariant(
               $state,
@@ -400,9 +395,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             )
           })}
         >
-          <Stack__
-            as={PlasmicIcon__}
-            hasGap={true}
+          <PlasmicIcon__
             PlasmicIconType={
               hasVariant($state, "quicklinkOption", "quicklinkOption")
                 ? Container2Icon
@@ -436,7 +429,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             })}
             role={"img"}
           />
-        </Stack__>
+        </div>
         <div
           data-plasmic-name={"text2"}
           data-plasmic-override={overrides.text2}
@@ -537,11 +530,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             })()}
           </React.Fragment>
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"icon12X125"}
           data-plasmic-override={overrides.icon12X125}
-          hasGap={true}
           className={classNames(projectcss.all, sty.icon12X125, {
             [sty.icon12X125darkNoBgInteractions_hover_textArrowButton]:
               hasVariant($state, "textArrowButton", "textArrowButton") &&
@@ -563,9 +554,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             )
           })}
         >
-          <Stack__
-            as={Container2Icon}
-            hasGap={true}
+          <Container2Icon
             className={classNames(projectcss.all, sty.svg__bsMdx, {
               [sty.svgdarkNoBgInteractions_hover_textArrowButton__bsMdxAyj9OUQaqx]:
                 hasVariant($state, "textArrowButton", "textArrowButton") &&
@@ -583,12 +572,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             })}
             role={"img"}
           />
-        </Stack__>
-        <Stack__
-          as={"div"}
+        </div>
+        <div
           data-plasmic-name={"navItemSimple"}
           data-plasmic-override={overrides.navItemSimple}
-          hasGap={true}
           className={classNames(projectcss.all, sty.navItemSimple, {
             [sty.navItemSimpledarkNoBgInteractions_hover_textArrowButton]:
               hasVariant($state, "textArrowButton", "textArrowButton") &&
@@ -610,11 +597,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               ? true
               : false
           ) ? (
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"icon12X123"}
               data-plasmic-override={overrides.icon12X123}
-              hasGap={true}
               className={classNames(projectcss.all, sty.icon12X123, {
                 [sty.icon12X123textArrowButton]: hasVariant(
                   $state,
@@ -623,9 +608,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 )
               })}
             >
-              <Stack__
-                as={ContainerIcon}
-                hasGap={true}
+              <ContainerIcon
                 className={classNames(projectcss.all, sty.svg__b3Ibr, {
                   [sty.svgtextArrowButton__b3IbruQaqx]: hasVariant(
                     $state,
@@ -635,9 +618,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 })}
                 role={"img"}
               />
-            </Stack__>
+            </div>
           ) : null}
-        </Stack__>
+        </div>
         {(
           hasVariant($state, "quicklinkOption", "quicklinkOption")
             ? true
@@ -645,11 +628,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             ? true
             : false
         ) ? (
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"icon12X122"}
             data-plasmic-override={overrides.icon12X122}
-            hasGap={true}
             className={classNames(projectcss.all, sty.icon12X122, {
               [sty.icon12X122darkInteractions_dark]: hasVariant(
                 $state,
@@ -678,9 +659,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               )
             })}
           >
-            <Stack__
-              as={Container2Icon}
-              hasGap={true}
+            <Container2Icon
               className={classNames(projectcss.all, sty.svg__zDfRv, {
                 [sty.svgfullWidthBlueInteractions_brandBlue__zDfRvudmXr]:
                   hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
@@ -689,9 +668,9 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               })}
               role={"img"}
             />
-          </Stack__>
+          </div>
         ) : null}
-      </Stack__>
+      </PlasmicLink__>
     </div>
   );
 }

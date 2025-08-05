@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -75,18 +74,14 @@ function PlasmicSectionAdPlaceholder__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"section9"}
         data-plasmic-override={overrides.section9}
-        hasGap={true}
         className={classNames(projectcss.all, sty.section9)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame3"}
           data-plasmic-override={overrides.frame3}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame3)}
         >
           <div
@@ -94,8 +89,8 @@ function PlasmicSectionAdPlaceholder__RenderFunc(props) {
             data-plasmic-override={overrides.image11}
             className={classNames(projectcss.all, sty.image11)}
           />
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

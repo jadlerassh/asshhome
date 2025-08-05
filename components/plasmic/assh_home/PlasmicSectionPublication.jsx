@@ -75,11 +75,7 @@ function PlasmicSectionPublication__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox___5POeS)}>
         <div className={classNames(projectcss.all, sty.columns__aUuDl)}>
           <div className={classNames(projectcss.all, sty.column__epLkU)}>
             <div
@@ -116,23 +112,25 @@ function PlasmicSectionPublication__RenderFunc(props) {
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__tMlNe)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__gElQt)}
-                  displayHeight={"100%"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"100%"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/jhsGoBannerHighResFromElsevier1Png.png",
-                    fullWidth: 2133,
-                    fullHeight: 605,
-                    aspectRatio: undefined
-                  }}
-                />
+                <div className={classNames(projectcss.all, sty.freeBox__qDEqD)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__gElQt)}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/assh_home/images/jhsGoBannerHighResFromElsevier1Png.png",
+                      fullWidth: 2133,
+                      fullHeight: 605,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -143,8 +141,7 @@ function PlasmicSectionPublication__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "text"],
-  freeBox: ["freeBox", "text"],
+  root: ["root", "text"],
   text: ["text"]
 };
 
@@ -180,7 +177,6 @@ export const PlasmicSectionPublication = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
     text: makeNodeComponent("text"),
     // Metadata about props expected for PlasmicSectionPublication
     internalVariantProps: PlasmicSectionPublication__VariantProps,

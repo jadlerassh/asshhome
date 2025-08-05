@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -134,11 +133,9 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
           )
         })}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame6"}
           data-plasmic-override={overrides.frame6}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame6, {
             [sty.frame6quote_singleLine]: hasVariant(
               $state,
@@ -147,11 +144,9 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             )
           })}
         >
-          <Stack__
-            as={PlasmicImg__}
+          <PlasmicImg__
             data-plasmic-name={"img"}
             data-plasmic-override={overrides.img}
-            hasGap={true}
             alt={""}
             className={classNames(sty.img, {
               [sty.imgquote_singleLine]: hasVariant(
@@ -242,12 +237,10 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
               })()}
             </React.Fragment>
           </div>
-        </Stack__>
-        <Stack__
-          as={"div"}
+        </div>
+        <div
           data-plasmic-name={"frame7"}
           data-plasmic-override={overrides.frame7}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame7, {
             [sty.frame7quote_singleLine]: hasVariant(
               $state,
@@ -256,28 +249,22 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             )
           })}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"navItemSimple"}
             data-plasmic-override={overrides.navItemSimple}
-            hasGap={true}
             className={classNames(projectcss.all, sty.navItemSimple)}
           >
             {false ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"icon12X12"}
                 data-plasmic-override={overrides.icon12X12}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.icon12X12)}
               >
-                <Stack__
-                  as={Container2Icon}
-                  hasGap={true}
+                <Container2Icon
                   className={classNames(projectcss.all, sty.svg__gde6U)}
                   role={"img"}
                 />
-              </Stack__>
+              </div>
             ) : null}
             <div
               data-plasmic-name={"navigationItem"}
@@ -313,22 +300,18 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
               </React.Fragment>
             </div>
             {false ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"icon12X122"}
                 data-plasmic-override={overrides.icon12X122}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.icon12X122)}
               >
-                <Stack__
-                  as={Container2Icon}
-                  hasGap={true}
+                <Container2Icon
                   className={classNames(projectcss.all, sty.svg__bsXz5)}
                   role={"img"}
                 />
-              </Stack__>
+              </div>
             ) : null}
-          </Stack__>
+          </div>
           <div
             className={classNames(
               projectcss.all,
@@ -360,7 +343,7 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
               })()}
             </React.Fragment>
           </div>
-        </Stack__>
+        </div>
       </div>
     </div>
   );

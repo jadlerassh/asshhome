@@ -9,7 +9,7 @@
   background: none;
   min-width: 0;
 }
-.freeBox {
+.freeBox___5POeS {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -39,14 +39,13 @@
   flex-wrap: nowrap;
   min-width: 0;
   min-height: 0;
-  --plsmc-rc-col-gap: 0px;
   padding: 8px;
 }
 .columns__aUuDl > :nth-child(2n + 1) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  width: calc(100% * 6 / 12);
 }
 .columns__aUuDl > :nth-child(2n + 2) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  width: calc(100% * 6 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__aUuDl {
@@ -59,7 +58,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__aUuDl > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column__epLkU {
@@ -110,14 +109,13 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
-  --plsmc-rc-col-gap: 0px;
   padding: 8px;
 }
 .columns__iagPb > :nth-child(2n + 1) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  width: calc(100% * 6 / 12);
 }
 .columns__iagPb > :nth-child(2n + 2) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  width: calc(100% * 6 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__iagPb {
@@ -130,7 +128,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__iagPb > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column__sZnDg {
@@ -162,20 +160,34 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   min-width: 0;
+  border-radius: 10px;
   padding: 8px;
 }
-.img__gElQt {
-  object-fit: fill;
-  max-width: 100%;
-  width: 100%;
+.freeBox__qDEqD {
+  display: flex;
+  flex-direction: row;
   position: sticky;
-  left: 0px;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
   top: 0px;
+  left: 0px;
   z-index: 1;
   align-self: baseline;
+  background: var(--token-TYi5l69jClib);
+  min-width: 0;
+  min-height: 0;
+  border-radius: 10px;
+}
+.img__gElQt {
+  object-fit: contain;
+  max-width: 100%;
+  width: 100%;
   object-position: center center;
   height: 100%;
   min-width: 0;
@@ -183,6 +195,6 @@
   border-radius: var(--token-mj_AjoGEZNER);
 }
 .img__gElQt > picture > img {
-  object-fit: fill;
+  object-fit: contain;
   object-position: center center;
 }

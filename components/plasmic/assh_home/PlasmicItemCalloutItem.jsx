@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -84,27 +83,21 @@ function PlasmicItemCalloutItem__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"interactionsDefault"}
         data-plasmic-override={overrides.interactionsDefault}
-        hasGap={true}
         className={classNames(projectcss.all, sty.interactionsDefault)}
       >
-        <Stack__
-          as={Icon8Icon}
+        <Icon8Icon
           data-plasmic-name={"svg"}
           data-plasmic-override={overrides.svg}
-          hasGap={true}
           className={classNames(projectcss.all, sty.svg)}
           role={"img"}
         />
 
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"container"}
           data-plasmic-override={overrides.container}
-          hasGap={true}
           className={classNames(projectcss.all, sty.container)}
         >
           <div
@@ -153,8 +146,8 @@ function PlasmicItemCalloutItem__RenderFunc(props) {
               })()}
             </React.Fragment>
           </div>
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

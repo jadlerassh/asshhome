@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -133,11 +132,9 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
         })()}
         platform={"nextjs"}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"content"}
           data-plasmic-override={overrides.content}
-          hasGap={true}
           className={classNames(projectcss.all, sty.content)}
         >
           {(() => {
@@ -153,24 +150,20 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
               throw e;
             }
           })() ? (
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame4"}
               data-plasmic-override={overrides.frame4}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame4)}
             >
               <PresentationIcon
                 className={classNames(projectcss.all, sty.svg___8NcnZ)}
                 role={"img"}
               />
-            </Stack__>
+            </div>
           ) : null}
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"content2"}
             data-plasmic-override={overrides.content2}
-            hasGap={true}
             className={classNames(projectcss.all, sty.content2)}
           >
             <div
@@ -211,23 +204,19 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"icon12X122"}
                 data-plasmic-override={overrides.icon12X122}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.icon12X122)}
               >
-                <Stack__
-                  as={Container5Icon}
-                  hasGap={true}
+                <Container5Icon
                   className={classNames(projectcss.all, sty.svg__uDkeW)}
                   role={"img"}
                 />
-              </Stack__>
+              </div>
             ) : null}
-          </Stack__>
-        </Stack__>
+          </div>
+        </div>
       </PlasmicLink__>
     </div>
   );

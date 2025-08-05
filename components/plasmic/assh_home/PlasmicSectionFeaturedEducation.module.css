@@ -21,13 +21,12 @@
   flex-wrap: nowrap;
   min-width: 0;
   min-height: 0;
-  --plsmc-rc-col-gap: 0px;
 }
 .columns__bdLL > :nth-child(2n + 1) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  width: calc(100% * 6 / 12);
 }
 .columns__bdLL > :nth-child(2n + 2) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  width: calc(100% * 6 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__bdLL {
@@ -40,7 +39,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__bdLL > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column__yJsA {
@@ -84,11 +83,10 @@
   left: -7px;
   top: 388px;
   min-width: 0;
-  --plsmc-rc-col-gap: 0px;
   padding: 8px;
 }
 .columns__kHaet > :nth-child(1n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  width: calc(100% * 12 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__kHaet {
@@ -101,7 +99,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__kHaet > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+    width: calc(100% * 12 / 12);
   }
 }
 .column__afDng {

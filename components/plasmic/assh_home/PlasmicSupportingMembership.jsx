@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -118,11 +117,9 @@ function PlasmicSupportingMembership__RenderFunc(props) {
             )}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
-            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
             <div className={classNames(projectcss.all, sty.column__rvlm5)}>
@@ -146,11 +143,9 @@ function PlasmicSupportingMembership__RenderFunc(props) {
                 title={"Tan CTA Block - Supporting Membership"}
               />
 
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"freeBox"}
                 data-plasmic-override={overrides.freeBox}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox)}
               >
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -210,7 +205,7 @@ function PlasmicSupportingMembership__RenderFunc(props) {
                     />
                   );
                 })}
-              </Stack__>
+              </div>
             </div>
             <div className={classNames(projectcss.all, sty.column__wYj5D)}>
               <BlockQuoteBlock
@@ -228,7 +223,7 @@ function PlasmicSupportingMembership__RenderFunc(props) {
                 )}
               />
             </div>
-          </Stack__>
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",

@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -98,18 +97,14 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
           className={classNames(projectcss.all, sty.row)}
         >
           <div className={classNames(projectcss.all, sty.column__oI4O)}>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame3"}
               data-plasmic-override={overrides.frame3}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame3)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame4"}
                 data-plasmic-override={overrides.frame4}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame4)}
               >
                 <div
@@ -147,11 +142,9 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                     "Discover how the ASSH helps you grow clinically, professionally, and personally."
                   }
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame6"}
                   data-plasmic-override={overrides.frame6}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame6)}
                 >
                   <ButtonPrimary
@@ -173,9 +166,9 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                     text={"Join ASSH"}
                     url={"https://www.assh.org/membership/join-assh"}
                   />
-                </Stack__>
-              </Stack__>
-            </Stack__>
+                </div>
+              </div>
+            </div>
           </div>
           <div className={classNames(projectcss.all, sty.column__f9WDi)}>
             <div
@@ -185,11 +178,9 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
             />
           </div>
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"section2"}
           data-plasmic-override={overrides.section2}
-          hasGap={true}
           className={classNames(projectcss.all, sty.section2)}
         >
           <div
@@ -234,7 +225,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
               )}
             />
           </div>
-        </Stack__>
+        </div>
       </div>
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : false) ? (
         <div
@@ -248,11 +239,9 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
             className={classNames(projectcss.all, sty.column2)}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame7"}
             data-plasmic-override={overrides.frame7}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame7)}
           >
             <div
@@ -290,35 +279,27 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 "Discover how the ASSH helps you grow clinically, professionally, and personally."
               }
             </div>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame9"}
               data-plasmic-override={overrides.frame9}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame9)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"buttonPrimaryDark5"}
                 data-plasmic-override={overrides.buttonPrimaryDark5}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.buttonPrimaryDark5)}
               >
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X125"}
                     data-plasmic-override={overrides.icon12X125}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X125)}
                   >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
+                    <ContainerIcon
                       className={classNames(projectcss.all, sty.svg__x1Cy0)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
                 <div
                   data-plasmic-name={"buttonPrimaryDark6"}
@@ -332,44 +313,34 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                   {"Find a Surgeon"}
                 </div>
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X126"}
                     data-plasmic-override={overrides.icon12X126}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X126)}
                   >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
+                    <Container2Icon
                       className={classNames(projectcss.all, sty.svg__skR6K)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
-              </Stack__>
-              <Stack__
-                as={"div"}
+              </div>
+              <div
                 data-plasmic-name={"buttonPrimaryDark7"}
                 data-plasmic-override={overrides.buttonPrimaryDark7}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.buttonPrimaryDark7)}
               >
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X127"}
                     data-plasmic-override={overrides.icon12X127}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X127)}
                   >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
+                    <ContainerIcon
                       className={classNames(projectcss.all, sty.svg__qXiMg)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
                 <div
                   data-plasmic-name={"buttonPrimaryDark8"}
@@ -383,32 +354,26 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                   {"Join ASSH"}
                 </div>
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X128"}
                     data-plasmic-override={overrides.icon12X128}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X128)}
                   >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
+                    <Container2Icon
                       className={classNames(projectcss.all, sty.svg__rLf9K)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
-              </Stack__>
-            </Stack__>
-          </Stack__>
+              </div>
+            </div>
+          </div>
         </div>
       ) : null}
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : false) ? (
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame10"}
           data-plasmic-override={overrides.frame10}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame10)}
         >
           <div
@@ -416,18 +381,14 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
             data-plasmic-override={overrides.row4}
             className={classNames(projectcss.all, sty.row4)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"inner5"}
               data-plasmic-override={overrides.inner5}
-              hasGap={true}
               className={classNames(projectcss.all, sty.inner5)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content5"}
                 data-plasmic-override={overrides.content5}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content5)}
               >
                 <div
@@ -439,9 +400,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 >
                   {"ASSH Coding App"}
                 </div>
-                <Stack__
-                  as={PlasmicImg__}
-                  hasGap={true}
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img__p0NzP)}
                   displayHeight={"30px"}
@@ -458,20 +417,16 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                     aspectRatio: undefined
                   }}
                 />
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
+              </div>
+            </div>
+            <div
               data-plasmic-name={"inner6"}
               data-plasmic-override={overrides.inner6}
-              hasGap={true}
               className={classNames(projectcss.all, sty.inner6)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content6"}
                 data-plasmic-override={overrides.content6}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content6)}
               >
                 <div
@@ -483,9 +438,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 >
                   {"Practice Management Resources"}
                 </div>
-                <Stack__
-                  as={PlasmicImg__}
-                  hasGap={true}
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img__bTmob)}
                   displayHeight={"30px"}
@@ -502,20 +455,16 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                     aspectRatio: undefined
                   }}
                 />
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
+              </div>
+            </div>
+            <div
               data-plasmic-name={"inner7"}
               data-plasmic-override={overrides.inner7}
-              hasGap={true}
               className={classNames(projectcss.all, sty.inner7)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content7"}
                 data-plasmic-override={overrides.content7}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content7)}
               >
                 <div
@@ -527,9 +476,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 >
                   {"Surgical Education"}
                 </div>
-                <Stack__
-                  as={PlasmicImg__}
-                  hasGap={true}
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img__dp0Ow)}
                   displayHeight={"30px"}
@@ -546,20 +493,16 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                     aspectRatio: undefined
                   }}
                 />
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
+              </div>
+            </div>
+            <div
               data-plasmic-name={"inner8"}
               data-plasmic-override={overrides.inner8}
-              hasGap={true}
               className={classNames(projectcss.all, sty.inner8)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content8"}
                 data-plasmic-override={overrides.content8}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content8)}
               >
                 <div
@@ -571,9 +514,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 >
                   {"ASSH Annual Meeting"}
                 </div>
-                <Stack__
-                  as={PlasmicImg__}
-                  hasGap={true}
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img___8KupR)}
                   displayHeight={"30px"}
@@ -590,10 +531,10 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                     aspectRatio: undefined
                   }}
                 />
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
           </div>
-        </Stack__>
+        </div>
       ) : null}
     </div>
   );

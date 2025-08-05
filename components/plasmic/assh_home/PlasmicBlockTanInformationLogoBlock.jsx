@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -109,11 +108,9 @@ function PlasmicBlockTanInformationLogoBlock__RenderFunc(props) {
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame3"}
           data-plasmic-override={overrides.frame3}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame3)}
         >
           <div
@@ -184,7 +181,7 @@ function PlasmicBlockTanInformationLogoBlock__RenderFunc(props) {
               role={"img"}
             />
           </div>
-        </Stack__>
+        </div>
       </div>
     </div>
   );

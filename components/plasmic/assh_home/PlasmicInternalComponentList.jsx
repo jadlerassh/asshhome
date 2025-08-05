@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -260,11 +259,7 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"Block: Quote Block"}
           </h1>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.columns___26Xdm)}
-          >
+          <div className={classNames(projectcss.all, sty.columns___26Xdm)}>
             <div className={classNames(projectcss.all, sty.column__jaAKx)}>
               <div
                 className={classNames(
@@ -300,7 +295,7 @@ function PlasmicInternalComponentList__RenderFunc(props) {
                 quote={"singleLine"}
               />
             </div>
-          </Stack__>
+          </div>
           <h1
             className={classNames(
               projectcss.all,
@@ -495,11 +490,7 @@ function PlasmicInternalComponentList__RenderFunc(props) {
           >
             {"External Link Card Item & External Link Card Item with Logo"}
           </h1>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.columns__oOxg6)}
-          >
+          <div className={classNames(projectcss.all, sty.columns__oOxg6)}>
             <div className={classNames(projectcss.all, sty.column__mtrE6)}>
               <ItemExternalLinkCardItem
                 data-plasmic-name={"itemExternalLinkCardItem"}
@@ -524,7 +515,7 @@ function PlasmicInternalComponentList__RenderFunc(props) {
               />
             </div>
             <div className={classNames(projectcss.all, sty.column___43E38)} />
-          </Stack__>
+          </div>
           <h1
             className={classNames(
               projectcss.all,

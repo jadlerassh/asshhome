@@ -12,11 +12,9 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  ensureGlobalVariants
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
@@ -29,7 +27,6 @@ import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -71,9 +68,6 @@ function PlasmicForPatients__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <React.Fragment>
       <Head>
@@ -177,17 +171,11 @@ function PlasmicForPatients__RenderFunc(props) {
             title={"For Patients - Mid-page CTA"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.columns__rhD7)}
-          >
+          <div className={classNames(projectcss.all, sty.columns__rhD7)}>
             <div className={classNames(projectcss.all, sty.column__jkgyB)}>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content"}
                 data-plasmic-override={overrides.content}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content)}
               >
                 <h2
@@ -229,13 +217,9 @@ function PlasmicForPatients__RenderFunc(props) {
                   text={"Learn about Conditions"}
                   url={"https://www.assh.org/handcare/conditions"}
                 />
-              </Stack__>
+              </div>
             </div>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__ebuyd)}
-            >
+            <div className={classNames(projectcss.all, sty.column__ebuyd)}>
               <ItemArticleCardItemWithDescription
                 articleTitle={"Diseases & Conditions"}
                 className={classNames(
@@ -261,12 +245,8 @@ function PlasmicForPatients__RenderFunc(props) {
                 heading={"Resources"}
                 linkUrl={"https://www.assh.org/handcare/about"}
               />
-            </Stack__>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__gjB8B)}
-            >
+            </div>
+            <div className={classNames(projectcss.all, sty.column__gjB8B)}>
               <ItemArticleCardItemWithDescription
                 articleTitle={"Hand Safety"}
                 className={classNames(
@@ -290,8 +270,8 @@ function PlasmicForPatients__RenderFunc(props) {
                 heading={"Resources"}
                 linkUrl={"https://www.assh.org/handcare/anatomy"}
               />
-            </Stack__>
-          </Stack__>
+            </div>
+          </div>
           <BlockPublicationHighlight
             data-plasmic-name={"blockPublicationHighlight"}
             data-plasmic-override={overrides.blockPublicationHighlight}

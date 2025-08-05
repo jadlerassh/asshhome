@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -145,11 +144,7 @@ function PlasmicPartnerSponsoredSurveys__RenderFunc(props) {
             title={"Hero: Partner Sponsored Surveys - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__z2I14)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__z2I14)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -157,12 +152,8 @@ function PlasmicPartnerSponsoredSurveys__RenderFunc(props) {
               )}
               title={"Partner with ASSH - Sponsored Surveys"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__es5Bb)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__es5Bb)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -172,12 +163,8 @@ function PlasmicPartnerSponsoredSurveys__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__zpThO)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__zpThO)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -226,7 +213,7 @@ function PlasmicPartnerSponsoredSurveys__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__bnWy)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

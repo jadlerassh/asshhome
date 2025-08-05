@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -138,18 +137,14 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
         })()}
         platform={"nextjs"}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame6"}
           data-plasmic-override={overrides.frame6}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame6)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame5"}
             data-plasmic-override={overrides.frame5}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame5)}
           >
             <PlasmicImg__
@@ -178,34 +173,28 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
                 }
               })()}
             />
-          </Stack__>
+          </div>
           <div
             data-plasmic-name={"frame3"}
             data-plasmic-override={overrides.frame3}
             className={classNames(projectcss.all, sty.frame3)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"navItemMenu"}
               data-plasmic-override={overrides.navItemMenu}
-              hasGap={true}
               className={classNames(projectcss.all, sty.navItemMenu)}
             >
               {false ? (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X12"}
                   data-plasmic-override={overrides.icon12X12}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X12)}
                 >
-                  <Stack__
-                    as={ContainerIcon}
-                    hasGap={true}
+                  <ContainerIcon
                     className={classNames(projectcss.all, sty.svg__pIrO4)}
                     role={"img"}
                   />
-                </Stack__>
+                </div>
               ) : null}
               <div
                 data-plasmic-name={"navigationItem"}
@@ -258,28 +247,22 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
                 </React.Fragment>
               </div>
               {false ? (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X124"}
                   data-plasmic-override={overrides.icon12X124}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X124)}
                 >
-                  <Stack__
-                    as={Container2Icon}
-                    hasGap={true}
+                  <Container2Icon
                     className={classNames(projectcss.all, sty.svg__oi7Fs)}
                     role={"img"}
                   />
-                </Stack__>
+                </div>
               ) : null}
-            </Stack__>
+            </div>
           </div>
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"icon12X123"}
             data-plasmic-override={overrides.icon12X123}
-            hasGap={true}
             className={classNames(projectcss.all, sty.icon12X123)}
           >
             {(() => {
@@ -295,15 +278,13 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={Container5Icon}
-                hasGap={true}
+              <Container5Icon
                 className={classNames(projectcss.all, sty.svg__pbbvv)}
                 role={"img"}
               />
             ) : null}
-          </Stack__>
-        </Stack__>
+          </div>
+        </div>
       </PlasmicLink__>
     </div>
   );

@@ -13,26 +13,11 @@
   height: auto;
   display: flex;
   flex-direction: row;
-  padding-top: 70px;
-  min-width: 0;
-}
-.frame3 > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 70px;
+  column-gap: 70px;
   min-width: 0;
-  margin-left: calc(0px - 70px);
-  width: calc(100% + 70px);
-}
-.frame3 > :global(.__wab_flex-container) > *,
-.frame3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.frame3 > :global(.__wab_flex-container) > picture > img,
-.frame3
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 70px;
 }
 .column {
   background: url("/plasmic/assh_home/images/column4.jpg") center center / cover no-repeat;
@@ -58,25 +43,11 @@
   position: relative;
   flex-grow: 1;
   flex-direction: column;
-}
-.frame7 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-top: calc(0px - 30px);
-  height: calc(100% + 30px);
+  row-gap: 30px;
 }
-.frame7 > :global(.__wab_flex-container) > *,
-.frame7 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.frame7 > :global(.__wab_flex-container) > picture > img,
-.frame7
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 30px;
-}
-.frame7rightImage > :global(.__wab_flex-container) {
+.frame7rightImage {
   align-items: flex-start;
   justify-content: center;
 }

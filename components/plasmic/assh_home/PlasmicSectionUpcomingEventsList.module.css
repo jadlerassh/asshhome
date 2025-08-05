@@ -30,24 +30,10 @@
   position: relative;
   align-self: stretch;
   flex-direction: column;
-  border-radius: 10px;
-}
-.frame5 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: calc(0px - 15px);
-  height: calc(100% + 15px);
-}
-.frame5 > :global(.__wab_flex-container) > *,
-.frame5 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.frame5 > :global(.__wab_flex-container) > picture > img,
-.frame5
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 15px;
+  row-gap: 15px;
+  border-radius: 10px;
 }
 .articleCard {
   background: rgba(255, 255, 255, 1);

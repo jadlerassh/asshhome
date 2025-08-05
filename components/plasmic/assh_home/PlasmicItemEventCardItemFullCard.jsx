@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -135,42 +134,32 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
             })()}
           />
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"content"}
           data-plasmic-override={overrides.content}
-          hasGap={true}
           className={classNames(projectcss.all, sty.content)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame3"}
             data-plasmic-override={overrides.frame3}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame3)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"navItemMenu"}
               data-plasmic-override={overrides.navItemMenu}
-              hasGap={true}
               className={classNames(projectcss.all, sty.navItemMenu)}
             >
               {false ? (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X12"}
                   data-plasmic-override={overrides.icon12X12}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X12)}
                 >
-                  <Stack__
-                    as={ContainerIcon}
-                    hasGap={true}
+                  <ContainerIcon
                     className={classNames(projectcss.all, sty.svg__lByDu)}
                     role={"img"}
                   />
-                </Stack__>
+                </div>
               ) : null}
               <PlasmicLink__
                 data-plasmic-name={"navigationItem"}
@@ -214,50 +203,38 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
                 </React.Fragment>
               </PlasmicLink__>
               {false ? (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X122"}
                   data-plasmic-override={overrides.icon12X122}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X122)}
                 >
-                  <Stack__
-                    as={Container2Icon}
-                    hasGap={true}
+                  <Container2Icon
                     className={classNames(projectcss.all, sty.svg__n0HeU)}
                     role={"img"}
                   />
-                </Stack__>
+                </div>
               ) : null}
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"frame2"}
               data-plasmic-override={overrides.frame2}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame2)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"navItemMenu2"}
                 data-plasmic-override={overrides.navItemMenu2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.navItemMenu2)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon16X16"}
                   data-plasmic-override={overrides.icon16X16}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon16X16)}
                 >
-                  <Stack__
-                    as={Container6Icon}
-                    hasGap={true}
+                  <Container6Icon
                     className={classNames(projectcss.all, sty.svg__dXu42)}
                     role={"img"}
                   />
-                </Stack__>
+                </div>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -281,28 +258,22 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
-              <Stack__
-                as={"div"}
+              </div>
+              <div
                 data-plasmic-name={"navItemMenu3"}
                 data-plasmic-override={overrides.navItemMenu3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.navItemMenu3)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon16X162"}
                   data-plasmic-override={overrides.icon16X162}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon16X162)}
                 >
-                  <Stack__
-                    as={Container7Icon}
-                    hasGap={true}
+                  <Container7Icon
                     className={classNames(projectcss.all, sty.svg__zCFd)}
                     role={"img"}
                   />
-                </Stack__>
+                </div>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -326,9 +297,9 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
-            </Stack__>
-          </Stack__>
+              </div>
+            </div>
+          </div>
           <ButtonPrimary
             data-plasmic-name={"buttonPrimary"}
             data-plasmic-override={overrides.buttonPrimary}
@@ -349,7 +320,7 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
               }
             })()}
           />
-        </Stack__>
+        </div>
       </div>
     </div>
   );

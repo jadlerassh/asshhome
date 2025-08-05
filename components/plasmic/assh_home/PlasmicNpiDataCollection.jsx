@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -170,11 +169,7 @@ function PlasmicNpiDataCollection__RenderFunc(props) {
               title={"NPI Data Collection"}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__cnHsm)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__cnHsm)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -184,12 +179,8 @@ function PlasmicNpiDataCollection__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__ewZy)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__ewZy)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -238,7 +229,7 @@ function PlasmicNpiDataCollection__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__pwP87)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -93,35 +92,27 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"frame3"}
         data-plasmic-override={overrides.frame3}
-        hasGap={true}
         className={classNames(projectcss.all, sty.frame3)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"navItemMenu"}
           data-plasmic-override={overrides.navItemMenu}
-          hasGap={true}
           className={classNames(projectcss.all, sty.navItemMenu)}
         >
           {false ? (
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"icon12X12"}
               data-plasmic-override={overrides.icon12X12}
-              hasGap={true}
               className={classNames(projectcss.all, sty.icon12X12)}
             >
-              <Stack__
-                as={ContainerIcon}
-                hasGap={true}
+              <ContainerIcon
                 className={classNames(projectcss.all, sty.svg__rH4Ae)}
                 role={"img"}
               />
-            </Stack__>
+            </div>
           ) : null}
           <div
             data-plasmic-name={"navigationItem"}
@@ -149,27 +140,21 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
             </React.Fragment>
           </div>
           {false ? (
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"icon12X122"}
               data-plasmic-override={overrides.icon12X122}
-              hasGap={true}
               className={classNames(projectcss.all, sty.icon12X122)}
             >
-              <Stack__
-                as={Container2Icon}
-                hasGap={true}
+              <Container2Icon
                 className={classNames(projectcss.all, sty.svg__xTvnS)}
                 role={"img"}
               />
-            </Stack__>
+            </div>
           ) : null}
-        </Stack__>
-        <Stack__
-          as={"div"}
+        </div>
+        <div
           data-plasmic-name={"frame2"}
           data-plasmic-override={overrides.frame2}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame2)}
         >
           {(() => {
@@ -185,27 +170,21 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
               throw e;
             }
           })() ? (
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"datesSection"}
               data-plasmic-override={overrides.datesSection}
-              hasGap={true}
               className={classNames(projectcss.all, sty.datesSection)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"icon16X16"}
                 data-plasmic-override={overrides.icon16X16}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.icon16X16)}
               >
-                <Stack__
-                  as={Container6Icon}
-                  hasGap={true}
+                <Container6Icon
                   className={classNames(projectcss.all, sty.svg__sTXjT)}
                   role={"img"}
                 />
-              </Stack__>
+              </div>
               <div
                 className={classNames(
                   projectcss.all,
@@ -229,7 +208,7 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-            </Stack__>
+            </div>
           ) : null}
           {(() => {
             try {
@@ -244,11 +223,9 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
               throw e;
             }
           })() ? (
-            <Stack__
-              as={PlasmicLink__}
+            <PlasmicLink__
               data-plasmic-name={"locationSection"}
               data-plasmic-override={overrides.locationSection}
-              hasGap={true}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
@@ -270,20 +247,16 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
               })()}
               platform={"nextjs"}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"icon16X162"}
                 data-plasmic-override={overrides.icon16X162}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.icon16X162)}
               >
-                <Stack__
-                  as={Container7Icon}
-                  hasGap={true}
+                <Container7Icon
                   className={classNames(projectcss.all, sty.svg__wxcv1)}
                   role={"img"}
                 />
-              </Stack__>
+              </div>
               <div
                 className={classNames(
                   projectcss.all,
@@ -307,7 +280,7 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-            </Stack__>
+            </PlasmicLink__>
           ) : null}
           {(() => {
             try {
@@ -322,11 +295,9 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
               throw e;
             }
           })() ? (
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"regButtonSection"}
               data-plasmic-override={overrides.regButtonSection}
-              hasGap={true}
               className={classNames(projectcss.all, sty.regButtonSection)}
             >
               <ButtonPrimary
@@ -337,10 +308,10 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
                 upcomingEvents={true}
                 url={"https://www.assh.org/meeting/register"}
               />
-            </Stack__>
+            </div>
           ) : null}
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

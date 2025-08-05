@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -149,18 +148,14 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"section7"}
         data-plasmic-override={overrides.section7}
-        hasGap={true}
         className={classNames(projectcss.all, sty.section7)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame2"}
           data-plasmic-override={overrides.frame2}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame2)}
         >
           <div
@@ -174,12 +169,10 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
           >
             {"Upcoming Courses & Events"}
           </div>
-        </Stack__>
-        <Stack__
-          as={"div"}
+        </div>
+        <div
           data-plasmic-name={"row"}
           data-plasmic-override={overrides.row}
-          hasGap={true}
           className={classNames(projectcss.all, sty.row)}
         >
           <div className={classNames(projectcss.all, sty.column__pgAlg)}>
@@ -371,11 +364,9 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"articleCard2"}
                     data-plasmic-override={overrides.articleCard2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.articleCard2)}
                     key={currentIndex}
                   >
@@ -437,7 +428,7 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               <section
@@ -462,11 +453,9 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"articleCard3"}
                     data-plasmic-override={overrides.articleCard3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.articleCard3)}
                     key={currentIndex}
                   >
@@ -528,13 +517,13 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
           </div>
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

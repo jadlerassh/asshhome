@@ -13,7 +13,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -92,11 +91,7 @@ function PlasmicBackground__RenderFunc(props) {
             data-plasmic-override={overrides.columns}
             className={classNames(projectcss.all, sty.columns)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__gVd97)}
-            >
+            <div className={classNames(projectcss.all, sty.column__gVd97)}>
               <h2
                 data-plasmic-name={"h2"}
                 data-plasmic-override={overrides.h2}
@@ -320,12 +315,8 @@ function PlasmicBackground__RenderFunc(props) {
                   "Hand radiographs showed amputation of the right thumb at the level\r of the interphalangeal joint."
                 }
               </div>
-            </Stack__>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column___5MJu)}
-            >
+            </div>
+            <div className={classNames(projectcss.all, sty.column___5MJu)}>
               <section
                 className={classNames(projectcss.all, sty.section__egAiS)}
               >
@@ -446,7 +437,7 @@ function PlasmicBackground__RenderFunc(props) {
                   }}
                 />
               </section>
-            </Stack__>
+            </div>
           </div>
         </div>
       </div>

@@ -20,27 +20,12 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  min-width: 0;
-}
-.section7 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  row-gap: 50px;
   min-width: 0;
-  margin-top: calc(0px - 50px);
-  height: calc(100% + 50px);
-}
-.section7 > :global(.__wab_flex-container) > *,
-.section7 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.section7 > :global(.__wab_flex-container) > picture > img,
-.section7
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 50px;
 }
 .frame2 {
   width: 1320px;
@@ -48,34 +33,15 @@
   display: flex;
   position: relative;
   flex-direction: column;
-}
-.frame2 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: calc(0px - 20px);
-  height: calc(100% + 20px);
-}
-.frame2 > :global(.__wab_flex-container) > *,
-.frame2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.frame2 > :global(.__wab_flex-container) > picture > img,
-.frame2
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 20px;
+  row-gap: 20px;
 }
 @media (max-width: 1440px) {
   .frame2 {
     width: 100%;
     min-width: 0;
     padding: 20px;
-  }
-}
-@media (max-width: 1440px) {
-  .frame2 > :global(.__wab_flex-container) {
-    min-width: 0;
   }
 }
 .text {
@@ -100,79 +66,46 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  max-width: 1320px;
-  flex-shrink: 0;
-  min-width: 0;
-  --plsmc-rc-col-gap: 0px;
-}
-.row > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  max-width: 1320px;
+  flex-shrink: 0;
   flex-wrap: nowrap;
+  column-gap: 30px;
   min-width: 0;
-  margin-left: calc(0px - 30px);
-  width: calc(100% + 30px);
-  --plsmc-rc-col-gap: 30px;
 }
-.row > :global(.__wab_flex-container) > *,
-.row > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.row > :global(.__wab_flex-container) > picture > img,
-.row > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-left: 30px;
+.row > :nth-child(2n + 1) {
+  width: calc(100% * 6 / 12);
 }
-.row > :global(.__wab_flex-container) > :nth-child(2n + 1) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
-}
-.row > :global(.__wab_flex-container) > :nth-child(2n + 2) {
-  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+.row > :nth-child(2n + 2) {
+  width: calc(100% * 6 / 12);
 }
 @media (max-width: 1440px) {
   .row {
     flex-direction: row;
-  }
-}
-@media (max-width: 1440px) {
-  .row > :global(.__wab_flex-container) {
-    flex-direction: row;
     flex-wrap: wrap;
-    margin-left: calc(0px - 40px);
-    width: calc(100% + 40px);
-    --plsmc-rc-col-gap: 40px;
+    column-gap: 40px;
   }
 }
 @media (max-width: 1440px) {
-  .row > :global(.__wab_flex-container) > *,
-  .row > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-  .row > :global(.__wab_flex-container) > picture > img,
-  .row > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-    margin-left: 40px;
+  .row > :nth-child(2n + 1) {
+    width: calc(100% * 6 / 12);
   }
 }
 @media (max-width: 1440px) {
-  .row > :global(.__wab_flex-container) > :nth-child(2n + 1) {
-    width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
-  }
-}
-@media (max-width: 1440px) {
-  .row > :global(.__wab_flex-container) > :nth-child(2n + 2) {
-    width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  .row > :nth-child(2n + 2) {
+    width: calc(100% * 6 / 12);
   }
 }
 @media (max-width: 1024px) {
   .row {
     flex-direction: row;
-  }
-}
-@media (max-width: 1024px) {
-  .row > :global(.__wab_flex-container) {
-    flex-direction: row;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 1024px) {
-  .row > :global(.__wab_flex-container) > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  .row > :nth-child(1n + 1) {
+    width: calc(100% * 12 / 12);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -180,19 +113,13 @@
     width: 100%;
     height: auto;
     flex-direction: row;
-    min-width: 0;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .row > :global(.__wab_flex-container) {
-    flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .row > :global(.__wab_flex-container) > :nth-child(1n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  .row > :nth-child(1n + 1) {
+    width: calc(100% * 12 / 12);
   }
 }
 .column__pgAlg {
@@ -280,25 +207,11 @@
   align-self: stretch;
   overflow: hidden;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.articleCard2 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: calc(0px - 15px);
-  height: calc(100% + 15px);
-}
-.articleCard2 > :global(.__wab_flex-container) > *,
-.articleCard2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.articleCard2 > :global(.__wab_flex-container) > picture > img,
-.articleCard2
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  row-gap: 15px;
 }
 .itemEventCardItemInfoOnly__oPhZ1:global(.__wab_instance) {
   max-width: 100%;
@@ -334,25 +247,11 @@
   align-self: stretch;
   overflow: hidden;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.articleCard3 > :global(.__wab_flex-container) {
-  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: calc(0px - 15px);
-  height: calc(100% + 15px);
-}
-.articleCard3 > :global(.__wab_flex-container) > *,
-.articleCard3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.articleCard3 > :global(.__wab_flex-container) > picture > img,
-.articleCard3
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  row-gap: 15px;
 }
 .itemEventCardItemInfoOnly__tsdp5:global(.__wab_instance) {
   max-width: 100%;

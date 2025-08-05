@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -175,11 +174,7 @@ function PlasmicGovernanceStructure__RenderFunc(props) {
               title={"Governance Structure"}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__pbBVx)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__pbBVx)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -189,12 +184,8 @@ function PlasmicGovernanceStructure__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__sPk0L)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__sPk0L)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -243,7 +234,7 @@ function PlasmicGovernanceStructure__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__xXQyG)} />
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))([
             2, 3, 4

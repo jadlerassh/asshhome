@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -169,11 +168,7 @@ function PlasmicItemEventCardItemOld__RenderFunc(props) {
             })()}
           />
         </div>
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.freeBox__cQJkR)}
-        >
+        <div className={classNames(projectcss.all, sty.freeBox__cQJkR)}>
           <div
             className={classNames(
               projectcss.all,
@@ -260,7 +255,7 @@ function PlasmicItemEventCardItemOld__RenderFunc(props) {
               })()}
             </React.Fragment>
           </PlasmicLink__>
-        </Stack__>
+        </div>
         <div className={classNames(projectcss.all, sty.freeBox__tZcq6)}>
           <div className={classNames(projectcss.all, sty.freeBox__pizV)}>
             <PlasmicLink__

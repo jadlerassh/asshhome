@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -166,11 +165,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               title={"Grants and Awards - Intro"}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__bwr8S)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__bwr8S)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -180,11 +175,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               title={"Four Pillars of the AFSH"}
             />
 
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns__smFwe)}
-            >
+            <div className={classNames(projectcss.all, sty.columns__smFwe)}>
               <div className={classNames(projectcss.all, sty.column__jZ3Cl)}>
                 <ItemArticleCardItemWithDescription
                   articleTitle={"Research"}
@@ -241,8 +232,8 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                   linkUrl={"https://www.assh.org/afsh/s/practice"}
                 />
               </div>
-            </Stack__>
-          </Stack__>
+            </div>
+          </div>
           <SectionQuicklinksTable
             data-plasmic-name={"sectionQuicklinksTable"}
             data-plasmic-override={overrides.sectionQuicklinksTable}
@@ -250,11 +241,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
             name={"ASSH Grants and Awards Quicklinks"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__kZDmL)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__kZDmL)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -264,12 +251,8 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__zdPip)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__zdPip)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -312,7 +295,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd
             className={classNames("__wab_instance", sty.itemAd___7GRhy)}
           />

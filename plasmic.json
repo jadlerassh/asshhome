@@ -2489,20 +2489,6 @@
           "path": "/committees/committees-listing"
         },
         {
-          "id": "EKz9QG4RGt_-",
-          "name": "CommitteeDetails",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetails.jsx",
-          "importSpec": {
-            "modulePath": "../pages/committees/committees-details.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetails.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/committees/committees-details"
-        },
-        {
           "id": "jXQ3iNzBSIE_",
           "name": "ComponentTabSet",
           "type": "managed",
@@ -2652,20 +2638,6 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/about/contact-us"
-        },
-        {
-          "id": "SfrTVGvDumM3",
-          "name": "CommitteeDetailsTest",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsTest.jsx",
-          "importSpec": {
-            "modulePath": "../pages/s/committeedetails.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsTest.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/committees/committees-details-2"
         },
         {
           "id": "FGT9utqXA6R0",
@@ -2985,6 +2957,103 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/grants-awards/lending-hand-program"
+        },
+        {
+          "id": "EKz9QG4RGt_-",
+          "name": "CommitteeDetailsJake",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsJake.jsx",
+          "importSpec": {
+            "modulePath": "../pages/committees/committees-details.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsJake.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/committees/committees-details"
+        },
+        {
+          "id": "SfrTVGvDumM3",
+          "name": "CommitteeDetails",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetails.jsx",
+          "importSpec": {
+            "modulePath": "../pages/s/committeedetails.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetails.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/s/committeedetails"
+        },
+        {
+          "id": "hQw6wQfUz2Ua",
+          "name": "SectionMidPageBannerWithQuicklinks",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionMidPageBannerWithQuicklinks.jsx",
+          "importSpec": {
+            "modulePath": "SectionMidPageBannerWithQuicklinks.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionMidPageBannerWithQuicklinks.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "7TLscAtm84Hi",
+          "name": "PracticeManagementResources",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPracticeManagementResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/practice-management-resources.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPracticeManagementResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/practice-management-resources"
+        },
+        {
+          "id": "hd_pHFzuSr_w",
+          "name": "ForAdvancePracticeProviders",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicForAdvancePracticeProviders.jsx",
+          "importSpec": {
+            "modulePath": "../pages/for-advanced-practice-providers.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicForAdvancePracticeProviders.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/for-advanced-practice-providers"
+        },
+        {
+          "id": "k2sY5hZafFnJ",
+          "name": "ForHandTherapists",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicForHandTherapists.jsx",
+          "importSpec": {
+            "modulePath": "../pages/for-hand-therapists.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicForHandTherapists.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/for-hand-therapists"
+        },
+        {
+          "id": "vS5E3IBXCwI1",
+          "name": "AdvocacyToolkitsAndResources",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyToolkitsAndResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/toolkits-resources.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyToolkitsAndResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/toolkits-resources"
         }
       ],
       "icons": [

@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -167,16 +166,10 @@ function PlasmicPartner__RenderFunc(props) {
               title={"Partner with ASSH - Intro"}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__klvCo)}
-          >
-            <Stack__
-              as={"div"}
+          <div className={classNames(projectcss.all, sty.freeBox__klvCo)}>
+            <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
-              hasGap={true}
               className={classNames(projectcss.all, sty.columns)}
             >
               <div className={classNames(projectcss.all, sty.column__nHh2Y)}>
@@ -353,13 +346,9 @@ function PlasmicPartner__RenderFunc(props) {
                   linkUrl={"https://www.assh.org/s/about/partner/young-leaders"}
                 />
               </div>
-            </Stack__>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__gtwmn)}
-          >
+            </div>
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__gtwmn)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -368,11 +357,7 @@ function PlasmicPartner__RenderFunc(props) {
               title={"Partner with ASSH - Partner Program Intro"}
             />
 
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__fg6Hg)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__fg6Hg)}>
               <ItemCheckmarkItem
                 className={classNames(
                   "__wab_instance",
@@ -408,7 +393,7 @@ function PlasmicPartner__RenderFunc(props) {
                 desc={"$100,000+ in committed support"}
                 title={"Elite Partnership"}
               />
-            </Stack__>
+            </div>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -416,12 +401,8 @@ function PlasmicPartner__RenderFunc(props) {
               )}
               title={"Partner with ASSH - Partner Program Body"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__yHrp)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__yHrp)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -429,7 +410,7 @@ function PlasmicPartner__RenderFunc(props) {
               )}
               title={"Our Partners"}
             />
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__i8GC)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

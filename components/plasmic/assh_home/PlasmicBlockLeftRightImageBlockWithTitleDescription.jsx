@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -100,11 +99,9 @@ function PlasmicBlockLeftRightImageBlockWithTitleDescription__RenderFunc(
         { [sty.rootrightImage]: hasVariant($state, "rightImage", "rightImage") }
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"frame3"}
         data-plasmic-override={overrides.frame3}
-        hasGap={true}
         className={classNames(projectcss.all, sty.frame3, {
           [sty.frame3rightImage]: hasVariant($state, "rightImage", "rightImage")
         })}
@@ -121,11 +118,9 @@ function PlasmicBlockLeftRightImageBlockWithTitleDescription__RenderFunc(
           })}
         />
 
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame7"}
           data-plasmic-override={overrides.frame7}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame7, {
             [sty.frame7rightImage]: hasVariant(
               $state,
@@ -168,8 +163,8 @@ function PlasmicBlockLeftRightImageBlockWithTitleDescription__RenderFunc(
               "The job market for hand surgery has been stable for many years. There are always more job openings per year than the number of hand surgery fellows who are completing their training. The American Society for Surgery of the Hand website offers a space for job seekers to post resumes, and hand surgeon employers to post positions. Visit the\u00a0Jobs section\u00a0to learn more."
             }
           </div>
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

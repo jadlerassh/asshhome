@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -141,11 +140,7 @@ function PlasmicIntroSection__RenderFunc(props) {
             </React.Fragment>
           </h2>
         </div>
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.column__nZ2Kf)}
-        >
+        <div className={classNames(projectcss.all, sty.column__nZ2Kf)}>
           <div
             className={classNames(
               projectcss.all,
@@ -217,7 +212,7 @@ function PlasmicIntroSection__RenderFunc(props) {
               role={"img"}
             />
           </PlasmicLink__>
-        </Stack__>
+        </div>
       </div>
       {(() => {
         try {

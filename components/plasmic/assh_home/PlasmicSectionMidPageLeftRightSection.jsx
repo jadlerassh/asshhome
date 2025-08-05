@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -151,11 +150,9 @@ function PlasmicSectionMidPageLeftRightSection__RenderFunc(props) {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox__a5INw)}>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"columns"}
           data-plasmic-override={overrides.columns}
-          hasGap={true}
           className={classNames(projectcss.all, sty.columns, {
             [sty.columnsleftOrRight_left]: hasVariant(
               $state,
@@ -199,18 +196,14 @@ function PlasmicSectionMidPageLeftRightSection__RenderFunc(props) {
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.column__s4GwT)}>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame7"}
               data-plasmic-override={overrides.frame7}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame7)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame8"}
                 data-plasmic-override={overrides.frame8}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame8)}
               >
                 <div
@@ -237,7 +230,7 @@ function PlasmicSectionMidPageLeftRightSection__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
               <div
                 className={classNames(
                   projectcss.all,
@@ -292,9 +285,9 @@ function PlasmicSectionMidPageLeftRightSection__RenderFunc(props) {
                   }
                 })()}
               />
-            </Stack__>
+            </div>
           </div>
-        </Stack__>
+        </div>
       </div>
     </div>
   );

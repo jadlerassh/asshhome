@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -132,11 +131,9 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"frame6"}
         data-plasmic-override={overrides.frame6}
-        hasGap={true}
         className={classNames(projectcss.all, sty.frame6)}
       >
         <div className={classNames(projectcss.all, sty.column__us6HX)}>
@@ -204,7 +201,7 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
             })()}
           />
         </div>
-      </Stack__>
+      </div>
     </div>
   );
 }

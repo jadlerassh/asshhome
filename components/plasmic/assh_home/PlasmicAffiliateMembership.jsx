@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -118,18 +117,12 @@ function PlasmicAffiliateMembership__RenderFunc(props) {
             )}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
-            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__jomst)}
-            >
+            <div className={classNames(projectcss.all, sty.column__jomst)}>
               <HtmlContentfulHtmlLoader
                 data-plasmic-name={"htmlContentfulHtmlLoader"}
                 data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -213,7 +206,7 @@ function PlasmicAffiliateMembership__RenderFunc(props) {
                   </div>
                 );
               })}
-            </Stack__>
+            </div>
             <div className={classNames(projectcss.all, sty.column__ajUvj)}>
               <BlockQuoteBlock
                 data-plasmic-name={"blockQuoteBlock"}
@@ -230,7 +223,7 @@ function PlasmicAffiliateMembership__RenderFunc(props) {
                 )}
               />
             </div>
-          </Stack__>
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",

@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -78,11 +77,9 @@ function PlasmicBlockAsshMissionBlueBlock__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"frame2"}
         data-plasmic-override={overrides.frame2}
-        hasGap={true}
         className={classNames(projectcss.all, sty.frame2)}
       >
         <div
@@ -105,18 +102,14 @@ function PlasmicBlockAsshMissionBlueBlock__RenderFunc(props) {
             role={"img"}
           />
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame3"}
           data-plasmic-override={overrides.frame3}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame3)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame4"}
             data-plasmic-override={overrides.frame4}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame4)}
           >
             <div
@@ -128,7 +121,7 @@ function PlasmicBlockAsshMissionBlueBlock__RenderFunc(props) {
             >
               {"ASSH Mission"}
             </div>
-          </Stack__>
+          </div>
           <div
             className={classNames(
               projectcss.all,
@@ -140,8 +133,8 @@ function PlasmicBlockAsshMissionBlueBlock__RenderFunc(props) {
               "We advance the science and practice of hand and upper extremity surgery through education, research, and advocacy \u2014 supporting both the surgeons who perform it and the patients who rely on it."
             }
           </div>
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

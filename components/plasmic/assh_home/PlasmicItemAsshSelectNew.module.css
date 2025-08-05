@@ -27,25 +27,11 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.sideLabel > :global(.__wab_flex-container) {
-  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.sideLabel > :global(.__wab_flex-container) > *,
-.sideLabel > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.sideLabel > :global(.__wab_flex-container) > picture > img,
-.sideLabel
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  column-gap: 10px;
 }
 .field {
   background: rgba(255, 255, 255, 1);
@@ -55,25 +41,14 @@
   position: relative;
   flex-grow: 1;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
+  column-gap: 10px;
   min-width: 0;
   border-radius: 4px;
-}
-.field > :global(.__wab_flex-container) {
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 0;
-  margin-left: calc(0px - 10px);
-  width: calc(100% + 10px);
-}
-.field > :global(.__wab_flex-container) > *,
-.field > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.field > :global(.__wab_flex-container) > picture > img,
-.field > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
-  margin-left: 10px;
 }
 .input {
   display: block;

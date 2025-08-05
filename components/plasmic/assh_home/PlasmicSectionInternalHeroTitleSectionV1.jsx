@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -132,25 +131,19 @@ function PlasmicSectionInternalHeroTitleSectionV1__RenderFunc(props) {
         data-plasmic-override={overrides.row}
         className={classNames(projectcss.all, sty.row)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame2"}
           data-plasmic-override={overrides.frame2}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame2)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame3"}
             data-plasmic-override={overrides.frame3}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame3)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame4"}
               data-plasmic-override={overrides.frame4}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame4)}
             >
               {(() => {
@@ -229,7 +222,7 @@ function PlasmicSectionInternalHeroTitleSectionV1__RenderFunc(props) {
                   </React.Fragment>
                 </div>
               ) : null}
-            </Stack__>
+            </div>
             {(() => {
               try {
                 return $props.description !== undefined;
@@ -267,11 +260,9 @@ function PlasmicSectionInternalHeroTitleSectionV1__RenderFunc(props) {
                 </React.Fragment>
               </div>
             ) : null}
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame5"}
               data-plasmic-override={overrides.frame5}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame5)}
             >
               {(() => {
@@ -368,9 +359,9 @@ function PlasmicSectionInternalHeroTitleSectionV1__RenderFunc(props) {
                   })()}
                 />
               ) : null}
-            </Stack__>
-          </Stack__>
-        </Stack__>
+            </div>
+          </div>
+        </div>
         <div
           data-plasmic-name={"column"}
           data-plasmic-override={overrides.column}

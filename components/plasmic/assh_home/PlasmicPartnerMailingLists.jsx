@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -136,11 +135,7 @@ function PlasmicPartnerMailingLists__RenderFunc(props) {
             title={"Hero: Partner Mailing Lists - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__nQBal)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__nQBal)}>
             <HtmlContentfulHtmlLoader
               data-plasmic-name={"htmlContentfulHtmlLoader"}
               data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -169,9 +164,7 @@ function PlasmicPartnerMailingLists__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
+                <div
                   className={classNames(projectcss.all, sty.freeBox__c8LeC)}
                   key={currentIndex}
                 >
@@ -211,10 +204,10 @@ function PlasmicPartnerMailingLists__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__pxpD)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

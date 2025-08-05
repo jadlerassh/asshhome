@@ -5,23 +5,23 @@ import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-we
 import GlobalContextsProvider from "../../components/plasmic/assh_home/PlasmicGlobalContextsProvider";
 import { UnnamedGlobalGroupOfVariantsContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants";
 import { UnnamedGlobalGroupOfVariants2ContextProvider } from "../../components/plasmic/assh_home/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants2";
-import { PlasmicCommitteeDetailsTest } from "../../components/plasmic/assh_home/PlasmicCommitteeDetailsTest";
+import { PlasmicCommitteeDetails } from "../../components/plasmic/assh_home/PlasmicCommitteeDetails";
 import { useRouter } from "next/router";
 
-function CommitteeDetailsTest() {
-  // Use PlasmicCommitteeDetailsTest to render this component as it was
+function CommitteeDetails() {
+  // Use PlasmicCommitteeDetails to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicCommitteeDetailsTest are:
+  // Props you can pass into PlasmicCommitteeDetails are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicCommitteeDetailsTest is wrapped by your project's global
+  // By default, PlasmicCommitteeDetails is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
@@ -34,7 +34,7 @@ function CommitteeDetailsTest() {
             params={useRouter()?.query}
             query={useRouter()?.query}
           >
-            <PlasmicCommitteeDetailsTest />
+            <PlasmicCommitteeDetails />
           </PageParamsProvider__>
         </GlobalContextsProvider>
       </UnnamedGlobalGroupOfVariantsContextProvider>
@@ -42,4 +42,4 @@ function CommitteeDetailsTest() {
   );
 }
 
-export default CommitteeDetailsTest;
+export default CommitteeDetails;

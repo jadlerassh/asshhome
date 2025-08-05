@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -143,11 +142,9 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
           [sty.freeBox_4_hover]: hasVariant($state, "_4", "hover")
         })}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"calloutBox"}
           data-plasmic-override={overrides.calloutBox}
-          hasGap={true}
           className={classNames(projectcss.all, sty.calloutBox, {
             [sty.calloutBox_1_hover]: hasVariant($state, "_1", "hover"),
             [sty.calloutBox_2_hover]: hasVariant($state, "_2", "hover"),
@@ -156,11 +153,9 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
             [sty.calloutBox_4_hover]: hasVariant($state, "_4", "hover")
           })}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"container"}
             data-plasmic-override={overrides.container}
-            hasGap={true}
             className={classNames(projectcss.all, sty.container, {
               [sty.container_1__1]: hasVariant($state, "_1", "_1"),
               [sty.container_1_hover]: hasVariant($state, "_1", "hover"),
@@ -172,11 +167,9 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
             })}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"inner"}
             data-plasmic-override={overrides.inner}
-            hasGap={true}
             className={classNames(projectcss.all, sty.inner, {
               [sty.inner_1__1]: hasVariant($state, "_1", "_1"),
               [sty.inner_1_hover]: hasVariant($state, "_1", "hover"),
@@ -187,11 +180,9 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
               [sty.inner_4_hover]: hasVariant($state, "_4", "hover")
             })}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"content"}
               data-plasmic-override={overrides.content}
-              hasGap={true}
               className={classNames(projectcss.all, sty.content)}
             >
               <div
@@ -232,9 +223,9 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
                   role={"img"}
                 />
               </section>
-            </Stack__>
-          </Stack__>
-        </Stack__>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

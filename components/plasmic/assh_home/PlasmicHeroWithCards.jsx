@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -166,11 +165,7 @@ function PlasmicHeroWithCards__RenderFunc(props) {
 
         <div className={classNames(projectcss.all, sty.freeBox__vMb5B)}>
           <div className={classNames(projectcss.all, sty.columns__tt4N0)}>
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__pd9Is)}
-            >
+            <div className={classNames(projectcss.all, sty.column__pd9Is)}>
               <h1
                 data-plasmic-name={"h1"}
                 data-plasmic-override={overrides.h1}
@@ -234,7 +229,7 @@ function PlasmicHeroWithCards__RenderFunc(props) {
                   role={"img"}
                 />
               </PlasmicLink__>
-            </Stack__>
+            </div>
             <div className={classNames(projectcss.all, sty.column__uKvm)} />
           </div>
         </div>

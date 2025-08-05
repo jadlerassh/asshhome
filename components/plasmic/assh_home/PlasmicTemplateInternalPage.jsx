@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -163,11 +162,7 @@ function PlasmicTemplateInternalPage__RenderFunc(props) {
             title={"Hero: Young Leaders Program - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__fPoxD)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__fPoxD)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -175,12 +170,8 @@ function PlasmicTemplateInternalPage__RenderFunc(props) {
               )}
               title={"Young Leaders Program"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__fVvqW)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__fVvqW)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -190,12 +181,8 @@ function PlasmicTemplateInternalPage__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__nZ5Uk)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__nZ5Uk)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -244,7 +231,7 @@ function PlasmicTemplateInternalPage__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__vazFu)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

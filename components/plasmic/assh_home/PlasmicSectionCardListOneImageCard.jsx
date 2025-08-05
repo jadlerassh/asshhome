@@ -11,11 +11,9 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -23,7 +21,6 @@ import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithImage from "../../ItemArticleCardItemWithImage"; // plasmic-import: rJ18UjQomkxN/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -143,9 +140,6 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -174,11 +168,9 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
         title={"Surgeon Resources"}
       />
 
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
-        hasGap={true}
         className={classNames(projectcss.all, sty.columns)}
       >
         {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -208,7 +200,7 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
                 data-plasmic-override={overrides.itemArticleCardItemWithImage}
                 articleTitle={(() => {
                   try {
-                    return currentItem.title;
+                    return currentItem.label;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -280,11 +272,7 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
             </div>
           );
         })}
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.column__dNIrI)}
-        >
+        <div className={classNames(projectcss.all, sty.column__dNIrI)}>
           <ItemArticleCardItemWithDescription
             articleTitle={(() => {
               try {
@@ -404,12 +392,8 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
               }
             })()}
           />
-        </Stack__>
-        <Stack__
-          as={"div"}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.column__mRuR8)}
-        >
+        </div>
+        <div className={classNames(projectcss.all, sty.column__mRuR8)}>
           <ItemArticleCardItemWithDescription
             articleTitle={(() => {
               try {
@@ -529,8 +513,8 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
               }
             })()}
           />
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

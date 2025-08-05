@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -170,11 +169,9 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 }
               })()
         ) ? (
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"content"}
             data-plasmic-override={overrides.content}
-            hasGap={true}
             className={classNames(projectcss.all, sty.content)}
           >
             {(() => {
@@ -190,11 +187,9 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"category"}
                 data-plasmic-override={overrides.category}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.category)}
               >
                 <div
@@ -222,7 +217,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
             ) : null}
             {(() => {
               try {
@@ -237,11 +232,9 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content2"}
                 data-plasmic-override={overrides.content2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content2)}
               >
                 <div
@@ -267,7 +260,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
             ) : null}
             {(() => {
               try {
@@ -282,11 +275,9 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"content3"}
                 data-plasmic-override={overrides.content3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.content3)}
               >
                 <div
@@ -312,9 +303,9 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
             ) : null}
-          </Stack__>
+          </div>
         ) : null}
         {(() => {
           try {

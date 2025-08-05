@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -113,28 +112,22 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"navMenu"}
         data-plasmic-override={overrides.navMenu}
-        hasGap={true}
         className={classNames(projectcss.all, sty.navMenu)}
       >
         {false ? (
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"icon12X12"}
             data-plasmic-override={overrides.icon12X12}
-            hasGap={true}
             className={classNames(projectcss.all, sty.icon12X12)}
           >
-            <Stack__
-              as={ContainerIcon}
-              hasGap={true}
+            <ContainerIcon
               className={classNames(projectcss.all, sty.svg__bxIfw)}
               role={"img"}
             />
-          </Stack__>
+          </div>
         ) : null}
         <div
           data-plasmic-name={"navigationItem"}
@@ -174,11 +167,9 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
             })()}
           </React.Fragment>
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"icon12X122"}
           data-plasmic-override={overrides.icon12X122}
-          hasGap={true}
           className={classNames(projectcss.all, sty.icon12X122)}
         >
           {(
@@ -198,15 +189,13 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
                   }
                 })()
           ) ? (
-            <Stack__
-              as={Container4Icon}
-              hasGap={true}
+            <Container4Icon
               className={classNames(projectcss.all, sty.svg__cM8GH)}
               role={"img"}
             />
           ) : null}
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -118,18 +117,12 @@ function PlasmicInternationalMembership__RenderFunc(props) {
             )}
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"columns"}
             data-plasmic-override={overrides.columns}
-            hasGap={true}
             className={classNames(projectcss.all, sty.columns)}
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.column__mV1W4)}
-            >
+            <div className={classNames(projectcss.all, sty.column__mV1W4)}>
               <HtmlContentfulHtmlLoader
                 data-plasmic-name={"htmlContentfulHtmlLoader"}
                 data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -150,11 +143,9 @@ function PlasmicInternationalMembership__RenderFunc(props) {
                 title={"Tan CTA Block - International Membership"}
               />
 
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"freeBox"}
                 data-plasmic-override={overrides.freeBox}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox)}
               >
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -214,8 +205,8 @@ function PlasmicInternationalMembership__RenderFunc(props) {
                     />
                   );
                 })}
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
             <div className={classNames(projectcss.all, sty.column__qnqnZ)}>
               <BlockQuoteBlock
                 data-plasmic-name={"blockQuoteBlock"}
@@ -232,7 +223,7 @@ function PlasmicInternationalMembership__RenderFunc(props) {
                 )}
               />
             </div>
-          </Stack__>
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",

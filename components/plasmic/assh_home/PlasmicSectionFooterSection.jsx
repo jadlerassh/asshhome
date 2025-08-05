@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -482,11 +481,9 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
         data-plasmic-override={overrides.footer}
         className={classNames(projectcss.all, sty.footer)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame5"}
           data-plasmic-override={overrides.frame5}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame5)}
         >
           <div
@@ -514,333 +511,249 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
               role={"img"}
             />
           </div>
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"social"}
             data-plasmic-override={overrides.social}
-            hasGap={true}
             className={classNames(projectcss.all, sty.social)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"socialIcon"}
               data-plasmic-override={overrides.socialIcon}
-              hasGap={true}
               className={classNames(projectcss.all, sty.socialIcon)}
             >
-              <Stack__
-                as={FacebookIcon}
-                hasGap={true}
+              <FacebookIcon
                 className={classNames(projectcss.all, sty.svg___7JZcJ)}
                 role={"img"}
               />
 
               {false ? (
-                <Stack__
-                  as={LinkedInIcon}
-                  hasGap={true}
+                <LinkedInIcon
                   className={classNames(projectcss.all, sty.svg__dAqUh)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={XIcon}
-                  hasGap={true}
+                <XIcon
                   className={classNames(projectcss.all, sty.svg__gPcBo)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={YouTubeIcon}
-                  hasGap={true}
+                <YouTubeIcon
                   className={classNames(projectcss.all, sty.svg___3CRY)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={InstagramIcon}
-                  hasGap={true}
+                <InstagramIcon
                   className={classNames(projectcss.all, sty.svg__gN1Cz)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={ThreadsIcon}
-                  hasGap={true}
+                <ThreadsIcon
                   className={classNames(projectcss.all, sty.svg__nlvtX)}
                   role={"img"}
                 />
               ) : null}
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"socialIcon2"}
               data-plasmic-override={overrides.socialIcon2}
-              hasGap={true}
               className={classNames(projectcss.all, sty.socialIcon2)}
             >
               {false ? (
-                <Stack__
-                  as={FacebookIcon}
-                  hasGap={true}
+                <FacebookIcon
                   className={classNames(projectcss.all, sty.svg__fEa9W)}
                   role={"img"}
                 />
               ) : null}
-              <Stack__
-                as={LinkedInIcon}
-                hasGap={true}
+              <LinkedInIcon
                 className={classNames(projectcss.all, sty.svg__rVml)}
                 role={"img"}
               />
 
               {false ? (
-                <Stack__
-                  as={XIcon}
-                  hasGap={true}
+                <XIcon
                   className={classNames(projectcss.all, sty.svg__wocbS)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={YouTubeIcon}
-                  hasGap={true}
+                <YouTubeIcon
                   className={classNames(projectcss.all, sty.svg__ivvow)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={InstagramIcon}
-                  hasGap={true}
+                <InstagramIcon
                   className={classNames(projectcss.all, sty.svg__kVksy)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={ThreadsIcon}
-                  hasGap={true}
+                <ThreadsIcon
                   className={classNames(projectcss.all, sty.svg__xkG7)}
                   role={"img"}
                 />
               ) : null}
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"socialIcon3"}
               data-plasmic-override={overrides.socialIcon3}
-              hasGap={true}
               className={classNames(projectcss.all, sty.socialIcon3)}
             >
               {false ? (
-                <Stack__
-                  as={FacebookIcon}
-                  hasGap={true}
+                <FacebookIcon
                   className={classNames(projectcss.all, sty.svg__zJdXq)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={LinkedInIcon}
-                  hasGap={true}
+                <LinkedInIcon
                   className={classNames(projectcss.all, sty.svg__dZwby)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={XIcon}
-                  hasGap={true}
+                <XIcon
                   className={classNames(projectcss.all, sty.svg___3X5Dk)}
                   role={"img"}
                 />
               ) : null}
-              <Stack__
-                as={YouTubeIcon}
-                hasGap={true}
+              <YouTubeIcon
                 className={classNames(projectcss.all, sty.svg__ueJsc)}
                 role={"img"}
               />
 
               {false ? (
-                <Stack__
-                  as={InstagramIcon}
-                  hasGap={true}
+                <InstagramIcon
                   className={classNames(projectcss.all, sty.svg___9Dq4S)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={ThreadsIcon}
-                  hasGap={true}
+                <ThreadsIcon
                   className={classNames(projectcss.all, sty.svg___3Lvg2)}
                   role={"img"}
                 />
               ) : null}
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"socialIcon4"}
               data-plasmic-override={overrides.socialIcon4}
-              hasGap={true}
               className={classNames(projectcss.all, sty.socialIcon4)}
             >
               {false ? (
-                <Stack__
-                  as={FacebookIcon}
-                  hasGap={true}
+                <FacebookIcon
                   className={classNames(projectcss.all, sty.svg__lTqhc)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={LinkedInIcon}
-                  hasGap={true}
+                <LinkedInIcon
                   className={classNames(projectcss.all, sty.svg__e4Yr)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={XIcon}
-                  hasGap={true}
+                <XIcon
                   className={classNames(projectcss.all, sty.svg__sLvqa)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={YouTubeIcon}
-                  hasGap={true}
+                <YouTubeIcon
                   className={classNames(projectcss.all, sty.svg__gcJ3J)}
                   role={"img"}
                 />
               ) : null}
-              <Stack__
-                as={InstagramIcon}
-                hasGap={true}
+              <InstagramIcon
                 className={classNames(projectcss.all, sty.svg__oWQd)}
                 role={"img"}
               />
 
               {false ? (
-                <Stack__
-                  as={ThreadsIcon}
-                  hasGap={true}
+                <ThreadsIcon
                   className={classNames(projectcss.all, sty.svg__rl8WS)}
                   role={"img"}
                 />
               ) : null}
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"socialIcon5"}
               data-plasmic-override={overrides.socialIcon5}
-              hasGap={true}
               className={classNames(projectcss.all, sty.socialIcon5)}
             >
               {false ? (
-                <Stack__
-                  as={FacebookIcon}
-                  hasGap={true}
+                <FacebookIcon
                   className={classNames(projectcss.all, sty.svg__yfW0P)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={LinkedInIcon}
-                  hasGap={true}
+                <LinkedInIcon
                   className={classNames(projectcss.all, sty.svg__wQL1)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={XIcon}
-                  hasGap={true}
+                <XIcon
                   className={classNames(projectcss.all, sty.svg___0VNlh)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={YouTubeIcon}
-                  hasGap={true}
+                <YouTubeIcon
                   className={classNames(projectcss.all, sty.svg__ei74G)}
                   role={"img"}
                 />
               ) : null}
               {false ? (
-                <Stack__
-                  as={InstagramIcon}
-                  hasGap={true}
+                <InstagramIcon
                   className={classNames(projectcss.all, sty.svg__zjjc2)}
                   role={"img"}
                 />
               ) : null}
-              <Stack__
-                as={ThreadsIcon}
-                hasGap={true}
+              <ThreadsIcon
                 className={classNames(projectcss.all, sty.svg___5JFe)}
                 role={"img"}
               />
-            </Stack__>
-          </Stack__>
-        </Stack__>
-        <Stack__
-          as={"div"}
+            </div>
+          </div>
+        </div>
+        <div
           data-plasmic-name={"columns"}
           data-plasmic-override={overrides.columns}
-          hasGap={true}
           className={classNames(projectcss.all, sty.columns)}
         >
           <div className={classNames(projectcss.all, sty.column__pusMq)}>
             <div className={classNames(projectcss.all, sty.freeBox__suvqz)}>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame7"}
                 data-plasmic-override={overrides.frame7}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame7)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"contact"}
                   data-plasmic-override={overrides.contact}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.contact)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu"}
                     data-plasmic-override={overrides.navItemMenu}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon16X16"}
                       data-plasmic-override={overrides.icon16X16}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon16X16)}
                     >
-                      <Stack__
-                        as={Container7Icon}
-                        hasGap={true}
+                      <Container7Icon
                         className={classNames(projectcss.all, sty.svg__n3E3C)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"navigationItem"}
                       data-plasmic-override={overrides.navigationItem}
@@ -853,43 +766,33 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                       {"822 W. Washington Blvd.\nChicago, IL 60607"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12"}
                         data-plasmic-override={overrides.icon12X12}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__kTs7B)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu2"}
                     data-plasmic-override={overrides.navItemMenu2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu2)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon16X162"}
                       data-plasmic-override={overrides.icon16X162}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon16X162)}
                     >
-                      <Stack__
-                        as={Container8Icon}
-                        hasGap={true}
+                      <Container8Icon
                         className={classNames(projectcss.all, sty.svg__edu6X)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"navigationItem2"}
                       data-plasmic-override={overrides.navigationItem2}
@@ -902,46 +805,36 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                       {"(312) 880-1900"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X122"}
                         data-plasmic-override={overrides.icon12X122}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X122)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___9DpIc
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu3"}
                     data-plasmic-override={overrides.navItemMenu3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu3)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon16X163"}
                       data-plasmic-override={overrides.icon16X163}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon16X163)}
                     >
-                      <Stack__
-                        as={Container9Icon}
-                        hasGap={true}
+                      <Container9Icon
                         className={classNames(projectcss.all, sty.svg__vQUe)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"navigationItem3"}
                       data-plasmic-override={overrides.navigationItem3}
@@ -954,52 +847,40 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                       {"info@ASSH.org"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X123"}
                         data-plasmic-override={overrides.icon12X123}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X123)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__gHvfz)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame8"}
                   data-plasmic-override={overrides.frame8}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame8)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu4"}
                     data-plasmic-override={overrides.navItemMenu4}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu4)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X124"}
                         data-plasmic-override={overrides.icon12X124}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X124)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__gWsRs)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem4"}
@@ -1013,44 +894,34 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                       {"Advertise"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X125"}
                         data-plasmic-override={overrides.icon12X125}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X125)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__sfngi)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu5"}
                     data-plasmic-override={overrides.navItemMenu5}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu5)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X126"}
                         data-plasmic-override={overrides.icon12X126}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X126)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__wncaM)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem5"}
@@ -1064,45 +935,35 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                       {"Press Center"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X127"}
                         data-plasmic-override={overrides.icon12X127}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X127)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__kbXkr)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"buttonSecondary"}
                   data-plasmic-override={overrides.buttonSecondary}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.buttonSecondary)}
                 >
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X128"}
                       data-plasmic-override={overrides.icon12X128}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X128)}
                     >
-                      <Stack__
-                        as={ContainerIcon}
-                        hasGap={true}
+                      <ContainerIcon
                         className={classNames(projectcss.all, sty.svg__ml8Vu)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
                   <div
                     data-plasmic-name={"text"}
@@ -1116,30 +977,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                     {"Donate to the Foundation"}
                   </div>
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X129"}
                       data-plasmic-override={overrides.icon12X129}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X129)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg__smizU)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </div>
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.column__nKa5B)}
-          >
+          <div className={classNames(projectcss.all, sty.column__nKa5B)}>
             <div className={classNames(projectcss.all, sty.freeBox__uqiZ6)}>
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
@@ -1161,38 +1014,30 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame27"}
                     data-plasmic-override={overrides.frame27}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame27)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple10"}
                       data-plasmic-override={overrides.navItemSimple10}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple10
                       )}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12144"}
                         data-plasmic-override={overrides.icon12X12144}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12144)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__hMjEg)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                       <div
                         className={classNames(
                           projectcss.all,
@@ -1217,28 +1062,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12145"}
                           data-plasmic-override={overrides.icon12X12145}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12145
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__yw5Dl
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame28"}
                       data-plasmic-override={overrides.frame28}
@@ -1273,26 +1114,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12162"}
                                 data-plasmic-override={overrides.icon12X12162}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12162
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__tcs4E
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -1353,32 +1190,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12163"}
                                 data-plasmic-override={overrides.icon12X12163}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12163
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__fNWyU
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
@@ -1403,45 +1236,37 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame33"}
                     data-plasmic-override={overrides.frame33}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame33)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple13"}
                       data-plasmic-override={overrides.navItemSimple13}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple13
                       )}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12150"}
                           data-plasmic-override={overrides.icon12X12150}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12150
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__qtWng
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         className={classNames(
@@ -1467,28 +1292,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12151"}
                           data-plasmic-override={overrides.icon12X12151}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12151
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__qGVdk
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame34"}
                       data-plasmic-override={overrides.frame34}
@@ -1523,26 +1344,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12168"}
                                 data-plasmic-override={overrides.icon12X12168}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12168
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__nGUad
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -1603,41 +1420,33 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12169"}
                                 data-plasmic-override={overrides.icon12X12169}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12169
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__r4Qg2
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.column___0OmGm)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.column___0OmGm)}>
             <div className={classNames(projectcss.all, sty.freeBox__tp1V)}>
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
@@ -1659,45 +1468,37 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame29"}
                     data-plasmic-override={overrides.frame29}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame29)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple11"}
                       data-plasmic-override={overrides.navItemSimple11}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple11
                       )}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12146"}
                           data-plasmic-override={overrides.icon12X12146}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12146
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__cEwl
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         className={classNames(
@@ -1723,28 +1524,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12147"}
                           data-plasmic-override={overrides.icon12X12147}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12147
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__iiopv
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame30"}
                       data-plasmic-override={overrides.frame30}
@@ -1779,26 +1576,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12164"}
                                 data-plasmic-override={overrides.icon12X12164}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12164
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__osaru
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -1859,32 +1652,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12165"}
                                 data-plasmic-override={overrides.icon12X12165}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12165
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__nBgJ6
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
@@ -1909,45 +1698,37 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame31"}
                     data-plasmic-override={overrides.frame31}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame31)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple12"}
                       data-plasmic-override={overrides.navItemSimple12}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple12
                       )}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12148"}
                           data-plasmic-override={overrides.icon12X12148}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12148
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__czVr
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         className={classNames(
@@ -1973,28 +1754,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12149"}
                           data-plasmic-override={overrides.icon12X12149}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12149
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__gmgOm
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame32"}
                       data-plasmic-override={overrides.frame32}
@@ -2029,26 +1806,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12166"}
                                 data-plasmic-override={overrides.icon12X12166}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12166
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__aIyPw
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -2109,32 +1882,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12167"}
                                 data-plasmic-override={overrides.icon12X12167}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12167
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__biva0
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
@@ -2159,45 +1928,37 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame37"}
                     data-plasmic-override={overrides.frame37}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame37)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple15"}
                       data-plasmic-override={overrides.navItemSimple15}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple15
                       )}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12154"}
                           data-plasmic-override={overrides.icon12X12154}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12154
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__vXg3J
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         className={classNames(
@@ -2223,28 +1984,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12155"}
                           data-plasmic-override={overrides.icon12X12155}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12155
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg___9WuXa
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame38"}
                       data-plasmic-override={overrides.frame38}
@@ -2279,26 +2036,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12172"}
                                 data-plasmic-override={overrides.icon12X12172}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12172
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__jkU7
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -2359,41 +2112,33 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12173"}
                                 data-plasmic-override={overrides.icon12X12173}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12173
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__i8My4
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.column___4MWhN)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.column___4MWhN)}>
             <div className={classNames(projectcss.all, sty.freeBox__s7Kr6)}>
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
@@ -2415,45 +2160,37 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame35"}
                     data-plasmic-override={overrides.frame35}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame35)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple14"}
                       data-plasmic-override={overrides.navItemSimple14}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple14
                       )}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12152"}
                           data-plasmic-override={overrides.icon12X12152}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12152
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__voWvp
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         className={classNames(
@@ -2479,28 +2216,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12153"}
                           data-plasmic-override={overrides.icon12X12153}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12153
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__mdGbl
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame36"}
                       data-plasmic-override={overrides.frame36}
@@ -2535,26 +2268,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12170"}
                                 data-plasmic-override={overrides.icon12X12170}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12170
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__d08B6
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -2615,32 +2344,28 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12171"}
                                 data-plasmic-override={overrides.icon12X12171}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12171
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg___8WLnJ
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
@@ -2664,45 +2389,37 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame39"}
                     data-plasmic-override={overrides.frame39}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame39)}
                     key={currentIndex}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemSimple16"}
                       data-plasmic-override={overrides.navItemSimple16}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.navItemSimple16
                       )}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12156"}
                           data-plasmic-override={overrides.icon12X12156}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12156
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__eAdkI
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         className={classNames(
@@ -2728,28 +2445,24 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         </React.Fragment>
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12157"}
                           data-plasmic-override={overrides.icon12X12157}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12157
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg___8Yvh
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame40"}
                       data-plasmic-override={overrides.frame40}
@@ -2784,26 +2497,22 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             key={currentIndex}
                           >
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12174"}
                                 data-plasmic-override={overrides.icon12X12174}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12174
                                 )}
                               >
-                                <Stack__
-                                  as={ContainerIcon}
-                                  hasGap={true}
+                                <ContainerIcon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg__nBp2C
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                             <ItemMegaMenuSubitem
                               className={classNames(
@@ -2864,42 +2573,36 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                             />
 
                             {false ? (
-                              <Stack__
-                                as={"div"}
+                              <div
                                 data-plasmic-name={"icon12X12175"}
                                 data-plasmic-override={overrides.icon12X12175}
-                                hasGap={true}
                                 className={classNames(
                                   projectcss.all,
                                   sty.icon12X12175
                                 )}
                               >
-                                <Stack__
-                                  as={Container2Icon}
-                                  hasGap={true}
+                                <Container2Icon
                                   className={classNames(
                                     projectcss.all,
                                     sty.svg___01Oxo
                                   )}
                                   role={"img"}
                                 />
-                              </Stack__>
+                              </div>
                             ) : null}
                           </div>
                         );
                       })}
                     </div>
-                  </Stack__>
+                  </div>
                 );
               })}
             </div>
-          </Stack__>
-        </Stack__>
-        <Stack__
-          as={"div"}
+          </div>
+        </div>
+        <div
           data-plasmic-name={"container"}
           data-plasmic-override={overrides.container}
-          hasGap={true}
           className={classNames(projectcss.all, sty.container)}
         >
           <div
@@ -2926,7 +2629,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
           >
             {"Privacy Policy  |  Terms of Use  |  Sitemap"}
           </div>
-        </Stack__>
+        </div>
       </div>
     </div>
   );

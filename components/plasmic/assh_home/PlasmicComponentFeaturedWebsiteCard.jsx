@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -60,13 +59,11 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"content"}
       data-plasmic-override={overrides.content}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -78,13 +75,18 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
         sty.content
       )}
     >
-      <div
-        data-plasmic-name={"text"}
-        data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
+      <h3
+        data-plasmic-name={"h3"}
+        data-plasmic-override={overrides.h3}
+        className={classNames(
+          projectcss.all,
+          projectcss.h3,
+          projectcss.__wab_text,
+          sty.h3
+        )}
       >
         {"Handthology"}
-      </div>
+      </h3>
       <div
         data-plasmic-name={"column"}
         data-plasmic-override={overrides.column}
@@ -109,13 +111,13 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
         secondaryInteractions={"secondary"}
         text={"Learn About Conditions"}
       />
-    </Stack__>
+    </div>
   );
 }
 
 const PlasmicDescendants = {
-  content: ["content", "text", "column", "description", "buttonPrimary"],
-  text: ["text"],
+  content: ["content", "h3", "column", "description", "buttonPrimary"],
+  h3: ["h3"],
   column: ["column"],
   description: ["description"],
   buttonPrimary: ["buttonPrimary"]
@@ -154,7 +156,7 @@ export const PlasmicComponentFeaturedWebsiteCard = Object.assign(
   makeNodeComponent("content"),
   {
     // Helper components rendering sub-elements
-    text: makeNodeComponent("text"),
+    h3: makeNodeComponent("h3"),
     column: makeNodeComponent("column"),
     description: makeNodeComponent("description"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),

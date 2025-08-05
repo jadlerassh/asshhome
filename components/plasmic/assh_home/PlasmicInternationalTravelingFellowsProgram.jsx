@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -175,11 +174,7 @@ function PlasmicInternationalTravelingFellowsProgram__RenderFunc(props) {
             title={"Hero: International Traveling Fellows Program - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__rnl8Q)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__rnl8Q)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -187,12 +182,8 @@ function PlasmicInternationalTravelingFellowsProgram__RenderFunc(props) {
               )}
               title={"International Traveling Fellows Program"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__mge0F)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__mge0F)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -202,12 +193,8 @@ function PlasmicInternationalTravelingFellowsProgram__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___245Xe)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox___245Xe)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -256,7 +243,7 @@ function PlasmicInternationalTravelingFellowsProgram__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__ruflB)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

@@ -14,7 +14,6 @@ import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -154,11 +153,9 @@ function PlasmicItemArticleCardItemWithImage__RenderFunc(props) {
         })()}
         platform={"nextjs"}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"imageFrame"}
           data-plasmic-override={overrides.imageFrame}
-          hasGap={true}
           className={classNames(projectcss.all, sty.imageFrame)}
         >
           <div
@@ -193,19 +190,15 @@ function PlasmicItemArticleCardItemWithImage__RenderFunc(props) {
               })()}
             />
           </div>
-        </Stack__>
-        <Stack__
-          as={"div"}
+        </div>
+        <div
           data-plasmic-name={"content"}
           data-plasmic-override={overrides.content}
-          hasGap={true}
           className={classNames(projectcss.all, sty.content)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"category"}
             data-plasmic-override={overrides.category}
-            hasGap={true}
             className={classNames(projectcss.all, sty.category)}
           >
             <div
@@ -233,12 +226,10 @@ function PlasmicItemArticleCardItemWithImage__RenderFunc(props) {
                 })()}
               </React.Fragment>
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
+          </div>
+          <div
             data-plasmic-name={"content2"}
             data-plasmic-override={overrides.content2}
-            hasGap={true}
             className={classNames(projectcss.all, sty.content2)}
           >
             <div
@@ -291,8 +282,8 @@ function PlasmicItemArticleCardItemWithImage__RenderFunc(props) {
                 })()}
               </React.Fragment>
             </div>
-          </Stack__>
-        </Stack__>
+          </div>
+        </div>
       </PlasmicLink__>
     </div>
   );

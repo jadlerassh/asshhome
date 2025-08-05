@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -117,11 +116,7 @@ function PlasmicItemImageWithText__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__yItQ)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__yItQ)}>
         <div className={classNames(projectcss.all, sty.freeBox__aIGO)}>
           <PlasmicImg__
             data-plasmic-name={"img"}
@@ -177,7 +172,7 @@ function PlasmicItemImageWithText__RenderFunc(props) {
             </React.Fragment>
           </div>
         </div>
-      </Stack__>
+      </div>
     </div>
   );
 }

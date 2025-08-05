@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -171,13 +170,11 @@ function PlasmicComponentTabSet__RenderFunc(props) {
     screen: useScreenVariantsdjBtUr72ZExV()
   });
   return (
-    <Stack__
-      as={"div"}
+    <div
       data-plasmic-name={"tabset"}
       data-plasmic-override={overrides.tabset}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
-      hasGap={true}
       className={classNames(
         projectcss.all,
         projectcss.root_reset,
@@ -225,11 +222,9 @@ function PlasmicComponentTabSet__RenderFunc(props) {
             const currentItem = __plasmic_item_0;
             const currentIndex = __plasmic_idx_0;
             return (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"tab"}
                 data-plasmic-override={overrides.tab}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.tab)}
                 key={currentIndex}
                 onClick={async event => {
@@ -268,28 +263,22 @@ function PlasmicComponentTabSet__RenderFunc(props) {
                   }
                 }}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"cta"}
                   data-plasmic-override={overrides.cta}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.cta)}
                 >
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12"}
                       data-plasmic-override={overrides.icon12X12}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12)}
                     >
-                      <Stack__
-                        as={ContainerIcon}
-                        hasGap={true}
+                      <ContainerIcon
                         className={classNames(projectcss.all, sty.svg__a0Ncd)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
                   {(() => {
                     try {
@@ -370,22 +359,18 @@ function PlasmicComponentTabSet__RenderFunc(props) {
                     </div>
                   ) : null}
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X122"}
                       data-plasmic-override={overrides.icon12X122}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X122)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg__tkstD)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
-                </Stack__>
+                </div>
                 {(() => {
                   try {
                     return currentItem.label === $state.activeTab;
@@ -432,7 +417,7 @@ function PlasmicComponentTabSet__RenderFunc(props) {
                     })()}
                   />
                 </div>
-              </Stack__>
+              </div>
             );
           })}
           <div
@@ -459,11 +444,9 @@ function PlasmicComponentTabSet__RenderFunc(props) {
           </div>
         </div>
       ) : null}
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"content"}
         data-plasmic-override={overrides.content}
-        hasGap={true}
         className={classNames(projectcss.all, sty.content)}
       >
         <Embed
@@ -483,8 +466,8 @@ function PlasmicComponentTabSet__RenderFunc(props) {
             }
           })()}
         />
-      </Stack__>
-    </Stack__>
+      </div>
+    </div>
   );
 }
 

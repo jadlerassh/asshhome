@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -121,11 +120,9 @@ function PlasmicItemLabelItem__RenderFunc(props) {
         }
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        hasGap={true}
         className={classNames(projectcss.all, sty.freeBox, {
           [sty.freeBoxrequirementIndicator_optional]: hasVariant(
             $state,
@@ -179,7 +176,7 @@ function PlasmicItemLabelItem__RenderFunc(props) {
             ? "*"
             : "(optional)"}
         </div>
-      </Stack__>
+      </div>
     </BaseLabel>
   );
 }

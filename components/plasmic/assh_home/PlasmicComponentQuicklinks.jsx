@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -135,11 +134,9 @@ function PlasmicComponentQuicklinks__RenderFunc(props) {
           )
         })}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"section"}
           data-plasmic-override={overrides.section}
-          hasGap={true}
           className={classNames(projectcss.all, sty.section, {
             [sty.sectionunnamedVariant]: hasVariant(
               $state,
@@ -359,7 +356,7 @@ function PlasmicComponentQuicklinks__RenderFunc(props) {
               </div>
             </div>
           </div>
-        </Stack__>
+        </div>
       </div>
     </div>
   );

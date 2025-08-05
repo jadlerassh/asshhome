@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -181,9 +180,7 @@ function PlasmicPolicies__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
+                <div
                   className={classNames(projectcss.all, sty.freeBox__sIaK5)}
                   key={currentIndex}
                 >
@@ -223,7 +220,7 @@ function PlasmicPolicies__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
           </div>

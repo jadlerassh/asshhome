@@ -13,7 +13,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicLink as PlasmicLink__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -77,11 +76,7 @@ function PlasmicJaTestComponent__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
-        hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox__glzEq)}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__glzEq)}>
         <div
           className={classNames(
             projectcss.all,
@@ -136,7 +131,7 @@ function PlasmicJaTestComponent__RenderFunc(props) {
         >
           {"Test Text 2"}
         </div>
-      </Stack__>
+      </div>
       <div className={classNames(projectcss.all, sty.freeBox__zhCoh)}>
         <div
           data-plasmic-name={"columns"}

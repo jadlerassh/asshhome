@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -137,11 +136,7 @@ function PlasmicCodeQuestion__RenderFunc(props) {
               type={"soft"}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__fb3Et)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__fb3Et)}>
             <h3
               data-plasmic-name={"h3"}
               data-plasmic-override={overrides.h3}
@@ -268,7 +263,7 @@ function PlasmicCodeQuestion__RenderFunc(props) {
                 );
               })}
             </div>
-          </Stack__>
+          </div>
           <div className={classNames(projectcss.all, sty.freeBox__wg0Be)}>
             <CommentSection
               data-plasmic-name={"commentSection"}

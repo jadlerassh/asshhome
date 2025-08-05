@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -93,32 +92,24 @@ function PlasmicBlockCalloutBoxItem__RenderFunc(props) {
       )}
       data-plasmic-trigger-props={[triggerRootHoverProps]}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"interactionsDefault"}
         data-plasmic-override={overrides.interactionsDefault}
-        hasGap={true}
         className={classNames(projectcss.all, sty.interactionsDefault)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"container"}
           data-plasmic-override={overrides.container}
-          hasGap={true}
           className={classNames(projectcss.all, sty.container)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"inner"}
             data-plasmic-override={overrides.inner}
-            hasGap={true}
             className={classNames(projectcss.all, sty.inner)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"content"}
               data-plasmic-override={overrides.content}
-              hasGap={true}
               className={classNames(projectcss.all, sty.content)}
             >
               <div
@@ -143,12 +134,10 @@ function PlasmicBlockCalloutBoxItem__RenderFunc(props) {
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget scelerisque urna."
                 }
               </div>
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"navItemSimple"}
               data-plasmic-override={overrides.navItemSimple}
-              hasGap={true}
               className={classNames(projectcss.all, sty.navItemSimple)}
             >
               <div
@@ -160,26 +149,22 @@ function PlasmicBlockCalloutBoxItem__RenderFunc(props) {
               >
                 {"Action"}
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"icon12X12"}
                 data-plasmic-override={overrides.icon12X12}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.icon12X12)}
               >
-                <Stack__
-                  as={Container2Icon}
+                <Container2Icon
                   data-plasmic-name={"svg"}
                   data-plasmic-override={overrides.svg}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.svg)}
                   role={"img"}
                 />
-              </Stack__>
-            </Stack__>
-          </Stack__>
-        </Stack__>
-      </Stack__>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

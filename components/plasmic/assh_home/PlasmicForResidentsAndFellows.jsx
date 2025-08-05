@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -22,8 +21,7 @@ import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSec
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
-import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
+import SectionMidPageBannerWithQuicklinks from "../../SectionMidPageBannerWithQuicklinks"; // plasmic-import: hQw6wQfUz2Ua/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -132,8 +130,16 @@ function PlasmicForResidentsAndFellows__RenderFunc(props) {
             title={"How ASSH Supports Trainees"}
           />
 
-          <div className={classNames(projectcss.all, sty.columns__tHanH)}>
-            <div className={classNames(projectcss.all, sty.column___6Ft7Y)}>
+          <div
+            data-plasmic-name={"columns"}
+            data-plasmic-override={overrides.columns}
+            className={classNames(projectcss.all, sty.columns)}
+          >
+            <div
+              data-plasmic-name={"column"}
+              data-plasmic-override={overrides.column}
+              className={classNames(projectcss.all, sty.column)}
+            >
               <HtmlContentfulHtmlLoader
                 data-plasmic-name={"htmlContentfulHtmlLoader"}
                 data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -149,107 +155,18 @@ function PlasmicForResidentsAndFellows__RenderFunc(props) {
             data-plasmic-name={"blockArticleCardList"}
             data-plasmic-override={overrides.blockArticleCardList}
             className={classNames("__wab_instance", sty.blockArticleCardList)}
-            name={"For Surgeons: Resident & Fellow Resources"}
+            name={"For R&F: Resident & Fellow Resources"}
           />
 
-          <SectionMidPageCtaSection
-            data-plasmic-name={"sectionMidPageCtaSection"}
-            data-plasmic-override={overrides.sectionMidPageCtaSection}
+          <SectionMidPageBannerWithQuicklinks
+            data-plasmic-name={"sectionMidPageBannerWithQuicklinks"}
+            data-plasmic-override={overrides.sectionMidPageBannerWithQuicklinks}
             className={classNames(
               "__wab_instance",
-              sty.sectionMidPageCtaSection
+              sty.sectionMidPageBannerWithQuicklinks
             )}
-            title={"For R&F - Mid-page CTA"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.columns__wlX9N)}
-          >
-            <div className={classNames(projectcss.all, sty.column__js182)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Candidate Member"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription___3BJe4
-                )}
-                description={
-                  "Surgeons within 3 years of completing residency, current fellows, and practicing surgeons up to 5 years."
-                }
-                heading={"Membership Type"}
-                linkUrl={"/membership/candidate"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column___2JMt)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Active Member"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__fgPfc
-                )}
-                description={
-                  "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
-                }
-                heading={"Membership Type"}
-                linkUrl={"/membership/active"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__ctKpB)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Membership Benefits"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__yiVq
-                )}
-                description={``}
-                heading={"Membership Info"}
-                linkUrl={"/membership/benefits"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__zIb7)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Young International Member"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__kqTpV
-                )}
-                description={
-                  "Surgeons\u00a0within 5\u00a0years of completing\u00a0a post-graduate program in disorders of the upper limbs."
-                }
-                heading={"Membership Type"}
-                linkUrl={"/membership/young-international"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__ebrVe)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Affiliate Member"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription___4S9W6
-                )}
-                description={
-                  "Fully licensed allied healthcare professionals (i.e., hand therapist, OT, PT, PA, NP or RN)."
-                }
-                heading={"Membership Type"}
-                linkUrl={"/membership/affiliate"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__hjq8K)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Supporting Member"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__nliQ
-                )}
-                description={
-                  "Non-surgeons who have contributed to the understanding and/or treatment of disorders of the upper limbs."
-                }
-                heading={"Membership Type"}
-                linkUrl={"/membership/supporting-member"}
-              />
-            </div>
-          </Stack__>
           <SectionQuicklinksTable
             data-plasmic-name={"sectionQuicklinksTable"}
             data-plasmic-override={overrides.sectionQuicklinksTable}
@@ -283,9 +200,11 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
+    "columns",
+    "column",
     "htmlContentfulHtmlLoader",
     "blockArticleCardList",
-    "sectionMidPageCtaSection",
+    "sectionMidPageBannerWithQuicklinks",
     "sectionQuicklinksTable",
     "sectionAdPlaceholder",
     "blockAsshMissionBlueBlock"
@@ -293,9 +212,11 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  columns: ["columns", "column", "htmlContentfulHtmlLoader"],
+  column: ["column", "htmlContentfulHtmlLoader"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockArticleCardList: ["blockArticleCardList"],
-  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
+  sectionMidPageBannerWithQuicklinks: ["sectionMidPageBannerWithQuicklinks"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionAdPlaceholder: ["sectionAdPlaceholder"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
@@ -339,9 +260,13 @@ export const PlasmicForResidentsAndFellows = Object.assign(
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
+    columns: makeNodeComponent("columns"),
+    column: makeNodeComponent("column"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
-    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
+    sectionMidPageBannerWithQuicklinks: makeNodeComponent(
+      "sectionMidPageBannerWithQuicklinks"
+    ),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -171,11 +170,9 @@ function PlasmicInternationalVisitingProfessorProgram__RenderFunc(props) {
             }
           />
 
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
-            hasGap={true}
             className={classNames(projectcss.all, sty.freeBox)}
           >
             <div
@@ -209,7 +206,7 @@ function PlasmicInternationalVisitingProfessorProgram__RenderFunc(props) {
               )}
               title={"International Visiting Professor Program - Body"}
             />
-          </Stack__>
+          </div>
           <ItemAd
             className={classNames("__wab_instance", sty.itemAd___0JMpO)}
           />

@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -79,18 +78,14 @@ function PlasmicItemCheckmarkItem__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"checkItem"}
         data-plasmic-override={overrides.checkItem}
-        hasGap={true}
         className={classNames(projectcss.all, sty.checkItem)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"freeBox"}
           data-plasmic-override={overrides.freeBox}
-          hasGap={true}
           className={classNames(projectcss.all, sty.freeBox)}
         >
           <CheckmarkIcon
@@ -183,8 +178,8 @@ function PlasmicItemCheckmarkItem__RenderFunc(props) {
               </React.Fragment>
             </div>
           ) : null}
-        </Stack__>
-      </Stack__>
+        </div>
+      </div>
     </div>
   );
 }

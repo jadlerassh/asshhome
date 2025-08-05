@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -145,11 +144,7 @@ function PlasmicLendingAHandProgram__RenderFunc(props) {
             title={"Hero: Lending a Hand Program - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__hMsKe)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__hMsKe)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -157,12 +152,8 @@ function PlasmicLendingAHandProgram__RenderFunc(props) {
               )}
               title={"Lending a Hand Program"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__tcpib)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__tcpib)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -172,12 +163,8 @@ function PlasmicLendingAHandProgram__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___3Imjt)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox___3Imjt)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -226,7 +213,7 @@ function PlasmicLendingAHandProgram__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd
             className={classNames("__wab_instance", sty.itemAd___9L9Xe)}
           />

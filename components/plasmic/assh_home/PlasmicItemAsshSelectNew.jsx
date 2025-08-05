@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -178,19 +177,15 @@ function PlasmicItemAsshSelectNew__RenderFunc(props) {
         className={classNames(projectcss.all, sty.inputField)}
       >
         {false ? (
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"sideLabel"}
             data-plasmic-override={overrides.sideLabel}
-            hasGap={true}
             className={classNames(projectcss.all, sty.sideLabel)}
           />
         ) : null}
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"field"}
           data-plasmic-override={overrides.field}
-          hasGap={true}
           className={classNames(projectcss.all, sty.field, {
             [sty.fieldopen]: hasVariant($state, "open", "open")
           })}
@@ -294,7 +289,7 @@ function PlasmicItemAsshSelectNew__RenderFunc(props) {
             className={classNames(projectcss.all, sty.svg)}
             role={"img"}
           />
-        </Stack__>
+        </div>
       </div>
       <div
         data-plasmic-name={"options"}

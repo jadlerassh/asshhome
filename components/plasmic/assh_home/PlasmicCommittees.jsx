@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -179,11 +178,7 @@ function PlasmicCommittees__RenderFunc(props) {
               title={"Committees"}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__pTz6S)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__pTz6S)}>
             <SectionMidPageCtaSection
               data-plasmic-name={"sectionMidPageCtaSection"}
               data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -193,12 +188,8 @@ function PlasmicCommittees__RenderFunc(props) {
               )}
               title={"Grants and Awards - Mid-page CTA"}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__yUc1)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__yUc1)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -245,7 +236,7 @@ function PlasmicCommittees__RenderFunc(props) {
                 />
               </div>
             </div>
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__dLXn)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

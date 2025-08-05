@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -129,11 +128,7 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
             title={"Hero: Membership Overview - Title Card"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__dBYek)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__dBYek)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -147,11 +142,9 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
               title={"Training Requirements"}
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
-              hasGap={true}
               className={classNames(projectcss.all, sty.columns)}
             >
               <div className={classNames(projectcss.all, sty.column___8BsE)}>
@@ -176,11 +169,11 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
                   title={"HTML: Become Hand Surgeon: Training Requirements Two"}
                 />
               </div>
-            </Stack__>
+            </div>
             <BlockHr
               className={classNames("__wab_instance", sty.blockHr__s0Yon)}
             />
-          </Stack__>
+          </div>
           <SectionMidPageLeftRightSection
             className={classNames(
               "__wab_instance",

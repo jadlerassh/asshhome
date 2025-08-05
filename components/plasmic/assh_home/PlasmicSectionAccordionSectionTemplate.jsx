@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -122,11 +121,9 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
         data-plasmic-override={overrides.accordion2}
         className={classNames(projectcss.all, sty.accordion2)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"accordionButton2"}
           data-plasmic-override={overrides.accordionButton2}
-          hasGap={true}
           className={classNames(projectcss.all, sty.accordionButton2, {
             [sty.accordionButton2openInteractions_open]: hasVariant(
               $state,
@@ -257,7 +254,7 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
               />
             ) : null}
           </div>
-        </Stack__>
+        </div>
       </div>
       <div
         data-plasmic-name={"accordion"}
@@ -270,25 +267,19 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
           )
         })}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"accordionBody"}
           data-plasmic-override={overrides.accordionBody}
-          hasGap={true}
           className={classNames(projectcss.all, sty.accordionBody)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"membershipContentGroup"}
             data-plasmic-override={overrides.membershipContentGroup}
-            hasGap={true}
             className={classNames(projectcss.all, sty.membershipContentGroup)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"content"}
               data-plasmic-override={overrides.content}
-              hasGap={true}
               className={classNames(projectcss.all, sty.content)}
             >
               <Embed
@@ -335,9 +326,9 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-            </Stack__>
-          </Stack__>
-        </Stack__>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

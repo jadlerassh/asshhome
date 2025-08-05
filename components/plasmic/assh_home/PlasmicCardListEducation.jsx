@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -99,11 +98,9 @@ function PlasmicCardListEducation__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
-        hasGap={true}
         className={classNames(projectcss.all, sty.columns)}
       >
         <div
@@ -117,7 +114,7 @@ function PlasmicCardListEducation__RenderFunc(props) {
             className={classNames("__wab_instance", sty.itemEducationCardItem)}
           />
         </div>
-      </Stack__>
+      </div>
     </div>
   );
 }

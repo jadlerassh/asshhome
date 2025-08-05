@@ -12,7 +12,6 @@ import * as React from "react";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -673,25 +672,19 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         data-plasmic-override={overrides.header}
         className={classNames(projectcss.all, sty.header)}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame3"}
           data-plasmic-override={overrides.frame3}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame3)}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame4"}
             data-plasmic-override={overrides.frame4}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame4)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"navigationItem"}
               data-plasmic-override={overrides.navigationItem}
-              hasGap={true}
               className={classNames(projectcss.all, sty.navigationItem, {
                 [sty.navigationItemmenus_dropdownexplore]: hasVariant(
                   $state,
@@ -867,9 +860,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   })}
                 </div>
               ) : null}
-            </Stack__>
-          </Stack__>
-        </Stack__>
+            </div>
+          </div>
+        </div>
         <div
           data-plasmic-name={"frame5"}
           data-plasmic-override={overrides.frame5}
@@ -915,11 +908,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               role={"img"}
             />
           </div>
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame6"}
             data-plasmic-override={overrides.frame6}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame6, {
               [sty.frame6global_unnamedGlobalGroupOfVariants_unnamedVariant]:
                 hasVariant(
@@ -929,35 +920,27 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 )
             })}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame7"}
               data-plasmic-override={overrides.frame7}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame7)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"navItemMenu"}
                 data-plasmic-override={overrides.navItemMenu}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.navItemMenu)}
               >
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X12"}
                     data-plasmic-override={overrides.icon12X12}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X12)}
                   >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
+                    <ContainerIcon
                       className={classNames(projectcss.all, sty.svg__vKg7L)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
                 <div
                   data-plasmic-name={"navigationItem5"}
@@ -971,50 +954,40 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   {"Foundation"}
                 </div>
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X122"}
                     data-plasmic-override={overrides.icon12X122}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X122)}
                   >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
+                    <Container2Icon
                       className={classNames(projectcss.all, sty.svg__tiQG)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
-              </Stack__>
+              </div>
               <section
                 data-plasmic-name={"menuBar"}
                 data-plasmic-override={overrides.menuBar}
                 className={classNames(projectcss.all, sty.menuBar)}
               />
 
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"navItemMenu2"}
                 data-plasmic-override={overrides.navItemMenu2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.navItemMenu2)}
               >
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X123"}
                     data-plasmic-override={overrides.icon12X123}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X123)}
                   >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
+                    <ContainerIcon
                       className={classNames(projectcss.all, sty.svg__gXb9E)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
                 <div
                   data-plasmic-name={"navigationItem3"}
@@ -1028,33 +1001,27 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   {"Member Directory"}
                 </div>
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X124"}
                     data-plasmic-override={overrides.icon12X124}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X124)}
                   >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
+                    <Container2Icon
                       className={classNames(projectcss.all, sty.svg__cu8Dr)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
-              </Stack__>
+              </div>
               <section
                 data-plasmic-name={"menuBar3"}
                 data-plasmic-override={overrides.menuBar3}
                 className={classNames(projectcss.all, sty.menuBar3)}
               />
 
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame1"}
                 data-plasmic-override={overrides.frame1}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame1)}
               >
                 <CartIcon
@@ -1062,28 +1029,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   role={"img"}
                 />
 
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navItemMenu3"}
                   data-plasmic-override={overrides.navItemMenu3}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navItemMenu3)}
                 >
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X125"}
                       data-plasmic-override={overrides.icon12X125}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X125)}
                     >
-                      <Stack__
-                        as={ContainerIcon}
-                        hasGap={true}
+                      <ContainerIcon
                         className={classNames(projectcss.all, sty.svg__q8ZU)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
                   <div
                     data-plasmic-name={"navigationItem4"}
@@ -1097,24 +1058,20 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     {"Store"}
                   </div>
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X126"}
                       data-plasmic-override={overrides.icon12X126}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X126)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg___8DQqT)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
-                </Stack__>
-              </Stack__>
-            </Stack__>
+                </div>
+              </div>
+            </div>
             {(() => {
               try {
                 return $props.userName == undefined;
@@ -1128,28 +1085,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"buttonSecondary"}
                 data-plasmic-override={overrides.buttonSecondary}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.buttonSecondary)}
               >
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X127"}
                     data-plasmic-override={overrides.icon12X127}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X127)}
                   >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
+                    <ContainerIcon
                       className={classNames(projectcss.all, sty.svg__rDxB7)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
                 <div
                   data-plasmic-name={"text"}
@@ -1163,22 +1114,18 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   {"Log In"}
                 </div>
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X128"}
                     data-plasmic-override={overrides.icon12X128}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X128)}
                   >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
+                    <Container2Icon
                       className={classNames(projectcss.all, sty.svg__fnXW)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
-              </Stack__>
+              </div>
             ) : null}
             {(() => {
               try {
@@ -1193,28 +1140,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"buttonSecondary3"}
                 data-plasmic-override={overrides.buttonSecondary3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.buttonSecondary3)}
               >
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X12187"}
                     data-plasmic-override={overrides.icon12X12187}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X12187)}
                   >
-                    <Stack__
-                      as={ContainerIcon}
-                      hasGap={true}
+                    <ContainerIcon
                       className={classNames(projectcss.all, sty.svg__mQbuE)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
                 <div
                   data-plasmic-name={"text3"}
@@ -1228,28 +1169,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   {"Dashboard"}
                 </div>
                 {false ? (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"icon12X12188"}
                     data-plasmic-override={overrides.icon12X12188}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.icon12X12188)}
                   >
-                    <Stack__
-                      as={Container2Icon}
-                      hasGap={true}
+                    <Container2Icon
                       className={classNames(projectcss.all, sty.svg__uTdGd)}
                       role={"img"}
                     />
-                  </Stack__>
+                  </div>
                 ) : null}
-              </Stack__>
+              </div>
             ) : null}
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame8"}
               data-plasmic-override={overrides.frame8}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame8)}
             >
               <div
@@ -1425,36 +1360,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   })}
                 </div>
               ) : null}
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"iconButton"}
                 data-plasmic-override={overrides.iconButton}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.iconButton)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon24X24"}
                   data-plasmic-override={overrides.icon24X24}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon24X24)}
                 >
-                  <Stack__
-                    as={Container3Icon}
-                    hasGap={true}
+                  <Container3Icon
                     className={classNames(projectcss.all, sty.svg___6MUhw)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-            </Stack__>
-          </Stack__>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame9"}
           data-plasmic-override={overrides.frame9}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame9, {
             [sty.frame9menus_dropdown1]: hasVariant(
               $state,
@@ -1486,11 +1413,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu"}
                   data-plasmic-override={overrides.navMenu}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu, {
                     [sty.navMenumenus_dropdown1]: hasVariant(
                       $state,
@@ -1579,7 +1504,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -1600,11 +1525,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu2"}
                   data-plasmic-override={overrides.navMenu2}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu2)}
                   key={currentIndex}
                   onClick={async event => {
@@ -1681,7 +1604,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -1702,11 +1625,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu3"}
                   data-plasmic-override={overrides.navMenu3}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu3)}
                   key={currentIndex}
                   onClick={async event => {
@@ -1787,7 +1708,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -1808,11 +1729,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu4"}
                   data-plasmic-override={overrides.navMenu4}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu4)}
                   key={currentIndex}
                   onClick={async event => {
@@ -1889,7 +1808,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -1910,11 +1829,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu5"}
                   data-plasmic-override={overrides.navMenu5}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu5)}
                   key={currentIndex}
                   onClick={async event => {
@@ -1991,7 +1908,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -2012,11 +1929,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu6"}
                   data-plasmic-override={overrides.navMenu6}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu6)}
                   key={currentIndex}
                   onClick={async event => {
@@ -2093,7 +2008,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -2114,11 +2029,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenu7"}
                   data-plasmic-override={overrides.navMenu7}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenu7)}
                   key={currentIndex}
                   onClick={async event => {
@@ -2195,7 +2108,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       }
                     })()}
                   />
-                </Stack__>
+                </div>
               );
             })}
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -2216,11 +2129,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"navMenuResources"}
                   data-plasmic-override={overrides.navMenuResources}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.navMenuResources)}
                   key={currentIndex}
                   onClick={async event => {
@@ -2389,11 +2300,11 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       })}
                     </div>
                   ) : null}
-                </Stack__>
+                </div>
               );
             })}
           </div>
-        </Stack__>
+        </div>
       </div>
       {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : false) ? (
         <div
@@ -2412,18 +2323,14 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             data-plasmic-override={overrides.header2}
             className={classNames(projectcss.all, sty.header2)}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame45"}
               data-plasmic-override={overrides.frame45}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame45)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"navigationItem75"}
                 data-plasmic-override={overrides.navigationItem75}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.navigationItem75, {
                   [sty.navigationItem75menus_dropdownexplore]: hasVariant(
                     $state,
@@ -2477,51 +2384,39 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.svg___8My95)}
                   role={"img"}
                 />
-              </Stack__>
-            </Stack__>
-            <Stack__
-              as={"div"}
+              </div>
+            </div>
+            <div
               data-plasmic-name={"frame46"}
               data-plasmic-override={overrides.frame46}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame46)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame47"}
                 data-plasmic-override={overrides.frame47}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame47)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame48"}
                   data-plasmic-override={overrides.frame48}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame48)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu70"}
                     data-plasmic-override={overrides.navItemMenu70}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu70)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12163"}
                         data-plasmic-override={overrides.icon12X12163}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12163)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__u1Znc)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem76"}
@@ -2535,47 +2430,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Foundation"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12164"}
                         data-plasmic-override={overrides.icon12X12164}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12164)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__zErnK)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu71"}
                     data-plasmic-override={overrides.navItemMenu71}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu71)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12165"}
                         data-plasmic-override={overrides.icon12X12165}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12165)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___7IZye
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem77"}
@@ -2589,27 +2474,21 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Member Directory"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12166"}
                         data-plasmic-override={overrides.icon12X12166}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12166)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__yhKEm)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"frame49"}
                     data-plasmic-override={overrides.frame49}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame49)}
                   >
                     {(
@@ -2622,34 +2501,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         role={"img"}
                       />
                     ) : null}
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"navItemMenu72"}
                       data-plasmic-override={overrides.navItemMenu72}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.navItemMenu72)}
                     >
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12167"}
                           data-plasmic-override={overrides.icon12X12167}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12167
                           )}
                         >
-                          <Stack__
-                            as={ContainerIcon}
-                            hasGap={true}
+                          <ContainerIcon
                             className={classNames(
                               projectcss.all,
                               sty.svg__loDiR
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
                       <div
                         data-plasmic-name={"navigationItem78"}
@@ -2663,52 +2536,42 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         {"Store"}
                       </div>
                       {false ? (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"icon12X12168"}
                           data-plasmic-override={overrides.icon12X12168}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.icon12X12168
                           )}
                         >
-                          <Stack__
-                            as={Container2Icon}
-                            hasGap={true}
+                          <Container2Icon
                             className={classNames(
                               projectcss.all,
                               sty.svg__zE6Uj
                             )}
                             role={"img"}
                           />
-                        </Stack__>
+                        </div>
                       ) : null}
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                    </div>
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"buttonSecondary2"}
                   data-plasmic-override={overrides.buttonSecondary2}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.buttonSecondary2)}
                 >
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12169"}
                       data-plasmic-override={overrides.icon12X12169}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12169)}
                     >
-                      <Stack__
-                        as={ContainerIcon}
-                        hasGap={true}
+                      <ContainerIcon
                         className={classNames(projectcss.all, sty.svg__t8Vkr)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
                   <div
                     data-plasmic-name={"text2"}
@@ -2722,34 +2585,26 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     {"Dashboard"}
                   </div>
                   {false ? (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12170"}
                       data-plasmic-override={overrides.icon12X12170}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12170)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg___40TuS)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                   ) : null}
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"frame50"}
                   data-plasmic-override={overrides.frame50}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame50)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"userBadge2"}
                     data-plasmic-override={overrides.userBadge2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.userBadge2)}
                   >
                     <div
@@ -2761,36 +2616,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"C"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"iconButton2"}
                     data-plasmic-override={overrides.iconButton2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.iconButton2)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon24X242"}
                       data-plasmic-override={overrides.icon24X242}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon24X242)}
                     >
-                      <Stack__
-                        as={Container3Icon}
-                        hasGap={true}
+                      <Container3Icon
                         className={classNames(projectcss.all, sty.svg___6EcVx)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"frame51"}
                 data-plasmic-override={overrides.frame51}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame51)}
               >
                 <div
@@ -2862,8 +2709,8 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     />
                   </div>
                 </div>
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
           </div>
           <div
             data-plasmic-name={"mobileNavMenu"}
@@ -2881,11 +2728,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               data-plasmic-override={overrides.mobileNavAccordion}
               className={classNames(projectcss.all, sty.mobileNavAccordion)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion"}
                 data-plasmic-override={overrides.accordion}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion)}
               >
                 <div
@@ -2899,57 +2744,43 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"Education"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X12171"}
                   data-plasmic-override={overrides.icon12X12171}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X12171)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__kwMul)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu"}
                 data-plasmic-override={overrides.mobileMenu}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame52"}
                   data-plasmic-override={overrides.frame52}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame52)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu4"}
                     data-plasmic-override={overrides.navItemMenu4}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu4)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12172"}
                         data-plasmic-override={overrides.icon12X12172}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12172)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__hAz64)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem79"}
@@ -2963,50 +2794,40 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Education Overview"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12173"}
                         data-plasmic-override={overrides.icon12X12173}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12173)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___42ZBn
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu5"}
                     data-plasmic-override={overrides.navItemMenu5}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu5)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12174"}
                         data-plasmic-override={overrides.icon12X12174}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12174)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___3FyDk
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem80"}
@@ -3020,47 +2841,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"CME & MOC"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12175"}
                         data-plasmic-override={overrides.icon12X12175}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12175)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__tdCO)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu6"}
                     data-plasmic-override={overrides.navItemMenu6}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu6)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12176"}
                         data-plasmic-override={overrides.icon12X12176}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12176)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___503Sy
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem81"}
@@ -3074,44 +2885,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Coding App"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12177"}
                         data-plasmic-override={overrides.icon12X12177}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12177)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__wOWvm)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu7"}
                     data-plasmic-override={overrides.navItemMenu7}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu7)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12178"}
                         data-plasmic-override={overrides.icon12X12178}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12178)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__kd5Wz)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem82"}
@@ -3125,44 +2926,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Courses & Events"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12179"}
                         data-plasmic-override={overrides.icon12X12179}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12179)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__mr3B3)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu8"}
                     data-plasmic-override={overrides.navItemMenu8}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu8)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12180"}
                         data-plasmic-override={overrides.icon12X12180}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12180)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__dyOtx)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem83"}
@@ -3176,44 +2967,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Fellowships"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12181"}
                         data-plasmic-override={overrides.icon12X12181}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12181)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__zOdrr)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu9"}
                     data-plasmic-override={overrides.navItemMenu9}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu9)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12182"}
                         data-plasmic-override={overrides.icon12X12182}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12182)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__gfc4D)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem84"}
@@ -3227,47 +3008,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Practice Management Resources"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12183"}
                         data-plasmic-override={overrides.icon12X12183}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12183)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___4GBzw
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu10"}
                     data-plasmic-override={overrides.navItemMenu10}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu10)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12184"}
                         data-plasmic-override={overrides.icon12X12184}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12184)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__dFpvv)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem85"}
@@ -3281,44 +3052,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Self-Assessment Products "}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12185"}
                         data-plasmic-override={overrides.icon12X12185}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12185)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__tLes)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu11"}
                     data-plasmic-override={overrides.navItemMenu11}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu11)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12186"}
                         data-plasmic-override={overrides.icon12X12186}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12186)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__qkYj1)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem86"}
@@ -3332,44 +3093,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Surgical Education"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1225"}
                         data-plasmic-override={overrides.icon12X1225}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1225)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__snhuT)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu12"}
                     data-plasmic-override={overrides.navItemMenu12}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu12)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1226"}
                         data-plasmic-override={overrides.icon12X1226}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1226)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__mQsYe)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem13"}
@@ -3383,85 +3134,69 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Webinars"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1227"}
                         data-plasmic-override={overrides.icon12X1227}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1227)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__x61Ei)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame10"}
                   data-plasmic-override={overrides.frame10}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame10)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame11"}
                     data-plasmic-override={overrides.frame11}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame11)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame12"}
                       data-plasmic-override={overrides.frame12}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame12)}
                     >
                       <PresentationIcon
                         className={classNames(projectcss.all, sty.svg__la5Xp)}
                         role={"img"}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame13"}
                       data-plasmic-override={overrides.frame13}
                       className={classNames(projectcss.all, sty.frame13)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu13"}
                         data-plasmic-override={overrides.navItemMenu13}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu13
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1228"}
                             data-plasmic-override={overrides.icon12X1228}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1228
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__zGrr3
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem14"}
@@ -3475,56 +3210,44 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Online CME Portal\nCatalog of CME activities"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1229"}
                             data-plasmic-override={overrides.icon12X1229}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1229
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__dQxmp
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
+                      </div>
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1230"}
                       data-plasmic-override={overrides.icon12X1230}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1230)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__dNmAc)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"frame14"}
                     data-plasmic-override={overrides.frame14}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame14)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame15"}
                       data-plasmic-override={overrides.frame15}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame15)}
                     >
                       <div
@@ -3545,43 +3268,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           role={"img"}
                         />
                       </div>
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame16"}
                       data-plasmic-override={overrides.frame16}
                       className={classNames(projectcss.all, sty.frame16)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu14"}
                         data-plasmic-override={overrides.navItemMenu14}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu14
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1231"}
                             data-plasmic-override={overrides.icon12X1231}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1231
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__uHsQa
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem15"}
@@ -3595,56 +3312,44 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Hand-P\nPractice Management Resources"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1232"}
                             data-plasmic-override={overrides.icon12X1232}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1232
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__cgIuJ
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"icon12X1233"}
                         data-plasmic-override={overrides.icon12X1233}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1233)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__lQn2Y)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"frame17"}
                     data-plasmic-override={overrides.frame17}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame17)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame2"}
                       data-plasmic-override={overrides.frame2}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame2)}
                     >
                       <PlasmicImg__
@@ -3664,43 +3369,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           aspectRatio: undefined
                         }}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame18"}
                       data-plasmic-override={overrides.frame18}
                       className={classNames(projectcss.all, sty.frame18)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu15"}
                         data-plasmic-override={overrides.navItemMenu15}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu15
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1234"}
                             data-plasmic-override={overrides.icon12X1234}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1234
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__rNf92
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem16"}
@@ -3714,56 +3413,44 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Handthology\nComprehensive digital resource guide"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1235"}
                             data-plasmic-override={overrides.icon12X1235}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1235
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__rCy84
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
+                      </div>
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1236"}
                       data-plasmic-override={overrides.icon12X1236}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1236)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg___7YIFs)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"frame19"}
                     data-plasmic-override={overrides.frame19}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame19)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame20"}
                       data-plasmic-override={overrides.frame20}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame20)}
                     >
                       {(
@@ -3806,43 +3493,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           aspectRatio: undefined
                         }}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame21"}
                       data-plasmic-override={overrides.frame21}
                       className={classNames(projectcss.all, sty.frame21)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu16"}
                         data-plasmic-override={overrides.navItemMenu16}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu16
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1237"}
                             data-plasmic-override={overrides.icon12X1237}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1237
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__eoI0I
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem17"}
@@ -3856,59 +3537,49 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Journals\nJHS and JHS GO"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1238"}
                             data-plasmic-override={overrides.icon12X1238}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1238
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__mei6Q
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
+                      </div>
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1239"}
                         data-plasmic-override={overrides.icon12X1239}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1239)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__cSouN)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion2"}
               data-plasmic-override={overrides.mobileNavAccordion2}
               className={classNames(projectcss.all, sty.mobileNavAccordion2)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion2"}
                 data-plasmic-override={overrides.accordion2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion2)}
               >
                 <div
@@ -3922,57 +3593,43 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"Membership"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X1240"}
                   data-plasmic-override={overrides.icon12X1240}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X1240)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__fRrB2)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu2"}
                 data-plasmic-override={overrides.mobileMenu2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu2)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame22"}
                   data-plasmic-override={overrides.frame22}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame22)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu17"}
                     data-plasmic-override={overrides.navItemMenu17}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu17)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1241"}
                         data-plasmic-override={overrides.icon12X1241}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1241)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__rYKkD)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem18"}
@@ -3986,44 +3643,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Membership Overview"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1242"}
                         data-plasmic-override={overrides.icon12X1242}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1242)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__f6Vf9)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu18"}
                     data-plasmic-override={overrides.navItemMenu18}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu18)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1243"}
                         data-plasmic-override={overrides.icon12X1243}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1243)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__prYan)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem19"}
@@ -4037,44 +3684,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Member Benefits"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1244"}
                         data-plasmic-override={overrides.icon12X1244}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1244)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__xvlTe)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu19"}
                     data-plasmic-override={overrides.navItemMenu19}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu19)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1245"}
                         data-plasmic-override={overrides.icon12X1245}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1245)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__aL7Vg)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem20"}
@@ -4088,44 +3725,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Become a Member"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1246"}
                         data-plasmic-override={overrides.icon12X1246}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1246)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__rfpLi)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu20"}
                     data-plasmic-override={overrides.navItemMenu20}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu20)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1247"}
                         data-plasmic-override={overrides.icon12X1247}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1247)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__qRHhk)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem21"}
@@ -4139,44 +3766,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Get Involved"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1248"}
                         data-plasmic-override={overrides.icon12X1248}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1248)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__kV3Gj)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu21"}
                     data-plasmic-override={overrides.navItemMenu21}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu21)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1249"}
                         data-plasmic-override={overrides.icon12X1249}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1249)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__tse2J)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem22"}
@@ -4190,44 +3807,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Member News"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1250"}
                         data-plasmic-override={overrides.icon12X1250}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1250)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__y8Uo)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu22"}
                     data-plasmic-override={overrides.navItemMenu22}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu22)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1251"}
                         data-plasmic-override={overrides.icon12X1251}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1251)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__xWczl)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem23"}
@@ -4241,44 +3848,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Member Directory"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1252"}
                         data-plasmic-override={overrides.icon12X1252}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1252)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__afcEx)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu23"}
                     data-plasmic-override={overrides.navItemMenu23}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu23)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1253"}
                         data-plasmic-override={overrides.icon12X1253}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1253)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__xtPoP)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem24"}
@@ -4292,44 +3889,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Hand Trauma Network"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1254"}
                         data-plasmic-override={overrides.icon12X1254}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1254)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__nXq9X)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu24"}
                     data-plasmic-override={overrides.navItemMenu24}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu24)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1255"}
                         data-plasmic-override={overrides.icon12X1255}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1255)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__olHiK)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem25"}
@@ -4343,28 +3930,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Job Portal"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1256"}
                         data-plasmic-override={overrides.icon12X1256}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1256)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__xcsab)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame23"}
                   data-plasmic-override={overrides.frame23}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame23)}
                 >
                   <div
@@ -4378,28 +3959,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "Joining ASSH as any member type will connect you with the largest network of hand and upper extremity surgeons in the world."
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemSimple"}
                     data-plasmic-override={overrides.navItemSimple}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemSimple)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1257"}
                         data-plasmic-override={overrides.icon12X1257}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1257)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__sxKbL)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem26"}
@@ -4412,34 +3987,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Join ASSH Today"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1258"}
                       data-plasmic-override={overrides.icon12X1258}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1258)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg__glAw)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion3"}
               data-plasmic-override={overrides.mobileNavAccordion3}
               className={classNames(projectcss.all, sty.mobileNavAccordion3)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion3"}
                 data-plasmic-override={overrides.accordion3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion3)}
               >
                 <div
@@ -4453,60 +4022,46 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"Annual Meeting"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X1259"}
                   data-plasmic-override={overrides.icon12X1259}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X1259)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__iP9YY)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu3"}
                 data-plasmic-override={overrides.mobileMenu3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu3)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame24"}
                   data-plasmic-override={overrides.frame24}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame24)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu25"}
                     data-plasmic-override={overrides.navItemMenu25}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu25)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1260"}
                         data-plasmic-override={overrides.icon12X1260}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1260)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___36Chb
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem27"}
@@ -4519,43 +4074,33 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"2025 Annual Meeting"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1261"}
                       data-plasmic-override={overrides.icon12X1261}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1261)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__vABqJ)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu26"}
                     data-plasmic-override={overrides.navItemMenu26}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu26)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1262"}
                         data-plasmic-override={overrides.icon12X1262}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1262)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__i8J9U)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem28"}
@@ -4569,44 +4114,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Past & Future Annual Meetings"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1263"}
                         data-plasmic-override={overrides.icon12X1263}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1263)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__m6Ix)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu27"}
                     data-plasmic-override={overrides.navItemMenu27}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu27)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1264"}
                         data-plasmic-override={overrides.icon12X1264}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1264)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__ePxMv)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem29"}
@@ -4620,44 +4155,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Meeting Awards"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1265"}
                         data-plasmic-override={overrides.icon12X1265}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1265)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__aydW)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu28"}
                     data-plasmic-override={overrides.navItemMenu28}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu28)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1266"}
                         data-plasmic-override={overrides.icon12X1266}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1266)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__zRu6G)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem30"}
@@ -4671,35 +4196,27 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Meeting Policies & Guidelines"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1267"}
                         data-plasmic-override={overrides.icon12X1267}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1267)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__aHjK)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame25"}
                   data-plasmic-override={overrides.frame25}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame25)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame26"}
                     data-plasmic-override={overrides.frame26}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame26)}
                   >
                     <div
@@ -4722,32 +4239,26 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"October 9-11, 2025  |  Vancouver, BC, Canada"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemSimple2"}
                     data-plasmic-override={overrides.navItemSimple2}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemSimple2)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1268"}
                         data-plasmic-override={overrides.icon12X1268}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1268)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___8PoJj
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem31"}
@@ -4760,34 +4271,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Annual Meeting Overview"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1269"}
                       data-plasmic-override={overrides.icon12X1269}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1269)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg__iqYeE)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion4"}
               data-plasmic-override={overrides.mobileNavAccordion4}
               className={classNames(projectcss.all, sty.mobileNavAccordion4)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion4"}
                 data-plasmic-override={overrides.accordion4}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion4)}
               >
                 <div
@@ -4801,60 +4306,46 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"Advocacy"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X1270"}
                   data-plasmic-override={overrides.icon12X1270}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X1270)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__p0Ie)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu4"}
                 data-plasmic-override={overrides.mobileMenu4}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu4)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame27"}
                   data-plasmic-override={overrides.frame27}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame27)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu29"}
                     data-plasmic-override={overrides.navItemMenu29}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu29)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1271"}
                         data-plasmic-override={overrides.icon12X1271}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1271)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___24IBw
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem32"}
@@ -4868,47 +4359,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Advocacy Overview"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1272"}
                         data-plasmic-override={overrides.icon12X1272}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1272)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___5Nq0B
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu30"}
                     data-plasmic-override={overrides.navItemMenu30}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu30)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1273"}
                         data-plasmic-override={overrides.icon12X1273}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1273)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__djsOz)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem33"}
@@ -4922,44 +4403,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Get Involved "}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1274"}
                         data-plasmic-override={overrides.icon12X1274}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1274)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__tKa99)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu31"}
                     data-plasmic-override={overrides.navItemMenu31}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu31)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1275"}
                         data-plasmic-override={overrides.icon12X1275}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1275)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__heBqU)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem34"}
@@ -4973,44 +4444,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Toolkits & Resources"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1276"}
                         data-plasmic-override={overrides.icon12X1276}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1276)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__wpUNu)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu32"}
                     data-plasmic-override={overrides.navItemMenu32}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu32)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1277"}
                         data-plasmic-override={overrides.icon12X1277}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1277)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__iIxTl)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem35"}
@@ -5024,47 +4485,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Advocacy News & Updates"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1278"}
                         data-plasmic-override={overrides.icon12X1278}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1278)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___1WH1O
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu33"}
                     data-plasmic-override={overrides.navItemMenu33}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu33)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1279"}
                         data-plasmic-override={overrides.icon12X1279}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1279)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__lxde0)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem36"}
@@ -5078,30 +4529,24 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Contact ASSHPO"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1280"}
                         data-plasmic-override={overrides.icon12X1280}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1280)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___4UtD7
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"frame28"}
                     data-plasmic-override={overrides.frame28}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame28)}
                   >
                     <div
@@ -5113,44 +4558,36 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Current Issues"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame29"}
                       data-plasmic-override={overrides.frame29}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame29)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu34"}
                         data-plasmic-override={overrides.navItemMenu34}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu34
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1281"}
                             data-plasmic-override={overrides.icon12X1281}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1281
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg___8TIff
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem37"}
@@ -5164,59 +4601,49 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Access to Quality Care"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1282"}
                             data-plasmic-override={overrides.icon12X1282}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1282
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__vFrY6
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"navItemMenu35"}
                         data-plasmic-override={overrides.navItemMenu35}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu35
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1283"}
                             data-plasmic-override={overrides.icon12X1283}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1283
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__nIm8B
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem38"}
@@ -5230,59 +4657,49 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Burden Relief"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1284"}
                             data-plasmic-override={overrides.icon12X1284}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1284
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__j9Y2F
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"navItemMenu36"}
                         data-plasmic-override={overrides.navItemMenu36}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu36
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1285"}
                             data-plasmic-override={overrides.icon12X1285}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1285
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__nB6Cz
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem39"}
@@ -5296,59 +4713,49 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Payment Reform"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1286"}
                             data-plasmic-override={overrides.icon12X1286}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1286
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg___8DTtY
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"navItemMenu37"}
                         data-plasmic-override={overrides.navItemMenu37}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu37
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1287"}
                             data-plasmic-override={overrides.icon12X1287}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1287
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__kbjpY
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem40"}
@@ -5362,59 +4769,49 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"Physician Ownership"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1288"}
                             data-plasmic-override={overrides.icon12X1288}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1288
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__zk7RJ
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
-                      <Stack__
-                        as={"div"}
+                      </div>
+                      <div
                         data-plasmic-name={"navItemMenu38"}
                         data-plasmic-override={overrides.navItemMenu38}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu38
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1289"}
                             data-plasmic-override={overrides.icon12X1289}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1289
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__bOLay
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem41"}
@@ -5428,36 +4825,30 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"State Level Advocacy"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X1290"}
                             data-plasmic-override={overrides.icon12X1290}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X1290
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg___4UAqW
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame30"}
                   data-plasmic-override={overrides.frame30}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame30)}
                 >
                   <div
@@ -5471,28 +4862,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "Learn about the key advocacy and legislative issues the ASSH are actively engaged with and advocating for."
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemSimple3"}
                     data-plasmic-override={overrides.navItemSimple3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemSimple3)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1291"}
                         data-plasmic-override={overrides.icon12X1291}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1291)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__iKzpD)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem42"}
@@ -5505,34 +4890,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Advocacy Overview"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1292"}
                       data-plasmic-override={overrides.icon12X1292}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1292)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg__rCel2)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion5"}
               data-plasmic-override={overrides.mobileNavAccordion5}
               className={classNames(projectcss.all, sty.mobileNavAccordion5)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion5"}
                 data-plasmic-override={overrides.accordion5}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion5)}
               >
                 <div
@@ -5546,57 +4925,43 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"Grants & Awards"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X1293"}
                   data-plasmic-override={overrides.icon12X1293}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X1293)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__l5VL0)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu5"}
                 data-plasmic-override={overrides.mobileMenu5}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu5)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame31"}
                   data-plasmic-override={overrides.frame31}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame31)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu39"}
                     data-plasmic-override={overrides.navItemMenu39}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu39)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1294"}
                         data-plasmic-override={overrides.icon12X1294}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1294)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__guhb)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem43"}
@@ -5610,44 +4975,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Grants & Awards Overview"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1295"}
                         data-plasmic-override={overrides.icon12X1295}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1295)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__k81Wc)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu40"}
                     data-plasmic-override={overrides.navItemMenu40}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu40)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1296"}
                         data-plasmic-override={overrides.icon12X1296}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1296)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__mAaKm)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem44"}
@@ -5660,46 +5015,36 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Education Grants & Awards"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1297"}
                       data-plasmic-override={overrides.icon12X1297}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1297)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__t0CiJ)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu41"}
                     data-plasmic-override={overrides.navItemMenu41}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu41)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X1298"}
                         data-plasmic-override={overrides.icon12X1298}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X1298)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___1VqEf
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem45"}
@@ -5712,43 +5057,33 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Research Grants & Awards"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X1299"}
                       data-plasmic-override={overrides.icon12X1299}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X1299)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__wvFd0)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu42"}
                     data-plasmic-override={overrides.navItemMenu42}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu42)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12100"}
                         data-plasmic-override={overrides.icon12X12100}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12100)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__ptRcF)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem46"}
@@ -5761,43 +5096,33 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Outreach Grants"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12101"}
                       data-plasmic-override={overrides.icon12X12101}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12101)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__hpUqB)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu43"}
                     data-plasmic-override={overrides.navItemMenu43}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu43)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12102"}
                         data-plasmic-override={overrides.icon12X12102}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12102)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__sfVxq)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem47"}
@@ -5810,43 +5135,33 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Practice Grants"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12103"}
                       data-plasmic-override={overrides.icon12X12103}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12103)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg___2YEoX)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu44"}
                     data-plasmic-override={overrides.navItemMenu44}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu44)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12104"}
                         data-plasmic-override={overrides.icon12X12104}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12104)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__y1SEy)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem48"}
@@ -5859,34 +5174,26 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Grant FAQs"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12105"}
                       data-plasmic-override={overrides.icon12X12105}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12105)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__rtR4R)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                    </div>
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame32"}
                   data-plasmic-override={overrides.frame32}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame32)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame33"}
                     data-plasmic-override={overrides.frame33}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame33)}
                   >
                     <div
@@ -5907,29 +5214,23 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Deadline: June 2, 2025"}
                     </div>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemSimple4"}
                     data-plasmic-override={overrides.navItemSimple4}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemSimple4)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12106"}
                         data-plasmic-override={overrides.icon12X12106}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12106)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__zzv2M)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem49"}
@@ -5942,34 +5243,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     >
                       {"Apply for Scholarship"}
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12107"}
                       data-plasmic-override={overrides.icon12X12107}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12107)}
                     >
-                      <Stack__
-                        as={Container2Icon}
-                        hasGap={true}
+                      <Container2Icon
                         className={classNames(projectcss.all, sty.svg__apaVg)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion6"}
               data-plasmic-override={overrides.mobileNavAccordion6}
               className={classNames(projectcss.all, sty.mobileNavAccordion6)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion6"}
                 data-plasmic-override={overrides.accordion6}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion6)}
               >
                 <div
@@ -5983,57 +5278,43 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"News & Publications"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X12108"}
                   data-plasmic-override={overrides.icon12X12108}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X12108)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__pacL)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu6"}
                 data-plasmic-override={overrides.mobileMenu6}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu6)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame34"}
                   data-plasmic-override={overrides.frame34}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame34)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu45"}
                     data-plasmic-override={overrides.navItemMenu45}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu45)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12109"}
                         data-plasmic-override={overrides.icon12X12109}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12109)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__gTpGy)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem50"}
@@ -6047,44 +5328,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"News & Publication Overview "}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12110"}
                         data-plasmic-override={overrides.icon12X12110}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12110)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__yCQb)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu46"}
                     data-plasmic-override={overrides.navItemMenu46}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu46)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12111"}
                         data-plasmic-override={overrides.icon12X12111}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12111)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__z2XR5)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem51"}
@@ -6098,44 +5369,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Journal of Hand Surgery (JHS)"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12112"}
                         data-plasmic-override={overrides.icon12X12112}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12112)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__gyJzu)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu47"}
                     data-plasmic-override={overrides.navItemMenu47}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu47)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12113"}
                         data-plasmic-override={overrides.icon12X12113}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12113)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__xRxoj)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem52"}
@@ -6149,44 +5410,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"JHS GO"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12114"}
                         data-plasmic-override={overrides.icon12X12114}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12114)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__cfRez)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu48"}
                     data-plasmic-override={overrides.navItemMenu48}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu48)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12115"}
                         data-plasmic-override={overrides.icon12X12115}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12115)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__eGgPs)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem53"}
@@ -6200,44 +5451,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Journal CME Credit Exams"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12116"}
                         data-plasmic-override={overrides.icon12X12116}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12116)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__hsrKe)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu49"}
                     data-plasmic-override={overrides.navItemMenu49}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu49)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12117"}
                         data-plasmic-override={overrides.icon12X12117}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12117)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__uffo6)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem54"}
@@ -6251,44 +5492,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Latest News & Articles"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12118"}
                         data-plasmic-override={overrides.icon12X12118}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12118)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__dbHvW)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu50"}
                     data-plasmic-override={overrides.navItemMenu50}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu50)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12119"}
                         data-plasmic-override={overrides.icon12X12119}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12119)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__ht0R)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem55"}
@@ -6302,44 +5533,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Podcasts"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12120"}
                         data-plasmic-override={overrides.icon12X12120}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12120)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__bNi5Z)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu51"}
                     data-plasmic-override={overrides.navItemMenu51}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu51)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12121"}
                         data-plasmic-override={overrides.icon12X12121}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12121)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__dVaLf)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem56"}
@@ -6353,42 +5574,32 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Books"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12122"}
                         data-plasmic-override={overrides.icon12X12122}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12122)}
                       >
-                        <Stack__
-                          as={Container5Icon}
-                          hasGap={true}
+                        <Container5Icon
                           className={classNames(projectcss.all, sty.svg__kH7Wv)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame35"}
                   data-plasmic-override={overrides.frame35}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame35)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"frame36"}
                     data-plasmic-override={overrides.frame36}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame36)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame37"}
                       data-plasmic-override={overrides.frame37}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame37)}
                     >
                       <PlasmicImg__
@@ -6408,43 +5619,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           aspectRatio: undefined
                         }}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame38"}
                       data-plasmic-override={overrides.frame38}
                       className={classNames(projectcss.all, sty.frame38)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu52"}
                         data-plasmic-override={overrides.navItemMenu52}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu52
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X12123"}
                             data-plasmic-override={overrides.icon12X12123}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X12123
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__kTMi9
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem57"}
@@ -6458,56 +5663,44 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"JHS\nJournal of Hand Surgery"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X12124"}
                             data-plasmic-override={overrides.icon12X12124}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X12124
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__tbBqz
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
+                      </div>
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12125"}
                       data-plasmic-override={overrides.icon12X12125}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12125)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg___4KTKe)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                    </div>
+                  </div>
+                  <div
                     data-plasmic-name={"frame39"}
                     data-plasmic-override={overrides.frame39}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.frame39)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"frame40"}
                       data-plasmic-override={overrides.frame40}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.frame40)}
                     >
                       <PlasmicImg__
@@ -6527,43 +5720,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           aspectRatio: undefined
                         }}
                       />
-                    </Stack__>
+                    </div>
                     <div
                       data-plasmic-name={"frame41"}
                       data-plasmic-override={overrides.frame41}
                       className={classNames(projectcss.all, sty.frame41)}
                     >
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"navItemMenu53"}
                         data-plasmic-override={overrides.navItemMenu53}
-                        hasGap={true}
                         className={classNames(
                           projectcss.all,
                           sty.navItemMenu53
                         )}
                       >
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X12126"}
                             data-plasmic-override={overrides.icon12X12126}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X12126
                             )}
                           >
-                            <Stack__
-                              as={ContainerIcon}
-                              hasGap={true}
+                            <ContainerIcon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__aZvmt
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
                         <div
                           data-plasmic-name={"navigationItem58"}
@@ -6577,57 +5764,47 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           {"JHS GO\nJournal of Hand Surgery Global Online"}
                         </div>
                         {false ? (
-                          <Stack__
-                            as={"div"}
+                          <div
                             data-plasmic-name={"icon12X12127"}
                             data-plasmic-override={overrides.icon12X12127}
-                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.icon12X12127
                             )}
                           >
-                            <Stack__
-                              as={Container2Icon}
-                              hasGap={true}
+                            <Container2Icon
                               className={classNames(
                                 projectcss.all,
                                 sty.svg__ofKej
                               )}
                               role={"img"}
                             />
-                          </Stack__>
+                          </div>
                         ) : null}
-                      </Stack__>
+                      </div>
                     </div>
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"icon12X12128"}
                       data-plasmic-override={overrides.icon12X12128}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.icon12X12128)}
                     >
-                      <Stack__
-                        as={Container5Icon}
-                        hasGap={true}
+                      <Container5Icon
                         className={classNames(projectcss.all, sty.svg__eu9Js)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion7"}
               data-plasmic-override={overrides.mobileNavAccordion7}
               className={classNames(projectcss.all, sty.mobileNavAccordion7)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion7"}
                 data-plasmic-override={overrides.accordion7}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion7)}
               >
                 <div
@@ -6641,57 +5818,43 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"About"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X12129"}
                   data-plasmic-override={overrides.icon12X12129}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X12129)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__ffWt)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu7"}
                 data-plasmic-override={overrides.mobileMenu7}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu7)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame42"}
                   data-plasmic-override={overrides.frame42}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame42)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu54"}
                     data-plasmic-override={overrides.navItemMenu54}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu54)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12130"}
                         data-plasmic-override={overrides.icon12X12130}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12130)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__xze2G)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem59"}
@@ -6705,44 +5868,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"About Overview"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12131"}
                         data-plasmic-override={overrides.icon12X12131}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12131)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__ap0Mc)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu55"}
                     data-plasmic-override={overrides.navItemMenu55}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu55)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12132"}
                         data-plasmic-override={overrides.icon12X12132}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12132)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__i8UQ2)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem60"}
@@ -6756,44 +5909,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Mission, Values, Vision"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12133"}
                         data-plasmic-override={overrides.icon12X12133}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12133)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__yGqat)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu56"}
                     data-plasmic-override={overrides.navItemMenu56}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu56)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12134"}
                         data-plasmic-override={overrides.icon12X12134}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12134)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__gWol6)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem61"}
@@ -6807,44 +5950,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Staff"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12135"}
                         data-plasmic-override={overrides.icon12X12135}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12135)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__mFWlD)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu57"}
                     data-plasmic-override={overrides.navItemMenu57}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu57)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12136"}
                         data-plasmic-override={overrides.icon12X12136}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12136)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__b7P8F)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem62"}
@@ -6858,44 +5991,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Council"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12137"}
                         data-plasmic-override={overrides.icon12X12137}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12137)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__xfbmy)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu58"}
                     data-plasmic-override={overrides.navItemMenu58}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu58)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12138"}
                         data-plasmic-override={overrides.icon12X12138}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12138)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__z6Rh)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem63"}
@@ -6909,44 +6032,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Committees"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12139"}
                         data-plasmic-override={overrides.icon12X12139}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12139)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__ocnFo)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu59"}
                     data-plasmic-override={overrides.navItemMenu59}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu59)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12140"}
                         data-plasmic-override={overrides.icon12X12140}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12140)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__yHa7V)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem64"}
@@ -6960,44 +6073,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Chase Historical Library"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12141"}
                         data-plasmic-override={overrides.icon12X12141}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12141)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__tg27I)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu60"}
                     data-plasmic-override={overrides.navItemMenu60}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu60)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12142"}
                         data-plasmic-override={overrides.icon12X12142}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12142)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__pIxHp)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem65"}
@@ -7011,47 +6114,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Partner with ASSH"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12143"}
                         data-plasmic-override={overrides.icon12X12143}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12143)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(
                             projectcss.all,
                             sty.svg___6Rx4W
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu61"}
                     data-plasmic-override={overrides.navItemMenu61}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu61)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12144"}
                         data-plasmic-override={overrides.icon12X12144}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12144)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__cIwx9)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem66"}
@@ -7065,47 +6158,37 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Policies"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12145"}
                         data-plasmic-override={overrides.icon12X12145}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12145)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__wLqvX)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu62"}
                     data-plasmic-override={overrides.navItemMenu62}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu62)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12146"}
                         data-plasmic-override={overrides.icon12X12146}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12146)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___6KcCj
                           )}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem67"}
@@ -7119,44 +6202,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Governance Structure"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12147"}
                         data-plasmic-override={overrides.icon12X12147}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12147)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__uelse)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu63"}
                     data-plasmic-override={overrides.navItemMenu63}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu63)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12148"}
                         data-plasmic-override={overrides.icon12X12148}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12148)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__zsFXl)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem68"}
@@ -7170,28 +6243,22 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Contact ASSH"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12149"}
                         data-plasmic-override={overrides.icon12X12149}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12149)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__d2Msc)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                  </div>
+                </div>
+                <div
                   data-plasmic-name={"frame43"}
                   data-plasmic-override={overrides.frame43}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame43)}
                 >
                   <div
@@ -7214,23 +6281,17 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       "Stay up to date with the latest from ASSH on social media."
                     }
                   </div>
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"social"}
                     data-plasmic-override={overrides.social}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.social)}
                   >
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"socialIcon"}
                       data-plasmic-override={overrides.socialIcon}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.socialIcon)}
                     >
-                      <Stack__
-                        as={FacebookIcon}
-                        hasGap={true}
+                      <FacebookIcon
                         className={classNames(projectcss.all, sty.svg__pXqxw)}
                         role={"img"}
                       />
@@ -7240,9 +6301,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={LinkedInIcon}
-                          hasGap={true}
+                        <LinkedInIcon
                           className={classNames(projectcss.all, sty.svg__uqX4)}
                           role={"img"}
                         />
@@ -7252,9 +6311,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={XIcon}
-                          hasGap={true}
+                        <XIcon
                           className={classNames(projectcss.all, sty.svg__qHfcl)}
                           role={"img"}
                         />
@@ -7264,9 +6321,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={YouTubeIcon}
-                          hasGap={true}
+                        <YouTubeIcon
                           className={classNames(projectcss.all, sty.svg__kj3Ls)}
                           role={"img"}
                         />
@@ -7276,9 +6331,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={InstagramIcon}
-                          hasGap={true}
+                        <InstagramIcon
                           className={classNames(projectcss.all, sty.svg__wP39J)}
                           role={"img"}
                         />
@@ -7288,19 +6341,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={ThreadsIcon}
-                          hasGap={true}
+                        <ThreadsIcon
                           className={classNames(projectcss.all, sty.svg__vAeM)}
                           role={"img"}
                         />
                       ) : null}
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
+                    </div>
+                    <div
                       data-plasmic-name={"socialIcon2"}
                       data-plasmic-override={overrides.socialIcon2}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.socialIcon2)}
                     >
                       {(
@@ -7308,16 +6357,12 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={FacebookIcon}
-                          hasGap={true}
+                        <FacebookIcon
                           className={classNames(projectcss.all, sty.svg__nak5J)}
                           role={"img"}
                         />
                       ) : null}
-                      <Stack__
-                        as={LinkedInIcon}
-                        hasGap={true}
+                      <LinkedInIcon
                         className={classNames(projectcss.all, sty.svg__ywLcv)}
                         role={"img"}
                       />
@@ -7327,9 +6372,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={XIcon}
-                          hasGap={true}
+                        <XIcon
                           className={classNames(projectcss.all, sty.svg__oD7ZJ)}
                           role={"img"}
                         />
@@ -7339,9 +6382,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={YouTubeIcon}
-                          hasGap={true}
+                        <YouTubeIcon
                           className={classNames(projectcss.all, sty.svg__yCm2E)}
                           role={"img"}
                         />
@@ -7351,9 +6392,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={InstagramIcon}
-                          hasGap={true}
+                        <InstagramIcon
                           className={classNames(projectcss.all, sty.svg__gesu)}
                           role={"img"}
                         />
@@ -7363,19 +6402,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={ThreadsIcon}
-                          hasGap={true}
+                        <ThreadsIcon
                           className={classNames(projectcss.all, sty.svg__t2V0D)}
                           role={"img"}
                         />
                       ) : null}
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
+                    </div>
+                    <div
                       data-plasmic-name={"socialIcon3"}
                       data-plasmic-override={overrides.socialIcon3}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.socialIcon3)}
                     >
                       {(
@@ -7383,9 +6418,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={FacebookIcon}
-                          hasGap={true}
+                        <FacebookIcon
                           className={classNames(projectcss.all, sty.svg__mjiyT)}
                           role={"img"}
                         />
@@ -7395,9 +6428,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={LinkedInIcon}
-                          hasGap={true}
+                        <LinkedInIcon
                           className={classNames(projectcss.all, sty.svg__vYZw4)}
                           role={"img"}
                         />
@@ -7407,16 +6438,12 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={XIcon}
-                          hasGap={true}
+                        <XIcon
                           className={classNames(projectcss.all, sty.svg__gTavK)}
                           role={"img"}
                         />
                       ) : null}
-                      <Stack__
-                        as={YouTubeIcon}
-                        hasGap={true}
+                      <YouTubeIcon
                         className={classNames(projectcss.all, sty.svg__mEmQc)}
                         role={"img"}
                       />
@@ -7426,9 +6453,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={InstagramIcon}
-                          hasGap={true}
+                        <InstagramIcon
                           className={classNames(projectcss.all, sty.svg__xT0D)}
                           role={"img"}
                         />
@@ -7438,19 +6463,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={ThreadsIcon}
-                          hasGap={true}
+                        <ThreadsIcon
                           className={classNames(projectcss.all, sty.svg__eLSg2)}
                           role={"img"}
                         />
                       ) : null}
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
+                    </div>
+                    <div
                       data-plasmic-name={"socialIcon4"}
                       data-plasmic-override={overrides.socialIcon4}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.socialIcon4)}
                     >
                       {(
@@ -7458,9 +6479,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={FacebookIcon}
-                          hasGap={true}
+                        <FacebookIcon
                           className={classNames(projectcss.all, sty.svg___5JPB)}
                           role={"img"}
                         />
@@ -7470,9 +6489,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={LinkedInIcon}
-                          hasGap={true}
+                        <LinkedInIcon
                           className={classNames(projectcss.all, sty.svg__emixe)}
                           role={"img"}
                         />
@@ -7482,9 +6499,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={XIcon}
-                          hasGap={true}
+                        <XIcon
                           className={classNames(projectcss.all, sty.svg__iRfrM)}
                           role={"img"}
                         />
@@ -7494,16 +6509,12 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={YouTubeIcon}
-                          hasGap={true}
+                        <YouTubeIcon
                           className={classNames(projectcss.all, sty.svg__zZ2K)}
                           role={"img"}
                         />
                       ) : null}
-                      <Stack__
-                        as={InstagramIcon}
-                        hasGap={true}
+                      <InstagramIcon
                         className={classNames(projectcss.all, sty.svg__gnArG)}
                         role={"img"}
                       />
@@ -7513,19 +6524,15 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={ThreadsIcon}
-                          hasGap={true}
+                        <ThreadsIcon
                           className={classNames(projectcss.all, sty.svg__dsUye)}
                           role={"img"}
                         />
                       ) : null}
-                    </Stack__>
-                    <Stack__
-                      as={"div"}
+                    </div>
+                    <div
                       data-plasmic-name={"socialIcon5"}
                       data-plasmic-override={overrides.socialIcon5}
-                      hasGap={true}
                       className={classNames(projectcss.all, sty.socialIcon5)}
                     >
                       {(
@@ -7533,9 +6540,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={FacebookIcon}
-                          hasGap={true}
+                        <FacebookIcon
                           className={classNames(projectcss.all, sty.svg__h1SkN)}
                           role={"img"}
                         />
@@ -7545,9 +6550,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={LinkedInIcon}
-                          hasGap={true}
+                        <LinkedInIcon
                           className={classNames(projectcss.all, sty.svg__mTjrE)}
                           role={"img"}
                         />
@@ -7557,9 +6560,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={XIcon}
-                          hasGap={true}
+                        <XIcon
                           className={classNames(projectcss.all, sty.svg__wc0XS)}
                           role={"img"}
                         />
@@ -7569,9 +6570,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={YouTubeIcon}
-                          hasGap={true}
+                        <YouTubeIcon
                           className={classNames(
                             projectcss.all,
                             sty.svg___2XiFd
@@ -7584,34 +6583,28 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           ? true
                           : false
                       ) ? (
-                        <Stack__
-                          as={InstagramIcon}
-                          hasGap={true}
+                        <InstagramIcon
                           className={classNames(projectcss.all, sty.svg__kuKo2)}
                           role={"img"}
                         />
                       ) : null}
-                      <Stack__
-                        as={ThreadsIcon}
-                        hasGap={true}
+                      <ThreadsIcon
                         className={classNames(projectcss.all, sty.svg__jDoK3)}
                         role={"img"}
                       />
-                    </Stack__>
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               data-plasmic-name={"mobileNavAccordion8"}
               data-plasmic-override={overrides.mobileNavAccordion8}
               className={classNames(projectcss.all, sty.mobileNavAccordion8)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"accordion8"}
                 data-plasmic-override={overrides.accordion8}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.accordion8)}
               >
                 <div
@@ -7625,57 +6618,43 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 >
                   {"Resources For"}
                 </div>
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"icon12X12150"}
                   data-plasmic-override={overrides.icon12X12150}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.icon12X12150)}
                 >
-                  <Stack__
-                    as={Container4Icon}
-                    hasGap={true}
+                  <Container4Icon
                     className={classNames(projectcss.all, sty.svg__zBtTe)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
-              <Stack__
-                as={"div"}
+                </div>
+              </div>
+              <div
                 data-plasmic-name={"mobileMenu8"}
                 data-plasmic-override={overrides.mobileMenu8}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.mobileMenu8)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"frame44"}
                   data-plasmic-override={overrides.frame44}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.frame44)}
                 >
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"navItemMenu64"}
                     data-plasmic-override={overrides.navItemMenu64}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu64)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12151"}
                         data-plasmic-override={overrides.icon12X12151}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12151)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__w62F2)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem69"}
@@ -7689,44 +6668,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Surgeons"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12152"}
                         data-plasmic-override={overrides.icon12X12152}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12152)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__jj3Db)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu65"}
                     data-plasmic-override={overrides.navItemMenu65}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu65)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12153"}
                         data-plasmic-override={overrides.icon12X12153}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12153)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__m6HOx)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem70"}
@@ -7740,44 +6709,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Residents and Fellows"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12154"}
                         data-plasmic-override={overrides.icon12X12154}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12154)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__us08G)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu66"}
                     data-plasmic-override={overrides.navItemMenu66}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu66)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12155"}
                         data-plasmic-override={overrides.icon12X12155}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12155)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__bbchx)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem71"}
@@ -7791,44 +6750,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Patients"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12156"}
                         data-plasmic-override={overrides.icon12X12156}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12156)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__wH)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu67"}
                     data-plasmic-override={overrides.navItemMenu67}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu67)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12157"}
                         data-plasmic-override={overrides.icon12X12157}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12157)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__mx4Z)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem72"}
@@ -7842,44 +6791,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Advanced Practice Providers"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12158"}
                         data-plasmic-override={overrides.icon12X12158}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12158)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__dR29M)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu68"}
                     data-plasmic-override={overrides.navItemMenu68}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu68)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12159"}
                         data-plasmic-override={overrides.icon12X12159}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12159)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__tpsvw)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem73"}
@@ -7893,44 +6832,34 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Hand Therapists"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12160"}
                         data-plasmic-override={overrides.icon12X12160}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12160)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__p45Jj)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                  <Stack__
-                    as={"div"}
+                  </div>
+                  <div
                     data-plasmic-name={"navItemMenu69"}
                     data-plasmic-override={overrides.navItemMenu69}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.navItemMenu69)}
                   >
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12161"}
                         data-plasmic-override={overrides.icon12X12161}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12161)}
                       >
-                        <Stack__
-                          as={ContainerIcon}
-                          hasGap={true}
+                        <ContainerIcon
                           className={classNames(projectcss.all, sty.svg__gIToe)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"navigationItem74"}
@@ -7944,24 +6873,20 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       {"Industry Partners"}
                     </div>
                     {false ? (
-                      <Stack__
-                        as={"div"}
+                      <div
                         data-plasmic-name={"icon12X12162"}
                         data-plasmic-override={overrides.icon12X12162}
-                        hasGap={true}
                         className={classNames(projectcss.all, sty.icon12X12162)}
                       >
-                        <Stack__
-                          as={Container2Icon}
-                          hasGap={true}
+                        <Container2Icon
                           className={classNames(projectcss.all, sty.svg__g0C0H)}
                           role={"img"}
                         />
-                      </Stack__>
+                      </div>
                     ) : null}
-                  </Stack__>
-                </Stack__>
-              </Stack__>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -8012,11 +6937,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           )
         })}
       >
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"frame53"}
           data-plasmic-override={overrides.frame53}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame53, {
             [sty.frame53menus_dropdown1]: hasVariant(
               $state,
@@ -8025,11 +6948,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             )
           })}
         >
-          <Stack__
-            as={"div"}
+          <div
             data-plasmic-name={"frame54"}
             data-plasmic-override={overrides.frame54}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame54, {
               [sty.frame54menus_dropdown1]: hasVariant(
                 $state,
@@ -8230,12 +7151,10 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 </React.Fragment>
               )}
             </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
+          </div>
+          <div
             data-plasmic-name={"frame55"}
             data-plasmic-override={overrides.frame55}
-            hasGap={true}
             className={classNames(projectcss.all, sty.frame55, {
               [sty.frame55menus_dropdown1]: hasVariant(
                 $state,
@@ -8254,11 +7173,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               )
             })}
           >
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame56"}
               data-plasmic-override={overrides.frame56}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame56, {
                 [sty.frame56menus_dropdown1]: hasVariant(
                   $state,
@@ -8290,11 +7207,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuOneColumnONe"}
                     data-plasmic-override={overrides.menuOneColumnONe}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuOneColumnONe,
@@ -8328,7 +7243,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8349,11 +7264,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuTwoColumnOne"}
                     data-plasmic-override={overrides.menuTwoColumnOne}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuTwoColumnOne,
@@ -8387,7 +7300,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8408,11 +7321,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuThreeColumnOne"}
                     data-plasmic-override={overrides.menuThreeColumnOne}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuThreeColumnOne,
@@ -8446,7 +7357,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8467,11 +7378,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuFourColumnOne"}
                     data-plasmic-override={overrides.menuFourColumnOne}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuFourColumnOne,
@@ -8510,7 +7419,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8531,11 +7440,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuFiveColumnOne"}
                     data-plasmic-override={overrides.menuFiveColumnOne}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuFiveColumnOne,
@@ -8569,7 +7476,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8590,11 +7497,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuSixColumnOne"}
                     data-plasmic-override={overrides.menuSixColumnOne}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuSixColumnOne,
@@ -8628,7 +7533,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8649,11 +7554,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuSevenColumnOne"}
                     data-plasmic-override={overrides.menuSevenColumnOne}
-                    hasGap={true}
                     className={classNames(
                       projectcss.all,
                       sty.menuSevenColumnOne,
@@ -8724,22 +7627,18 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })}
-            </Stack__>
-            <Stack__
-              as={"div"}
+            </div>
+            <div
               data-plasmic-name={"frame57"}
               data-plasmic-override={overrides.frame57}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame57)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame71"}
                 data-plasmic-override={overrides.frame71}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame71)}
               >
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8762,11 +7661,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   const currentItem = __plasmic_item_0;
                   const currentIndex = __plasmic_idx_0;
                   return (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"menuOneColumnTwo"}
                       data-plasmic-override={overrides.menuOneColumnTwo}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.menuOneColumnTwo,
@@ -8812,7 +7709,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           }
                         })()}
                       />
-                    </Stack__>
+                    </div>
                   );
                 })}
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8835,11 +7732,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   const currentItem = __plasmic_item_0;
                   const currentIndex = __plasmic_idx_0;
                   return (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"menuTwoColumnTwo"}
                       data-plasmic-override={overrides.menuTwoColumnTwo}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.menuTwoColumnTwo,
@@ -8885,7 +7780,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           }
                         })()}
                       />
-                    </Stack__>
+                    </div>
                   );
                 })}
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -8908,11 +7803,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   const currentItem = __plasmic_item_0;
                   const currentIndex = __plasmic_idx_0;
                   return (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"menuThreeColumnTwo"}
                       data-plasmic-override={overrides.menuThreeColumnTwo}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.menuThreeColumnTwo,
@@ -8992,7 +7885,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           }
                         })()}
                       />
-                    </Stack__>
+                    </div>
                   );
                 })}
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -9015,11 +7908,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   const currentItem = __plasmic_item_0;
                   const currentIndex = __plasmic_idx_0;
                   return (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"menuFourColumnTwo2"}
                       data-plasmic-override={overrides.menuFourColumnTwo2}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.menuFourColumnTwo2,
@@ -9095,7 +7986,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           }
                         })()}
                       />
-                    </Stack__>
+                    </div>
                   );
                 })}
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -9118,11 +8009,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   const currentItem = __plasmic_item_0;
                   const currentIndex = __plasmic_idx_0;
                   return (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"menuFiveColumnTwo"}
                       data-plasmic-override={overrides.menuFiveColumnTwo}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.menuFiveColumnTwo,
@@ -9198,7 +8087,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           }
                         })()}
                       />
-                    </Stack__>
+                    </div>
                   );
                 })}
                 {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -9221,11 +8110,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   const currentItem = __plasmic_item_0;
                   const currentIndex = __plasmic_idx_0;
                   return (
-                    <Stack__
-                      as={"div"}
+                    <div
                       data-plasmic-name={"menuSixColumnTwo"}
                       data-plasmic-override={overrides.menuSixColumnTwo}
-                      hasGap={true}
                       className={classNames(
                         projectcss.all,
                         sty.menuSixColumnTwo,
@@ -9305,7 +8192,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                           }
                         })()}
                       />
-                    </Stack__>
+                    </div>
                   );
                 })}
                 {(hasVariant($state, "menus", "dropdown7") ? true : false)
@@ -9330,11 +8217,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                       const currentItem = __plasmic_item_0;
                       const currentIndex = __plasmic_idx_0;
                       return (
-                        <Stack__
-                          as={"div"}
+                        <div
                           data-plasmic-name={"menuSevenColumnTwo"}
                           data-plasmic-override={overrides.menuSevenColumnTwo}
-                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.menuSevenColumnTwo,
@@ -9377,19 +8262,17 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                               }
                             })()}
                           />
-                        </Stack__>
+                        </div>
                       );
                     })
                   : null}
-              </Stack__>
-            </Stack__>
-          </Stack__>
-        </Stack__>
-        <Stack__
-          as={"div"}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
           data-plasmic-name={"frame58"}
           data-plasmic-override={overrides.frame58}
-          hasGap={true}
           className={classNames(projectcss.all, sty.frame58, {
             [sty.frame58menus_dropdown1]: hasVariant(
               $state,
@@ -9428,11 +8311,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             const currentItem = __plasmic_item_0;
             const currentIndex = __plasmic_idx_0;
             return (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"menuOneColumn3"}
                 data-plasmic-override={overrides.menuOneColumn3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.menuOneColumn3, {
                   [sty.menuOneColumn3menus_dropdown1]: hasVariant(
                     $state,
@@ -9518,7 +8399,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     }
                   })()}
                 />
-              </Stack__>
+              </div>
             );
           })}
           {false
@@ -9542,11 +8423,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuSixColumn3"}
                     data-plasmic-override={overrides.menuSixColumn3}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.menuSixColumn3)}
                     key={currentIndex}
                   >
@@ -9621,7 +8500,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })
             : null}
@@ -9645,11 +8524,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                 const currentItem = __plasmic_item_0;
                 const currentIndex = __plasmic_idx_0;
                 return (
-                  <Stack__
-                    as={"div"}
+                  <div
                     data-plasmic-name={"menuTwoColumn"}
                     data-plasmic-override={overrides.menuTwoColumn}
-                    hasGap={true}
                     className={classNames(projectcss.all, sty.menuTwoColumn, {
                       [sty.menuTwoColumnmenus_dropdown2]: hasVariant(
                         $state,
@@ -9682,7 +8559,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                         }
                       })()}
                     />
-                  </Stack__>
+                  </div>
                 );
               })
             : null}
@@ -9705,11 +8582,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             const currentItem = __plasmic_item_0;
             const currentIndex = __plasmic_idx_0;
             return (
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"menuFourColumn3"}
                 data-plasmic-override={overrides.menuFourColumn3}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.menuFourColumn3, {
                   [sty.menuFourColumn3menus_dropdown1]: hasVariant(
                     $state,
@@ -9748,7 +8623,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                     }
                   })()}
                 />
-              </Stack__>
+              </div>
             );
           })}
           {false ? (
@@ -9775,91 +8650,69 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               >
                 {"Stay up to date with the latest from ASSH on social media."}
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"social2"}
                 data-plasmic-override={overrides.social2}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.social2)}
               >
-                <Stack__
-                  as={"div"}
+                <div
                   data-plasmic-name={"socialIcon6"}
                   data-plasmic-override={overrides.socialIcon6}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon6)}
                 >
-                  <Stack__
-                    as={FacebookIcon}
-                    hasGap={true}
+                  <FacebookIcon
                     className={classNames(projectcss.all, sty.svg__igxfI)}
                     role={"img"}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"socialIcon7"}
                   data-plasmic-override={overrides.socialIcon7}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon7)}
                 >
-                  <Stack__
-                    as={LinkedInIcon}
-                    hasGap={true}
+                  <LinkedInIcon
                     className={classNames(projectcss.all, sty.svg___27H2P)}
                     role={"img"}
                   />
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"socialIcon8"}
                   data-plasmic-override={overrides.socialIcon8}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon8)}
                 >
                   {false ? (
-                    <Stack__
-                      as={XIcon}
-                      hasGap={true}
+                    <XIcon
                       className={classNames(projectcss.all, sty.svg__fXbJj)}
                       role={"img"}
                     />
                   ) : null}
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"socialIcon9"}
                   data-plasmic-override={overrides.socialIcon9}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon9)}
                 >
                   {false ? (
-                    <Stack__
-                      as={YouTubeIcon}
-                      hasGap={true}
+                    <YouTubeIcon
                       className={classNames(projectcss.all, sty.svg__j15QN)}
                       role={"img"}
                     />
                   ) : null}
-                </Stack__>
-                <Stack__
-                  as={"div"}
+                </div>
+                <div
                   data-plasmic-name={"socialIcon10"}
                   data-plasmic-override={overrides.socialIcon10}
-                  hasGap={true}
                   className={classNames(projectcss.all, sty.socialIcon10)}
                 >
-                  <Stack__
-                    as={ThreadsIcon}
-                    hasGap={true}
+                  <ThreadsIcon
                     className={classNames(projectcss.all, sty.svg__t4Jnt)}
                     role={"img"}
                   />
-                </Stack__>
-              </Stack__>
+                </div>
+              </div>
             </div>
           ) : null}
-        </Stack__>
+        </div>
       </div>
     </div>
   );

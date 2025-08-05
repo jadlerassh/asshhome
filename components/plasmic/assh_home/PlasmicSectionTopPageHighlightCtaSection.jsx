@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -123,11 +122,9 @@ function PlasmicSectionTopPageHighlightCtaSection__RenderFunc(props) {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox___2AVMv)}>
-        <Stack__
-          as={"div"}
+        <div
           data-plasmic-name={"columns"}
           data-plasmic-override={overrides.columns}
-          hasGap={true}
           className={classNames(projectcss.all, sty.columns)}
         >
           <div className={classNames(projectcss.all, sty.column__bzSl6)}>
@@ -162,18 +159,14 @@ function PlasmicSectionTopPageHighlightCtaSection__RenderFunc(props) {
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.column__g9DY4)}>
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"frame7"}
               data-plasmic-override={overrides.frame7}
-              hasGap={true}
               className={classNames(projectcss.all, sty.frame7)}
             >
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame8"}
                 data-plasmic-override={overrides.frame8}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame8)}
               >
                 <div
@@ -200,7 +193,7 @@ function PlasmicSectionTopPageHighlightCtaSection__RenderFunc(props) {
                     })()}
                   </React.Fragment>
                 </div>
-              </Stack__>
+              </div>
               <div
                 className={classNames(
                   projectcss.all,
@@ -225,11 +218,9 @@ function PlasmicSectionTopPageHighlightCtaSection__RenderFunc(props) {
                   })()}
                 </React.Fragment>
               </div>
-              <Stack__
-                as={"div"}
+              <div
                 data-plasmic-name={"frame9"}
                 data-plasmic-override={overrides.frame9}
-                hasGap={true}
                 className={classNames(projectcss.all, sty.frame9)}
               >
                 <ButtonPrimary
@@ -303,10 +294,10 @@ function PlasmicSectionTopPageHighlightCtaSection__RenderFunc(props) {
                     }
                   })()}
                 />
-              </Stack__>
-            </Stack__>
+              </div>
+            </div>
           </div>
-        </Stack__>
+        </div>
       </div>
     </div>
   );

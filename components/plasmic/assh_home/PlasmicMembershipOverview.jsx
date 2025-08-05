@@ -12,7 +12,6 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -185,11 +184,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               />
             </div>
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__ahHX)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__ahHX)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -220,11 +215,9 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               url={"https://www.assh.org/membership/member-benefits"}
             />
 
-            <Stack__
-              as={"div"}
+            <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
-              hasGap={true}
               className={classNames(projectcss.all, sty.columns)}
             >
               <div className={classNames(projectcss.all, sty.column__eLVwB)}>
@@ -311,8 +304,8 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                   linkUrl={"/membership/supporting-member"}
                 />
               </div>
-            </Stack__>
-          </Stack__>
+            </div>
+          </div>
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -323,11 +316,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             title={"Membership Overview - Mid-page CTA"}
           />
 
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__dwTGs)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__dwTGs)}>
             <CardListMemberNewsWithDescription
               data-plasmic-name={"cardListMemberNewsWithDescription"}
               data-plasmic-override={
@@ -347,12 +336,8 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                 sty.blockQuicklinksTanBox
               )}
             />
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__rT0LT)}
-          >
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox__rT0LT)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -369,7 +354,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               )}
               title={"Membership Overview - Benefits at a Glance Table"}
             />
-          </Stack__>
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__nVOmJ)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}

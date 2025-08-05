@@ -11,7 +11,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
-  Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -82,11 +81,9 @@ function PlasmicItemSectionTitleDescriptionItem__RenderFunc(props) {
         sty.root
       )}
     >
-      <Stack__
-        as={"div"}
+      <div
         data-plasmic-name={"frame2"}
         data-plasmic-override={overrides.frame2}
-        hasGap={true}
         className={classNames(projectcss.all, sty.frame2)}
       >
         <h2
@@ -140,7 +137,7 @@ function PlasmicItemSectionTitleDescriptionItem__RenderFunc(props) {
             })()}
           </React.Fragment>
         </div>
-      </Stack__>
+      </div>
     </div>
   );
 }
