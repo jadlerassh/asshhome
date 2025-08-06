@@ -15,12 +15,15 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
+  generateStateOnChangeProp,
+  generateStateValueProp,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemEventCardItemFullCard from "../../ItemEventCardItemFullCard"; // plasmic-import: jiQVfwnxU6BH/component
 import ItemEventCardItemInfoOnly from "../../ItemEventCardItemInfoOnly"; // plasmic-import: UPjziaoo_XKO/component
+import ComponentFutureEventList from "../../ComponentFutureEventList"; // plasmic-import: buA5LBYO5-1M/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -91,6 +94,18 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
               throw e;
             }
           })()
+      },
+      {
+        path: "componentEventList.limit",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "3"
+      },
+      {
+        path: "componentEventList.type",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "Webinar"
       }
     ],
 
@@ -521,6 +536,45 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
                 );
               })}
             </div>
+            <ComponentFutureEventList
+              data-plasmic-name={"componentEventList"}
+              data-plasmic-override={overrides.componentEventList}
+              className={classNames("__wab_instance", sty.componentEventList)}
+              limit={generateStateValueProp($state, [
+                "componentEventList",
+                "limit"
+              ])}
+              onLimitChange2={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "componentEventList",
+                  "limit"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              onTypeChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "componentEventList",
+                  "type"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              type={generateStateValueProp($state, [
+                "componentEventList",
+                "type"
+              ])}
+            />
           </div>
         </div>
       </div>
@@ -539,7 +593,8 @@ const PlasmicDescendants = {
     "frame5",
     "articleCard",
     "articleCard2",
-    "articleCard3"
+    "articleCard3",
+    "componentEventList"
   ],
 
   section7: [
@@ -551,7 +606,8 @@ const PlasmicDescendants = {
     "frame5",
     "articleCard",
     "articleCard2",
-    "articleCard3"
+    "articleCard3",
+    "componentEventList"
   ],
 
   frame2: ["frame2", "text"],
@@ -562,14 +618,16 @@ const PlasmicDescendants = {
     "frame5",
     "articleCard",
     "articleCard2",
-    "articleCard3"
+    "articleCard3",
+    "componentEventList"
   ],
 
   itemEventCardItemFullCard: ["itemEventCardItemFullCard"],
   frame5: ["frame5", "articleCard", "articleCard2", "articleCard3"],
   articleCard: ["articleCard"],
   articleCard2: ["articleCard2"],
-  articleCard3: ["articleCard3"]
+  articleCard3: ["articleCard3"],
+  componentEventList: ["componentEventList"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -615,6 +673,7 @@ export const PlasmicSectionUpcomingCouresEventsSection = Object.assign(
     articleCard: makeNodeComponent("articleCard"),
     articleCard2: makeNodeComponent("articleCard2"),
     articleCard3: makeNodeComponent("articleCard3"),
+    componentEventList: makeNodeComponent("componentEventList"),
     // Metadata about props expected for PlasmicSectionUpcomingCouresEventsSection
     internalVariantProps:
       PlasmicSectionUpcomingCouresEventsSection__VariantProps,

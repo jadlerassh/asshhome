@@ -301,7 +301,7 @@ export const PlasmicLendingAHandProgram = Object.assign(
     internalArgProps: PlasmicLendingAHandProgram__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "Lending a Hand Program | Grants & Awards | ASSH",
+      title: "Lending a Hand Program | Membership | ASSH",
       description: "",
       ogImageSrc: "",
       canonical: ""

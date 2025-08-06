@@ -415,16 +415,29 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
               [sty.freeBoxbase__vEBwVJr2CU]: hasVariant($state, "base", "base")
             })}
           >
-            <Embed
-              data-plasmic-name={"embedHtml"}
-              data-plasmic-override={overrides.embedHtml}
-              className={classNames("__wab_instance", sty.embedHtml, {
-                [sty.embedHtmlbase]: hasVariant($state, "base", "base")
-              })}
-              code={(() => {
-                try {
-                  return (() => {
-                    return `<div style="
+            {(() => {
+              try {
+                return $queries.getImage.data.response.fields.file.url;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <Embed
+                data-plasmic-name={"embedHtml"}
+                data-plasmic-override={overrides.embedHtml}
+                className={classNames("__wab_instance", sty.embedHtml, {
+                  [sty.embedHtmlbase]: hasVariant($state, "base", "base")
+                })}
+                code={(() => {
+                  try {
+                    return (() => {
+                      return `<div style="
   width: 100%;
   height: 100%;
   background-image: url(${$queries.getImage.data.response.fields.file.url});
@@ -432,18 +445,19 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
   background-position: center;
   background-repeat: no-repeat;
 "></div>`;
-                  })();
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "";
+                    })();
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "";
+                    }
+                    throw e;
                   }
-                  throw e;
-                }
-              })()}
-            />
+                })()}
+              />
+            ) : null}
           </div>
         </div>
       </div>

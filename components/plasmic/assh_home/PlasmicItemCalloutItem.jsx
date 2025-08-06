@@ -9,8 +9,10 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: ntQQTfdTjzvC
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -83,10 +85,29 @@ function PlasmicItemCalloutItem__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
+      <PlasmicLink__
         data-plasmic-name={"interactionsDefault"}
         data-plasmic-override={overrides.interactionsDefault}
-        className={classNames(projectcss.all, sty.interactionsDefault)}
+        className={classNames(
+          projectcss.all,
+          projectcss.a,
+          sty.interactionsDefault
+        )}
+        component={Link}
+        href={(() => {
+          try {
+            return $props.linkUrl;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
+            }
+            throw e;
+          }
+        })()}
+        platform={"nextjs"}
       >
         <Icon8Icon
           data-plasmic-name={"svg"}
@@ -147,7 +168,7 @@ function PlasmicItemCalloutItem__RenderFunc(props) {
             </React.Fragment>
           </div>
         </div>
-      </div>
+      </PlasmicLink__>
     </div>
   );
 }

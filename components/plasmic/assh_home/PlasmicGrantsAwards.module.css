@@ -87,7 +87,7 @@
   max-width: 1320px;
   justify-content: flex-start;
   align-items: flex-start;
-  row-gap: 20px;
+  row-gap: 30px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   margin: 50px 0px;
@@ -111,16 +111,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   flex-grow: 0;
-  padding-top: 10px;
   column-gap: 30px;
   row-gap: 30px;
   min-width: 0;
+  --plsmc-rc-col-gap: 30px;
 }
 .columns__smFwe > :nth-child(2n + 1) {
-  width: calc(100% * 6 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
 .columns__smFwe > :nth-child(2n + 2) {
-  width: calc(100% * 6 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__smFwe {
@@ -129,11 +129,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
+    --plsmc-rc-col-gap: 30px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__smFwe > :nth-child(1n + 1) {
-    width: calc(100% * 12 / 12);
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
 .column__jZ3Cl {
@@ -258,14 +259,20 @@
   flex-direction: row;
   flex-wrap: nowrap;
   min-width: 0;
+  --plsmc-rc-col-gap: 0px;
   padding: 0px;
   margin: 30px 0px 0px;
 }
 .columns___2Jf0 > :nth-child(2n + 1) {
-  width: calc(100% * 6 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
 .columns___2Jf0 > :nth-child(2n + 2) {
-  width: calc(100% * 6 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+}
+@media (max-width: 1024px) {
+  .columns___2Jf0 {
+    --plsmc-rc-col-gap: 0px;
+  }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns___2Jf0 {
@@ -274,11 +281,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
+    --plsmc-rc-col-gap: 0px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns___2Jf0 > :nth-child(1n + 1) {
-    width: calc(100% * 12 / 12);
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
 .column___9BWg1 {

@@ -22,7 +22,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import SectionUpcomingEventsList from "../../SectionUpcomingEventsList"; // plasmic-import: AdcE_rcczjFf/component
 import ItemAsshSelectNew from "../../ItemAsshSelectNew"; // plasmic-import: n30EpbAc0Gwf/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -176,18 +175,6 @@ function PlasmicWebinars__RenderFunc(props) {
                 title={"Webinars"}
               />
 
-              <SectionUpcomingEventsList
-                data-plasmic-name={"sectionUpcomingEventsList"}
-                data-plasmic-override={overrides.sectionUpcomingEventsList}
-                category={"Webinar"}
-                categoryNot={"''"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.sectionUpcomingEventsList
-                )}
-                num={5}
-              />
-
               <div className={classNames(projectcss.all, sty.freeBox__lr3Dg)}>
                 <ItemSectionTitleDescriptionItem
                   className={classNames(
@@ -254,14 +241,12 @@ const PlasmicDescendants = {
   root: [
     "root",
     "columns",
-    "sectionUpcomingEventsList",
     "itemAsshSelectNew",
     "itemAd",
     "blockAsshMissionBlueBlock"
   ],
 
-  columns: ["columns", "sectionUpcomingEventsList", "itemAsshSelectNew"],
-  sectionUpcomingEventsList: ["sectionUpcomingEventsList"],
+  columns: ["columns", "itemAsshSelectNew"],
   itemAsshSelectNew: ["itemAsshSelectNew"],
   itemAd: ["itemAd"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
@@ -300,7 +285,6 @@ export const PlasmicWebinars = Object.assign(
   {
     // Helper components rendering sub-elements
     columns: makeNodeComponent("columns"),
-    sectionUpcomingEventsList: makeNodeComponent("sectionUpcomingEventsList"),
     itemAsshSelectNew: makeNodeComponent("itemAsshSelectNew"),
     itemAd: makeNodeComponent("itemAd"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

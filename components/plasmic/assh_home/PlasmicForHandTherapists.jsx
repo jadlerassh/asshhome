@@ -23,6 +23,7 @@ import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmi
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
+import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -170,6 +171,17 @@ function PlasmicForHandTherapists__RenderFunc(props) {
             data-plasmic-name={"blockQuicklinksTanBox"}
             data-plasmic-override={overrides.blockQuicklinksTanBox}
             className={classNames("__wab_instance", sty.blockQuicklinksTanBox)}
+            name={"For Hand Therapists Quicklinks: Resources"}
+          />
+
+          <BlockPublicationHighlight
+            data-plasmic-name={"blockPublicationHighlight"}
+            data-plasmic-override={overrides.blockPublicationHighlight}
+            className={classNames(
+              "__wab_instance",
+              sty.blockPublicationHighlight
+            )}
+            title={"For Therapists: Handcare feature"}
           />
 
           <SectionAdPlaceholder
@@ -203,6 +215,7 @@ const PlasmicDescendants = {
     "blockArticleCardList",
     "sectionMidPageCtaSection",
     "blockQuicklinksTanBox",
+    "blockPublicationHighlight",
     "sectionAdPlaceholder",
     "blockAsshMissionBlueBlock"
   ],
@@ -215,6 +228,7 @@ const PlasmicDescendants = {
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
+  blockPublicationHighlight: ["blockPublicationHighlight"],
   sectionAdPlaceholder: ["sectionAdPlaceholder"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -263,6 +277,7 @@ export const PlasmicForHandTherapists = Object.assign(
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
+    blockPublicationHighlight: makeNodeComponent("blockPublicationHighlight"),
     sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicForHandTherapists

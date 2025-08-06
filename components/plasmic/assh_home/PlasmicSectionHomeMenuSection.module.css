@@ -579,7 +579,7 @@
   column-gap: 10px;
   flex-shrink: 0;
 }
-.buttonSecondary {
+.loginButton {
   background: rgba(0, 142, 132, 1);
   width: auto;
   height: auto;
@@ -650,7 +650,7 @@
   column-gap: 10px;
   flex-shrink: 0;
 }
-.buttonSecondary3 {
+.dashboardButton {
   background: rgba(0, 142, 132, 1);
   width: auto;
   height: auto;
@@ -731,7 +731,7 @@
   justify-content: flex-start;
   column-gap: 10px;
 }
-.freeBox {
+.userIcon {
   display: flex;
   flex-direction: row;
   position: relative;

@@ -212,7 +212,7 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
           ) : null}
           {(() => {
             try {
-              return $props.location !== undefined;
+              return $props.location !== undefined && $props.location !== "";
             } catch (e) {
               if (
                 e instanceof TypeError ||

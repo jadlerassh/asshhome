@@ -20,6 +20,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
 import CardListLatestAsshNewsNoDescription from "../../CardListLatestAsshNewsNoDescription"; // plasmic-import: U6mPAYwUm4oe/component
 import SectionMidHomepageMembershipInfoWithQuicklinks from "../../SectionMidHomepageMembershipInfoWithQuicklinks"; // plasmic-import: XmsGLZyds9Te/component
@@ -73,9 +74,9 @@ function PlasmicHomepage__RenderFunc(props) {
     getHtmlContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "841e6ff4-f700-43aa-906b-ca1b0e021335",
+        opId: "cff5a207-84f8-460c-8005-b13401e3c8cb",
         userArgs: {},
-        cacheKey: `plasmic.$.841e6ff4-f700-43aa-906b-ca1b0e021335.$.`,
+        cacheKey: `plasmic.$.cff5a207-84f8-460c-8005-b13401e3c8cb.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -137,6 +138,17 @@ function PlasmicHomepage__RenderFunc(props) {
 
           <ItemAd className={classNames("__wab_instance", sty.itemAd__ah4Ac)} />
           <div className={classNames(projectcss.all, sty.freeBox__r0558)}>
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={``}
+              title={"News from ASSH"}
+            />
+
             <div className={classNames(projectcss.all, sty.columns___7Hlld)}>
               <div className={classNames(projectcss.all, sty.column__ktEg5)}>
                 <CardListLatestAsshNewsCardList
@@ -236,6 +248,7 @@ const PlasmicDescendants = {
   asshHome: [
     "asshHome",
     "sectionHomeHeroBannerWithLinkItems",
+    "itemSectionTitleDescriptionItem",
     "cardListLatestAsshNewsCardList",
     "cardListLatestAsshNewsNoDescription",
     "sectionMidHomepageMembershipInfoWithQuicklinks",
@@ -246,6 +259,7 @@ const PlasmicDescendants = {
   ],
 
   sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
   cardListLatestAsshNewsNoDescription: ["cardListLatestAsshNewsNoDescription"],
   sectionMidHomepageMembershipInfoWithQuicklinks: [
@@ -292,6 +306,9 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
       "sectionHomeHeroBannerWithLinkItems"
+    ),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
     ),
     cardListLatestAsshNewsCardList: makeNodeComponent(
       "cardListLatestAsshNewsCardList"

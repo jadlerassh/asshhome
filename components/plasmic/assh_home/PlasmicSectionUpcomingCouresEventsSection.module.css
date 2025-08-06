@@ -73,39 +73,42 @@
   flex-wrap: nowrap;
   column-gap: 30px;
   min-width: 0;
+  --plsmc-rc-col-gap: 30px;
 }
 .row > :nth-child(2n + 1) {
-  width: calc(100% * 6 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
 .row > :nth-child(2n + 2) {
-  width: calc(100% * 6 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
 @media (max-width: 1440px) {
   .row {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 40px;
+    --plsmc-rc-col-gap: 40px;
   }
 }
 @media (max-width: 1440px) {
   .row > :nth-child(2n + 1) {
-    width: calc(100% * 6 / 12);
+    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
   }
 }
 @media (max-width: 1440px) {
   .row > :nth-child(2n + 2) {
-    width: calc(100% * 6 / 12);
+    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
   }
 }
 @media (max-width: 1024px) {
   .row {
     flex-direction: row;
     flex-wrap: wrap;
+    --plsmc-rc-col-gap: 40px;
   }
 }
 @media (max-width: 1024px) {
   .row > :nth-child(1n + 1) {
-    width: calc(100% * 12 / 12);
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -115,11 +118,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
+    --plsmc-rc-col-gap: 40px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .row > :nth-child(1n + 1) {
-    width: calc(100% * 12 / 12);
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  }
+}
+@media (max-width: 414px) {
+  .row {
+    --plsmc-rc-col-gap: 40px;
   }
 }
 .column__pgAlg {
@@ -254,5 +263,8 @@
   row-gap: 15px;
 }
 .itemEventCardItemInfoOnly__tsdp5:global(.__wab_instance) {
+  max-width: 100%;
+}
+.componentEventList:global(.__wab_instance) {
   max-width: 100%;
 }

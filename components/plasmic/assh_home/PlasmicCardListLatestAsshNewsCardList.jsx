@@ -17,7 +17,6 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithImage from "../../ItemArticleCardItemWithImage"; // plasmic-import: rJ18UjQomkxN/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -65,9 +64,9 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
     getLatestAsshNews: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "31120b41-009d-4bd4-b68b-5027b03523e5",
+        opId: "7f2e364f-ee70-4097-acf8-7f10067b3351",
         userArgs: {},
-        cacheKey: `plasmic.$.31120b41-009d-4bd4-b68b-5027b03523e5.$.`,
+        cacheKey: `plasmic.$.7f2e364f-ee70-4097-acf8-7f10067b3351.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -94,17 +93,6 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
         sty.root
       )}
     >
-      <ItemSectionTitleDescriptionItem
-        data-plasmic-name={"itemSectionTitleDescriptionItem"}
-        data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-        className={classNames(
-          "__wab_instance",
-          sty.itemSectionTitleDescriptionItem
-        )}
-        descriptionSection={``}
-        title={"News from ASSH"}
-      />
-
       <div
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
@@ -216,14 +204,7 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "itemSectionTitleDescriptionItem",
-    "columns",
-    "itemArticleCardItemWithImage"
-  ],
-
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  root: ["root", "columns", "itemArticleCardItemWithImage"],
   columns: ["columns", "itemArticleCardItemWithImage"],
   itemArticleCardItemWithImage: ["itemArticleCardItemWithImage"]
 };
@@ -261,9 +242,6 @@ export const PlasmicCardListLatestAsshNewsCardList = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
     columns: makeNodeComponent("columns"),
     itemArticleCardItemWithImage: makeNodeComponent(
       "itemArticleCardItemWithImage"

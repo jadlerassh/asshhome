@@ -24,6 +24,7 @@ import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ComponentVerticalPageList from "../../ComponentVerticalPageList"; // plasmic-import: _YaPVT-9kvvZ/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ComponentTabSet from "../../ComponentTabSet"; // plasmic-import: jXQ3iNzBSIE_/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
@@ -53,7 +54,9 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          selectedItem: ``
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -105,6 +108,37 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
               throw e;
             }
           })()
+      },
+      {
+        path: "selectedItemId",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "51YOrzBSqqHLhZaYWPClTH"
+      },
+      {
+        path: "committeeHtmlRecord",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $queries.getNav.data.response.includes.Entry.find(
+                entry =>
+                  entry.sys.id ===
+                  $queries.getNav.data.response.items[0].fields.htmlContent.sys
+                    .id
+              ).fields;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return {};
+              }
+              throw e;
+            }
+          })()
       }
     ],
 
@@ -117,14 +151,14 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
     $refs
   });
   const new$Queries = {
-    getHtml: usePlasmicDataOp(() => {
+    getNav: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "7a7810bf-0623-46e4-86ef-0da1afa44954",
+        opId: "de407056-3766-4128-9126-09852e74dec2",
         userArgs: {
           params: [$state.selectedItemPage]
         },
-        cacheKey: `plasmic.$.7a7810bf-0623-46e4-86ef-0da1afa44954.$.`,
+        cacheKey: `plasmic.$.de407056-3766-4128-9126-09852e74dec2.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -267,8 +301,7 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
                     className={classNames("__wab_instance", sty.embedHtml)}
                     code={(() => {
                       try {
-                        return $queries.getHtml.data.response.items[0].fields
-                          .bodyContent;
+                        return $state.committeeHtmlRecord.bodyContent;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -280,6 +313,70 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
                       }
                     })()}
                   />
+                ) : null}
+                {(() => {
+                  try {
+                    return (() => {
+                      const startDate = new Date(
+                        $state.committeeHtmlRecord.ctaStartDate
+                      );
+                      const endDate = new Date(
+                        $state.committeeHtmlRecord.ctaEndDate
+                      );
+                      const currentDate = new Date();
+                      return currentDate >= startDate && currentDate <= endDate;
+                    })();
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })() ? (
+                  <div
+                    data-plasmic-name={"ctaRow"}
+                    data-plasmic-override={overrides.ctaRow}
+                    className={classNames(projectcss.all, sty.ctaRow)}
+                  >
+                    <ButtonPrimary
+                      data-plasmic-name={"buttonPrimary"}
+                      data-plasmic-override={overrides.buttonPrimary}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.buttonPrimary
+                      )}
+                      secondaryInteractions={"secondary"}
+                      text={(() => {
+                        try {
+                          return $state.committeeHtmlRecord.ctaText;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      url={(() => {
+                        try {
+                          return $state.committeeHtmlRecord.ctaLink;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    />
+                  </div>
                 ) : null}
                 {(() => {
                   try {
@@ -389,6 +486,8 @@ const PlasmicDescendants = {
     "columns",
     "componentVerticalPageList",
     "embedHtml",
+    "ctaRow",
+    "buttonPrimary",
     "componentTabSet",
     "text",
     "blockAsshMissionBlueBlock",
@@ -401,12 +500,16 @@ const PlasmicDescendants = {
     "columns",
     "componentVerticalPageList",
     "embedHtml",
+    "ctaRow",
+    "buttonPrimary",
     "componentTabSet",
     "text"
   ],
 
   componentVerticalPageList: ["componentVerticalPageList"],
   embedHtml: ["embedHtml"],
+  ctaRow: ["ctaRow", "buttonPrimary"],
+  buttonPrimary: ["buttonPrimary"],
   componentTabSet: ["componentTabSet"],
   text: ["text"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
@@ -452,6 +555,8 @@ export const PlasmicCommitteeDetailsJake = Object.assign(
     columns: makeNodeComponent("columns"),
     componentVerticalPageList: makeNodeComponent("componentVerticalPageList"),
     embedHtml: makeNodeComponent("embedHtml"),
+    ctaRow: makeNodeComponent("ctaRow"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     componentTabSet: makeNodeComponent("componentTabSet"),
     text: makeNodeComponent("text"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

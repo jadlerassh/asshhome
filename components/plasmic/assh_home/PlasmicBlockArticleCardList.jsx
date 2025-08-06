@@ -93,7 +93,7 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
                         id: link.sys.id,
                         label: entry?.fields.label || "Label missing",
                         order: Number(entry?.fields.order) || 0,
-                        url: entry?.fields.url || "#",
+                        link: entry?.fields.link || "#",
                         subText: entry?.fields.subText || "",
                         thumb: entry?.fields.thumb || "",
                         type: entry?.fields.type || "",
@@ -330,7 +330,7 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
                 })()}
                 linkUrl={(() => {
                   try {
-                    return currentItem.url;
+                    return currentItem.link;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||

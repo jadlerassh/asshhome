@@ -65,9 +65,9 @@ function PlasmicCardListLatestAsshNewsNoDescription__RenderFunc(props) {
     getNewsTitle: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "28069fa6-9389-4dec-909b-e5934e12b8ca",
+        opId: "64dd8e63-0cb5-48d4-ab80-2fdeea45f74d",
         userArgs: {},
-        cacheKey: `plasmic.$.28069fa6-9389-4dec-909b-e5934e12b8ca.$.`,
+        cacheKey: `plasmic.$.64dd8e63-0cb5-48d4-ab80-2fdeea45f74d.$.`,
         invalidatedKeys: null,
         roleId: null
       };

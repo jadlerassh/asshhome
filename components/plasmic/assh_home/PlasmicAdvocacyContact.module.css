@@ -1,0 +1,94 @@
+.root {
+  display: grid;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-content: flex-start;
+  justify-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+}
+.root > * {
+  grid-column: 4;
+}
+@media (max-width: 1440px) {
+  .root {
+    padding: 0px;
+  }
+}
+@media (max-width: 1440px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 1024px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+.itemAd__oWtbl:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
+.sectionInternalHeroTitleSectionV2:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
+.freeBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 1320px;
+  background: none;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  border-radius: 10px;
+  padding: 0px 25px 20px;
+}
+@media (max-width: 1440px) {
+  .freeBox {
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+    justify-self: flex-start;
+  }
+}
+.htmlContentfulHtmlLoader:global(.__wab_instance) {
+  max-width: 100%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 100%;
+  min-width: 0;
+}
+.itemAd__nI2Fr:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
+.blockAsshMissionBlueBlock:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}

@@ -144,6 +144,25 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
               throw e;
             }
           })()
+      },
+      {
+        path: "activeNavId",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $queries.getNav.data.response.items[0].sys.id;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
       }
     ],
 
@@ -354,7 +373,7 @@ function PlasmicComponentVerticalPageList__RenderFunc(props) {
                       const encode = str =>
                         str.replaceAll(/[ ,&:/]/g, ch => map[ch]);
                       const param = encode(raw);
-                      return `/s/committeedetails?name=${param}`;
+                      return `/s/about/committees/committeedetails?name=${param}`;
                     })();
                   })();
                 } catch (e) {

@@ -8,34 +8,19 @@
   align-items: center;
   min-width: 0;
 }
-@media (max-width: 1440px) {
-  .root {
-    width: 100%;
-    justify-self: flex-start;
-    min-width: 0;
-  }
-}
-.section7 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 0;
-}
-.frame5 {
+.frame4 {
   background: rgba(255, 255, 255, 1);
+  width: 100%;
   display: flex;
   position: relative;
   align-self: stretch;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  row-gap: 15px;
+  min-width: 0;
   border-radius: 10px;
 }
-.articleCard {
+.eventsCard {
   background: rgba(255, 255, 255, 1);
   height: auto;
   display: flex;
@@ -43,9 +28,18 @@
   align-self: stretch;
   overflow: hidden;
   flex-direction: column;
-  align-items: center;
+  row-gap: 15px;
+  align-items: flex-start;
   justify-content: flex-start;
-  padding-bottom: 15px;
+}
+.content2 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .itemEventCardItemInfoOnly:global(.__wab_instance) {
   max-width: 100%;

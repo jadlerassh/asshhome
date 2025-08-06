@@ -2272,19 +2272,6 @@
           "path": "/webinars"
         },
         {
-          "id": "AdcE_rcczjFf",
-          "name": "SectionUpcomingEventsList",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEventsList.jsx",
-          "importSpec": {
-            "modulePath": "SectionUpcomingEventsList.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionUpcomingEventsList.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "n30EpbAc0Gwf",
           "name": "ItemAsshSelectNew",
           "type": "managed",
@@ -2951,7 +2938,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicLendingAHandProgram.jsx",
           "importSpec": {
-            "modulePath": "../pages/grants-awards/lending-hand-program.jsx"
+            "modulePath": "../pages/membership/lending-hand-program.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicLendingAHandProgram.module.css",
           "scheme": "blackbox",
@@ -3054,6 +3041,145 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/advocacy/toolkits-resources"
+        },
+        {
+          "id": "DsQAZB5f77dI",
+          "name": "AdvocacyGetInvolved",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyGetInvolved.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/get-involved.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyGetInvolved.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/get-involved"
+        },
+        {
+          "id": "8n0xNjRrzttx",
+          "name": "AdvocacyAccessToQualityCare",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyAccessToQualityCare.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/access.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyAccessToQualityCare.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/access"
+        },
+        {
+          "id": "_zv0tv1hGrft",
+          "name": "AdvocacyBurdenRelief",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyBurdenRelief.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/burden-relief.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyBurdenRelief.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/burden-relief"
+        },
+        {
+          "id": "cz2n5w4JGso-",
+          "name": "AdvocacyPaymentReform",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyPaymentReform.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/payment-reform.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyPaymentReform.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/payment-reform"
+        },
+        {
+          "id": "FF_qZONDlkSJ",
+          "name": "AdvocacyPhysicianOwnership",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyPhysicianOwnership.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/physician-ownership.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyPhysicianOwnership.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/physician-ownership"
+        },
+        {
+          "id": "zidbJaouGI4i",
+          "name": "AdvocacyStateLevel",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyStateLevel.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/state-level.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyStateLevel.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/state-level"
+        },
+        {
+          "id": "buA5LBYO5-1M",
+          "name": "ComponentFutureEventList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentFutureEventList.jsx",
+          "importSpec": {
+            "modulePath": "ComponentFutureEventList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentFutureEventList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "vBWzHfzLKpJM",
+          "name": "AdvocacyContact",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyContact.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/contact.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyContact.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/contact"
+        },
+        {
+          "id": "6r-4CaySiXYZ",
+          "name": "AdvocacyNewsUpdates",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicAdvocacyNewsUpdates.jsx",
+          "importSpec": {
+            "modulePath": "../pages/advocacy/news-updates.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicAdvocacyNewsUpdates.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/advocacy/news-updates"
+        },
+        {
+          "id": "YDUs1vOCCnaK",
+          "name": "SearchLayout",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSearchLayout.jsx",
+          "importSpec": {
+            "modulePath": "../pages/search-layout.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSearchLayout.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/search-layout"
         }
       ],
       "icons": [
@@ -3601,6 +3727,21 @@
           "id": "lROpjuqVwwWu",
           "name": "ArrowIcon",
           "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Arrow.jsx"
+        },
+        {
+          "id": "5DH31kFGANq3",
+          "name": "Path35Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Path35.jsx"
+        },
+        {
+          "id": "WaktEVj0KnXh",
+          "name": "Container10Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Container10.jsx"
+        },
+        {
+          "id": "nipqwz5RnqR7",
+          "name": "Icon9Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Icon9.jsx"
         }
       ],
       "images": [
@@ -3871,8 +4012,8 @@
         },
         {
           "id": "ncYYGHxa52JC",
-          "name": "Image 9",
-          "filePath": "../public/plasmic/assh_home/images/image9.jpg"
+          "name": "Image 12",
+          "filePath": "../public/plasmic/assh_home/images/image12.jpg"
         },
         {
           "id": "NAqOhfJ5OhZ8",
@@ -3933,6 +4074,21 @@
           "id": "eduqR-yhhU_I",
           "name": "Image 10",
           "filePath": "../public/plasmic/assh_home/images/image10.png"
+        },
+        {
+          "id": "GVrekM038GQQ",
+          "name": "Column 11",
+          "filePath": "../public/plasmic/assh_home/images/column11.jpg"
+        },
+        {
+          "id": "LHGeQ1-q7XbU",
+          "name": "Column 8",
+          "filePath": "../public/plasmic/assh_home/images/column8.png"
+        },
+        {
+          "id": "Qd4LU9JrSGD5",
+          "name": "Column 9",
+          "filePath": "../public/plasmic/assh_home/images/column9.png"
         }
       ],
       "indirect": false,

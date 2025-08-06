@@ -25,7 +25,7 @@ import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSec
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
-import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
+import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListMemberNewsWithDescription from "../../CardListMemberNewsWithDescription"; // plasmic-import: mj20sYUsPblw/component
 import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
@@ -215,96 +215,12 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               url={"https://www.assh.org/membership/member-benefits"}
             />
 
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div className={classNames(projectcss.all, sty.column__eLVwB)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Active Member"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__zaJCs
-                  )}
-                  description={
-                    "U.S. hand surgeons who have passed the CAQ and\u00a0Canadian hand surgeons\u00a0certified by the Royal College."
-                  }
-                  heading={"Membership Type"}
-                  linkUrl={"/membership/active"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__jMDoN)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Candidate Member"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__qmm9P
-                  )}
-                  description={
-                    "Surgeons within 3 years of completing residency, current fellows, and practicing surgeons up to 5 years."
-                  }
-                  heading={"Membership Type"}
-                  linkUrl={"/membership/candidate"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__wzcnh)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"International Member"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription___4JgX
-                  )}
-                  description={
-                    "Hand surgeons residing outside of the U.S. who have been in\u00a0practice minimum\u00a05 years."
-                  }
-                  heading={"Membership Type"}
-                  linkUrl={"/membership/international"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__lXl7W)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Young International Member"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__lvbBe
-                  )}
-                  description={
-                    "Surgeons\u00a0within 5\u00a0years of completing\u00a0a post-graduate program in disorders of the upper limbs."
-                  }
-                  heading={"Membership Type"}
-                  linkUrl={"/membership/young-international"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__za2Y)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Affiliate Member"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__kggH2
-                  )}
-                  description={
-                    "Fully licensed allied healthcare professionals (i.e., hand therapist, OT, PT, PA, NP or RN)."
-                  }
-                  heading={"Membership Type"}
-                  linkUrl={"/membership/affiliate"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__pnFh0)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Supporting Member"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__fNk6O
-                  )}
-                  description={
-                    "Non-surgeons who have contributed to the understanding and/or treatment of disorders of the upper limbs."
-                  }
-                  heading={"Membership Type"}
-                  linkUrl={"/membership/supporting-member"}
-                />
-              </div>
-            </div>
+            <BlockArticleCardList
+              data-plasmic-name={"blockArticleCardList"}
+              data-plasmic-override={overrides.blockArticleCardList}
+              className={classNames("__wab_instance", sty.blockArticleCardList)}
+              name={"Membership Overview: Membership Types"}
+            />
           </div>
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
@@ -375,7 +291,7 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "buttonPrimary",
-    "columns",
+    "blockArticleCardList",
     "sectionMidPageCtaSection",
     "cardListMemberNewsWithDescription",
     "blockQuicklinksTanBox",
@@ -384,7 +300,7 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   buttonPrimary: ["buttonPrimary"],
-  columns: ["columns"],
+  blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   cardListMemberNewsWithDescription: ["cardListMemberNewsWithDescription"],
   blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
@@ -427,7 +343,7 @@ export const PlasmicMembershipOverview = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
-    columns: makeNodeComponent("columns"),
+    blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     cardListMemberNewsWithDescription: makeNodeComponent(
       "cardListMemberNewsWithDescription"

@@ -28,31 +28,33 @@
   flex-wrap: nowrap;
   column-gap: 20px;
   min-width: 0;
+  --plsmc-rc-col-gap: 20px;
   border-radius: 10px;
   padding: 15px;
 }
 .frame6 > :nth-child(2n + 1) {
-  width: calc(100% * 7 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 7 / 12);
 }
 .frame6 > :nth-child(2n + 2) {
-  width: calc(100% * 5 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 5 / 12);
 }
 @media (max-width: 1440px) {
   .frame6 {
     flex-direction: row;
     flex-wrap: nowrap;
     row-gap: 0px;
+    --plsmc-rc-col-gap: 20px;
     padding: 15px;
   }
 }
 @media (max-width: 1440px) {
   .frame6 > :nth-child(2n + 1) {
-    width: calc(100% * 7 / 12);
+    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 7 / 12);
   }
 }
 @media (max-width: 1440px) {
   .frame6 > :nth-child(2n + 2) {
-    width: calc(100% * 5 / 12);
+    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 5 / 12);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -63,11 +65,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
+    --plsmc-rc-col-gap: 20px;
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .frame6 > :nth-child(1n + 1) {
-    width: calc(100% * 12 / 12);
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  }
+}
+@media (max-width: 414px) {
+  .frame6 {
+    --plsmc-rc-col-gap: 20px;
   }
 }
 .column__us6HX {

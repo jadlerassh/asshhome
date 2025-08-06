@@ -97,7 +97,6 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          userName: "Jake Adler",
           member: false,
           userImageUrl:
             "https://s3.amazonaws.com/sfpublicresource/Account_Photo/0010a00001eMsgsAAC.png"
@@ -1074,7 +1073,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             </div>
             {(() => {
               try {
-                return $props.userName == undefined;
+                return $props.userName == undefined || $props.userName == "";
               } catch (e) {
                 if (
                   e instanceof TypeError ||
@@ -1086,9 +1085,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               }
             })() ? (
               <div
-                data-plasmic-name={"buttonSecondary"}
-                data-plasmic-override={overrides.buttonSecondary}
-                className={classNames(projectcss.all, sty.buttonSecondary)}
+                data-plasmic-name={"loginButton"}
+                data-plasmic-override={overrides.loginButton}
+                className={classNames(projectcss.all, sty.loginButton)}
               >
                 {false ? (
                   <div
@@ -1129,7 +1128,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
             ) : null}
             {(() => {
               try {
-                return $props.userName !== undefined;
+                return $props.userName !== undefined && $props.userName !== "";
               } catch (e) {
                 if (
                   e instanceof TypeError ||
@@ -1141,9 +1140,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               }
             })() ? (
               <div
-                data-plasmic-name={"buttonSecondary3"}
-                data-plasmic-override={overrides.buttonSecondary3}
-                className={classNames(projectcss.all, sty.buttonSecondary3)}
+                data-plasmic-name={"dashboardButton"}
+                data-plasmic-override={overrides.dashboardButton}
+                className={classNames(projectcss.all, sty.dashboardButton)}
               >
                 {false ? (
                   <div
@@ -1187,92 +1186,110 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
               data-plasmic-override={overrides.frame8}
               className={classNames(projectcss.all, sty.frame8)}
             >
-              <div
-                data-plasmic-name={"freeBox"}
-                data-plasmic-override={overrides.freeBox}
-                className={classNames(projectcss.all, sty.freeBox)}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["updateOpenMenus"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["openDropdown"]
-                          },
-                          operation: 0,
-                          value:
-                            $state.openDropdown === "dropdownuser"
-                              ? "allclosed"
-                              : "dropdownuser"
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
+              {(() => {
+                try {
+                  return (
+                    $props.userName !== undefined && $props.userName !== ""
+                  );
+                } catch (e) {
                   if (
-                    $steps["updateOpenMenus"] != null &&
-                    typeof $steps["updateOpenMenus"] === "object" &&
-                    typeof $steps["updateOpenMenus"].then === "function"
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
                   ) {
-                    $steps["updateOpenMenus"] = await $steps["updateOpenMenus"];
+                    return true;
                   }
-                }}
-              >
-                <ItemMenuCurrentUser
-                  data-plasmic-name={"itemMenuCurrentUser"}
-                  data-plasmic-override={overrides.itemMenuCurrentUser}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemMenuCurrentUser,
-                    {
-                      [sty.itemMenuCurrentUserglobal_unnamedGlobalGroupOfVariants_unnamedVariant]:
-                        hasVariant(
-                          globalVariants,
-                          "unnamedGlobalGroupOfVariants",
-                          "unnamedVariant"
-                        )
+                  throw e;
+                }
+              })() ? (
+                <div
+                  data-plasmic-name={"userIcon"}
+                  data-plasmic-override={overrides.userIcon}
+                  className={classNames(projectcss.all, sty.userIcon)}
+                  onClick={async event => {
+                    const $steps = {};
+                    $steps["updateOpenMenus"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["openDropdown"]
+                            },
+                            operation: 0,
+                            value:
+                              $state.openDropdown === "dropdownuser"
+                                ? "allclosed"
+                                : "dropdownuser"
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateOpenMenus"] != null &&
+                      typeof $steps["updateOpenMenus"] === "object" &&
+                      typeof $steps["updateOpenMenus"].then === "function"
+                    ) {
+                      $steps["updateOpenMenus"] = await $steps[
+                        "updateOpenMenus"
+                      ];
                     }
-                  )}
-                  userImageUrl={(() => {
-                    try {
-                      return $props.userImageUrl;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
+                  }}
+                >
+                  <ItemMenuCurrentUser
+                    data-plasmic-name={"itemMenuCurrentUser"}
+                    data-plasmic-override={overrides.itemMenuCurrentUser}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.itemMenuCurrentUser,
+                      {
+                        [sty.itemMenuCurrentUserglobal_unnamedGlobalGroupOfVariants_unnamedVariant]:
+                          hasVariant(
+                            globalVariants,
+                            "unnamedGlobalGroupOfVariants",
+                            "unnamedVariant"
+                          )
                       }
-                      throw e;
-                    }
-                  })()}
-                  userName={(() => {
-                    try {
-                      return $props.userName;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
+                    )}
+                    userImageUrl={(() => {
+                      try {
+                        return $props.userImageUrl;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })()}
-                />
-              </div>
+                    })()}
+                    userName={(() => {
+                      try {
+                        return $props.userName;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                </div>
+              ) : null}
               {(hasVariant($state, "menus", "dropdownuser") ? true : false) ? (
                 <div
                   data-plasmic-name={"userMenu"}
@@ -8747,16 +8764,16 @@ const PlasmicDescendants = {
     "icon12X125",
     "navigationItem4",
     "icon12X126",
-    "buttonSecondary",
+    "loginButton",
     "icon12X127",
     "text",
     "icon12X128",
-    "buttonSecondary3",
+    "dashboardButton",
     "icon12X12187",
     "text3",
     "icon12X12188",
     "frame8",
-    "freeBox",
+    "userIcon",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -9243,16 +9260,16 @@ const PlasmicDescendants = {
     "icon12X125",
     "navigationItem4",
     "icon12X126",
-    "buttonSecondary",
+    "loginButton",
     "icon12X127",
     "text",
     "icon12X128",
-    "buttonSecondary3",
+    "dashboardButton",
     "icon12X12187",
     "text3",
     "icon12X12188",
     "frame8",
-    "freeBox",
+    "userIcon",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -9319,16 +9336,16 @@ const PlasmicDescendants = {
     "icon12X125",
     "navigationItem4",
     "icon12X126",
-    "buttonSecondary",
+    "loginButton",
     "icon12X127",
     "text",
     "icon12X128",
-    "buttonSecondary3",
+    "dashboardButton",
     "icon12X12187",
     "text3",
     "icon12X12188",
     "frame8",
-    "freeBox",
+    "userIcon",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -9355,16 +9372,16 @@ const PlasmicDescendants = {
     "icon12X125",
     "navigationItem4",
     "icon12X126",
-    "buttonSecondary",
+    "loginButton",
     "icon12X127",
     "text",
     "icon12X128",
-    "buttonSecondary3",
+    "dashboardButton",
     "icon12X12187",
     "text3",
     "icon12X12188",
     "frame8",
-    "freeBox",
+    "userIcon",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -9413,23 +9430,17 @@ const PlasmicDescendants = {
   icon12X125: ["icon12X125"],
   navigationItem4: ["navigationItem4"],
   icon12X126: ["icon12X126"],
-  buttonSecondary: ["buttonSecondary", "icon12X127", "text", "icon12X128"],
+  loginButton: ["loginButton", "icon12X127", "text", "icon12X128"],
   icon12X127: ["icon12X127"],
   text: ["text"],
   icon12X128: ["icon12X128"],
-  buttonSecondary3: [
-    "buttonSecondary3",
-    "icon12X12187",
-    "text3",
-    "icon12X12188"
-  ],
-
+  dashboardButton: ["dashboardButton", "icon12X12187", "text3", "icon12X12188"],
   icon12X12187: ["icon12X12187"],
   text3: ["text3"],
   icon12X12188: ["icon12X12188"],
   frame8: [
     "frame8",
-    "freeBox",
+    "userIcon",
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
@@ -9437,7 +9448,7 @@ const PlasmicDescendants = {
     "icon24X24"
   ],
 
-  freeBox: ["freeBox", "itemMenuCurrentUser"],
+  userIcon: ["userIcon", "itemMenuCurrentUser"],
   itemMenuCurrentUser: ["itemMenuCurrentUser"],
   userMenu: ["userMenu", "navItemMenu76"],
   navItemMenu76: ["navItemMenu76"],
@@ -12733,16 +12744,16 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     icon12X125: makeNodeComponent("icon12X125"),
     navigationItem4: makeNodeComponent("navigationItem4"),
     icon12X126: makeNodeComponent("icon12X126"),
-    buttonSecondary: makeNodeComponent("buttonSecondary"),
+    loginButton: makeNodeComponent("loginButton"),
     icon12X127: makeNodeComponent("icon12X127"),
     text: makeNodeComponent("text"),
     icon12X128: makeNodeComponent("icon12X128"),
-    buttonSecondary3: makeNodeComponent("buttonSecondary3"),
+    dashboardButton: makeNodeComponent("dashboardButton"),
     icon12X12187: makeNodeComponent("icon12X12187"),
     text3: makeNodeComponent("text3"),
     icon12X12188: makeNodeComponent("icon12X12188"),
     frame8: makeNodeComponent("frame8"),
-    freeBox: makeNodeComponent("freeBox"),
+    userIcon: makeNodeComponent("userIcon"),
     itemMenuCurrentUser: makeNodeComponent("itemMenuCurrentUser"),
     userMenu: makeNodeComponent("userMenu"),
     navItemMenu76: makeNodeComponent("navItemMenu76"),
