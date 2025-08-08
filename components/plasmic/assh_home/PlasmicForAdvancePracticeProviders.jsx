@@ -118,45 +118,50 @@ function PlasmicForAdvancePracticeProviders__RenderFunc(props) {
             title={"Hero: For APPs - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            data-plasmic-name={"itemSectionTitleDescriptionItem"}
-            data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem
-            )}
-            descriptionSection={``}
-            title={"How ASSH Supports APPs"}
-          />
-
           <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
           >
-            <div
-              data-plasmic-name={"column"}
-              data-plasmic-override={overrides.column}
-              className={classNames(projectcss.all, sty.column)}
-            >
-              <HtmlContentfulHtmlLoader
-                data-plasmic-name={"htmlContentfulHtmlLoader"}
-                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                className={classNames(
-                  "__wab_instance",
-                  sty.htmlContentfulHtmlLoader
-                )}
-                title={"How ASSH Supports APPs"}
-              />
-            </div>
-          </div>
-          <BlockArticleCardList
-            data-plasmic-name={"blockArticleCardList"}
-            data-plasmic-override={overrides.blockArticleCardList}
-            className={classNames("__wab_instance", sty.blockArticleCardList)}
-            name={"For APPs: APP Resources"}
-          />
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={``}
+              title={"How ASSH Supports APPs"}
+            />
 
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
+            >
+              <div
+                data-plasmic-name={"column"}
+                data-plasmic-override={overrides.column}
+                className={classNames(projectcss.all, sty.column)}
+              >
+                <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader
+                  )}
+                  title={"How ASSH Supports APPs"}
+                />
+              </div>
+            </div>
+            <BlockArticleCardList
+              data-plasmic-name={"blockArticleCardList"}
+              data-plasmic-override={overrides.blockArticleCardList}
+              className={classNames("__wab_instance", sty.blockArticleCardList)}
+              name={"For APPs: APP Resources"}
+            />
+          </div>
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -191,6 +196,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
+    "freeBox",
     "itemSectionTitleDescriptionItem",
     "columns",
     "column",
@@ -202,6 +208,15 @@ const PlasmicDescendants = {
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
+  freeBox: [
+    "freeBox",
+    "itemSectionTitleDescriptionItem",
+    "columns",
+    "column",
+    "htmlContentfulHtmlLoader",
+    "blockArticleCardList"
+  ],
+
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns", "column", "htmlContentfulHtmlLoader"],
   column: ["column", "htmlContentfulHtmlLoader"],
@@ -248,6 +263,7 @@ export const PlasmicForAdvancePracticeProviders = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
+    freeBox: makeNodeComponent("freeBox"),
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),

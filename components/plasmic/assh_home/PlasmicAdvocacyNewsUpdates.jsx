@@ -17,11 +17,11 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
-import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import BlockArticleCardListWithImages from "../../BlockArticleCardListWithImages"; // plasmic-import: XgUhpjzqoXLq/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -64,23 +64,6 @@ function PlasmicAdvocacyNewsUpdates__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  let [$queries, setDollarQueries] = React.useState({});
-  const new$Queries = {
-    getLatestAdvocacyNews: usePlasmicDataOp(() => {
-      return {
-        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "7f3fabd4-b190-4171-a342-d809506db7e5",
-        userArgs: {},
-        cacheKey: `plasmic.$.7f3fabd4-b190-4171-a342-d809506db7e5.$.`,
-        invalidatedKeys: null,
-        roleId: null
-      };
-    })
-  };
-  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
-    setDollarQueries(new$Queries);
-    $queries = new$Queries;
-  }
   return (
     <React.Fragment>
       <Head>
@@ -156,12 +139,22 @@ function PlasmicAdvocacyNewsUpdates__RenderFunc(props) {
               title={"Advocacy News and Updates"}
             />
 
-            <CardListLatestAsshNewsCardList
-              data-plasmic-name={"cardListLatestAsshNewsCardList"}
-              data-plasmic-override={overrides.cardListLatestAsshNewsCardList}
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
               className={classNames(
                 "__wab_instance",
-                sty.cardListLatestAsshNewsCardList
+                sty.itemSectionTitleDescriptionItem
+              )}
+              title={"Latest Advocacy News"}
+            />
+
+            <BlockArticleCardListWithImages
+              data-plasmic-name={"blockArticleCardListWithImages"}
+              data-plasmic-override={overrides.blockArticleCardListWithImages}
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardListWithImages
               )}
             />
           </div>
@@ -192,7 +185,8 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "htmlContentfulHtmlLoader",
-    "cardListLatestAsshNewsCardList",
+    "itemSectionTitleDescriptionItem",
+    "blockArticleCardListWithImages",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -200,11 +194,13 @@ const PlasmicDescendants = {
   freeBox: [
     "freeBox",
     "htmlContentfulHtmlLoader",
-    "cardListLatestAsshNewsCardList"
+    "itemSectionTitleDescriptionItem",
+    "blockArticleCardListWithImages"
   ],
 
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
-  cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  blockArticleCardListWithImages: ["blockArticleCardListWithImages"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -245,8 +241,11 @@ export const PlasmicAdvocacyNewsUpdates = Object.assign(
     ),
     freeBox: makeNodeComponent("freeBox"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
-    cardListLatestAsshNewsCardList: makeNodeComponent(
-      "cardListLatestAsshNewsCardList"
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
+    blockArticleCardListWithImages: makeNodeComponent(
+      "blockArticleCardListWithImages"
     ),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicAdvocacyNewsUpdates

@@ -52,7 +52,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          title: "Membership Overview - Title Card"
+          title: "Hero: Education Overview - Title Card"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -198,7 +198,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                             e instanceof TypeError ||
                             e?.plasmicType === "PlasmicUndefinedDataError"
                           ) {
-                            return "Education & CME ";
+                            return "Education & CME";
                           }
                           throw e;
                         }

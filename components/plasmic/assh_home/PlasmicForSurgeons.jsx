@@ -117,45 +117,46 @@ function PlasmicForSurgeons__RenderFunc(props) {
             title={"Hero: For Surgeons - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            data-plasmic-name={"itemSectionTitleDescriptionItem"}
-            data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem
-            )}
-            descriptionSection={``}
-            title={"How ASSH Helps Surgeons"}
-          />
+          <div className={classNames(projectcss.all, sty.freeBox__gZsz)}>
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={``}
+              title={"How ASSH Helps Surgeons"}
+            />
 
-          <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
-          >
             <div
-              data-plasmic-name={"column"}
-              data-plasmic-override={overrides.column}
-              className={classNames(projectcss.all, sty.column)}
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
             >
-              <HtmlContentfulHtmlLoader
-                data-plasmic-name={"htmlContentfulHtmlLoader"}
-                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                className={classNames(
-                  "__wab_instance",
-                  sty.htmlContentfulHtmlLoader
-                )}
-                title={"How ASSH Helps Surgeons"}
-              />
+              <div
+                data-plasmic-name={"column"}
+                data-plasmic-override={overrides.column}
+                className={classNames(projectcss.all, sty.column)}
+              >
+                <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader
+                  )}
+                  title={"How ASSH Helps Surgeons"}
+                />
+              </div>
             </div>
+            <BlockArticleCardList
+              data-plasmic-name={"blockArticleCardList"}
+              data-plasmic-override={overrides.blockArticleCardList}
+              className={classNames("__wab_instance", sty.blockArticleCardList)}
+              name={"For Surgeons: Resource Links"}
+            />
           </div>
-          <BlockArticleCardList
-            data-plasmic-name={"blockArticleCardList"}
-            data-plasmic-override={overrides.blockArticleCardList}
-            className={classNames("__wab_instance", sty.blockArticleCardList)}
-            name={"For Surgeons: Resource Links"}
-          />
-
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -166,13 +167,17 @@ function PlasmicForSurgeons__RenderFunc(props) {
             title={"For Surgeons - Mid-page CTA"}
           />
 
-          <SectionQuicklinksTable
-            data-plasmic-name={"sectionQuicklinksTable"}
-            data-plasmic-override={overrides.sectionQuicklinksTable}
-            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
-            name={"For Surgeons Quicklinks"}
-          />
-
+          <div className={classNames(projectcss.all, sty.freeBox__uJz74)}>
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
+              className={classNames(
+                "__wab_instance",
+                sty.sectionQuicklinksTable
+              )}
+              name={"For Surgeons Quicklinks"}
+            />
+          </div>
           <SectionAdPlaceholder
             data-plasmic-name={"sectionAdPlaceholder"}
             data-plasmic-override={overrides.sectionAdPlaceholder}

@@ -20,6 +20,13 @@
   align-self: stretch;
   position: relative;
 }
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
 .column {
   background: url("/plasmic/assh_home/images/column6.png") center center / cover no-repeat;
   height: 236px;

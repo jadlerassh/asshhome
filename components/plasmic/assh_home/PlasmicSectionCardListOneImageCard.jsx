@@ -18,7 +18,6 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithImage from "../../ItemArticleCardItemWithImage"; // plasmic-import: rJ18UjQomkxN/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -48,7 +47,7 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          name: "For Surgeons: Resource Links"
+          name: "Practice Management Resources - Additional Resources"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -83,6 +82,49 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
                   );
                   const links =
                     $queries.getCardList.data.response.items?.[0]?.fields
+                      ?.childLinks || [];
+                  return links
+                    .map(link => {
+                      const entry = entryMap[link.sys.id];
+                      return {
+                        id: link.sys.id,
+                        label: entry?.fields.label || "Label missing",
+                        title: entry?.fields.name || "name missing",
+                        order: Number(entry?.fields.order) || 0,
+                        link: entry?.fields.url || "#",
+                        subText: entry?.fields.subText || ""
+                      };
+                    })
+                    .sort((a, b) => a.order - b.order);
+                })();
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "featuredContent",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                return (() => {
+                  const entryMap = Object.fromEntries(
+                    $queries.getCardList.data.response.includes.Entry.map(
+                      entry => [entry.sys.id, entry]
+                    )
+                  );
+                  const links =
+                    $queries.getCardList.data.response.items?.[0]?.fields
                       ?.featuredContent || [];
                   return links
                     .map(link => {
@@ -90,12 +132,12 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
                       return {
                         id: link.sys.id,
                         label: entry?.fields.label || "Label missing",
-                        title: entry?.fields.title || "title missing",
+                        title: entry?.fields.name || "name missing",
                         order: Number(entry?.fields.order) || 0,
                         link: entry?.fields.url || "#",
+                        description: entry?.fields.description || "",
                         thumb: entry?.fields.thumb || "",
-                        type: entry?.fields.type || "",
-                        description: entry?.fields.description || ""
+                        ctaText: entry?.fields.ctaText || ""
                       };
                     })
                     .sort((a, b) => a.order - b.order);
@@ -157,17 +199,6 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
         sty.root
       )}
     >
-      <ItemSectionTitleDescriptionItem
-        data-plasmic-name={"itemSectionTitleDescriptionItem"}
-        data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-        className={classNames(
-          "__wab_instance",
-          sty.itemSectionTitleDescriptionItem
-        )}
-        descriptionSection={``}
-        title={"Surgeon Resources"}
-      />
-
       <div
         data-plasmic-name={"columns"}
         data-plasmic-override={overrides.columns}
@@ -176,7 +207,7 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
         {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
           (() => {
             try {
-              return $state.subLinks[0];
+              return $state.featuredContent;
             } catch (e) {
               if (
                 e instanceof TypeError ||
@@ -273,246 +304,83 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
           );
         })}
         <div className={classNames(projectcss.all, sty.column__dNIrI)}>
-          <ItemArticleCardItemWithDescription
-            articleTitle={(() => {
-              try {
-                return $state.subLinks[1].label;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
+          <div className={classNames(projectcss.all, sty.freeBox__wzJge)}>
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $state.subLinks;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
                 }
-                throw e;
-              }
-            })()}
-            className={classNames(
-              "__wab_instance",
-              sty.itemArticleCardItemWithDescription__ozcMl
-            )}
-            description={(() => {
-              try {
-                return $state.subLinks[1].description.content[0].content[0]
-                  .value;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            heading={(() => {
-              try {
-                return $state.subLinks[1].type;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            linkUrl={(() => {
-              try {
-                return $state.subLinks[1].link;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-          />
-
-          <ItemArticleCardItemWithDescription
-            articleTitle={(() => {
-              try {
-                return $state.subLinks[2].label;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            className={classNames(
-              "__wab_instance",
-              sty.itemArticleCardItemWithDescription__xcm3Z
-            )}
-            description={(() => {
-              try {
-                return $state.subLinks[2].description.content[0].content[0]
-                  .value;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            heading={(() => {
-              try {
-                return $state.subLinks[2].type;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            linkUrl={(() => {
-              try {
-                return $state.subLinks[2].link;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-          />
-        </div>
-        <div className={classNames(projectcss.all, sty.column__mRuR8)}>
-          <ItemArticleCardItemWithDescription
-            articleTitle={(() => {
-              try {
-                return $state.subLinks[3].label;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            className={classNames(
-              "__wab_instance",
-              sty.itemArticleCardItemWithDescription__qSd
-            )}
-            description={(() => {
-              try {
-                return $state.subLinks[3].description.content[0].content[0]
-                  .value;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            heading={(() => {
-              try {
-                return $state.subLinks[3].type;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            linkUrl={(() => {
-              try {
-                return $state.subLinks[3].link;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-          />
-
-          <ItemArticleCardItemWithDescription
-            articleTitle={(() => {
-              try {
-                return $state.subLinks[4].label;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            className={classNames(
-              "__wab_instance",
-              sty.itemArticleCardItemWithDescription__eguLa
-            )}
-            description={(() => {
-              try {
-                return $state.subLinks[4].description.content[0].content[0]
-                  .value;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            heading={(() => {
-              try {
-                return $state.subLinks[4].type;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-            linkUrl={(() => {
-              try {
-                return $state.subLinks[4].link;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-          />
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__xpdEg)}
+                  key={currentIndex}
+                >
+                  <ItemArticleCardItemWithDescription
+                    data-plasmic-name={"itemArticleCardItemWithDescription"}
+                    data-plasmic-override={
+                      overrides.itemArticleCardItemWithDescription
+                    }
+                    articleTitle={(() => {
+                      try {
+                        return currentItem.label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.itemArticleCardItemWithDescription
+                    )}
+                    description={(() => {
+                      try {
+                        return currentItem.subText;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    heading={``}
+                    linkUrl={(() => {
+                      try {
+                        return currentItem.link;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -522,14 +390,19 @@ function PlasmicSectionCardListOneImageCard__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "itemSectionTitleDescriptionItem",
     "columns",
-    "itemArticleCardItemWithImage"
+    "itemArticleCardItemWithImage",
+    "itemArticleCardItemWithDescription"
   ],
 
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "itemArticleCardItemWithImage"],
-  itemArticleCardItemWithImage: ["itemArticleCardItemWithImage"]
+  columns: [
+    "columns",
+    "itemArticleCardItemWithImage",
+    "itemArticleCardItemWithDescription"
+  ],
+
+  itemArticleCardItemWithImage: ["itemArticleCardItemWithImage"],
+  itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -565,12 +438,12 @@ export const PlasmicSectionCardListOneImageCard = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
     columns: makeNodeComponent("columns"),
     itemArticleCardItemWithImage: makeNodeComponent(
       "itemArticleCardItemWithImage"
+    ),
+    itemArticleCardItemWithDescription: makeNodeComponent(
+      "itemArticleCardItemWithDescription"
     ),
     // Metadata about props expected for PlasmicSectionCardListOneImageCard
     internalVariantProps: PlasmicSectionCardListOneImageCard__VariantProps,

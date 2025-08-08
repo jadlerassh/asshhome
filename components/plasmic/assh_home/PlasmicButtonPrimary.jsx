@@ -556,9 +556,19 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         >
           <Container2Icon
             className={classNames(projectcss.all, sty.svg__bsMdx, {
+              [sty.svgdarkInteractions_dark__bsMdxEKm]: hasVariant(
+                $state,
+                "darkInteractions",
+                "dark"
+              ),
               [sty.svgdarkNoBgInteractions_hover_textArrowButton__bsMdxAyj9OUQaqx]:
                 hasVariant($state, "textArrowButton", "textArrowButton") &&
                 hasVariant($state, "darkNoBgInteractions", "hover"),
+              [sty.svgsecondaryInteractions_secondary__bsMdxzo9SF]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "secondary"
+              ),
               [sty.svgtextArrowButton__bsMdxuQaqx]: hasVariant(
                 $state,
                 "textArrowButton",
@@ -568,6 +578,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "upcomingEvents",
                 "upcomingEvents"
+              ),
+              [sty.svgwhiteButtonBlackSurround__bsMdxQad67]: hasVariant(
+                $state,
+                "whiteButtonBlackSurround",
+                "whiteButtonBlackSurround"
               )
             })}
             role={"img"}

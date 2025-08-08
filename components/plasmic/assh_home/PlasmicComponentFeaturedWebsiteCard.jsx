@@ -16,6 +16,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -27,7 +28,10 @@ createPlasmicElementProxy;
 
 export const PlasmicComponentFeaturedWebsiteCard__VariantProps = new Array();
 
-export const PlasmicComponentFeaturedWebsiteCard__ArgProps = new Array();
+export const PlasmicComponentFeaturedWebsiteCard__ArgProps = new Array(
+  "title",
+  "description2"
+);
 
 const $$ = {};
 
@@ -43,7 +47,11 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          title: "Handthology",
+          description2:
+            "Learn about hand surgery and common conditions of the hand."
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -58,6 +66,25 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const new$Queries = {
+    getContent: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "0c58f3e1-ed20-48bd-a3cc-cd70e06d634c",
+        userArgs: {
+          params: [$props.title]
+        },
+        cacheKey: `plasmic.$.0c58f3e1-ed20-48bd-a3cc-cd70e06d634c.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   return (
     <div
       data-plasmic-name={"content"}
@@ -75,35 +102,118 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
         sty.content
       )}
     >
-      <h3
-        data-plasmic-name={"h3"}
-        data-plasmic-override={overrides.h3}
-        className={classNames(
-          projectcss.all,
-          projectcss.h3,
-          projectcss.__wab_text,
-          sty.h3
-        )}
+      {(() => {
+        try {
+          return (
+            $queries.getContent.data.response.items[0].fields.title !==
+            undefined
+          );
+        } catch (e) {
+          if (
+            e instanceof TypeError ||
+            e?.plasmicType === "PlasmicUndefinedDataError"
+          ) {
+            return true;
+          }
+          throw e;
+        }
+      })() ? (
+        <h3
+          data-plasmic-name={"h3"}
+          data-plasmic-override={overrides.h3}
+          className={classNames(
+            projectcss.all,
+            projectcss.h3,
+            projectcss.__wab_text,
+            sty.h3
+          )}
+        >
+          <React.Fragment>
+            {(() => {
+              try {
+                return $queries.getContent.data.response.items[0].fields.title;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "Handthology";
+                }
+                throw e;
+              }
+            })()}
+          </React.Fragment>
+        </h3>
+      ) : null}
+      <div
+        data-plasmic-name={"text"}
+        data-plasmic-override={overrides.text}
+        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
       >
-        {"Handthology"}
-      </h3>
+        <React.Fragment>
+          {(() => {
+            try {
+              return undefined;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return "";
+              }
+              throw e;
+            }
+          })()}
+        </React.Fragment>
+      </div>
       <div
         data-plasmic-name={"column"}
         data-plasmic-override={overrides.column}
         className={classNames(projectcss.all, sty.column)}
       />
 
-      <div
-        data-plasmic-name={"description"}
-        data-plasmic-override={overrides.description}
-        className={classNames(
-          projectcss.all,
-          projectcss.__wab_text,
-          sty.description
-        )}
-      >
-        {"Learn about hand surgery and common conditions of the hand."}
-      </div>
+      {(() => {
+        try {
+          return (
+            $queries.getContent.data.response.items.description !== undefined
+          );
+        } catch (e) {
+          if (
+            e instanceof TypeError ||
+            e?.plasmicType === "PlasmicUndefinedDataError"
+          ) {
+            return true;
+          }
+          throw e;
+        }
+      })() ? (
+        <div
+          data-plasmic-name={"description"}
+          data-plasmic-override={overrides.description}
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.description
+          )}
+        >
+          <React.Fragment>
+            {(() => {
+              try {
+                return $queries.getContent.data.response.items[0].fields
+                  .description;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "Learn about hand surgery and common conditions of the hand.";
+                }
+                throw e;
+              }
+            })()}
+          </React.Fragment>
+        </div>
+      ) : null}
       <ButtonPrimary
         data-plasmic-name={"buttonPrimary"}
         data-plasmic-override={overrides.buttonPrimary}
@@ -116,8 +226,9 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  content: ["content", "h3", "column", "description", "buttonPrimary"],
+  content: ["content", "h3", "text", "column", "description", "buttonPrimary"],
   h3: ["h3"],
+  text: ["text"],
   column: ["column"],
   description: ["description"],
   buttonPrimary: ["buttonPrimary"]
@@ -157,6 +268,7 @@ export const PlasmicComponentFeaturedWebsiteCard = Object.assign(
   {
     // Helper components rendering sub-elements
     h3: makeNodeComponent("h3"),
+    text: makeNodeComponent("text"),
     column: makeNodeComponent("column"),
     description: makeNodeComponent("description"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),

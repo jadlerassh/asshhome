@@ -2298,20 +2298,6 @@
           "componentType": "component"
         },
         {
-          "id": "r0dvtROcf4XG",
-          "name": "ResourcesForPatients",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicResourcesForPatients.jsx",
-          "importSpec": {
-            "modulePath": "../pages/resources-for-patients.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicResourcesForPatients.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/resources-for-patients"
-        },
-        {
           "id": "Eq7lpuWOmRGs",
           "name": "SectionPastEventsList",
           "type": "managed",
@@ -3180,6 +3166,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/search-layout"
+        },
+        {
+          "id": "XgUhpjzqoXLq",
+          "name": "BlockArticleCardListWithImages",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockArticleCardListWithImages.jsx",
+          "importSpec": {
+            "modulePath": "BlockArticleCardListWithImages.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockArticleCardListWithImages.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -4160,6 +4159,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.340",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.340/dist/plasmic.schema.json"
+  "cliVersion": "0.1.341",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.341/dist/plasmic.schema.json"
 }

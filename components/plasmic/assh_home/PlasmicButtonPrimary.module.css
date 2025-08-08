@@ -39,7 +39,7 @@
   -webkit-transition-timing-function: ease-in-out;
   -webkit-transition-duration: 0.3s;
   border-radius: 4px;
-  padding: 15px 0px;
+  padding: 15px;
 }
 .buttonHighlight2darkInteractions_dark {
   background: var(--token-TYi5l69jClib);
@@ -231,6 +231,10 @@
 .root:hover .text2 {
   color: var(--token-py5R6wetCsNw);
 }
+.rootsecondaryInteractions_secondary:hover
+  .text2secondaryInteractions_secondary {
+  color: var(--token-TYi5l69jClib);
+}
 .rootmegaMenuLink_megaMenu:hover .text2megaMenuLink_megaMenu {
   color: var(--token-YOr-x91EUcQe);
 }
@@ -281,12 +285,23 @@
 }
 .svgtextArrowButton__bsMdxuQaqx {
   color: var(--token-YOr-x91EUcQe);
+  display: flex;
 }
 .svgupcomingEvents__bsMdxzyCs3 {
   color: var(--token-j3urVBXa9jtJ);
 }
 .root:hover .svg__bsMdx {
   color: var(--token-j3urVBXa9jtJ);
+}
+.rootdarkInteractions_dark:hover .svgdarkInteractions_dark__bsMdxEKm {
+  display: none;
+}
+.rootsecondaryInteractions_secondary:hover
+  .svgsecondaryInteractions_secondary__bsMdxzo9SF {
+  display: none;
+}
+.rootwhiteButtonBlackSurround:hover .svgwhiteButtonBlackSurround__bsMdxQad67 {
+  display: none;
 }
 .navItemSimple {
   width: auto;

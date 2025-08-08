@@ -118,45 +118,46 @@ function PlasmicForHandTherapists__RenderFunc(props) {
             title={"Hero: Hand Therapists - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            data-plasmic-name={"itemSectionTitleDescriptionItem"}
-            data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem
-            )}
-            descriptionSection={``}
-            title={"How ASSH Supports Hand Therapists"}
-          />
+          <div className={classNames(projectcss.all, sty.freeBox__vzpZz)}>
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={``}
+              title={"How ASSH Supports Hand Therapists"}
+            />
 
-          <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
-          >
             <div
-              data-plasmic-name={"column"}
-              data-plasmic-override={overrides.column}
-              className={classNames(projectcss.all, sty.column)}
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
             >
-              <HtmlContentfulHtmlLoader
-                data-plasmic-name={"htmlContentfulHtmlLoader"}
-                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                className={classNames(
-                  "__wab_instance",
-                  sty.htmlContentfulHtmlLoader
-                )}
-                title={"How ASSH Supports Hand Therapists"}
-              />
+              <div
+                data-plasmic-name={"column"}
+                data-plasmic-override={overrides.column}
+                className={classNames(projectcss.all, sty.column)}
+              >
+                <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader
+                  )}
+                  title={"How ASSH Supports Hand Therapists"}
+                />
+              </div>
             </div>
+            <BlockArticleCardList
+              data-plasmic-name={"blockArticleCardList"}
+              data-plasmic-override={overrides.blockArticleCardList}
+              className={classNames("__wab_instance", sty.blockArticleCardList)}
+              name={"For Hand Therapists: Hand Therapy Resources"}
+            />
           </div>
-          <BlockArticleCardList
-            data-plasmic-name={"blockArticleCardList"}
-            data-plasmic-override={overrides.blockArticleCardList}
-            className={classNames("__wab_instance", sty.blockArticleCardList)}
-            name={"For Hand Therapists: Hand Therapy Resources"}
-          />
-
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -167,23 +168,27 @@ function PlasmicForHandTherapists__RenderFunc(props) {
             title={"For Hand Therapists - Mid-page CTA"}
           />
 
-          <BlockQuicklinksTanBox
-            data-plasmic-name={"blockQuicklinksTanBox"}
-            data-plasmic-override={overrides.blockQuicklinksTanBox}
-            className={classNames("__wab_instance", sty.blockQuicklinksTanBox)}
-            name={"For Hand Therapists Quicklinks: Resources"}
-          />
+          <div className={classNames(projectcss.all, sty.freeBox__pOpFj)}>
+            <BlockQuicklinksTanBox
+              data-plasmic-name={"blockQuicklinksTanBox"}
+              data-plasmic-override={overrides.blockQuicklinksTanBox}
+              className={classNames(
+                "__wab_instance",
+                sty.blockQuicklinksTanBox
+              )}
+              name={"For Hand Therapists Quicklinks: Resources"}
+            />
 
-          <BlockPublicationHighlight
-            data-plasmic-name={"blockPublicationHighlight"}
-            data-plasmic-override={overrides.blockPublicationHighlight}
-            className={classNames(
-              "__wab_instance",
-              sty.blockPublicationHighlight
-            )}
-            title={"For Therapists: Handcare feature"}
-          />
-
+            <BlockPublicationHighlight
+              data-plasmic-name={"blockPublicationHighlight"}
+              data-plasmic-override={overrides.blockPublicationHighlight}
+              className={classNames(
+                "__wab_instance",
+                sty.blockPublicationHighlight
+              )}
+              title={"For Therapists: Handcare feature"}
+            />
+          </div>
           <SectionAdPlaceholder
             data-plasmic-name={"sectionAdPlaceholder"}
             data-plasmic-override={overrides.sectionAdPlaceholder}

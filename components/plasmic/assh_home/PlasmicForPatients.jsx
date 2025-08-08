@@ -126,39 +126,47 @@ function PlasmicForPatients__RenderFunc(props) {
             title={"Hero: For Patients - Title Card"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            data-plasmic-name={"itemSectionTitleDescriptionItem"}
-            data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem
-            )}
-            descriptionSection={
-              "The American Society for Surgery of the Hand (ASSH) helps patients in several key ways, primarily by advancing the science and practice of hand and upper extremity surgery through education, research, and advocacy. "
-            }
-            title={"How ASSH Helps Patients"}
-          />
+          <div className={classNames(projectcss.all, sty.freeBox___2Msni)}>
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={
+                "The American Society for Surgery of the Hand (ASSH) helps patients in several key ways, primarily by advancing the science and practice of hand and upper extremity surgery through education, research, and advocacy. "
+              }
+              title={"How ASSH Helps Patients"}
+            />
 
-          <div className={classNames(projectcss.all, sty.columns__nlUcV)}>
-            <div className={classNames(projectcss.all, sty.column___2AzTg)}>
-              <HtmlContentfulHtmlLoader
-                data-plasmic-name={"htmlContentfulHtmlLoader"}
-                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                className={classNames(
-                  "__wab_instance",
-                  sty.htmlContentfulHtmlLoader
-                )}
-                title={"How ASSH Helps Patients"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column___7TL5)}>
-              <BlockQuoteBlock
-                data-plasmic-name={"blockQuoteBlock"}
-                data-plasmic-override={overrides.blockQuoteBlock}
-                className={classNames("__wab_instance", sty.blockQuoteBlock)}
-                name={"ASSH For Patients Quote"}
-                quote={"singleLine"}
-              />
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader___1Mq2L
+              )}
+              title={"For Patients Intro"}
+            />
+
+            <div className={classNames(projectcss.all, sty.columns__nlUcV)}>
+              <div className={classNames(projectcss.all, sty.column___2AzTg)}>
+                <HtmlContentfulHtmlLoader
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader__vW5Aw
+                  )}
+                  title={"How ASSH Helps Patients"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column___7TL5)}>
+                <BlockQuoteBlock
+                  data-plasmic-name={"blockQuoteBlock"}
+                  data-plasmic-override={overrides.blockQuoteBlock}
+                  className={classNames("__wab_instance", sty.blockQuoteBlock)}
+                  name={"ASSH For Patients Quote"}
+                  quote={"singleLine"}
+                />
+              </div>
             </div>
           </div>
           <SectionMidPageCtaSection
@@ -171,116 +179,119 @@ function PlasmicForPatients__RenderFunc(props) {
             title={"For Patients - Mid-page CTA"}
           />
 
-          <div className={classNames(projectcss.all, sty.columns__rhD7)}>
-            <div className={classNames(projectcss.all, sty.column__jkgyB)}>
-              <div
-                data-plasmic-name={"content"}
-                data-plasmic-override={overrides.content}
-                className={classNames(projectcss.all, sty.content)}
-              >
-                <h2
-                  data-plasmic-name={"h2"}
-                  data-plasmic-override={overrides.h2}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h2,
-                    projectcss.__wab_text,
-                    sty.h2
-                  )}
-                >
-                  {"Handcare.org"}
-                </h2>
+          <div className={classNames(projectcss.all, sty.freeBox__bOjB5)}>
+            <div className={classNames(projectcss.all, sty.columns__rhD7)}>
+              <div className={classNames(projectcss.all, sty.column__jkgyB)}>
                 <div
-                  data-plasmic-name={"column"}
-                  data-plasmic-override={overrides.column}
-                  className={classNames(projectcss.all, sty.column)}
+                  data-plasmic-name={"content"}
+                  data-plasmic-override={overrides.content}
+                  className={classNames(projectcss.all, sty.content)}
+                >
+                  <h2
+                    data-plasmic-name={"h2"}
+                    data-plasmic-override={overrides.h2}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h2,
+                      projectcss.__wab_text,
+                      sty.h2
+                    )}
+                  >
+                    {"Handcare.org"}
+                  </h2>
+                  <div
+                    data-plasmic-name={"column"}
+                    data-plasmic-override={overrides.column}
+                    className={classNames(projectcss.all, sty.column)}
+                  />
+
+                  <div
+                    data-plasmic-name={"description"}
+                    data-plasmic-override={overrides.description}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.description
+                    )}
+                  >
+                    {
+                      "Learn about hand surgery and common conditions of the hand."
+                    }
+                  </div>
+                  <ButtonPrimary
+                    data-plasmic-name={"buttonPrimary"}
+                    data-plasmic-override={overrides.buttonPrimary}
+                    className={classNames("__wab_instance", sty.buttonPrimary)}
+                    secondaryInteractions={"secondary"}
+                    text={"Learn about Conditions"}
+                    url={"https://www.assh.org/handcare/conditions"}
+                  />
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__ebuyd)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Diseases & Conditions"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__giNB
+                  )}
+                  description={
+                    "Detailed information on common conditions like carpal tunnel syndrome, arthritis, fractures, and nerve injuries, as well as less common ones."
+                  }
+                  heading={"Resources"}
+                  linkUrl={"https://www.assh.org/handcare/conditions"}
                 />
 
-                <div
-                  data-plasmic-name={"description"}
-                  data-plasmic-override={overrides.description}
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"About Hand Surgery and Hand Therapy"}
                   className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.description
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__keMsF
                   )}
-                >
-                  {
-                    "Learn about hand surgery and common conditions of the hand."
+                  description={
+                    "Explanations of what these specialties entail and what patients can expect."
                   }
-                </div>
-                <ButtonPrimary
-                  data-plasmic-name={"buttonPrimary"}
-                  data-plasmic-override={overrides.buttonPrimary}
-                  className={classNames("__wab_instance", sty.buttonPrimary)}
-                  secondaryInteractions={"secondary"}
-                  text={"Learn about Conditions"}
-                  url={"https://www.assh.org/handcare/conditions"}
+                  heading={"Resources"}
+                  linkUrl={"https://www.assh.org/handcare/about"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__gjB8B)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Hand Safety"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__bEVdu
+                  )}
+                  description={
+                    "Tips and resources on preventing hand injuries."
+                  }
+                  heading={"Resources"}
+                  linkUrl={"https://www.assh.org/handcare/blog"}
+                />
+
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Anatomy"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__jRklP
+                  )}
+                  description={
+                    "Learn hand anatomy including bones, joints, muscles and more."
+                  }
+                  heading={"Resources"}
+                  linkUrl={"https://www.assh.org/handcare/anatomy"}
                 />
               </div>
             </div>
-            <div className={classNames(projectcss.all, sty.column__ebuyd)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Diseases & Conditions"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__giNB
-                )}
-                description={
-                  "Detailed information on common conditions like carpal tunnel syndrome, arthritis, fractures, and nerve injuries, as well as less common ones."
-                }
-                heading={"Resources"}
-                linkUrl={"https://www.assh.org/handcare/conditions"}
-              />
-
-              <ItemArticleCardItemWithDescription
-                articleTitle={"About Hand Surgery and Hand Therapy"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__keMsF
-                )}
-                description={
-                  "Explanations of what these specialties entail and what patients can expect."
-                }
-                heading={"Resources"}
-                linkUrl={"https://www.assh.org/handcare/about"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__gjB8B)}>
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Hand Safety"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__bEVdu
-                )}
-                description={"Tips and resources on preventing hand injuries."}
-                heading={"Resources"}
-                linkUrl={"https://www.assh.org/handcare/blog"}
-              />
-
-              <ItemArticleCardItemWithDescription
-                articleTitle={"Anatomy"}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemArticleCardItemWithDescription__jRklP
-                )}
-                description={
-                  "Learn hand anatomy including bones, joints, muscles and more."
-                }
-                heading={"Resources"}
-                linkUrl={"https://www.assh.org/handcare/anatomy"}
-              />
-            </div>
+            <BlockPublicationHighlight
+              data-plasmic-name={"blockPublicationHighlight"}
+              data-plasmic-override={overrides.blockPublicationHighlight}
+              className={classNames(
+                "__wab_instance",
+                sty.blockPublicationHighlight
+              )}
+            />
           </div>
-          <BlockPublicationHighlight
-            data-plasmic-name={"blockPublicationHighlight"}
-            data-plasmic-override={overrides.blockPublicationHighlight}
-            className={classNames(
-              "__wab_instance",
-              sty.blockPublicationHighlight
-            )}
-          />
-
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
@@ -307,7 +318,6 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
-    "htmlContentfulHtmlLoader",
     "blockQuoteBlock",
     "sectionMidPageCtaSection",
     "content",
@@ -321,7 +331,6 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuoteBlock: ["blockQuoteBlock"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   content: ["content", "h2", "column", "description", "buttonPrimary"],
@@ -371,7 +380,6 @@ export const PlasmicForPatients = Object.assign(
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     content: makeNodeComponent("content"),
