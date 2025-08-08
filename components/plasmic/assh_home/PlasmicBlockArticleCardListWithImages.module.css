@@ -15,6 +15,7 @@
   width: 100%;
   margin-bottom: 30px;
   min-width: 0;
+  display: none;
 }
 .freeBox__eEh0M {
   display: grid;
