@@ -18,6 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import ComponentFeaturedWebsiteCard from "../../ComponentFeaturedWebsiteCard"; // plasmic-import: mcITMmfoX9ZQ/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -116,14 +117,24 @@ function PlasmicJaTestHome__RenderFunc(props) {
             plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.asshHome
           )}
-        />
+        >
+          <ComponentFeaturedWebsiteCard
+            data-plasmic-name={"componentFeaturedWebsiteCard"}
+            data-plasmic-override={overrides.componentFeaturedWebsiteCard}
+            className={classNames(
+              "__wab_instance",
+              sty.componentFeaturedWebsiteCard
+            )}
+          />
+        </div>
       </div>
     </React.Fragment>
   );
 }
 
 const PlasmicDescendants = {
-  asshHome: ["asshHome"]
+  asshHome: ["asshHome", "componentFeaturedWebsiteCard"],
+  componentFeaturedWebsiteCard: ["componentFeaturedWebsiteCard"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -158,6 +169,9 @@ export const PlasmicJaTestHome = Object.assign(
   makeNodeComponent("asshHome"),
   {
     // Helper components rendering sub-elements
+    componentFeaturedWebsiteCard: makeNodeComponent(
+      "componentFeaturedWebsiteCard"
+    ),
     // Metadata about props expected for PlasmicJaTestHome
     internalVariantProps: PlasmicJaTestHome__VariantProps,
     internalArgProps: PlasmicJaTestHome__ArgProps,

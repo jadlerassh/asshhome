@@ -34,3 +34,6 @@
     grid-column: 4;
   }
 }
+.componentFeaturedWebsiteCard:global(.__wab_instance) {
+  max-width: 100%;
+}

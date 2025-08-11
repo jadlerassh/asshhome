@@ -71,11 +71,11 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
     getContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "0c58f3e1-ed20-48bd-a3cc-cd70e06d634c",
+        opId: "5304698c-f220-49f7-ad25-1011b675379d",
         userArgs: {
           params: [$props.title]
         },
-        cacheKey: `plasmic.$.0c58f3e1-ed20-48bd-a3cc-cd70e06d634c.$.`,
+        cacheKey: `plasmic.$.5304698c-f220-49f7-ad25-1011b675379d.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -137,7 +137,7 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
                   e instanceof TypeError ||
                   e?.plasmicType === "PlasmicUndefinedDataError"
                 ) {
-                  return "Handthology";
+                  return "test";
                 }
                 throw e;
               }
@@ -175,7 +175,8 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
       {(() => {
         try {
           return (
-            $queries.getContent.data.response.items.description !== undefined
+            $queries.getContent.data.response.items[0].fields.description !==
+            undefined
           );
         } catch (e) {
           if (
@@ -214,13 +215,42 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
           </React.Fragment>
         </div>
       ) : null}
-      <ButtonPrimary
-        data-plasmic-name={"buttonPrimary"}
-        data-plasmic-override={overrides.buttonPrimary}
-        className={classNames("__wab_instance", sty.buttonPrimary)}
-        secondaryInteractions={"secondary"}
-        text={"Learn About Conditions"}
-      />
+      {(() => {
+        try {
+          return (
+            $queries.getContent.data.response.items[0].fields.ctaText !==
+            undefined
+          );
+        } catch (e) {
+          if (
+            e instanceof TypeError ||
+            e?.plasmicType === "PlasmicUndefinedDataError"
+          ) {
+            return true;
+          }
+          throw e;
+        }
+      })() ? (
+        <ButtonPrimary
+          data-plasmic-name={"buttonPrimary"}
+          data-plasmic-override={overrides.buttonPrimary}
+          className={classNames("__wab_instance", sty.buttonPrimary)}
+          secondaryInteractions={"secondary"}
+          text={(() => {
+            try {
+              return $queries.getContent.data.response.items[0].fields.ctaText;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()}
+        />
+      ) : null}
     </div>
   );
 }
