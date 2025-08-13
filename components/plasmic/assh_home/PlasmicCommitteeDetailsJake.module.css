@@ -63,18 +63,29 @@
   max-width: 1320px;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-top: 50px;
-  margin-bottom: 50px;
   column-gap: 50px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   --plsmc-rc-col-gap: 50px;
+  margin: 70px 0px;
 }
 .columns > :nth-child(2n + 1) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
 }
 .columns > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 8 / 12);
+}
+@media (max-width: 1440px) {
+  .columns {
+    --plsmc-rc-col-gap: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .columns {
+    --plsmc-rc-col-gap: 50px;
+    padding: 0px 20px;
+    margin: 50px 0px;
+  }
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns {

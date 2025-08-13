@@ -129,27 +129,16 @@ function PlasmicForSurgeons__RenderFunc(props) {
               title={"How ASSH Helps Surgeons"}
             />
 
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div
-                data-plasmic-name={"column"}
-                data-plasmic-override={overrides.column}
-                className={classNames(projectcss.all, sty.column)}
-              >
-                <HtmlContentfulHtmlLoader
-                  data-plasmic-name={"htmlContentfulHtmlLoader"}
-                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.htmlContentfulHtmlLoader
-                  )}
-                  title={"How ASSH Helps Surgeons"}
-                />
-              </div>
-            </div>
+            <HtmlContentfulHtmlLoader
+              data-plasmic-name={"htmlContentfulHtmlLoader"}
+              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader
+              )}
+              title={"How ASSH Helps Surgeons"}
+            />
+
             <BlockArticleCardList
               data-plasmic-name={"blockArticleCardList"}
               data-plasmic-override={overrides.blockArticleCardList}
@@ -203,8 +192,6 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
-    "columns",
-    "column",
     "htmlContentfulHtmlLoader",
     "blockArticleCardList",
     "sectionMidPageCtaSection",
@@ -215,8 +202,6 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "column", "htmlContentfulHtmlLoader"],
-  column: ["column", "htmlContentfulHtmlLoader"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
@@ -263,8 +248,6 @@ export const PlasmicForSurgeons = Object.assign(
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
-    columns: makeNodeComponent("columns"),
-    column: makeNodeComponent("column"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),

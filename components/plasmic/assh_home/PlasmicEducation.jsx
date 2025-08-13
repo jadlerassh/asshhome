@@ -22,7 +22,9 @@ import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSec
 import SectionCmeMocSection from "../../SectionCmeMocSection"; // plasmic-import: QQidogip4Svc/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
+import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
 import BlockTanInformationLogoBlock from "../../BlockTanInformationLogoBlock"; // plasmic-import: KjbcRISpC18Z/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -105,12 +107,13 @@ function PlasmicEducation__RenderFunc(props) {
             title={"Hero: Education Overview - Title Card"}
           />
 
-          <SectionCmeMocSection
-            data-plasmic-name={"sectionCmeMocSection"}
-            data-plasmic-override={overrides.sectionCmeMocSection}
-            className={classNames("__wab_instance", sty.sectionCmeMocSection)}
-          />
-
+          <div className={classNames(projectcss.all, sty.freeBox___6Jq0M)}>
+            <SectionCmeMocSection
+              data-plasmic-name={"sectionCmeMocSection"}
+              data-plasmic-override={overrides.sectionCmeMocSection}
+              className={classNames("__wab_instance", sty.sectionCmeMocSection)}
+            />
+          </div>
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -121,66 +124,70 @@ function PlasmicEducation__RenderFunc(props) {
             title={"Education Overview - Mid-page CTA"}
           />
 
-          <SectionUpcomingCouresEventsSection
-            data-plasmic-name={"sectionUpcomingCouresEventsSection"}
-            data-plasmic-override={overrides.sectionUpcomingCouresEventsSection}
-            className={classNames(
-              "__wab_instance",
-              sty.sectionUpcomingCouresEventsSection
-            )}
-          />
-
-          <BlockTanInformationLogoBlock
-            data-plasmic-name={"blockTanInformationLogoBlock"}
-            data-plasmic-override={overrides.blockTanInformationLogoBlock}
-            className={classNames(
-              "__wab_instance",
-              sty.blockTanInformationLogoBlock
-            )}
-            desc={``}
-            title={"Education Overview - Tan information logo block"}
-          />
-
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
+          <div className={classNames(projectcss.all, sty.freeBox___5LKq5)}>
+            <SectionUpcomingCouresEventsSection
+              data-plasmic-name={"sectionUpcomingCouresEventsSection"}
+              data-plasmic-override={
+                overrides.sectionUpcomingCouresEventsSection
+              }
               className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
+                "__wab_instance",
+                sty.sectionUpcomingCouresEventsSection
               )}
+            />
+
+            <SectionPublication
+              data-plasmic-name={"sectionPublication"}
+              data-plasmic-override={overrides.sectionPublication}
+              className={classNames("__wab_instance", sty.sectionPublication)}
+            />
+
+            <BlockTanInformationLogoBlock
+              data-plasmic-name={"blockTanInformationLogoBlock"}
+              data-plasmic-override={overrides.blockTanInformationLogoBlock}
+              className={classNames(
+                "__wab_instance",
+                sty.blockTanInformationLogoBlock
+              )}
+              desc={``}
+              title={"Education Overview - Tan information logo block"}
+            />
+
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={``}
+              title={"What Sets Us Apart"}
+            />
+
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
             >
-              {"What Sets Us Apart"}
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"columns"}
-            data-plasmic-override={overrides.columns}
-            className={classNames(projectcss.all, sty.columns)}
-          >
-            <div className={classNames(projectcss.all, sty.column__cbYfl)}>
-              <HtmlContentfulHtmlLoader
-                data-plasmic-name={"htmlContentfulHtmlLoader"}
-                data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                className={classNames(
-                  "__wab_instance",
-                  sty.htmlContentfulHtmlLoader
-                )}
-                title={"What Sets Us Apart"}
-              />
-            </div>
-            <div className={classNames(projectcss.all, sty.column__j6C61)}>
-              <BlockQuoteBlock
-                data-plasmic-name={"blockQuoteBlock"}
-                data-plasmic-override={overrides.blockQuoteBlock}
-                className={classNames("__wab_instance", sty.blockQuoteBlock)}
-                quote={"singleLine"}
-              />
+              <div className={classNames(projectcss.all, sty.column__cbYfl)}>
+                <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader
+                  )}
+                  title={"What Sets Us Apart"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__j6C61)}>
+                <BlockQuoteBlock
+                  data-plasmic-name={"blockQuoteBlock"}
+                  data-plasmic-override={overrides.blockQuoteBlock}
+                  className={classNames("__wab_instance", sty.blockQuoteBlock)}
+                  quote={"singleLine"}
+                />
+              </div>
             </div>
           </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__gnIa1)} />
@@ -205,9 +212,9 @@ const PlasmicDescendants = {
     "sectionCmeMocSection",
     "sectionMidPageCtaSection",
     "sectionUpcomingCouresEventsSection",
+    "sectionPublication",
     "blockTanInformationLogoBlock",
-    "freeBox",
-    "text",
+    "itemSectionTitleDescriptionItem",
     "columns",
     "htmlContentfulHtmlLoader",
     "blockQuoteBlock",
@@ -218,9 +225,9 @@ const PlasmicDescendants = {
   sectionCmeMocSection: ["sectionCmeMocSection"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
+  sectionPublication: ["sectionPublication"],
   blockTanInformationLogoBlock: ["blockTanInformationLogoBlock"],
-  freeBox: ["freeBox", "text"],
-  text: ["text"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns", "htmlContentfulHtmlLoader", "blockQuoteBlock"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuoteBlock: ["blockQuoteBlock"],
@@ -267,11 +274,13 @@ export const PlasmicEducation = Object.assign(
     sectionUpcomingCouresEventsSection: makeNodeComponent(
       "sectionUpcomingCouresEventsSection"
     ),
+    sectionPublication: makeNodeComponent("sectionPublication"),
     blockTanInformationLogoBlock: makeNodeComponent(
       "blockTanInformationLogoBlock"
     ),
-    freeBox: makeNodeComponent("freeBox"),
-    text: makeNodeComponent("text"),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
     columns: makeNodeComponent("columns"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),

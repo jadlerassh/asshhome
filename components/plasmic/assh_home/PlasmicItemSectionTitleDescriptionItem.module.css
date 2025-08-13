@@ -15,13 +15,23 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 1320px;
   row-gap: 20px;
+  left: auto;
+  top: auto;
+  z-index: 1;
+  position: relative;
+  bottom: auto;
+  max-width: 1320px;
   min-width: 0;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .frame2 {
-    padding: 16px;
+    padding-left: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame2 {
+    padding-right: 15px;
   }
 }
 .h2 {
@@ -45,6 +55,7 @@
   }
 }
 .text {
+  display: block;
   font-size: 22px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -53,7 +64,6 @@
   color: rgba(49, 51, 55, 1);
   position: relative;
   width: 800px;
-  display: none;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text {

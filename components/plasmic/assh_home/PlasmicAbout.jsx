@@ -14,7 +14,9 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  hasVariant
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
@@ -25,6 +27,7 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -66,6 +69,9 @@ function PlasmicAbout__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <React.Fragment>
       <Head>
@@ -178,7 +184,11 @@ function PlasmicAbout__RenderFunc(props) {
                   data-plasmic-override={overrides.blockQuoteBlock}
                   className={classNames("__wab_instance", sty.blockQuoteBlock)}
                   name={"ASSH About Quote"}
-                  quote={"singleLine"}
+                  quote={
+                    hasVariant(globalVariants, "screen", "largeDesktop")
+                      ? "singleLine"
+                      : "singleLine"
+                  }
                 />
               </div>
             </div>

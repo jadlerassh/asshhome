@@ -73,6 +73,11 @@
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
+@media (max-width: 414px) {
+  .columns {
+    --plsmc-rc-col-gap: 50px;
+  }
+}
 .columnsleftOrRight_left {
   --plsmc-rc-col-gap: 50px;
 }
@@ -189,4 +194,5 @@
   max-width: 100%;
   object-fit: cover;
   font-size: 18px;
+  font-family: "Inter", sans-serif;
 }

@@ -23,8 +23,6 @@ import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionIt
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockHr from "../../BlockHr"; // plasmic-import: VNr8286wioLR/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
-import { Embed } from "@plasmicpkgs/plasmic-basic-components";
-import SectionQuestion from "../../SectionQuestion"; // plasmic-import: 9B7ukqwaDf9R/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -128,27 +126,29 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
             title={"Hero: Membership Overview - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__dBYek)}>
-            <ItemSectionTitleDescriptionItem
-              data-plasmic-name={"itemSectionTitleDescriptionItem"}
-              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-              className={classNames(
-                "__wab_instance",
-                sty.itemSectionTitleDescriptionItem
-              )}
-              descriptionSection={
-                "A career in hand surgery begins with a high school diploma, a four year college degree, and completion of medical school."
-              }
-              title={"Training Requirements"}
-            />
+          <div className={classNames(projectcss.all, sty.freeBox__spaHt)}>
+            <div className={classNames(projectcss.all, sty.freeBox__dBYek)}>
+              <ItemSectionTitleDescriptionItem
+                data-plasmic-name={"itemSectionTitleDescriptionItem"}
+                data-plasmic-override={
+                  overrides.itemSectionTitleDescriptionItem
+                }
+                className={classNames(
+                  "__wab_instance",
+                  sty.itemSectionTitleDescriptionItem
+                )}
+                descriptionSection={
+                  "A career in hand surgery begins with a high school diploma, a four year college degree, and completion of medical school."
+                }
+                title={"Training Requirements"}
+              />
 
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div className={classNames(projectcss.all, sty.column___8BsE)}>
-                <div className={classNames(projectcss.all, sty.freeBox__w6D3E)}>
+              <div
+                data-plasmic-name={"columns"}
+                data-plasmic-override={overrides.columns}
+                className={classNames(projectcss.all, sty.columns)}
+              >
+                <div className={classNames(projectcss.all, sty.column___8BsE)}>
                   <HtmlContentfulHtmlLoader
                     className={classNames(
                       "__wab_instance",
@@ -159,69 +159,72 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
                     }
                   />
                 </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.column__qKkv)}>
-                <HtmlContentfulHtmlLoader
-                  className={classNames(
-                    "__wab_instance",
-                    sty.htmlContentfulHtmlLoader__rEpJp
-                  )}
-                  title={"HTML: Become Hand Surgeon: Training Requirements Two"}
-                />
+                <div className={classNames(projectcss.all, sty.column__qKkv)}>
+                  <HtmlContentfulHtmlLoader
+                    className={classNames(
+                      "__wab_instance",
+                      sty.htmlContentfulHtmlLoader__rEpJp
+                    )}
+                    title={
+                      "HTML: Become Hand Surgeon: Training Requirements Two"
+                    }
+                  />
+                </div>
               </div>
             </div>
             <BlockHr
               className={classNames("__wab_instance", sty.blockHr__s0Yon)}
             />
-          </div>
-          <SectionMidPageLeftRightSection
-            className={classNames(
-              "__wab_instance",
-              sty.sectionMidPageLeftRightSection__zK78B
-            )}
-            leftOrRight={"left"}
-          />
 
-          <BlockHr
-            className={classNames("__wab_instance", sty.blockHr__fHct0)}
-          />
-
-          <SectionMidPageLeftRightSection
-            className={classNames(
-              "__wab_instance",
-              sty.sectionMidPageLeftRightSection__cLoo
-            )}
-            leftOrRight={"right"}
-            title={"Hero: Become a Hand Surgeon - Job Market for Hand Surgeons"}
-          />
-
-          <BlockHr
-            className={classNames("__wab_instance", sty.blockHr__nDeup)}
-          />
-
-          <Embed
-            data-plasmic-name={"embedHtml"}
-            data-plasmic-override={overrides.embedHtml}
-            className={classNames("__wab_instance", sty.embedHtml)}
-            code={"<h2>Questions?</h2>"}
-          />
-
-          <SectionQuestion
-            data-plasmic-name={"sectionQuestion"}
-            data-plasmic-override={overrides.sectionQuestion}
-            className={classNames("__wab_instance", sty.sectionQuestion)}
-            name={"Become a Hand Surgeon: Questions?"}
-          />
-
-          <div className={classNames(projectcss.all, sty.freeBox__pWelW)}>
-            <ButtonPrimary
-              data-plasmic-name={"buttonPrimary"}
-              data-plasmic-override={overrides.buttonPrimary}
-              className={classNames("__wab_instance", sty.buttonPrimary)}
-              secondaryInteractions={"secondary"}
-              text={"Contact ASSH"}
-              url={"mailto: info@assh.org"}
+            <SectionMidPageLeftRightSection
+              className={classNames(
+                "__wab_instance",
+                sty.sectionMidPageLeftRightSection__zK78B
+              )}
+              leftOrRight={"left"}
             />
+
+            <BlockHr
+              className={classNames("__wab_instance", sty.blockHr__fHct0)}
+            />
+
+            <SectionMidPageLeftRightSection
+              className={classNames(
+                "__wab_instance",
+                sty.sectionMidPageLeftRightSection__cLoo
+              )}
+              leftOrRight={"right"}
+              title={
+                "Hero: Become a Hand Surgeon - Job Market for Hand Surgeons"
+              }
+            />
+
+            <BlockHr
+              className={classNames("__wab_instance", sty.blockHr__nDeup)}
+            />
+
+            <div className={classNames(projectcss.all, sty.freeBox__pWelW)}>
+              <h3
+                data-plasmic-name={"h3"}
+                data-plasmic-override={overrides.h3}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h3,
+                  projectcss.__wab_text,
+                  sty.h3
+                )}
+              >
+                {"Questions?"}
+              </h3>
+              <ButtonPrimary
+                data-plasmic-name={"buttonPrimary"}
+                data-plasmic-override={overrides.buttonPrimary}
+                className={classNames("__wab_instance", sty.buttonPrimary)}
+                secondaryInteractions={"secondary"}
+                text={"Contact ASSH"}
+                url={"/s/about/contact-us"}
+              />
+            </div>
           </div>
           <SectionAdPlaceholder
             className={classNames(
@@ -250,8 +253,7 @@ const PlasmicDescendants = {
     "sectionTopPageHighlightCtaSection",
     "itemSectionTitleDescriptionItem",
     "columns",
-    "embedHtml",
-    "sectionQuestion",
+    "h3",
     "buttonPrimary",
     "blockAsshMissionBlueBlock"
   ],
@@ -259,8 +261,7 @@ const PlasmicDescendants = {
   sectionTopPageHighlightCtaSection: ["sectionTopPageHighlightCtaSection"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns"],
-  embedHtml: ["embedHtml"],
-  sectionQuestion: ["sectionQuestion"],
+  h3: ["h3"],
   buttonPrimary: ["buttonPrimary"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -304,8 +305,7 @@ export const PlasmicBecomeAHandSurgeon = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     columns: makeNodeComponent("columns"),
-    embedHtml: makeNodeComponent("embedHtml"),
-    sectionQuestion: makeNodeComponent("sectionQuestion"),
+    h3: makeNodeComponent("h3"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicBecomeAHandSurgeon
@@ -313,7 +313,7 @@ export const PlasmicBecomeAHandSurgeon = Object.assign(
     internalArgProps: PlasmicBecomeAHandSurgeon__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "Become a Hand Surgeon",
+      title: "Become a Hand Surgeon | About | ASSH",
       description: "",
       ogImageSrc: "",
       canonical: ""

@@ -110,7 +110,7 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
           <PlasmicImg__
             data-plasmic-name={"img"}
             data-plasmic-override={overrides.img}
-            alt={""}
+            alt={"ASSH Annual Meeting logo"}
             className={classNames(sty.img)}
             displayHeight={"100%"}
             displayMaxHeight={"none"}

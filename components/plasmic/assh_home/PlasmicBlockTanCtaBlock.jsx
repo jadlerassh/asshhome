@@ -15,6 +15,7 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
+  hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -57,7 +58,7 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
             "The 2025 Active Membership Application submission deadline is open until February 3, 2025.",
           linkText: "Apply for Active Membership",
           linkUrl: "https://www.assh.org",
-          title: "Active Membership- Button CTA"
+          title: "Tan CTA Block - Active Membership"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -163,12 +164,56 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
               })()}
             </React.Fragment>
           </div>
+          {(
+            hasVariant(globalVariants, "screen", "smallDesktop") ? true : false
+          ) ? (
+            <ButtonPrimary
+              className={classNames("__wab_instance", sty.buttonPrimary__zhXo)}
+              darkNoBgInteractions={[]}
+              fullWidthSecondary={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? true
+                  : undefined
+              }
+              secondaryInteractions={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? undefined
+                  : "secondary"
+              }
+              text={(() => {
+                try {
+                  return $queries.getHeroContent.data.response.items[0].fields
+                    .cta1Text;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
+                }
+              })()}
+              url={(() => {
+                try {
+                  return $queries.getHeroContent.data.response.items[0].fields
+                    .cta1link;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return `/membership/active`;
+                  }
+                  throw e;
+                }
+              })()}
+            />
+          ) : null}
         </div>
         <div className={classNames(projectcss.all, sty.column___2Sw2O)}>
           <ButtonPrimary
-            data-plasmic-name={"buttonPrimary"}
-            data-plasmic-override={overrides.buttonPrimary}
-            className={classNames("__wab_instance", sty.buttonPrimary)}
+            className={classNames("__wab_instance", sty.buttonPrimary___6LYqc)}
             darkNoBgInteractions={[]}
             secondaryInteractions={"secondary"}
             text={(() => {
@@ -207,10 +252,9 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "frame6", "text", "buttonPrimary"],
-  frame6: ["frame6", "text", "buttonPrimary"],
-  text: ["text"],
-  buttonPrimary: ["buttonPrimary"]
+  root: ["root", "frame6", "text"],
+  frame6: ["frame6", "text"],
+  text: ["text"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -247,7 +291,6 @@ export const PlasmicBlockTanCtaBlock = Object.assign(
     // Helper components rendering sub-elements
     frame6: makeNodeComponent("frame6"),
     text: makeNodeComponent("text"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicBlockTanCtaBlock
     internalVariantProps: PlasmicBlockTanCtaBlock__VariantProps,
     internalArgProps: PlasmicBlockTanCtaBlock__ArgProps

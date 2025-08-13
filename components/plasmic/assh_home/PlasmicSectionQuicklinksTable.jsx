@@ -158,15 +158,36 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.quickLinks
+        sty.quickLinks,
+        {
+          [sty.quickLinkscolumns__3Column]: hasVariant(
+            $state,
+            "columns",
+            "_3Column"
+          )
+        }
       )}
     >
       <div
         data-plasmic-name={"quickLinksContainer2"}
         data-plasmic-override={overrides.quickLinksContainer2}
-        className={classNames(projectcss.all, sty.quickLinksContainer2)}
+        className={classNames(projectcss.all, sty.quickLinksContainer2, {
+          [sty.quickLinksContainer2columns__3Column]: hasVariant(
+            $state,
+            "columns",
+            "_3Column"
+          )
+        })}
       >
-        <div className={classNames(projectcss.all, sty.freeBox__cBr52)}>
+        <div
+          className={classNames(projectcss.all, sty.freeBox__cBr52, {
+            [sty.freeBoxcolumns__3Column__cBr52E7MI]: hasVariant(
+              $state,
+              "columns",
+              "_3Column"
+            )
+          })}
+        >
           <div
             data-plasmic-name={"text"}
             data-plasmic-override={overrides.text}
@@ -194,7 +215,15 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
             </React.Fragment>
           </div>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox__h1PUo)}>
+        <div
+          className={classNames(projectcss.all, sty.freeBox__h1PUo, {
+            [sty.freeBoxcolumns__3Column__h1PUoe7MI]: hasVariant(
+              $state,
+              "columns",
+              "_3Column"
+            )
+          })}
+        >
           <div
             className={classNames(projectcss.all, sty.freeBox__g3XRs, {
               [sty.freeBoxcolumns__3Column__g3XRse7MI]: hasVariant(
@@ -228,6 +257,9 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
                     sty.freeBox__v0LlI,
                     hasVariant($state, "columns", "_4Column")
                       ? "quicklinkItem quicklinkItemFour"
+                      : hasVariant($state, "columns", "_3Column") &&
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? "quicklinkItem "
                       : hasVariant($state, "columns", "_3Column")
                       ? "quicklinkItem quicklinkItemThree"
                       : "quicklinkItem",

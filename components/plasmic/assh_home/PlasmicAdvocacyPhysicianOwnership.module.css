@@ -21,6 +21,21 @@
 .root > * {
   grid-column: 4;
 }
+@media (max-width: 1024px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 414px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 .sectionAdPlaceholder___4UTd8:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
@@ -46,7 +61,7 @@
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   border-radius: 10px;
-  padding: 0px 20px;
+  padding: 0px;
   margin: 70px 0px;
 }
 @media (max-width: 1440px) {
@@ -57,6 +72,12 @@
     justify-self: flex-start;
     grid-column-start: 3 !important;
     grid-column-end: -3 !important;
+  }
+}
+@media (max-width: 1024px) {
+  .freeBox__ng37J {
+    padding: 0px 20px;
+    margin: 50px 0px;
   }
 }
 .htmlContentfulHtmlLoader:global(.__wab_instance) {
@@ -72,10 +93,11 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 .sectionAccordionSectionTemplate:global(.__wab_instance) {
   max-width: 100%;
+  margin: 10px 0px;
 }
 .sectionAdPlaceholder___51WWs:global(.__wab_instance) {
   max-width: 100%;

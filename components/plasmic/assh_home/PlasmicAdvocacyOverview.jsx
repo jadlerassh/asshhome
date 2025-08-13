@@ -14,7 +14,8 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
@@ -26,6 +27,7 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import SectionQuestion from "../../SectionQuestion"; // plasmic-import: 9B7ukqwaDf9R/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -67,6 +69,9 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <React.Fragment>
       <Head>
@@ -125,11 +130,7 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
             title={"Hero: Advocacy Overview - Title Card"}
           />
 
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox___9UwXf)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -164,15 +165,14 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
                 />
               </div>
             </div>
+            <BlockArticleCardList
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardList__tjuFi
+              )}
+              name={"Advocacy Overview: Current Issues Links"}
+            />
           </div>
-          <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__tjuFi
-            )}
-            name={"Advocacy Overview: Current Issues Links"}
-          />
-
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -183,40 +183,46 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
             title={"Advocacy Overview - Mid-page CTA"}
           />
 
-          <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__dUIcu
-            )}
-            name={"Advocacy Overview: News & Updates Links"}
-          />
+          <div className={classNames(projectcss.all, sty.freeBox___856L6)}>
+            <BlockArticleCardList
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardList__dUIcu
+              )}
+              name={"Advocacy Overview: News & Updates Links"}
+            />
 
-          <SectionQuicklinksTable
-            data-plasmic-name={"sectionQuicklinksTable"}
-            data-plasmic-override={overrides.sectionQuicklinksTable}
-            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
-            columns={"_3Column"}
-            name={"Advocacy Overview: Quicklinks"}
-          />
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
+              className={classNames(
+                "__wab_instance",
+                sty.sectionQuicklinksTable
+              )}
+              columns={"_3Column"}
+              name={"Advocacy Overview: Quicklinks"}
+            />
 
-          <h3
-            data-plasmic-name={"h3"}
-            data-plasmic-override={overrides.h3}
-            className={classNames(
-              projectcss.all,
-              projectcss.h3,
-              projectcss.__wab_text,
-              sty.h3
-            )}
-          >
-            {"Questions?"}
-          </h3>
-          <SectionQuestion
-            data-plasmic-name={"sectionQuestion"}
-            data-plasmic-override={overrides.sectionQuestion}
-            className={classNames("__wab_instance", sty.sectionQuestion)}
-          />
-
+            <div className={classNames(projectcss.all, sty.freeBox__aSdjk)}>
+              <h3
+                data-plasmic-name={"h3"}
+                data-plasmic-override={overrides.h3}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h3,
+                  projectcss.__wab_text,
+                  sty.h3
+                )}
+              >
+                {"Questions?"}
+              </h3>
+              <SectionQuestion
+                data-plasmic-name={"sectionQuestion"}
+                data-plasmic-override={overrides.sectionQuestion}
+                className={classNames("__wab_instance", sty.sectionQuestion)}
+              />
+            </div>
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
@@ -242,7 +248,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
-    "freeBox",
     "itemSectionTitleDescriptionItem",
     "columns",
     "column",
@@ -255,14 +260,6 @@ const PlasmicDescendants = {
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  freeBox: [
-    "freeBox",
-    "itemSectionTitleDescriptionItem",
-    "columns",
-    "column",
-    "htmlContentfulHtmlLoader"
-  ],
-
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns", "column", "htmlContentfulHtmlLoader"],
   column: ["column", "htmlContentfulHtmlLoader"],
@@ -309,7 +306,6 @@ export const PlasmicAdvocacyOverview = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    freeBox: makeNodeComponent("freeBox"),
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),

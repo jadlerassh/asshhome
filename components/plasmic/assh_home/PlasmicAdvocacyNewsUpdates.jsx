@@ -146,6 +146,7 @@ function PlasmicAdvocacyNewsUpdates__RenderFunc(props) {
                 "__wab_instance",
                 sty.itemSectionTitleDescriptionItem
               )}
+              descriptionSection={``}
               title={"Latest Advocacy News"}
             />
 

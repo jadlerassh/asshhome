@@ -89,7 +89,7 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
         opId: "572d563e-66cd-4298-b01c-3d2af49b1c27",
         userArgs: {
-          params: [undefined]
+          params: [$props.name]
         },
         cacheKey: `plasmic.$.572d563e-66cd-4298-b01c-3d2af49b1c27.$.`,
         invalidatedKeys: null,

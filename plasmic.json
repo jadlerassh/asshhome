@@ -2148,7 +2148,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicCoursesEvents.jsx",
           "importSpec": {
-            "modulePath": "../pages/courses-events.jsx"
+            "modulePath": "../pages/education/courses-events.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicCoursesEvents.module.css",
           "scheme": "blackbox",
@@ -2215,7 +2215,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicBecomeAHandSurgeon.jsx",
           "importSpec": {
-            "modulePath": "../pages/membership/become-hand-surgeon.jsx"
+            "modulePath": "../pages/about/become-hand-surgeon.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicBecomeAHandSurgeon.module.css",
           "scheme": "blackbox",
@@ -3170,6 +3170,20 @@
           "cssFilePath": "plasmic/assh_home/PlasmicBlockArticleCardListWithImages.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "tyVWYfxJu13K",
+          "name": "NewsPublicationsOverview",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicNewsPublicationsOverview.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicNewsPublicationsOverview.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications"
         }
       ],
       "icons": [
@@ -4079,6 +4093,16 @@
           "id": "Qd4LU9JrSGD5",
           "name": "Column 9",
           "filePath": "../public/plasmic/assh_home/images/column9.png"
+        },
+        {
+          "id": "pwvMWoTH0NVo",
+          "name": "JHSGO-logo.png",
+          "filePath": "../public/plasmic/assh_home/images/jhsgoLogoPng.png"
+        },
+        {
+          "id": "_lXuH9JWsQwU",
+          "name": "JHS-logo.png",
+          "filePath": "../public/plasmic/assh_home/images/jhsLogoPng.png"
         }
       ],
       "indirect": false,

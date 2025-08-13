@@ -11,6 +11,7 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -30,7 +31,8 @@ export const PlasmicComponentFeaturedWebsiteCard__VariantProps = new Array();
 
 export const PlasmicComponentFeaturedWebsiteCard__ArgProps = new Array(
   "title",
-  "description2"
+  "description2",
+  "imageAssetId"
 );
 
 const $$ = {};
@@ -170,8 +172,66 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
         data-plasmic-name={"column"}
         data-plasmic-override={overrides.column}
         className={classNames(projectcss.all, sty.column)}
-      />
-
+      >
+        <div
+          data-plasmic-name={"columns"}
+          data-plasmic-override={overrides.columns}
+          className={classNames(projectcss.all, sty.columns)}
+        >
+          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+            (() => {
+              try {
+                return $props.title;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return [];
+                }
+                throw e;
+              }
+            })()
+          ).map((__plasmic_item_0, __plasmic_idx_0) => {
+            const currentItem = __plasmic_item_0;
+            const currentIndex = __plasmic_idx_0;
+            return (
+              <div
+                className={classNames(projectcss.all, sty.column___2Z1W6)}
+                key={currentIndex}
+              >
+                <PlasmicImg__
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
+                  alt={""}
+                  className={classNames(sty.img)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"100%"}
+                  loading={"lazy"}
+                  src={(() => {
+                    try {
+                      return currentItem;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              </div>
+            );
+          })}
+          <div className={classNames(projectcss.all, sty.column__tSl8H)} />
+        </div>
+      </div>
       {(() => {
         try {
           return (
@@ -256,10 +316,22 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  content: ["content", "h3", "text", "column", "description", "buttonPrimary"],
+  content: [
+    "content",
+    "h3",
+    "text",
+    "column",
+    "columns",
+    "img",
+    "description",
+    "buttonPrimary"
+  ],
+
   h3: ["h3"],
   text: ["text"],
-  column: ["column"],
+  column: ["column", "columns", "img"],
+  columns: ["columns", "img"],
+  img: ["img"],
   description: ["description"],
   buttonPrimary: ["buttonPrimary"]
 };
@@ -300,6 +372,8 @@ export const PlasmicComponentFeaturedWebsiteCard = Object.assign(
     h3: makeNodeComponent("h3"),
     text: makeNodeComponent("text"),
     column: makeNodeComponent("column"),
+    columns: makeNodeComponent("columns"),
+    img: makeNodeComponent("img"),
     description: makeNodeComponent("description"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicComponentFeaturedWebsiteCard

@@ -70,6 +70,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-family: "Manrope", sans-serif;
   min-width: 0;
 }
 .text___0Z3D0 {
@@ -77,6 +78,7 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  font-family: "Inter", sans-serif;
   min-width: 0;
 }
 .text__ovMF {
@@ -85,6 +87,7 @@
   height: auto;
   max-width: 100%;
   color: var(--token-YOr-x91EUcQe);
+  font-family: "Inter", sans-serif;
   min-width: 0;
 }
 .freeBox__aBaCb {
@@ -118,6 +121,7 @@
   max-width: 100%;
   color: var(--token-YLYGEwd03pX3);
   background: var(--token-YOr-x91EUcQe);
+  font-family: "Inter", sans-serif;
   border-radius: 50px;
   padding: 8px;
 }

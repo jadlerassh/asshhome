@@ -168,7 +168,7 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
                 })()}
                 imageAssetId={(() => {
                   try {
-                    return currentItem.fields.image.sys.id;
+                    return currentItem.fields.thumb.sys.id;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||

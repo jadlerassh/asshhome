@@ -28,7 +28,7 @@ import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListMemberNewsWithDescription from "../../CardListMemberNewsWithDescription"; // plasmic-import: mj20sYUsPblw/component
-import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
+import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -244,13 +244,15 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               )}
             />
 
-            <BlockQuicklinksTanBox
-              data-plasmic-name={"blockQuicklinksTanBox"}
-              data-plasmic-override={overrides.blockQuicklinksTanBox}
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
               className={classNames(
                 "__wab_instance",
-                sty.blockQuicklinksTanBox
+                sty.sectionQuicklinksTable
               )}
+              columns={"_3Column"}
+              name={"Member Quicklinks"}
             />
           </div>
           <div className={classNames(projectcss.all, sty.freeBox__rT0LT)}>
@@ -294,7 +296,7 @@ const PlasmicDescendants = {
     "blockArticleCardList",
     "sectionMidPageCtaSection",
     "cardListMemberNewsWithDescription",
-    "blockQuicklinksTanBox",
+    "sectionQuicklinksTable",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -303,7 +305,7 @@ const PlasmicDescendants = {
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   cardListMemberNewsWithDescription: ["cardListMemberNewsWithDescription"],
-  blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
+  sectionQuicklinksTable: ["sectionQuicklinksTable"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -348,7 +350,7 @@ export const PlasmicMembershipOverview = Object.assign(
     cardListMemberNewsWithDescription: makeNodeComponent(
       "cardListMemberNewsWithDescription"
     ),
-    blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
+    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicMembershipOverview
     internalVariantProps: PlasmicMembershipOverview__VariantProps,

@@ -82,7 +82,8 @@ function PlasmicItemCalloutItem__RenderFunc(props) {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        ``
       )}
     >
       <PlasmicLink__

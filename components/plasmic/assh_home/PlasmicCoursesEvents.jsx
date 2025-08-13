@@ -61,7 +61,21 @@ function PlasmicCoursesEvents__RenderFunc(props) {
   const $refs = refsRef.current;
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicCoursesEvents.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicCoursesEvents.pageMetadata.title}
+        />
+
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicCoursesEvents.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -140,7 +154,7 @@ export const PlasmicCoursesEvents = Object.assign(
     internalArgProps: PlasmicCoursesEvents__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "Courses & Events | Education | ASSH",
       description: "",
       ogImageSrc: "",
       canonical: ""

@@ -96,10 +96,24 @@ function PlasmicBlockMemberDashboard__RenderFunc(props) {
           />
 
           <ButtonPrimary
+            className={classNames("__wab_instance", sty.buttonPrimary__hifJp)}
+            quicklinkOption={true}
+            text={"Get Involved"}
+            url={"https://www.assh.org/s/membership/get-involved"}
+          />
+
+          <ButtonPrimary
+            className={classNames("__wab_instance", sty.buttonPrimary__va703)}
+            quicklinkOption={true}
+            text={"Membership Directory"}
+            url={"https://www.assh.org/s/membership/directory"}
+          />
+
+          <ButtonPrimary
             className={classNames("__wab_instance", sty.buttonPrimary__jbYoe)}
             quicklinkOption={true}
-            text={"Button Title"}
-            url={"#"}
+            text={"Pay Dues"}
+            url={"https://www.assh.org/s/my-profile"}
           />
         </div>
       </div>

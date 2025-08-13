@@ -289,6 +289,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                   data-plasmic-override={overrides.buttonPrimary}
                   className={classNames("__wab_instance", sty.buttonPrimary)}
                   darkNoBgInteractions={[]}
+                  megaMenuLink={[]}
                   secondaryInteractions={"secondary"}
                   text={"Donate Now"}
                   url={"https://www.assh.org/afsh/s/donate"}

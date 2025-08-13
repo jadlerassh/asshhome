@@ -44,7 +44,8 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "memberQuicklinks",
   "whiteButtonBlackSurround",
   "quicklinkOption",
-  "upcomingEvents"
+  "upcomingEvents",
+  "fullWidthSecondary"
 );
 
 export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
@@ -148,6 +149,13 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.upcomingEvents
+      },
+      {
+        path: "fullWidthSecondary",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          $props.fullWidthSecondary
       }
     ],
 
@@ -196,6 +204,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             $state,
             "fullWidthBlueInteractions",
             "brandBlue"
+          ),
+          [sty.rootfullWidthSecondary]: hasVariant(
+            $state,
+            "fullWidthSecondary",
+            "fullWidthSecondary"
           ),
           [sty.rootglobal_unnamedGlobalGroupOfVariants2_upcomingEvents]:
             hasVariant(
@@ -250,18 +263,15 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "darkInteractions",
               "dark"
             ),
-            [sty.buttonHighlight2darkNoBgInteractions_hover]: hasVariant(
-              $state,
-              "darkNoBgInteractions",
-              "hover"
-            ),
-            [sty.buttonHighlight2darkNoBgInteractions_hover_textArrowButton]:
-              hasVariant($state, "textArrowButton", "textArrowButton") &&
-              hasVariant($state, "darkNoBgInteractions", "hover"),
             [sty.buttonHighlight2darkNoBgInteractions_unnamedVariant]:
               hasVariant($state, "darkNoBgInteractions", "unnamedVariant"),
             [sty.buttonHighlight2fullWidthBlueInteractions_brandBlue]:
               hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
+            [sty.buttonHighlight2fullWidthSecondary]: hasVariant(
+              $state,
+              "fullWidthSecondary",
+              "fullWidthSecondary"
+            ),
             [sty.buttonHighlight2global_unnamedGlobalGroupOfVariants2_upcomingEvents]:
               hasVariant(
                 globalVariants,
@@ -272,11 +282,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "megaMenuLink",
               "megaMenu"
-            ),
-            [sty.buttonHighlight2memberQuicklinks_quicklinkHover]: hasVariant(
-              $state,
-              "memberQuicklinks",
-              "quicklinkHover"
             ),
             [sty.buttonHighlight2memberQuicklinks_quicklink]: hasVariant(
               $state,
@@ -292,11 +297,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "secondaryInteractions",
               "brandBlue2"
-            ),
-            [sty.buttonHighlight2secondaryInteractions_hover]: hasVariant(
-              $state,
-              "secondaryInteractions",
-              "hover"
             ),
             [sty.buttonHighlight2secondaryInteractions_secondary]: hasVariant(
               $state,
@@ -345,13 +345,15 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "darkInteractions",
               "dark"
             ),
-            [sty.icon12X12darkNoBgInteractions_hover_textArrowButton]:
-              hasVariant($state, "textArrowButton", "textArrowButton") &&
-              hasVariant($state, "darkNoBgInteractions", "hover"),
             [sty.icon12X12fullWidthBlueInteractions_brandBlue]: hasVariant(
               $state,
               "fullWidthBlueInteractions",
               "brandBlue"
+            ),
+            [sty.icon12X12fullWidthSecondary]: hasVariant(
+              $state,
+              "fullWidthSecondary",
+              "fullWidthSecondary"
             ),
             [sty.icon12X12megaMenuLink_megaMenu]: hasVariant(
               $state,
@@ -372,11 +374,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "secondaryInteractions",
               "brandBlue2"
-            ),
-            [sty.icon12X12secondaryInteractions_hover]: hasVariant(
-              $state,
-              "secondaryInteractions",
-              "hover"
             ),
             [sty.icon12X12secondaryInteractions_secondary]: hasVariant(
               $state,
@@ -406,6 +403,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             className={classNames(projectcss.all, sty.svg__gs5Cp, {
               [sty.svgfullWidthBlueInteractions_brandBlue__gs5CpudmXr]:
                 hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
+              [sty.svgfullWidthSecondary__gs5CpQwlWf]: hasVariant(
+                $state,
+                "fullWidthSecondary",
+                "fullWidthSecondary"
+              ),
               [sty.svgmemberQuicklinks_quicklink__gs5CpTwLim]: hasVariant(
                 $state,
                 "memberQuicklinks",
@@ -443,14 +445,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "darkInteractions",
                 "dark"
               ),
-              [sty.text2darkNoBgInteractions_hover]: hasVariant(
-                $state,
-                "darkNoBgInteractions",
-                "hover"
-              ),
-              [sty.text2darkNoBgInteractions_hover_textArrowButton]:
-                hasVariant($state, "textArrowButton", "textArrowButton") &&
-                hasVariant($state, "darkNoBgInteractions", "hover"),
               [sty.text2darkNoBgInteractions_unnamedVariant]: hasVariant(
                 $state,
                 "darkNoBgInteractions",
@@ -461,15 +455,15 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "fullWidthBlueInteractions",
                 "brandBlue"
               ),
+              [sty.text2fullWidthSecondary]: hasVariant(
+                $state,
+                "fullWidthSecondary",
+                "fullWidthSecondary"
+              ),
               [sty.text2megaMenuLink_megaMenu]: hasVariant(
                 $state,
                 "megaMenuLink",
                 "megaMenu"
-              ),
-              [sty.text2memberQuicklinks_quicklinkHover]: hasVariant(
-                $state,
-                "memberQuicklinks",
-                "quicklinkHover"
               ),
               [sty.text2memberQuicklinks_quicklink]: hasVariant(
                 $state,
@@ -485,11 +479,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 $state,
                 "secondaryInteractions",
                 "brandBlue2"
-              ),
-              [sty.text2secondaryInteractions_hover]: hasVariant(
-                $state,
-                "secondaryInteractions",
-                "hover"
               ),
               [sty.text2secondaryInteractions_secondary]: hasVariant(
                 $state,
@@ -534,9 +523,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
           data-plasmic-name={"icon12X125"}
           data-plasmic-override={overrides.icon12X125}
           className={classNames(projectcss.all, sty.icon12X125, {
-            [sty.icon12X125darkNoBgInteractions_hover_textArrowButton]:
-              hasVariant($state, "textArrowButton", "textArrowButton") &&
-              hasVariant($state, "darkNoBgInteractions", "hover"),
             [sty.icon12X125quicklinkOption]: hasVariant(
               $state,
               "quicklinkOption",
@@ -561,9 +547,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "darkInteractions",
                 "dark"
               ),
-              [sty.svgdarkNoBgInteractions_hover_textArrowButton__bsMdxAyj9OUQaqx]:
-                hasVariant($state, "textArrowButton", "textArrowButton") &&
-                hasVariant($state, "darkNoBgInteractions", "hover"),
               [sty.svgsecondaryInteractions_secondary__bsMdxzo9SF]: hasVariant(
                 $state,
                 "secondaryInteractions",
@@ -592,9 +575,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
           data-plasmic-name={"navItemSimple"}
           data-plasmic-override={overrides.navItemSimple}
           className={classNames(projectcss.all, sty.navItemSimple, {
-            [sty.navItemSimpledarkNoBgInteractions_hover_textArrowButton]:
-              hasVariant($state, "textArrowButton", "textArrowButton") &&
-              hasVariant($state, "darkNoBgInteractions", "hover"),
             [sty.navItemSimplequicklinkOption]: hasVariant(
               $state,
               "quicklinkOption",

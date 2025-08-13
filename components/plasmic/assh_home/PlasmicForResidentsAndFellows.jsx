@@ -131,27 +131,16 @@ function PlasmicForResidentsAndFellows__RenderFunc(props) {
               title={"How ASSH Supports Trainees"}
             />
 
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div
-                data-plasmic-name={"column"}
-                data-plasmic-override={overrides.column}
-                className={classNames(projectcss.all, sty.column)}
-              >
-                <HtmlContentfulHtmlLoader
-                  data-plasmic-name={"htmlContentfulHtmlLoader"}
-                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.htmlContentfulHtmlLoader
-                  )}
-                  title={"How ASSH Supports Trainees"}
-                />
-              </div>
-            </div>
+            <HtmlContentfulHtmlLoader
+              data-plasmic-name={"htmlContentfulHtmlLoader"}
+              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader
+              )}
+              title={"How ASSH Supports Trainees"}
+            />
+
             <BlockArticleCardList
               data-plasmic-name={"blockArticleCardList"}
               data-plasmic-override={overrides.blockArticleCardList}
@@ -205,8 +194,6 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
-    "columns",
-    "column",
     "htmlContentfulHtmlLoader",
     "blockArticleCardList",
     "sectionMidPageBannerWithQuicklinks",
@@ -217,8 +204,6 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "column", "htmlContentfulHtmlLoader"],
-  column: ["column", "htmlContentfulHtmlLoader"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageBannerWithQuicklinks: ["sectionMidPageBannerWithQuicklinks"],
@@ -265,8 +250,6 @@ export const PlasmicForResidentsAndFellows = Object.assign(
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
-    columns: makeNodeComponent("columns"),
-    column: makeNodeComponent("column"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageBannerWithQuicklinks: makeNodeComponent(

@@ -140,20 +140,14 @@ function PlasmicForPatients__RenderFunc(props) {
               title={"How ASSH Helps Patients"}
             />
 
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader___1Mq2L
-              )}
-              title={"For Patients Intro"}
-            />
-
             <div className={classNames(projectcss.all, sty.columns__nlUcV)}>
               <div className={classNames(projectcss.all, sty.column___2AzTg)}>
                 <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
                   className={classNames(
                     "__wab_instance",
-                    sty.htmlContentfulHtmlLoader__vW5Aw
+                    sty.htmlContentfulHtmlLoader
                   )}
                   title={"How ASSH Helps Patients"}
                 />
@@ -318,6 +312,7 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
+    "htmlContentfulHtmlLoader",
     "blockQuoteBlock",
     "sectionMidPageCtaSection",
     "content",
@@ -331,6 +326,7 @@ const PlasmicDescendants = {
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuoteBlock: ["blockQuoteBlock"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   content: ["content", "h2", "column", "description", "buttonPrimary"],
@@ -380,6 +376,7 @@ export const PlasmicForPatients = Object.assign(
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     content: makeNodeComponent("content"),

@@ -9,14 +9,18 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: CnWCC_7WGfjm
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -27,7 +31,7 @@ createPlasmicElementProxy;
 
 export const PlasmicSectionPublication__VariantProps = new Array();
 
-export const PlasmicSectionPublication__ArgProps = new Array();
+export const PlasmicSectionPublication__ArgProps = new Array("name");
 
 const $$ = {};
 
@@ -43,7 +47,9 @@ function PlasmicSectionPublication__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          name: "Publication Card: Explore All ASSH Publications"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -58,6 +64,82 @@ function PlasmicSectionPublication__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "links",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                const entryMap = Object.fromEntries(
+                  $queries.getNav.data.response.includes.Entry.map(entry => [
+                    entry.sys.id,
+                    entry
+                  ])
+                );
+                return $queries.getNav.data.response.items[0].fields.childLinks
+                  .map(link => {
+                    const entry = entryMap[link.sys.id];
+                    const icon =
+                      $queries.getNav.data.response.includes.Asset.find(
+                        asset => asset.sys.id === entry.fields.icon.sys.id
+                      );
+                    return {
+                      id: link.sys.id,
+                      label: entry?.fields.label || "Label missing",
+                      order: Number(entry?.fields.order) || 0,
+                      column: entry?.fields.column ?? 0,
+                      url: entry?.fields.url || "#",
+                      showExternalIcon: entry?.fields.showExternalIcon || false,
+                      subText: entry?.fields.subText || "",
+                      iconUrl: icon?.fields.file.url || ""
+                    };
+                  })
+                  .sort((a, b) => a.order - b.order);
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return {};
+              }
+              throw e;
+            }
+          })()
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
+  const new$Queries = {
+    getNav: usePlasmicDataOp(() => {
+      return {
+        sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
+        opId: "cd767760-3d32-4b02-933e-cd25d3232278",
+        userArgs: {
+          params: [$props.name]
+        },
+        cacheKey: `plasmic.$.cd767760-3d32-4b02-933e-cd25d3232278.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    })
+  };
+  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
+    setDollarQueries(new$Queries);
+    $queries = new$Queries;
+  }
   return (
     <div
       data-plasmic-name={"root"}
@@ -75,7 +157,11 @@ function PlasmicSectionPublication__RenderFunc(props) {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox___5POeS)}>
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
         <div className={classNames(projectcss.all, sty.columns__aUuDl)}>
           <div className={classNames(projectcss.all, sty.column__epLkU)}>
             <div
@@ -87,51 +173,100 @@ function PlasmicSectionPublication__RenderFunc(props) {
                 sty.text
               )}
             >
-              {"Explore All ASSH Publications"}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $queries.getNav.data.response.items[0].fields.label;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Explore All ASSH Publications";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.column__ybSez)}>
             <div className={classNames(projectcss.all, sty.columns__iagPb)}>
-              <div className={classNames(projectcss.all, sty.column__sZnDg)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__xMSzs)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"100%"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/jhsLogo2016WhiteBackground1Png.png",
-                    fullWidth: 1687,
-                    fullHeight: 719,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__tMlNe)}>
-                <div className={classNames(projectcss.all, sty.freeBox__qDEqD)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__gElQt)}
-                    displayHeight={"100%"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"100%"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/assh_home/images/jhsGoBannerHighResFromElsevier1Png.png",
-                      fullWidth: 2133,
-                      fullHeight: 605,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-              </div>
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $state.links;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.column__sZnDg
+                    )}
+                    component={Link}
+                    href={(() => {
+                      try {
+                        return currentItem.url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    key={currentIndex}
+                    platform={"nextjs"}
+                  >
+                    <PlasmicImg__
+                      data-plasmic-name={"img"}
+                      data-plasmic-override={overrides.img}
+                      alt={"Journal of Hand Surgery logo"}
+                      className={classNames(sty.img)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"100%"}
+                      loading={"lazy"}
+                      src={(() => {
+                        try {
+                          return currentItem.iconUrl;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return {
+                              src: "/plasmic/assh_home/images/jhsLogoPng.png",
+                              fullWidth: 662,
+                              fullHeight: 266,
+                              aspectRatio: undefined
+                            };
+                          }
+                          throw e;
+                        }
+                      })()}
+                    />
+                  </PlasmicLink__>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -141,8 +276,10 @@ function PlasmicSectionPublication__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "text"],
-  text: ["text"]
+  root: ["root", "freeBox", "text", "img"],
+  freeBox: ["freeBox", "text", "img"],
+  text: ["text"],
+  img: ["img"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -177,7 +314,9 @@ export const PlasmicSectionPublication = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     text: makeNodeComponent("text"),
+    img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicSectionPublication
     internalVariantProps: PlasmicSectionPublication__VariantProps,
     internalArgProps: PlasmicSectionPublication__ArgProps
