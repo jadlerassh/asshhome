@@ -33,7 +33,7 @@
   -webkit-transition-duration: 0.3s;
 }
 .root:hover .interactionsHover {
-  box-shadow: 0px 0px 50px 0px #00000026;
+  box-shadow: none;
 }
 .frame6 {
   width: 100%;
@@ -120,6 +120,9 @@
   position: relative;
   font-weight: 600;
 }
+.root:hover .navigationItem {
+  color: var(--token-j3urVBXa9jtJ);
+}
 .navigationItem2 {
   display: block;
   flex-grow: 1;
@@ -127,6 +130,9 @@
   letter-spacing: 0em;
   color: rgba(49, 51, 55, 1);
   position: relative;
+}
+.root:hover .navigationItem2 {
+  color: var(--token-j3urVBXa9jtJ);
 }
 .icon12X124 {
   width: auto;

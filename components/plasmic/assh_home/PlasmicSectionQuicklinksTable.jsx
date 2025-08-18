@@ -262,7 +262,7 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
                       ? "quicklinkItem "
                       : hasVariant($state, "columns", "_3Column")
                       ? "quicklinkItem quicklinkItemThree"
-                      : "quicklinkItem",
+                      : "quicklinkItem quicklinkItemFour",
                     {
                       [sty.freeBoxcolumns__3Column__v0LlIe7MI]: hasVariant(
                         $state,

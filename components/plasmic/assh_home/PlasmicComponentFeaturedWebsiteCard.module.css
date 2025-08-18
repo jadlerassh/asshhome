@@ -55,11 +55,8 @@
   --plsmc-rc-col-gap: 0px;
   padding: 8px;
 }
-.columns > :nth-child(2n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
-}
-.columns > :nth-child(2n + 2) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+.columns > :nth-child(1n + 1) {
+  width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns {
@@ -93,34 +90,27 @@
   max-width: 100%;
   width: 100%;
   object-position: center center;
+  height: 100%;
   min-width: 0;
+  min-height: 0;
 }
 .img > picture > img {
   object-fit: fill;
   object-position: center center;
 }
-.column__tSl8H {
+.freeBox {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
   min-width: 0;
-  padding: 8px;
 }
-.description {
-  display: block;
-  font-size: 18px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 28px;
-  color: rgba(49, 51, 55, 1);
-  align-self: stretch;
-  position: relative;
+.contentfulContents:global(.__wab_instance) {
+  max-width: 100%;
 }
 .buttonPrimary:global(.__wab_instance) {
   max-width: 100%;

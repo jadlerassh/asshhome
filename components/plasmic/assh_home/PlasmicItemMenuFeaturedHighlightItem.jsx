@@ -48,7 +48,7 @@ function PlasmicItemMenuFeaturedHighlightItem__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          entryId: "yrhcX8GuivbhbQCHLuioj"
+          entryId: "hfm8NmvU7Ka8LeZsg1vnQ"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -110,6 +110,48 @@ function PlasmicItemMenuFeaturedHighlightItem__RenderFunc(props) {
           data-plasmic-override={overrides.freeBox}
           className={classNames(projectcss.all, sty.freeBox)}
         >
+          {(() => {
+            try {
+              return (
+                $queries.getEntry.data.response.fields.label !== "" &&
+                $queries.getEntry.data.response.fields.label !== undefined
+              );
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return true;
+              }
+              throw e;
+            }
+          })() ? (
+            <div
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text
+              )}
+            >
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $queries.getEntry.data.response.fields.label;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "80th Annual Meeting of the American Society for Surgery of the Hand";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
+            </div>
+          ) : null}
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
             (() => {
               try {
@@ -198,6 +240,7 @@ const PlasmicDescendants = {
     "root",
     "frame4",
     "freeBox",
+    "text",
     "contentfulContents",
     "navItemSimple",
     "buttonPrimary"
@@ -206,12 +249,14 @@ const PlasmicDescendants = {
   frame4: [
     "frame4",
     "freeBox",
+    "text",
     "contentfulContents",
     "navItemSimple",
     "buttonPrimary"
   ],
 
-  freeBox: ["freeBox", "contentfulContents"],
+  freeBox: ["freeBox", "text", "contentfulContents"],
+  text: ["text"],
   contentfulContents: ["contentfulContents"],
   navItemSimple: ["navItemSimple", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"]
@@ -252,6 +297,7 @@ export const PlasmicItemMenuFeaturedHighlightItem = Object.assign(
     // Helper components rendering sub-elements
     frame4: makeNodeComponent("frame4"),
     freeBox: makeNodeComponent("freeBox"),
+    text: makeNodeComponent("text"),
     contentfulContents: makeNodeComponent("contentfulContents"),
     navItemSimple: makeNodeComponent("navItemSimple"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),

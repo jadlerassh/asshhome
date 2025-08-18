@@ -18,6 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import ContentfulContents from "../../ContentfulContents"; // plasmic-import: xnR31SmiTDW4/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -29,11 +30,7 @@ createPlasmicElementProxy;
 
 export const PlasmicComponentFeaturedWebsiteCard__VariantProps = new Array();
 
-export const PlasmicComponentFeaturedWebsiteCard__ArgProps = new Array(
-  "title",
-  "description2",
-  "imageAssetId"
-);
+export const PlasmicComponentFeaturedWebsiteCard__ArgProps = new Array("title");
 
 const $$ = {};
 
@@ -50,9 +47,7 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          title: "Handthology",
-          description2:
-            "Learn about hand surgery and common conditions of the hand."
+          title: "Handthology"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -205,7 +200,7 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
                   data-plasmic-override={overrides.img}
                   alt={""}
                   className={classNames(sty.img)}
-                  displayHeight={"auto"}
+                  displayHeight={"100%"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
                   displayMinHeight={"0"}
@@ -214,7 +209,8 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
                   loading={"lazy"}
                   src={(() => {
                     try {
-                      return currentItem;
+                      return $queries.getContent.data.response.includes.Asset[0]
+                        .fields.file.url;
                     } catch (e) {
                       if (
                         e instanceof TypeError ||
@@ -229,52 +225,54 @@ function PlasmicComponentFeaturedWebsiteCard__RenderFunc(props) {
               </div>
             );
           })}
-          <div className={classNames(projectcss.all, sty.column__tSl8H)} />
         </div>
       </div>
-      {(() => {
-        try {
-          return (
-            $queries.getContent.data.response.items[0].fields.description !==
-            undefined
-          );
-        } catch (e) {
-          if (
-            e instanceof TypeError ||
-            e?.plasmicType === "PlasmicUndefinedDataError"
-          ) {
-            return true;
+      {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+        (() => {
+          try {
+            return $queries.getContent.data.response.items[0].fields
+              .description;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return [];
+            }
+            throw e;
           }
-          throw e;
-        }
-      })() ? (
-        <div
-          data-plasmic-name={"description"}
-          data-plasmic-override={overrides.description}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.description
-          )}
-        >
-          <React.Fragment>
-            {(() => {
-              try {
-                return $queries.getContent.data.response.items[0].fields
-                  .description;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return "Learn about hand surgery and common conditions of the hand.";
+        })()
+      ).map((__plasmic_item_0, __plasmic_idx_0) => {
+        const currentItem = __plasmic_item_0;
+        const currentIndex = __plasmic_idx_0;
+        return (
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+            key={currentIndex}
+          >
+            <ContentfulContents
+              data-plasmic-name={"contentfulContents"}
+              data-plasmic-override={overrides.contentfulContents}
+              className={classNames("__wab_instance", sty.contentfulContents)}
+              contents={(() => {
+                try {
+                  return currentItem.content;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
                 }
-                throw e;
-              }
-            })()}
-          </React.Fragment>
-        </div>
-      ) : null}
+              })()}
+            />
+          </div>
+        );
+      })}
       {(() => {
         try {
           return (
@@ -323,7 +321,8 @@ const PlasmicDescendants = {
     "column",
     "columns",
     "img",
-    "description",
+    "freeBox",
+    "contentfulContents",
     "buttonPrimary"
   ],
 
@@ -332,7 +331,8 @@ const PlasmicDescendants = {
   column: ["column", "columns", "img"],
   columns: ["columns", "img"],
   img: ["img"],
-  description: ["description"],
+  freeBox: ["freeBox", "contentfulContents"],
+  contentfulContents: ["contentfulContents"],
   buttonPrimary: ["buttonPrimary"]
 };
 
@@ -374,7 +374,8 @@ export const PlasmicComponentFeaturedWebsiteCard = Object.assign(
     column: makeNodeComponent("column"),
     columns: makeNodeComponent("columns"),
     img: makeNodeComponent("img"),
-    description: makeNodeComponent("description"),
+    freeBox: makeNodeComponent("freeBox"),
+    contentfulContents: makeNodeComponent("contentfulContents"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicComponentFeaturedWebsiteCard
     internalVariantProps: PlasmicComponentFeaturedWebsiteCard__VariantProps,

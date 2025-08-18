@@ -73,7 +73,9 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -473,7 +475,9 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "gLnoj82AzKVVT7qXiqAbHD",
@@ -539,7 +543,9 @@
           "componentImportPath": "@plasmicpkgs/plasmic-tabs"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -565,7 +571,9 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "xfguyo8p9zs8FxMdioQAoN",
@@ -599,7 +607,9 @@
           "componentImportPath": "@plasmicpkgs/plasmic-contentful"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -657,7 +667,9 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -679,7 +691,9 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -887,7 +901,9 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -909,7 +925,9 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "34tvEQuyqfK98iGCjMbawB",
@@ -3184,6 +3202,47 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/news-publications"
+        },
+        {
+          "id": "tunsLs0QnFEC",
+          "name": "ItemSocialIconsWhite",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemSocialIconsWhite.jsx",
+          "importSpec": {
+            "modulePath": "ItemSocialIconsWhite.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemSocialIconsWhite.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ebdLaJXE2BoV",
+          "name": "JournalOfHandSurgery",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicJournalOfHandSurgery.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/jhs.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicJournalOfHandSurgery.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/jhs"
+        },
+        {
+          "id": "LqSOOVk2zON6",
+          "name": "JournalCmeCreditExams",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicJournalCmeCreditExams.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/journal-cme-credit-exams.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicJournalCmeCreditExams.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/journal-cme-credit-exams"
         }
       ],
       "icons": [
@@ -4103,6 +4162,21 @@
           "id": "_lXuH9JWsQwU",
           "name": "JHS-logo.png",
           "filePath": "../public/plasmic/assh_home/images/jhsLogoPng.png"
+        },
+        {
+          "id": "Dt5e0nurdZ5e",
+          "name": "Image Frame",
+          "filePath": "../public/plasmic/assh_home/images/imageFrame.jpg"
+        },
+        {
+          "id": "Io6PJZ9cyPgy",
+          "name": "Frame 5",
+          "filePath": "../public/plasmic/assh_home/images/frame5.png"
+        },
+        {
+          "id": "unHm5yNRvyzs",
+          "name": "Image 9",
+          "filePath": "../public/plasmic/assh_home/images/image9.png"
         }
       ],
       "indirect": false,
@@ -4122,7 +4196,9 @@
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     },
     {
       "projectId": "enk3K4vZ6pmH6kVCoZJXGn",
@@ -4144,7 +4220,9 @@
           "componentImportPath": "@plasmicpkgs/react-youtube"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "styleTokensProviderFilePath": "",
+      "projectModuleFilePath": ""
     }
   ],
   "globalVariants": {
@@ -4173,6 +4251,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.341",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.341/dist/plasmic.schema.json"
+  "cliVersion": "0.1.342",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.342/dist/plasmic.schema.json"
 }

@@ -136,7 +136,7 @@ function PlasmicAdvocacyNewsUpdates__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader
               )}
-              title={"Advocacy News and Updates"}
+              title={"Advocacy - News and Updates"}
             />
 
             <ItemSectionTitleDescriptionItem

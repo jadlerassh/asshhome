@@ -31,7 +31,18 @@
   height: auto;
   max-width: 100%;
   align-self: stretch;
+  row-gap: 8px;
   min-width: 0;
+}
+.text {
+  display: block;
+  font-size: 24px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 1);
+  width: 345px;
 }
 .contentfulContents:global(.__wab_instance) {
   max-width: 100%;

@@ -231,6 +231,8 @@
   .row2 {
     max-width: 1320px;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     min-width: 0;
   }
 }

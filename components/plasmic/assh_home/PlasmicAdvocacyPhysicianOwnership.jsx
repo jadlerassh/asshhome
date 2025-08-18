@@ -133,7 +133,7 @@ function PlasmicAdvocacyPhysicianOwnership__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader
               )}
-              title={"HTML: Advocacy - Physician Ownership"}
+              title={"Advocacy - Physician Ownership"}
             />
 
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(

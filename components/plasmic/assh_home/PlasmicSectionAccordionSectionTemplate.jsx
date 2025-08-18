@@ -174,39 +174,6 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
             }
           }}
         >
-          <h2
-            data-plasmic-name={"title2"}
-            data-plasmic-override={overrides.title2}
-            className={classNames(
-              projectcss.all,
-              projectcss.h2,
-              projectcss.__wab_text,
-              sty.title2,
-              {
-                [sty.title2openInteractions_open]: hasVariant(
-                  $state,
-                  "openInteractions",
-                  "open"
-                )
-              }
-            )}
-          >
-            <React.Fragment>
-              {(() => {
-                try {
-                  return $props.title;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "Eligibility";
-                  }
-                  throw e;
-                }
-              })()}
-            </React.Fragment>
-          </h2>
           <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
@@ -254,6 +221,39 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
               />
             ) : null}
           </div>
+          <h2
+            data-plasmic-name={"title2"}
+            data-plasmic-override={overrides.title2}
+            className={classNames(
+              projectcss.all,
+              projectcss.h2,
+              projectcss.__wab_text,
+              sty.title2,
+              {
+                [sty.title2openInteractions_open]: hasVariant(
+                  $state,
+                  "openInteractions",
+                  "open"
+                )
+              }
+            )}
+          >
+            <React.Fragment>
+              {(() => {
+                try {
+                  return $props.title;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "Eligibility";
+                  }
+                  throw e;
+                }
+              })()}
+            </React.Fragment>
+          </h2>
         </div>
       </div>
       <div
@@ -339,8 +339,8 @@ const PlasmicDescendants = {
     "root",
     "accordion2",
     "accordionButton2",
-    "title2",
     "freeBox",
+    "title2",
     "accordion",
     "accordionBody",
     "membershipContentGroup",
@@ -349,10 +349,10 @@ const PlasmicDescendants = {
     "paragraph"
   ],
 
-  accordion2: ["accordion2", "accordionButton2", "title2", "freeBox"],
-  accordionButton2: ["accordionButton2", "title2", "freeBox"],
-  title2: ["title2"],
+  accordion2: ["accordion2", "accordionButton2", "freeBox", "title2"],
+  accordionButton2: ["accordionButton2", "freeBox", "title2"],
   freeBox: ["freeBox"],
+  title2: ["title2"],
   accordion: [
     "accordion",
     "accordionBody",
@@ -418,8 +418,8 @@ export const PlasmicSectionAccordionSectionTemplate = Object.assign(
     // Helper components rendering sub-elements
     accordion2: makeNodeComponent("accordion2"),
     accordionButton2: makeNodeComponent("accordionButton2"),
-    title2: makeNodeComponent("title2"),
     freeBox: makeNodeComponent("freeBox"),
+    title2: makeNodeComponent("title2"),
     accordion: makeNodeComponent("accordion"),
     accordionBody: makeNodeComponent("accordionBody"),
     membershipContentGroup: makeNodeComponent("membershipContentGroup"),

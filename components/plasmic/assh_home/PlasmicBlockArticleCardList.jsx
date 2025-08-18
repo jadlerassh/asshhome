@@ -19,7 +19,6 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
@@ -207,41 +206,6 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
         sty.root
       )}
     >
-      <ItemSectionTitleDescriptionItem
-        data-plasmic-name={"itemSectionTitleDescriptionItem"}
-        data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-        className={classNames(
-          "__wab_instance",
-          sty.itemSectionTitleDescriptionItem
-        )}
-        descriptionSection={(() => {
-          try {
-            return $queries.getCardList.data.response.items[0].fields.subText;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return undefined;
-            }
-            throw e;
-          }
-        })()}
-        title={(() => {
-          try {
-            return $queries.getCardList.data.response.items[0].fields.label;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return undefined;
-            }
-            throw e;
-          }
-        })()}
-      />
-
       <div className={classNames(projectcss.all, sty.freeBox__wHb3H)}>
         {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
           (() => {
@@ -408,14 +372,7 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "itemSectionTitleDescriptionItem",
-    "itemArticleCardItemWithDescription",
-    "buttonPrimary"
-  ],
-
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  root: ["root", "itemArticleCardItemWithDescription", "buttonPrimary"],
   itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"],
   buttonPrimary: ["buttonPrimary"]
 };
@@ -452,9 +409,6 @@ export const PlasmicBlockArticleCardList = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
     itemArticleCardItemWithDescription: makeNodeComponent(
       "itemArticleCardItemWithDescription"
     ),

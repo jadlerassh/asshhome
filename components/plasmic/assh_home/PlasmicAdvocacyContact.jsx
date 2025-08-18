@@ -144,7 +144,7 @@ function PlasmicAdvocacyContact__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader
               )}
-              title={"Advocacy Contact ASSHPO"}
+              title={"Advocacy - Contact ASSHPO"}
             />
           </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__nI2Fr)} />

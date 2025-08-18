@@ -14,8 +14,7 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  ensureGlobalVariants
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -25,7 +24,6 @@ import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmi
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import ItemCheckmarkItem from "../../ItemCheckmarkItem"; // plasmic-import: WDbWI1BSLN9W/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
@@ -84,9 +82,6 @@ function PlasmicPartner__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
   return (
     <React.Fragment>
       <Head>
@@ -158,15 +153,7 @@ function PlasmicPartner__RenderFunc(props) {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox___0Qon)}>
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader__dPgr2
-              )}
-              title={"Partner with ASSH - Intro"}
-            />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__klvCo)}>
+            <HtmlContentfulHtmlLoader title={"Partner with ASSH - Intro"} />
             <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
@@ -347,8 +334,6 @@ function PlasmicPartner__RenderFunc(props) {
                 />
               </div>
             </div>
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__gtwmn)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -401,8 +386,7 @@ function PlasmicPartner__RenderFunc(props) {
               )}
               title={"Partner with ASSH - Partner Program Body"}
             />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__yHrp)}>
+
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",

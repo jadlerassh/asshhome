@@ -151,11 +151,9 @@ function PlasmicPracticeManagementResources__RenderFunc(props) {
 
           <div className={classNames(projectcss.all, sty.freeBox__bh17N)}>
             <ItemSectionTitleDescriptionItem
-              data-plasmic-name={"itemSectionTitleDescriptionItem"}
-              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem
+                sty.itemSectionTitleDescriptionItem__zgId9
               )}
               descriptionSection={``}
               title={"Practice Management Curricula"}
@@ -251,8 +249,7 @@ function PlasmicPracticeManagementResources__RenderFunc(props) {
               )}
               name={"Practice Management Resources Quicklinks"}
             />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__lqfX9)}>
+
             <ComponentFeaturedWebsiteCard
               data-plasmic-name={"componentFeaturedWebsiteCard"}
               data-plasmic-override={overrides.componentFeaturedWebsiteCard}
@@ -261,19 +258,22 @@ function PlasmicPracticeManagementResources__RenderFunc(props) {
                 sty.componentFeaturedWebsiteCard
               )}
             />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__gnVqv)}>
+
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem___1W2Qw
+              )}
+              descriptionSection={``}
+              title={"Additional Practice Management Resources"}
+            />
+
             <SectionCardListOneImageCard
               data-plasmic-name={"sectionCardListOneImageCard"}
               data-plasmic-override={overrides.sectionCardListOneImageCard}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionCardListOneImageCard
-              )}
               name={"Practice Management Resources - Additional Resources"}
             />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__tnKUu)}>
+
             <BlockPublicationHighlight
               data-plasmic-name={"blockPublicationHighlight"}
               data-plasmic-override={overrides.blockPublicationHighlight}
@@ -303,7 +303,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
-    "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
     "columns",
     "sectionMidPageCtaSection",
@@ -315,7 +314,6 @@ const PlasmicDescendants = {
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   columns: ["columns"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
@@ -361,9 +359,6 @@ export const PlasmicPracticeManagementResources = Object.assign(
     // Helper components rendering sub-elements
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
-    ),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
     ),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     columns: makeNodeComponent("columns"),

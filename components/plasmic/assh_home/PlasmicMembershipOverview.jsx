@@ -183,8 +183,6 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                 title={"Membership Overview - Why Join ASSH?"}
               />
             </div>
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__ahHX)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -196,14 +194,6 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                   : "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
               }
               title={"Who Can Join?"}
-            />
-
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader___9NkJ
-              )}
-              title={"Membership Overview - Who Can Join"}
             />
 
             <ButtonPrimary
@@ -254,8 +244,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               columns={"_3Column"}
               name={"Member Quicklinks"}
             />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__rT0LT)}>
+
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",

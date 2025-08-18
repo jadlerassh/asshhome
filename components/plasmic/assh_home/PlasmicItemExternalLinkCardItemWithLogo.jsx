@@ -142,38 +142,55 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
           data-plasmic-override={overrides.frame6}
           className={classNames(projectcss.all, sty.frame6)}
         >
-          <div
-            data-plasmic-name={"frame5"}
-            data-plasmic-override={overrides.frame5}
-            className={classNames(projectcss.all, sty.frame5)}
-          >
-            <PlasmicImg__
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={(() => {
-                try {
-                  return $queries.getIconImage.data.response.fields.file.url;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return undefined;
+          {(() => {
+            try {
+              return (
+                $props.iconImageId !== undefined && $props.iconImageId !== ""
+              );
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return true;
+              }
+              throw e;
+            }
+          })() ? (
+            <div
+              data-plasmic-name={"frame5"}
+              data-plasmic-override={overrides.frame5}
+              className={classNames(projectcss.all, sty.frame5)}
+            >
+              <PlasmicImg__
+                data-plasmic-name={"img"}
+                data-plasmic-override={overrides.img}
+                alt={""}
+                className={classNames(sty.img)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={(() => {
+                  try {
+                    return $queries.getIconImage.data.response.fields.file.url;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
                   }
-                  throw e;
-                }
-              })()}
-            />
-          </div>
+                })()}
+                width={"50px"}
+              />
+            </div>
+          ) : null}
           <div
             data-plasmic-name={"frame3"}
             data-plasmic-override={overrides.frame3}

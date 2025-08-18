@@ -133,7 +133,7 @@ function PlasmicAdvocacyBurdenRelief__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader
               )}
-              title={"HTML: Advocacy Burden Relief"}
+              title={"Advocacy - Burden Relief"}
             />
 
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(

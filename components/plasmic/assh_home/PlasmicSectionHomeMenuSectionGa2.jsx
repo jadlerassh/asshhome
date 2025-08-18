@@ -9,9 +9,11 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: PkPz97V9sC49
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -910,10 +912,17 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
           data-plasmic-override={overrides.frame5}
           className={classNames(projectcss.all, sty.frame5)}
         >
-          <div
-            data-plasmic-name={"isolationMode"}
-            data-plasmic-override={overrides.isolationMode}
-            className={classNames(projectcss.all, sty.isolationMode)}
+          <PlasmicLink__
+            data-plasmic-name={"logoSection"}
+            data-plasmic-override={overrides.logoSection}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.logoSection
+            )}
+            component={Link}
+            href={`/`}
+            platform={"nextjs"}
           >
             <Group6Icon
               className={classNames(projectcss.all, sty.svg__uzqJm)}
@@ -949,7 +958,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
               className={classNames(projectcss.all, sty.svg__wjKvY)}
               role={"img"}
             />
-          </div>
+          </PlasmicLink__>
           <div
             data-plasmic-name={"frame6"}
             data-plasmic-override={overrides.frame6}
@@ -8740,7 +8749,7 @@ const PlasmicDescendants = {
     "resourcesMenu2",
     "navItemMenu75",
     "frame5",
-    "isolationMode",
+    "logoSection",
     "frame6",
     "frame7",
     "navItemMenu",
@@ -9236,7 +9245,7 @@ const PlasmicDescendants = {
     "resourcesMenu2",
     "navItemMenu75",
     "frame5",
-    "isolationMode",
+    "logoSection",
     "frame6",
     "frame7",
     "navItemMenu",
@@ -9312,7 +9321,7 @@ const PlasmicDescendants = {
   navItemMenu75: ["navItemMenu75"],
   frame5: [
     "frame5",
-    "isolationMode",
+    "logoSection",
     "frame6",
     "frame7",
     "navItemMenu",
@@ -9347,7 +9356,7 @@ const PlasmicDescendants = {
     "icon24X24"
   ],
 
-  isolationMode: ["isolationMode"],
+  logoSection: ["logoSection"],
   frame6: [
     "frame6",
     "frame7",
@@ -12718,7 +12727,7 @@ export const PlasmicSectionHomeMenuSectionGa2 = Object.assign(
     resourcesMenu2: makeNodeComponent("resourcesMenu2"),
     navItemMenu75: makeNodeComponent("navItemMenu75"),
     frame5: makeNodeComponent("frame5"),
-    isolationMode: makeNodeComponent("isolationMode"),
+    logoSection: makeNodeComponent("logoSection"),
     frame6: makeNodeComponent("frame6"),
     frame7: makeNodeComponent("frame7"),
     navItemMenu: makeNodeComponent("navItemMenu"),

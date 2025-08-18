@@ -111,6 +111,16 @@
       }
     },
     {
+      "name": "ASSH/Teel Hover",
+      "type": "color",
+      "value": "#005963",
+      "category": "color",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "zepCisb8eOOf"
+      }
+    },
+    {
       "name": "ASSH/Text Body",
       "type": "color",
       "value": "#313337",

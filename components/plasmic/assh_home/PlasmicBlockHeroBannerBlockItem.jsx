@@ -117,14 +117,10 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
         plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root,
         {
-          [sty.root_1__1]: hasVariant($state, "_1", "_1"),
-          [sty.root_1_hover]: hasVariant($state, "_1", "hover"),
-          [sty.root_2__2]: hasVariant($state, "_2", "_2"),
-          [sty.root_2_hover]: hasVariant($state, "_2", "hover"),
-          [sty.root_3__3]: hasVariant($state, "_3", "_3"),
-          [sty.root_3_hover]: hasVariant($state, "_3", "hover"),
-          [sty.root_4__4]: hasVariant($state, "_4", "_4"),
-          [sty.root_4_hover]: hasVariant($state, "_4", "hover")
+          [sty.root_1]: hasVariant($state, "_1", "_1"),
+          [sty.root_2]: hasVariant($state, "_2", "_2"),
+          [sty.root_3]: hasVariant($state, "_3", "_3"),
+          [sty.root_4]: hasVariant($state, "_4", "_4")
         }
       )}
     >
@@ -132,38 +128,27 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox, {
-          [sty.freeBox_1__1]: hasVariant($state, "_1", "_1"),
-          [sty.freeBox_1_hover]: hasVariant($state, "_1", "hover"),
-          [sty.freeBox_2__2]: hasVariant($state, "_2", "_2"),
-          [sty.freeBox_2_hover]: hasVariant($state, "_2", "hover"),
-          [sty.freeBox_3__3]: hasVariant($state, "_3", "_3"),
-          [sty.freeBox_3_hover]: hasVariant($state, "_3", "hover"),
-          [sty.freeBox_4__4]: hasVariant($state, "_4", "_4"),
-          [sty.freeBox_4_hover]: hasVariant($state, "_4", "hover")
+          [sty.freeBox_1]: hasVariant($state, "_1", "_1"),
+          [sty.freeBox_2]: hasVariant($state, "_2", "_2"),
+          [sty.freeBox_3]: hasVariant($state, "_3", "_3"),
+          [sty.freeBox_4]: hasVariant($state, "_4", "_4")
         })}
       >
         <div
           data-plasmic-name={"calloutBox"}
           data-plasmic-override={overrides.calloutBox}
           className={classNames(projectcss.all, sty.calloutBox, {
-            [sty.calloutBox_1_hover]: hasVariant($state, "_1", "hover"),
-            [sty.calloutBox_2_hover]: hasVariant($state, "_2", "hover"),
-            [sty.calloutBox_3_hover]: hasVariant($state, "_3", "hover"),
-            [sty.calloutBox_4__4]: hasVariant($state, "_4", "_4"),
-            [sty.calloutBox_4_hover]: hasVariant($state, "_4", "hover")
+            [sty.calloutBox_1]: hasVariant($state, "_1", "_1"),
+            [sty.calloutBox_4]: hasVariant($state, "_4", "_4")
           })}
         >
           <div
             data-plasmic-name={"container"}
             data-plasmic-override={overrides.container}
             className={classNames(projectcss.all, sty.container, {
-              [sty.container_1__1]: hasVariant($state, "_1", "_1"),
-              [sty.container_1_hover]: hasVariant($state, "_1", "hover"),
-              [sty.container_2__2]: hasVariant($state, "_2", "_2"),
-              [sty.container_2_hover]: hasVariant($state, "_2", "hover"),
-              [sty.container_3_hover]: hasVariant($state, "_3", "hover"),
-              [sty.container_4__4]: hasVariant($state, "_4", "_4"),
-              [sty.container_4_hover]: hasVariant($state, "_4", "hover")
+              [sty.container_1]: hasVariant($state, "_1", "_1"),
+              [sty.container_2]: hasVariant($state, "_2", "_2"),
+              [sty.container_4]: hasVariant($state, "_4", "_4")
             })}
           />
 
@@ -171,19 +156,18 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
             data-plasmic-name={"inner"}
             data-plasmic-override={overrides.inner}
             className={classNames(projectcss.all, sty.inner, {
-              [sty.inner_1__1]: hasVariant($state, "_1", "_1"),
-              [sty.inner_1_hover]: hasVariant($state, "_1", "hover"),
-              [sty.inner_2__2]: hasVariant($state, "_2", "_2"),
-              [sty.inner_2_hover]: hasVariant($state, "_2", "hover"),
-              [sty.inner_3_hover]: hasVariant($state, "_3", "hover"),
-              [sty.inner_4__4]: hasVariant($state, "_4", "_4"),
-              [sty.inner_4_hover]: hasVariant($state, "_4", "hover")
+              [sty.inner_1]: hasVariant($state, "_1", "_1"),
+              [sty.inner_2]: hasVariant($state, "_2", "_2"),
+              [sty.inner_3]: hasVariant($state, "_3", "_3"),
+              [sty.inner_4]: hasVariant($state, "_4", "_4")
             })}
           >
             <div
               data-plasmic-name={"content"}
               data-plasmic-override={overrides.content}
-              className={classNames(projectcss.all, sty.content)}
+              className={classNames(projectcss.all, sty.content, {
+                [sty.content_1]: hasVariant($state, "_1", "_1")
+              })}
             >
               <div
                 data-plasmic-name={"heading"}
@@ -200,25 +184,19 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
                 data-plasmic-name={"section"}
                 data-plasmic-override={overrides.section}
                 className={classNames(projectcss.all, sty.section, {
-                  [sty.section_1__1]: hasVariant($state, "_1", "_1"),
-                  [sty.section_1_hover]: hasVariant($state, "_1", "hover"),
-                  [sty.section_2__2]: hasVariant($state, "_2", "_2"),
-                  [sty.section_2_hover]: hasVariant($state, "_2", "hover"),
-                  [sty.section_4__4]: hasVariant($state, "_4", "_4"),
-                  [sty.section_4_hover]: hasVariant($state, "_4", "hover")
+                  [sty.section_1]: hasVariant($state, "_1", "_1"),
+                  [sty.section_2]: hasVariant($state, "_2", "_2"),
+                  [sty.section_4]: hasVariant($state, "_4", "_4")
                 })}
               >
                 <RightChevronSvgIcon
                   data-plasmic-name={"svg"}
                   data-plasmic-override={overrides.svg}
                   className={classNames(projectcss.all, sty.svg, {
-                    [sty.svg_1__1]: hasVariant($state, "_1", "_1"),
-                    [sty.svg_1_hover]: hasVariant($state, "_1", "hover"),
-                    [sty.svg_2__2]: hasVariant($state, "_2", "_2"),
-                    [sty.svg_2_hover]: hasVariant($state, "_2", "hover"),
-                    [sty.svg_3__3]: hasVariant($state, "_3", "_3"),
-                    [sty.svg_4__4]: hasVariant($state, "_4", "_4"),
-                    [sty.svg_4_hover]: hasVariant($state, "_4", "hover")
+                    [sty.svg_1]: hasVariant($state, "_1", "_1"),
+                    [sty.svg_2]: hasVariant($state, "_2", "_2"),
+                    [sty.svg_3]: hasVariant($state, "_3", "_3"),
+                    [sty.svg_4]: hasVariant($state, "_4", "_4")
                   })}
                   role={"img"}
                 />

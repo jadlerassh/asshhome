@@ -133,7 +133,7 @@ function PlasmicAdvocacyPaymentReform__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader
               )}
-              title={"HTML: Advocacy - Payment Reform"}
+              title={"Advocacy - Payment Reform"}
             />
 
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(

@@ -20,10 +20,10 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
 import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
@@ -158,23 +158,36 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
             title={"Hero: News & Publications Overview - Title Card"}
           />
 
-          <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__inJxk
-            )}
-            name={
-              "Mega Menu - News & Publications - News & Publication Overview"
-            }
-          />
+          <div className={classNames(projectcss.all, sty.freeBox__vEu6R)}>
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem___61H7J
+              )}
+              descriptionSection={``}
+              title={"ASSH Journals"}
+            />
 
-          <SectionQuicklinksTable
-            data-plasmic-name={"sectionQuicklinksTable"}
-            data-plasmic-override={overrides.sectionQuicklinksTable}
-            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
-            name={"Textbook Quicklinks"}
-          />
+            <BlockArticleCardList
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardList__da65
+              )}
+              name={
+                "Mega Menu - News & Publications - News & Publication Overview"
+              }
+            />
 
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
+              className={classNames(
+                "__wab_instance",
+                sty.sectionQuicklinksTable
+              )}
+              name={"Textbook Quicklinks"}
+            />
+          </div>
           <SectionMidPageCtaSection
             data-plasmic-name={"sectionMidPageCtaSection"}
             data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -185,51 +198,59 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
             title={"News & Publications Overview - Mid-page CTA"}
           />
 
-          <ItemSectionTitleDescriptionItem
-            data-plasmic-name={"itemSectionTitleDescriptionItem"}
-            data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem
-            )}
-            descriptionSection={``}
-            title={"Latest News from ASSH"}
-          />
+          <div className={classNames(projectcss.all, sty.freeBox___6TmgK)}>
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem__fj1FT
+              )}
+              descriptionSection={``}
+              title={"Latest News from ASSH"}
+            />
 
-          <CardListLatestAsshNewsCardList
-            data-plasmic-name={"cardListLatestAsshNewsCardList"}
-            data-plasmic-override={overrides.cardListLatestAsshNewsCardList}
-            className={classNames(
-              "__wab_instance",
-              sty.cardListLatestAsshNewsCardList
-            )}
-          />
+            <CardListLatestAsshNewsCardList
+              data-plasmic-name={"cardListLatestAsshNewsCardList"}
+              data-plasmic-override={overrides.cardListLatestAsshNewsCardList}
+              className={classNames(
+                "__wab_instance",
+                sty.cardListLatestAsshNewsCardList
+              )}
+            />
 
-          <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__alS5C
-            )}
-            name={"Advocacy Overview: News & Updates Links"}
-          />
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem__vppSz
+              )}
+              descriptionSection={``}
+              title={"Latest ASSH Perspective Articles"}
+            />
 
-          <SectionMidPageLeftRightSection
-            data-plasmic-name={"sectionMidPageLeftRightSection"}
-            data-plasmic-override={overrides.sectionMidPageLeftRightSection}
-            className={classNames(
-              "__wab_instance",
-              sty.sectionMidPageLeftRightSection
-            )}
-            title={"Hero: Patient Brochures from ASSH"}
-          />
+            <BlockArticleCardList
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardList__alS5C
+              )}
+              name={"News & Publications: Latest Perspectives Articles"}
+            />
 
-          <SectionPublication
-            data-plasmic-name={"sectionPublication"}
-            data-plasmic-override={overrides.sectionPublication}
-            className={classNames("__wab_instance", sty.sectionPublication)}
-            name={"Publication Card: Start Listening With ASSH Podcasts"}
-          />
+            <SectionMidPageLeftRightSection
+              data-plasmic-name={"sectionMidPageLeftRightSection"}
+              data-plasmic-override={overrides.sectionMidPageLeftRightSection}
+              className={classNames(
+                "__wab_instance",
+                sty.sectionMidPageLeftRightSection
+              )}
+              title={"Hero: Patient Brochures from ASSH"}
+            />
 
+            <SectionPublication
+              data-plasmic-name={"sectionPublication"}
+              data-plasmic-override={overrides.sectionPublication}
+              className={classNames("__wab_instance", sty.sectionPublication)}
+              name={"Publication Card: Start Listening With ASSH Podcasts"}
+            />
+          </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__i2Nu4)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
@@ -251,7 +272,6 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "sectionQuicklinksTable",
     "sectionMidPageCtaSection",
-    "itemSectionTitleDescriptionItem",
     "cardListLatestAsshNewsCardList",
     "sectionMidPageLeftRightSection",
     "sectionPublication",
@@ -261,7 +281,6 @@ const PlasmicDescendants = {
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
   sectionMidPageLeftRightSection: ["sectionMidPageLeftRightSection"],
   sectionPublication: ["sectionPublication"],
@@ -306,9 +325,6 @@ export const PlasmicNewsPublicationsOverview = Object.assign(
     ),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
     cardListLatestAsshNewsCardList: makeNodeComponent(
       "cardListLatestAsshNewsCardList"
     ),

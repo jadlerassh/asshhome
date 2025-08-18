@@ -125,7 +125,6 @@ function PlasmicJaTestHome__RenderFunc(props) {
               "__wab_instance",
               sty.componentFeaturedWebsiteCard
             )}
-            imageAssetId={``}
           />
         </div>
       </div>

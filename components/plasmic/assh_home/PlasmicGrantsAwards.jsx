@@ -164,8 +164,7 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               )}
               title={"Grants and Awards - Intro"}
             />
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__bwr8S)}>
+
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -233,25 +232,26 @@ function PlasmicGrantsAwards__RenderFunc(props) {
                 />
               </div>
             </div>
-          </div>
-          <SectionQuicklinksTable
-            data-plasmic-name={"sectionQuicklinksTable"}
-            data-plasmic-override={overrides.sectionQuicklinksTable}
-            className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
-            name={"ASSH Grants and Awards Quicklinks"}
-          />
-
-          <div className={classNames(projectcss.all, sty.freeBox__kZDmL)}>
-            <SectionMidPageCtaSection
-              data-plasmic-name={"sectionMidPageCtaSection"}
-              data-plasmic-override={overrides.sectionMidPageCtaSection}
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
               className={classNames(
                 "__wab_instance",
-                sty.sectionMidPageCtaSection
+                sty.sectionQuicklinksTable
               )}
-              title={"Grants and Awards - Mid-page CTA"}
+              name={"ASSH Grants and Awards Quicklinks"}
             />
           </div>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"Grants and Awards - Mid-page CTA"}
+          />
+
           <div className={classNames(projectcss.all, sty.freeBox__zdPip)}>
             <ItemSectionTitleDescriptionItem
               className={classNames(

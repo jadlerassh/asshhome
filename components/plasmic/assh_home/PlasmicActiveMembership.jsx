@@ -130,7 +130,7 @@ function PlasmicActiveMembership__RenderFunc(props) {
                   "__wab_instance",
                   sty.htmlContentfulHtmlLoader
                 )}
-                title={"Active Membership Description with Title"}
+                title={"Active Membership"}
               />
 
               <BlockTanCtaBlock

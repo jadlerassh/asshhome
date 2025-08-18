@@ -203,17 +203,16 @@ function PlasmicTemplateInternalPageWithAccordion__RenderFunc(props) {
               })()}
             />
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__aOv4)}>
-            <SectionMidPageCtaSection
-              data-plasmic-name={"sectionMidPageCtaSection"}
-              data-plasmic-override={overrides.sectionMidPageCtaSection}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionMidPageCtaSection
-              )}
-              title={"Grants and Awards - Mid-page CTA"}
-            />
-          </div>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"Grants and Awards - Mid-page CTA"}
+          />
+
           <div className={classNames(projectcss.all, sty.freeBox__nhtp)}>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}

@@ -19,7 +19,7 @@
   justify-content: center;
   row-gap: 15px;
   min-width: 0;
-  padding: 70px 50px;
+  padding: 70px 0px;
 }
 .group3 {
   opacity: 0.05999999865889549;
@@ -70,7 +70,7 @@
   left: 180px;
 }
 .frame3 {
-  width: 1080px;
+  width: 100%;
   height: auto;
   display: flex;
   position: relative;
@@ -78,6 +78,8 @@
   align-items: center;
   justify-content: flex-start;
   row-gap: 20px;
+  max-width: 1320px;
+  min-width: 0;
 }
 @media (max-width: 1440px) {
   .frame3 {

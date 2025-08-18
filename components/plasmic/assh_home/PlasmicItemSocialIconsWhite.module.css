@@ -1,0 +1,27 @@
+.social3 {
+  box-shadow: none;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 10px;
+  position: relative;
+}
+.buttonPrimary___409RC:global(.__wab_instance) {
+  max-width: 100%;
+}
+.buttonPrimary__iOhu8:global(.__wab_instance) {
+  max-width: 100%;
+}
+.buttonPrimary__vjP5:global(.__wab_instance) {
+  max-width: 100%;
+}
+.buttonPrimary__x13Nh:global(.__wab_instance) {
+  max-width: 100%;
+}
+.buttonPrimary___7Ypg2:global(.__wab_instance) {
+  max-width: 100%;
+}

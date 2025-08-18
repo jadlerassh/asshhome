@@ -121,19 +121,16 @@ function PlasmicJobBoard__RenderFunc(props) {
             title={"Hero: Job Board - Title Card"}
           />
 
-          <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__cnncR
-            )}
-            name={"Job Board: Job Seekers Links"}
-          />
-
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox___6LNwq)}>
+            <BlockArticleCardList
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardList__cnncR
+              )}
+              name={"Job Board: Job Seekers Links"}
+            />
+          </div>
+          <div className={classNames(projectcss.all, sty.freeBox___9McX)}>
             <BlockArticleCardList
               className={classNames(
                 "__wab_instance",
@@ -142,25 +139,26 @@ function PlasmicJobBoard__RenderFunc(props) {
               name={"Job Board: Employees Recruiters Links"}
             />
           </div>
-          <h3
-            data-plasmic-name={"h3"}
-            data-plasmic-override={overrides.h3}
-            className={classNames(
-              projectcss.all,
-              projectcss.h3,
-              projectcss.__wab_text,
-              sty.h3
-            )}
-          >
-            {"Need help?"}
-          </h3>
-          <SectionQuestion
-            data-plasmic-name={"sectionQuestion"}
-            data-plasmic-override={overrides.sectionQuestion}
-            className={classNames("__wab_instance", sty.sectionQuestion)}
-            name={"Job Board: Need Help?"}
-          />
-
+          <div className={classNames(projectcss.all, sty.freeBox__h4YJ9)}>
+            <h3
+              data-plasmic-name={"h3"}
+              data-plasmic-override={overrides.h3}
+              className={classNames(
+                projectcss.all,
+                projectcss.h3,
+                projectcss.__wab_text,
+                sty.h3
+              )}
+            >
+              {"Need help?"}
+            </h3>
+            <SectionQuestion
+              data-plasmic-name={"sectionQuestion"}
+              data-plasmic-override={overrides.sectionQuestion}
+              className={classNames("__wab_instance", sty.sectionQuestion)}
+              name={"Job Board: Need Help?"}
+            />
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
@@ -186,14 +184,12 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
-    "freeBox",
     "h3",
     "sectionQuestion",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  freeBox: ["freeBox"],
   h3: ["h3"],
   sectionQuestion: ["sectionQuestion"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
@@ -234,7 +230,6 @@ export const PlasmicJobBoard = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    freeBox: makeNodeComponent("freeBox"),
     h3: makeNodeComponent("h3"),
     sectionQuestion: makeNodeComponent("sectionQuestion"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

@@ -118,7 +118,7 @@ function PlasmicAdvocacyGetInvolved__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader
               )}
-              title={"HTML: Advocacy - Getting Involved"}
+              title={"Advocacy - Getting Involved"}
             />
           </div>
           <SectionAdPlaceholder

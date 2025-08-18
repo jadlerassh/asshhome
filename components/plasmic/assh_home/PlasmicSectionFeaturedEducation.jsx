@@ -9,21 +9,29 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: yRPTvlAZWP7M
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemBackgroundImage from "../../ItemBackgroundImage"; // plasmic-import: S10MkWO4JPIS/component
-import ItemImageWithText from "../../ItemImageWithText"; // plasmic-import: ugEjS8u4W4nq/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicSectionFeaturedEducation.module.css"; // plasmic-import: yRPTvlAZWP7M/css
+import ContainerIcon from "./icons/PlasmicIcon__Container"; // plasmic-import: LdpaQ2yuf9hP/icon
+import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import: TKWn1DDMMFQp/icon
 
 createPlasmicElementProxy;
 
@@ -61,13 +69,79 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "cards",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                return $queries.getInfo.data.response.items[0].fields.options.map(
+                  option => {
+                    const entryId = option.sys.id;
+                    const entryIndex =
+                      $queries.getInfo.data.response.includes.Entry.findIndex(
+                        entry => entry.sys.id === entryId
+                      );
+                    const iconId =
+                      $queries.getInfo.data.response.includes.Entry[entryIndex]
+                        .fields.icon.sys.id;
+                    const assetIndex =
+                      $queries.getInfo.data.response.includes.Asset.findIndex(
+                        asset => asset.sys.id === iconId
+                      );
+                    const label =
+                      $queries.getInfo.data.response.includes.Entry[entryIndex]
+                        .fields.label;
+                    const order =
+                      $queries.getInfo.data.response.includes.Entry[entryIndex]
+                        .fields.order;
+                    const url =
+                      $queries.getInfo.data.response.includes.Entry[entryIndex]
+                        .fields.url;
+                    const assetFields =
+                      $queries.getInfo.data.response.includes.Asset[assetIndex]
+                        .fields;
+                    return {
+                      label,
+                      order,
+                      url,
+                      assetFields
+                    };
+                  }
+                );
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return {};
+              }
+              throw e;
+            }
+          })()
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getInfo: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "d73bdb43-3254-4204-be17-676d95c9b4eb",
+        opId: "c908d63b-884e-4736-bef0-ec7513a5ead1",
         userArgs: {},
-        cacheKey: `plasmic.$.d73bdb43-3254-4204-be17-676d95c9b4eb.$.`,
+        cacheKey: `plasmic.$.c908d63b-884e-4736-bef0-ec7513a5ead1.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -77,6 +151,9 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsdjBtUr72ZExV()
+  });
   return (
     <div
       data-plasmic-name={"root"}
@@ -94,68 +171,39 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.columns__bdLL)}>
-        {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-          (() => {
-            try {
-              return $queries.getInfo.data.response.items.filter(
-                link => link.fields.featuredItemPriority == "Primary"
-              );
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return [];
-              }
-              throw e;
+      <ItemSectionTitleDescriptionItem
+        data-plasmic-name={"itemSectionTitleDescriptionItem"}
+        data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+        className={classNames(
+          "__wab_instance",
+          sty.itemSectionTitleDescriptionItem
+        )}
+        descriptionSection={``}
+        title={(() => {
+          try {
+            return $queries.getInfo.data.response.items[0].fields.header;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
             }
-          })()
-        ).map((__plasmic_item_0, __plasmic_idx_0) => {
-          const currentItem = __plasmic_item_0;
-          const currentIndex = __plasmic_idx_0;
-          return (
-            <div
-              className={classNames(projectcss.all, sty.column__yJsA)}
-              key={currentIndex}
-            >
-              <ItemBackgroundImage
-                data-plasmic-name={"itemBackgroundImage"}
-                data-plasmic-override={overrides.itemBackgroundImage}
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemBackgroundImage
-                )}
-                imageAssetId={(() => {
-                  try {
-                    return currentItem.fields.thumb.sys.id;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
-                  }
-                })()}
-              />
+            throw e;
+          }
+        })()}
+      />
 
-              <div className={classNames(projectcss.all, sty.freeBox__tsc7)}>
-                <div className={classNames(projectcss.all, sty.columns__kHaet)}>
-                  <div
-                    className={classNames(projectcss.all, sty.column__afDng)}
-                  />
-                </div>
-              </div>
-            </div>
-          );
-        })}
-        <div className={classNames(projectcss.all, sty.column__ja3Rc)}>
+      <div
+        data-plasmic-name={"row"}
+        data-plasmic-override={overrides.row}
+        className={classNames(projectcss.all, sty.row)}
+      >
+        <div className={classNames(projectcss.all, sty.column__tnkOk)}>
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
             (() => {
               try {
-                return $queries.getInfo.data.response.items;
+                return $state.cards.find(card => card.order === 1);
               } catch (e) {
                 if (
                   e instanceof TypeError ||
@@ -170,21 +218,158 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
             const currentItem = __plasmic_item_0;
             const currentIndex = __plasmic_idx_0;
             return (
-              <div
-                className={classNames(projectcss.all, sty.freeBox__bq4B8)}
+              <PlasmicLink__
+                data-plasmic-name={"imageFrame"}
+                data-plasmic-override={overrides.imageFrame}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.imageFrame
+                )}
+                component={Link}
+                href={(() => {
+                  try {
+                    return currentItem.url;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
                 key={currentIndex}
+                platform={"nextjs"}
               >
-                <ItemImageWithText
-                  data-plasmic-name={"itemImageWithText"}
-                  data-plasmic-override={overrides.itemImageWithText}
+                <div
+                  data-plasmic-name={"image"}
+                  data-plasmic-override={overrides.image}
+                  className={classNames(projectcss.all, sty.image)}
+                >
+                  <div
+                    data-plasmic-name={"frame3"}
+                    data-plasmic-override={overrides.frame3}
+                    className={classNames(projectcss.all, sty.frame3)}
+                  >
+                    <div
+                      data-plasmic-name={"navItemMenu"}
+                      data-plasmic-override={overrides.navItemMenu}
+                      className={classNames(projectcss.all, sty.navItemMenu)}
+                    >
+                      {false ? (
+                        <div
+                          data-plasmic-name={"icon12X12"}
+                          data-plasmic-override={overrides.icon12X12}
+                          className={classNames(projectcss.all, sty.icon12X12)}
+                        >
+                          <ContainerIcon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__ngJik
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                      <div
+                        data-plasmic-name={"navigationItem"}
+                        data-plasmic-override={overrides.navigationItem}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.navigationItem
+                        )}
+                      >
+                        {"New Handthology Chapter: Wound Management"}
+                      </div>
+                      {false ? (
+                        <div
+                          data-plasmic-name={"icon12X122"}
+                          data-plasmic-override={overrides.icon12X122}
+                          className={classNames(projectcss.all, sty.icon12X122)}
+                        >
+                          <Container2Icon
+                            className={classNames(
+                              projectcss.all,
+                              sty.svg__qtPsY
+                            )}
+                            role={"img"}
+                          />
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__h2W2K)}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={
+                      hasVariant(globalVariants, "screen", "miniMobile")
+                        ? "100%"
+                        : "100%"
+                    }
+                    loading={"lazy"}
+                    src={(() => {
+                      try {
+                        return currentItem.assetFields.file.url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                </div>
+              </PlasmicLink__>
+            );
+          })}
+        </div>
+        <div className={classNames(projectcss.all, sty.column__ms8Zf)}>
+          <div
+            data-plasmic-name={"frame4"}
+            data-plasmic-override={overrides.frame4}
+            className={classNames(projectcss.all, sty.frame4)}
+          >
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $state.cards.filter(card => card.order > 1);
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
+                }
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <PlasmicLink__
+                  data-plasmic-name={"articleImageCard"}
+                  data-plasmic-override={overrides.articleImageCard}
                   className={classNames(
-                    "__wab_instance",
-                    sty.itemImageWithText
+                    projectcss.all,
+                    projectcss.a,
+                    sty.articleImageCard
                   )}
-                  heading={"Heading"}
-                  imageAssetId={(() => {
+                  component={Link}
+                  href={(() => {
                     try {
-                      return currentItem.fields.thumb.sys.id;
+                      return currentItem.url;
                     } catch (e) {
                       if (
                         e instanceof TypeError ||
@@ -195,11 +380,86 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
                       throw e;
                     }
                   })()}
-                  title={`Title${currentItem.fields.title}`}
-                />
-              </div>
-            );
-          })}
+                  key={currentIndex}
+                  platform={"nextjs"}
+                >
+                  <div
+                    data-plasmic-name={"frame5"}
+                    data-plasmic-override={overrides.frame5}
+                    className={classNames(projectcss.all, sty.frame5)}
+                  >
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__hLj3P)}
+                      displayHeight={"100%"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"100%"}
+                      loading={"lazy"}
+                      src={(() => {
+                        try {
+                          return currentItem.assetFields.file.url;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                    />
+                  </div>
+                  <div
+                    data-plasmic-name={"content"}
+                    data-plasmic-override={overrides.content}
+                    className={classNames(projectcss.all, sty.content)}
+                  >
+                    <div
+                      data-plasmic-name={"content2"}
+                      data-plasmic-override={overrides.content2}
+                      className={classNames(projectcss.all, sty.content2)}
+                    >
+                      <div
+                        data-plasmic-name={"navItemMenu2"}
+                        data-plasmic-override={overrides.navItemMenu2}
+                        className={classNames(projectcss.all, sty.navItemMenu2)}
+                      >
+                        <div
+                          data-plasmic-name={"navigationItem2"}
+                          data-plasmic-override={overrides.navigationItem2}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.navigationItem2
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return currentItem.label;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "Get Registered for Daily Dose 2025";
+                                }
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </PlasmicLink__>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -207,9 +467,100 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "itemBackgroundImage", "itemImageWithText"],
-  itemBackgroundImage: ["itemBackgroundImage"],
-  itemImageWithText: ["itemImageWithText"]
+  root: [
+    "root",
+    "itemSectionTitleDescriptionItem",
+    "row",
+    "imageFrame",
+    "image",
+    "frame3",
+    "navItemMenu",
+    "icon12X12",
+    "navigationItem",
+    "icon12X122",
+    "frame4",
+    "articleImageCard",
+    "frame5",
+    "content",
+    "content2",
+    "navItemMenu2",
+    "navigationItem2"
+  ],
+
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  row: [
+    "row",
+    "imageFrame",
+    "image",
+    "frame3",
+    "navItemMenu",
+    "icon12X12",
+    "navigationItem",
+    "icon12X122",
+    "frame4",
+    "articleImageCard",
+    "frame5",
+    "content",
+    "content2",
+    "navItemMenu2",
+    "navigationItem2"
+  ],
+
+  imageFrame: [
+    "imageFrame",
+    "image",
+    "frame3",
+    "navItemMenu",
+    "icon12X12",
+    "navigationItem",
+    "icon12X122"
+  ],
+
+  image: [
+    "image",
+    "frame3",
+    "navItemMenu",
+    "icon12X12",
+    "navigationItem",
+    "icon12X122"
+  ],
+
+  frame3: [
+    "frame3",
+    "navItemMenu",
+    "icon12X12",
+    "navigationItem",
+    "icon12X122"
+  ],
+
+  navItemMenu: ["navItemMenu", "icon12X12", "navigationItem", "icon12X122"],
+  icon12X12: ["icon12X12"],
+  navigationItem: ["navigationItem"],
+  icon12X122: ["icon12X122"],
+  frame4: [
+    "frame4",
+    "articleImageCard",
+    "frame5",
+    "content",
+    "content2",
+    "navItemMenu2",
+    "navigationItem2"
+  ],
+
+  articleImageCard: [
+    "articleImageCard",
+    "frame5",
+    "content",
+    "content2",
+    "navItemMenu2",
+    "navigationItem2"
+  ],
+
+  frame5: ["frame5"],
+  content: ["content", "content2", "navItemMenu2", "navigationItem2"],
+  content2: ["content2", "navItemMenu2", "navigationItem2"],
+  navItemMenu2: ["navItemMenu2", "navigationItem2"],
+  navigationItem2: ["navigationItem2"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -245,8 +596,24 @@ export const PlasmicSectionFeaturedEducation = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    itemBackgroundImage: makeNodeComponent("itemBackgroundImage"),
-    itemImageWithText: makeNodeComponent("itemImageWithText"),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
+    row: makeNodeComponent("row"),
+    imageFrame: makeNodeComponent("imageFrame"),
+    image: makeNodeComponent("image"),
+    frame3: makeNodeComponent("frame3"),
+    navItemMenu: makeNodeComponent("navItemMenu"),
+    icon12X12: makeNodeComponent("icon12X12"),
+    navigationItem: makeNodeComponent("navigationItem"),
+    icon12X122: makeNodeComponent("icon12X122"),
+    frame4: makeNodeComponent("frame4"),
+    articleImageCard: makeNodeComponent("articleImageCard"),
+    frame5: makeNodeComponent("frame5"),
+    content: makeNodeComponent("content"),
+    content2: makeNodeComponent("content2"),
+    navItemMenu2: makeNodeComponent("navItemMenu2"),
+    navigationItem2: makeNodeComponent("navigationItem2"),
     // Metadata about props expected for PlasmicSectionFeaturedEducation
     internalVariantProps: PlasmicSectionFeaturedEducation__VariantProps,
     internalArgProps: PlasmicSectionFeaturedEducation__ArgProps

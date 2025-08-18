@@ -160,7 +160,7 @@ function PlasmicAbout__RenderFunc(props) {
                 "__wab_instance",
                 sty.htmlContentfulHtmlLoader__bcxca
               )}
-              title={"About ASSH Overview Bottom"}
+              title={"About ASSH"}
             />
 
             <div

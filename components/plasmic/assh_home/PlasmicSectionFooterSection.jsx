@@ -1632,6 +1632,25 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
+                                  : hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "largeDesktop"
+                                    )
+                                  ? (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                                   : undefined
                               }
                               unnamedGroupOfVariants={["footer"]}
