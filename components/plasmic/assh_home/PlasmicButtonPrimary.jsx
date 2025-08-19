@@ -57,12 +57,12 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "storeLink",
   "searchIcon",
   "menuButton",
-  "socialButtons",
+  "social",
   "socialGrey",
-  "social"
+  "standardSizeMenuLink"
 );
 
-export const PlasmicButtonPrimary__ArgProps = new Array("text", "url", "icon");
+export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
 
 const $$ = {};
 
@@ -196,10 +196,16 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.menuButton
       },
       {
-        path: "socialButtons",
+        path: "unused2",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.socialButtons
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.unused2
+      },
+      {
+        path: "social",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.social
       },
       {
         path: "socialGrey",
@@ -208,10 +214,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.socialGrey
       },
       {
-        path: "social",
+        path: "standardSizeMenuLink",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.social
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          $props.standardSizeMenuLink
       }
     ],
 
@@ -299,10 +306,40 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             "smallTextLink",
             "smallTextLink"
           ),
-          [sty.rootsocialButtons_facebook]: hasVariant(
+          [sty.rootsocialGrey_facebook]: hasVariant(
             $state,
-            "socialButtons",
+            "socialGrey",
             "facebook"
+          ),
+          [sty.rootsocialGrey_instagram]: hasVariant(
+            $state,
+            "socialGrey",
+            "instagram"
+          ),
+          [sty.rootsocialGrey_linkedIn]: hasVariant(
+            $state,
+            "socialGrey",
+            "linkedIn"
+          ),
+          [sty.rootsocialGrey_threads]: hasVariant(
+            $state,
+            "socialGrey",
+            "threads"
+          ),
+          [sty.rootsocialGrey_youTube]: hasVariant(
+            $state,
+            "socialGrey",
+            "youTube"
+          ),
+          [sty.rootsocial_facebook]: hasVariant($state, "social", "facebook"),
+          [sty.rootsocial_instagram]: hasVariant($state, "social", "instagram"),
+          [sty.rootsocial_linkedIn]: hasVariant($state, "social", "linkedIn"),
+          [sty.rootsocial_threads]: hasVariant($state, "social", "threads"),
+          [sty.rootsocial_youTube]: hasVariant($state, "social", "youTube"),
+          [sty.rootstandardSizeMenuLink]: hasVariant(
+            $state,
+            "standardSizeMenuLink",
+            "standardSizeMenuLink"
           ),
           [sty.rootstoreLink]: hasVariant($state, "storeLink", "storeLink"),
           [sty.roottextArrowButton]: hasVariant(
@@ -387,30 +424,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "smallTextLink",
               "smallTextLink"
             ),
-            [sty.buttonHighlight2socialButtons_facebook]: hasVariant(
+            [sty.buttonHighlight2socialGrey_facebook]: hasVariant(
               $state,
-              "socialButtons",
+              "socialGrey",
               "facebook"
-            ),
-            [sty.buttonHighlight2socialButtons_instagram]: hasVariant(
-              $state,
-              "socialButtons",
-              "instagram"
-            ),
-            [sty.buttonHighlight2socialButtons_linkedIn]: hasVariant(
-              $state,
-              "socialButtons",
-              "linkedIn"
-            ),
-            [sty.buttonHighlight2socialButtons_threads]: hasVariant(
-              $state,
-              "socialButtons",
-              "threads"
-            ),
-            [sty.buttonHighlight2socialButtons_youTube]: hasVariant(
-              $state,
-              "socialButtons",
-              "youTube"
             ),
             [sty.buttonHighlight2socialGrey_instagram]: hasVariant(
               $state,
@@ -427,15 +444,40 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "socialGrey",
               "threads"
             ),
-            [sty.buttonHighlight2socialGrey_unnamedVariant]: hasVariant(
-              $state,
-              "socialGrey",
-              "unnamedVariant"
-            ),
             [sty.buttonHighlight2socialGrey_youTube]: hasVariant(
               $state,
               "socialGrey",
               "youTube"
+            ),
+            [sty.buttonHighlight2social_facebook]: hasVariant(
+              $state,
+              "social",
+              "facebook"
+            ),
+            [sty.buttonHighlight2social_instagram]: hasVariant(
+              $state,
+              "social",
+              "instagram"
+            ),
+            [sty.buttonHighlight2social_linkedIn]: hasVariant(
+              $state,
+              "social",
+              "linkedIn"
+            ),
+            [sty.buttonHighlight2social_threads]: hasVariant(
+              $state,
+              "social",
+              "threads"
+            ),
+            [sty.buttonHighlight2social_youTube]: hasVariant(
+              $state,
+              "social",
+              "youTube"
+            ),
+            [sty.buttonHighlight2standardSizeMenuLink]: hasVariant(
+              $state,
+              "standardSizeMenuLink",
+              "standardSizeMenuLink"
             ),
             [sty.buttonHighlight2storeLink]: hasVariant(
               $state,
@@ -680,30 +722,10 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "smallTextLink",
                 "smallTextLink"
               ),
-              [sty.text2socialButtons_facebook]: hasVariant(
+              [sty.text2socialGrey_facebook]: hasVariant(
                 $state,
-                "socialButtons",
+                "socialGrey",
                 "facebook"
-              ),
-              [sty.text2socialButtons_instagram]: hasVariant(
-                $state,
-                "socialButtons",
-                "instagram"
-              ),
-              [sty.text2socialButtons_linkedIn]: hasVariant(
-                $state,
-                "socialButtons",
-                "linkedIn"
-              ),
-              [sty.text2socialButtons_threads]: hasVariant(
-                $state,
-                "socialButtons",
-                "threads"
-              ),
-              [sty.text2socialButtons_youTube]: hasVariant(
-                $state,
-                "socialButtons",
-                "youTube"
               ),
               [sty.text2socialGrey_instagram]: hasVariant(
                 $state,
@@ -720,20 +742,40 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "socialGrey",
                 "threads"
               ),
-              [sty.text2socialGrey_unnamedVariant]: hasVariant(
-                $state,
-                "socialGrey",
-                "unnamedVariant"
-              ),
               [sty.text2socialGrey_youTube]: hasVariant(
                 $state,
                 "socialGrey",
                 "youTube"
               ),
-              [sty.text2social_unnamedVariant]: hasVariant(
+              [sty.text2social_facebook]: hasVariant(
                 $state,
                 "social",
-                "unnamedVariant"
+                "facebook"
+              ),
+              [sty.text2social_instagram]: hasVariant(
+                $state,
+                "social",
+                "instagram"
+              ),
+              [sty.text2social_linkedIn]: hasVariant(
+                $state,
+                "social",
+                "linkedIn"
+              ),
+              [sty.text2social_threads]: hasVariant(
+                $state,
+                "social",
+                "threads"
+              ),
+              [sty.text2social_youTube]: hasVariant(
+                $state,
+                "social",
+                "youTube"
+              ),
+              [sty.text2standardSizeMenuLink]: hasVariant(
+                $state,
+                "standardSizeMenuLink",
+                "standardSizeMenuLink"
               ),
               [sty.text2storeLink]: hasVariant(
                 $state,
@@ -803,10 +845,55 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "smallTextLink",
               "smallTextLink"
             ),
-            [sty.icon12X125socialButtons_facebook]: hasVariant(
+            [sty.icon12X125socialGrey_facebook]: hasVariant(
               $state,
-              "socialButtons",
+              "socialGrey",
               "facebook"
+            ),
+            [sty.icon12X125socialGrey_instagram]: hasVariant(
+              $state,
+              "socialGrey",
+              "instagram"
+            ),
+            [sty.icon12X125socialGrey_linkedIn]: hasVariant(
+              $state,
+              "socialGrey",
+              "linkedIn"
+            ),
+            [sty.icon12X125socialGrey_threads]: hasVariant(
+              $state,
+              "socialGrey",
+              "threads"
+            ),
+            [sty.icon12X125socialGrey_youTube]: hasVariant(
+              $state,
+              "socialGrey",
+              "youTube"
+            ),
+            [sty.icon12X125social_facebook]: hasVariant(
+              $state,
+              "social",
+              "facebook"
+            ),
+            [sty.icon12X125social_instagram]: hasVariant(
+              $state,
+              "social",
+              "instagram"
+            ),
+            [sty.icon12X125social_linkedIn]: hasVariant(
+              $state,
+              "social",
+              "linkedIn"
+            ),
+            [sty.icon12X125social_threads]: hasVariant(
+              $state,
+              "social",
+              "threads"
+            ),
+            [sty.icon12X125social_youTube]: hasVariant(
+              $state,
+              "social",
+              "youTube"
             ),
             [sty.icon12X125storeLink]: hasVariant(
               $state,
@@ -973,15 +1060,15 @@ function PlasmicButtonPrimary__RenderFunc(props) {
 
         <RiFacebookFillIcon
           className={classNames(projectcss.all, sty.svg__rSi35, {
-            [sty.svgsocialButtons_facebook__rSi35McStj]: hasVariant(
-              $state,
-              "socialButtons",
-              "facebook"
-            ),
-            [sty.svgsocialGrey_unnamedVariant__rSi35KeJPd]: hasVariant(
+            [sty.svgsocialGrey_facebook__rSi35ROa38]: hasVariant(
               $state,
               "socialGrey",
-              "unnamedVariant"
+              "facebook"
+            ),
+            [sty.svgsocial_facebook__rSi35OKq3H]: hasVariant(
+              $state,
+              "social",
+              "facebook"
             )
           })}
           role={"img"}
@@ -990,20 +1077,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         {(
           hasVariant($state, "socialGrey", "linkedIn")
             ? true
-            : hasVariant($state, "socialButtons", "linkedIn")
+            : hasVariant($state, "social", "linkedIn")
             ? true
             : false
         ) ? (
           <LinkedInIcon
             className={classNames(projectcss.all, sty.svg__wl7H, {
-              [sty.svgsocialButtons_linkedIn__wl7HyJNqG]: hasVariant(
-                $state,
-                "socialButtons",
-                "linkedIn"
-              ),
-              [sty.svgsocialGrey_linkedIn__wl7HN49Of]: hasVariant(
+              [sty.svgsocialGrey_linkedIn__wl7H9TFZ]: hasVariant(
                 $state,
                 "socialGrey",
+                "linkedIn"
+              ),
+              [sty.svgsocial_linkedIn__wl7HXg3El]: hasVariant(
+                $state,
+                "social",
                 "linkedIn"
               )
             })}
@@ -1013,20 +1100,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         {(
           hasVariant($state, "socialGrey", "youTube")
             ? true
-            : hasVariant($state, "socialButtons", "youTube")
+            : hasVariant($state, "social", "youTube")
             ? true
             : false
         ) ? (
           <YouTubeIcon
             className={classNames(projectcss.all, sty.svg__ghIsg, {
-              [sty.svgsocialButtons_youTube__ghIsgooQ2Q]: hasVariant(
-                $state,
-                "socialButtons",
-                "youTube"
-              ),
-              [sty.svgsocialGrey_youTube__ghIsgaMmLy]: hasVariant(
+              [sty.svgsocialGrey_youTube__ghIsgYkCRw]: hasVariant(
                 $state,
                 "socialGrey",
+                "youTube"
+              ),
+              [sty.svgsocial_youTube__ghIsgKgRhL]: hasVariant(
+                $state,
+                "social",
                 "youTube"
               )
             })}
@@ -1036,20 +1123,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         {(
           hasVariant($state, "socialGrey", "instagram")
             ? true
-            : hasVariant($state, "socialButtons", "instagram")
+            : hasVariant($state, "social", "instagram")
             ? true
             : false
         ) ? (
           <InstagramIcon
             className={classNames(projectcss.all, sty.svg___57HBw, {
-              [sty.svgsocialButtons_instagram___57HBw1GrV8]: hasVariant(
-                $state,
-                "socialButtons",
-                "instagram"
-              ),
-              [sty.svgsocialGrey_instagram___57HBwYe6Vr]: hasVariant(
+              [sty.svgsocialGrey_instagram___57HBw0V5AT]: hasVariant(
                 $state,
                 "socialGrey",
+                "instagram"
+              ),
+              [sty.svgsocial_instagram___57HBwyc4S8]: hasVariant(
+                $state,
+                "social",
                 "instagram"
               )
             })}
@@ -1059,20 +1146,20 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         {(
           hasVariant($state, "socialGrey", "threads")
             ? true
-            : hasVariant($state, "socialButtons", "threads")
+            : hasVariant($state, "social", "threads")
             ? true
             : false
         ) ? (
           <ThreadsIcon
             className={classNames(projectcss.all, sty.svg__sXrIs, {
-              [sty.svgsocialButtons_threads__sXrISi0Lor]: hasVariant(
-                $state,
-                "socialButtons",
-                "threads"
-              ),
-              [sty.svgsocialGrey_threads__sXrIsgmp2F]: hasVariant(
+              [sty.svgsocialGrey_threads__sXrIs4H81J]: hasVariant(
                 $state,
                 "socialGrey",
+                "threads"
+              ),
+              [sty.svgsocial_threads__sXrIssJZg]: hasVariant(
+                $state,
+                "social",
                 "threads"
               )
             })}

@@ -9,8 +9,10 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: l_IC-pMZ1T4O
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -20,6 +22,8 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import ItemSocialIconsGrey from "../../ItemSocialIconsGrey"; // plasmic-import: i6wY1ticQ8f7/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemMegaMenuSubitem from "../../ItemMegaMenuSubitem"; // plasmic-import: JNcUMWnpd-Gl/component
 import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -31,12 +35,6 @@ import Group25Icon from "./icons/PlasmicIcon__Group25"; // plasmic-import: LKS6J
 import Group26Icon from "./icons/PlasmicIcon__Group26"; // plasmic-import: R1py9tLPsq-s/icon
 import Group27Icon from "./icons/PlasmicIcon__Group27"; // plasmic-import: ybiWkkVOdgtE/icon
 import Group28Icon from "./icons/PlasmicIcon__Group28"; // plasmic-import: k02b96_QaC9J/icon
-import FacebookIcon from "./icons/PlasmicIcon__Facebook"; // plasmic-import: MX7KHAkn1iX9/icon
-import LinkedInIcon from "./icons/PlasmicIcon__LinkedIn"; // plasmic-import: dFVMGh3ttlxd/icon
-import XIcon from "./icons/PlasmicIcon__X"; // plasmic-import: nDiW8Wf6zyir/icon
-import YouTubeIcon from "./icons/PlasmicIcon__YouTube"; // plasmic-import: k0AEoApI1UIT/icon
-import InstagramIcon from "./icons/PlasmicIcon__Instagram"; // plasmic-import: vaW6Vs4F4IJB/icon
-import ThreadsIcon from "./icons/PlasmicIcon__Threads"; // plasmic-import: XXUcg-8on_3s/icon
 import Container7Icon from "./icons/PlasmicIcon__Container7"; // plasmic-import: HGdSWGp34SXV/icon
 import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import: TKWn1DDMMFQp/icon
 import Container8Icon from "./icons/PlasmicIcon__Container8"; // plasmic-import: 6kINncsHiPrJ/icon
@@ -511,213 +509,19 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
               role={"img"}
             />
           </div>
-          <div
-            data-plasmic-name={"social"}
-            data-plasmic-override={overrides.social}
-            className={classNames(projectcss.all, sty.social)}
-          >
+          <div className={classNames(projectcss.all, sty.column__ng9Pe)}>
             <div
-              data-plasmic-name={"socialIcon"}
-              data-plasmic-override={overrides.socialIcon}
-              className={classNames(projectcss.all, sty.socialIcon)}
+              data-plasmic-name={"social"}
+              data-plasmic-override={overrides.social}
+              className={classNames(projectcss.all, sty.social)}
             >
-              <FacebookIcon
-                className={classNames(projectcss.all, sty.svg___7JZcJ)}
-                role={"img"}
-              />
-
-              {false ? (
-                <LinkedInIcon
-                  className={classNames(projectcss.all, sty.svg__dAqUh)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <XIcon
-                  className={classNames(projectcss.all, sty.svg__gPcBo)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <YouTubeIcon
-                  className={classNames(projectcss.all, sty.svg___3CRY)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <InstagramIcon
-                  className={classNames(projectcss.all, sty.svg__gN1Cz)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <ThreadsIcon
-                  className={classNames(projectcss.all, sty.svg__nlvtX)}
-                  role={"img"}
-                />
-              ) : null}
-            </div>
-            <div
-              data-plasmic-name={"socialIcon2"}
-              data-plasmic-override={overrides.socialIcon2}
-              className={classNames(projectcss.all, sty.socialIcon2)}
-            >
-              {false ? (
-                <FacebookIcon
-                  className={classNames(projectcss.all, sty.svg__fEa9W)}
-                  role={"img"}
-                />
-              ) : null}
-              <LinkedInIcon
-                className={classNames(projectcss.all, sty.svg__rVml)}
-                role={"img"}
-              />
-
-              {false ? (
-                <XIcon
-                  className={classNames(projectcss.all, sty.svg__wocbS)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <YouTubeIcon
-                  className={classNames(projectcss.all, sty.svg__ivvow)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <InstagramIcon
-                  className={classNames(projectcss.all, sty.svg__kVksy)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <ThreadsIcon
-                  className={classNames(projectcss.all, sty.svg__xkG7)}
-                  role={"img"}
-                />
-              ) : null}
-            </div>
-            <div
-              data-plasmic-name={"socialIcon3"}
-              data-plasmic-override={overrides.socialIcon3}
-              className={classNames(projectcss.all, sty.socialIcon3)}
-            >
-              {false ? (
-                <FacebookIcon
-                  className={classNames(projectcss.all, sty.svg__zJdXq)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <LinkedInIcon
-                  className={classNames(projectcss.all, sty.svg__dZwby)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <XIcon
-                  className={classNames(projectcss.all, sty.svg___3X5Dk)}
-                  role={"img"}
-                />
-              ) : null}
-              <YouTubeIcon
-                className={classNames(projectcss.all, sty.svg__ueJsc)}
-                role={"img"}
-              />
-
-              {false ? (
-                <InstagramIcon
-                  className={classNames(projectcss.all, sty.svg___9Dq4S)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <ThreadsIcon
-                  className={classNames(projectcss.all, sty.svg___3Lvg2)}
-                  role={"img"}
-                />
-              ) : null}
-            </div>
-            <div
-              data-plasmic-name={"socialIcon4"}
-              data-plasmic-override={overrides.socialIcon4}
-              className={classNames(projectcss.all, sty.socialIcon4)}
-            >
-              {false ? (
-                <FacebookIcon
-                  className={classNames(projectcss.all, sty.svg__lTqhc)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <LinkedInIcon
-                  className={classNames(projectcss.all, sty.svg__e4Yr)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <XIcon
-                  className={classNames(projectcss.all, sty.svg__sLvqa)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <YouTubeIcon
-                  className={classNames(projectcss.all, sty.svg__gcJ3J)}
-                  role={"img"}
-                />
-              ) : null}
-              <InstagramIcon
-                className={classNames(projectcss.all, sty.svg__oWQd)}
-                role={"img"}
-              />
-
-              {false ? (
-                <ThreadsIcon
-                  className={classNames(projectcss.all, sty.svg__rl8WS)}
-                  role={"img"}
-                />
-              ) : null}
-            </div>
-            <div
-              data-plasmic-name={"socialIcon5"}
-              data-plasmic-override={overrides.socialIcon5}
-              className={classNames(projectcss.all, sty.socialIcon5)}
-            >
-              {false ? (
-                <FacebookIcon
-                  className={classNames(projectcss.all, sty.svg__yfW0P)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <LinkedInIcon
-                  className={classNames(projectcss.all, sty.svg__wQL1)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <XIcon
-                  className={classNames(projectcss.all, sty.svg___0VNlh)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <YouTubeIcon
-                  className={classNames(projectcss.all, sty.svg__ei74G)}
-                  role={"img"}
-                />
-              ) : null}
-              {false ? (
-                <InstagramIcon
-                  className={classNames(projectcss.all, sty.svg__zjjc2)}
-                  role={"img"}
-                />
-              ) : null}
-              <ThreadsIcon
-                className={classNames(projectcss.all, sty.svg___5JFe)}
-                role={"img"}
+              <ItemSocialIconsGrey
+                data-plasmic-name={"itemSocialIconsGrey"}
+                data-plasmic-override={overrides.itemSocialIconsGrey}
+                className={classNames(
+                  "__wab_instance",
+                  sty.itemSocialIconsGrey
+                )}
               />
             </div>
           </div>
@@ -739,10 +543,18 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                   data-plasmic-override={overrides.contact}
                   className={classNames(projectcss.all, sty.contact)}
                 >
-                  <div
+                  <PlasmicLink__
                     data-plasmic-name={"navItemMenu"}
                     data-plasmic-override={overrides.navItemMenu}
-                    className={classNames(projectcss.all, sty.navItemMenu)}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.navItemMenu
+                    )}
+                    component={Link}
+                    href={"https://maps.app.goo.gl/VfhxqumUh1RHttsi9"}
+                    platform={"nextjs"}
+                    target={"_blank"}
                   >
                     <div
                       data-plasmic-name={"icon16X16"}
@@ -777,11 +589,19 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         />
                       </div>
                     ) : null}
-                  </div>
-                  <div
+                  </PlasmicLink__>
+                  <PlasmicLink__
                     data-plasmic-name={"navItemMenu2"}
                     data-plasmic-override={overrides.navItemMenu2}
-                    className={classNames(projectcss.all, sty.navItemMenu2)}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.navItemMenu2
+                    )}
+                    component={Link}
+                    href={"tel:+13128801906"}
+                    platform={"nextjs"}
+                    target={"_blank"}
                   >
                     <div
                       data-plasmic-name={"icon16X162"}
@@ -819,11 +639,18 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         />
                       </div>
                     ) : null}
-                  </div>
-                  <div
+                  </PlasmicLink__>
+                  <PlasmicLink__
                     data-plasmic-name={"navItemMenu3"}
                     data-plasmic-override={overrides.navItemMenu3}
-                    className={classNames(projectcss.all, sty.navItemMenu3)}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.navItemMenu3
+                    )}
+                    component={Link}
+                    href={"mailto:info@assh.org"}
+                    platform={"nextjs"}
                   >
                     <div
                       data-plasmic-name={"icon16X163"}
@@ -858,138 +685,71 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                         />
                       </div>
                     ) : null}
-                  </div>
+                  </PlasmicLink__>
                 </div>
                 <div
                   data-plasmic-name={"frame8"}
                   data-plasmic-override={overrides.frame8}
                   className={classNames(projectcss.all, sty.frame8)}
                 >
-                  <div
-                    data-plasmic-name={"navItemMenu4"}
-                    data-plasmic-override={overrides.navItemMenu4}
-                    className={classNames(projectcss.all, sty.navItemMenu4)}
-                  >
-                    {false ? (
-                      <div
-                        data-plasmic-name={"icon12X124"}
-                        data-plasmic-override={overrides.icon12X124}
-                        className={classNames(projectcss.all, sty.icon12X124)}
-                      >
-                        <ContainerIcon
-                          className={classNames(projectcss.all, sty.svg__gWsRs)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                    <div
-                      data-plasmic-name={"navigationItem4"}
-                      data-plasmic-override={overrides.navigationItem4}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.navigationItem4
-                      )}
-                    >
-                      {"Advertise"}
-                    </div>
-                    {false ? (
-                      <div
-                        data-plasmic-name={"icon12X125"}
-                        data-plasmic-override={overrides.icon12X125}
-                        className={classNames(projectcss.all, sty.icon12X125)}
-                      >
-                        <Container2Icon
-                          className={classNames(projectcss.all, sty.svg__sfngi)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                  </div>
-                  <div
-                    data-plasmic-name={"navItemMenu5"}
-                    data-plasmic-override={overrides.navItemMenu5}
-                    className={classNames(projectcss.all, sty.navItemMenu5)}
-                  >
-                    {false ? (
-                      <div
-                        data-plasmic-name={"icon12X126"}
-                        data-plasmic-override={overrides.icon12X126}
-                        className={classNames(projectcss.all, sty.icon12X126)}
-                      >
-                        <ContainerIcon
-                          className={classNames(projectcss.all, sty.svg__wncaM)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                    <div
-                      data-plasmic-name={"navigationItem5"}
-                      data-plasmic-override={overrides.navigationItem5}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.navigationItem5
-                      )}
-                    >
-                      {"Press Center"}
-                    </div>
-                    {false ? (
-                      <div
-                        data-plasmic-name={"icon12X127"}
-                        data-plasmic-override={overrides.icon12X127}
-                        className={classNames(projectcss.all, sty.icon12X127)}
-                      >
-                        <Container2Icon
-                          className={classNames(projectcss.all, sty.svg__kbXkr)}
-                          role={"img"}
-                        />
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"buttonSecondary"}
-                  data-plasmic-override={overrides.buttonSecondary}
-                  className={classNames(projectcss.all, sty.buttonSecondary)}
-                >
-                  {false ? (
-                    <div
-                      data-plasmic-name={"icon12X128"}
-                      data-plasmic-override={overrides.icon12X128}
-                      className={classNames(projectcss.all, sty.icon12X128)}
-                    >
-                      <ContainerIcon
-                        className={classNames(projectcss.all, sty.svg__ml8Vu)}
-                        role={"img"}
-                      />
-                    </div>
-                  ) : null}
-                  <div
-                    data-plasmic-name={"text"}
-                    data-plasmic-override={overrides.text}
+                  <ButtonPrimary
                     className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text
+                      "__wab_instance",
+                      sty.buttonPrimary__a3M4O
                     )}
-                  >
-                    {"Donate to the Foundation"}
-                  </div>
-                  {false ? (
-                    <div
-                      data-plasmic-name={"icon12X129"}
-                      data-plasmic-override={overrides.icon12X129}
-                      className={classNames(projectcss.all, sty.icon12X129)}
-                    >
-                      <Container2Icon
-                        className={classNames(projectcss.all, sty.svg__smizU)}
-                        role={"img"}
-                      />
-                    </div>
-                  ) : null}
+                    darkNoBgInteractions={[]}
+                    megaMenuLink={[]}
+                    standardSizeMenuLink={
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? true
+                        : true
+                    }
+                    text={
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "Advertise"
+                        : "Advertise"
+                    }
+                    url={
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "https://www.assh.org/advertise"
+                        : "https://www.assh.org/advertise"
+                    }
+                  />
+
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__jv8Ym
+                    )}
+                    darkNoBgInteractions={[]}
+                    megaMenuLink={[]}
+                    standardSizeMenuLink={
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? true
+                        : true
+                    }
+                    text={
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "Press Center"
+                        : "Press Center"
+                    }
+                    url={
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "https://www.assh.org/press-center"
+                        : "https://www.assh.org/press-center"
+                    }
+                  />
                 </div>
               </div>
+              <ButtonPrimary
+                className={classNames(
+                  "__wab_instance",
+                  sty.buttonPrimary__khuva
+                )}
+                menuButton={true}
+                text={"Donate to Foundation"}
+                url={"https://www.assh.org/afsh/donate"}
+              />
             </div>
           </div>
           <div className={classNames(projectcss.all, sty.column__nKa5B)}>
@@ -2624,29 +2384,66 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
           data-plasmic-override={overrides.container}
           className={classNames(projectcss.all, sty.container)}
         >
-          <div
-            data-plasmic-name={"copyright"}
-            data-plasmic-override={overrides.copyright}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.copyright
-            )}
-          >
-            {
-              "Copyright 2025, American Society for Surgery of the Hand, All rights reserved. "
-            }
+          <div className={classNames(projectcss.all, sty.freeBox___3Z094)}>
+            <div
+              data-plasmic-name={"copyright"}
+              data-plasmic-override={overrides.copyright}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.copyright
+              )}
+            >
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return `Copyright ${new Date().getFullYear()}, American Society for Surgery of the Hand, All rights reserved. `;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Copyright 2025, American Society for Surgery of the Hand, All rights reserved. ";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
+            </div>
           </div>
-          <div
-            data-plasmic-name={"secondTierNavigation"}
-            data-plasmic-override={overrides.secondTierNavigation}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.secondTierNavigation
-            )}
-          >
-            {"Privacy Policy  |  Terms of Use  |  Sitemap"}
+          <div className={classNames(projectcss.all, sty.freeBox___6YdnL)}>
+            <ButtonPrimary
+              className={classNames("__wab_instance", sty.buttonPrimary__boNLl)}
+              smallTextLink={true}
+              text={"Privacy Policy"}
+              url={"https://www.assh.org/privacy-policy"}
+            />
+
+            <section
+              data-plasmic-name={"menuBar"}
+              data-plasmic-override={overrides.menuBar}
+              className={classNames(projectcss.all, sty.menuBar)}
+            />
+
+            <ButtonPrimary
+              className={classNames("__wab_instance", sty.buttonPrimary__zBug3)}
+              smallTextLink={true}
+              text={"Terms of Use"}
+              url={"https://www.assh.org/terms-of-use"}
+            />
+
+            <section
+              data-plasmic-name={"menuBar2"}
+              data-plasmic-override={overrides.menuBar2}
+              className={classNames(projectcss.all, sty.menuBar2)}
+            />
+
+            <ButtonPrimary
+              className={classNames("__wab_instance", sty.buttonPrimary__mably)}
+              smallTextLink={true}
+              text={"Sitemap"}
+              url={"https://www.assh.org/sitemap"}
+            />
           </div>
         </div>
       </div>
@@ -2661,11 +2458,7 @@ const PlasmicDescendants = {
     "frame5",
     "group1",
     "social",
-    "socialIcon",
-    "socialIcon2",
-    "socialIcon3",
-    "socialIcon4",
-    "socialIcon5",
+    "itemSocialIconsGrey",
     "columns",
     "frame7",
     "contact",
@@ -2682,18 +2475,6 @@ const PlasmicDescendants = {
     "navigationItem3",
     "icon12X123",
     "frame8",
-    "navItemMenu4",
-    "icon12X124",
-    "navigationItem4",
-    "icon12X125",
-    "navItemMenu5",
-    "icon12X126",
-    "navigationItem5",
-    "icon12X127",
-    "buttonSecondary",
-    "icon12X128",
-    "text",
-    "icon12X129",
     "frame27",
     "navItemSimple10",
     "icon12X12144",
@@ -2752,7 +2533,8 @@ const PlasmicDescendants = {
     "icon12X12175",
     "container",
     "copyright",
-    "secondTierNavigation"
+    "menuBar",
+    "menuBar2"
   ],
 
   footer: [
@@ -2760,11 +2542,7 @@ const PlasmicDescendants = {
     "frame5",
     "group1",
     "social",
-    "socialIcon",
-    "socialIcon2",
-    "socialIcon3",
-    "socialIcon4",
-    "socialIcon5",
+    "itemSocialIconsGrey",
     "columns",
     "frame7",
     "contact",
@@ -2781,18 +2559,6 @@ const PlasmicDescendants = {
     "navigationItem3",
     "icon12X123",
     "frame8",
-    "navItemMenu4",
-    "icon12X124",
-    "navigationItem4",
-    "icon12X125",
-    "navItemMenu5",
-    "icon12X126",
-    "navigationItem5",
-    "icon12X127",
-    "buttonSecondary",
-    "icon12X128",
-    "text",
-    "icon12X129",
     "frame27",
     "navItemSimple10",
     "icon12X12144",
@@ -2851,35 +2617,14 @@ const PlasmicDescendants = {
     "icon12X12175",
     "container",
     "copyright",
-    "secondTierNavigation"
+    "menuBar",
+    "menuBar2"
   ],
 
-  frame5: [
-    "frame5",
-    "group1",
-    "social",
-    "socialIcon",
-    "socialIcon2",
-    "socialIcon3",
-    "socialIcon4",
-    "socialIcon5"
-  ],
-
+  frame5: ["frame5", "group1", "social", "itemSocialIconsGrey"],
   group1: ["group1"],
-  social: [
-    "social",
-    "socialIcon",
-    "socialIcon2",
-    "socialIcon3",
-    "socialIcon4",
-    "socialIcon5"
-  ],
-
-  socialIcon: ["socialIcon"],
-  socialIcon2: ["socialIcon2"],
-  socialIcon3: ["socialIcon3"],
-  socialIcon4: ["socialIcon4"],
-  socialIcon5: ["socialIcon5"],
+  social: ["social", "itemSocialIconsGrey"],
+  itemSocialIconsGrey: ["itemSocialIconsGrey"],
   columns: [
     "columns",
     "frame7",
@@ -2897,18 +2642,6 @@ const PlasmicDescendants = {
     "navigationItem3",
     "icon12X123",
     "frame8",
-    "navItemMenu4",
-    "icon12X124",
-    "navigationItem4",
-    "icon12X125",
-    "navItemMenu5",
-    "icon12X126",
-    "navigationItem5",
-    "icon12X127",
-    "buttonSecondary",
-    "icon12X128",
-    "text",
-    "icon12X129",
     "frame27",
     "navItemSimple10",
     "icon12X12144",
@@ -2982,19 +2715,7 @@ const PlasmicDescendants = {
     "icon16X163",
     "navigationItem3",
     "icon12X123",
-    "frame8",
-    "navItemMenu4",
-    "icon12X124",
-    "navigationItem4",
-    "icon12X125",
-    "navItemMenu5",
-    "icon12X126",
-    "navigationItem5",
-    "icon12X127",
-    "buttonSecondary",
-    "icon12X128",
-    "text",
-    "icon12X129"
+    "frame8"
   ],
 
   contact: [
@@ -3025,30 +2746,7 @@ const PlasmicDescendants = {
   icon16X163: ["icon16X163"],
   navigationItem3: ["navigationItem3"],
   icon12X123: ["icon12X123"],
-  frame8: [
-    "frame8",
-    "navItemMenu4",
-    "icon12X124",
-    "navigationItem4",
-    "icon12X125",
-    "navItemMenu5",
-    "icon12X126",
-    "navigationItem5",
-    "icon12X127"
-  ],
-
-  navItemMenu4: ["navItemMenu4", "icon12X124", "navigationItem4", "icon12X125"],
-  icon12X124: ["icon12X124"],
-  navigationItem4: ["navigationItem4"],
-  icon12X125: ["icon12X125"],
-  navItemMenu5: ["navItemMenu5", "icon12X126", "navigationItem5", "icon12X127"],
-  icon12X126: ["icon12X126"],
-  navigationItem5: ["navigationItem5"],
-  icon12X127: ["icon12X127"],
-  buttonSecondary: ["buttonSecondary", "icon12X128", "text", "icon12X129"],
-  icon12X128: ["icon12X128"],
-  text: ["text"],
-  icon12X129: ["icon12X129"],
+  frame8: ["frame8"],
   frame27: [
     "frame27",
     "navItemSimple10",
@@ -3175,9 +2873,10 @@ const PlasmicDescendants = {
   navItemMenu78: ["navItemMenu78", "icon12X12174", "icon12X12175"],
   icon12X12174: ["icon12X12174"],
   icon12X12175: ["icon12X12175"],
-  container: ["container", "copyright", "secondTierNavigation"],
+  container: ["container", "copyright", "menuBar", "menuBar2"],
   copyright: ["copyright"],
-  secondTierNavigation: ["secondTierNavigation"]
+  menuBar: ["menuBar"],
+  menuBar2: ["menuBar2"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -3216,11 +2915,7 @@ export const PlasmicSectionFooterSection = Object.assign(
     frame5: makeNodeComponent("frame5"),
     group1: makeNodeComponent("group1"),
     social: makeNodeComponent("social"),
-    socialIcon: makeNodeComponent("socialIcon"),
-    socialIcon2: makeNodeComponent("socialIcon2"),
-    socialIcon3: makeNodeComponent("socialIcon3"),
-    socialIcon4: makeNodeComponent("socialIcon4"),
-    socialIcon5: makeNodeComponent("socialIcon5"),
+    itemSocialIconsGrey: makeNodeComponent("itemSocialIconsGrey"),
     columns: makeNodeComponent("columns"),
     frame7: makeNodeComponent("frame7"),
     contact: makeNodeComponent("contact"),
@@ -3237,18 +2932,6 @@ export const PlasmicSectionFooterSection = Object.assign(
     navigationItem3: makeNodeComponent("navigationItem3"),
     icon12X123: makeNodeComponent("icon12X123"),
     frame8: makeNodeComponent("frame8"),
-    navItemMenu4: makeNodeComponent("navItemMenu4"),
-    icon12X124: makeNodeComponent("icon12X124"),
-    navigationItem4: makeNodeComponent("navigationItem4"),
-    icon12X125: makeNodeComponent("icon12X125"),
-    navItemMenu5: makeNodeComponent("navItemMenu5"),
-    icon12X126: makeNodeComponent("icon12X126"),
-    navigationItem5: makeNodeComponent("navigationItem5"),
-    icon12X127: makeNodeComponent("icon12X127"),
-    buttonSecondary: makeNodeComponent("buttonSecondary"),
-    icon12X128: makeNodeComponent("icon12X128"),
-    text: makeNodeComponent("text"),
-    icon12X129: makeNodeComponent("icon12X129"),
     frame27: makeNodeComponent("frame27"),
     navItemSimple10: makeNodeComponent("navItemSimple10"),
     icon12X12144: makeNodeComponent("icon12X12144"),
@@ -3307,7 +2990,8 @@ export const PlasmicSectionFooterSection = Object.assign(
     icon12X12175: makeNodeComponent("icon12X12175"),
     container: makeNodeComponent("container"),
     copyright: makeNodeComponent("copyright"),
-    secondTierNavigation: makeNodeComponent("secondTierNavigation"),
+    menuBar: makeNodeComponent("menuBar"),
+    menuBar2: makeNodeComponent("menuBar2"),
     // Metadata about props expected for PlasmicSectionFooterSection
     internalVariantProps: PlasmicSectionFooterSection__VariantProps,
     internalArgProps: PlasmicSectionFooterSection__ArgProps

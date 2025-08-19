@@ -3243,6 +3243,75 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/news-publications/journal-cme-credit-exams"
+        },
+        {
+          "id": "i6wY1ticQ8f7",
+          "name": "ItemSocialIconsGrey",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemSocialIconsGrey.jsx",
+          "importSpec": {
+            "modulePath": "ItemSocialIconsGrey.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemSocialIconsGrey.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "pl5eXGCKsk8J",
+          "name": "WaiverCme",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicWaiverCme.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/waiver.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicWaiverCme.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/waiver"
+        },
+        {
+          "id": "TdL4hOyTBrA1",
+          "name": "EBookFaQs",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicEBookFaQs.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/ebook-faqs.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicEBookFaQs.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/ebook-faqs"
+        },
+        {
+          "id": "wCs5juMwTxRv",
+          "name": "TheHandBook",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTheHandBook.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/the-hand-book.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicTheHandBook.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/the-hand-book"
+        },
+        {
+          "id": "45thTmfXPVw-",
+          "name": "TheHandBookFeedback",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTheHandBookFeedback.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/the-hand-book/feedback.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicTheHandBookFeedback.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/the-hand-book/feedback"
         }
       ],
       "icons": [
@@ -4177,6 +4246,51 @@
           "id": "unHm5yNRvyzs",
           "name": "Image 9",
           "filePath": "../public/plasmic/assh_home/images/image9.png"
+        },
+        {
+          "id": "nS1jMoLVb21A",
+          "name": "Hand Book.png",
+          "filePath": "../public/plasmic/assh_home/images/handBookPng.png"
+        },
+        {
+          "id": "j7Gc5WKUsXyj",
+          "name": "Hand Book.png 2",
+          "filePath": "../public/plasmic/assh_home/images/handBookPng2.png"
+        },
+        {
+          "id": "M6-VNReOl89G",
+          "name": "pencil-icon.png",
+          "filePath": "../public/plasmic/assh_home/images/pencilIconPng.png"
+        },
+        {
+          "id": "AJRec2WLOeIn",
+          "name": "ecg-monitoring-icon.png",
+          "filePath": "../public/plasmic/assh_home/images/ecgMonitoringIconPng.png"
+        },
+        {
+          "id": "oF-WbPI_mxW6",
+          "name": "pencil-icon.png 2",
+          "filePath": "../public/plasmic/assh_home/images/pencilIconPng2.png"
+        },
+        {
+          "id": "ednLfZVW-4Dp",
+          "name": "hand-icon.png",
+          "filePath": "../public/plasmic/assh_home/images/handIconPng.png"
+        },
+        {
+          "id": "DHKw0FcIzcbq",
+          "name": "home-icon.png",
+          "filePath": "../public/plasmic/assh_home/images/homeIconPng.png"
+        },
+        {
+          "id": "eZkzyot4H_A0",
+          "name": "smileyface-icon.png",
+          "filePath": "../public/plasmic/assh_home/images/smileyfaceIconPng.png"
+        },
+        {
+          "id": "CR06_Z-Cbyd5",
+          "name": "ekg-icon.png",
+          "filePath": "../public/plasmic/assh_home/images/ekgIconPng.png"
         }
       ],
       "indirect": false,
