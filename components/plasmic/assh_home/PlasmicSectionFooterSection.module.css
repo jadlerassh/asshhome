@@ -104,6 +104,12 @@
   align-items: flex-start;
   min-width: 0;
 }
+@media (max-width: 414px) {
+  .group1 {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .svg__o4UBu {
   object-fit: cover;
   max-width: 100%;
@@ -167,6 +173,13 @@
   align-items: flex-end;
   min-width: 0;
   padding: 8px;
+}
+@media (max-width: 414px) {
+  .column__ng9Pe {
+    align-items: flex-start;
+    justify-content: center;
+    overflow: auto;
+  }
 }
 .social {
   width: auto;
@@ -240,13 +253,8 @@
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
-  .columns > :nth-child(2n + 1) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .columns > :nth-child(2n + 2) {
-    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+  .columns > :nth-child(1n + 1) {
+    width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
 @media (max-width: 414px) {
@@ -273,9 +281,14 @@
     justify-content: flex-start;
   }
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .column__pusMq {
+    align-items: stretch;
+  }
+}
 @media (max-width: 414px) {
   .column__pusMq {
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
   }
 }
@@ -293,7 +306,7 @@
 }
 @media (max-width: 414px) {
   .freeBox__suvqz {
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
   }
 }
@@ -311,6 +324,13 @@
   .frame7 {
     flex-shrink: 0;
     flex-grow: 0;
+  }
+}
+@media (max-width: 414px) {
+  .frame7 {
+    width: 100%;
+    align-items: stretch;
+    min-width: 0;
   }
 }
 .contact {
@@ -583,6 +603,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .column__nKa5B {
+    align-items: stretch;
     display: none;
   }
 }
@@ -927,6 +948,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .column___0OmGm {
+    align-items: stretch;
     display: none;
   }
 }
@@ -1432,6 +1454,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .column___4MWhN {
+    align-items: stretch;
     display: none;
   }
 }

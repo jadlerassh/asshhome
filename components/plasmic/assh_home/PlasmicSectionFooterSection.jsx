@@ -16,7 +16,6 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   hasVariant,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -25,10 +24,11 @@ import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSocialIconsGrey from "../../ItemSocialIconsGrey"; // plasmic-import: i6wY1ticQ8f7/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemMegaMenuSubitem from "../../ItemMegaMenuSubitem"; // plasmic-import: JNcUMWnpd-Gl/component
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicSectionFooterSection.module.css"; // plasmic-import: l_IC-pMZ1T4O/css
 import Group25Icon from "./icons/PlasmicIcon__Group25"; // plasmic-import: LKS6J4VoLZXv/icon
@@ -454,9 +454,12 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
+  const globalVariants = _useGlobalVariants();
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
+  const styleTokensClassNames_plasmic_rich_components =
+    useStyleTokens_plasmic_rich_components();
   return (
     <div
       data-plasmic-name={"root"}
@@ -468,9 +471,9 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
-        plasmic_plasmic_rich_components_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
+        styleTokensClassNames_plasmic_rich_components,
         sty.root
       )}
     >
@@ -487,7 +490,13 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
           <div
             data-plasmic-name={"group1"}
             data-plasmic-override={overrides.group1}
-            className={classNames(projectcss.all, sty.group1)}
+            className={classNames(
+              projectcss.all,
+              sty.group1,
+              hasVariant(globalVariants, "screen", "smallMobile")
+                ? "footerlogo"
+                : undefined
+            )}
           >
             <Group25Icon
               className={classNames(projectcss.all, sty.svg__o4UBu)}

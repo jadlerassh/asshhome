@@ -17,7 +17,6 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants,
   hasVariant,
   set as $stateSet,
   useDollarState
@@ -31,11 +30,11 @@ import ItemMegaMenuSubitem from "../../ItemMegaMenuSubitem"; // plasmic-import: 
 import ItemExternalLinkCardItemWithLogo from "../../ItemExternalLinkCardItemWithLogo"; // plasmic-import: rLtSCz5xy5NR/component
 import ItemMenuFeaturedHighlightItem from "../../ItemMenuFeaturedHighlightItem"; // plasmic-import: i3mM-1cWYoIK/component
 import ItemSocialIconsWhite from "../../ItemSocialIconsWhite"; // plasmic-import: tunsLs0QnFEC/component
-import { useUnnamedGlobalGroupOfVariants } from "./PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants"; // plasmic-import: Cr_xgEeRRQEa/globalVariant
-import { useScreenVariants as useScreenVariantsdjBtUr72ZExV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: DJBtUr72ZExV/globalVariant
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicSectionHomeMenuSection.module.css"; // plasmic-import: HrBwnQh3XfKO/css
 import Group3Icon from "./icons/PlasmicIcon__Group3"; // plasmic-import: UW-I31ujO-X0/icon
@@ -618,10 +617,12 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = ensureGlobalVariants({
-    unnamedGlobalGroupOfVariants: useUnnamedGlobalGroupOfVariants(),
-    screen: useScreenVariantsdjBtUr72ZExV()
-  });
+  const globalVariants = _useGlobalVariants();
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
+  const styleTokensClassNames_plasmic_rich_components =
+    useStyleTokens_plasmic_rich_components();
   return (
     <div
       data-plasmic-name={"root"}
@@ -633,9 +634,9 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         projectcss.root_reset,
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
-        projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
-        plasmic_plasmic_rich_components_css.plasmic_tokens,
+        styleTokensClassNames,
+        styleTokensClassNames_antd_5_hostless,
+        styleTokensClassNames_plasmic_rich_components,
         sty.root,
         {
           [sty.rootglobal_unnamedGlobalGroupOfVariants_unnamedVariant]:

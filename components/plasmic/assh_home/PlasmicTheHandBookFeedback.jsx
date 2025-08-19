@@ -21,14 +21,13 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
-import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
-import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
+import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicTheHandBookFeedback.module.css"; // plasmic-import: 45thTmfXPVw-/css
 
@@ -84,6 +83,11 @@ function PlasmicTheHandBookFeedback__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const styleTokensClassNames = _useStyleTokens();
+  const styleTokensClassNames_antd_5_hostless =
+    useStyleTokens_antd_5_hostless();
+  const styleTokensClassNames_plasmic_rich_components =
+    useStyleTokens_plasmic_rich_components();
   return (
     <React.Fragment>
       <Head>
@@ -121,9 +125,9 @@ function PlasmicTheHandBookFeedback__RenderFunc(props) {
             projectcss.root_reset,
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
-            projectcss.plasmic_tokens,
-            plasmic_antd_5_hostless_css.plasmic_tokens,
-            plasmic_plasmic_rich_components_css.plasmic_tokens,
+            styleTokensClassNames,
+            styleTokensClassNames_antd_5_hostless,
+            styleTokensClassNames_plasmic_rich_components,
             sty.root
           )}
         >
@@ -138,15 +142,25 @@ function PlasmicTheHandBookFeedback__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
-            title={"Hero: The Hand Book - Title Card"}
+            title={"Hero: The Hand Book Feedback - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__a4C4Z)}>
-            <div className={classNames(projectcss.all, sty.columns__vE9Bz)}>
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
+            >
               <div className={classNames(projectcss.all, sty.column__bJz)}>
                 <PlasmicImg__
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
                   alt={"The Hand Book bookcover"}
-                  className={classNames(sty.img__b9Dgp)}
+                  className={classNames(sty.img)}
                   displayHeight={"auto"}
                   displayMaxHeight={"100%"}
                   displayMaxWidth={"100%"}
@@ -161,272 +175,27 @@ function PlasmicTheHandBookFeedback__RenderFunc(props) {
                     aspectRatio: undefined
                   }}
                 />
-
-                <BlockQuoteBlock
-                  className={classNames(
-                    "__wab_instance",
-                    sty.blockQuoteBlock__blgDi
-                  )}
-                  name={"The Hand Book quote 1"}
-                  quote={"singleLine"}
-                />
-
-                <ButtonPrimary
-                  className={classNames(
-                    "__wab_instance",
-                    sty.buttonPrimary__z1VXx
-                  )}
-                  secondaryInteractions={"secondary"}
-                  text={"Buy The Hand Book"}
-                  url={
-                    "https://american-society-for-surgery-of-the-hand.myshopify.com/products/the-hand-book-an-informational-guide-for-parents-of-children-with-hand-differences"
-                  }
-                />
               </div>
               <div className={classNames(projectcss.all, sty.column__jmTzu)}>
                 <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
                   className={classNames(
                     "__wab_instance",
-                    sty.htmlContentfulHtmlLoader___3BeuH
+                    sty.htmlContentfulHtmlLoader
                   )}
-                  title={"About The Hand Book"}
+                  title={"Provide Your Feedback on The Hand Book"}
                 />
               </div>
             </div>
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox___9ImgJ)}>
-            <h3
-              data-plasmic-name={"h3"}
-              data-plasmic-override={overrides.h3}
-              className={classNames(
-                projectcss.all,
-                projectcss.h3,
-                projectcss.__wab_text,
-                sty.h3
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>{"What's Inside "}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontStyle: "italic" }}
-                >
-                  {"The Hand Book"}
-                </span>
-              </React.Fragment>
-            </h3>
-            <div className={classNames(projectcss.all, sty.columns__dBOvz)}>
-              <div className={classNames(projectcss.all, sty.column__tjj0H)}>
-                <PlasmicImg__
-                  alt={"Pencil icon"}
-                  className={classNames(sty.img__jrtw2)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/pencilIconPng2.png",
-                    fullWidth: 352,
-                    fullHeight: 352,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__xxoLi)}>
-                <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__gd3Q)}
-                  code={
-                    "<h4>Language & Conversations</h4>\r\n<p>Shaping the narrative and language around a child's hand difference with social scripts and the right vocabulary.</p>"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___5Cyj7)}>
-                <PlasmicImg__
-                  alt={"EKG heart rhythm"}
-                  className={classNames(sty.img__hQq0V)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/ekgIconPng.png",
-                    fullWidth: 352,
-                    fullHeight: 352,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__qimR4)}>
-                <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__zwdad)}
-                  code={
-                    "<h4>Medical Care</h4>\r\n  <p>Understanding what causes hand differences and how to navigate different treatment options.</p>"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__wJf9X)}>
-                <PlasmicImg__
-                  alt={"Smiley face icon"}
-                  className={classNames(sty.img__oc9DN)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/smileyfaceIconPng.png",
-                    fullWidth: 352,
-                    fullHeight: 352,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__xWiN)}>
-                <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__d024N)}
-                  code={
-                    "<h4>Processing Emotions</h4>\r\n<p>Reflect on your emotions after welcoming a child with a hand difference and embrace the journey.</p>"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__e8VP)}>
-                <PlasmicImg__
-                  alt={"Hand icon"}
-                  className={classNames(sty.img__vKo6R)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/handIconPng.png",
-                    fullWidth: 352,
-                    fullHeight: 352,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__z5RUo)}>
-                <Embed
-                  className={classNames(
-                    "__wab_instance",
-                    sty.embedHtml___3PtTy
-                  )}
-                  code={
-                    "<h4>Prosthetics &amp; Hand Therapy</h4>\r\n<p>Exploring the role and benefits of prosthetics and adapting to every day life with a hand difference.</p>"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__ctoxn)}>
-                <PlasmicImg__
-                  alt={"Pencil icon"}
-                  className={classNames(sty.img__eV3YI)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/pencilIconPng2.png",
-                    fullWidth: 352,
-                    fullHeight: 352,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__vifsu)}>
-                <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__xkn4M)}
-                  code={
-                    "<h4>School and Government</h4>\r\n<p>Navigating resources, tools, and policies in school and government and where to access them.</p>"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___4DTuj)}>
-                <PlasmicImg__
-                  alt={"Home icon"}
-                  className={classNames(sty.img___2KgWd)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/assh_home/images/homeIconPng.png",
-                    fullWidth: 352,
-                    fullHeight: 352,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__xMsLf)}>
-                <Embed
-                  className={classNames("__wab_instance", sty.embedHtml__mFkrY)}
-                  code={
-                    "<h4>Support Systems</h4>\r\n<p>How families, siblings, and like-minded communities play a role in your journey.</p>"
-                  }
-                />
-              </div>
-            </div>
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox___0XxSj)}>
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader__bFjQ
-              )}
-              title={"About The Hand Book Authors"}
+            <Embed
+              data-plasmic-name={"embedHtml"}
+              data-plasmic-override={overrides.embedHtml}
+              className={classNames("__wab_instance", sty.embedHtml)}
+              code={
+                '<iframe height="1500" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://assh.wufoo.com/embed/mpdgdk8093m4m4/"><a href="https://assh.wufoo.com/embed/mpdgdk8093m4m4/">Fill out my Wufoo form!</a></iframe>'
+              }
             />
-
-            <div className={classNames(projectcss.all, sty.columns__t5Xar)}>
-              <div className={classNames(projectcss.all, sty.column__huDkU)}>
-                <BlockQuoteBlock
-                  className={classNames(
-                    "__wab_instance",
-                    sty.blockQuoteBlock__k8DC6
-                  )}
-                  name={"The Hand Book quote 2"}
-                  quote={"full"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__c4Pry)}>
-                <HtmlContentfulHtmlLoader
-                  className={classNames(
-                    "__wab_instance",
-                    sty.htmlContentfulHtmlLoader__o6Xas
-                  )}
-                  title={
-                    "About The Hand Book Publisher and Contact Information"
-                  }
-                />
-
-                <ButtonPrimary
-                  className={classNames(
-                    "__wab_instance",
-                    sty.buttonPrimary__krprB
-                  )}
-                  secondaryInteractions={"secondary"}
-                  text={"Buy The Hand Book"}
-                  url={
-                    "https://american-society-for-surgery-of-the-hand.myshopify.com/products/the-hand-book-an-informational-guide-for-parents-of-children-with-hand-differences"
-                  }
-                />
-              </div>
-            </div>
           </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__ub9Ox)} />
           <BlockAsshMissionBlueBlock
@@ -447,12 +216,27 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
-    "h3",
+    "freeBox",
+    "columns",
+    "img",
+    "htmlContentfulHtmlLoader",
+    "embedHtml",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  h3: ["h3"],
+  freeBox: [
+    "freeBox",
+    "columns",
+    "img",
+    "htmlContentfulHtmlLoader",
+    "embedHtml"
+  ],
+
+  columns: ["columns", "img", "htmlContentfulHtmlLoader"],
+  img: ["img"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
+  embedHtml: ["embedHtml"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -491,7 +275,11 @@ export const PlasmicTheHandBookFeedback = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    h3: makeNodeComponent("h3"),
+    freeBox: makeNodeComponent("freeBox"),
+    columns: makeNodeComponent("columns"),
+    img: makeNodeComponent("img"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
+    embedHtml: makeNodeComponent("embedHtml"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicTheHandBookFeedback
     internalVariantProps: PlasmicTheHandBookFeedback__VariantProps,
