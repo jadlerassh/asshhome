@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: flex-start;
   row-gap: 20px;
-  padding: 30px;
+  padding: 0px 30px;
 }
 .frame6quote_singleLine {
   align-items: flex-start;
@@ -81,9 +81,21 @@
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 32px;
-  color: #000000;
+  color: var(--token-py5R6wetCsNw);
   position: relative;
   width: 290px;
+}
+@media (max-width: 1023px) {
+  .text___3AtRy {
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (max-width: 240px) {
+  .text___3AtRy {
+    width: 100%;
+    min-width: 0;
+  }
 }
 .textquote_singleLine___3AtRyHh4AV {
   text-align: left;

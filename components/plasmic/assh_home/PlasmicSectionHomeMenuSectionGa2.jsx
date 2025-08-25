@@ -2329,7 +2329,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
           </div>
         </div>
       </div>
-      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : false) ? (
+      {(hasVariant(globalVariants, "screen", "largeMobile") ? true : false) ? (
         <div
           data-plasmic-name={"mobileHeader"}
           data-plasmic-override={overrides.mobileHeader}
@@ -2515,7 +2515,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.frame49)}
                   >
                     {(
-                      hasVariant(globalVariants, "screen", "mobileOnly")
+                      hasVariant(globalVariants, "screen", "largeMobile")
                         ? true
                         : false
                     ) ? (
@@ -3477,7 +3477,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.frame20)}
                     >
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6311,7 +6311,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       />
 
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6321,7 +6321,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6331,7 +6331,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6341,7 +6341,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6351,7 +6351,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6367,7 +6367,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.socialIcon2)}
                     >
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6382,7 +6382,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       />
 
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6392,7 +6392,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6402,7 +6402,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6412,7 +6412,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6428,7 +6428,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.socialIcon3)}
                     >
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6438,7 +6438,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6448,7 +6448,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6463,7 +6463,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       />
 
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6473,7 +6473,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6489,7 +6489,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.socialIcon4)}
                     >
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6499,7 +6499,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6509,7 +6509,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6522,7 +6522,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6540,7 +6540,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       />
 
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6556,7 +6556,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                       className={classNames(projectcss.all, sty.socialIcon5)}
                     >
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6566,7 +6566,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6576,7 +6576,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6589,7 +6589,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (
@@ -6599,7 +6599,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                         />
                       ) : null}
                       {(
-                        hasVariant(globalVariants, "screen", "mobileOnly")
+                        hasVariant(globalVariants, "screen", "largeMobile")
                           ? true
                           : false
                       ) ? (

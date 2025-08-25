@@ -25,8 +25,6 @@ import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../pl
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicItemEventCardItemInfoOnly.module.css"; // plasmic-import: UPjziaoo_XKO/css
-import ContainerIcon from "./icons/PlasmicIcon__Container"; // plasmic-import: LdpaQ2yuf9hP/icon
-import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import: TKWn1DDMMFQp/icon
 import Container6Icon from "./icons/PlasmicIcon__Container6"; // plasmic-import: GEVyXgFi5rGf/icon
 import Container7Icon from "./icons/PlasmicIcon__Container7"; // plasmic-import: HGdSWGp34SXV/icon
 
@@ -108,55 +106,25 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
           data-plasmic-override={overrides.navItemMenu}
           className={classNames(projectcss.all, sty.navItemMenu)}
         >
-          {false ? (
-            <div
-              data-plasmic-name={"icon12X12"}
-              data-plasmic-override={overrides.icon12X12}
-              className={classNames(projectcss.all, sty.icon12X12)}
-            >
-              <ContainerIcon
-                className={classNames(projectcss.all, sty.svg__rH4Ae)}
-                role={"img"}
-              />
-            </div>
-          ) : null}
-          <div
-            data-plasmic-name={"navigationItem"}
-            data-plasmic-override={overrides.navigationItem}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.navigationItem
-            )}
-          >
-            <React.Fragment>
-              {(() => {
-                try {
-                  return $props.title;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "80th Annual Meeting of the ASSH";
-                  }
-                  throw e;
+          <ButtonPrimary
+            className={classNames("__wab_instance", sty.buttonPrimary__h6PuJ)}
+            darkNoBgInteractions={[]}
+            eventNameLink={true}
+            megaMenuLink={[]}
+            text={(() => {
+              try {
+                return $props.title;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
                 }
-              })()}
-            </React.Fragment>
-          </div>
-          {false ? (
-            <div
-              data-plasmic-name={"icon12X122"}
-              data-plasmic-override={overrides.icon12X122}
-              className={classNames(projectcss.all, sty.icon12X122)}
-            >
-              <Container2Icon
-                className={classNames(projectcss.all, sty.svg__xTvnS)}
-                role={"img"}
-              />
-            </div>
-          ) : null}
+                throw e;
+              }
+            })()}
+          />
         </div>
         <div
           data-plasmic-name={"frame2"}
@@ -307,9 +275,10 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
               className={classNames(projectcss.all, sty.regButtonSection)}
             >
               <ButtonPrimary
-                data-plasmic-name={"buttonPrimary"}
-                data-plasmic-override={overrides.buttonPrimary}
-                className={classNames("__wab_instance", sty.buttonPrimary)}
+                className={classNames(
+                  "__wab_instance",
+                  sty.buttonPrimary__q5HzY
+                )}
                 text={"Register Now"}
                 upcomingEvents={true}
                 url={"https://www.assh.org/meeting/register"}
@@ -327,53 +296,40 @@ const PlasmicDescendants = {
     "root",
     "frame3",
     "navItemMenu",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122",
     "frame2",
     "datesSection",
     "icon16X16",
     "locationSection",
     "icon16X162",
-    "regButtonSection",
-    "buttonPrimary"
+    "regButtonSection"
   ],
 
   frame3: [
     "frame3",
     "navItemMenu",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122",
     "frame2",
     "datesSection",
     "icon16X16",
     "locationSection",
     "icon16X162",
-    "regButtonSection",
-    "buttonPrimary"
+    "regButtonSection"
   ],
 
-  navItemMenu: ["navItemMenu", "icon12X12", "navigationItem", "icon12X122"],
-  icon12X12: ["icon12X12"],
-  navigationItem: ["navigationItem"],
-  icon12X122: ["icon12X122"],
+  navItemMenu: ["navItemMenu"],
   frame2: [
     "frame2",
     "datesSection",
     "icon16X16",
     "locationSection",
     "icon16X162",
-    "regButtonSection",
-    "buttonPrimary"
+    "regButtonSection"
   ],
 
   datesSection: ["datesSection", "icon16X16"],
   icon16X16: ["icon16X16"],
   locationSection: ["locationSection", "icon16X162"],
   icon16X162: ["icon16X162"],
-  regButtonSection: ["regButtonSection", "buttonPrimary"],
-  buttonPrimary: ["buttonPrimary"]
+  regButtonSection: ["regButtonSection"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -411,16 +367,12 @@ export const PlasmicItemEventCardItemInfoOnly = Object.assign(
     // Helper components rendering sub-elements
     frame3: makeNodeComponent("frame3"),
     navItemMenu: makeNodeComponent("navItemMenu"),
-    icon12X12: makeNodeComponent("icon12X12"),
-    navigationItem: makeNodeComponent("navigationItem"),
-    icon12X122: makeNodeComponent("icon12X122"),
     frame2: makeNodeComponent("frame2"),
     datesSection: makeNodeComponent("datesSection"),
     icon16X16: makeNodeComponent("icon16X16"),
     locationSection: makeNodeComponent("locationSection"),
     icon16X162: makeNodeComponent("icon16X162"),
     regButtonSection: makeNodeComponent("regButtonSection"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicItemEventCardItemInfoOnly
     internalVariantProps: PlasmicItemEventCardItemInfoOnly__VariantProps,
     internalArgProps: PlasmicItemEventCardItemInfoOnly__ArgProps

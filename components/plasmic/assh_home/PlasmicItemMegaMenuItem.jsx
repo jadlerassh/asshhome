@@ -176,7 +176,7 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
           className={classNames(projectcss.all, sty.icon12X122)}
         >
           {(
-            hasVariant(globalVariants, "screen", "mobileOnly")
+            hasVariant(globalVariants, "screen", "largeMobile")
               ? true
               : (() => {
                   try {

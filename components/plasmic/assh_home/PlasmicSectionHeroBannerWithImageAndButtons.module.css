@@ -28,7 +28,7 @@
 .columns > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns {
     width: 100%;
     height: auto;
@@ -38,7 +38,7 @@
     --plsmc-rc-col-gap: 0px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }

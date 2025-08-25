@@ -19,6 +19,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
@@ -117,6 +118,25 @@ function PlasmicAbout__RenderFunc(props) {
           )}
         >
           <ItemAd className={classNames("__wab_instance", sty.itemAd__dB6Xg)} />
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -158,20 +178,21 @@ function PlasmicAbout__RenderFunc(props) {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__uwWh0)}>
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader__bcxca
-              )}
-              title={"About ASSH"}
-            />
-
             <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
               className={classNames(projectcss.all, sty.columns)}
             >
               <div className={classNames(projectcss.all, sty.column__r4Vig)}>
+                <HtmlContentfulHtmlLoader
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader__bcxca
+                  )}
+                  title={"About ASSH"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__rd6H)}>
                 <Embed
                   data-plasmic-name={"embedHtml"}
                   data-plasmic-override={overrides.embedHtml}
@@ -180,8 +201,7 @@ function PlasmicAbout__RenderFunc(props) {
                     '<p><img alt="The Founding Members of the American Society for Surgery of the Hand (ASSH) pictured in 1946" src="https://www.assh.org/servlet/servlet.FileDownload?file=00P0a00000mOKSnEAO" style="height:auto; width:100%" /></p>\r\n<p><em>Left to right: Darrel T. Shaw, Joseph H. Boyes, Lot D. Howard, S. Benjamin Fowler, Sterling Bunnell, Arthur Barsky, Donald D. Slocum, Walter C. Graham, J. William Littler, William Metcalf, Richard H. Mellen, Gilbert Hyroop, Donald R. Pratt, William F. Frackelton, Robert L. Payne, Jr. &mdash; Not Pictured: Harvey S. Allen, Hugh Auchincloss, Julian M. Brunner, Condict W. Cutler, Homer D. Dudley, Alfred W. Farmer, Gerald Gill, Edward Hamlin, Deryl Hart, Sumner L. Koch, William M. Krigsten, Clarence A. Luckey, Henry C. Marble, Michael L. Mason, Joseph I. McDonald, James T. Mills, George S. Phalen, William H. Requarth, Thomas W. Stevenson, George V. Webster</em></p>'
                   }
                 />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__rd6H)}>
+
                 <BlockQuoteBlock
                   data-plasmic-name={"blockQuoteBlock"}
                   data-plasmic-override={overrides.blockQuoteBlock}
@@ -214,6 +234,7 @@ function PlasmicAbout__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "sectionQuicklinksTable",
     "sectionMidPageCtaSection",
@@ -223,6 +244,7 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
@@ -264,6 +286,7 @@ export const PlasmicAbout = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

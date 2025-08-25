@@ -76,12 +76,12 @@
 .exploreDropdown > * {
   grid-column: 4;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .exploreDropdown > * {
     grid-column: 4;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .exploreDropdown > * {
     grid-column: 4;
   }

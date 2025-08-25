@@ -22,7 +22,7 @@ import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
+import Section2ColumnArticleCardList from "../../Section2ColumnArticleCardList"; // plasmic-import: txkFjttbGvgK/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import YouTube from "@plasmicpkgs/react-youtube";
@@ -180,64 +180,15 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               title={"Four Pillars of the AFSH"}
             />
 
-            <div className={classNames(projectcss.all, sty.columns__smFwe)}>
-              <div className={classNames(projectcss.all, sty.column__jZ3Cl)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Research"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__xDbl
-                  )}
-                  description={
-                    "We support innovative research initiatives that advance the science, techniques, and future of hand and upper extremity care, ensuring continuous progress for the profession and better outcomes for patients."
-                  }
-                  heading={"Pillar"}
-                  linkUrl={"https://www.assh.org/afsh/s/research"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__aXgAi)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Education"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription___4E1Le
-                  )}
-                  description={
-                    "We invest in high-impact educational programs, training resources, and learning opportunities that connect surgeons with leading-edge knowledge throughout their careers."
-                  }
-                  heading={"Pillar"}
-                  linkUrl={"https://www.assh.org/afsh/s/education"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___07Zd6)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Outreach"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__kD7CK
-                  )}
-                  description={
-                    "Through international and domestic outreach programs, we fund volunteer-led missions and empower local providers to deliver sustainable hand care in underserved communities worldwide."
-                  }
-                  heading={"Pillar"}
-                  linkUrl={"https://www.assh.org/afsh/s/outreach"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__sbd8W)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Practice"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__gTIhc
-                  )}
-                  description={
-                    "Our practice pillar supports surgeons in private practice settings by funding initiatives that improve access, efficiency, safety, and the overall delivery of hand care."
-                  }
-                  heading={"Pillar"}
-                  linkUrl={"https://www.assh.org/afsh/s/practice"}
-                />
-              </div>
-            </div>
+            <Section2ColumnArticleCardList
+              data-plasmic-name={"section2ColumnArticleCardList"}
+              data-plasmic-override={overrides.section2ColumnArticleCardList}
+              className={classNames(
+                "__wab_instance",
+                sty.section2ColumnArticleCardList
+              )}
+            />
+
             <SectionQuicklinksTable
               data-plasmic-name={"sectionQuicklinksTable"}
               data-plasmic-override={overrides.sectionQuicklinksTable}
@@ -268,7 +219,11 @@ function PlasmicGrantsAwards__RenderFunc(props) {
               title={"How to Support Our Grants & Awards"}
             />
 
-            <div className={classNames(projectcss.all, sty.columns___2Jf0)}>
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
+            >
               <div className={classNames(projectcss.all, sty.column___9BWg1)}>
                 <YouTube
                   data-plasmic-name={"youTube"}
@@ -325,16 +280,20 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
+    "section2ColumnArticleCardList",
     "sectionQuicklinksTable",
     "sectionMidPageCtaSection",
+    "columns",
     "youTube",
     "buttonPrimary",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
+  section2ColumnArticleCardList: ["section2ColumnArticleCardList"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
+  columns: ["columns", "youTube", "buttonPrimary"],
   youTube: ["youTube"],
   buttonPrimary: ["buttonPrimary"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
@@ -375,8 +334,12 @@ export const PlasmicGrantsAwards = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
+    section2ColumnArticleCardList: makeNodeComponent(
+      "section2ColumnArticleCardList"
+    ),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
+    columns: makeNodeComponent("columns"),
     youTube: makeNodeComponent("youTube"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

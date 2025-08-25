@@ -23,7 +23,7 @@
   min-width: 0;
   flex-shrink: 0;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .hero {
     height: 500px;
     flex-shrink: 0;
@@ -57,12 +57,12 @@
 .section > * {
   grid-column: 4;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .section {
     display: none;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .section > * {
     grid-column: 4;
   }
@@ -92,7 +92,7 @@
 .columns > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns {
     width: 100%;
     height: auto;
@@ -103,7 +103,7 @@
     padding: 40px 20px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
@@ -121,7 +121,7 @@
   min-width: 0;
   padding: 0px 0px 0px 8px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .column__fMj1H {
     align-items: center;
     justify-content: center;
@@ -169,7 +169,7 @@
   padding-bottom: 0px;
   padding-right: 80px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .tagline {
     font-size: 18px;
     text-align: center;
@@ -187,7 +187,7 @@
   color: var(--token-lJvlCWpx5zk3);
   min-width: 0;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .tagline2 {
     font-size: 26px;
     text-align: center;
@@ -204,7 +204,7 @@
   padding-bottom: 0px;
   padding-right: 80px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .tagline4 {
     font-size: 18px;
     text-align: center;
@@ -229,7 +229,7 @@
   padding: 0px;
   margin: 0px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .freeBox__b6Amu {
     justify-content: center;
     align-items: center;
@@ -247,7 +247,7 @@
   text-align: left;
   align-self: center;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .tagline3 {
     font-size: 18px;
     text-align: center;
@@ -274,7 +274,7 @@
   min-width: 0;
   padding: 8px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .column__iHa6R {
     display: none;
   }

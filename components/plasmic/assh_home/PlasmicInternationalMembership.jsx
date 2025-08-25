@@ -19,6 +19,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
@@ -121,6 +122,25 @@ function PlasmicInternationalMembership__RenderFunc(props) {
               "__wab_instance",
               sty.sectionAdPlaceholder__pJmGo
             )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
           />
 
           <div
@@ -254,6 +274,7 @@ function PlasmicInternationalMembership__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "columns",
     "htmlContentfulHtmlLoader",
     "blockTanCtaBlock",
@@ -264,6 +285,7 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   columns: [
     "columns",
     "htmlContentfulHtmlLoader",
@@ -315,6 +337,7 @@ export const PlasmicInternationalMembership = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     columns: makeNodeComponent("columns"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),

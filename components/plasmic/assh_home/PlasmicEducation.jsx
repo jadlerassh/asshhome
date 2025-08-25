@@ -18,6 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import SectionCmeMocSection from "../../SectionCmeMocSection"; // plasmic-import: QQidogip4Svc/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
@@ -77,7 +78,21 @@ function PlasmicEducation__RenderFunc(props) {
     useStyleTokens_plasmic_rich_components();
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicEducation.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicEducation.pageMetadata.title}
+        />
+
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicEducation.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -103,6 +118,25 @@ function PlasmicEducation__RenderFunc(props) {
           )}
         >
           <ItemAd className={classNames("__wab_instance", sty.itemAd__iFg4S)} />
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -214,6 +248,7 @@ function PlasmicEducation__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "sectionCmeMocSection",
     "sectionMidPageCtaSection",
@@ -227,6 +262,7 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionCmeMocSection: ["sectionCmeMocSection"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
@@ -272,6 +308,7 @@ export const PlasmicEducation = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
@@ -296,7 +333,7 @@ export const PlasmicEducation = Object.assign(
     internalArgProps: PlasmicEducation__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "Education Overview",
       description: "",
       ogImageSrc: "",
       canonical: ""

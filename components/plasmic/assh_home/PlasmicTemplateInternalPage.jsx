@@ -207,7 +207,7 @@ function PlasmicTemplateInternalPage__RenderFunc(props) {
                   data-plasmic-override={overrides.embedHtml}
                   className={classNames("__wab_instance", sty.embedHtml)}
                   code={
-                    hasVariant(globalVariants, "screen", "smallDesktop")
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? '<iframe width="100%" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
                       : '<iframe width="560" height="315" src="https://www.youtube.com/embed/NjNXWgUtAoA?si=YqXPFXOqki_MV2z9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
                   }

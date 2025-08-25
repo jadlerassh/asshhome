@@ -1,0 +1,39 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 5px;
+  min-width: 0;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.text__g14Yk {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  white-space: pre;
+}
+.text__jUhtM {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}

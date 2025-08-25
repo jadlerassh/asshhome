@@ -171,33 +171,26 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
         }
       )}
     >
-      <div
-        data-plasmic-name={"quickLinksContainer2"}
-        data-plasmic-override={overrides.quickLinksContainer2}
-        className={classNames(projectcss.all, sty.quickLinksContainer2, {
-          [sty.quickLinksContainer2columns__3Column]: hasVariant(
-            $state,
-            "columns",
-            "_3Column"
-          )
-        })}
-      >
+      <div className={classNames(projectcss.all, sty.freeBox__lYwgV)}>
         <div
-          className={classNames(projectcss.all, sty.freeBox__cBr52, {
-            [sty.freeBoxcolumns__3Column__cBr52E7MI]: hasVariant(
+          data-plasmic-name={"quickLinksContainer2"}
+          data-plasmic-override={overrides.quickLinksContainer2}
+          className={classNames(projectcss.all, sty.quickLinksContainer2, {
+            [sty.quickLinksContainer2columns__3Column]: hasVariant(
               $state,
               "columns",
               "_3Column"
             )
           })}
         >
-          <div
-            data-plasmic-name={"text"}
-            data-plasmic-override={overrides.text}
+          <h3
+            data-plasmic-name={"h3"}
+            data-plasmic-override={overrides.h3}
             className={classNames(
               projectcss.all,
+              projectcss.h3,
               projectcss.__wab_text,
-              sty.text
+              sty.h3
             )}
           >
             <React.Fragment>
@@ -216,128 +209,137 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
                 }
               })()}
             </React.Fragment>
-          </div>
-        </div>
-        <div
-          className={classNames(projectcss.all, sty.freeBox__h1PUo, {
-            [sty.freeBoxcolumns__3Column__h1PUoe7MI]: hasVariant(
-              $state,
-              "columns",
-              "_3Column"
-            )
-          })}
-        >
+          </h3>
           <div
-            className={classNames(projectcss.all, sty.freeBox__g3XRs, {
-              [sty.freeBoxcolumns__3Column__g3XRse7MI]: hasVariant(
+            className={classNames(projectcss.all, sty.freeBox__h1PUo, {
+              [sty.freeBoxcolumns__3Column__h1PUoe7MI]: hasVariant(
                 $state,
                 "columns",
                 "_3Column"
               )
             })}
           >
-            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-              (() => {
-                try {
-                  return $state.links;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return [];
-                  }
-                  throw e;
+            <div
+              className={classNames(
+                projectcss.all,
+                sty.freeBox__g3XRs,
+                "quicklinkGrid",
+                {
+                  [sty.freeBoxcolumns__3Column__g3XRse7MI]: hasVariant(
+                    $state,
+                    "columns",
+                    "_3Column"
+                  )
                 }
-              })()
-            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-              const currentItem = __plasmic_item_0;
-              const currentIndex = __plasmic_idx_0;
-              return (
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    sty.freeBox__v0LlI,
-                    hasVariant($state, "columns", "_4Column")
-                      ? "quicklinkItem quicklinkItemFour"
-                      : hasVariant($state, "columns", "_3Column") &&
-                        hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? "quicklinkItem "
-                      : hasVariant($state, "columns", "_3Column")
-                      ? "quicklinkItem quicklinkItemThree"
-                      : "quicklinkItem quicklinkItemFour",
-                    {
-                      [sty.freeBoxcolumns__3Column__v0LlIe7MI]: hasVariant(
-                        $state,
-                        "columns",
-                        "_3Column"
-                      ),
-                      [sty.freeBoxcolumns__4Column__v0LlIGa6JV]: hasVariant(
-                        $state,
-                        "columns",
-                        "_4Column"
-                      )
+              )}
+            >
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $state.links;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
                     }
-                  )}
-                  key={currentIndex}
-                >
-                  <ItemCalloutItem
-                    data-plasmic-name={"itemCalloutItem"}
-                    data-plasmic-override={overrides.itemCalloutItem}
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <div
                     className={classNames(
-                      "__wab_instance",
-                      sty.itemCalloutItem,
+                      projectcss.all,
+                      sty.freeBox__v0LlI,
+                      hasVariant($state, "columns", "_4Column")
+                        ? "quicklinkItem quicklinkItemFour"
+                        : hasVariant($state, "columns", "_3Column") &&
+                          hasVariant(globalVariants, "screen", "largeMobile")
+                        ? "quicklinkItem "
+                        : hasVariant($state, "columns", "_3Column")
+                        ? "quicklinkItem quicklinkItemThree"
+                        : hasVariant(globalVariants, "screen", "largeMobile")
+                        ? "quicklinkItem"
+                        : hasVariant(globalVariants, "screen", "tablet")
+                        ? "quicklinkItem quicklinkItemTwo"
+                        : "quicklinkItem quicklinkItemFour",
                       {
-                        [sty.itemCalloutItemcolumns__3Column]: hasVariant(
+                        [sty.freeBoxcolumns__3Column__v0LlIe7MI]: hasVariant(
                           $state,
                           "columns",
                           "_3Column"
+                        ),
+                        [sty.freeBoxcolumns__4Column__v0LlIGa6JV]: hasVariant(
+                          $state,
+                          "columns",
+                          "_4Column"
                         )
                       }
                     )}
-                    desc={(() => {
-                      try {
-                        return currentItem.subText;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
+                    key={currentIndex}
+                  >
+                    <ItemCalloutItem
+                      data-plasmic-name={"itemCalloutItem"}
+                      data-plasmic-override={overrides.itemCalloutItem}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.itemCalloutItem,
+                        {
+                          [sty.itemCalloutItemcolumns__3Column]: hasVariant(
+                            $state,
+                            "columns",
+                            "_3Column"
+                          )
                         }
-                        throw e;
-                      }
-                    })()}
-                    linkUrl={(() => {
-                      try {
-                        return currentItem.url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
+                      )}
+                      desc={(() => {
+                        try {
+                          return currentItem.subText;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
                         }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return currentItem.label;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
+                      })()}
+                      linkUrl={(() => {
+                        try {
+                          return currentItem.url;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
                         }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-              );
-            })}
+                      })()}
+                      name={(() => {
+                        try {
+                          return currentItem.label;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -346,9 +348,9 @@ function PlasmicSectionQuicklinksTable__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  quickLinks: ["quickLinks", "quickLinksContainer2", "text", "itemCalloutItem"],
-  quickLinksContainer2: ["quickLinksContainer2", "text", "itemCalloutItem"],
-  text: ["text"],
+  quickLinks: ["quickLinks", "quickLinksContainer2", "h3", "itemCalloutItem"],
+  quickLinksContainer2: ["quickLinksContainer2", "h3", "itemCalloutItem"],
+  h3: ["h3"],
   itemCalloutItem: ["itemCalloutItem"]
 };
 
@@ -385,7 +387,7 @@ export const PlasmicSectionQuicklinksTable = Object.assign(
   {
     // Helper components rendering sub-elements
     quickLinksContainer2: makeNodeComponent("quickLinksContainer2"),
-    text: makeNodeComponent("text"),
+    h3: makeNodeComponent("h3"),
     itemCalloutItem: makeNodeComponent("itemCalloutItem"),
     // Metadata about props expected for PlasmicSectionQuicklinksTable
     internalVariantProps: PlasmicSectionQuicklinksTable__VariantProps,

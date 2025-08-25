@@ -21,7 +21,6 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemEventCardItemFullCard from "../../ItemEventCardItemFullCard"; // plasmic-import: jiQVfwnxU6BH/component
-import ItemEventCardItemInfoOnly from "../../ItemEventCardItemInfoOnly"; // plasmic-import: UPjziaoo_XKO/component
 import ComponentFutureEventList from "../../ComponentFutureEventList"; // plasmic-import: buA5LBYO5-1M/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
@@ -105,7 +104,14 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
         path: "componentEventList.type",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "Webinar"
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "Webinar,Annual Meeting,CME Activity"
+      },
+      {
+        path: "componentEventList.eventIdNe",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "a0fPb00000QhbQMIAZ"
       }
     ],
 
@@ -197,6 +203,10 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
             <ItemEventCardItemFullCard
               data-plasmic-name={"itemEventCardItemFullCard"}
               data-plasmic-override={overrides.itemEventCardItemFullCard}
+              className={classNames(
+                "__wab_instance",
+                sty.itemEventCardItemFullCard
+              )}
               dates={(() => {
                 try {
                   return $queries.latestAnnualMeeting.data.response.items[0]
@@ -270,283 +280,31 @@ function PlasmicSectionUpcomingCouresEventsSection__RenderFunc(props) {
             />
           </div>
           <div className={classNames(projectcss.all, sty.column__i6Z77)}>
-            <div
-              data-plasmic-name={"frame5"}
-              data-plasmic-override={overrides.frame5}
-              className={classNames(projectcss.all, sty.frame5)}
-            >
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $queries.latestOtherEvents.data.response.items[0];
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <div
-                    data-plasmic-name={"articleCard"}
-                    data-plasmic-override={overrides.articleCard}
-                    className={classNames(projectcss.all, sty.articleCard)}
-                    key={currentIndex}
-                  >
-                    <ItemEventCardItemInfoOnly
-                      className={classNames(
-                        "__wab_instance",
-                        sty.itemEventCardItemInfoOnly__eoQKy
-                      )}
-                      dates={(() => {
-                        try {
-                          return currentItem.fields.dates;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      location={(() => {
-                        try {
-                          return currentItem.fields.locationName;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      registerUrl={(() => {
-                        try {
-                          return currentItem.fields.registrationLink;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      title={(() => {
-                        try {
-                          return currentItem.fields.title;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                    />
-                  </div>
-                );
-              })}
-              <section
-                className={classNames(projectcss.all, sty.section__m3UMs)}
-              />
-
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $queries.latestOtherEvents.data.response.items[1];
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <div
-                    data-plasmic-name={"articleCard2"}
-                    data-plasmic-override={overrides.articleCard2}
-                    className={classNames(projectcss.all, sty.articleCard2)}
-                    key={currentIndex}
-                  >
-                    <ItemEventCardItemInfoOnly
-                      className={classNames(
-                        "__wab_instance",
-                        sty.itemEventCardItemInfoOnly__oPhZ1
-                      )}
-                      dates={(() => {
-                        try {
-                          return currentItem.fields.dates;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      location={(() => {
-                        try {
-                          return currentItem.fields.locationName;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      registerUrl={(() => {
-                        try {
-                          return currentItem.fields.registrationLink;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      title={(() => {
-                        try {
-                          return currentItem.fields.title;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                    />
-                  </div>
-                );
-              })}
-              <section
-                className={classNames(projectcss.all, sty.section__maiK3)}
-              />
-
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $queries.latestOtherEvents.data.response.items[2];
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <div
-                    data-plasmic-name={"articleCard3"}
-                    data-plasmic-override={overrides.articleCard3}
-                    className={classNames(projectcss.all, sty.articleCard3)}
-                    key={currentIndex}
-                  >
-                    <ItemEventCardItemInfoOnly
-                      className={classNames(
-                        "__wab_instance",
-                        sty.itemEventCardItemInfoOnly__tsdp5
-                      )}
-                      dates={(() => {
-                        try {
-                          return currentItem.fields.dates;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      location={(() => {
-                        try {
-                          return currentItem.fields.locationName;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      registerUrl={(() => {
-                        try {
-                          return currentItem.fields.registrationLink;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      title={(() => {
-                        try {
-                          return currentItem.fields.title;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                    />
-                  </div>
-                );
-              })}
-            </div>
             <ComponentFutureEventList
               data-plasmic-name={"componentEventList"}
               data-plasmic-override={overrides.componentEventList}
               className={classNames("__wab_instance", sty.componentEventList)}
+              eventIdNe={generateStateValueProp($state, [
+                "componentEventList",
+                "eventIdNe"
+              ])}
               limit={generateStateValueProp($state, [
                 "componentEventList",
                 "limit"
               ])}
+              onEventIdNeChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "componentEventList",
+                  "eventIdNe"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
               onLimitChange2={async (...eventArgs) => {
                 generateStateOnChangeProp($state, [
                   "componentEventList",
@@ -593,10 +351,6 @@ const PlasmicDescendants = {
     "text",
     "row",
     "itemEventCardItemFullCard",
-    "frame5",
-    "articleCard",
-    "articleCard2",
-    "articleCard3",
     "componentEventList"
   ],
 
@@ -606,30 +360,13 @@ const PlasmicDescendants = {
     "text",
     "row",
     "itemEventCardItemFullCard",
-    "frame5",
-    "articleCard",
-    "articleCard2",
-    "articleCard3",
     "componentEventList"
   ],
 
   frame2: ["frame2", "text"],
   text: ["text"],
-  row: [
-    "row",
-    "itemEventCardItemFullCard",
-    "frame5",
-    "articleCard",
-    "articleCard2",
-    "articleCard3",
-    "componentEventList"
-  ],
-
+  row: ["row", "itemEventCardItemFullCard", "componentEventList"],
   itemEventCardItemFullCard: ["itemEventCardItemFullCard"],
-  frame5: ["frame5", "articleCard", "articleCard2", "articleCard3"],
-  articleCard: ["articleCard"],
-  articleCard2: ["articleCard2"],
-  articleCard3: ["articleCard3"],
   componentEventList: ["componentEventList"]
 };
 
@@ -672,10 +409,6 @@ export const PlasmicSectionUpcomingCouresEventsSection = Object.assign(
     text: makeNodeComponent("text"),
     row: makeNodeComponent("row"),
     itemEventCardItemFullCard: makeNodeComponent("itemEventCardItemFullCard"),
-    frame5: makeNodeComponent("frame5"),
-    articleCard: makeNodeComponent("articleCard"),
-    articleCard2: makeNodeComponent("articleCard2"),
-    articleCard3: makeNodeComponent("articleCard3"),
     componentEventList: makeNodeComponent("componentEventList"),
     // Metadata about props expected for PlasmicSectionUpcomingCouresEventsSection
     internalVariantProps:

@@ -158,7 +158,7 @@
 .columns___26Xdm > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns___26Xdm {
     width: 100%;
     height: auto;
@@ -168,7 +168,7 @@
     --plsmc-rc-col-gap: 50px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns___26Xdm > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
@@ -379,7 +379,7 @@
 .columns__oOxg6 > :nth-child(4n + 4) {
   width: calc((100% - 3 * var(--plsmc-rc-col-gap, 0px)) * 3 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns__oOxg6 {
     width: 100%;
     height: auto;
@@ -389,7 +389,7 @@
     --plsmc-rc-col-gap: 30px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns__oOxg6 > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }

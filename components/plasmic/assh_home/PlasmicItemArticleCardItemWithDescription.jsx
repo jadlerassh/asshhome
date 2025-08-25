@@ -39,7 +39,8 @@ export const PlasmicItemArticleCardItemWithDescription__ArgProps = new Array(
   "articleTitle",
   "linkUrl",
   "description",
-  "imageId"
+  "imageId",
+  "newTab"
 );
 
 const $$ = {};
@@ -61,7 +62,8 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
           articleTitle: "Article Title",
           linkUrl: "https://www.assh.org",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+          newTab: false
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -142,6 +144,19 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
           }
         })()}
         platform={"nextjs"}
+        target={(() => {
+          try {
+            return $props.newTab;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
+            }
+            throw e;
+          }
+        })()}
       >
         {(
           hasVariant(globalVariants, "screen", "largeDesktop")

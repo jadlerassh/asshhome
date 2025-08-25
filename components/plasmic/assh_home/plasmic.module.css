@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Manrope%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Open+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Manrope%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Open+Sans%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&display=swap");
 
 .plasmic_tokens {
   --token-lJvlCWpx5zk3: #1f3b55;
   --plasmic-token-brand-primary: var(--token-lJvlCWpx5zk3);
   --token-aj9zmKZf9Zw1: 0.5rem;
   --plasmic-token-size-8: var(--token-aj9zmKZf9Zw1);
-  --token-yFefbd9pktQO: Nunito Sans;
+  --token-yFefbd9pktQO: Manrope;
   --plasmic-token-sans-serif: var(--token-yFefbd9pktQO);
   --token-qf646Y0_UpwA: 1rem;
   --plasmic-token-font-md: var(--token-qf646Y0_UpwA);
@@ -171,6 +171,12 @@
   --plasmic-token-unnamed-style-token-6: var(--token-7sC8F62mRz_G);
   --token-zepCisb8eOOf: #005963;
   --plasmic-token-assh-teel-hover: var(--token-zepCisb8eOOf);
+  --token-VRP-cd8LEU7y: 20px;
+  --plasmic-token-assh-mobile-side-padding: var(--token-VRP-cd8LEU7y);
+  --token-xrK8RAE9tV_D: 50px;
+  --plasmic-token-assh-desktop-padding: var(--token-xrK8RAE9tV_D);
+  --token-saPA1rX_LBOD: 30px;
+  --plasmic-token-assh-desktop-title-padding: var(--token-saPA1rX_LBOD);
 }
 
 .plasmic_tokens {

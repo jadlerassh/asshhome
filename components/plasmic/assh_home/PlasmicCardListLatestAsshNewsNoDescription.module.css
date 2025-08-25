@@ -15,7 +15,7 @@
   height: auto;
   align-items: stretch;
   flex-shrink: 1;
-  max-width: 100%;
+  max-width: 1320px;
   flex-direction: row;
   flex-wrap: nowrap;
   column-gap: 50px;
@@ -25,17 +25,32 @@
 .columns > :nth-child(1n + 1) {
   width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (max-width: 1279px) {
+  .columns {
+    padding-left: var(--token-VRP-cd8LEU7y);
+    padding-right: var(--token-VRP-cd8LEU7y);
+    --plsmc-rc-col-gap: 50px;
+  }
+}
+@media (max-width: 1023px) {
+  .columns {
+    column-gap: 30px;
+    row-gap: 0px;
+    --plsmc-rc-col-gap: 30px;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
   .columns {
     width: 100%;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 30px;
     min-width: 0;
-    --plsmc-rc-col-gap: 50px;
+    --plsmc-rc-col-gap: 30px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }

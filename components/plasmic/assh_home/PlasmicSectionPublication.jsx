@@ -21,6 +21,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -141,6 +142,7 @@ function PlasmicSectionPublication__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -163,116 +165,115 @@ function PlasmicSectionPublication__RenderFunc(props) {
         sty.root
       )}
     >
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
-        <div className={classNames(projectcss.all, sty.columns__aUuDl)}>
-          <div className={classNames(projectcss.all, sty.column__epLkU)}>
-            <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.getNav.data.response.items[0].fields.label;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Explore All ASSH Publications";
-                    }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
-            </div>
-          </div>
-          <div className={classNames(projectcss.all, sty.column__ybSez)}>
-            <div className={classNames(projectcss.all, sty.columns__iagPb)}>
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $state.links;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.column__sZnDg
-                    )}
-                    component={Link}
-                    href={(() => {
-                      try {
-                        return currentItem.url;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
+      <div className={classNames(projectcss.all, sty.freeBox__mFVn2)}>
+        <div className={classNames(projectcss.all, sty.freeBox___5POeS)}>
+          <div className={classNames(projectcss.all, sty.columns__aUuDl)}>
+            <div className={classNames(projectcss.all, sty.column__epLkU)}>
+              <div
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text
+                )}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.getNav.data.response.items[0].fields
+                        .label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "Explore All ASSH Publications";
                       }
-                    })()}
-                    key={currentIndex}
-                    platform={"nextjs"}
-                  >
-                    <PlasmicImg__
-                      data-plasmic-name={"img"}
-                      data-plasmic-override={overrides.img}
-                      alt={"Journal of Hand Surgery logo"}
-                      className={classNames(sty.img)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"100%"}
-                      loading={"lazy"}
-                      src={(() => {
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.column__ybSez)}>
+              <div className={classNames(projectcss.all, sty.columns__iagPb)}>
+                {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                  (() => {
+                    try {
+                      return $state.links;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return [];
+                      }
+                      throw e;
+                    }
+                  })()
+                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                  const currentItem = __plasmic_item_0;
+                  const currentIndex = __plasmic_idx_0;
+                  return (
+                    <PlasmicLink__
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.column__sZnDg
+                      )}
+                      component={Link}
+                      href={(() => {
                         try {
-                          return currentItem.iconUrl;
+                          return currentItem.url;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
                             e?.plasmicType === "PlasmicUndefinedDataError"
                           ) {
-                            return {
-                              src: "/plasmic/assh_home/images/jhsLogoPng.png",
-                              fullWidth: 662,
-                              fullHeight: 266,
-                              aspectRatio: undefined
-                            };
+                            return undefined;
                           }
                           throw e;
                         }
                       })()}
-                    />
-                  </PlasmicLink__>
-                );
-              })}
+                      key={currentIndex}
+                      platform={"nextjs"}
+                    >
+                      <PlasmicImg__
+                        data-plasmic-name={"img"}
+                        data-plasmic-override={overrides.img}
+                        alt={"Journal of Hand Surgery logo"}
+                        className={classNames(sty.img)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={(() => {
+                          try {
+                            return currentItem.iconUrl;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return {
+                                src: "/plasmic/assh_home/images/jhsLogoPng.png",
+                                fullWidth: 662,
+                                fullHeight: 266,
+                                aspectRatio: undefined
+                              };
+                            }
+                            throw e;
+                          }
+                        })()}
+                      />
+                    </PlasmicLink__>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -282,8 +283,7 @@ function PlasmicSectionPublication__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "text", "img"],
-  freeBox: ["freeBox", "text", "img"],
+  root: ["root", "text", "img"],
   text: ["text"],
   img: ["img"]
 };
@@ -320,7 +320,6 @@ export const PlasmicSectionPublication = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    freeBox: makeNodeComponent("freeBox"),
     text: makeNodeComponent("text"),
     img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicSectionPublication

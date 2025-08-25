@@ -920,11 +920,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;
@@ -1150,11 +1146,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;
@@ -1382,11 +1374,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;
@@ -1631,11 +1619,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;
@@ -1861,11 +1845,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;
@@ -2093,11 +2073,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;
@@ -2322,11 +2298,7 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                 }
                               })()}
                               showExternalIcon={
-                                hasVariant(
-                                  globalVariants,
-                                  "screen",
-                                  "smallDesktop"
-                                )
+                                hasVariant(globalVariants, "screen", "tablet")
                                   ? (() => {
                                       try {
                                         return currentItem.showExternalIcon;

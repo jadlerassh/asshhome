@@ -32,7 +32,7 @@
   row-gap: 40px;
   min-width: 0;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .frame5 {
     padding-left: 20px;
     padding-right: 20px;
@@ -72,7 +72,7 @@
 .frame6 > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 5 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .frame6 {
     width: 100%;
     height: auto;
@@ -82,7 +82,7 @@
     --plsmc-rc-col-gap: 50px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .frame6 > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }

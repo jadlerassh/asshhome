@@ -2375,20 +2375,6 @@
           "path": "/template-internal"
         },
         {
-          "id": "MgLIRMM0fnXn",
-          "name": "TemplateInternalPageWithAccordion",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion.jsx",
-          "importSpec": {
-            "modulePath": "../pages/template-internal-accordion.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/template-internal-accordion"
-        },
-        {
           "id": "cfKosQT03FI3",
           "name": "MissionValuesVision",
           "type": "managed",
@@ -3396,6 +3382,171 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/news-publications/flap-reconstruction-videos-2"
+        },
+        {
+          "id": "g3jxE8jxGC65",
+          "name": "Podcasts",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPodcasts.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/podcasts.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPodcasts.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/podcasts"
+        },
+        {
+          "id": "ndeXzPa1JNYv",
+          "name": "PodcastsRssFeedInstructions",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPodcastsRssFeedInstructions.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/podcasts/rss-feed.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPodcastsRssFeedInstructions.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/podcasts/rss-feed"
+        },
+        {
+          "id": "TPxxugejEIaa",
+          "name": "SectionBreadcrumbs",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionBreadcrumbs.jsx",
+          "importSpec": {
+            "modulePath": "SectionBreadcrumbs.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionBreadcrumbs.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "gUlIuwJIzup6",
+          "name": "ItemBreadcrumb",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemBreadcrumb.jsx",
+          "importSpec": {
+            "modulePath": "ItemBreadcrumb.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemBreadcrumb.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ErdA6oRBcHKT",
+          "name": "SurgicalSimulation",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSurgicalSimulation.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/surgical-simulation.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSurgicalSimulation.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/surgical-simulation"
+        },
+        {
+          "id": "kNMksSTb_cmV",
+          "name": "TemplateInternalPageWithAccordion2",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion2.jsx",
+          "importSpec": {
+            "modulePath": "../pages/template-internal-accordion-2.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/template-internal-accordion-2"
+        },
+        {
+          "id": "FJGtSZ00MzaJ",
+          "name": "Hfda",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfda.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfda.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda"
+        },
+        {
+          "id": "fetguWaIaV2E",
+          "name": "MembershipBenefits",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicMembershipBenefits.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/benefits.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicMembershipBenefits.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/benefits"
+        },
+        {
+          "id": "Bg8Wvprt0Hhq",
+          "name": "MembershipGetInvolved",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicMembershipGetInvolved.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/get-involved.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicMembershipGetInvolved.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/get-involved"
+        },
+        {
+          "id": "z7Gzb9AqVLMy",
+          "name": "PerspectivesNewsletters",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicPerspectivesNewsletters.jsx",
+          "importSpec": {
+            "modulePath": "../pages/perspectives-newsletters.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicPerspectivesNewsletters.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/perspectives-newsletters"
+        },
+        {
+          "id": "txkFjttbGvgK",
+          "name": "Section2ColumnArticleCardList",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSection2ColumnArticleCardList.jsx",
+          "importSpec": {
+            "modulePath": "Section2ColumnArticleCardList.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSection2ColumnArticleCardList.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "-oLjs3thrDgt",
+          "name": "HfdaFellowsWelcomePacket",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfdaFellowsWelcomePacket.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda/fellows-welcome-packet.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfdaFellowsWelcomePacket.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda/fellows-welcome-packet"
         }
       ],
       "icons": [
@@ -4375,6 +4526,16 @@
           "id": "CR06_Z-Cbyd5",
           "name": "ekg-icon.png",
           "filePath": "../public/plasmic/assh_home/images/ekgIconPng.png"
+        },
+        {
+          "id": "Kgj0cTN7-voR",
+          "name": "Perspectives_749x501px.png",
+          "filePath": "../public/plasmic/assh_home/images/perspectives749X501PxPng.png"
+        },
+        {
+          "id": "oEEcQeIknXDc",
+          "name": "Perspectives.png",
+          "filePath": "../public/plasmic/assh_home/images/perspectivesPng.png"
         }
       ],
       "indirect": false,

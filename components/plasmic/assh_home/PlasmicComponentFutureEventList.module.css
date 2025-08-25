@@ -5,11 +5,11 @@
   width: 100%;
   height: auto;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   min-width: 0;
 }
 .frame4 {
-  background: rgba(255, 255, 255, 1);
+  background: none;
   width: 100%;
   display: flex;
   position: relative;
@@ -21,7 +21,7 @@
   border-radius: 10px;
 }
 .eventsCard {
-  background: rgba(255, 255, 255, 1);
+  background: none;
   height: auto;
   display: flex;
   position: relative;

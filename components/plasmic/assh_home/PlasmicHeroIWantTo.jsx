@@ -179,7 +179,7 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                     sty.tagline
                   )}
                 >
-                  {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                  {hasVariant(globalVariants, "screen", "largeMobile") ? (
                     <React.Fragment>
                       {(() => {
                         try {
@@ -242,7 +242,7 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                   </React.Fragment>
                 </div>
                 {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
+                  hasVariant(globalVariants, "screen", "largeMobile")
                     ? true
                     : false
                 ) ? (
@@ -255,7 +255,7 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                       sty.tagline4
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                    {hasVariant(globalVariants, "screen", "largeMobile") ? (
                       <React.Fragment>
                         {(() => {
                           try {
@@ -302,7 +302,7 @@ function PlasmicHeroIWantTo__RenderFunc(props) {
                       sty.tagline3
                     )}
                   >
-                    {hasVariant(globalVariants, "screen", "mobileOnly") ? (
+                    {hasVariant(globalVariants, "screen", "largeMobile") ? (
                       <React.Fragment>
                         {(() => {
                           try {

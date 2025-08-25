@@ -81,10 +81,17 @@
   max-width: 1320px;
   min-width: 0;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .frame3 {
     width: 100%;
     min-width: 0;
+  }
+}
+@media (max-width: 1279px) {
+  .frame3 {
+    max-width: 1000px;
+    padding-left: var(--token-VRP-cd8LEU7y);
+    padding-right: var(--token-VRP-cd8LEU7y);
   }
 }
 .frame4 {

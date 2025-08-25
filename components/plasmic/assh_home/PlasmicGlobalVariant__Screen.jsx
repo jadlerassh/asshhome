@@ -18,11 +18,12 @@ export function ScreenContextProvider(props) {
 }
 
 export const useScreenVariants = createUseScreenVariants(true, {
-  mobileOnly: "(min-width:0px) and (max-width:768px)",
-  smallDesktop: "(max-width:1024px)",
-  smallMobile: "(max-width:414px)",
-  largeDesktop: "(max-width:1440px)",
+  largeMobile: "(min-width:0px) and (max-width:767px)",
+  tablet: "(max-width:1023px)",
+  smallMobile: "(max-width:480px)",
+  largeDesktop: "(max-width:1535px)",
   miniMobile: "(max-width:240px)",
+  smallDesktop: "(max-width:1279px)",
 });
 
 export default ScreenContext;

@@ -20,6 +20,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -157,6 +158,25 @@ function PlasmicMembershipOverview__RenderFunc(props) {
           )}
         >
           <ItemAd className={classNames("__wab_instance", sty.itemAd__p7LtJ)} />
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -199,15 +219,16 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               title={"Who Can Join?"}
             />
 
-            <ButtonPrimary
-              data-plasmic-name={"buttonPrimary"}
-              data-plasmic-override={overrides.buttonPrimary}
-              className={classNames("__wab_instance", sty.buttonPrimary)}
-              text={"Member Benefits"}
-              textArrowButton={true}
-              url={"https://www.assh.org/membership/member-benefits"}
-            />
-
+            <div className={classNames(projectcss.all, sty.freeBox__hSbr)}>
+              <ButtonPrimary
+                data-plasmic-name={"buttonPrimary"}
+                data-plasmic-override={overrides.buttonPrimary}
+                className={classNames("__wab_instance", sty.buttonPrimary)}
+                text={"Member Benefits"}
+                textArrowButton={true}
+                url={"https://www.assh.org/membership/member-benefits"}
+              />
+            </div>
             <BlockArticleCardList
               data-plasmic-name={"blockArticleCardList"}
               data-plasmic-override={overrides.blockArticleCardList}
@@ -257,13 +278,15 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               title={"Membership Benefits at a Glance"}
             />
 
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader___6Geyx
-              )}
-              title={"Membership Overview - Benefits at a Glance Table"}
-            />
+            <div className={classNames(projectcss.all, sty.freeBox__s65Cq)}>
+              <HtmlContentfulHtmlLoader
+                className={classNames(
+                  "__wab_instance",
+                  sty.htmlContentfulHtmlLoader___6Geyx
+                )}
+                title={"Membership Overview - Benefits at a Glance Table"}
+              />
+            </div>
           </div>
           <ItemAd className={classNames("__wab_instance", sty.itemAd__nVOmJ)} />
           <BlockAsshMissionBlueBlock
@@ -283,6 +306,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "buttonPrimary",
     "blockArticleCardList",
@@ -292,6 +316,7 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   buttonPrimary: ["buttonPrimary"],
   blockArticleCardList: ["blockArticleCardList"],
@@ -333,6 +358,7 @@ export const PlasmicMembershipOverview = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

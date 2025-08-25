@@ -49,7 +49,7 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          name: "For Surgeons: Resource Links"
+          name: "Job Board: Job Seekers Links"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -96,7 +96,8 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
                         subText: entry?.fields.subText || "",
                         thumb: entry?.fields.thumb || "",
                         type: entry?.fields.type || "",
-                        description: entry?.fields.description || ""
+                        description: entry?.fields.description || "",
+                        openInNewTab: entry?.fields.openInNewTab || false
                       };
                     })
                     .sort((a, b) => a.order - b.order);
@@ -304,6 +305,19 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
                       return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                newTab={(() => {
+                  try {
+                    return currentItem.openInNewTab;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return false;
                     }
                     throw e;
                   }

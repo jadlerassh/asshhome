@@ -137,6 +137,19 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
           }
         })()}
         platform={"nextjs"}
+        target={(() => {
+          try {
+            return $props.showIcon;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
+            }
+            throw e;
+          }
+        })()}
       >
         <div
           data-plasmic-name={"content"}

@@ -5,8 +5,14 @@
   width: 100%;
   height: auto;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
+  max-width: 1320px;
   min-width: 0;
+}
+@media (max-width: 1535px) {
+  .root {
+    max-width: none;
+  }
 }
 .itemSectionTitleDescriptionItem:global(.__wab_instance) {
   max-width: 100%;
@@ -19,13 +25,12 @@
   column-gap: 70px;
   align-items: stretch;
   justify-content: flex-start;
-  max-width: 100%;
   position: relative;
-  flex-shrink: 1;
+  flex-shrink: 0;
   flex-wrap: nowrap;
+  max-width: 1320px;
   min-width: 0;
   --plsmc-rc-col-gap: 70px;
-  padding: 8px;
 }
 .row > :nth-child(2n + 1) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
@@ -33,7 +38,7 @@
 .row > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .row {
     column-gap: 50px;
     flex-direction: row;
@@ -43,17 +48,24 @@
     padding: 0px;
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .row > :nth-child(2n + 1) {
     width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .row > :nth-child(2n + 2) {
     width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1279px) {
+  .row {
+    padding-left: var(--token-VRP-cd8LEU7y);
+    padding-right: var(--token-VRP-cd8LEU7y);
+    --plsmc-rc-col-gap: 50px;
+  }
+}
+@media (max-width: 1023px) {
   .row {
     padding-left: 15px;
     padding-right: 15px;
@@ -64,7 +76,7 @@
     --plsmc-rc-col-gap: 30px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .row {
     width: 100%;
     height: auto;
@@ -75,7 +87,7 @@
     --plsmc-rc-col-gap: 30px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .row > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
@@ -108,13 +120,13 @@
   justify-content: flex-start;
   flex-shrink: 0;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .imageFrame {
     width: 100%;
     min-width: 0;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .imageFrame {
     min-width: 300px;
   }
@@ -268,7 +280,7 @@
   min-width: 0;
 }
 .frame4 {
-  width: 664px;
+  width: 100%;
   height: auto;
   display: flex;
   position: relative;
@@ -276,8 +288,9 @@
   row-gap: 50px;
   align-items: flex-start;
   justify-content: flex-start;
+  min-width: 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .frame4 {
     width: auto;
     row-gap: 60px;
@@ -289,7 +302,7 @@
     column-gap: 0px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .frame4 {
     align-items: stretch;
   }
@@ -307,13 +320,13 @@
   border-radius: 10px;
   padding: 10px;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .articleImageCard {
     width: 100%;
     min-width: 0;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .articleImageCard {
     justify-content: flex-start;
     align-items: center;
@@ -327,7 +340,7 @@
     row-gap: 0px;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .articleImageCard {
     display: flex;
     flex-direction: column;
@@ -383,7 +396,7 @@
   justify-content: center;
   padding: 10px 20px 10px 30px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .content {
     flex-grow: 0;
     flex-shrink: 1;
@@ -415,7 +428,7 @@
   justify-content: flex-start;
   border-radius: 2px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .navItemMenu2 {
     flex-wrap: nowrap;
     align-items: stretch;
@@ -433,13 +446,13 @@
   color: rgba(49, 51, 55, 1);
   position: relative;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .navigationItem2 {
     flex-grow: 0;
     flex-shrink: 1;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .navigationItem2 {
     text-align: center;
   }

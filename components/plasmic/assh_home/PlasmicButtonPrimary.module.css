@@ -59,6 +59,7 @@
   width: 100%;
   background: var(--token-Hivuri5dcJVd);
   min-width: 0;
+  padding: 15px;
 }
 .buttonHighlight2textArrowButton {
   background: none;
@@ -93,6 +94,7 @@
   background: var(--token-j3urVBXa9jtJ);
   width: 100%;
   min-width: 0;
+  padding: 15px;
 }
 .buttonHighlight2smallTextLink {
   justify-content: center;
@@ -190,18 +192,25 @@
   align-items: center;
   padding: 0px;
 }
+.buttonHighlight2eventNameLink {
+  padding: 0px;
+}
 .root:hover .buttonHighlight2 {
   background: var(--token-TYi5l69jClib);
 }
 .rootdarkInteractions_dark:hover .buttonHighlight2darkInteractions_dark {
   background: var(--token-su3a1cgfgi_y);
 }
+.rootfullWidthBlueInteractions_brandBlue:hover
+  .buttonHighlight2fullWidthBlueInteractions_brandBlue {
+  background: var(--token-nOBcGT_YRXnw);
+}
 .roottextArrowButton:hover .buttonHighlight2textArrowButton {
   background: none;
 }
 .rootsecondaryInteractions_secondary:hover
   .buttonHighlight2secondaryInteractions_secondary {
-  background: var(--token-nOBcGT_YRXnw);
+  background: var(--token-zepCisb8eOOf);
   color: #3291ff;
   border: 1px solid var(--token-TYi5l69jClib);
 }
@@ -376,8 +385,9 @@
   display: block;
 }
 .text2secondaryInteractions_secondary {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
+  padding: 15px;
 }
 .text2secondaryInteractions_brandBlue2 {
   text-align: center;
@@ -394,6 +404,7 @@
 }
 .text2whiteButtonBlackSurround {
   color: var(--token-H7ML1IxERkQO);
+  padding: 15px;
 }
 .text2quicklinkOption {
   color: var(--token-j3urVBXa9jtJ);
@@ -423,6 +434,7 @@
 }
 .text2menuButton {
   font-size: 16px;
+  padding: 8px;
 }
 .text2social_facebook {
   display: none;
@@ -458,8 +470,17 @@
   color: var(--token-py5R6wetCsNw);
   font-size: 16px;
 }
+.text2eventNameLink {
+  color: var(--token-py5R6wetCsNw);
+  font-size: 24px;
+  line-height: 32px;
+}
 .root:hover .text2 {
   color: var(--token-py5R6wetCsNw);
+}
+.rootfullWidthBlueInteractions_brandBlue:hover
+  .text2fullWidthBlueInteractions_brandBlue {
+  color: var(--token-YLYGEwd03pX3);
 }
 .rootsecondaryInteractions_secondary:hover
   .text2secondaryInteractions_secondary {
@@ -491,6 +512,9 @@
 .rootstandardSizeMenuLink:hover .text2standardSizeMenuLink {
   color: var(--token-j3urVBXa9jtJ);
 }
+.rooteventNameLink:hover .text2eventNameLink {
+  color: var(--token-YOr-x91EUcQe);
+}
 .icon12X125 {
   width: auto;
   height: auto;
@@ -514,6 +538,14 @@
   display: flex;
 }
 .rootdarkInteractions_dark:hover .icon12X125darkInteractions_dark {
+  display: none;
+}
+.rootfullWidthBlueInteractions_brandBlue:hover
+  .icon12X125fullWidthBlueInteractions_brandBlue {
+  display: none;
+}
+.rootsecondaryInteractions_secondary:hover
+  .icon12X125secondaryInteractions_secondary {
   display: none;
 }
 .rootsmallTextLink:hover .icon12X125smallTextLink {
@@ -556,6 +588,9 @@
   display: none;
 }
 .rootsocialGrey_facebook:hover .icon12X125socialGrey_facebook {
+  display: none;
+}
+.rooteventNameLink:hover .icon12X125eventNameLink {
   display: none;
 }
 .svg__bsMdx {

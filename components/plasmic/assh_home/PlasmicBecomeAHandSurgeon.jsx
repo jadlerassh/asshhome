@@ -24,6 +24,7 @@ import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmi
 import BlockHr from "../../BlockHr"; // plasmic-import: VNr8286wioLR/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
+import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -129,7 +130,7 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
               "__wab_instance",
               sty.sectionTopPageHighlightCtaSection
             )}
-            title={"Hero: Membership Overview - Title Card"}
+            title={"Hero: Become a Hand Surgeon - Title Card"}
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__spaHt)}>
@@ -183,21 +184,11 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
             />
 
             <SectionMidPageLeftRightSection
+              data-plasmic-name={"sectionMidPageLeftRightSection"}
+              data-plasmic-override={overrides.sectionMidPageLeftRightSection}
               className={classNames(
                 "__wab_instance",
-                sty.sectionMidPageLeftRightSection__zK78B
-              )}
-              leftOrRight={"left"}
-            />
-
-            <BlockHr
-              className={classNames("__wab_instance", sty.blockHr__fHct0)}
-            />
-
-            <SectionMidPageLeftRightSection
-              className={classNames(
-                "__wab_instance",
-                sty.sectionMidPageLeftRightSection__cLoo
+                sty.sectionMidPageLeftRightSection
               )}
               leftOrRight={"right"}
               title={
@@ -232,6 +223,25 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
               />
             </div>
           </div>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"Become a Hand Surgeon - Certification - Mid-page CTA"}
+          />
+
+          <div className={classNames(projectcss.all, sty.freeBox___6NZiC)}>
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader__cCmvR
+              )}
+              title={"Subspecialty Certificate in Surgery of the Hand"}
+            />
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
@@ -259,16 +269,20 @@ const PlasmicDescendants = {
     "sectionTopPageHighlightCtaSection",
     "itemSectionTitleDescriptionItem",
     "columns",
+    "sectionMidPageLeftRightSection",
     "h3",
     "buttonPrimary",
+    "sectionMidPageCtaSection",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionTopPageHighlightCtaSection: ["sectionTopPageHighlightCtaSection"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns"],
+  sectionMidPageLeftRightSection: ["sectionMidPageLeftRightSection"],
   h3: ["h3"],
   buttonPrimary: ["buttonPrimary"],
+  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -311,8 +325,12 @@ export const PlasmicBecomeAHandSurgeon = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     columns: makeNodeComponent("columns"),
+    sectionMidPageLeftRightSection: makeNodeComponent(
+      "sectionMidPageLeftRightSection"
+    ),
     h3: makeNodeComponent("h3"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
+    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicBecomeAHandSurgeon
     internalVariantProps: PlasmicBecomeAHandSurgeon__VariantProps,

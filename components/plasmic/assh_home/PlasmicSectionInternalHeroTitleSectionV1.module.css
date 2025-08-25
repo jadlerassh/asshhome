@@ -35,7 +35,7 @@
   min-width: 0;
   padding: 50px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .frame2 {
     width: auto;
     flex-wrap: nowrap;
@@ -53,7 +53,7 @@
   justify-content: flex-start;
   row-gap: 30px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .frame3 {
     width: auto;
   }
@@ -135,13 +135,13 @@
   bottom: auto;
   right: 0px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .column {
     width: auto;
     min-width: 40%;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .column {
     display: none;
   }

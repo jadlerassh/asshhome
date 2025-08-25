@@ -9,11 +9,9 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: jiQVfwnxU6BH
 import * as React from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   PlasmicImg as PlasmicImg__,
-  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -26,8 +24,6 @@ import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../pl
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicItemEventCardItemFullCard.module.css"; // plasmic-import: jiQVfwnxU6BH/css
-import ContainerIcon from "./icons/PlasmicIcon__Container"; // plasmic-import: LdpaQ2yuf9hP/icon
-import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import: TKWn1DDMMFQp/icon
 import Container6Icon from "./icons/PlasmicIcon__Container6"; // plasmic-import: GEVyXgFi5rGf/icon
 import Container7Icon from "./icons/PlasmicIcon__Container7"; // plasmic-import: HGdSWGp34SXV/icon
 
@@ -155,31 +151,15 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
               data-plasmic-override={overrides.navItemMenu}
               className={classNames(projectcss.all, sty.navItemMenu)}
             >
-              {false ? (
-                <div
-                  data-plasmic-name={"icon12X12"}
-                  data-plasmic-override={overrides.icon12X12}
-                  className={classNames(projectcss.all, sty.icon12X12)}
-                >
-                  <ContainerIcon
-                    className={classNames(projectcss.all, sty.svg__lByDu)}
-                    role={"img"}
-                  />
-                </div>
-              ) : null}
-              <PlasmicLink__
-                data-plasmic-name={"navigationItem"}
-                data-plasmic-override={overrides.navigationItem}
+              <ButtonPrimary
                 className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  projectcss.__wab_text,
-                  sty.navigationItem
+                  "__wab_instance",
+                  sty.buttonPrimary__eFnNn
                 )}
-                component={Link}
-                href={(() => {
+                eventNameLink={true}
+                text={(() => {
                   try {
-                    return $props.infoUrl;
+                    return $props.title;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -190,36 +170,20 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
                     throw e;
                   }
                 })()}
-                platform={"nextjs"}
-              >
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $props.title;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "80th Annual Meeting of the ASSH";
-                      }
-                      throw e;
+                url={(() => {
+                  try {
+                    return $props.infoUrl;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "";
                     }
-                  })()}
-                </React.Fragment>
-              </PlasmicLink__>
-              {false ? (
-                <div
-                  data-plasmic-name={"icon12X122"}
-                  data-plasmic-override={overrides.icon12X122}
-                  className={classNames(projectcss.all, sty.icon12X122)}
-                >
-                  <Container2Icon
-                    className={classNames(projectcss.all, sty.svg__n0HeU)}
-                    role={"img"}
-                  />
-                </div>
-              ) : null}
+                    throw e;
+                  }
+                })()}
+              />
             </div>
             <div
               data-plasmic-name={"frame2"}
@@ -306,10 +270,14 @@ function PlasmicItemEventCardItemFullCard__RenderFunc(props) {
               </div>
             </div>
           </div>
+        </div>
+        <div
+          data-plasmic-name={"freeBox"}
+          data-plasmic-override={overrides.freeBox}
+          className={classNames(projectcss.all, sty.freeBox)}
+        >
           <ButtonPrimary
-            data-plasmic-name={"buttonPrimary"}
-            data-plasmic-override={overrides.buttonPrimary}
-            className={classNames("__wab_instance", sty.buttonPrimary)}
+            className={classNames("__wab_instance", sty.buttonPrimary___0ErRg)}
             fullWidthBlueInteractions={"brandBlue"}
             text={"Get Registered"}
             url={(() => {
@@ -341,15 +309,12 @@ const PlasmicDescendants = {
     "content",
     "frame3",
     "navItemMenu",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122",
     "frame2",
     "navItemMenu2",
     "icon16X16",
     "navItemMenu3",
     "icon16X162",
-    "buttonPrimary"
+    "freeBox"
   ],
 
   articleImageCard: [
@@ -359,15 +324,12 @@ const PlasmicDescendants = {
     "content",
     "frame3",
     "navItemMenu",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122",
     "frame2",
     "navItemMenu2",
     "icon16X16",
     "navItemMenu3",
     "icon16X162",
-    "buttonPrimary"
+    "freeBox"
   ],
 
   image: ["image", "img"],
@@ -376,23 +338,6 @@ const PlasmicDescendants = {
     "content",
     "frame3",
     "navItemMenu",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122",
-    "frame2",
-    "navItemMenu2",
-    "icon16X16",
-    "navItemMenu3",
-    "icon16X162",
-    "buttonPrimary"
-  ],
-
-  frame3: [
-    "frame3",
-    "navItemMenu",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122",
     "frame2",
     "navItemMenu2",
     "icon16X16",
@@ -400,16 +345,23 @@ const PlasmicDescendants = {
     "icon16X162"
   ],
 
-  navItemMenu: ["navItemMenu", "icon12X12", "navigationItem", "icon12X122"],
-  icon12X12: ["icon12X12"],
-  navigationItem: ["navigationItem"],
-  icon12X122: ["icon12X122"],
+  frame3: [
+    "frame3",
+    "navItemMenu",
+    "frame2",
+    "navItemMenu2",
+    "icon16X16",
+    "navItemMenu3",
+    "icon16X162"
+  ],
+
+  navItemMenu: ["navItemMenu"],
   frame2: ["frame2", "navItemMenu2", "icon16X16", "navItemMenu3", "icon16X162"],
   navItemMenu2: ["navItemMenu2", "icon16X16"],
   icon16X16: ["icon16X16"],
   navItemMenu3: ["navItemMenu3", "icon16X162"],
   icon16X162: ["icon16X162"],
-  buttonPrimary: ["buttonPrimary"]
+  freeBox: ["freeBox"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -451,15 +403,12 @@ export const PlasmicItemEventCardItemFullCard = Object.assign(
     content: makeNodeComponent("content"),
     frame3: makeNodeComponent("frame3"),
     navItemMenu: makeNodeComponent("navItemMenu"),
-    icon12X12: makeNodeComponent("icon12X12"),
-    navigationItem: makeNodeComponent("navigationItem"),
-    icon12X122: makeNodeComponent("icon12X122"),
     frame2: makeNodeComponent("frame2"),
     navItemMenu2: makeNodeComponent("navItemMenu2"),
     icon16X16: makeNodeComponent("icon16X16"),
     navItemMenu3: makeNodeComponent("navItemMenu3"),
     icon16X162: makeNodeComponent("icon16X162"),
-    buttonPrimary: makeNodeComponent("buttonPrimary"),
+    freeBox: makeNodeComponent("freeBox"),
     // Metadata about props expected for PlasmicItemEventCardItemFullCard
     internalVariantProps: PlasmicItemEventCardItemFullCard__VariantProps,
     internalArgProps: PlasmicItemEventCardItemFullCard__ArgProps

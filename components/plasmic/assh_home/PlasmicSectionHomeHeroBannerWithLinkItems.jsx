@@ -230,7 +230,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
           </div>
         </div>
       </div>
-      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : false) ? (
+      {(hasVariant(globalVariants, "screen", "largeMobile") ? true : false) ? (
         <div
           data-plasmic-name={"row3"}
           data-plasmic-override={overrides.row3}
@@ -373,7 +373,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
           </div>
         </div>
       ) : null}
-      {(hasVariant(globalVariants, "screen", "mobileOnly") ? true : false) ? (
+      {(hasVariant(globalVariants, "screen", "largeMobile") ? true : false) ? (
         <div
           data-plasmic-name={"frame10"}
           data-plasmic-override={overrides.frame10}

@@ -62,7 +62,7 @@
   color: rgba(49, 51, 55, 1);
   position: relative;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .navigationItem {
     font-size: 12px;
   }
@@ -95,7 +95,7 @@
   row-gap: 10px;
   flex-shrink: 0;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .svg__cM8GH {
     display: none;
   }

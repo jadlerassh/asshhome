@@ -52,7 +52,7 @@
   padding-left: 8px;
   padding-right: 8px;
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .text {
     margin-right: 4px;
     margin-left: 4px;
@@ -111,7 +111,7 @@
 .exploreDropdown > * {
   grid-column: 4;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .exploreDropdown {
     width: 100%;
     height: 100%;
@@ -122,12 +122,12 @@
     position: fixed;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .exploreDropdown > * {
     grid-column: 4;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .exploreDropdown {
     left: 0;
     top: 0;
@@ -135,7 +135,7 @@
     right: auto;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .exploreDropdown > * {
     grid-column: 4;
   }
@@ -160,13 +160,13 @@
   right: 32px;
   padding: 32px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .closeLink {
     top: 0;
     right: 0;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .closeLink {
     top: 32px;
     right: 0;

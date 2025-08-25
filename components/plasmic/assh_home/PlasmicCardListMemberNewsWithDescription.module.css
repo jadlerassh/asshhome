@@ -29,17 +29,25 @@
 .columns > :nth-child(1n + 1) {
   width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (max-width: 1279px) {
+  .columns {
+    padding-left: var(--token-VRP-cd8LEU7y);
+    padding-right: var(--token-VRP-cd8LEU7y);
+    --plsmc-rc-col-gap: 30px;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
   .columns {
     width: 100%;
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
+    row-gap: 30px;
     min-width: 0;
     --plsmc-rc-col-gap: 30px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
@@ -58,22 +66,9 @@
 .itemArticleCardItemWithDescription:global(.__wab_instance) {
   max-width: 100%;
 }
-.freeBox {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 1320px;
-  margin-top: 35px;
-  min-width: 0;
-  padding: 0px;
-}
 .buttonPrimary:global(.__wab_instance) {
-  max-width: 100%;
-  position: absolute;
-  left: auto;
-  top: auto;
-  bottom: 0;
-  right: 0;
-  margin-top: 0px;
+  max-width: 1320px;
+  width: 100%;
+  min-width: 0;
+  margin: 15px 0px;
 }

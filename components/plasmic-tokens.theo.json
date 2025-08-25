@@ -21,6 +21,26 @@
       }
     },
     {
+      "name": "ASSH/Desktop Padding",
+      "type": "spacing",
+      "value": "50px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "xrK8RAE9tV_D"
+      }
+    },
+    {
+      "name": "ASSH/Desktop Title Padding",
+      "type": "spacing",
+      "value": "30px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "saPA1rX_LBOD"
+      }
+    },
+    {
       "name": "ASSH/Green Highlight",
       "type": "color",
       "value": "#839A43",
@@ -138,6 +158,16 @@
       "meta": {
         "projectId": "34tvEQuyqfK98iGCjMbawB",
         "id": "XTtGF6uDHM3z"
+      }
+    },
+    {
+      "name": "ASSH/mobile-side-padding",
+      "type": "spacing",
+      "value": "20px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "34tvEQuyqfK98iGCjMbawB",
+        "id": "VRP-cd8LEU7y"
       }
     },
     {
@@ -573,7 +603,7 @@
     {
       "name": "Sans-serif",
       "type": "fontfamily",
-      "value": "Nunito Sans",
+      "value": "Manrope",
       "category": "fontfamily",
       "meta": {
         "projectId": "34tvEQuyqfK98iGCjMbawB",

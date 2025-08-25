@@ -26,7 +26,7 @@
 .columns > :nth-child(1n + 1) {
   width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns {
     width: 100%;
     height: auto;
@@ -36,12 +36,12 @@
     --plsmc-rc-col-gap: var(--token-aj9zmKZf9Zw1);
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
   .columns {
     --plsmc-rc-col-gap: var(--token-aj9zmKZf9Zw1);
   }
@@ -58,7 +58,7 @@
   min-width: 0;
   padding: 8px;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .column {
     align-items: center;
     justify-content: flex-start;
@@ -67,7 +67,7 @@
 .itemEducationCardItem:global(.__wab_instance) {
   max-width: 100%;
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .itemEducationCardItem:global(.__wab_instance) {
     align-self: center;
   }

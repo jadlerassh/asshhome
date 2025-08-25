@@ -21,22 +21,27 @@
 .root > * {
   grid-column: 4;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .root > * {
     grid-column: 4;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1279px) {
   .root > * {
     grid-column: 4;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (max-width: 1023px) {
   .root > * {
     grid-column: 4;
   }
 }
-@media (max-width: 414px) {
+@media (min-width: 0px) and (max-width: 767px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 480px) {
   .root > * {
     grid-column: 4;
   }
@@ -67,7 +72,7 @@
   padding: 0px;
   margin: 70px 0px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .freeBox___2Msni {
     padding: 0px 20px;
     margin: 50px 0px;
@@ -100,17 +105,17 @@
 .columns__nlUcV > :nth-child(2n + 2) {
   width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 5 / 12);
 }
-@media (max-width: 1440px) {
+@media (max-width: 1535px) {
   .columns__nlUcV {
     --plsmc-rc-col-gap: 0px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .columns__nlUcV {
     --plsmc-rc-col-gap: 0px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns__nlUcV {
     width: 100%;
     height: auto;
@@ -120,7 +125,7 @@
     --plsmc-rc-col-gap: 0px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns__nlUcV > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }
@@ -174,7 +179,13 @@
   padding: 0px;
   margin: 70px 0px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1279px) {
+  .freeBox__bOjB5 {
+    padding: 0px 20px;
+    margin: 50px 0px;
+  }
+}
+@media (max-width: 1023px) {
   .freeBox__bOjB5 {
     padding: 0px 20px;
     margin: 50px 0px;
@@ -206,13 +217,13 @@
 .columns__rhD7 > :nth-child(3n + 3) {
   width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .columns__rhD7 {
     --plsmc-rc-col-gap: 50px;
     padding: 0px 0px 50px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns__rhD7 {
     width: 100%;
     height: auto;
@@ -223,7 +234,7 @@
     --plsmc-rc-col-gap: 50px;
   }
 }
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 767px) {
   .columns__rhD7 > :nth-child(1n + 1) {
     width: calc((100% - 0 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
   }

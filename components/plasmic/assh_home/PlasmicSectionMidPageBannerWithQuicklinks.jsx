@@ -409,7 +409,7 @@ function PlasmicSectionMidPageBannerWithQuicklinks__RenderFunc(props) {
                 alt={""}
                 className={classNames(sty.img)}
                 displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
+                  hasVariant(globalVariants, "screen", "largeMobile")
                     ? "250px"
                     : "100%"
                 }

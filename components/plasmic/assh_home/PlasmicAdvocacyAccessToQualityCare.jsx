@@ -19,6 +19,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
@@ -119,6 +120,25 @@ function PlasmicAdvocacyAccessToQualityCare__RenderFunc(props) {
               "__wab_instance",
               sty.sectionAdPlaceholder__q71Ye
             )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
           />
 
           <SectionInternalHeroTitleSectionV2
@@ -228,12 +248,14 @@ function PlasmicAdvocacyAccessToQualityCare__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "htmlContentfulHtmlLoader",
     "sectionAccordionSectionTemplate",
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
@@ -273,6 +295,7 @@ export const PlasmicAdvocacyAccessToQualityCare = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

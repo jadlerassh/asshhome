@@ -208,20 +208,14 @@ function PlasmicCardListMemberNewsWithDescription__RenderFunc(props) {
           );
         })}
       </div>
-      <div
-        data-plasmic-name={"freeBox"}
-        data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
-      >
-        <ButtonPrimary
-          data-plasmic-name={"buttonPrimary"}
-          data-plasmic-override={overrides.buttonPrimary}
-          className={classNames("__wab_instance", sty.buttonPrimary)}
-          text={"All Member News"}
-          textArrowButton={true}
-          url={"/membership/news"}
-        />
-      </div>
+      <ButtonPrimary
+        data-plasmic-name={"buttonPrimary"}
+        data-plasmic-override={overrides.buttonPrimary}
+        className={classNames("__wab_instance", sty.buttonPrimary)}
+        text={"All Member News"}
+        textArrowButton={true}
+        url={"/membership/news"}
+      />
     </div>
   );
 }
@@ -233,7 +227,6 @@ const PlasmicDescendants = {
     "columns",
     "column",
     "itemArticleCardItemWithDescription",
-    "freeBox",
     "buttonPrimary"
   ],
 
@@ -241,7 +234,6 @@ const PlasmicDescendants = {
   columns: ["columns", "column", "itemArticleCardItemWithDescription"],
   column: ["column", "itemArticleCardItemWithDescription"],
   itemArticleCardItemWithDescription: ["itemArticleCardItemWithDescription"],
-  freeBox: ["freeBox", "buttonPrimary"],
   buttonPrimary: ["buttonPrimary"]
 };
 
@@ -287,7 +279,6 @@ export const PlasmicCardListMemberNewsWithDescription = Object.assign(
     itemArticleCardItemWithDescription: makeNodeComponent(
       "itemArticleCardItemWithDescription"
     ),
-    freeBox: makeNodeComponent("freeBox"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicCardListMemberNewsWithDescription
     internalVariantProps:

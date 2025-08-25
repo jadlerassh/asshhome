@@ -35,7 +35,8 @@ export const PlasmicComponentFutureEventList__ArgProps = new Array(
   "onLimitChange2",
   "type",
   "onTypeChange",
-  "future"
+  "eventIdNe",
+  "onEventIdNeChange"
 );
 
 const $$ = {};
@@ -52,9 +53,7 @@ function PlasmicComponentFutureEventList__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {
-          future: false
-        },
+        {},
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -85,6 +84,13 @@ function PlasmicComponentFutureEventList__RenderFunc(props) {
         variableType: "text",
         valueProp: "type",
         onChangeProp: "onTypeChange"
+      },
+      {
+        path: "eventIdNe",
+        type: "writable",
+        variableType: "text",
+        valueProp: "eventIdNe",
+        onChangeProp: "onEventIdNeChange"
       }
     ],
 
@@ -100,18 +106,19 @@ function PlasmicComponentFutureEventList__RenderFunc(props) {
     getEvents: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "7f3cd05c-ca16-489c-82b1-f8589111d90c",
+        opId: "7900b06b-4f42-454a-a179-1909ef868b0b",
         userArgs: {
           params: [
             $state.limit,
-            $state.type,
             (() => {
               const date = new Date(Date.now() - 24 * 60 * 60 * 1000);
               return date.toISOString().split(".")[0] + "Z";
-            })()
+            })(),
+            $state.type,
+            $state.eventIdNe
           ]
         },
-        cacheKey: `plasmic.$.7f3cd05c-ca16-489c-82b1-f8589111d90c.$.`,
+        cacheKey: `plasmic.$.7900b06b-4f42-454a-a179-1909ef868b0b.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -148,38 +155,38 @@ function PlasmicComponentFutureEventList__RenderFunc(props) {
         data-plasmic-override={overrides.frame4}
         className={classNames(projectcss.all, sty.frame4)}
       >
-        <div
-          data-plasmic-name={"eventsCard"}
-          data-plasmic-override={overrides.eventsCard}
-          className={classNames(projectcss.all, sty.eventsCard, ``)}
-        >
-          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-            (() => {
-              try {
-                return $queries.getEvents.data.response.items;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return [];
-                }
-                throw e;
+        {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+          (() => {
+            try {
+              return $queries.getEvents.data.response.items;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
               }
-            })()
-          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-            const currentItem = __plasmic_item_0;
-            const currentIndex = __plasmic_idx_0;
-            return (
+              throw e;
+            }
+          })()
+        ).map((__plasmic_item_0, __plasmic_idx_0) => {
+          const currentItem = __plasmic_item_0;
+          const currentIndex = __plasmic_idx_0;
+          return (
+            <div
+              data-plasmic-name={"eventsCard"}
+              data-plasmic-override={overrides.eventsCard}
+              className={classNames(
+                projectcss.all,
+                sty.eventsCard,
+                "event-card-item"
+              )}
+              key={currentIndex}
+            >
               <div
                 data-plasmic-name={"content2"}
                 data-plasmic-override={overrides.content2}
-                className={classNames(
-                  projectcss.all,
-                  sty.content2,
-                  "event-card-item"
-                )}
-                key={currentIndex}
+                className={classNames(projectcss.all, sty.content2, ``)}
               >
                 <ItemEventCardItemInfoOnly
                   data-plasmic-name={"itemEventCardItemInfoOnly"}
@@ -201,7 +208,19 @@ function PlasmicComponentFutureEventList__RenderFunc(props) {
                       throw e;
                     }
                   })()}
-                  location={``}
+                  location={(() => {
+                    try {
+                      return currentItem.fields.locationName;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
                   registerUrl={(() => {
                     try {
                       return currentItem.fields.infoLink;
@@ -230,9 +249,9 @@ function PlasmicComponentFutureEventList__RenderFunc(props) {
                   })()}
                 />
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

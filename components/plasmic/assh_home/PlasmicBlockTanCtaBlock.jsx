@@ -167,58 +167,21 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
               })()}
             </React.Fragment>
           </div>
-          {(
-            hasVariant(globalVariants, "screen", "smallDesktop") ? true : false
-          ) ? (
-            <ButtonPrimary
-              className={classNames("__wab_instance", sty.buttonPrimary__zhXo)}
-              darkNoBgInteractions={[]}
-              fullWidthSecondary={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? true
-                  : undefined
-              }
-              secondaryInteractions={
-                hasVariant(globalVariants, "screen", "mobileOnly")
-                  ? undefined
-                  : "secondary"
-              }
-              text={(() => {
-                try {
-                  return $queries.getHeroContent.data.response.items[0].fields
-                    .cta1Text;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return undefined;
-                  }
-                  throw e;
-                }
-              })()}
-              url={(() => {
-                try {
-                  return $queries.getHeroContent.data.response.items[0].fields
-                    .cta1link;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return `/membership/active`;
-                  }
-                  throw e;
-                }
-              })()}
-            />
-          ) : null}
         </div>
-        <div className={classNames(projectcss.all, sty.column___2Sw2O)}>
+        <div className={classNames(projectcss.all, sty.column__ooOuj)}>
           <ButtonPrimary
-            className={classNames("__wab_instance", sty.buttonPrimary___6LYqc)}
+            data-plasmic-name={"buttonPrimary"}
+            data-plasmic-override={overrides.buttonPrimary}
+            className={classNames("__wab_instance", sty.buttonPrimary)}
             darkNoBgInteractions={[]}
-            secondaryInteractions={"secondary"}
+            fullWidthSecondary={
+              hasVariant(globalVariants, "screen", "largeMobile") ? true : true
+            }
+            secondaryInteractions={
+              hasVariant(globalVariants, "screen", "largeMobile")
+                ? undefined
+                : undefined
+            }
             text={(() => {
               try {
                 return $queries.getHeroContent.data.response.items[0].fields
@@ -255,9 +218,10 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "frame6", "text"],
-  frame6: ["frame6", "text"],
-  text: ["text"]
+  root: ["root", "frame6", "text", "buttonPrimary"],
+  frame6: ["frame6", "text", "buttonPrimary"],
+  text: ["text"],
+  buttonPrimary: ["buttonPrimary"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -294,6 +258,7 @@ export const PlasmicBlockTanCtaBlock = Object.assign(
     // Helper components rendering sub-elements
     frame6: makeNodeComponent("frame6"),
     text: makeNodeComponent("text"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicBlockTanCtaBlock
     internalVariantProps: PlasmicBlockTanCtaBlock__VariantProps,
     internalArgProps: PlasmicBlockTanCtaBlock__ArgProps

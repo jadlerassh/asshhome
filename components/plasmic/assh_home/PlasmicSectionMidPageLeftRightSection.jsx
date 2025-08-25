@@ -53,7 +53,7 @@ function PlasmicSectionMidPageLeftRightSection__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          title: "Hero: Become a Hand Surgeon - Certification"
+          title: "Become a Hand Surgeon - Certification - Mid-page CTA"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)

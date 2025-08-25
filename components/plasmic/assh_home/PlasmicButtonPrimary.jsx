@@ -59,7 +59,8 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "menuButton",
   "social",
   "socialGrey",
-  "standardSizeMenuLink"
+  "standardSizeMenuLink",
+  "eventNameLink"
 );
 
 export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
@@ -219,6 +220,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props.standardSizeMenuLink
+      },
+      {
+        path: "eventNameLink",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.eventNameLink
       }
     ],
 
@@ -265,6 +272,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             $state,
             "darkNoBgInteractions",
             "unnamedVariant"
+          ),
+          [sty.rooteventNameLink]: hasVariant(
+            $state,
+            "eventNameLink",
+            "eventNameLink"
           ),
           [sty.rootfullWidthBlueInteractions_brandBlue]: hasVariant(
             $state,
@@ -374,6 +386,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             ),
             [sty.buttonHighlight2darkNoBgInteractions_unnamedVariant]:
               hasVariant($state, "darkNoBgInteractions", "unnamedVariant"),
+            [sty.buttonHighlight2eventNameLink]: hasVariant(
+              $state,
+              "eventNameLink",
+              "eventNameLink"
+            ),
             [sty.buttonHighlight2fullWidthBlueInteractions_brandBlue]:
               hasVariant($state, "fullWidthBlueInteractions", "brandBlue"),
             [sty.buttonHighlight2fullWidthSecondary]: hasVariant(
@@ -675,6 +692,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "darkNoBgInteractions",
                 "unnamedVariant"
               ),
+              [sty.text2eventNameLink]: hasVariant(
+                $state,
+                "eventNameLink",
+                "eventNameLink"
+              ),
               [sty.text2fullWidthBlueInteractions_brandBlue]: hasVariant(
                 $state,
                 "fullWidthBlueInteractions",
@@ -828,6 +850,16 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "darkInteractions",
               "dark"
             ),
+            [sty.icon12X125eventNameLink]: hasVariant(
+              $state,
+              "eventNameLink",
+              "eventNameLink"
+            ),
+            [sty.icon12X125fullWidthBlueInteractions_brandBlue]: hasVariant(
+              $state,
+              "fullWidthBlueInteractions",
+              "brandBlue"
+            ),
             [sty.icon12X125menuButton]: hasVariant(
               $state,
               "menuButton",
@@ -842,6 +874,11 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               $state,
               "searchIcon",
               "searchIcon"
+            ),
+            [sty.icon12X125secondaryInteractions_secondary]: hasVariant(
+              $state,
+              "secondaryInteractions",
+              "secondary"
             ),
             [sty.icon12X125smallTextLink]: hasVariant(
               $state,

@@ -39,6 +39,12 @@
   border-radius: 5px;
   padding: 20px;
 }
+@media (max-width: 240px) {
+  .accordionButton2 {
+    column-gap: 15px;
+    row-gap: 0px;
+  }
+}
 .accordionButton2openInteractions_open {
   box-shadow: none;
   background: var(--token-Hivuri5dcJVd);
@@ -107,6 +113,11 @@
   -webkit-transition-property: transform;
   -webkit-transition-duration: 0.3s;
   -webkit-transition-delay: 0.3s;
+}
+@media (max-width: 240px) {
+  .title2 {
+    font-size: 18px;
+  }
 }
 .title2openInteractions_open {
   color: var(--token-YLYGEwd03pX3);
