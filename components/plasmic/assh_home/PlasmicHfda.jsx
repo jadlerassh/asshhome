@@ -22,9 +22,7 @@ import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TP
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
-import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
-import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -147,10 +145,14 @@ function PlasmicHfda__RenderFunc(props) {
               "__wab_instance",
               sty.sectionInternalHeroTitleSectionV2
             )}
-            title={"Hero: Hand Therapists - Title Card"}
+            title={"Hero: HFDA - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__v9I4F)}>
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
             <HtmlContentfulHtmlLoader
               data-plasmic-name={"htmlContentfulHtmlLoader"}
               data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -170,33 +172,12 @@ function PlasmicHfda__RenderFunc(props) {
               )}
               name={"HFDA Home Quicklinks"}
             />
-          </div>
-          <SectionMidPageCtaSection
-            data-plasmic-name={"sectionMidPageCtaSection"}
-            data-plasmic-override={overrides.sectionMidPageCtaSection}
-            className={classNames(
-              "__wab_instance",
-              sty.sectionMidPageCtaSection
-            )}
-            title={"For Hand Therapists - Mid-page CTA"}
-          />
 
-          <div className={classNames(projectcss.all, sty.freeBox___52LpA)}>
             <BlockArticleCardList
               data-plasmic-name={"blockArticleCardList"}
               data-plasmic-override={overrides.blockArticleCardList}
               className={classNames("__wab_instance", sty.blockArticleCardList)}
-              name={"For Hand Therapists: Hand Therapy Resources"}
-            />
-
-            <BlockPublicationHighlight
-              data-plasmic-name={"blockPublicationHighlight"}
-              data-plasmic-override={overrides.blockPublicationHighlight}
-              className={classNames(
-                "__wab_instance",
-                sty.blockPublicationHighlight
-              )}
-              title={"For Therapists: Handcare feature"}
+              name={"HFDA Home Resources"}
             />
           </div>
           <SectionAdPlaceholder
@@ -225,21 +206,25 @@ const PlasmicDescendants = {
     "root",
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
+    "freeBox",
     "htmlContentfulHtmlLoader",
     "blockQuicklinksTanBox",
-    "sectionMidPageCtaSection",
     "blockArticleCardList",
-    "blockPublicationHighlight",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
+  freeBox: [
+    "freeBox",
+    "htmlContentfulHtmlLoader",
+    "blockQuicklinksTanBox",
+    "blockArticleCardList"
+  ],
+
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
-  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   blockArticleCardList: ["blockArticleCardList"],
-  blockPublicationHighlight: ["blockPublicationHighlight"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -279,11 +264,10 @@ export const PlasmicHfda = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
+    freeBox: makeNodeComponent("freeBox"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
-    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
-    blockPublicationHighlight: makeNodeComponent("blockPublicationHighlight"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicHfda
     internalVariantProps: PlasmicHfda__VariantProps,

@@ -59,6 +59,11 @@
     --plsmc-rc-col-gap: 0px;
   }
 }
+@media (max-width: 240px) {
+  .columns {
+    --plsmc-rc-col-gap: 0px;
+  }
+}
 .column___7JJd {
   display: flex;
   flex-direction: column;
@@ -180,6 +185,12 @@
   .educationCme3 {
     width: auto;
     align-self: flex-start;
+  }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .educationCme3 {
+    font-size: 36px;
+    line-height: 44px;
   }
 }
 @media (max-width: 240px) {

@@ -15,7 +15,8 @@ import {
   PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
@@ -26,6 +27,7 @@ import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -85,6 +87,7 @@ function PlasmicTheHandBook__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -222,8 +225,16 @@ function PlasmicTheHandBook__RenderFunc(props) {
                   alt={"Pencil icon"}
                   className={classNames(sty.img__wFyD)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={"auto"}
@@ -249,8 +260,16 @@ function PlasmicTheHandBook__RenderFunc(props) {
                   alt={"EKG heart rhythm"}
                   className={classNames(sty.img__jWzSx)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={"auto"}
@@ -276,8 +295,16 @@ function PlasmicTheHandBook__RenderFunc(props) {
                   alt={"Smiley face icon"}
                   className={classNames(sty.img__llu2A)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={"auto"}
@@ -303,8 +330,16 @@ function PlasmicTheHandBook__RenderFunc(props) {
                   alt={"Hand icon"}
                   className={classNames(sty.img___42YZ)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={"auto"}
@@ -330,8 +365,16 @@ function PlasmicTheHandBook__RenderFunc(props) {
                   alt={"Pencil icon"}
                   className={classNames(sty.img__oL7GD)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={"auto"}
@@ -357,8 +400,16 @@ function PlasmicTheHandBook__RenderFunc(props) {
                   alt={"Home icon"}
                   className={classNames(sty.img___3Dx3K)}
                   displayHeight={"auto"}
-                  displayMaxHeight={"100%"}
-                  displayMaxWidth={"100%"}
+                  displayMaxHeight={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "50%"
+                      : "100%"
+                  }
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={"auto"}

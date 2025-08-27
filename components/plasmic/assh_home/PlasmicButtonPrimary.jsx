@@ -707,6 +707,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
                 "fullWidthSecondary",
                 "fullWidthSecondary"
               ),
+              [sty.text2global_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+                hasVariant(
+                  globalVariants,
+                  "unnamedGlobalGroupOfVariants2",
+                  "upcomingEvents"
+                ),
               [sty.text2megaMenuLink_megaMenu]: hasVariant(
                 $state,
                 "megaMenuLink",
@@ -860,6 +866,12 @@ function PlasmicButtonPrimary__RenderFunc(props) {
               "fullWidthBlueInteractions",
               "brandBlue"
             ),
+            [sty.icon12X125global_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+              hasVariant(
+                globalVariants,
+                "unnamedGlobalGroupOfVariants2",
+                "upcomingEvents"
+              ),
             [sty.icon12X125menuButton]: hasVariant(
               $state,
               "menuButton",

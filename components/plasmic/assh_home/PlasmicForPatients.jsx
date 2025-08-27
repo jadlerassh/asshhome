@@ -21,7 +21,6 @@ import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
-import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
@@ -156,15 +155,6 @@ function PlasmicForPatients__RenderFunc(props) {
                     sty.htmlContentfulHtmlLoader
                   )}
                   title={"How ASSH Helps Patients"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___7TL5)}>
-                <BlockQuoteBlock
-                  data-plasmic-name={"blockQuoteBlock"}
-                  data-plasmic-override={overrides.blockQuoteBlock}
-                  className={classNames("__wab_instance", sty.blockQuoteBlock)}
-                  name={"ASSH For Patients Quote"}
-                  quote={"singleLine"}
                 />
               </div>
             </div>
@@ -319,7 +309,6 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
     "htmlContentfulHtmlLoader",
-    "blockQuoteBlock",
     "sectionMidPageCtaSection",
     "content",
     "h2",
@@ -333,7 +322,6 @@ const PlasmicDescendants = {
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
-  blockQuoteBlock: ["blockQuoteBlock"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   content: ["content", "h2", "column", "description", "buttonPrimary"],
   h2: ["h2"],
@@ -383,7 +371,6 @@ export const PlasmicForPatients = Object.assign(
       "itemSectionTitleDescriptionItem"
     ),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
-    blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     content: makeNodeComponent("content"),
     h2: makeNodeComponent("h2"),

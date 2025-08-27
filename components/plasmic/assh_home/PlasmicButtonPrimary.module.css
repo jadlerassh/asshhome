@@ -196,7 +196,11 @@
   padding: 0px;
 }
 .root:hover .buttonHighlight2 {
-  background: var(--token-TYi5l69jClib);
+  background: none;
+}
+.rootglobal_unnamedGlobalGroupOfVariants2_upcomingEvents:hover
+  .buttonHighlight2global_unnamedGlobalGroupOfVariants2_upcomingEvents {
+  background: none;
 }
 .rootdarkInteractions_dark:hover .buttonHighlight2darkInteractions_dark {
   background: var(--token-su3a1cgfgi_y);
@@ -212,7 +216,6 @@
   .buttonHighlight2secondaryInteractions_secondary {
   background: var(--token-zepCisb8eOOf);
   color: #3291ff;
-  border: 1px solid var(--token-TYi5l69jClib);
 }
 .rootmegaMenuLink_megaMenu:hover .buttonHighlight2megaMenuLink_megaMenu {
   background: none;
@@ -364,6 +367,12 @@
   flex-grow: 0;
   flex-shrink: 1;
   text-align: left;
+  padding-right: 0px;
+}
+@media (max-width: 1023px) {
+  .text2 {
+    font-size: 14px;
+  }
 }
 @media (max-width: 240px) {
   .text2 {
@@ -532,10 +541,14 @@
   display: none;
 }
 .icon12X125upcomingEvents {
-  display: flex;
+  display: none;
 }
 .root:hover .icon12X125 {
-  display: flex;
+  display: none;
+}
+.rootglobal_unnamedGlobalGroupOfVariants2_upcomingEvents:hover
+  .icon12X125global_unnamedGlobalGroupOfVariants2_upcomingEvents {
+  display: none;
 }
 .rootdarkInteractions_dark:hover .icon12X125darkInteractions_dark {
   display: none;

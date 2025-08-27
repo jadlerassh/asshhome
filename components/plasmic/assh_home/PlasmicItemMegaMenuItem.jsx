@@ -118,7 +118,11 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
       <div
         data-plasmic-name={"navMenu"}
         data-plasmic-override={overrides.navMenu}
-        className={classNames(projectcss.all, sty.navMenu)}
+        className={classNames(
+          projectcss.all,
+          sty.navMenu,
+          hasVariant(globalVariants, "screen", "largeMobile") ? `` : undefined
+        )}
       >
         {false ? (
           <div

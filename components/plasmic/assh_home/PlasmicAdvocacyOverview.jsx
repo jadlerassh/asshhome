@@ -12,6 +12,7 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -20,6 +21,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
@@ -154,6 +156,35 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox___9UwXf)}>
+            <div className={classNames(projectcss.all, sty.freeBox__di44L)}>
+              <div className={classNames(projectcss.all, sty.columns___23Tlw)}>
+                <div className={classNames(projectcss.all, sty.column__kqYlk)}>
+                  <PlasmicImg__
+                    data-plasmic-name={"img"}
+                    data-plasmic-override={overrides.img}
+                    alt={""}
+                    className={classNames(sty.img)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__bj9A)}>
+                  <Embed
+                    data-plasmic-name={"embedHtml"}
+                    data-plasmic-override={overrides.embedHtml}
+                    className={classNames("__wab_instance", sty.embedHtml)}
+                    code={
+                      "<p>These webpages are part of the <strong>ASSH Professional Organization (ASSHPO)</strong>, where you can learn more about our advocacy work and priorities.</p>"
+                    }
+                  />
+                </div>
+              </div>
+            </div>
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -165,16 +196,8 @@ function PlasmicAdvocacyOverview__RenderFunc(props) {
               title={"Supporting the Hand Surgeon Community"}
             />
 
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <div
-                data-plasmic-name={"column"}
-                data-plasmic-override={overrides.column}
-                className={classNames(projectcss.all, sty.column)}
-              >
+            <div className={classNames(projectcss.all, sty.columns__wfC2X)}>
+              <div className={classNames(projectcss.all, sty.column__jpIe9)}>
                 <HtmlContentfulHtmlLoader
                   data-plasmic-name={"htmlContentfulHtmlLoader"}
                   data-plasmic-override={overrides.htmlContentfulHtmlLoader}
@@ -272,9 +295,9 @@ const PlasmicDescendants = {
     "root",
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
+    "img",
+    "embedHtml",
     "itemSectionTitleDescriptionItem",
-    "columns",
-    "column",
     "htmlContentfulHtmlLoader",
     "sectionMidPageCtaSection",
     "sectionQuicklinksTable",
@@ -285,9 +308,9 @@ const PlasmicDescendants = {
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
+  img: ["img"],
+  embedHtml: ["embedHtml"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  columns: ["columns", "column", "htmlContentfulHtmlLoader"],
-  column: ["column", "htmlContentfulHtmlLoader"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
@@ -332,11 +355,11 @@ export const PlasmicAdvocacyOverview = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
+    img: makeNodeComponent("img"),
+    embedHtml: makeNodeComponent("embedHtml"),
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
-    columns: makeNodeComponent("columns"),
-    column: makeNodeComponent("column"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),

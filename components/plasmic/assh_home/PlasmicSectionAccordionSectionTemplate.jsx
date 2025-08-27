@@ -227,12 +227,11 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
               />
             ) : null}
           </div>
-          <h2
+          <div
             data-plasmic-name={"title2"}
             data-plasmic-override={overrides.title2}
             className={classNames(
               projectcss.all,
-              projectcss.h2,
               projectcss.__wab_text,
               sty.title2,
               {
@@ -259,7 +258,7 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
                 }
               })()}
             </React.Fragment>
-          </h2>
+          </div>
         </div>
       </div>
       <div

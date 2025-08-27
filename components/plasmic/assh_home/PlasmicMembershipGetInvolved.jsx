@@ -29,9 +29,9 @@ import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-im
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ComponentFutureEventList from "../../ComponentFutureEventList"; // plasmic-import: buA5LBYO5-1M/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
-import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListMemberNewsWithDescription from "../../CardListMemberNewsWithDescription"; // plasmic-import: mj20sYUsPblw/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
@@ -205,11 +205,9 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
 
           <div className={classNames(projectcss.all, sty.freeBox__vXfK)}>
             <SectionQuicklinksTable
-              data-plasmic-name={"sectionQuicklinksTable"}
-              data-plasmic-override={overrides.sectionQuicklinksTable}
               className={classNames(
                 "__wab_instance",
-                sty.sectionQuicklinksTable
+                sty.sectionQuicklinksTable__aRiJl
               )}
               columns={"_3Column"}
               name={"Membership Get Involved Quicklinks"}
@@ -290,18 +288,118 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
               textArrowButton={true}
               url={"/s/education/courses-events"}
             />
-          </div>
-          <SectionMidPageCtaSection
-            data-plasmic-name={"sectionMidPageCtaSection"}
-            data-plasmic-override={overrides.sectionMidPageCtaSection}
-            className={classNames(
-              "__wab_instance",
-              sty.sectionMidPageCtaSection
-            )}
-            title={"Membership Get Involved - Mid-page CTA"}
-          />
 
-          <div className={classNames(projectcss.all, sty.freeBox__ijx3Z)}>
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem___3U7Ft
+              )}
+              descriptionSection={``}
+              title={"Submit Your Content"}
+            />
+
+            <div className={classNames(projectcss.all, sty.columns___8Um33)}>
+              <div className={classNames(projectcss.all, sty.column__weR5I)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Submit Your Video to Hand.e"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription___0XcY
+                  )}
+                  description={"Submit a surgical educational video to Hand.e"}
+                  heading={"Hand.e"}
+                  linkUrl={"https://www.assh.org/hande/s/about/submit"}
+                  newTab={true}
+                />
+
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Journal of Hand Surgery"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__cCZo
+                  )}
+                  description={"Submit a manuscript to our flagship journal"}
+                  heading={"JHS"}
+                  linkUrl={"https://www.editorialmanager.com/jhs/default.aspx"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__ylzFz)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Contribute to Hand-P"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__ql9P7
+                  )}
+                  description={"Recommend practice management subject matter"}
+                  heading={"Hand-P"}
+                  linkUrl={"https://www.assh.org/handp/s/about/contribute"}
+                />
+
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Submit an Open Access Article"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__jEmb
+                  )}
+                  description={"Submit a manuscript to our open access journal"}
+                  heading={"JHS GO"}
+                  linkUrl={
+                    "https://www.editorialmanager.com/jhsgo/default.aspx"
+                  }
+                />
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.columns__vuRf)}>
+              <div className={classNames(projectcss.all, sty.column___3VHpU)}>
+                <PlasmicImg__
+                  alt={"Three hand surgeons with a happy patient"}
+                  className={classNames(sty.img__uFwdT)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/assh_home/images/getInvolvedMidpageCtaPng.png",
+                    fullWidth: 794,
+                    fullHeight: 537,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__gJmNu)}>
+                <HtmlContentfulHtmlLoader
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader__vhb3M
+                  )}
+                  title={"Get Involved - Volunteer Touching Hands"}
+                />
+
+                <ButtonPrimary
+                  className={classNames(
+                    "__wab_instance",
+                    sty.buttonPrimary__k1NEz
+                  )}
+                  darkNoBgInteractions={[]}
+                  megaMenuLink={[]}
+                  secondaryInteractions={"secondary"}
+                  text={"Learn More"}
+                  url={"https://www.assh.org/touchinghands/s/fund-mission"}
+                />
+              </div>
+            </div>
+            <SectionQuicklinksTable
+              className={classNames(
+                "__wab_instance",
+                sty.sectionQuicklinksTable__eEdtn
+              )}
+              columns={"_4Column"}
+              name={"Membership Volunteer Opportunities Quicklinks"}
+            />
+
             <ItemSectionTitleDescriptionItem
               className={classNames(
                 "__wab_instance",
@@ -376,6 +474,18 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
                 />
               </div>
             </div>
+          </div>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"Membership Get Involved - Mid-page CTA"}
+          />
+
+          <div className={classNames(projectcss.all, sty.freeBox__ijx3Z)}>
             <div className={classNames(projectcss.all, sty.freeBox__ezBaZ)}>
               <ItemSectionTitleDescriptionItem
                 className={classNames(
@@ -389,10 +499,8 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
               <div className={classNames(projectcss.all, sty.columns__rx8F2)}>
                 <div className={classNames(projectcss.all, sty.column__zGvnl)}>
                   <PlasmicImg__
-                    data-plasmic-name={"img"}
-                    data-plasmic-override={overrides.img}
                     alt={""}
-                    className={classNames(sty.img)}
+                    className={classNames(sty.img__b248)}
                     displayHeight={"auto"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"100%"}
@@ -410,11 +518,9 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
                 </div>
                 <div className={classNames(projectcss.all, sty.column__kHdAk)}>
                   <HtmlContentfulHtmlLoader
-                    data-plasmic-name={"htmlContentfulHtmlLoader"}
-                    data-plasmic-override={overrides.htmlContentfulHtmlLoader}
                     className={classNames(
                       "__wab_instance",
-                      sty.htmlContentfulHtmlLoader
+                      sty.htmlContentfulHtmlLoader__gQ9Ia
                     )}
                     title={"Get Involved with ASSH Perspectives"}
                   />
@@ -462,22 +568,16 @@ const PlasmicDescendants = {
     "root",
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
-    "sectionQuicklinksTable",
     "componentFutureEventList",
     "sectionMidPageCtaSection",
-    "img",
-    "htmlContentfulHtmlLoader",
     "cardListMemberNewsWithDescription",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  sectionQuicklinksTable: ["sectionQuicklinksTable"],
   componentFutureEventList: ["componentFutureEventList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  img: ["img"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   cardListMemberNewsWithDescription: ["cardListMemberNewsWithDescription"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -518,11 +618,8 @@ export const PlasmicMembershipGetInvolved = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     componentFutureEventList: makeNodeComponent("componentFutureEventList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    img: makeNodeComponent("img"),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     cardListMemberNewsWithDescription: makeNodeComponent(
       "cardListMemberNewsWithDescription"
     ),

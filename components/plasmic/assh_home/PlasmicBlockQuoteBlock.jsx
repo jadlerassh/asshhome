@@ -20,13 +20,13 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicBlockQuoteBlock.module.css"; // plasmic-import: pkNfPBeJPFGR/css
-import Container2Icon from "./icons/PlasmicIcon__Container2"; // plasmic-import: TKWn1DDMMFQp/icon
 
 createPlasmicElementProxy;
 
@@ -260,63 +260,42 @@ function PlasmicBlockQuoteBlock__RenderFunc(props) {
             data-plasmic-override={overrides.navItemSimple}
             className={classNames(projectcss.all, sty.navItemSimple)}
           >
-            {false ? (
-              <div
-                data-plasmic-name={"icon12X12"}
-                data-plasmic-override={overrides.icon12X12}
-                className={classNames(projectcss.all, sty.icon12X12)}
-              >
-                <Container2Icon
-                  className={classNames(projectcss.all, sty.svg__gde6U)}
-                  role={"img"}
-                />
-              </div>
-            ) : null}
-            <div
-              data-plasmic-name={"navigationItem"}
-              data-plasmic-override={overrides.navigationItem}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.navigationItem,
-                {
-                  [sty.navigationItemquote_singleLine]: hasVariant(
-                    $state,
-                    "quote",
-                    "singleLine"
-                  )
-                }
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $queries.getQuoteData.data.response.items[0].fields
-                      .title;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "ASSH Membership";
-                    }
-                    throw e;
+            <ButtonPrimary
+              data-plasmic-name={"buttonPrimary"}
+              data-plasmic-override={overrides.buttonPrimary}
+              className={classNames("__wab_instance", sty.buttonPrimary)}
+              darkNoBgInteractions={[]}
+              megaMenuLink={[]}
+              text={(() => {
+                try {
+                  return $queries.getQuoteData.data.response.items[0].fields
+                    .title;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
                   }
-                })()}
-              </React.Fragment>
-            </div>
-            {false ? (
-              <div
-                data-plasmic-name={"icon12X122"}
-                data-plasmic-override={overrides.icon12X122}
-                className={classNames(projectcss.all, sty.icon12X122)}
-              >
-                <Container2Icon
-                  className={classNames(projectcss.all, sty.svg__bsXz5)}
-                  role={"img"}
-                />
-              </div>
-            ) : null}
+                  throw e;
+                }
+              })()}
+              upcomingEvents={true}
+              url={(() => {
+                try {
+                  return $queries.getQuoteData.data.response.items[0].fields
+                    .url;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return "";
+                  }
+                  throw e;
+                }
+              })()}
+            />
           </div>
           <div
             className={classNames(
@@ -363,9 +342,7 @@ const PlasmicDescendants = {
     "img",
     "frame7",
     "navItemSimple",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122"
+    "buttonPrimary"
   ],
 
   calloutBar: [
@@ -374,25 +351,14 @@ const PlasmicDescendants = {
     "img",
     "frame7",
     "navItemSimple",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122"
+    "buttonPrimary"
   ],
 
   frame6: ["frame6", "img"],
   img: ["img"],
-  frame7: [
-    "frame7",
-    "navItemSimple",
-    "icon12X12",
-    "navigationItem",
-    "icon12X122"
-  ],
-
-  navItemSimple: ["navItemSimple", "icon12X12", "navigationItem", "icon12X122"],
-  icon12X12: ["icon12X12"],
-  navigationItem: ["navigationItem"],
-  icon12X122: ["icon12X122"]
+  frame7: ["frame7", "navItemSimple", "buttonPrimary"],
+  navItemSimple: ["navItemSimple", "buttonPrimary"],
+  buttonPrimary: ["buttonPrimary"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -432,9 +398,7 @@ export const PlasmicBlockQuoteBlock = Object.assign(
     img: makeNodeComponent("img"),
     frame7: makeNodeComponent("frame7"),
     navItemSimple: makeNodeComponent("navItemSimple"),
-    icon12X12: makeNodeComponent("icon12X12"),
-    navigationItem: makeNodeComponent("navigationItem"),
-    icon12X122: makeNodeComponent("icon12X122"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     // Metadata about props expected for PlasmicBlockQuoteBlock
     internalVariantProps: PlasmicBlockQuoteBlock__VariantProps,
     internalArgProps: PlasmicBlockQuoteBlock__ArgProps

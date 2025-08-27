@@ -935,7 +935,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
@@ -1161,7 +1174,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
@@ -1408,7 +1434,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
@@ -1634,7 +1673,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
@@ -1860,7 +1912,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
@@ -2088,7 +2153,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {
@@ -2313,7 +2391,20 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : undefined
+                                  : (() => {
+                                      try {
+                                        return currentItem.showExternalIcon;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return false;
+                                        }
+                                        throw e;
+                                      }
+                                    })()
                               }
                               unnamedGroupOfVariants={["footer"]}
                               url={(() => {

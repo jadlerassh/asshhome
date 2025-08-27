@@ -21,6 +21,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -121,6 +122,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -415,35 +417,72 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
             </div>
           </div>
         </div>
-        <div className={classNames(projectcss.all, sty.column__gzOb4)}>
-          <div
-            className={classNames(projectcss.all, sty.freeBox__vEBwV, {
-              [sty.freeBoxbase__vEBwVJr2CU]: hasVariant($state, "base", "base")
-            })}
-          >
-            {(() => {
-              try {
-                return $queries.getImage.data.response.fields.file.url;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
+        {(
+          hasVariant(globalVariants, "screen", "largeMobile")
+            ? (() => {
+                try {
+                  return (
+                    $queries.getHeroContent.data.response.includes.Asset[0]
+                      .fields.file.url !== undefined &&
+                    $queries.getHeroContent.data.response.includes.Asset[0]
+                      .fields.file.url !== ""
+                  );
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return false;
+                  }
+                  throw e;
                 }
-                throw e;
-              }
-            })() ? (
+              })()
+            : true
+        ) ? (
+          <div className={classNames(projectcss.all, sty.column__gzOb4)}>
+            <div
+              className={classNames(projectcss.all, sty.freeBox__vEBwV, {
+                [sty.freeBoxbase__vEBwVJr2CU]: hasVariant(
+                  $state,
+                  "base",
+                  "base"
+                )
+              })}
+            >
               <Embed
                 data-plasmic-name={"embedHtml"}
                 data-plasmic-override={overrides.embedHtml}
                 className={classNames("__wab_instance", sty.embedHtml, {
                   [sty.embedHtmlbase]: hasVariant($state, "base", "base")
                 })}
-                code={(() => {
-                  try {
-                    return (() => {
-                      return `<div style="
+                code={
+                  hasVariant(globalVariants, "screen", "largeMobile")
+                    ? (() => {
+                        try {
+                          return (() => {
+                            return `<div style="
+  width: 100%;
+  height: 100%;
+  background-image: url(${$queries.getHeroContent.data.response.includes.Asset[0].fields.file.url});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+"></div>`;
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()
+                    : (() => {
+                        try {
+                          return (() => {
+                            return `<div style="
   width: 100%;
   height: 100%;
   background-image: url(${$queries.getImage.data.response.fields.file.url});
@@ -451,21 +490,22 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
   background-position: center;
   background-repeat: no-repeat;
 "></div>`;
-                    })();
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "";
-                    }
-                    throw e;
-                  }
-                })()}
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()
+                }
               />
-            ) : null}
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

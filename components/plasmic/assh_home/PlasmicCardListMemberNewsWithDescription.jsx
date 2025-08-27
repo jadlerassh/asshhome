@@ -190,6 +190,7 @@ function PlasmicCardListMemberNewsWithDescription__RenderFunc(props) {
                     throw e;
                   }
                 })()}
+                imageId={``}
                 linkUrl={(() => {
                   try {
                     return currentItem.fields.url;

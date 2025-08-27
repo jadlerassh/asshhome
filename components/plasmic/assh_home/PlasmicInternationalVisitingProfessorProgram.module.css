@@ -31,6 +31,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 1279px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 @media (max-width: 1023px) {
   .root > * {
     grid-column: 4;
@@ -42,6 +47,11 @@
   }
 }
 @media (max-width: 480px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
+@media (max-width: 240px) {
   .root > * {
     grid-column: 4;
   }
@@ -140,6 +150,11 @@
   align-items: center;
   min-width: 0;
   padding: 20px 0px 0px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .column__gry2D {
+    padding-bottom: 20px;
+  }
 }
 .blockQuoteBlock:global(.__wab_instance) {
   max-width: 100%;

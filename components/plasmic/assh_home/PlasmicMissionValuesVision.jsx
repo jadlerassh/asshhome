@@ -21,6 +21,8 @@ import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
+import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -146,15 +148,38 @@ function PlasmicMissionValuesVision__RenderFunc(props) {
             className={classNames(projectcss.all, sty.freeBox)}
           >
             <HtmlContentfulHtmlLoader
-              data-plasmic-name={"htmlContentfulHtmlLoader"}
-              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
               className={classNames(
                 "__wab_instance",
-                sty.htmlContentfulHtmlLoader
+                sty.htmlContentfulHtmlLoader__zJiox
               )}
               title={"Mission Values Vision"}
             />
+
+            <BlockArticleCardList
+              data-plasmic-name={"blockArticleCardList"}
+              data-plasmic-override={overrides.blockArticleCardList}
+              className={classNames("__wab_instance", sty.blockArticleCardList)}
+              name={"Mission, Vision, Values - Pillar Cards"}
+            />
+
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader__dtkEk
+              )}
+              title={"Mission Values Vision 2"}
+            />
           </div>
+          <SectionMidPageCtaSection
+            data-plasmic-name={"sectionMidPageCtaSection"}
+            data-plasmic-override={overrides.sectionMidPageCtaSection}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionMidPageCtaSection
+            )}
+            title={"Mission - Mid-page CTA"}
+          />
+
           <ItemAd className={classNames("__wab_instance", sty.itemAd__lPsyf)} />
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
@@ -175,13 +200,15 @@ const PlasmicDescendants = {
     "root",
     "sectionInternalHeroTitleSectionV2",
     "freeBox",
-    "htmlContentfulHtmlLoader",
+    "blockArticleCardList",
+    "sectionMidPageCtaSection",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  freeBox: ["freeBox", "htmlContentfulHtmlLoader"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
+  freeBox: ["freeBox", "blockArticleCardList"],
+  blockArticleCardList: ["blockArticleCardList"],
+  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -221,7 +248,8 @@ export const PlasmicMissionValuesVision = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     freeBox: makeNodeComponent("freeBox"),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
+    blockArticleCardList: makeNodeComponent("blockArticleCardList"),
+    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicMissionValuesVision
     internalVariantProps: PlasmicMissionValuesVision__VariantProps,

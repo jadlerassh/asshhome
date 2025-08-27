@@ -1216,20 +1216,6 @@
           "componentType": "component"
         },
         {
-          "id": "jTSozzeU-2tC",
-          "name": "JaTestHome",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicJaTestHome.jsx",
-          "importSpec": {
-            "modulePath": "../pages/new-page-3.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicJaTestHome.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/new-page-3"
-        },
-        {
           "id": "LuaLyPZirLWd",
           "name": "HtmlContent",
           "type": "managed",
@@ -3547,6 +3533,212 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/education/fellowships/hfda/fellows-welcome-packet"
+        },
+        {
+          "id": "zQvI7JnaPK2S",
+          "name": "ItemMobileMenu",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemMobileMenu.jsx",
+          "importSpec": {
+            "modulePath": "ItemMobileMenu.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemMobileMenu.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "5-ayHp8nG4OH",
+          "name": "SectionNewsListItems",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionNewsListItems.jsx",
+          "importSpec": {
+            "modulePath": "SectionNewsListItems.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionNewsListItems.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "9EJYa56A7rTf",
+          "name": "NewsTemplatePage",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicNewsTemplatePage.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-template.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicNewsTemplatePage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-template"
+        },
+        {
+          "id": "utHHTk9U0QIY",
+          "name": "HfdaFellowsResources",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfdaFellowsResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda/fellows-resources.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfdaFellowsResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda/fellows-resources"
+        },
+        {
+          "id": "usMTMpuc29Th",
+          "name": "MemberNews",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicMemberNews.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/member-news.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicMemberNews.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/member-news"
+        },
+        {
+          "id": "B5mgUUoxU7la",
+          "name": "HfdaProgramResources",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfdaProgramResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda/program-resources.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfdaProgramResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda/program-resources"
+        },
+        {
+          "id": "5ycDgpbcuZpH",
+          "name": "HfdaDirectorResources",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfdaDirectorResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda/director-resources.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfdaDirectorResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda/director-resources"
+        },
+        {
+          "id": "3P-0uRxTHWuW",
+          "name": "HfdaInterviewCalendar",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfdaInterviewCalendar.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda/interview-calendar.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfdaInterviewCalendar.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda/interview-calendar"
+        },
+        {
+          "id": "oYnNfUl2bMfC",
+          "name": "ItemNewsArticle",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemNewsArticle.jsx",
+          "importSpec": {
+            "modulePath": "ItemNewsArticle.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemNewsArticle.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "2pMJikxYSBT2",
+          "name": "HfdaIndustryRecordings",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHfdaIndustryRecordings.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships/hfda/industry-recordings.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHfdaIndustryRecordings.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships/hfda/industry-recordings"
+        },
+        {
+          "id": "-PMY4qUfJ5kc",
+          "name": "Fellowships",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicFellowships.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/fellowships.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicFellowships.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/fellowships"
+        },
+        {
+          "id": "yYQE4qNX2eUO",
+          "name": "Council",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCouncil.jsx",
+          "importSpec": {
+            "modulePath": "../pages/council.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCouncil.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/council"
+        },
+        {
+          "id": "ELOUh3SPRHxF",
+          "name": "BlockListPersonWithImages",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockListPersonWithImages.jsx",
+          "importSpec": {
+            "modulePath": "BlockListPersonWithImages.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockListPersonWithImages.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1VenWidqtDT0",
+          "name": "HandTraumaNetwork",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicHandTraumaNetwork.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/hand-trauma-network.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicHandTraumaNetwork.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/hand-trauma-network"
+        },
+        {
+          "id": "yzGNdKESd_vC",
+          "name": "Testhome",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTesthome.jsx",
+          "importSpec": {
+            "modulePath": "../pages/test-home.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicTesthome.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/test-home"
         }
       ],
       "icons": [
@@ -4536,6 +4728,16 @@
           "id": "oEEcQeIknXDc",
           "name": "Perspectives.png",
           "filePath": "../public/plasmic/assh_home/images/perspectivesPng.png"
+        },
+        {
+          "id": "BS43Fi90Pf9b",
+          "name": "GetInvolved-midpage-left.png",
+          "filePath": "../public/plasmic/assh_home/images/getInvolvedMidpageLeftPng.png"
+        },
+        {
+          "id": "NvbKz_Ah5kW8",
+          "name": "GetInvolved-midpage-CTA.png",
+          "filePath": "../public/plasmic/assh_home/images/getInvolvedMidpageCtaPng.png"
         }
       ],
       "indirect": false,

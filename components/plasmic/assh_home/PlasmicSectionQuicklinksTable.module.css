@@ -91,8 +91,8 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: center;
+  align-items: flex-start;
   background: var(--token-XTtGF6uDHM3z);
   row-gap: 30px;
   max-width: 1320px;
@@ -102,7 +102,7 @@
 }
 @media (max-width: 1535px) {
   .quickLinksContainer2 {
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background: var(--token-XTtGF6uDHM3z);
     padding: 30px;

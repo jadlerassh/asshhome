@@ -120,6 +120,14 @@
   padding-top: 10px;
   column-gap: 15px;
 }
+@media (max-width: 240px) {
+  .frame8 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    column-gap: 0px;
+  }
+}
 .buttonPrimary__ajwCk:global(.__wab_instance) {
   max-width: 100%;
 }
@@ -151,6 +159,23 @@
   min-width: 0;
   flex-shrink: 0;
   border-radius: 10px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .column {
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .column {
+    height: auto;
+  }
+}
+@media (max-width: 240px) {
+  .column {
+    height: auto;
+  }
 }
 .img {
   object-fit: cover;
