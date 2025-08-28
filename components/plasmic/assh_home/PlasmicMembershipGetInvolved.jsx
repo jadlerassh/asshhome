@@ -412,9 +412,9 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
             />
 
             <ButtonPrimary
-              className={classNames("__wab_instance", sty.buttonPrimary__nInY)}
-              text={"Learn More >"}
-              upcomingEvents={true}
+              className={classNames("__wab_instance", sty.buttonPrimary__hXraB)}
+              text={"Learn More"}
+              textArrowButton={true}
               url={"/s/grants-awards"}
             />
 

@@ -18,6 +18,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemArticleCardItemWithImage from "../../ItemArticleCardItemWithImage"; // plasmic-import: rJ18UjQomkxN/component
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -77,6 +78,7 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();

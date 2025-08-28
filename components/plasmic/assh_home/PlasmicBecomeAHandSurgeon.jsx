@@ -18,13 +18,12 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
-import SectionTopPageHighlightCtaSection from "../../SectionTopPageHighlightCtaSection"; // plasmic-import: 99rw1b5F2OHC/component
+import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
-import BlockHr from "../../BlockHr"; // plasmic-import: VNr8286wioLR/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
+import BlockHr from "../../BlockHr"; // plasmic-import: VNr8286wioLR/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
-import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -123,12 +122,12 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
             )}
           />
 
-          <SectionTopPageHighlightCtaSection
-            data-plasmic-name={"sectionTopPageHighlightCtaSection"}
-            data-plasmic-override={overrides.sectionTopPageHighlightCtaSection}
+          <SectionInternalHeroTitleSectionV2
+            data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
+            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
             className={classNames(
               "__wab_instance",
-              sty.sectionTopPageHighlightCtaSection
+              sty.sectionInternalHeroTitleSectionV2
             )}
             title={"Hero: Become a Hand Surgeon - Title Card"}
           />
@@ -179,16 +178,23 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
                 </div>
               </div>
             </div>
+            <SectionMidPageLeftRightSection
+              className={classNames(
+                "__wab_instance",
+                sty.sectionMidPageLeftRightSection___8Yyni
+              )}
+              leftOrRight={"left"}
+              title={"Become a Hand Surgeon - Certification - Mid-page CTA"}
+            />
+
             <BlockHr
               className={classNames("__wab_instance", sty.blockHr__s0Yon)}
             />
 
             <SectionMidPageLeftRightSection
-              data-plasmic-name={"sectionMidPageLeftRightSection"}
-              data-plasmic-override={overrides.sectionMidPageLeftRightSection}
               className={classNames(
                 "__wab_instance",
-                sty.sectionMidPageLeftRightSection
+                sty.sectionMidPageLeftRightSection__cLoo
               )}
               leftOrRight={"right"}
               title={
@@ -222,18 +228,10 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
                 url={"/s/about/contact-us"}
               />
             </div>
-          </div>
-          <SectionMidPageCtaSection
-            data-plasmic-name={"sectionMidPageCtaSection"}
-            data-plasmic-override={overrides.sectionMidPageCtaSection}
-            className={classNames(
-              "__wab_instance",
-              sty.sectionMidPageCtaSection
-            )}
-            title={"Become a Hand Surgeon - Certification - Mid-page CTA"}
-          />
+            <BlockHr
+              className={classNames("__wab_instance", sty.blockHr__pjFC)}
+            />
 
-          <div className={classNames(projectcss.all, sty.freeBox___6NZiC)}>
             <HtmlContentfulHtmlLoader
               className={classNames(
                 "__wab_instance",
@@ -266,23 +264,19 @@ function PlasmicBecomeAHandSurgeon__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionTopPageHighlightCtaSection",
+    "sectionInternalHeroTitleSectionV2",
     "itemSectionTitleDescriptionItem",
     "columns",
-    "sectionMidPageLeftRightSection",
     "h3",
     "buttonPrimary",
-    "sectionMidPageCtaSection",
     "blockAsshMissionBlueBlock"
   ],
 
-  sectionTopPageHighlightCtaSection: ["sectionTopPageHighlightCtaSection"],
+  sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   columns: ["columns"],
-  sectionMidPageLeftRightSection: ["sectionMidPageLeftRightSection"],
   h3: ["h3"],
   buttonPrimary: ["buttonPrimary"],
-  sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -318,19 +312,15 @@ export const PlasmicBecomeAHandSurgeon = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionTopPageHighlightCtaSection: makeNodeComponent(
-      "sectionTopPageHighlightCtaSection"
+    sectionInternalHeroTitleSectionV2: makeNodeComponent(
+      "sectionInternalHeroTitleSectionV2"
     ),
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),
     columns: makeNodeComponent("columns"),
-    sectionMidPageLeftRightSection: makeNodeComponent(
-      "sectionMidPageLeftRightSection"
-    ),
     h3: makeNodeComponent("h3"),
     buttonPrimary: makeNodeComponent("buttonPrimary"),
-    sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicBecomeAHandSurgeon
     internalVariantProps: PlasmicBecomeAHandSurgeon__VariantProps,

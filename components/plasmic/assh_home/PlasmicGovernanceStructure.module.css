@@ -31,6 +31,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 1279px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 @media (max-width: 1023px) {
   .root > * {
     grid-column: 4;
@@ -79,6 +84,12 @@
     align-items: center;
     justify-content: center;
     width: auto;
+  }
+}
+@media (max-width: 1279px) {
+  .freeBox {
+    padding: 0px 20px;
+    margin: 50px 0px;
   }
 }
 @media (max-width: 1023px) {

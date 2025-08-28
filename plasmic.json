@@ -3739,6 +3739,33 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/test-home"
+        },
+        {
+          "id": "1R3VLUIpzgA9",
+          "name": "BlockStaffListPersonWithImages",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBlockStaffListPersonWithImages.jsx",
+          "importSpec": {
+            "modulePath": "BlockStaffListPersonWithImages.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBlockStaffListPersonWithImages.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "-7trvxN5p1zg",
+          "name": "Staff",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicStaff.jsx",
+          "importSpec": {
+            "modulePath": "../pages/staff.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicStaff.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/staff"
         }
       ],
       "icons": [

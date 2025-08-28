@@ -19,7 +19,9 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
-import ItemPersonCard from "../../ItemPersonCard"; // plasmic-import: WKlDBvmW7DJS/component
+import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import BlockListPersonWithImages from "../../BlockListPersonWithImages"; // plasmic-import: ELOUh3SPRHxF/component
+import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -67,9 +69,9 @@ function PlasmicCouncil__RenderFunc(props) {
     getPerson: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "b007e71b-7669-43d2-be57-5fafa67b9605",
+        opId: "8258d6bb-f6ae-4b85-899a-29dee084a006",
         userArgs: {},
-        cacheKey: `plasmic.$.b007e71b-7669-43d2-be57-5fafa67b9605.$.`,
+        cacheKey: `plasmic.$.8258d6bb-f6ae-4b85-899a-29dee084a006.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -112,122 +114,52 @@ function PlasmicCouncil__RenderFunc(props) {
           )}
         >
           <SectionAdPlaceholder
-            data-plasmic-name={"sectionAdPlaceholder"}
-            data-plasmic-override={overrides.sectionAdPlaceholder}
-            className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__tlrq2
+            )}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__qoQqT)}>
-            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-              (() => {
-                try {
-                  return $state.photo;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return [];
-                  }
-                  throw e;
-                }
-              })()
-            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-              const currentItem = __plasmic_item_0;
-              const currentIndex = __plasmic_idx_0;
-              return (
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__lbup9)}
-                  key={currentIndex}
-                >
-                  <ItemPersonCard
-                    data-plasmic-name={"itemPersonCard"}
-                    data-plasmic-override={overrides.itemPersonCard}
-                    className={classNames("__wab_instance", sty.itemPersonCard)}
-                    imageUrl={(() => {
-                      try {
-                        return $queries.getPerson.data.response.includes.Asset;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "//images.ctfassets.net/k626j787po4v/3qPHHz9Wq7WTO5pHCAmuR8/0338aab922d07f2f99329acc70a77c06/AdobeStock_825115517_final.jpg";
-                        }
-                        throw e;
-                      }
-                    })()}
-                    locationText={(() => {
-                      try {
-                        return currentItem.councilBio.content[0].content[0]
-                          .value;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    name={(() => {
-                      try {
-                        return currentItem.fields.fullName;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                    subTitle={(() => {
-                      try {
-                        return currentItem.councilTitle;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-              );
-            })}
-            <div className={classNames(projectcss.all, sty.freeBox__t9JI)}>
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $state.photo;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__lQHo)}
-                    key={currentIndex}
-                  />
-                );
-              })}
-            </div>
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
+          >
+            <HtmlContentfulHtmlLoader
+              data-plasmic-name={"htmlContentfulHtmlLoader"}
+              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader
+              )}
+              title={"Council"}
+            />
+
+            <BlockListPersonWithImages
+              data-plasmic-name={"blockListPersonWithImages"}
+              data-plasmic-override={overrides.blockListPersonWithImages}
+              className={classNames(
+                "__wab_instance",
+                sty.blockListPersonWithImages
+              )}
+              personType={"Council"}
+            />
           </div>
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__dGigb
+            )}
+          />
+
+          <BlockAsshMissionBlueBlock
+            data-plasmic-name={"blockAsshMissionBlueBlock"}
+            data-plasmic-override={overrides.blockAsshMissionBlueBlock}
+            className={classNames(
+              "__wab_instance",
+              sty.blockAsshMissionBlueBlock
+            )}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -235,9 +167,18 @@ function PlasmicCouncil__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "sectionAdPlaceholder", "itemPersonCard"],
-  sectionAdPlaceholder: ["sectionAdPlaceholder"],
-  itemPersonCard: ["itemPersonCard"]
+  root: [
+    "root",
+    "freeBox",
+    "htmlContentfulHtmlLoader",
+    "blockListPersonWithImages",
+    "blockAsshMissionBlueBlock"
+  ],
+
+  freeBox: ["freeBox", "htmlContentfulHtmlLoader", "blockListPersonWithImages"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
+  blockListPersonWithImages: ["blockListPersonWithImages"],
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -272,8 +213,10 @@ export const PlasmicCouncil = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
-    itemPersonCard: makeNodeComponent("itemPersonCard"),
+    freeBox: makeNodeComponent("freeBox"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
+    blockListPersonWithImages: makeNodeComponent("blockListPersonWithImages"),
+    blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicCouncil
     internalVariantProps: PlasmicCouncil__VariantProps,
     internalArgProps: PlasmicCouncil__ArgProps,

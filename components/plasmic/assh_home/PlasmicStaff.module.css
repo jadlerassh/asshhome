@@ -21,12 +21,7 @@
 .root > * {
   grid-column: 4;
 }
-@media (max-width: 1279px) {
-  .root > * {
-    grid-column: 4;
-  }
-}
-.sectionAdPlaceholder__tlrq2:global(.__wab_instance) {
+.sectionAdPlaceholder__qngxt:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;
@@ -46,21 +41,14 @@
   padding: 0px;
   margin: 70px 0px;
 }
-@media (max-width: 1279px) {
-  .freeBox {
-    padding: 0px 20px;
-    margin: 50px 0px;
-  }
-}
 .htmlContentfulHtmlLoader:global(.__wab_instance) {
-  width: 100%;
-  min-width: 100%;
-  margin: 0px;
+  max-width: 100%;
+  width: auto;
 }
 .blockListPersonWithImages:global(.__wab_instance) {
   max-width: 100%;
 }
-.sectionAdPlaceholder__dGigb:global(.__wab_instance) {
+.sectionAdPlaceholder__blJ9P:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;

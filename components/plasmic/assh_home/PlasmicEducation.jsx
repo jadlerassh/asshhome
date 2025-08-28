@@ -124,7 +124,7 @@ function PlasmicEducation__RenderFunc(props) {
             className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
             currentPagePath={(() => {
               try {
-                return "/s" + $ctx.pagePath;
+                return $ctx.pagePath;
               } catch (e) {
                 if (
                   e instanceof TypeError ||

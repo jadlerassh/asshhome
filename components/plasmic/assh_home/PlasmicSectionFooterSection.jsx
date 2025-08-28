@@ -558,7 +558,10 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.navItemMenu
+                      sty.navItemMenu,
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "body-text-hover"
+                        : undefined
                     )}
                     component={Link}
                     href={"https://maps.app.goo.gl/VfhxqumUh1RHttsi9"}
@@ -581,7 +584,10 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.navigationItem
+                        sty.navigationItem,
+                        hasVariant(globalVariants, "screen", "largeDesktop")
+                          ? ``
+                          : undefined
                       )}
                     >
                       {"822 W. Washington Blvd.\nChicago, IL 60607"}
@@ -605,7 +611,10 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.navItemMenu2
+                      sty.navItemMenu2,
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "body-text-hover"
+                        : undefined
                     )}
                     component={Link}
                     href={"tel:+13128801906"}
@@ -655,7 +664,10 @@ function PlasmicSectionFooterSection__RenderFunc(props) {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
-                      sty.navItemMenu3
+                      sty.navItemMenu3,
+                      hasVariant(globalVariants, "screen", "largeDesktop")
+                        ? "body-text-hover"
+                        : undefined
                     )}
                     component={Link}
                     href={"mailto:info@assh.org"}

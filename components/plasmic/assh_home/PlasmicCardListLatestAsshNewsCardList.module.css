@@ -46,6 +46,11 @@
     --plsmc-rc-col-gap: 50px;
   }
 }
+@media (max-width: 1023px) {
+  .columns {
+    --plsmc-rc-col-gap: 50px;
+  }
+}
 @media (min-width: 0px) and (max-width: 767px) {
   .columns {
     width: 100%;
@@ -88,6 +93,11 @@
   min-width: 0;
   display: none;
   padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .column__zROq3 {
+    display: none;
+  }
 }
 .column__dJyvr {
   flex-direction: column;

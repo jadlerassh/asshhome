@@ -159,12 +159,33 @@ function PlasmicMembershipOverview__RenderFunc(props) {
         >
           <ItemAd className={classNames("__wab_instance", sty.itemAd__p7LtJ)} />
           <SectionBreadcrumbs
-            data-plasmic-name={"sectionBreadcrumbs"}
-            data-plasmic-override={overrides.sectionBreadcrumbs}
-            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionBreadcrumbs__jrOGc
+            )}
             currentPagePath={(() => {
               try {
-                return "/s" + $ctx.pagePath;
+                return window.location.pathname;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
+          <SectionBreadcrumbs
+            className={classNames(
+              "__wab_instance",
+              sty.sectionBreadcrumbs__szz64
+            )}
+            currentPagePath={(() => {
+              try {
+                return $ctx.pagePath;
               } catch (e) {
                 if (
                   e instanceof TypeError ||
@@ -306,7 +327,6 @@ function PlasmicMembershipOverview__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "buttonPrimary",
     "blockArticleCardList",
@@ -316,7 +336,6 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
-  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   buttonPrimary: ["buttonPrimary"],
   blockArticleCardList: ["blockArticleCardList"],
@@ -358,7 +377,6 @@ export const PlasmicMembershipOverview = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
