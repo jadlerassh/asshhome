@@ -3766,6 +3766,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/staff"
+        },
+        {
+          "id": "b_LHfJL4Vf_e",
+          "name": "SocialMedia",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSocialMedia.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/social-media.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSocialMedia.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/social-media"
         }
       ],
       "icons": [

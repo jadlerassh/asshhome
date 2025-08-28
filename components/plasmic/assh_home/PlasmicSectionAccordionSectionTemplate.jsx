@@ -252,7 +252,7 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
                     e instanceof TypeError ||
                     e?.plasmicType === "PlasmicUndefinedDataError"
                   ) {
-                    return "Eligibility";
+                    return "Title";
                   }
                   throw e;
                 }
