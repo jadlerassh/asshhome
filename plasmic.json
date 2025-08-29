@@ -3780,6 +3780,170 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/about/social-media"
+        },
+        {
+          "id": "Ox-KWimff2d0",
+          "name": "FacultyResources",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicFacultyResources.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/faculty-resources.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicFacultyResources.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/faculty-resources"
+        },
+        {
+          "id": "KpTTQEWz_K-1",
+          "name": "GoogleGroups",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicGoogleGroups.jsx",
+          "importSpec": {
+            "modulePath": "../pages/membership/google-groups.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicGoogleGroups.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/membership/google-groups"
+        },
+        {
+          "id": "GiXeD7Y-rwru",
+          "name": "ListservTermsOfUse",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicListservTermsOfUse.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/listserv-terms.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicListservTermsOfUse.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/listserv-terms"
+        },
+        {
+          "id": "aOjEULrMZzIY",
+          "name": "SelfAssessmentExam",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSelfAssessmentExam.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/self-assessment-exam.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSelfAssessmentExam.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/self-assessment-exam"
+        },
+        {
+          "id": "Lqz3M24J43AC",
+          "name": "SectionHomeMenuSectionJaRedo",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionJaRedo.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionJaRedo.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionJaRedo.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "pbm1LJ7gGzwd",
+          "name": "ItemMegaMenuDropdown",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemMegaMenuDropdown.jsx",
+          "importSpec": {
+            "modulePath": "ItemMegaMenuDropdown.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemMegaMenuDropdown.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "DLWO-AZ5zM2W",
+          "name": "ItemFollowAssh",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemFollowAssh.jsx",
+          "importSpec": {
+            "modulePath": "ItemFollowAssh.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemFollowAssh.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "0HHd0W0IMnga",
+          "name": "ItemMobileMegaMenuItem",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemMobileMegaMenuItem.jsx",
+          "importSpec": {
+            "modulePath": "ItemMobileMegaMenuItem.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemMobileMegaMenuItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "o8glZRYjkmDE",
+          "name": "CmeMissionStatementDisclaimer",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCmeMissionStatementDisclaimer.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/cme-moc/mission-disclaimer.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCmeMissionStatementDisclaimer.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/cme-moc/mission-disclaimer"
+        },
+        {
+          "id": "YZRl19eZo6-5",
+          "name": "CmeAndMoc",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCmeAndMoc.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/cme-moc.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCmeAndMoc.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/cme-moc"
+        },
+        {
+          "id": "Dltbo1ziY2JJ",
+          "name": "Books",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicBooks.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/books.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicBooks.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/books"
+        },
+        {
+          "id": "RDuKTPY9W6Vi",
+          "name": "CodingApp",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCodingApp.jsx",
+          "importSpec": {
+            "modulePath": "../pages/education/coding-app.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCodingApp.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/education/coding-app"
         }
       ],
       "icons": [
@@ -4779,6 +4943,16 @@
           "id": "NvbKz_Ah5kW8",
           "name": "GetInvolved-midpage-CTA.png",
           "filePath": "../public/plasmic/assh_home/images/getInvolvedMidpageCtaPng.png"
+        },
+        {
+          "id": "hN1o3yQP_VSG",
+          "name": "littlerlegacy.png",
+          "filePath": "../public/plasmic/assh_home/images/littlerlegacyPng.png"
+        },
+        {
+          "id": "SiR6IjJV2zdC",
+          "name": "surg_rehab.png",
+          "filePath": "../public/plasmic/assh_home/images/surgRehabPng.png"
         }
       ],
       "indirect": false,

@@ -675,179 +675,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
           />
         </div>
         <div
-          data-plasmic-name={"text2"}
-          data-plasmic-override={overrides.text2}
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text2,
-            {
-              [sty.text2darkInteractions_dark]: hasVariant(
-                $state,
-                "darkInteractions",
-                "dark"
-              ),
-              [sty.text2darkNoBgInteractions_unnamedVariant]: hasVariant(
-                $state,
-                "darkNoBgInteractions",
-                "unnamedVariant"
-              ),
-              [sty.text2eventNameLink]: hasVariant(
-                $state,
-                "eventNameLink",
-                "eventNameLink"
-              ),
-              [sty.text2fullWidthBlueInteractions_brandBlue]: hasVariant(
-                $state,
-                "fullWidthBlueInteractions",
-                "brandBlue"
-              ),
-              [sty.text2fullWidthSecondary]: hasVariant(
-                $state,
-                "fullWidthSecondary",
-                "fullWidthSecondary"
-              ),
-              [sty.text2global_unnamedGlobalGroupOfVariants2_upcomingEvents]:
-                hasVariant(
-                  globalVariants,
-                  "unnamedGlobalGroupOfVariants2",
-                  "upcomingEvents"
-                ),
-              [sty.text2megaMenuLink_megaMenu]: hasVariant(
-                $state,
-                "megaMenuLink",
-                "megaMenu"
-              ),
-              [sty.text2memberQuicklinks_quicklink]: hasVariant(
-                $state,
-                "memberQuicklinks",
-                "quicklink"
-              ),
-              [sty.text2menuButton]: hasVariant(
-                $state,
-                "menuButton",
-                "menuButton"
-              ),
-              [sty.text2quicklinkOption]: hasVariant(
-                $state,
-                "quicklinkOption",
-                "quicklinkOption"
-              ),
-              [sty.text2searchIcon]: hasVariant(
-                $state,
-                "searchIcon",
-                "searchIcon"
-              ),
-              [sty.text2secondaryInteractions_brandBlue2]: hasVariant(
-                $state,
-                "secondaryInteractions",
-                "brandBlue2"
-              ),
-              [sty.text2secondaryInteractions_secondary]: hasVariant(
-                $state,
-                "secondaryInteractions",
-                "secondary"
-              ),
-              [sty.text2smallTextLink]: hasVariant(
-                $state,
-                "smallTextLink",
-                "smallTextLink"
-              ),
-              [sty.text2socialGrey_facebook]: hasVariant(
-                $state,
-                "socialGrey",
-                "facebook"
-              ),
-              [sty.text2socialGrey_instagram]: hasVariant(
-                $state,
-                "socialGrey",
-                "instagram"
-              ),
-              [sty.text2socialGrey_linkedIn]: hasVariant(
-                $state,
-                "socialGrey",
-                "linkedIn"
-              ),
-              [sty.text2socialGrey_threads]: hasVariant(
-                $state,
-                "socialGrey",
-                "threads"
-              ),
-              [sty.text2socialGrey_youTube]: hasVariant(
-                $state,
-                "socialGrey",
-                "youTube"
-              ),
-              [sty.text2social_facebook]: hasVariant(
-                $state,
-                "social",
-                "facebook"
-              ),
-              [sty.text2social_instagram]: hasVariant(
-                $state,
-                "social",
-                "instagram"
-              ),
-              [sty.text2social_linkedIn]: hasVariant(
-                $state,
-                "social",
-                "linkedIn"
-              ),
-              [sty.text2social_threads]: hasVariant(
-                $state,
-                "social",
-                "threads"
-              ),
-              [sty.text2social_youTube]: hasVariant(
-                $state,
-                "social",
-                "youTube"
-              ),
-              [sty.text2standardSizeMenuLink]: hasVariant(
-                $state,
-                "standardSizeMenuLink",
-                "standardSizeMenuLink"
-              ),
-              [sty.text2storeLink]: hasVariant(
-                $state,
-                "storeLink",
-                "storeLink"
-              ),
-              [sty.text2textArrowButton]: hasVariant(
-                $state,
-                "textArrowButton",
-                "textArrowButton"
-              ),
-              [sty.text2upcomingEvents]: hasVariant(
-                $state,
-                "upcomingEvents",
-                "upcomingEvents"
-              ),
-              [sty.text2whiteButtonBlackSurround]: hasVariant(
-                $state,
-                "whiteButtonBlackSurround",
-                "whiteButtonBlackSurround"
-              )
-            }
-          )}
-        >
-          <React.Fragment>
-            {(() => {
-              try {
-                return $props.text;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return "Get Registered";
-                }
-                throw e;
-              }
-            })()}
-          </React.Fragment>
-        </div>
-        <div
           data-plasmic-name={"icon12X125"}
           data-plasmic-override={overrides.icon12X125}
           className={classNames(projectcss.all, sty.icon12X125, {
@@ -1218,6 +1045,179 @@ function PlasmicButtonPrimary__RenderFunc(props) {
             role={"img"}
           />
         ) : null}
+        <div
+          data-plasmic-name={"text2"}
+          data-plasmic-override={overrides.text2}
+          className={classNames(
+            projectcss.all,
+            projectcss.__wab_text,
+            sty.text2,
+            {
+              [sty.text2darkInteractions_dark]: hasVariant(
+                $state,
+                "darkInteractions",
+                "dark"
+              ),
+              [sty.text2darkNoBgInteractions_unnamedVariant]: hasVariant(
+                $state,
+                "darkNoBgInteractions",
+                "unnamedVariant"
+              ),
+              [sty.text2eventNameLink]: hasVariant(
+                $state,
+                "eventNameLink",
+                "eventNameLink"
+              ),
+              [sty.text2fullWidthBlueInteractions_brandBlue]: hasVariant(
+                $state,
+                "fullWidthBlueInteractions",
+                "brandBlue"
+              ),
+              [sty.text2fullWidthSecondary]: hasVariant(
+                $state,
+                "fullWidthSecondary",
+                "fullWidthSecondary"
+              ),
+              [sty.text2global_unnamedGlobalGroupOfVariants2_upcomingEvents]:
+                hasVariant(
+                  globalVariants,
+                  "unnamedGlobalGroupOfVariants2",
+                  "upcomingEvents"
+                ),
+              [sty.text2megaMenuLink_megaMenu]: hasVariant(
+                $state,
+                "megaMenuLink",
+                "megaMenu"
+              ),
+              [sty.text2memberQuicklinks_quicklink]: hasVariant(
+                $state,
+                "memberQuicklinks",
+                "quicklink"
+              ),
+              [sty.text2menuButton]: hasVariant(
+                $state,
+                "menuButton",
+                "menuButton"
+              ),
+              [sty.text2quicklinkOption]: hasVariant(
+                $state,
+                "quicklinkOption",
+                "quicklinkOption"
+              ),
+              [sty.text2searchIcon]: hasVariant(
+                $state,
+                "searchIcon",
+                "searchIcon"
+              ),
+              [sty.text2secondaryInteractions_brandBlue2]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "brandBlue2"
+              ),
+              [sty.text2secondaryInteractions_secondary]: hasVariant(
+                $state,
+                "secondaryInteractions",
+                "secondary"
+              ),
+              [sty.text2smallTextLink]: hasVariant(
+                $state,
+                "smallTextLink",
+                "smallTextLink"
+              ),
+              [sty.text2socialGrey_facebook]: hasVariant(
+                $state,
+                "socialGrey",
+                "facebook"
+              ),
+              [sty.text2socialGrey_instagram]: hasVariant(
+                $state,
+                "socialGrey",
+                "instagram"
+              ),
+              [sty.text2socialGrey_linkedIn]: hasVariant(
+                $state,
+                "socialGrey",
+                "linkedIn"
+              ),
+              [sty.text2socialGrey_threads]: hasVariant(
+                $state,
+                "socialGrey",
+                "threads"
+              ),
+              [sty.text2socialGrey_youTube]: hasVariant(
+                $state,
+                "socialGrey",
+                "youTube"
+              ),
+              [sty.text2social_facebook]: hasVariant(
+                $state,
+                "social",
+                "facebook"
+              ),
+              [sty.text2social_instagram]: hasVariant(
+                $state,
+                "social",
+                "instagram"
+              ),
+              [sty.text2social_linkedIn]: hasVariant(
+                $state,
+                "social",
+                "linkedIn"
+              ),
+              [sty.text2social_threads]: hasVariant(
+                $state,
+                "social",
+                "threads"
+              ),
+              [sty.text2social_youTube]: hasVariant(
+                $state,
+                "social",
+                "youTube"
+              ),
+              [sty.text2standardSizeMenuLink]: hasVariant(
+                $state,
+                "standardSizeMenuLink",
+                "standardSizeMenuLink"
+              ),
+              [sty.text2storeLink]: hasVariant(
+                $state,
+                "storeLink",
+                "storeLink"
+              ),
+              [sty.text2textArrowButton]: hasVariant(
+                $state,
+                "textArrowButton",
+                "textArrowButton"
+              ),
+              [sty.text2upcomingEvents]: hasVariant(
+                $state,
+                "upcomingEvents",
+                "upcomingEvents"
+              ),
+              [sty.text2whiteButtonBlackSurround]: hasVariant(
+                $state,
+                "whiteButtonBlackSurround",
+                "whiteButtonBlackSurround"
+              )
+            }
+          )}
+        >
+          <React.Fragment>
+            {(() => {
+              try {
+                return $props.text;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "Get Registered";
+                }
+                throw e;
+              }
+            })()}
+          </React.Fragment>
+        </div>
       </PlasmicLink__>
     </div>
   );
@@ -1228,29 +1228,29 @@ const PlasmicDescendants = {
     "root",
     "buttonHighlight2",
     "icon12X12",
-    "text2",
     "icon12X125",
     "navItemSimple",
     "icon12X123",
-    "icon12X122"
+    "icon12X122",
+    "text2"
   ],
 
   buttonHighlight2: [
     "buttonHighlight2",
     "icon12X12",
-    "text2",
     "icon12X125",
     "navItemSimple",
     "icon12X123",
-    "icon12X122"
+    "icon12X122",
+    "text2"
   ],
 
   icon12X12: ["icon12X12"],
-  text2: ["text2"],
   icon12X125: ["icon12X125"],
   navItemSimple: ["navItemSimple", "icon12X123"],
   icon12X123: ["icon12X123"],
-  icon12X122: ["icon12X122"]
+  icon12X122: ["icon12X122"],
+  text2: ["text2"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1287,11 +1287,11 @@ export const PlasmicButtonPrimary = Object.assign(
     // Helper components rendering sub-elements
     buttonHighlight2: makeNodeComponent("buttonHighlight2"),
     icon12X12: makeNodeComponent("icon12X12"),
-    text2: makeNodeComponent("text2"),
     icon12X125: makeNodeComponent("icon12X125"),
     navItemSimple: makeNodeComponent("navItemSimple"),
     icon12X123: makeNodeComponent("icon12X123"),
     icon12X122: makeNodeComponent("icon12X122"),
+    text2: makeNodeComponent("text2"),
     // Metadata about props expected for PlasmicButtonPrimary
     internalVariantProps: PlasmicButtonPrimary__VariantProps,
     internalArgProps: PlasmicButtonPrimary__ArgProps

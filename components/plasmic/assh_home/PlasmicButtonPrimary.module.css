@@ -106,6 +106,16 @@
 }
 .buttonHighlight2menuButton {
   background: var(--token-j3urVBXa9jtJ);
+  height: 40px;
+  flex-shrink: 0;
+}
+@media (max-width: 1279px) {
+  .buttonHighlight2menuButton {
+    height: 35px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    flex-shrink: 0;
+  }
 }
 .buttonHighlight2social_facebook {
   width: 40px;
@@ -353,176 +363,6 @@
 }
 .rootstoreLink:hover .svgstoreLink__wJUnfByaBx {
   color: var(--token-j3urVBXa9jtJ);
-}
-.text2 {
-  display: block;
-  font-size: 20px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0em;
-  line-height: 24px;
-  color: rgba(255, 255, 255, 1);
-  position: relative;
-  width: auto;
-  flex-grow: 0;
-  flex-shrink: 1;
-  text-align: left;
-  padding-right: 0px;
-}
-@media (max-width: 1023px) {
-  .text2 {
-    font-size: 14px;
-  }
-}
-@media (max-width: 240px) {
-  .text2 {
-    text-align: center;
-  }
-}
-.text2darkInteractions_dark {
-  color: var(--token-py5R6wetCsNw);
-  display: block;
-}
-.text2fullWidthBlueInteractions_brandBlue {
-  text-align: center;
-  background: none;
-  color: var(--token-YLYGEwd03pX3);
-}
-.text2textArrowButton {
-  color: var(--token-7sC8F62mRz_G);
-  font-size: 16px;
-  display: block;
-}
-.text2secondaryInteractions_secondary {
-  font-weight: 600;
-  font-size: 18px;
-  padding: 15px;
-}
-.text2secondaryInteractions_brandBlue2 {
-  text-align: center;
-}
-.text2megaMenuLink_megaMenu {
-  color: var(--token-H7ML1IxERkQO);
-  font-weight: 500;
-  font-size: 18px;
-}
-.text2memberQuicklinks_quicklink {
-  color: #ffffff;
-  padding-right: 14px;
-  margin-left: 0px;
-}
-.text2whiteButtonBlackSurround {
-  color: var(--token-H7ML1IxERkQO);
-  padding: 15px;
-}
-.text2quicklinkOption {
-  color: var(--token-j3urVBXa9jtJ);
-  display: block;
-}
-.text2upcomingEvents {
-  color: var(--token-j3urVBXa9jtJ);
-}
-.text2fullWidthSecondary {
-  font-weight: 500;
-}
-.text2smallTextLink {
-  color: var(--token-py5R6wetCsNw);
-  font-size: 13px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-.text2storeLink {
-  font-family: "Inter", sans-serif;
-  line-height: 13px;
-  color: var(--token-py5R6wetCsNw);
-  font-size: 13px;
-  font-weight: 400;
-}
-.text2searchIcon {
-  display: none;
-}
-.text2menuButton {
-  font-size: 16px;
-  padding: 8px;
-}
-.text2social_facebook {
-  display: none;
-}
-.text2social_linkedIn {
-  display: none;
-}
-.text2social_youTube {
-  display: none;
-}
-.text2social_instagram {
-  display: none;
-}
-.text2social_threads {
-  display: none;
-}
-.text2socialGrey_linkedIn {
-  display: none;
-}
-.text2socialGrey_youTube {
-  display: none;
-}
-.text2socialGrey_instagram {
-  display: none;
-}
-.text2socialGrey_threads {
-  display: none;
-}
-.text2socialGrey_facebook {
-  display: none;
-}
-.text2standardSizeMenuLink {
-  color: var(--token-py5R6wetCsNw);
-  font-size: 16px;
-}
-.text2eventNameLink {
-  color: var(--token-py5R6wetCsNw);
-  font-size: 24px;
-  line-height: 32px;
-}
-.root:hover .text2 {
-  color: var(--token-py5R6wetCsNw);
-}
-.rootfullWidthBlueInteractions_brandBlue:hover
-  .text2fullWidthBlueInteractions_brandBlue {
-  color: var(--token-YLYGEwd03pX3);
-}
-.rootsecondaryInteractions_secondary:hover
-  .text2secondaryInteractions_secondary {
-  color: var(--token-TYi5l69jClib);
-}
-.rootmegaMenuLink_megaMenu:hover .text2megaMenuLink_megaMenu {
-  color: var(--token-YOr-x91EUcQe);
-}
-.rootwhiteButtonBlackSurround:hover .text2whiteButtonBlackSurround {
-  color: var(--token-TYi5l69jClib);
-}
-.rootquicklinkOption:hover .text2quicklinkOption {
-  color: var(--token-H7ML1IxERkQO);
-}
-.rootfullWidthSecondary:hover .text2fullWidthSecondary {
-  color: var(--token-TYi5l69jClib);
-  font-weight: 500;
-}
-.rootsmallTextLink:hover .text2smallTextLink {
-  color: var(--token-j3urVBXa9jtJ);
-}
-.rootstoreLink:hover .text2storeLink {
-  color: var(--token-j3urVBXa9jtJ);
-}
-.rootmenuButton:hover .text2menuButton {
-  color: var(--token-TYi5l69jClib);
-  text-align: center;
-}
-.rootstandardSizeMenuLink:hover .text2standardSizeMenuLink {
-  color: var(--token-j3urVBXa9jtJ);
-}
-.rooteventNameLink:hover .text2eventNameLink {
-  color: var(--token-YOr-x91EUcQe);
 }
 .icon12X125 {
   width: auto;
@@ -860,4 +700,187 @@
 }
 .rootsocialGrey_threads:hover .svgsocialGrey_threads__sXrIs4H81J {
   color: var(--token-TYi5l69jClib);
+}
+.text2 {
+  display: block;
+  font-size: 20px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  text-align: left;
+  padding-right: 0px;
+}
+@media (max-width: 1023px) {
+  .text2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 240px) {
+  .text2 {
+    text-align: center;
+  }
+}
+.text2darkInteractions_dark {
+  color: var(--token-py5R6wetCsNw);
+  display: block;
+}
+.text2fullWidthBlueInteractions_brandBlue {
+  text-align: center;
+  background: none;
+  color: var(--token-YLYGEwd03pX3);
+}
+.text2textArrowButton {
+  color: var(--token-7sC8F62mRz_G);
+  font-size: 16px;
+  display: block;
+}
+.text2secondaryInteractions_secondary {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 15px;
+}
+.text2secondaryInteractions_brandBlue2 {
+  text-align: center;
+}
+.text2megaMenuLink_megaMenu {
+  color: var(--token-H7ML1IxERkQO);
+  font-weight: 500;
+  font-size: 18px;
+}
+.text2memberQuicklinks_quicklink {
+  color: #ffffff;
+  padding-right: 14px;
+  margin-left: 0px;
+}
+.text2whiteButtonBlackSurround {
+  color: var(--token-H7ML1IxERkQO);
+  padding: 15px;
+}
+.text2quicklinkOption {
+  color: var(--token-j3urVBXa9jtJ);
+  display: block;
+}
+.text2upcomingEvents {
+  color: var(--token-j3urVBXa9jtJ);
+}
+.text2fullWidthSecondary {
+  font-weight: 500;
+}
+.text2smallTextLink {
+  color: var(--token-py5R6wetCsNw);
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 480px) {
+  .text2smallTextLink {
+    line-height: 20px;
+  }
+}
+.text2storeLink {
+  font-family: "Inter", sans-serif;
+  line-height: 13px;
+  color: var(--token-py5R6wetCsNw);
+  font-size: 13px;
+  font-weight: 400;
+}
+.text2searchIcon {
+  display: none;
+}
+.text2menuButton {
+  font-size: 16px;
+  padding: 8px;
+}
+@media (max-width: 1279px) {
+  .text2menuButton {
+    flex-grow: 1;
+    font-size: 12px;
+    text-align: center;
+    white-space: pre;
+  }
+}
+.text2social_facebook {
+  display: none;
+}
+.text2social_linkedIn {
+  display: none;
+}
+.text2social_youTube {
+  display: none;
+}
+.text2social_instagram {
+  display: none;
+}
+.text2social_threads {
+  display: none;
+}
+.text2socialGrey_linkedIn {
+  display: none;
+}
+.text2socialGrey_youTube {
+  display: none;
+}
+.text2socialGrey_instagram {
+  display: none;
+}
+.text2socialGrey_threads {
+  display: none;
+}
+.text2socialGrey_facebook {
+  display: none;
+}
+.text2standardSizeMenuLink {
+  color: var(--token-py5R6wetCsNw);
+  font-size: 16px;
+}
+.text2eventNameLink {
+  color: var(--token-py5R6wetCsNw);
+  font-size: 24px;
+  line-height: 32px;
+}
+.root:hover .text2 {
+  color: var(--token-py5R6wetCsNw);
+}
+.rootfullWidthBlueInteractions_brandBlue:hover
+  .text2fullWidthBlueInteractions_brandBlue {
+  color: var(--token-YLYGEwd03pX3);
+}
+.rootsecondaryInteractions_secondary:hover
+  .text2secondaryInteractions_secondary {
+  color: var(--token-TYi5l69jClib);
+}
+.rootmegaMenuLink_megaMenu:hover .text2megaMenuLink_megaMenu {
+  color: var(--token-YOr-x91EUcQe);
+}
+.rootwhiteButtonBlackSurround:hover .text2whiteButtonBlackSurround {
+  color: var(--token-TYi5l69jClib);
+}
+.rootquicklinkOption:hover .text2quicklinkOption {
+  color: var(--token-H7ML1IxERkQO);
+}
+.rootfullWidthSecondary:hover .text2fullWidthSecondary {
+  color: var(--token-TYi5l69jClib);
+  font-weight: 500;
+}
+.rootsmallTextLink:hover .text2smallTextLink {
+  color: var(--token-j3urVBXa9jtJ);
+}
+.rootstoreLink:hover .text2storeLink {
+  color: var(--token-j3urVBXa9jtJ);
+}
+.rootmenuButton:hover .text2menuButton {
+  color: var(--token-TYi5l69jClib);
+  text-align: center;
+}
+.rootstandardSizeMenuLink:hover .text2standardSizeMenuLink {
+  color: var(--token-j3urVBXa9jtJ);
+}
+.rooteventNameLink:hover .text2eventNameLink {
+  color: var(--token-YOr-x91EUcQe);
 }

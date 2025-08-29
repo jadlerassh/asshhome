@@ -1354,20 +1354,20 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
           </div>
         </div>
         <div
-          data-plasmic-name={"frame9"}
-          data-plasmic-override={overrides.frame9}
-          className={classNames(projectcss.all, sty.frame9, {
-            [sty.frame9menus_dropdown1]: hasVariant(
+          data-plasmic-name={"mobileMenuFrame"}
+          data-plasmic-override={overrides.mobileMenuFrame}
+          className={classNames(projectcss.all, sty.mobileMenuFrame, {
+            [sty.mobileMenuFramemenus_dropdown1]: hasVariant(
               $state,
               "menus",
               "dropdown1"
             ),
-            [sty.frame9mobileMenuOpen]: hasVariant(
+            [sty.mobileMenuFramemobileMenuOpen]: hasVariant(
               $state,
               "mobileMenuOpen",
               "mobileMenuOpen"
             ),
-            [sty.frame9mobileMenuOpen_menus_dropdown1]:
+            [sty.mobileMenuFramemobileMenuOpen_menus_dropdown1]:
               hasVariant($state, "mobileMenuOpen", "mobileMenuOpen") &&
               hasVariant($state, "menus", "dropdown1")
           })}
@@ -5284,7 +5284,7 @@ const PlasmicDescendants = {
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
-    "frame9",
+    "mobileMenuFrame",
     "navigation",
     "navMenu",
     "megaMenuDropdown",
@@ -5392,7 +5392,7 @@ const PlasmicDescendants = {
     "itemMenuCurrentUser",
     "userMenu",
     "navItemMenu76",
-    "frame9",
+    "mobileMenuFrame",
     "navigation",
     "navMenu",
     "megaMenuDropdown",
@@ -5543,8 +5543,8 @@ const PlasmicDescendants = {
   itemMenuCurrentUser: ["itemMenuCurrentUser"],
   userMenu: ["userMenu", "navItemMenu76"],
   navItemMenu76: ["navItemMenu76"],
-  frame9: [
-    "frame9",
+  mobileMenuFrame: [
+    "mobileMenuFrame",
     "navigation",
     "navMenu",
     "megaMenuDropdown",
@@ -6106,7 +6106,7 @@ export const PlasmicSectionHomeMenuSection = Object.assign(
     itemMenuCurrentUser: makeNodeComponent("itemMenuCurrentUser"),
     userMenu: makeNodeComponent("userMenu"),
     navItemMenu76: makeNodeComponent("navItemMenu76"),
-    frame9: makeNodeComponent("frame9"),
+    mobileMenuFrame: makeNodeComponent("mobileMenuFrame"),
     navigation: makeNodeComponent("navigation"),
     navMenu: makeNodeComponent("navMenu"),
     megaMenuDropdown: makeNodeComponent("megaMenuDropdown"),

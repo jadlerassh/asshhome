@@ -56,12 +56,12 @@
 }
 .text {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 32px;
-  color: rgba(49, 51, 55, 1);
+  color: #444444;
   position: relative;
   width: 100%;
   min-width: 0;

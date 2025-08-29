@@ -125,7 +125,13 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
       <div
         data-plasmic-name={"accordion2"}
         data-plasmic-override={overrides.accordion2}
-        className={classNames(projectcss.all, sty.accordion2)}
+        className={classNames(projectcss.all, sty.accordion2, {
+          [sty.accordion2openInteractions_open]: hasVariant(
+            $state,
+            "openInteractions",
+            "open"
+          )
+        })}
       >
         <div
           data-plasmic-name={"accordionButton2"}
@@ -275,7 +281,13 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
         <div
           data-plasmic-name={"accordionBody"}
           data-plasmic-override={overrides.accordionBody}
-          className={classNames(projectcss.all, sty.accordionBody)}
+          className={classNames(projectcss.all, sty.accordionBody, {
+            [sty.accordionBodyopenInteractions_open]: hasVariant(
+              $state,
+              "openInteractions",
+              "open"
+            )
+          })}
         >
           <div
             data-plasmic-name={"membershipContentGroup"}

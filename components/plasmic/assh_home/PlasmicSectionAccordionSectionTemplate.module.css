@@ -6,7 +6,13 @@
   height: auto;
   justify-content: flex-start;
   align-items: center;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
   min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
 }
 .accordion2 {
   width: 100%;
@@ -16,6 +22,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   cursor: pointer;
+  z-index: 2;
   min-width: 0;
 }
 .accordionButton2 {
@@ -140,15 +147,29 @@
 }
 .accordion {
   width: 100%;
-  height: auto;
+  height: 0px;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  transform: translateX(0px) translateY(-50%) translateZ(0px) scaleX(1)
+    scaleY(0) scaleZ(1);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+  opacity: 0;
   min-width: 0;
-  display: none;
+  flex-shrink: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
 }
 .accordionopenInteractions_open {
-  display: flex;
+  transform: translateX(0px) translateY(0%) translateZ(0px) scaleX(1) scaleY(1)
+    scaleZ(1);
+  opacity: 1;
+  height: auto;
 }
 .accordionBody {
   background: rgba(255, 255, 255, 1);
