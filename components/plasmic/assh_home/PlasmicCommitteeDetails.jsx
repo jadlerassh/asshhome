@@ -21,7 +21,8 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ComponentVerticalPageList from "../../ComponentVerticalPageList"; // plasmic-import: _YaPVT-9kvvZ/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
@@ -194,10 +195,30 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
             }
           )}
         >
-          <ItemAd
-            data-plasmic-name={"itemAd"}
-            data-plasmic-override={overrides.itemAd}
-            className={classNames("__wab_instance", sty.itemAd)}
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__iMujv
+            )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
           />
 
           <SectionInternalHeroTitleSectionV2
@@ -395,6 +416,13 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
               </div>
             ) : null}
           </div>
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__yBhcR
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -412,7 +440,7 @@ function PlasmicCommitteeDetails__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "itemAd",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "columns",
     "componentVerticalPageList",
@@ -422,7 +450,7 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
-  itemAd: ["itemAd"],
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   columns: [
     "columns",
@@ -471,7 +499,7 @@ export const PlasmicCommitteeDetails = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    itemAd: makeNodeComponent("itemAd"),
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

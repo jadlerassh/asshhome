@@ -63,6 +63,8 @@
 }
 .buttonHighlight2textArrowButton {
   background: none;
+  flex-direction: row-reverse;
+  row-gap: 0px;
   padding: 0px;
 }
 .buttonHighlight2secondaryInteractions_secondary {

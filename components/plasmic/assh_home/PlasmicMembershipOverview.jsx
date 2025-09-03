@@ -19,8 +19,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
-import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -157,45 +156,11 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__p7LtJ)} />
-          <SectionBreadcrumbs
+          <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
-              sty.sectionBreadcrumbs__jrOGc
+              sty.sectionAdPlaceholder__hgSvT
             )}
-            currentPagePath={(() => {
-              try {
-                return window.location.pathname;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-          />
-
-          <SectionBreadcrumbs
-            className={classNames(
-              "__wab_instance",
-              sty.sectionBreadcrumbs__szz64
-            )}
-            currentPagePath={(() => {
-              try {
-                return $ctx.pagePath;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
           />
 
           <SectionInternalHeroTitleSectionV2
@@ -218,37 +183,39 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               title={"Why Join ASSH?"}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox___46LsI)}>
-              <HtmlContentfulHtmlLoader
+            <div className={classNames(projectcss.all, sty.freeBox__tsLd)}>
+              <div className={classNames(projectcss.all, sty.freeBox___46LsI)}>
+                <HtmlContentfulHtmlLoader
+                  title={"Membership Overview - Why Join ASSH?"}
+                />
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__o1Tm9)}>
+              <ItemSectionTitleDescriptionItem
                 className={classNames(
                   "__wab_instance",
-                  sty.htmlContentfulHtmlLoader__adOak
+                  sty.itemSectionTitleDescriptionItem__v748H
                 )}
-                title={"Membership Overview - Why Join ASSH?"}
+                descriptionSection={
+                  hasVariant(globalVariants, "screen", "largeDesktop")
+                    ? "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
+                    : "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
+                }
+                title={"Who Can Join?"}
               />
-            </div>
-            <ItemSectionTitleDescriptionItem
-              className={classNames(
-                "__wab_instance",
-                sty.itemSectionTitleDescriptionItem__v748H
-              )}
-              descriptionSection={
-                hasVariant(globalVariants, "screen", "largeDesktop")
-                  ? "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
-                  : "No matter where you are in your journey \u2014 training, practice, or beyond \u2014 there\u2019s an ASSH membership designed to elevate your career and connect you to the leaders in hand surgery."
-              }
-              title={"Who Can Join?"}
-            />
 
-            <div className={classNames(projectcss.all, sty.freeBox__hSbr)}>
-              <ButtonPrimary
-                data-plasmic-name={"buttonPrimary"}
-                data-plasmic-override={overrides.buttonPrimary}
-                className={classNames("__wab_instance", sty.buttonPrimary)}
-                quicklinkOption={true}
-                text={"Member Benefits"}
-                url={"https://www.assh.org/membership/member-benefits"}
-              />
+              <div className={classNames(projectcss.all, sty.freeBox__avIv)}>
+                <ButtonPrimary
+                  data-plasmic-name={"buttonPrimary"}
+                  data-plasmic-override={overrides.buttonPrimary}
+                  className={classNames("__wab_instance", sty.buttonPrimary)}
+                  darkNoBgInteractions={[]}
+                  megaMenuLink={[]}
+                  text={"Member Benefits"}
+                  textArrowButton={true}
+                  url={"https://www.assh.org/membership/member-benefits"}
+                />
+              </div>
             </div>
             <BlockArticleCardList
               data-plasmic-name={"blockArticleCardList"}
@@ -309,7 +276,13 @@ function PlasmicMembershipOverview__RenderFunc(props) {
               />
             </div>
           </div>
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__nVOmJ)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder___7XExi
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}

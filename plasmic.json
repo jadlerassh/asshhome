@@ -3425,20 +3425,6 @@
           "path": "/education/surgical-simulation"
         },
         {
-          "id": "kNMksSTb_cmV",
-          "name": "TemplateInternalPageWithAccordion2",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion2.jsx",
-          "importSpec": {
-            "modulePath": "../pages/template-internal-accordion-2.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion2.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/template-internal-accordion-2"
-        },
-        {
           "id": "FJGtSZ00MzaJ",
           "name": "Hfda",
           "type": "managed",
@@ -3487,7 +3473,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicPerspectivesNewsletters.jsx",
           "importSpec": {
-            "modulePath": "../pages/perspectives-newsletters.jsx"
+            "modulePath": "../pages/news-publications/perspectives.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicPerspectivesNewsletters.module.css",
           "scheme": "blackbox",
@@ -3679,7 +3665,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicCouncil.jsx",
           "importSpec": {
-            "modulePath": "../pages/council.jsx"
+            "modulePath": "../pages/about/council.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicCouncil.module.css",
           "scheme": "blackbox",
@@ -3747,7 +3733,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicStaff.jsx",
           "importSpec": {
-            "modulePath": "../pages/staff.jsx"
+            "modulePath": "../pages/about/staff.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicStaff.module.css",
           "scheme": "blackbox",
@@ -3942,6 +3928,33 @@
             "modulePath": "SectionHomeMenuSection.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kNMksSTb_cmV",
+          "name": "TemplateInternalPageWithAccordion",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion.jsx",
+          "importSpec": {
+            "modulePath": "../pages/template-internal-accordion.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicTemplateInternalPageWithAccordion.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/template-internal-accordion"
+        },
+        {
+          "id": "ooKG6GGyjS7N",
+          "name": "CardListPerspectivesWithDescription",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCardListPerspectivesWithDescription.jsx",
+          "importSpec": {
+            "modulePath": "CardListPerspectivesWithDescription.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCardListPerspectivesWithDescription.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }

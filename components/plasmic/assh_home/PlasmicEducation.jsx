@@ -17,8 +17,7 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
-import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import SectionCmeMocSection from "../../SectionCmeMocSection"; // plasmic-import: QQidogip4Svc/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
@@ -117,24 +116,11 @@ function PlasmicEducation__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__iFg4S)} />
-          <SectionBreadcrumbs
-            data-plasmic-name={"sectionBreadcrumbs"}
-            data-plasmic-override={overrides.sectionBreadcrumbs}
-            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
-            currentPagePath={(() => {
-              try {
-                return $ctx.pagePath;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__kv9DJ
+            )}
           />
 
           <SectionInternalHeroTitleSectionV2
@@ -230,7 +216,13 @@ function PlasmicEducation__RenderFunc(props) {
               </div>
             </div>
           </div>
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__gnIa1)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__fp2K3
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -248,7 +240,6 @@ function PlasmicEducation__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "sectionCmeMocSection",
     "sectionMidPageCtaSection",
@@ -262,7 +253,6 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
-  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionCmeMocSection: ["sectionCmeMocSection"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
@@ -308,7 +298,6 @@ export const PlasmicEducation = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

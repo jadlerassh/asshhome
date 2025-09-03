@@ -101,74 +101,80 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
         >
           <div className={classNames(projectcss.all, sty.column__oI4O)}>
             <div
-              data-plasmic-name={"frame3"}
-              data-plasmic-override={overrides.frame3}
-              className={classNames(projectcss.all, sty.frame3)}
+              data-plasmic-name={"freeBox"}
+              data-plasmic-override={overrides.freeBox}
+              className={classNames(projectcss.all, sty.freeBox)}
             >
               <div
-                data-plasmic-name={"frame4"}
-                data-plasmic-override={overrides.frame4}
-                className={classNames(projectcss.all, sty.frame4)}
+                data-plasmic-name={"frame3"}
+                data-plasmic-override={overrides.frame3}
+                className={classNames(projectcss.all, sty.frame3)}
               >
                 <div
-                  data-plasmic-name={"frame5"}
-                  data-plasmic-override={overrides.frame5}
-                  className={classNames(projectcss.all, sty.frame5)}
+                  data-plasmic-name={"frame4"}
+                  data-plasmic-override={overrides.frame4}
+                  className={classNames(projectcss.all, sty.frame4)}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__qn6Qx
-                    )}
+                    data-plasmic-name={"frame5"}
+                    data-plasmic-override={overrides.frame5}
+                    className={classNames(projectcss.all, sty.frame5)}
                   >
-                    {"Join. Connect. Grow:"}
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qn6Qx
+                      )}
+                    >
+                      {"Join. Connect. Grow:"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__tft5J
+                      )}
+                    >
+                      {"The ASSH Advantage"}
+                    </div>
                   </div>
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__tft5J
+                      sty.text___1YPEw
                     )}
                   >
-                    {"The ASSH Advantage"}
+                    {
+                      "Discover how the ASSH helps you grow clinically, professionally, and personally."
+                    }
                   </div>
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text___1YPEw
-                  )}
-                >
-                  {
-                    "Discover how the ASSH helps you grow clinically, professionally, and personally."
-                  }
-                </div>
-                <div
-                  data-plasmic-name={"frame6"}
-                  data-plasmic-override={overrides.frame6}
-                  className={classNames(projectcss.all, sty.frame6)}
-                >
-                  <ButtonPrimary
-                    className={classNames(
-                      "__wab_instance",
-                      sty.buttonPrimary___8T3UC
-                    )}
-                    darkInteractions={"dark"}
-                    text={"Find a Surgeon"}
-                    url={"https://www.handcare.org/fahs"}
-                  />
+                  <div
+                    data-plasmic-name={"frame6"}
+                    data-plasmic-override={overrides.frame6}
+                    className={classNames(projectcss.all, sty.frame6)}
+                  >
+                    <ButtonPrimary
+                      className={classNames(
+                        "__wab_instance",
+                        sty.buttonPrimary___8T3UC
+                      )}
+                      darkInteractions={"dark"}
+                      text={"Find a Surgeon"}
+                      url={"https://www.handcare.org/fahs"}
+                    />
 
-                  <ButtonPrimary
-                    className={classNames(
-                      "__wab_instance",
-                      sty.buttonPrimary___0Qdhs
-                    )}
-                    darkInteractions={"dark"}
-                    text={"Join ASSH"}
-                    url={"https://www.assh.org/membership/join-assh"}
-                  />
+                    <ButtonPrimary
+                      className={classNames(
+                        "__wab_instance",
+                        sty.buttonPrimary___0Qdhs
+                      )}
+                      darkInteractions={"dark"}
+                      text={"Join ASSH"}
+                      url={"https://www.assh.org/membership/join-assh"}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -555,6 +561,7 @@ const PlasmicDescendants = {
     "root",
     "frame2",
     "row",
+    "freeBox",
     "frame3",
     "frame4",
     "frame5",
@@ -590,6 +597,7 @@ const PlasmicDescendants = {
   frame2: [
     "frame2",
     "row",
+    "freeBox",
     "frame3",
     "frame4",
     "frame5",
@@ -599,7 +607,8 @@ const PlasmicDescendants = {
     "row2"
   ],
 
-  row: ["row", "frame3", "frame4", "frame5", "frame6", "column"],
+  row: ["row", "freeBox", "frame3", "frame4", "frame5", "frame6", "column"],
+  freeBox: ["freeBox", "frame3", "frame4", "frame5", "frame6"],
   frame3: ["frame3", "frame4", "frame5", "frame6"],
   frame4: ["frame4", "frame5", "frame6"],
   frame5: ["frame5"],
@@ -742,6 +751,7 @@ export const PlasmicSectionHomeHeroBannerWithLinkItems = Object.assign(
     // Helper components rendering sub-elements
     frame2: makeNodeComponent("frame2"),
     row: makeNodeComponent("row"),
+    freeBox: makeNodeComponent("freeBox"),
     frame3: makeNodeComponent("frame3"),
     frame4: makeNodeComponent("frame4"),
     frame5: makeNodeComponent("frame5"),

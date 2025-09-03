@@ -348,7 +348,11 @@ function PlasmicItemMegaMenuDropdown__RenderFunc(props) {
         </div>
         {(() => {
           try {
-            return $state.menuLinks.some(link => link.column === 3);
+            return (
+              $state.menuLinks.some(link => link.column === 3) ||
+              $queries.getMenu.data.response.items[0].fields.featuredContent
+                .length > 0
+            );
           } catch (e) {
             if (
               e instanceof TypeError ||

@@ -75,7 +75,7 @@ export const PlasmicSectionHomeMenuSection__ArgProps = new Array(
   "activeVariant",
   "onActiveVariantChange",
   "activeMobileVariant",
-  "onActiveMobileVariantChange2"
+  "onActiveMobileVariantChange"
 );
 
 const $$ = {};
@@ -369,7 +369,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
         type: "writable",
         variableType: "text",
         valueProp: "activeMobileVariant",
-        onChangeProp: "onActiveMobileVariantChange2"
+        onChangeProp: "onActiveMobileVariantChange"
       },
       {
         path: "itemMegaMenuDropdown2[].openMenu",

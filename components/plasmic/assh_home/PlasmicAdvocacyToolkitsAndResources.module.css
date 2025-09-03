@@ -46,7 +46,13 @@
     grid-column: 4;
   }
 }
-.itemAd__bKjo9:global(.__wab_instance) {
+.sectionAdPlaceholder__wzWvg:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+}
+.sectionBreadcrumbs:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;
@@ -93,7 +99,7 @@
   min-width: 0;
   margin: 0px;
 }
-.itemAd__taqVr:global(.__wab_instance) {
+.sectionAdPlaceholder__fXliF:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;

@@ -162,7 +162,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
           hasVariant(globalVariants, "screen", "largeDesktop")
             ? (() => {
                 try {
-                  return $props.imageId === undefined;
+                  return $props.imageId === undefined || $props.imageId === "";
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -175,7 +175,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
               })()
             : (() => {
                 try {
-                  return $props.imageId === undefined;
+                  return $props.imageId === undefined || $props.imageId === "";
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -237,19 +237,38 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 </div>
               </div>
             ) : null}
-            {(() => {
-              try {
-                return $props.articleTitle !== undefined;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
-                }
-                throw e;
-              }
-            })() ? (
+            {(
+              hasVariant(globalVariants, "screen", "largeDesktop")
+                ? (() => {
+                    try {
+                      return (
+                        $props.articleTitle !== undefined &&
+                        $props.articleTitle !== ""
+                      );
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })()
+                : (() => {
+                    try {
+                      return $props.articleTitle !== undefined;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })()
+            ) ? (
               <div
                 data-plasmic-name={"content2"}
                 data-plasmic-override={overrides.content2}
@@ -280,19 +299,38 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 </div>
               </div>
             ) : null}
-            {(() => {
-              try {
-                return $props.description !== undefined;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return true;
-                }
-                throw e;
-              }
-            })() ? (
+            {(
+              hasVariant(globalVariants, "screen", "largeDesktop")
+                ? (() => {
+                    try {
+                      return (
+                        $props.description !== undefined &&
+                        $props.description !== ""
+                      );
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })()
+                : (() => {
+                    try {
+                      return $props.description !== undefined;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return true;
+                      }
+                      throw e;
+                    }
+                  })()
+            ) ? (
               <div
                 data-plasmic-name={"content3"}
                 data-plasmic-override={overrides.content3}
@@ -325,19 +363,35 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
             ) : null}
           </div>
         ) : null}
-        {(() => {
-          try {
-            return $props.imageId !== undefined;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return true;
-            }
-            throw e;
-          }
-        })() ? (
+        {(
+          hasVariant(globalVariants, "screen", "largeDesktop")
+            ? (() => {
+                try {
+                  return $props.imageId !== undefined && $props.imageId !== "";
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
+            : (() => {
+                try {
+                  return $props.imageId !== undefined && $props.imageId !== "";
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })()
+        ) ? (
           <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}

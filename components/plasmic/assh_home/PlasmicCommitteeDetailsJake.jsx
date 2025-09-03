@@ -20,14 +20,14 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ComponentVerticalPageList from "../../ComponentVerticalPageList"; // plasmic-import: _YaPVT-9kvvZ/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ComponentTabSet from "../../ComponentTabSet"; // plasmic-import: jXQ3iNzBSIE_/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import SectionFooterSection from "../../SectionFooterSection"; // plasmic-import: l_IC-pMZ1T4O/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -217,10 +217,30 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd
-            data-plasmic-name={"itemAd"}
-            data-plasmic-override={overrides.itemAd}
-            className={classNames("__wab_instance", sty.itemAd)}
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__ox8Md
+            )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
           />
 
           <SectionInternalHeroTitleSectionV2
@@ -464,6 +484,13 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
               </div>
             ) : null}
           </div>
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__q3Jk1
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -471,12 +498,6 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
               "__wab_instance",
               sty.blockAsshMissionBlueBlock
             )}
-          />
-
-          <SectionFooterSection
-            data-plasmic-name={"sectionFooterSection"}
-            data-plasmic-override={overrides.sectionFooterSection}
-            className={classNames("__wab_instance", sty.sectionFooterSection)}
           />
         </div>
       </div>
@@ -487,7 +508,7 @@ function PlasmicCommitteeDetailsJake__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
-    "itemAd",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "columns",
     "componentVerticalPageList",
@@ -496,11 +517,10 @@ const PlasmicDescendants = {
     "buttonPrimary",
     "componentTabSet",
     "text",
-    "blockAsshMissionBlueBlock",
-    "sectionFooterSection"
+    "blockAsshMissionBlueBlock"
   ],
 
-  itemAd: ["itemAd"],
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   columns: [
     "columns",
@@ -518,8 +538,7 @@ const PlasmicDescendants = {
   buttonPrimary: ["buttonPrimary"],
   componentTabSet: ["componentTabSet"],
   text: ["text"],
-  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"],
-  sectionFooterSection: ["sectionFooterSection"]
+  blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -554,7 +573,7 @@ export const PlasmicCommitteeDetailsJake = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    itemAd: makeNodeComponent("itemAd"),
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
@@ -566,7 +585,6 @@ export const PlasmicCommitteeDetailsJake = Object.assign(
     componentTabSet: makeNodeComponent("componentTabSet"),
     text: makeNodeComponent("text"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
-    sectionFooterSection: makeNodeComponent("sectionFooterSection"),
     // Metadata about props expected for PlasmicCommitteeDetailsJake
     internalVariantProps: PlasmicCommitteeDetailsJake__VariantProps,
     internalArgProps: PlasmicCommitteeDetailsJake__ArgProps,

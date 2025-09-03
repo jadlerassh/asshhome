@@ -25,7 +25,7 @@
   position: relative;
   flex-shrink: 1;
   max-width: 100%;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   column-gap: 20px;
   min-width: 0;
   --plsmc-rc-col-gap: 20px;
@@ -33,10 +33,10 @@
   padding: 15px;
 }
 .frame6 > :nth-child(2n + 1) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 8 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 7 / 12);
 }
 .frame6 > :nth-child(2n + 2) {
-  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
+  width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 5 / 12);
 }
 @media (max-width: 1535px) {
   .frame6 {
@@ -113,10 +113,14 @@
   font-size: 18px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  letter-spacing: 0em;
   color: rgba(49, 51, 55, 1);
   position: relative;
   width: 100%;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  text-align: left;
+  height: auto;
+  padding-top: 0px;
   min-width: 0;
 }
 @media (max-width: 1535px) {

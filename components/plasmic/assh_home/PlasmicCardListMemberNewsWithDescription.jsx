@@ -164,19 +164,7 @@ function PlasmicCardListMemberNewsWithDescription__RenderFunc(props) {
                   "__wab_instance",
                   sty.itemArticleCardItemWithDescription
                 )}
-                description={(() => {
-                  try {
-                    return currentItem.fields.description;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
-                  }
-                })()}
+                description={``}
                 heading={(() => {
                   try {
                     return currentItem.fields.source;

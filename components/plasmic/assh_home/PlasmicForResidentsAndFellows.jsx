@@ -17,13 +17,13 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageBannerWithQuicklinks from "../../SectionMidPageBannerWithQuicklinks"; // plasmic-import: hQw6wQfUz2Ua/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
-import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -115,6 +115,13 @@ function PlasmicForResidentsAndFellows__RenderFunc(props) {
             sty.root
           )}
         >
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__hYiQ
+            )}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -176,9 +183,10 @@ function PlasmicForResidentsAndFellows__RenderFunc(props) {
             />
           </div>
           <SectionAdPlaceholder
-            data-plasmic-name={"sectionAdPlaceholder"}
-            data-plasmic-override={overrides.sectionAdPlaceholder}
-            className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__gLss9
+            )}
           />
 
           <BlockAsshMissionBlueBlock
@@ -204,7 +212,6 @@ const PlasmicDescendants = {
     "blockArticleCardList",
     "sectionMidPageBannerWithQuicklinks",
     "sectionQuicklinksTable",
-    "sectionAdPlaceholder",
     "blockAsshMissionBlueBlock"
   ],
 
@@ -214,7 +221,6 @@ const PlasmicDescendants = {
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageBannerWithQuicklinks: ["sectionMidPageBannerWithQuicklinks"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
-  sectionAdPlaceholder: ["sectionAdPlaceholder"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -262,7 +268,6 @@ export const PlasmicForResidentsAndFellows = Object.assign(
       "sectionMidPageBannerWithQuicklinks"
     ),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
-    sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicForResidentsAndFellows
     internalVariantProps: PlasmicForResidentsAndFellows__VariantProps,

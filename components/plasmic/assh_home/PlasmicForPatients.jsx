@@ -117,7 +117,7 @@ function PlasmicForPatients__RenderFunc(props) {
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
-              sty.sectionAdPlaceholder__dGpGy
+              sty.sectionAdPlaceholder__eeB7D
             )}
           />
 

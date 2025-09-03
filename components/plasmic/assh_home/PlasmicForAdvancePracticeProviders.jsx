@@ -17,12 +17,13 @@ import {
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -114,6 +115,32 @@ function PlasmicForAdvancePracticeProviders__RenderFunc(props) {
             sty.root
           )}
         >
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__psDyA
+            )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -179,9 +206,10 @@ function PlasmicForAdvancePracticeProviders__RenderFunc(props) {
           />
 
           <SectionAdPlaceholder
-            data-plasmic-name={"sectionAdPlaceholder"}
-            data-plasmic-override={overrides.sectionAdPlaceholder}
-            className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder___1Fq86
+            )}
           />
 
           <BlockAsshMissionBlueBlock
@@ -201,6 +229,7 @@ function PlasmicForAdvancePracticeProviders__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "itemSectionTitleDescriptionItem",
@@ -209,10 +238,10 @@ const PlasmicDescendants = {
     "htmlContentfulHtmlLoader",
     "blockArticleCardList",
     "sectionMidPageCtaSection",
-    "sectionAdPlaceholder",
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   freeBox: [
     "freeBox",
@@ -229,7 +258,6 @@ const PlasmicDescendants = {
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  sectionAdPlaceholder: ["sectionAdPlaceholder"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -266,6 +294,7 @@ export const PlasmicForAdvancePracticeProviders = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
@@ -278,7 +307,6 @@ export const PlasmicForAdvancePracticeProviders = Object.assign(
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicForAdvancePracticeProviders
     internalVariantProps: PlasmicForAdvancePracticeProviders__VariantProps,

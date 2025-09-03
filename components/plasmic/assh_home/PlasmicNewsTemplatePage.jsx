@@ -18,7 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import ItemNewsArticle from "../../ItemNewsArticle"; // plasmic-import: oYnNfUl2bMfC/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -127,7 +127,13 @@ function PlasmicNewsTemplatePage__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__n2ZGs)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__wac
+            )}
+          />
+
           <SectionBreadcrumbs
             data-plasmic-name={"sectionBreadcrumbs"}
             data-plasmic-override={overrides.sectionBreadcrumbs}
@@ -158,7 +164,13 @@ function PlasmicNewsTemplatePage__RenderFunc(props) {
               className={classNames("__wab_instance", sty.itemNewsArticle)}
             />
           </div>
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__fiKKk)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__sDR
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}

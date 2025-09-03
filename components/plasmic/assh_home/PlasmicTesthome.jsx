@@ -189,7 +189,7 @@ function PlasmicTesthome__RenderFunc(props) {
               "__wab_instance",
               sty.sectionHomeMenuSectionJaRedo
             )}
-            onActiveMobileVariantChange2={async (...eventArgs) => {
+            onActiveMobileVariantChange={async (...eventArgs) => {
               generateStateOnChangeProp($state, [
                 "sectionHomeMenuSectionJaRedo",
                 "activeMobileVariant"

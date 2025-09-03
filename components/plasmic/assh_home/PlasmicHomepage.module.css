@@ -19,6 +19,11 @@
 .asshHome > * {
   grid-column: 4;
 }
+@media (max-width: 1535px) {
+  .asshHome > * {
+    grid-column: 4;
+  }
+}
 @media (max-width: 1279px) {
   .asshHome > * {
     grid-column: 4;

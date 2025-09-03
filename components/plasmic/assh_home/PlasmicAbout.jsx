@@ -14,11 +14,10 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  hasVariant
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -27,7 +26,6 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
-import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -70,7 +68,6 @@ function PlasmicAbout__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -117,7 +114,13 @@ function PlasmicAbout__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__dB6Xg)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder___6Lpp8
+            )}
+          />
+
           <SectionBreadcrumbs
             data-plasmic-name={"sectionBreadcrumbs"}
             data-plasmic-override={overrides.sectionBreadcrumbs}
@@ -207,16 +210,18 @@ function PlasmicAbout__RenderFunc(props) {
                   data-plasmic-override={overrides.blockQuoteBlock}
                   className={classNames("__wab_instance", sty.blockQuoteBlock)}
                   name={"ASSH About Quote"}
-                  quote={
-                    hasVariant(globalVariants, "screen", "largeDesktop")
-                      ? "singleLine"
-                      : "singleLine"
-                  }
+                  quote={"singleLine"}
                 />
               </div>
             </div>
           </div>
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__jYxje)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__xBmhG
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}

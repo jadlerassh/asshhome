@@ -19,6 +19,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockListPersonWithImages from "../../BlockListPersonWithImages"; // plasmic-import: ELOUh3SPRHxF/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -116,8 +117,27 @@ function PlasmicStaff__RenderFunc(props) {
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
-              sty.sectionAdPlaceholder__qngxt
+              sty.sectionAdPlaceholder___8IkZm
             )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
           />
 
           <div
@@ -169,12 +189,14 @@ function PlasmicStaff__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "freeBox",
     "htmlContentfulHtmlLoader",
     "blockListPersonWithImages",
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   freeBox: ["freeBox", "htmlContentfulHtmlLoader", "blockListPersonWithImages"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockListPersonWithImages: ["blockListPersonWithImages"],
@@ -213,6 +235,7 @@ export const PlasmicStaff = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     freeBox: makeNodeComponent("freeBox"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockListPersonWithImages: makeNodeComponent("blockListPersonWithImages"),

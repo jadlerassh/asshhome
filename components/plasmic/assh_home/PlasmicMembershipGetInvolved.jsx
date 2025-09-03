@@ -15,23 +15,21 @@ import {
   PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts,
-  generateStateOnChangeProp,
-  generateStateValueProp,
-  useDollarState
+  deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
+import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import ComponentFutureEventList from "../../ComponentFutureEventList"; // plasmic-import: buA5LBYO5-1M/component
-import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
+import CardListPerspectivesWithDescription from "../../CardListPerspectivesWithDescription"; // plasmic-import: ooKG6GGyjS7N/component
 import CardListMemberNewsWithDescription from "../../CardListMemberNewsWithDescription"; // plasmic-import: mj20sYUsPblw/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
@@ -78,36 +76,6 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
-  const stateSpecs = React.useMemo(
-    () => [
-      {
-        path: "componentFutureEventList.limit",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "3"
-      },
-      {
-        path: "componentFutureEventList.type",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "Webinar,CME Activity"
-      },
-      {
-        path: "componentFutureEventList.eventIdNe",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "a0fPb00000QhbQMIAZ"
-      }
-    ],
-
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: $queries,
-    $refs
-  });
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
       return {
@@ -173,7 +141,13 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__wiGyW)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__tzbtM
+            )}
+          />
+
           <SectionBreadcrumbs
             data-plasmic-name={"sectionBreadcrumbs"}
             data-plasmic-override={overrides.sectionBreadcrumbs}
@@ -213,80 +187,15 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
               name={"Membership Get Involved Quicklinks"}
             />
 
-            <ItemSectionTitleDescriptionItem
+            <SectionUpcomingCouresEventsSection
+              data-plasmic-name={"sectionUpcomingCouresEventsSection"}
+              data-plasmic-override={
+                overrides.sectionUpcomingCouresEventsSection
+              }
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem__ief9J
+                sty.sectionUpcomingCouresEventsSection
               )}
-              descriptionSection={``}
-              title={"Upcoming Events"}
-            />
-
-            <ComponentFutureEventList
-              data-plasmic-name={"componentFutureEventList"}
-              data-plasmic-override={overrides.componentFutureEventList}
-              className={classNames(
-                "__wab_instance",
-                sty.componentFutureEventList
-              )}
-              eventIdNe={generateStateValueProp($state, [
-                "componentFutureEventList",
-                "eventIdNe"
-              ])}
-              limit={generateStateValueProp($state, [
-                "componentFutureEventList",
-                "limit"
-              ])}
-              onEventIdNeChange={async (...eventArgs) => {
-                generateStateOnChangeProp($state, [
-                  "componentFutureEventList",
-                  "eventIdNe"
-                ]).apply(null, eventArgs);
-                if (
-                  eventArgs.length > 1 &&
-                  eventArgs[1] &&
-                  eventArgs[1]._plasmic_state_init_
-                ) {
-                  return;
-                }
-              }}
-              onLimitChange2={async (...eventArgs) => {
-                generateStateOnChangeProp($state, [
-                  "componentFutureEventList",
-                  "limit"
-                ]).apply(null, eventArgs);
-                if (
-                  eventArgs.length > 1 &&
-                  eventArgs[1] &&
-                  eventArgs[1]._plasmic_state_init_
-                ) {
-                  return;
-                }
-              }}
-              onTypeChange={async (...eventArgs) => {
-                generateStateOnChangeProp($state, [
-                  "componentFutureEventList",
-                  "type"
-                ]).apply(null, eventArgs);
-                if (
-                  eventArgs.length > 1 &&
-                  eventArgs[1] &&
-                  eventArgs[1]._plasmic_state_init_
-                ) {
-                  return;
-                }
-              }}
-              type={generateStateValueProp($state, [
-                "componentFutureEventList",
-                "type"
-              ])}
-            />
-
-            <ButtonPrimary
-              className={classNames("__wab_instance", sty.buttonPrimary__dprIc)}
-              text={"View more events"}
-              textArrowButton={true}
-              url={"/s/education/courses-events"}
             />
 
             <ItemSectionTitleDescriptionItem
@@ -352,8 +261,10 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
             <div className={classNames(projectcss.all, sty.columns__vuRf)}>
               <div className={classNames(projectcss.all, sty.column___3VHpU)}>
                 <PlasmicImg__
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
                   alt={"Three hand surgeons with a happy patient"}
-                  className={classNames(sty.img__uFwdT)}
+                  className={classNames(sty.img)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -371,9 +282,11 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
               </div>
               <div className={classNames(projectcss.all, sty.column__gJmNu)}>
                 <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
                   className={classNames(
                     "__wab_instance",
-                    sty.htmlContentfulHtmlLoader__vhb3M
+                    sty.htmlContentfulHtmlLoader
                   )}
                   title={"Get Involved - Volunteer Touching Hands"}
                 />
@@ -413,6 +326,8 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
 
             <ButtonPrimary
               className={classNames("__wab_instance", sty.buttonPrimary__hXraB)}
+              darkNoBgInteractions={[]}
+              megaMenuLink={[]}
               text={"Learn More"}
               textArrowButton={true}
               url={"/s/grants-awards"}
@@ -427,7 +342,7 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__pqtWp
                   )}
                   description={
-                    "Search for funding opportunities for your innovative research, view external grant opportunities, and learn about available developmental programs."
+                    "Search for research funding opportunities, view grants, and learn about developmental programs."
                   }
                   heading={"Research Pillar"}
                   linkUrl={"https://www.assh.org/afsh/s/research"}
@@ -454,7 +369,7 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__lr4Dj
                   )}
                   description={
-                    "Find information on scholarships, fellowship programs, and grants for additional educational pursuits."
+                    "Find details on scholarships, fellowship programs, and other grants."
                   }
                   heading={"Education Pillar"}
                   linkUrl={"https://www.assh.org/afsh/s/education"}
@@ -486,57 +401,17 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__ijx3Z)}>
-            <div className={classNames(projectcss.all, sty.freeBox__ezBaZ)}>
-              <ItemSectionTitleDescriptionItem
-                className={classNames(
-                  "__wab_instance",
-                  sty.itemSectionTitleDescriptionItem__mfiDb
-                )}
-                descriptionSection={``}
-                title={"ASSH Perspectives Newsletters"}
-              />
+            <CardListPerspectivesWithDescription
+              data-plasmic-name={"cardListPerspectivesWithDescription"}
+              data-plasmic-override={
+                overrides.cardListPerspectivesWithDescription
+              }
+              className={classNames(
+                "__wab_instance",
+                sty.cardListPerspectivesWithDescription
+              )}
+            />
 
-              <div className={classNames(projectcss.all, sty.columns__rx8F2)}>
-                <div className={classNames(projectcss.all, sty.column__zGvnl)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__b248)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"auto"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/assh_home/images/perspectivesPng.png",
-                      fullWidth: 749,
-                      fullHeight: 147,
-                      aspectRatio: undefined
-                    }}
-                  />
-                </div>
-                <div className={classNames(projectcss.all, sty.column__kHdAk)}>
-                  <HtmlContentfulHtmlLoader
-                    className={classNames(
-                      "__wab_instance",
-                      sty.htmlContentfulHtmlLoader__gQ9Ia
-                    )}
-                    title={"Get Involved with ASSH Perspectives"}
-                  />
-
-                  <ButtonPrimary
-                    className={classNames(
-                      "__wab_instance",
-                      sty.buttonPrimary___3Xr8
-                    )}
-                    secondaryInteractions={"secondary"}
-                    text={"View Perspectives"}
-                    url={"/s/news-publications/perspectives"}
-                  />
-                </div>
-              </div>
-            </div>
             <CardListMemberNewsWithDescription
               data-plasmic-name={"cardListMemberNewsWithDescription"}
               data-plasmic-override={
@@ -548,7 +423,13 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
               )}
             />
           </div>
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__oyBzO)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__qh6Xw
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}
@@ -568,16 +449,22 @@ const PlasmicDescendants = {
     "root",
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
-    "componentFutureEventList",
+    "sectionUpcomingCouresEventsSection",
+    "img",
+    "htmlContentfulHtmlLoader",
     "sectionMidPageCtaSection",
+    "cardListPerspectivesWithDescription",
     "cardListMemberNewsWithDescription",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  componentFutureEventList: ["componentFutureEventList"],
+  sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
+  img: ["img"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
+  cardListPerspectivesWithDescription: ["cardListPerspectivesWithDescription"],
   cardListMemberNewsWithDescription: ["cardListMemberNewsWithDescription"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -618,8 +505,15 @@ export const PlasmicMembershipGetInvolved = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    componentFutureEventList: makeNodeComponent("componentFutureEventList"),
+    sectionUpcomingCouresEventsSection: makeNodeComponent(
+      "sectionUpcomingCouresEventsSection"
+    ),
+    img: makeNodeComponent("img"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
+    cardListPerspectivesWithDescription: makeNodeComponent(
+      "cardListPerspectivesWithDescription"
+    ),
     cardListMemberNewsWithDescription: makeNodeComponent(
       "cardListMemberNewsWithDescription"
     ),

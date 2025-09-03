@@ -19,7 +19,7 @@
   min-width: 0;
 }
 .calloutBox {
-  width: 303px;
+  width: 100%;
   height: 123px;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@
   transition-timing-function: ease-in-out;
   box-shadow: 0px 0px 10px 0px #00000066;
   row-gap: 10px;
+  min-width: 0;
   flex-shrink: 0;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
@@ -74,9 +75,10 @@
   top: auto;
   right: 0;
   bottom: -2px;
-  width: auto;
+  width: 100%;
   height: 30px;
   row-gap: 30px;
+  min-width: 0;
   flex-shrink: 0;
   padding: 0px;
 }
@@ -174,6 +176,8 @@
   line-height: 24px;
   color: rgba(49, 51, 55, 1);
   position: relative;
+  height: 100%;
+  min-height: 0;
 }
 .section {
   display: grid;

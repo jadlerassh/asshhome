@@ -19,6 +19,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionNewsListItems from "../../SectionNewsListItems"; // plasmic-import: 5-ayHp8nG4OH/component
@@ -133,6 +134,25 @@ function PlasmicMemberNews__RenderFunc(props) {
             className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
           />
 
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -236,12 +256,14 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionAdPlaceholder",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "htmlContentfulHtmlLoader",
     "sectionNewsListItems"
   ],
 
   sectionAdPlaceholder: ["sectionAdPlaceholder"],
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   sectionNewsListItems: ["sectionNewsListItems"]
@@ -280,6 +302,7 @@ export const PlasmicMemberNews = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

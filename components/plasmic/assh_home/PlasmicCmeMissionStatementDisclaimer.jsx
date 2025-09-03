@@ -18,7 +18,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -130,8 +130,11 @@ function PlasmicCmeMissionStatementDisclaimer__RenderFunc(props) {
             sty.root
           )}
         >
-          <ItemAd
-            className={classNames("__wab_instance", sty.itemAd___6Ch2I)}
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder___0Mn8
+            )}
           />
 
           <SectionBreadcrumbs
@@ -178,7 +181,13 @@ function PlasmicCmeMissionStatementDisclaimer__RenderFunc(props) {
               title={"CME Mission Statement and Disclaimer"}
             />
           </div>
-          <ItemAd className={classNames("__wab_instance", sty.itemAd__sqUv)} />
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__nlmM
+            )}
+          />
+
           <BlockAsshMissionBlueBlock
             data-plasmic-name={"blockAsshMissionBlueBlock"}
             data-plasmic-override={overrides.blockAsshMissionBlueBlock}

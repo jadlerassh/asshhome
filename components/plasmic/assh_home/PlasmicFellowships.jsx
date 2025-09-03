@@ -12,21 +12,23 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
-import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
-import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -116,6 +118,32 @@ function PlasmicFellowships__RenderFunc(props) {
             sty.root
           )}
         >
+          <SectionAdPlaceholder
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__y8IBo
+            )}
+          />
+
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+            currentPagePath={(() => {
+              try {
+                return "/s" + $ctx.pagePath;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -127,11 +155,7 @@ function PlasmicFellowships__RenderFunc(props) {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__cfEmx)}>
-            <div
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              className={classNames(projectcss.all, sty.columns)}
-            >
+            <div className={classNames(projectcss.all, sty.columns__gGwdw)}>
               <div className={classNames(projectcss.all, sty.column__fTKI)}>
                 <ItemArticleCardItemWithDescription
                   articleTitle={"Fellowship Applications"}
@@ -187,36 +211,62 @@ function PlasmicFellowships__RenderFunc(props) {
               </div>
             </div>
             <ItemSectionTitleDescriptionItem
-              data-plasmic-name={"itemSectionTitleDescriptionItem"}
-              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
               className={classNames(
                 "__wab_instance",
-                sty.itemSectionTitleDescriptionItem
+                sty.itemSectionTitleDescriptionItem__uAkIj
               )}
               descriptionSection={``}
               title={"Fellowship Resources"}
             />
 
             <HtmlContentfulHtmlLoader
-              data-plasmic-name={"htmlContentfulHtmlLoader"}
-              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
               className={classNames(
                 "__wab_instance",
-                sty.htmlContentfulHtmlLoader
+                sty.htmlContentfulHtmlLoader__fuIr7
               )}
               title={"ASSH Resources for Fellowships"}
             />
 
-            <SectionMidPageLeftRightSection
-              data-plasmic-name={"sectionMidPageLeftRightSection"}
-              data-plasmic-override={overrides.sectionMidPageLeftRightSection}
-              className={classNames(
-                "__wab_instance",
-                sty.sectionMidPageLeftRightSection
-              )}
-              title={"Fellowship - Fellowship home - Mid-page Left"}
-            />
+            <div className={classNames(projectcss.all, sty.columns__fZuA3)}>
+              <div className={classNames(projectcss.all, sty.column__nP3T3)}>
+                <PlasmicImg__
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
+                  alt={""}
+                  className={classNames(sty.img)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  height={``}
+                  loading={"lazy"}
+                  src={
+                    "https://images.ctfassets.net/k626j787po4v/2fJH1b0vQnBCrgKBrgSQSL/0f5ddf195d1f700268a683eeb2e95432/Fellowships-midpage-CTA.png"
+                  }
+                  width={"635"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__b08S)}>
+                <HtmlContentfulHtmlLoader
+                  className={classNames(
+                    "__wab_instance",
+                    sty.htmlContentfulHtmlLoader__bUgu2
+                  )}
+                  title={"Fellowships - Fellowship home"}
+                />
 
+                <ButtonPrimary
+                  data-plasmic-name={"buttonPrimary"}
+                  data-plasmic-override={overrides.buttonPrimary}
+                  className={classNames("__wab_instance", sty.buttonPrimary)}
+                  secondaryInteractions={"secondary"}
+                  text={"Access the Fellowship System"}
+                  url={"https://www.assh.org/applications/s/fellowshiphome"}
+                />
+              </div>
+            </div>
             <BlockTanCtaBlock
               data-plasmic-name={"blockTanCtaBlock"}
               data-plasmic-override={overrides.blockTanCtaBlock}
@@ -225,6 +275,15 @@ function PlasmicFellowships__RenderFunc(props) {
               linkUrl={``}
               text2={``}
               title={"Tan CTA Block - Candidate Membership"}
+            />
+
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem__fYkrs
+              )}
+              descriptionSection={``}
+              title={"HFDA Resources for Fellows"}
             />
 
             <BlockArticleCardList
@@ -256,9 +315,10 @@ function PlasmicFellowships__RenderFunc(props) {
             />
           </div>
           <SectionAdPlaceholder
-            data-plasmic-name={"sectionAdPlaceholder"}
-            data-plasmic-override={overrides.sectionAdPlaceholder}
-            className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionAdPlaceholder__rhAlN
+            )}
           />
 
           <BlockAsshMissionBlueBlock
@@ -278,29 +338,25 @@ function PlasmicFellowships__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
-    "columns",
-    "itemSectionTitleDescriptionItem",
-    "htmlContentfulHtmlLoader",
-    "sectionMidPageLeftRightSection",
+    "img",
+    "buttonPrimary",
     "blockTanCtaBlock",
     "blockArticleCardList",
     "sectionMidPageCtaSection",
     "sectionQuicklinksTable",
-    "sectionAdPlaceholder",
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  columns: ["columns"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
-  sectionMidPageLeftRightSection: ["sectionMidPageLeftRightSection"],
+  img: ["img"],
+  buttonPrimary: ["buttonPrimary"],
   blockTanCtaBlock: ["blockTanCtaBlock"],
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
-  sectionAdPlaceholder: ["sectionAdPlaceholder"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -336,22 +392,16 @@ export const PlasmicFellowships = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    columns: makeNodeComponent("columns"),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
-    sectionMidPageLeftRightSection: makeNodeComponent(
-      "sectionMidPageLeftRightSection"
-    ),
+    img: makeNodeComponent("img"),
+    buttonPrimary: makeNodeComponent("buttonPrimary"),
     blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
-    sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicFellowships
     internalVariantProps: PlasmicFellowships__VariantProps,

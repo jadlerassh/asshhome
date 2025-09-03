@@ -200,6 +200,7 @@
   justify-content: flex-start;
   align-items: center;
   min-width: 0;
+  border-bottom: 1px solid var(--token-C5aY7m0H85JJ);
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .freeBoxcolumns__3Column__v0LlIe7MI {
