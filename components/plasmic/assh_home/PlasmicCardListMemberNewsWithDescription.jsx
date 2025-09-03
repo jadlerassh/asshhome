@@ -213,8 +213,8 @@ function PlasmicCardListMemberNewsWithDescription__RenderFunc(props) {
         data-plasmic-name={"buttonPrimary"}
         data-plasmic-override={overrides.buttonPrimary}
         className={classNames("__wab_instance", sty.buttonPrimary)}
+        quicklinkOption={true}
         text={"All Member News"}
-        textArrowButton={true}
         url={"/membership/news"}
       />
     </div>

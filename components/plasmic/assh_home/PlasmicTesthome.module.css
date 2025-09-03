@@ -39,7 +39,7 @@
     grid-column: 4;
   }
 }
-.sectionHomeMenuSection:global(.__wab_instance) {
+.sectionHomeMenuSectionJaRedo:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
   grid-column-start: 1 !important;

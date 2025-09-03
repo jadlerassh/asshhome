@@ -346,170 +346,198 @@ function PlasmicItemMegaMenuDropdown__RenderFunc(props) {
             </div>
           </div>
         </div>
-        <div
-          data-plasmic-name={"rightColumn2"}
-          data-plasmic-override={overrides.rightColumn2}
-          className={classNames(projectcss.all, sty.rightColumn2)}
-        >
-          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-            (() => {
-              try {
-                return $state.menuLinks.filter(
-                  link => link.type === "Logo Link" && link.column === 3
-                );
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return [];
-                }
-                throw e;
-              }
-            })()
-          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-            const currentItem = __plasmic_item_0;
-            const currentIndex = __plasmic_idx_0;
-            return (
-              <div
-                className={classNames(projectcss.all, sty.freeBox__l7En9)}
-                key={currentIndex}
-              >
-                <ItemExternalLinkCardItemWithLogo
-                  data-plasmic-name={"itemExternalLinkCardItemWithLogo"}
-                  data-plasmic-override={
-                    overrides.itemExternalLinkCardItemWithLogo
+        {(() => {
+          try {
+            return $state.menuLinks.some(link => link.column === 3);
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return true;
+            }
+            throw e;
+          }
+        })() ? (
+          <div
+            data-plasmic-name={"rightColumn2"}
+            data-plasmic-override={overrides.rightColumn2}
+            className={classNames(projectcss.all, sty.rightColumn2)}
+          >
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $state.menuLinks.filter(
+                    link => link.type === "Logo Link" && link.column === 3
+                  );
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
                   }
-                  articleSubtitle={(() => {
-                    try {
-                      return undefined;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })()}
-                  articleTitle={(() => {
-                    try {
-                      return currentItem.label;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })()}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemExternalLinkCardItemWithLogo
-                  )}
-                  iconImageId={(() => {
-                    try {
-                      return currentItem.iconId.sys.id;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })()}
-                />
-              </div>
-            );
-          })}
-          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-            (() => {
-              try {
-                return $queries.getMenu.data.response.items[0].fields
-                  .featuredContent;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return [];
+                  throw e;
                 }
-                throw e;
-              }
-            })()
-          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-            const currentItem = __plasmic_item_0;
-            const currentIndex = __plasmic_idx_0;
-            return (
-              <div
-                className={classNames(projectcss.all, sty.freeBox__sugbM)}
-                key={currentIndex}
-              >
-                <ItemMenuFeaturedHighlightItem
-                  data-plasmic-name={"itemMenuFeaturedHighlightItem"}
-                  data-plasmic-override={
-                    overrides.itemMenuFeaturedHighlightItem
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__l7En9)}
+                  key={currentIndex}
+                >
+                  <ItemExternalLinkCardItemWithLogo
+                    data-plasmic-name={"itemExternalLinkCardItemWithLogo"}
+                    data-plasmic-override={
+                      overrides.itemExternalLinkCardItemWithLogo
+                    }
+                    articleSubtitle={(() => {
+                      try {
+                        return undefined;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    articleTitle={(() => {
+                      try {
+                        return currentItem.label;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.itemExternalLinkCardItemWithLogo
+                    )}
+                    iconImageId={(() => {
+                      try {
+                        return currentItem.iconId;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    linkUrl={(() => {
+                      try {
+                        return currentItem.url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    showIcon={false}
+                  />
+                </div>
+              );
+            })}
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $queries.getMenu.data.response.items[0].fields
+                    .featuredContent;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
                   }
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemMenuFeaturedHighlightItem
-                  )}
-                  entryId={(() => {
-                    try {
-                      return currentItem.sys.id;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })()}
-                />
-              </div>
-            );
-          })}
-          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-            (() => {
-              try {
-                return $state.menuLinks.filter(
-                  link =>
-                    link.type === "Follow ASSH Component" && link.column === 3
-                );
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return [];
+                  throw e;
                 }
-                throw e;
-              }
-            })()
-          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-            const currentItem = __plasmic_item_0;
-            const currentIndex = __plasmic_idx_0;
-            return (
-              <div
-                className={classNames(projectcss.all, sty.freeBox___5Aec)}
-                key={currentIndex}
-              >
-                <ItemFollowAssh
-                  data-plasmic-name={"itemFollowAssh"}
-                  data-plasmic-override={overrides.itemFollowAssh}
-                  className={classNames("__wab_instance", sty.itemFollowAssh)}
-                />
-              </div>
-            );
-          })}
-        </div>
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__sugbM)}
+                  key={currentIndex}
+                >
+                  <ItemMenuFeaturedHighlightItem
+                    data-plasmic-name={"itemMenuFeaturedHighlightItem"}
+                    data-plasmic-override={
+                      overrides.itemMenuFeaturedHighlightItem
+                    }
+                    className={classNames(
+                      "__wab_instance",
+                      sty.itemMenuFeaturedHighlightItem
+                    )}
+                    entryId={(() => {
+                      try {
+                        return currentItem.sys.id;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                </div>
+              );
+            })}
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $state.menuLinks.filter(
+                    link =>
+                      link.type === "Follow ASSH Component" && link.column === 3
+                  );
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
+                }
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___5Aec)}
+                  key={currentIndex}
+                >
+                  <ItemFollowAssh
+                    data-plasmic-name={"itemFollowAssh"}
+                    data-plasmic-override={overrides.itemFollowAssh}
+                    className={classNames("__wab_instance", sty.itemFollowAssh)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        ) : null}
       </div>
     </div>
   );

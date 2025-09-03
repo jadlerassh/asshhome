@@ -60,9 +60,8 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
         {
           articleTitle: "Article Title",
           articleSubtitle: "Article Subtitle Text Here",
-          linkUrl: "https://www.assh.org",
-          showIcon: true,
-          iconImageId: "5Hr1SleQScCxvVruKmX0AO"
+          linkUrl: "#",
+          showIcon: true
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -158,7 +157,7 @@ function PlasmicItemExternalLinkCardItemWithLogo__RenderFunc(props) {
                 e instanceof TypeError ||
                 e?.plasmicType === "PlasmicUndefinedDataError"
               ) {
-                return true;
+                return false;
               }
               throw e;
             }

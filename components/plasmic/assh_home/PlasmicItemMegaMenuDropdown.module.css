@@ -22,7 +22,7 @@
   justify-content: center;
   transition-property: all;
   transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
   left: auto;
   top: auto;
   z-index: 10;
@@ -32,7 +32,7 @@
   max-width: 1360px;
   min-width: 0;
   -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: linear;
   -webkit-transition-duration: 0.3s;
   padding: 20px;
 }

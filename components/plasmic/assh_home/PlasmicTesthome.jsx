@@ -21,7 +21,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: HrBwnQh3XfKO/component
+import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: Lqz3M24J43AC/component
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
@@ -79,10 +79,28 @@ function PlasmicTesthome__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "sectionHomeMenuSection.openDropdown",
+        path: "sectionHomeMenuSectionJaRedo.openDropdown",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "NONE"
+      },
+      {
+        path: "sectionHomeMenuSectionJaRedo.openMenu",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "NONE"
+      },
+      {
+        path: "sectionHomeMenuSectionJaRedo.activeVariant",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => "allclosed"
+      },
+      {
+        path: "sectionHomeMenuSectionJaRedo.activeMobileVariant",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ``
       }
     ],
 
@@ -157,12 +175,49 @@ function PlasmicTesthome__RenderFunc(props) {
           )}
         >
           <SectionHomeMenuSection
-            data-plasmic-name={"sectionHomeMenuSection"}
-            data-plasmic-override={overrides.sectionHomeMenuSection}
-            className={classNames("__wab_instance", sty.sectionHomeMenuSection)}
+            data-plasmic-name={"sectionHomeMenuSectionJaRedo"}
+            data-plasmic-override={overrides.sectionHomeMenuSectionJaRedo}
+            activeMobileVariant={generateStateValueProp($state, [
+              "sectionHomeMenuSectionJaRedo",
+              "activeMobileVariant"
+            ])}
+            activeVariant={generateStateValueProp($state, [
+              "sectionHomeMenuSectionJaRedo",
+              "activeVariant"
+            ])}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionHomeMenuSectionJaRedo
+            )}
+            onActiveMobileVariantChange2={async (...eventArgs) => {
+              generateStateOnChangeProp($state, [
+                "sectionHomeMenuSectionJaRedo",
+                "activeMobileVariant"
+              ]).apply(null, eventArgs);
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+            onActiveVariantChange={async (...eventArgs) => {
+              generateStateOnChangeProp($state, [
+                "sectionHomeMenuSectionJaRedo",
+                "activeVariant"
+              ]).apply(null, eventArgs);
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
             onOpenDropdownChange={async (...eventArgs) => {
               generateStateOnChangeProp($state, [
-                "sectionHomeMenuSection",
+                "sectionHomeMenuSectionJaRedo",
                 "openDropdown"
               ]).apply(null, eventArgs);
               if (
@@ -173,9 +228,26 @@ function PlasmicTesthome__RenderFunc(props) {
                 return;
               }
             }}
+            onOpenMenuChange={async (...eventArgs) => {
+              generateStateOnChangeProp($state, [
+                "sectionHomeMenuSectionJaRedo",
+                "openMenu"
+              ]).apply(null, eventArgs);
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
             openDropdown={generateStateValueProp($state, [
-              "sectionHomeMenuSection",
+              "sectionHomeMenuSectionJaRedo",
               "openDropdown"
+            ])}
+            openMenu={generateStateValueProp($state, [
+              "sectionHomeMenuSectionJaRedo",
+              "openMenu"
             ])}
           />
 
@@ -290,7 +362,7 @@ function PlasmicTesthome__RenderFunc(props) {
 const PlasmicDescendants = {
   asshHome: [
     "asshHome",
-    "sectionHomeMenuSection",
+    "sectionHomeMenuSectionJaRedo",
     "sectionHomeHeroBannerWithLinkItems",
     "itemSectionTitleDescriptionItem",
     "cardListLatestAsshNewsCardList",
@@ -303,7 +375,7 @@ const PlasmicDescendants = {
     "sectionFooterSection"
   ],
 
-  sectionHomeMenuSection: ["sectionHomeMenuSection"],
+  sectionHomeMenuSectionJaRedo: ["sectionHomeMenuSectionJaRedo"],
   sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
@@ -348,7 +420,9 @@ export const PlasmicTesthome = Object.assign(
   makeNodeComponent("asshHome"),
   {
     // Helper components rendering sub-elements
-    sectionHomeMenuSection: makeNodeComponent("sectionHomeMenuSection"),
+    sectionHomeMenuSectionJaRedo: makeNodeComponent(
+      "sectionHomeMenuSectionJaRedo"
+    ),
     sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
       "sectionHomeHeroBannerWithLinkItems"
     ),

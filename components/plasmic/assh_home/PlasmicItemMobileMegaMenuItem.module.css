@@ -19,6 +19,9 @@
   max-width: 100%;
   min-width: 0;
 }
+.linktanBackground {
+  background: var(--token-_oibR2YYXaCj);
+}
 .itemMegaMenuItem:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
@@ -52,8 +55,8 @@
 }
 .itemMegaMenuDropdownclosed:global(.__wab_instance) {
   opacity: 0;
-  transform: translateX(0px) translateY(-50%) translateZ(0px) scaleX(1)
-    scaleY(0) scaleZ(1);
-  height: 0px;
-  flex-shrink: 0;
+  transform: translateX(0px) translateY(-100%) translateZ(0px) scaleX(1)
+    scaleY(1) scaleZ(1);
+  height: auto;
+  z-index: -999;
 }

@@ -27,6 +27,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemMegaMenuItem from "../../ItemMegaMenuItem"; // plasmic-import: PuojKIT8N0Q4/component
 import ItemMegaMenuDropdown from "../../ItemMegaMenuDropdown"; // plasmic-import: pbm1LJ7gGzwd/component
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -38,7 +39,8 @@ createPlasmicElementProxy;
 
 export const PlasmicItemMobileMegaMenuItem__VariantProps = new Array(
   "open",
-  "closed"
+  "closed",
+  "tanBackground"
 );
 
 export const PlasmicItemMobileMegaMenuItem__ArgProps = new Array("menuName");
@@ -58,7 +60,7 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          menuName: "Mega Menu - Education"
+          menuName: "Mega Menu - Grants & Awards"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -107,6 +109,12 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.closed
+      },
+      {
+        path: "tanBackground",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.tanBackground
       }
     ],
 
@@ -136,6 +144,7 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
+  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -158,7 +167,12 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
         sty.root,
         {
           [sty.rootclosed]: hasVariant($state, "closed", "closed"),
-          [sty.rootopen]: hasVariant($state, "open", "open")
+          [sty.rootopen]: hasVariant($state, "open", "open"),
+          [sty.roottanBackground]: hasVariant(
+            $state,
+            "tanBackground",
+            "tanBackground"
+          )
         }
       )}
     >
@@ -170,7 +184,14 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
           projectcss.a,
           sty.link,
           "mobileMenuItem",
-          { [sty.linkopen]: hasVariant($state, "open", "open") }
+          {
+            [sty.linkopen]: hasVariant($state, "open", "open"),
+            [sty.linktanBackground]: hasVariant(
+              $state,
+              "tanBackground",
+              "tanBackground"
+            )
+          }
         )}
         component={Link}
         onClick={async event => {
@@ -206,7 +227,17 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
           data-plasmic-name={"itemMegaMenuItem"}
           data-plasmic-override={overrides.itemMegaMenuItem}
           className={classNames("__wab_instance", sty.itemMegaMenuItem, {
-            [sty.itemMegaMenuItemopen]: hasVariant($state, "open", "open")
+            [sty.itemMegaMenuItemclosed]: hasVariant(
+              $state,
+              "closed",
+              "closed"
+            ),
+            [sty.itemMegaMenuItemopen]: hasVariant($state, "open", "open"),
+            [sty.itemMegaMenuItemtanBackground]: hasVariant(
+              $state,
+              "tanBackground",
+              "tanBackground"
+            )
           })}
           classname={"plasmicdropdpwn menu_dropdown1"}
           label={(() => {
@@ -222,6 +253,12 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
               throw e;
             }
           })()}
+          open={
+            hasVariant($state, "open", "open") &&
+            hasVariant(globalVariants, "screen", "tablet")
+              ? true
+              : undefined
+          }
           url={"#"}
         />
       </PlasmicLink__>

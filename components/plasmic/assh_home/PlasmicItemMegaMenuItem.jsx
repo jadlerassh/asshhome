@@ -30,7 +30,7 @@ import Container4Icon from "./icons/PlasmicIcon__Container4"; // plasmic-import:
 
 createPlasmicElementProxy;
 
-export const PlasmicItemMegaMenuItem__VariantProps = new Array();
+export const PlasmicItemMegaMenuItem__VariantProps = new Array("open");
 
 export const PlasmicItemMegaMenuItem__ArgProps = new Array(
   "label",
@@ -81,6 +81,12 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props.unnamedGroupOfVariants
+      },
+      {
+        path: "open",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.open
       }
     ],
 
@@ -112,7 +118,8 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
         styleTokensClassNames,
         styleTokensClassNames_antd_5_hostless,
         styleTokensClassNames_plasmic_rich_components,
-        sty.root
+        sty.root,
+        { [sty.rootopen]: hasVariant($state, "open", "open") }
       )}
     >
       <div
@@ -197,7 +204,9 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
                 })()
           ) ? (
             <Container4Icon
-              className={classNames(projectcss.all, sty.svg__cM8GH)}
+              className={classNames(projectcss.all, sty.svg__cM8GH, {
+                [sty.svgopen__cM8GH1H9MF]: hasVariant($state, "open", "open")
+              })}
               role={"img"}
             />
           ) : null}

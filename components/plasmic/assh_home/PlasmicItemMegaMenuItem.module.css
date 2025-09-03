@@ -114,12 +114,21 @@
   justify-content: center;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   row-gap: 10px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
   flex-shrink: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .svg__cM8GH {
     display: flex;
   }
+}
+.svgopen__cM8GH1H9MF {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
 }
 .root:hover .svg__cM8GH {
   color: var(--token-YOr-x91EUcQe);

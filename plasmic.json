@@ -1546,19 +1546,6 @@
           "componentType": "component"
         },
         {
-          "id": "HrBwnQh3XfKO",
-          "name": "SectionHomeMenuSection",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.jsx",
-          "importSpec": {
-            "modulePath": "SectionHomeMenuSection.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "KrK4IjZZwAsd",
           "name": "SectionHomeHeroBannerWithLinkItems",
           "type": "managed",
@@ -3838,19 +3825,6 @@
           "path": "/education/self-assessment-exam"
         },
         {
-          "id": "Lqz3M24J43AC",
-          "name": "SectionHomeMenuSectionJaRedo",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionJaRedo.jsx",
-          "importSpec": {
-            "modulePath": "SectionHomeMenuSectionJaRedo.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionJaRedo.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "pbm1LJ7gGzwd",
           "name": "ItemMegaMenuDropdown",
           "type": "managed",
@@ -3944,6 +3918,32 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/education/coding-app"
+        },
+        {
+          "id": "HrBwnQh3XfKO",
+          "name": "SectionHomeMenuSectionOld92",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionOld92.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionOld92.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionOld92.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Lqz3M24J43AC",
+          "name": "SectionHomeMenuSection",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSection.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

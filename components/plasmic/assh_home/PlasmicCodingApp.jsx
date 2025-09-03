@@ -200,7 +200,7 @@ function PlasmicCodingApp__RenderFunc(props) {
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
               code={
-                '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/855766619?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ASSH Coding App Tutorial Video"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
+                '<h2 id="video">ASSH Coding App Tutorial Video</h2>\r\n<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/855766619?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ASSH Coding App Tutorial Video"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
               }
             />
           </div>
