@@ -250,7 +250,6 @@ function PlasmicInternalComponentList__RenderFunc(props) {
               data-plasmic-override={overrides.blockTanCtaBlock}
               className={classNames("__wab_instance", sty.blockTanCtaBlock)}
               linkText={``}
-              linkUrl={``}
               text2={``}
               title={"Tan CTA Block - Active Membership"}
             />

@@ -164,20 +164,7 @@ function PlasmicActiveMembership__RenderFunc(props) {
                 data-plasmic-override={overrides.blockTanCtaBlock}
                 className={classNames("__wab_instance", sty.blockTanCtaBlock)}
                 linkText={``}
-                linkUrl={``}
-                text2={(() => {
-                  try {
-                    return undefined;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return undefined;
-                    }
-                    throw e;
-                  }
-                })()}
+                text2={``}
                 title={"Tan CTA Block - Active Membership"}
               />
 

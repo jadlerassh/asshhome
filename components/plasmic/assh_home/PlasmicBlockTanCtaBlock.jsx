@@ -35,7 +35,6 @@ export const PlasmicBlockTanCtaBlock__VariantProps = new Array();
 export const PlasmicBlockTanCtaBlock__ArgProps = new Array(
   "text2",
   "linkText",
-  "linkUrl",
   "title"
 );
 
@@ -57,7 +56,6 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
           text2:
             "The 2025 Active Membership Application submission deadline is open until February 3, 2025.",
           linkText: "Apply for Active Membership",
-          linkUrl: "https://www.assh.org",
           title: "Tan CTA Block - Active Membership"
         },
         Object.fromEntries(
@@ -199,7 +197,7 @@ function PlasmicBlockTanCtaBlock__RenderFunc(props) {
             url={(() => {
               try {
                 return $queries.getHeroContent.data.response.items[0].fields
-                  .cta1link;
+                  .cta1Link;
               } catch (e) {
                 if (
                   e instanceof TypeError ||

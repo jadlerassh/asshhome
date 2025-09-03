@@ -21,7 +21,6 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
-import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -158,16 +157,6 @@ function PlasmicTheHandBookFeedback__RenderFunc(props) {
             })()}
           />
 
-          <SectionInternalHeroTitleSectionV2
-            data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
-            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
-            className={classNames(
-              "__wab_instance",
-              sty.sectionInternalHeroTitleSectionV2
-            )}
-            title={"Hero: The Hand Book Feedback - Title Card"}
-          />
-
           <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
@@ -216,7 +205,7 @@ function PlasmicTheHandBookFeedback__RenderFunc(props) {
               data-plasmic-override={overrides.embedHtml}
               className={classNames("__wab_instance", sty.embedHtml)}
               code={
-                '<iframe height="1500" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://assh.wufoo.com/embed/mpdgdk8093m4m4/"><a href="https://assh.wufoo.com/embed/mpdgdk8093m4m4/">Fill out my Wufoo form!</a></iframe>'
+                '<iframe height="1750" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://assh.wufoo.com/embed/mpdgdk8093m4m4/"><a href="https://assh.wufoo.com/embed/mpdgdk8093m4m4/">Fill out my Wufoo form!</a></iframe>'
               }
             />
           </div>
@@ -245,7 +234,6 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionBreadcrumbs",
-    "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "columns",
     "img",
@@ -255,7 +243,6 @@ const PlasmicDescendants = {
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
-  sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   freeBox: [
     "freeBox",
     "columns",
@@ -304,9 +291,6 @@ export const PlasmicTheHandBookFeedback = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
-    sectionInternalHeroTitleSectionV2: makeNodeComponent(
-      "sectionInternalHeroTitleSectionV2"
-    ),
     freeBox: makeNodeComponent("freeBox"),
     columns: makeNodeComponent("columns"),
     img: makeNodeComponent("img"),

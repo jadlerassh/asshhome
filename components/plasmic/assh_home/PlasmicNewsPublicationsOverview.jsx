@@ -24,6 +24,7 @@ import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSec
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
+import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
@@ -189,37 +190,49 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
           title={"Hero: News & Publications Overview - Title Card"}
         />
 
-        <div
-          data-plasmic-name={"asshJournalsSection"}
-          data-plasmic-override={overrides.asshJournalsSection}
-          className={classNames(projectcss.all, sty.asshJournalsSection)}
-        >
-          <ItemSectionTitleDescriptionItem
-            className={classNames(
-              "__wab_instance",
-              sty.itemSectionTitleDescriptionItem___61H7J
-            )}
-            descriptionSection={``}
-            title={"ASSH Journals"}
-          />
+        <div className={classNames(projectcss.all, sty.freeBox__bt1Bl)}>
+          <div
+            data-plasmic-name={"asshJournalsSection"}
+            data-plasmic-override={overrides.asshJournalsSection}
+            className={classNames(projectcss.all, sty.asshJournalsSection)}
+          >
+            <ItemSectionTitleDescriptionItem
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem___61H7J
+              )}
+              descriptionSection={``}
+              title={"ASSH Journals"}
+            />
 
-          <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__da65
-            )}
-            name={
-              "Mega Menu - News & Publications - News & Publication Overview"
-            }
-          />
+            <BlockArticleCardList
+              className={classNames(
+                "__wab_instance",
+                sty.blockArticleCardList__da65
+              )}
+              name={
+                "Mega Menu - News & Publications - News & Publication Overview"
+              }
+            />
+
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
+              className={classNames(
+                "__wab_instance",
+                sty.sectionQuicklinksTable
+              )}
+              name={"Textbook Quicklinks"}
+            />
+
+            <ButtonPrimary
+              className={classNames("__wab_instance", sty.buttonPrimary__teBs)}
+              text={"View all Textbooks"}
+              textArrowButton={true}
+              url={"/s/store"}
+            />
+          </div>
         </div>
-        <SectionQuicklinksTable
-          data-plasmic-name={"sectionQuicklinksTable"}
-          data-plasmic-override={overrides.sectionQuicklinksTable}
-          className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
-          name={"Textbook Quicklinks"}
-        />
-
         <SectionMidPageCtaSection
           data-plasmic-name={"sectionMidPageCtaSection"}
           data-plasmic-override={overrides.sectionMidPageCtaSection}
@@ -244,6 +257,13 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
               "__wab_instance",
               sty.cardListLatestAsshNewsCardList
             )}
+          />
+
+          <ButtonPrimary
+            className={classNames("__wab_instance", sty.buttonPrimary__nHzVl)}
+            text={"View all News"}
+            textArrowButton={true}
+            url={"/s/news-publications/member-news"}
           />
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__uJdqI)}>
@@ -317,7 +337,7 @@ const PlasmicDescendants = {
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  asshJournalsSection: ["asshJournalsSection"],
+  asshJournalsSection: ["asshJournalsSection", "sectionQuicklinksTable"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],

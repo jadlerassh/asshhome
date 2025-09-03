@@ -170,6 +170,12 @@
   max-width: 100%;
   width: auto;
   align-self: center;
+  margin: 25px 0px 0px;
+}
+@media (max-width: 1023px) {
+  .buttonPrimary__jamTf:global(.__wab_instance) {
+    margin: 35px 0px 0px;
+  }
 }
 .column__a9O5B {
   display: flex;

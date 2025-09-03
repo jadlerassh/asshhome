@@ -182,8 +182,7 @@ function PlasmicPodcasts__RenderFunc(props) {
               data-plasmic-name={"blockTanCtaBlock"}
               data-plasmic-override={overrides.blockTanCtaBlock}
               className={classNames("__wab_instance", sty.blockTanCtaBlock)}
-              linkText={"View Instructions"}
-              linkUrl={"/s/news-publications/podcasts/rss-feed"}
+              linkText={``}
               text2={
                 "You can listen to ASSH podcasts on your mobile device through Apple Podcasts, Google Podcasts, or YouTube Music. Follow our RSS feed instructions for a seamless listening experience wherever you get your podcasts."
               }
