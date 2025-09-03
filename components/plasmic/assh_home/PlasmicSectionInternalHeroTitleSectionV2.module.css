@@ -237,6 +237,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   column-gap: 20px;
+  padding: 0px 0px 10px;
 }
 .buttonPrimary__zoHdB:global(.__wab_instance) {
   max-width: 100%;
