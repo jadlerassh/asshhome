@@ -9,8 +9,10 @@
 // Plasmic Project: 34tvEQuyqfK98iGCjMbawB
 // Component: uP-uUACbvTsG
 import * as React from "react";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  PlasmicLink as PlasmicLink__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
@@ -35,7 +37,10 @@ export const PlasmicBlockHeroBannerBlockItem__VariantProps = new Array(
   "_4"
 );
 
-export const PlasmicBlockHeroBannerBlockItem__ArgProps = new Array();
+export const PlasmicBlockHeroBannerBlockItem__ArgProps = new Array(
+  "label",
+  "url"
+);
 
 const $$ = {};
 
@@ -51,7 +56,9 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          label: "ASSH Coding App"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -140,13 +147,28 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
           [sty.freeBox_4]: hasVariant($state, "_4", "_4")
         })}
       >
-        <div
+        <PlasmicLink__
           data-plasmic-name={"calloutBox"}
           data-plasmic-override={overrides.calloutBox}
-          className={classNames(projectcss.all, sty.calloutBox, {
+          className={classNames(projectcss.all, projectcss.a, sty.calloutBox, {
             [sty.calloutBox_1]: hasVariant($state, "_1", "_1"),
             [sty.calloutBox_4]: hasVariant($state, "_4", "_4")
           })}
+          component={Link}
+          href={(() => {
+            try {
+              return $props.url;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()}
+          platform={"nextjs"}
         >
           <div
             data-plasmic-name={"container"}
@@ -184,7 +206,21 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
                   sty.heading
                 )}
               >
-                {"ASSH Coding App"}
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $props.label;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "ASSH Coding App";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
               </div>
               <section
                 data-plasmic-name={"section"}
@@ -209,7 +245,7 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
               </section>
             </div>
           </div>
-        </div>
+        </PlasmicLink__>
       </div>
     </div>
   );

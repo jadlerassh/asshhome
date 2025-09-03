@@ -197,6 +197,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 "__wab_instance",
                 sty.blockHeroBannerBlockItem__r2JjN
               )}
+              url={"https://coding.assh.org"}
             />
 
             <BlockHeroBannerBlockItem
@@ -206,6 +207,8 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 "__wab_instance",
                 sty.blockHeroBannerBlockItem__cpn8W
               )}
+              label={"Practice Management Resources"}
+              url={"https://www.assh.org/handp"}
             />
 
             <BlockHeroBannerBlockItem
@@ -216,6 +219,8 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 "__wab_instance",
                 sty.blockHeroBannerBlockItem__rbh3B
               )}
+              label={"Surgical Education"}
+              url={"https://handthology.assh.org"}
             />
 
             <BlockHeroBannerBlockItem
@@ -226,6 +231,8 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                 "__wab_instance",
                 sty.blockHeroBannerBlockItem__je8S3
               )}
+              label={"ASSH Annual Meeting"}
+              url={"https://www.assh.org/annualmeeting"}
             />
           </div>
         </div>
