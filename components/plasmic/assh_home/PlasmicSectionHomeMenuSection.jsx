@@ -1694,7 +1694,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                   )
                 }
               )}
-              onOpenMenuChange={async (...eventArgs) => {
+              onOpenMenuChange2={async (...eventArgs) => {
                 generateStateOnChangeProp($state, [
                   "itemMegaMenuDropdown",
                   "openMenu"
@@ -2738,7 +2738,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                                 hasVariant($state, "mobileMenu", "mobileOpen")
                             }
                           ),
-                          onOpenMenuChange: async (...eventArgs) => {
+                          onOpenMenuChange2: async (...eventArgs) => {
                             generateStateOnChangeProp($state, [
                               "itemMegaMenuDropdown2",
                               __plasmic_idx_0,
@@ -2803,7 +2803,7 @@ function PlasmicSectionHomeMenuSection__RenderFunc(props) {
                                         throw e;
                                       }
                                     })()
-                                  : "Mega Menu - About"
+                                  : ``
                             }
                           ],
 

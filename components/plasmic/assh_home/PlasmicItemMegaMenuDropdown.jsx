@@ -36,7 +36,7 @@ export const PlasmicItemMegaMenuDropdown__VariantProps = new Array();
 
 export const PlasmicItemMegaMenuDropdown__ArgProps = new Array(
   "openMenu",
-  "onOpenMenuChange"
+  "onOpenMenuChange2"
 );
 
 const $$ = {};
@@ -76,7 +76,7 @@ function PlasmicItemMegaMenuDropdown__RenderFunc(props) {
         type: "writable",
         variableType: "text",
         valueProp: "openMenu",
-        onChangeProp: "onOpenMenuChange"
+        onChangeProp: "onOpenMenuChange2"
       },
       {
         path: "menuLinks",
@@ -254,13 +254,13 @@ function PlasmicItemMegaMenuDropdown__RenderFunc(props) {
                       label={`${currentItem.label} `}
                       url={(() => {
                         try {
-                          return undefined;
+                          return currentItem.url;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
                             e?.plasmicType === "PlasmicUndefinedDataError"
                           ) {
-                            return "https://www.assh.org";
+                            return "";
                           }
                           throw e;
                         }
@@ -425,7 +425,7 @@ function PlasmicItemMegaMenuDropdown__RenderFunc(props) {
                     )}
                     iconImageId={(() => {
                       try {
-                        return currentItem.iconId;
+                        return currentItem.iconId.sys.id;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||

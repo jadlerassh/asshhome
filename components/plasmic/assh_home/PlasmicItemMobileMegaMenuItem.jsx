@@ -273,7 +273,7 @@ function PlasmicItemMobileMegaMenuItem__RenderFunc(props) {
           ),
           [sty.itemMegaMenuDropdownopen]: hasVariant($state, "open", "open")
         })}
-        onOpenMenuChange={async (...eventArgs) => {
+        onOpenMenuChange2={async (...eventArgs) => {
           generateStateOnChangeProp($state, [
             "itemMegaMenuDropdown",
             "openMenu"
