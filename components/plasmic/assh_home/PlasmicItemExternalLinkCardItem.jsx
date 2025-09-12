@@ -123,38 +123,14 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
           sty.interactionsHover
         )}
         component={Link}
-        href={(() => {
-          try {
-            return $props.linkUrl;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return undefined;
-            }
-            throw e;
-          }
-        })()}
         platform={"nextjs"}
-        target={(() => {
-          try {
-            return $props.showIcon;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return undefined;
-            }
-            throw e;
-          }
-        })()}
       >
-        <div
+        <PlasmicLink__
           data-plasmic-name={"content"}
           data-plasmic-override={overrides.content}
-          className={classNames(projectcss.all, sty.content)}
+          className={classNames(projectcss.all, projectcss.a, sty.content)}
+          component={Link}
+          platform={"nextjs"}
         >
           {(() => {
             try {
@@ -235,7 +211,7 @@ function PlasmicItemExternalLinkCardItem__RenderFunc(props) {
               </div>
             ) : null}
           </div>
-        </div>
+        </PlasmicLink__>
       </PlasmicLink__>
     </div>
   );
