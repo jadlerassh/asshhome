@@ -29,7 +29,7 @@ createPlasmicElementProxy;
 
 export const PlasmicItemNewsArticle__VariantProps = new Array();
 
-export const PlasmicItemNewsArticle__ArgProps = new Array("internalName");
+export const PlasmicItemNewsArticle__ArgProps = new Array("title");
 
 const $$ = {};
 
@@ -46,7 +46,7 @@ function PlasmicItemNewsArticle__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          internalName: "Perspectives: October 2023 - The WALANT Technique"
+          title: "Spring 2025 Council Round-Up"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -67,11 +67,11 @@ function PlasmicItemNewsArticle__RenderFunc(props) {
     getContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "61b37066-7bed-4596-8e56-fc542eb8b34e",
+        opId: "4e81b95d-c4e9-4b74-b384-526c01bb12a2",
         userArgs: {
-          params: [$props.internalName]
+          params: [$props.title]
         },
-        cacheKey: `plasmic.$.61b37066-7bed-4596-8e56-fc542eb8b34e.$.`,
+        cacheKey: `plasmic.$.4e81b95d-c4e9-4b74-b384-526c01bb12a2.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -130,12 +130,11 @@ function PlasmicItemNewsArticle__RenderFunc(props) {
             })()}
           </React.Fragment>
         </h1>
-        <h2
+        <div
           data-plasmic-name={"subtitle"}
           data-plasmic-override={overrides.subtitle}
           className={classNames(
             projectcss.all,
-            projectcss.h2,
             projectcss.__wab_text,
             sty.subtitle
           )}
@@ -156,7 +155,7 @@ function PlasmicItemNewsArticle__RenderFunc(props) {
               }
             })()}
           </React.Fragment>
-        </h2>
+        </div>
         <div
           data-plasmic-name={"dateField"}
           data-plasmic-override={overrides.dateField}
@@ -182,78 +181,78 @@ function PlasmicItemNewsArticle__RenderFunc(props) {
             })()}
           </React.Fragment>
         </div>
-      </div>
-      {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-        (() => {
-          try {
-            return $queries.getContent.data.response.items[0].fields.authors;
-          } catch (e) {
-            if (
-              e instanceof TypeError ||
-              e?.plasmicType === "PlasmicUndefinedDataError"
-            ) {
-              return [];
+        {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+          (() => {
+            try {
+              return $queries.getContent.data.response.items[0].fields.authors;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return [];
+              }
+              throw e;
             }
-            throw e;
-          }
-        })()
-      ).map((__plasmic_item_0, __plasmic_idx_0) => {
-        const currentItem = __plasmic_item_0;
-        const currentIndex = __plasmic_idx_0;
-        return (
-          <div
-            className={classNames(projectcss.all, sty.freeBox__rAqmS)}
-            key={currentIndex}
-          >
+          })()
+        ).map((__plasmic_item_0, __plasmic_idx_0) => {
+          const currentItem = __plasmic_item_0;
+          const currentIndex = __plasmic_idx_0;
+          return (
             <div
-              data-plasmic-name={"authors"}
-              data-plasmic-override={overrides.authors}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.authors
-              )}
+              className={classNames(projectcss.all, sty.freeBox__rAqmS)}
+              key={currentIndex}
             >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return currentItem;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "";
+              <div
+                data-plasmic-name={"authors"}
+                data-plasmic-override={overrides.authors}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.authors
+                )}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return currentItem;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "";
+                      }
+                      throw e;
                     }
-                    throw e;
-                  }
-                })()}
-              </React.Fragment>
+                  })()}
+                </React.Fragment>
+              </div>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__esdN9)}>
-              <Embed
-                data-plasmic-name={"embedHtml"}
-                data-plasmic-override={overrides.embedHtml}
-                className={classNames("__wab_instance", sty.embedHtml)}
-                code={(() => {
-                  try {
-                    return $queries.getContent.data.response.items[0].fields
-                      .bodyContent;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "<div>Paste your embed code via the right sidebar</div>";
-                    }
-                    throw e;
-                  }
-                })()}
-              />
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+        <div className={classNames(projectcss.all, sty.freeBox__esdN9)}>
+          <Embed
+            data-plasmic-name={"embedHtml"}
+            data-plasmic-override={overrides.embedHtml}
+            className={classNames("__wab_instance", sty.embedHtml)}
+            code={(() => {
+              try {
+                return $queries.getContent.data.response.items[0].fields
+                  .bodyContent;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "";
+                }
+                throw e;
+              }
+            })()}
+          />
+        </div>
+      </div>
     </div>
   );
 }

@@ -78,6 +78,12 @@
   grid-column-end: -1 !important;
   margin: 70px 0px;
 }
+@media (max-width: 1279px) {
+  .freeBox {
+    padding: 0px 20px;
+    margin: 50px 0px;
+  }
+}
 @media (max-width: 1023px) {
   .freeBox {
     padding: 0px 20px;

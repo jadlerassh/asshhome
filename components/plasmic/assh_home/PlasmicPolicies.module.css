@@ -31,6 +31,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 1279px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 @media (max-width: 1023px) {
   .root > * {
     grid-column: 4;
@@ -82,6 +87,12 @@
 @media (max-width: 1535px) {
   .freeBox__mzidT {
     position: relative;
+  }
+}
+@media (max-width: 1279px) {
+  .freeBox__mzidT {
+    padding: 0px 20px;
+    margin: 50px 0px;
   }
 }
 @media (max-width: 1023px) {

@@ -75,6 +75,7 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
@@ -92,7 +93,6 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -328,8 +328,8 @@ function PlasmicMembershipGetInvolved__RenderFunc(props) {
               className={classNames("__wab_instance", sty.buttonPrimary__hXraB)}
               darkNoBgInteractions={[]}
               megaMenuLink={[]}
+              quicklinkOption={true}
               text={"Learn More"}
-              textArrowButton={true}
               url={"/s/grants-awards"}
             />
 

@@ -28,6 +28,7 @@ import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../pl
 import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectcss
 import sty from "./PlasmicItemArticleCardItemWithDescription.module.css"; // plasmic-import: m6xY8jJvNbEQ/css
+import Container5Icon from "./icons/PlasmicIcon__Container5"; // plasmic-import: GWToR6ifk0cK/icon
 
 createPlasmicElementProxy;
 
@@ -40,7 +41,8 @@ export const PlasmicItemArticleCardItemWithDescription__ArgProps = new Array(
   "linkUrl",
   "description",
   "imageId",
-  "newTab"
+  "newTab",
+  "showExternalIcon"
 );
 
 const $$ = {};
@@ -63,7 +65,8 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
           linkUrl: "https://www.assh.org",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-          newTab: false
+          newTab: false,
+          showExternalIcon: false
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -79,6 +82,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
     getImage: usePlasmicDataOp(() => {
@@ -98,7 +102,6 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -192,9 +195,180 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
             data-plasmic-override={overrides.content}
             className={classNames(projectcss.all, sty.content)}
           >
+            <div className={classNames(projectcss.all, sty.freeBox__joWp3)}>
+              {(() => {
+                try {
+                  return $props.heading !== undefined && $props.heading !== "";
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <div
+                  data-plasmic-name={"category"}
+                  data-plasmic-override={overrides.category}
+                  className={classNames(projectcss.all, sty.category)}
+                >
+                  <div
+                    data-plasmic-name={"label"}
+                    data-plasmic-override={overrides.label}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.label
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $props.heading;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Advocacy";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                </div>
+              ) : null}
+              {(
+                hasVariant(globalVariants, "screen", "largeDesktop")
+                  ? (() => {
+                      try {
+                        return (
+                          $props.articleTitle !== undefined &&
+                          $props.articleTitle !== ""
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()
+                  : (() => {
+                      try {
+                        return $props.articleTitle !== undefined;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()
+              ) ? (
+                <div
+                  data-plasmic-name={"content2"}
+                  data-plasmic-override={overrides.content2}
+                  className={classNames(projectcss.all, sty.content2)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__oimki
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $props.articleTitle;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Article Title";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                </div>
+              ) : null}
+              {(
+                hasVariant(globalVariants, "screen", "largeDesktop")
+                  ? (() => {
+                      try {
+                        return (
+                          $props.description !== undefined &&
+                          $props.description !== ""
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()
+                  : (() => {
+                      try {
+                        return $props.description !== undefined;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()
+              ) ? (
+                <div
+                  data-plasmic-name={"content3"}
+                  data-plasmic-override={overrides.content3}
+                  className={classNames(projectcss.all, sty.content3)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ktlV
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $props.description;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "Article Title";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                </div>
+              ) : null}
+            </div>
             {(() => {
               try {
-                return $props.heading !== undefined && $props.heading !== "";
+                return $props.showExternalIcon;
               } catch (e) {
                 if (
                   e instanceof TypeError ||
@@ -205,161 +379,18 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 throw e;
               }
             })() ? (
-              <div
-                data-plasmic-name={"category"}
-                data-plasmic-override={overrides.category}
-                className={classNames(projectcss.all, sty.category)}
+              <section
+                data-plasmic-name={"section"}
+                data-plasmic-override={overrides.section}
+                className={classNames(projectcss.all, sty.section)}
               >
-                <div
-                  data-plasmic-name={"label"}
-                  data-plasmic-override={overrides.label}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.label
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $props.heading;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Advocacy";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-              </div>
-            ) : null}
-            {(
-              hasVariant(globalVariants, "screen", "largeDesktop")
-                ? (() => {
-                    try {
-                      return (
-                        $props.articleTitle !== undefined &&
-                        $props.articleTitle !== ""
-                      );
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })()
-                : (() => {
-                    try {
-                      return $props.articleTitle !== undefined;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })()
-            ) ? (
-              <div
-                data-plasmic-name={"content2"}
-                data-plasmic-override={overrides.content2}
-                className={classNames(projectcss.all, sty.content2)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__oimki
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $props.articleTitle;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Article Title";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-              </div>
-            ) : null}
-            {(
-              hasVariant(globalVariants, "screen", "largeDesktop")
-                ? (() => {
-                    try {
-                      return (
-                        $props.description !== undefined &&
-                        $props.description !== ""
-                      );
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })()
-                : (() => {
-                    try {
-                      return $props.description !== undefined;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })()
-            ) ? (
-              <div
-                data-plasmic-name={"content3"}
-                data-plasmic-override={overrides.content3}
-                className={classNames(projectcss.all, sty.content3)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ktlV
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $props.description;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Article Title";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-              </div>
+                <Container5Icon
+                  data-plasmic-name={"svg"}
+                  data-plasmic-override={overrides.svg}
+                  className={classNames(projectcss.all, sty.svg)}
+                  role={"img"}
+                />
+              </section>
             ) : null}
           </div>
         ) : null}
@@ -392,11 +423,7 @@ function PlasmicItemArticleCardItemWithDescription__RenderFunc(props) {
                 }
               })()
         ) ? (
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__f4Vth)}>
             <Embed
               data-plasmic-name={"embedHtml"}
               data-plasmic-override={overrides.embedHtml}
@@ -440,7 +467,8 @@ const PlasmicDescendants = {
     "label",
     "content2",
     "content3",
-    "freeBox",
+    "section",
+    "svg",
     "embedHtml"
   ],
 
@@ -451,16 +479,27 @@ const PlasmicDescendants = {
     "label",
     "content2",
     "content3",
-    "freeBox",
+    "section",
+    "svg",
     "embedHtml"
   ],
 
-  content: ["content", "category", "label", "content2", "content3"],
+  content: [
+    "content",
+    "category",
+    "label",
+    "content2",
+    "content3",
+    "section",
+    "svg"
+  ],
+
   category: ["category", "label"],
   label: ["label"],
   content2: ["content2"],
   content3: ["content3"],
-  freeBox: ["freeBox", "embedHtml"],
+  section: ["section", "svg"],
+  svg: ["svg"],
   embedHtml: ["embedHtml"]
 };
 
@@ -504,7 +543,8 @@ export const PlasmicItemArticleCardItemWithDescription = Object.assign(
     label: makeNodeComponent("label"),
     content2: makeNodeComponent("content2"),
     content3: makeNodeComponent("content3"),
-    freeBox: makeNodeComponent("freeBox"),
+    section: makeNodeComponent("section"),
+    svg: makeNodeComponent("svg"),
     embedHtml: makeNodeComponent("embedHtml"),
     // Metadata about props expected for PlasmicItemArticleCardItemWithDescription
     internalVariantProps:

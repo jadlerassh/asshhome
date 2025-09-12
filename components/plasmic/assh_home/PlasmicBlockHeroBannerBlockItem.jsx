@@ -176,6 +176,7 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
             className={classNames(projectcss.all, sty.container, {
               [sty.container_1]: hasVariant($state, "_1", "_1"),
               [sty.container_2]: hasVariant($state, "_2", "_2"),
+              [sty.container_3]: hasVariant($state, "_3", "_3"),
               [sty.container_4]: hasVariant($state, "_4", "_4")
             })}
           />
@@ -194,7 +195,8 @@ function PlasmicBlockHeroBannerBlockItem__RenderFunc(props) {
               data-plasmic-name={"content"}
               data-plasmic-override={overrides.content}
               className={classNames(projectcss.all, sty.content, {
-                [sty.content_1]: hasVariant($state, "_1", "_1")
+                [sty.content_1]: hasVariant($state, "_1", "_1"),
+                [sty.content_4]: hasVariant($state, "_4", "_4")
               })}
             >
               <div

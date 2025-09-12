@@ -152,8 +152,7 @@ function PlasmicSectionNewsListItems__RenderFunc(props) {
             text={"Read Full Item"}
             url={(() => {
               try {
-                return $queries.getContent.data.response.items[0].fields
-                  .urlPath;
+                return $props.url;
               } catch (e) {
                 if (
                   e instanceof TypeError ||

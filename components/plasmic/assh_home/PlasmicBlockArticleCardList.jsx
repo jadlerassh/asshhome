@@ -65,6 +65,7 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
@@ -187,7 +188,6 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -353,6 +353,7 @@ function PlasmicBlockArticleCardList__RenderFunc(props) {
               data-plasmic-name={"buttonPrimary"}
               data-plasmic-override={overrides.buttonPrimary}
               className={classNames("__wab_instance", sty.buttonPrimary)}
+              quicklinkOption={true}
               text={(() => {
                 try {
                   return currentItem.label;

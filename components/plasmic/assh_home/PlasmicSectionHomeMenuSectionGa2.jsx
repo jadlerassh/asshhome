@@ -119,6 +119,7 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
@@ -628,7 +629,6 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -1210,7 +1210,14 @@ function PlasmicSectionHomeMenuSectionGa2__RenderFunc(props) {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text3
+                    sty.text3,
+                    {
+                      [sty.text3menus_dropdown1]: hasVariant(
+                        $state,
+                        "menus",
+                        "dropdown1"
+                      )
+                    }
                   )}
                 >
                   {"Dashboard"}

@@ -14,15 +14,17 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
-import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
-import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionNewsListItems from "../../SectionNewsListItems"; // plasmic-import: 5-ayHp8nG4OH/component
+import ItemPagination from "../../ItemPagination"; // plasmic-import: CVYojOYzb5cM/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -66,13 +68,80 @@ function PlasmicMemberNews__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "pageSize",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 10
+      },
+      {
+        path: "itemPagination.totalRecords",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $queries.getContent.data.response.total;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return 1;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "itemPagination.currentPage",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 3
+      },
+      {
+        path: "itemPagination.pageSize",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.pageSize;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return 10;
+              }
+              throw e;
+            }
+          })()
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "5e8f233d-18de-49ef-8d39-ca0db4cd10e1",
-        userArgs: {},
-        cacheKey: `plasmic.$.5e8f233d-18de-49ef-8d39-ca0db4cd10e1.$.`,
+        opId: "cf46b8c6-7429-4b19-996b-bee00a11514e",
+        userArgs: {
+          params: [
+            $state.pageSize,
+            $state.pageSize * ($state.itemPagination.currentPage - 1)
+          ]
+        },
+        cacheKey: `plasmic.$.cf46b8c6-7429-4b19-996b-bee00a11514e.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -134,25 +203,6 @@ function PlasmicMemberNews__RenderFunc(props) {
             className={classNames("__wab_instance", sty.sectionAdPlaceholder)}
           />
 
-          <SectionBreadcrumbs
-            data-plasmic-name={"sectionBreadcrumbs"}
-            data-plasmic-override={overrides.sectionBreadcrumbs}
-            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
-            currentPagePath={(() => {
-              try {
-                return "/s" + $ctx.pagePath;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return undefined;
-                }
-                throw e;
-              }
-            })()}
-          />
-
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -163,17 +213,6 @@ function PlasmicMemberNews__RenderFunc(props) {
             title={"Hero: Member News - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox__zaVU)}>
-            <HtmlContentfulHtmlLoader
-              data-plasmic-name={"htmlContentfulHtmlLoader"}
-              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader
-              )}
-              title={"Member News"}
-            />
-          </div>
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
             (() => {
               try {
@@ -194,6 +233,7 @@ function PlasmicMemberNews__RenderFunc(props) {
             return (
               <div
                 className={classNames(projectcss.all, sty.freeBox__jp4Sc)}
+                id={"results"}
                 key={currentIndex}
               >
                 <SectionNewsListItems
@@ -246,6 +286,64 @@ function PlasmicMemberNews__RenderFunc(props) {
               </div>
             );
           })}
+          <div className={classNames(projectcss.all, sty.freeBox__fqNtJ)}>
+            <ItemPagination
+              data-plasmic-name={"itemPagination"}
+              data-plasmic-override={overrides.itemPagination}
+              className={classNames("__wab_instance", sty.itemPagination)}
+              currentPage={generateStateValueProp($state, [
+                "itemPagination",
+                "currentPage"
+              ])}
+              onCurrentPageChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "itemPagination",
+                  "currentPage"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              onPageSizeChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "itemPagination",
+                  "pageSize"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              onTotalRecordsChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "itemPagination",
+                  "totalRecords"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              pageSize={generateStateValueProp($state, [
+                "itemPagination",
+                "pageSize"
+              ])}
+              totalRecords={generateStateValueProp($state, [
+                "itemPagination",
+                "totalRecords"
+              ])}
+            />
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -256,17 +354,15 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionAdPlaceholder",
-    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
-    "htmlContentfulHtmlLoader",
-    "sectionNewsListItems"
+    "sectionNewsListItems",
+    "itemPagination"
   ],
 
   sectionAdPlaceholder: ["sectionAdPlaceholder"],
-  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
-  sectionNewsListItems: ["sectionNewsListItems"]
+  sectionNewsListItems: ["sectionNewsListItems"],
+  itemPagination: ["itemPagination"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -302,12 +398,11 @@ export const PlasmicMemberNews = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionAdPlaceholder: makeNodeComponent("sectionAdPlaceholder"),
-    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     sectionNewsListItems: makeNodeComponent("sectionNewsListItems"),
+    itemPagination: makeNodeComponent("itemPagination"),
     // Metadata about props expected for PlasmicMemberNews
     internalVariantProps: PlasmicMemberNews__VariantProps,
     internalArgProps: PlasmicMemberNews__ArgProps,

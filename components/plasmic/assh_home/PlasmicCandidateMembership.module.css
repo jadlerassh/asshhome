@@ -152,6 +152,7 @@
 }
 .blockQuoteBlock:global(.__wab_instance) {
   max-width: 100%;
+  display: none;
   margin: 60px 0px 0px;
 }
 .blockMemberDashboard:global(.__wab_instance) {

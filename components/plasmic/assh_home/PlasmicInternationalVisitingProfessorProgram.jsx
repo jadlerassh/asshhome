@@ -23,6 +23,7 @@ import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TP
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
+import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -202,11 +203,7 @@ function PlasmicInternationalVisitingProfessorProgram__RenderFunc(props) {
             }
           />
 
-          <div
-            data-plasmic-name={"freeBox"}
-            data-plasmic-override={overrides.freeBox}
-            className={classNames(projectcss.all, sty.freeBox)}
-          >
+          <div className={classNames(projectcss.all, sty.freeBox__sFb2)}>
             <div
               data-plasmic-name={"columns"}
               data-plasmic-override={overrides.columns}
@@ -214,11 +211,13 @@ function PlasmicInternationalVisitingProfessorProgram__RenderFunc(props) {
             >
               <div className={classNames(projectcss.all, sty.column__r6HR)}>
                 <HtmlContentfulHtmlLoader
+                  data-plasmic-name={"htmlContentfulHtmlLoader"}
+                  data-plasmic-override={overrides.htmlContentfulHtmlLoader}
                   className={classNames(
                     "__wab_instance",
-                    sty.htmlContentfulHtmlLoader__tyljF
+                    sty.htmlContentfulHtmlLoader
                   )}
-                  title={"International Visiting Professor Program - Intro"}
+                  title={"International Visiting Professor Program"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__gry2D)}>
@@ -231,13 +230,67 @@ function PlasmicInternationalVisitingProfessorProgram__RenderFunc(props) {
                 />
               </div>
             </div>
-            <HtmlContentfulHtmlLoader
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader__cq9Hg
-              )}
-              title={"International Visiting Professor Program - Body"}
-            />
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $queries.getHtmlContent.data.response.items;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
+                }
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__kGeNf)}
+                  key={currentIndex}
+                >
+                  <SectionAccordionSectionTemplate
+                    data-plasmic-name={"sectionAccordionSectionTemplate"}
+                    data-plasmic-override={
+                      overrides.sectionAccordionSectionTemplate
+                    }
+                    bodyContent={(() => {
+                      try {
+                        return currentItem.fields.bodyContent;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.sectionAccordionSectionTemplate
+                    )}
+                    title={(() => {
+                      try {
+                        return currentItem.fields.title;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                </div>
+              );
+            })}
           </div>
           <SectionAdPlaceholder
             className={classNames(
@@ -265,17 +318,19 @@ const PlasmicDescendants = {
     "root",
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
-    "freeBox",
     "columns",
+    "htmlContentfulHtmlLoader",
     "blockQuoteBlock",
+    "sectionAccordionSectionTemplate",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  freeBox: ["freeBox", "columns", "blockQuoteBlock"],
-  columns: ["columns", "blockQuoteBlock"],
+  columns: ["columns", "htmlContentfulHtmlLoader", "blockQuoteBlock"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockQuoteBlock: ["blockQuoteBlock"],
+  sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -317,9 +372,12 @@ export const PlasmicInternationalVisitingProfessorProgram = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    freeBox: makeNodeComponent("freeBox"),
     columns: makeNodeComponent("columns"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockQuoteBlock: makeNodeComponent("blockQuoteBlock"),
+    sectionAccordionSectionTemplate: makeNodeComponent(
+      "sectionAccordionSectionTemplate"
+    ),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicInternationalVisitingProfessorProgram
     internalVariantProps:

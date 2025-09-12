@@ -69,9 +69,11 @@ function PlasmicNewsTemplatePage__RenderFunc(props) {
     getHtmlContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "29155d6f-37ef-4556-a5cc-d50e9674e7c3",
-        userArgs: {},
-        cacheKey: `plasmic.$.29155d6f-37ef-4556-a5cc-d50e9674e7c3.$.`,
+        opId: "3e05e1bb-9c3a-4bb5-a4f1-66017dc66b0e",
+        userArgs: {
+          params: [$ctx.query.title]
+        },
+        cacheKey: `plasmic.$.3e05e1bb-9c3a-4bb5-a4f1-66017dc66b0e.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -162,6 +164,19 @@ function PlasmicNewsTemplatePage__RenderFunc(props) {
               data-plasmic-name={"itemNewsArticle"}
               data-plasmic-override={overrides.itemNewsArticle}
               className={classNames("__wab_instance", sty.itemNewsArticle)}
+              title={(() => {
+                try {
+                  return $ctx.query.title;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return undefined;
+                  }
+                  throw e;
+                }
+              })()}
             />
           </div>
           <SectionAdPlaceholder

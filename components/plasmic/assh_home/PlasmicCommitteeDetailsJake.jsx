@@ -590,7 +590,7 @@ export const PlasmicCommitteeDetailsJake = Object.assign(
     internalArgProps: PlasmicCommitteeDetailsJake__ArgProps,
     // Page metadata
     pageMetadata: {
-      title: "Committees Listing",
+      title: "Committee Details",
       description: "",
       ogImageSrc: "",
       canonical: ""

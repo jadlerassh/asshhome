@@ -174,8 +174,8 @@
   object-fit: cover;
   max-width: 100%;
   color: #313337;
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
   display: flex;
   position: relative;
   flex-direction: column;

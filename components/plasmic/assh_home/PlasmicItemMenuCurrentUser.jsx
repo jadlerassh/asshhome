@@ -162,8 +162,8 @@ function PlasmicItemMenuCurrentUser__RenderFunc(props) {
           className={classNames(
             sty.img,
             hasVariant($state, "menuOpen", "menuOpen")
-              ? "plasmicdropdpwn menu_dropdownuser"
-              : "plasmicdropdpwn menu_dropdownuser",
+              ? "plasmicdropdown ddl_userOpen"
+              : "plasmicdropdown ddl_userOpen",
             { [sty.imgmenuOpen]: hasVariant($state, "menuOpen", "menuOpen") }
           )}
           displayHeight={"40px"}

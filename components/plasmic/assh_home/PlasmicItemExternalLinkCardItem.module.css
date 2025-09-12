@@ -140,3 +140,6 @@
   row-gap: 10px;
   flex-shrink: 0;
 }
+.root:hover .svg__uDkeW {
+  color: var(--token-py5R6wetCsNw);
+}

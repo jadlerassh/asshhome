@@ -14,10 +14,17 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
+import ItemAsshMultiSelectNew from "../../ItemAsshMultiSelectNew"; // plasmic-import: n30EpbAc0Gwf/component
+import ComponentFutureEventList from "../../ComponentFutureEventList"; // plasmic-import: buA5LBYO5-1M/component
+import ItemPagination from "../../ItemPagination"; // plasmic-import: CVYojOYzb5cM/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -60,6 +67,66 @@ function PlasmicCoursesEvents__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "itemAsshSelectNew.selectedOptions",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ({})
+      },
+      {
+        path: "itemAsshSelectNew2.selectedOptions",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ({})
+      },
+      {
+        path: "componentFutureEventList.limit",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "5"
+      },
+      {
+        path: "componentFutureEventList.type",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "Webinar,CME Activity"
+      },
+      {
+        path: "componentFutureEventList.eventIdNe",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "a0fPb00000QhbQMIAZ"
+      },
+      {
+        path: "itemPagination.totalRecords",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 50
+      },
+      {
+        path: "itemPagination.currentPage",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 3
+      },
+      {
+        path: "itemPagination.pageSize",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 10
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -111,6 +178,207 @@ function PlasmicCoursesEvents__RenderFunc(props) {
             data-plasmic-override={overrides.itemAd}
             className={classNames("__wab_instance", sty.itemAd)}
           />
+
+          <div
+            data-plasmic-name={"columns"}
+            data-plasmic-override={overrides.columns}
+            className={classNames(projectcss.all, sty.columns)}
+          >
+            <div className={classNames(projectcss.all, sty.column__fqob6)}>
+              <ItemSectionTitleDescriptionItem
+                data-plasmic-name={"itemSectionTitleDescriptionItem"}
+                data-plasmic-override={
+                  overrides.itemSectionTitleDescriptionItem
+                }
+                className={classNames(
+                  "__wab_instance",
+                  sty.itemSectionTitleDescriptionItem
+                )}
+                descriptionSection={
+                  "The American Society for Surgery of the Hand delivers cutting-edge continuing medical education designed to advance the knowledge, skill, and impact of hand and upper extremity care. ASSH courses empower surgeons and healthcare professionals to elevate their clinical expertise and improve patient outcomes through enhanced competence and performance."
+                }
+                title={"Courses & Events"}
+              />
+
+              <div
+                data-plasmic-name={"freeBox"}
+                data-plasmic-override={overrides.freeBox}
+                className={classNames(projectcss.all, sty.freeBox)}
+              >
+                <ItemAsshMultiSelectNew
+                  data-plasmic-name={"itemAsshSelectNew"}
+                  data-plasmic-override={overrides.itemAsshSelectNew}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemAsshSelectNew
+                  )}
+                  onSelectedOptionsChange={async (...eventArgs) => {
+                    generateStateOnChangeProp($state, [
+                      "itemAsshSelectNew",
+                      "selectedOptions"
+                    ]).apply(null, eventArgs);
+                    if (
+                      eventArgs.length > 1 &&
+                      eventArgs[1] &&
+                      eventArgs[1]._plasmic_state_init_
+                    ) {
+                      return;
+                    }
+                  }}
+                  picklistName={"Filter List: Course Type"}
+                  placeholder={"Topics"}
+                  selectedOptions={generateStateValueProp($state, [
+                    "itemAsshSelectNew",
+                    "selectedOptions"
+                  ])}
+                />
+
+                <ItemAsshMultiSelectNew
+                  data-plasmic-name={"itemAsshSelectNew2"}
+                  data-plasmic-override={overrides.itemAsshSelectNew2}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemAsshSelectNew2
+                  )}
+                  onSelectedOptionsChange={async (...eventArgs) => {
+                    generateStateOnChangeProp($state, [
+                      "itemAsshSelectNew2",
+                      "selectedOptions"
+                    ]).apply(null, eventArgs);
+                    if (
+                      eventArgs.length > 1 &&
+                      eventArgs[1] &&
+                      eventArgs[1]._plasmic_state_init_
+                    ) {
+                      return;
+                    }
+                  }}
+                  picklistName={"Filter List: Credit"}
+                  selectedOptions={generateStateValueProp($state, [
+                    "itemAsshSelectNew2",
+                    "selectedOptions"
+                  ])}
+                />
+              </div>
+              <ComponentFutureEventList
+                data-plasmic-name={"componentFutureEventList"}
+                data-plasmic-override={overrides.componentFutureEventList}
+                className={classNames(
+                  "__wab_instance",
+                  sty.componentFutureEventList
+                )}
+                eventIdNe={generateStateValueProp($state, [
+                  "componentFutureEventList",
+                  "eventIdNe"
+                ])}
+                limit={generateStateValueProp($state, [
+                  "componentFutureEventList",
+                  "limit"
+                ])}
+                onEventIdNeChange={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "componentFutureEventList",
+                    "eventIdNe"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                onLimitChange2={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "componentFutureEventList",
+                    "limit"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                onTypeChange={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "componentFutureEventList",
+                    "type"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                type={generateStateValueProp($state, [
+                  "componentFutureEventList",
+                  "type"
+                ])}
+              />
+
+              <ItemPagination
+                data-plasmic-name={"itemPagination"}
+                data-plasmic-override={overrides.itemPagination}
+                className={classNames("__wab_instance", sty.itemPagination)}
+                currentPage={generateStateValueProp($state, [
+                  "itemPagination",
+                  "currentPage"
+                ])}
+                onCurrentPageChange={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "itemPagination",
+                    "currentPage"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                onPageSizeChange={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "itemPagination",
+                    "pageSize"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                onTotalRecordsChange={async (...eventArgs) => {
+                  generateStateOnChangeProp($state, [
+                    "itemPagination",
+                    "totalRecords"
+                  ]).apply(null, eventArgs);
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                pageSize={generateStateValueProp($state, [
+                  "itemPagination",
+                  "pageSize"
+                ])}
+                totalRecords={generateStateValueProp($state, [
+                  "itemPagination",
+                  "totalRecords"
+                ])}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.column___2BzQg)} />
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -118,8 +386,35 @@ function PlasmicCoursesEvents__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "itemAd"],
-  itemAd: ["itemAd"]
+  root: [
+    "root",
+    "itemAd",
+    "columns",
+    "itemSectionTitleDescriptionItem",
+    "freeBox",
+    "itemAsshSelectNew",
+    "itemAsshSelectNew2",
+    "componentFutureEventList",
+    "itemPagination"
+  ],
+
+  itemAd: ["itemAd"],
+  columns: [
+    "columns",
+    "itemSectionTitleDescriptionItem",
+    "freeBox",
+    "itemAsshSelectNew",
+    "itemAsshSelectNew2",
+    "componentFutureEventList",
+    "itemPagination"
+  ],
+
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  freeBox: ["freeBox", "itemAsshSelectNew", "itemAsshSelectNew2"],
+  itemAsshSelectNew: ["itemAsshSelectNew"],
+  itemAsshSelectNew2: ["itemAsshSelectNew2"],
+  componentFutureEventList: ["componentFutureEventList"],
+  itemPagination: ["itemPagination"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -155,6 +450,15 @@ export const PlasmicCoursesEvents = Object.assign(
   {
     // Helper components rendering sub-elements
     itemAd: makeNodeComponent("itemAd"),
+    columns: makeNodeComponent("columns"),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
+    freeBox: makeNodeComponent("freeBox"),
+    itemAsshSelectNew: makeNodeComponent("itemAsshSelectNew"),
+    itemAsshSelectNew2: makeNodeComponent("itemAsshSelectNew2"),
+    componentFutureEventList: makeNodeComponent("componentFutureEventList"),
+    itemPagination: makeNodeComponent("itemPagination"),
     // Metadata about props expected for PlasmicCoursesEvents
     internalVariantProps: PlasmicCoursesEvents__VariantProps,
     internalArgProps: PlasmicCoursesEvents__ArgProps,

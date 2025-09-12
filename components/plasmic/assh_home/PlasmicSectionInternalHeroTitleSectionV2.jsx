@@ -54,7 +54,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
     () =>
       Object.assign(
         {
-          title: "Hero: Education Overview - Title Card"
+          title: "Hero: Job Board - Title Card"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -70,6 +70,7 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
@@ -78,6 +79,45 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.base
+      },
+      {
+        path: "ctAs",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                const entryMap = Object.fromEntries(
+                  $queries.getHeroContent.data.response.includes.Entry.map(
+                    entry => [entry.sys.id, entry]
+                  )
+                );
+                return $queries.getHeroContent.data.response.items[0].fields.options
+                  .map(link => {
+                    const entry = entryMap[link.sys.id];
+                    return {
+                      id: link.sys.id,
+                      name: entry?.fields.name || "",
+                      label: entry?.fields.label || "Label missing",
+                      order: entry?.fields.order ?? 0,
+                      column: entry?.fields.column ?? 0,
+                      url: entry?.fields.url || "#",
+                      showExternalIcon: entry?.fields.showExternalIcon || false
+                    };
+                  })
+                  .sort((a, b) => a.order - b.order);
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return {};
+              }
+              throw e;
+            }
+          })()
       }
     ],
 
@@ -122,7 +162,6 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -413,6 +452,88 @@ function PlasmicSectionInternalHeroTitleSectionV2__RenderFunc(props) {
                     })()}
                   />
                 ) : null}
+                {(() => {
+                  try {
+                    return $state.ctAs.length > 0;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return true;
+                    }
+                    throw e;
+                  }
+                })()
+                  ? (_par =>
+                      !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                      (() => {
+                        try {
+                          return $state.ctAs;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return [];
+                          }
+                          throw e;
+                        }
+                      })()
+                    ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                      const currentItem = __plasmic_item_0;
+                      const currentIndex = __plasmic_idx_0;
+                      return (
+                        <ButtonPrimary
+                          className={classNames(
+                            "__wab_instance",
+                            sty.buttonPrimary___68Kjb
+                          )}
+                          darkInteractions={"dark"}
+                          key={currentIndex}
+                          newTab={(() => {
+                            try {
+                              return currentItem.showExternalIcon;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return false;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          text={(() => {
+                            try {
+                              return currentItem.label;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          url={(() => {
+                            try {
+                              return currentItem.url;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        />
+                      );
+                    })
+                  : null}
               </div>
             </div>
           </div>

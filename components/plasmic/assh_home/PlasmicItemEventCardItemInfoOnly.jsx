@@ -279,7 +279,9 @@ function PlasmicItemEventCardItemInfoOnly__RenderFunc(props) {
                   "__wab_instance",
                   sty.buttonPrimary__q5HzY
                 )}
+                quicklinkOption={true}
                 text={"Register Now"}
+                textArrowButton={true}
                 upcomingEvents={true}
                 url={"https://www.assh.org/meeting/register"}
               />

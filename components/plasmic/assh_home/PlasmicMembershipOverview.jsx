@@ -20,6 +20,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
+import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
@@ -72,6 +73,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
@@ -89,7 +91,6 @@ function PlasmicMembershipOverview__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -163,6 +164,12 @@ function PlasmicMembershipOverview__RenderFunc(props) {
             )}
           />
 
+          <SectionBreadcrumbs
+            data-plasmic-name={"sectionBreadcrumbs"}
+            data-plasmic-override={overrides.sectionBreadcrumbs}
+            className={classNames("__wab_instance", sty.sectionBreadcrumbs)}
+          />
+
           <SectionInternalHeroTitleSectionV2
             data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
             data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
@@ -211,9 +218,9 @@ function PlasmicMembershipOverview__RenderFunc(props) {
                   className={classNames("__wab_instance", sty.buttonPrimary)}
                   darkNoBgInteractions={[]}
                   megaMenuLink={[]}
+                  quicklinkOption={true}
                   text={"Member Benefits"}
-                  textArrowButton={true}
-                  url={"https://www.assh.org/membership/member-benefits"}
+                  url={"/membership/benefits"}
                 />
               </div>
             </div>
@@ -300,6 +307,7 @@ function PlasmicMembershipOverview__RenderFunc(props) {
 const PlasmicDescendants = {
   root: [
     "root",
+    "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "buttonPrimary",
     "blockArticleCardList",
@@ -309,6 +317,7 @@ const PlasmicDescendants = {
     "blockAsshMissionBlueBlock"
   ],
 
+  sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   buttonPrimary: ["buttonPrimary"],
   blockArticleCardList: ["blockArticleCardList"],
@@ -350,6 +359,7 @@ export const PlasmicMembershipOverview = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),

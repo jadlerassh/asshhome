@@ -2246,25 +2246,12 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicWebinars.jsx",
           "importSpec": {
-            "modulePath": "../pages/webinars.jsx"
+            "modulePath": "../pages/education/webinars.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicWebinars.module.css",
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/webinars"
-        },
-        {
-          "id": "n30EpbAc0Gwf",
-          "name": "ItemAsshSelectNew",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemAsshSelectNew.jsx",
-          "importSpec": {
-            "modulePath": "ItemAsshSelectNew.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicItemAsshSelectNew.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
         },
         {
           "id": "sJH8ILrUGtVF",
@@ -2746,20 +2733,6 @@
           "path": "/about/partner/email"
         },
         {
-          "id": "LQ7dL9T4Og_l",
-          "name": "PartnerSurgicalEducation",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicPartnerSurgicalEducation.jsx",
-          "importSpec": {
-            "modulePath": "../pages/about/partner/surgical-education.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicPartnerSurgicalEducation.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/about/partner/surgical-education"
-        },
-        {
           "id": "QJY-_EjGSXvr",
           "name": "PartnerHandPPodcast",
           "type": "managed",
@@ -2906,7 +2879,7 @@
           "projectId": "34tvEQuyqfK98iGCjMbawB",
           "renderModuleFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsJake.jsx",
           "importSpec": {
-            "modulePath": "../pages/committees/committees-details.jsx"
+            "modulePath": "../pages/s/committees/committee-details.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicCommitteeDetailsJake.module.css",
           "scheme": "blackbox",
@@ -3919,19 +3892,6 @@
           "componentType": "component"
         },
         {
-          "id": "Lqz3M24J43AC",
-          "name": "SectionHomeMenuSection",
-          "type": "managed",
-          "projectId": "34tvEQuyqfK98iGCjMbawB",
-          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.jsx",
-          "importSpec": {
-            "modulePath": "SectionHomeMenuSection.jsx"
-          },
-          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
           "id": "kNMksSTb_cmV",
           "name": "TemplateInternalPageWithAccordion",
           "type": "managed",
@@ -3955,6 +3915,180 @@
             "modulePath": "CardListPerspectivesWithDescription.jsx"
           },
           "cssFilePath": "plasmic/assh_home/PlasmicCardListPerspectivesWithDescription.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "n30EpbAc0Gwf",
+          "name": "ItemAsshMultiSelectNew",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemAsshMultiSelectNew.jsx",
+          "importSpec": {
+            "modulePath": "ItemAsshMultiSelectNew.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemAsshMultiSelectNew.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Lqz3M24J43AC",
+          "name": "SectionHomeMenuSectionOld95",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionOld95.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSectionOld95.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSectionOld95.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "raX3edALV35t",
+          "name": "SectionHomeMenuSection",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.jsx",
+          "importSpec": {
+            "modulePath": "SectionHomeMenuSection.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionHomeMenuSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "CVYojOYzb5cM",
+          "name": "ItemPagination",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemPagination.jsx",
+          "importSpec": {
+            "modulePath": "ItemPagination.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemPagination.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "QHoib1OJiDnF",
+          "name": "NewsItem",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicNewsItem.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicNewsItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news"
+        },
+        {
+          "id": "IJn1Bj1GenPN",
+          "name": "ItemAsshSingleSelect",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicItemAsshSingleSelect.jsx",
+          "importSpec": {
+            "modulePath": "ItemAsshSingleSelect.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicItemAsshSingleSelect.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ekmlUmTm1Njf",
+          "name": "SectionMyDashboard",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionMyDashboard.jsx",
+          "importSpec": {
+            "modulePath": "SectionMyDashboard.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionMyDashboard.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "gd5y2YPBdIcc",
+          "name": "MyAccount",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicMyAccount.jsx",
+          "importSpec": {
+            "modulePath": "../pages/my-account.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicMyAccount.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/my-account"
+        },
+        {
+          "id": "2PlJaV9u4YYt",
+          "name": "ComponentMyAccount",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentMyAccount.jsx",
+          "importSpec": {
+            "modulePath": "ComponentMyAccount.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentMyAccount.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "O7uPNmaVrIzI",
+          "name": "LatestNewsArticles",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicLatestNewsArticles.jsx",
+          "importSpec": {
+            "modulePath": "../pages/news-publications/latest-news-articles.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicLatestNewsArticles.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/news-publications/latest-news-articles"
+        },
+        {
+          "id": "KgS5Dbg0QHlP",
+          "name": "CodeOfEthics",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicCodeOfEthics.jsx",
+          "importSpec": {
+            "modulePath": "../pages/about/code-ethics.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicCodeOfEthics.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/about/code-ethics"
+        },
+        {
+          "id": "lReKRlwz4Nk6",
+          "name": "Event",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicEvent.jsx",
+          "importSpec": {
+            "modulePath": "../pages/event.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicEvent.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/event"
+        },
+        {
+          "id": "_KLJDedJY247",
+          "name": "ComponentEventDetail",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentEventDetail.jsx",
+          "importSpec": {
+            "modulePath": "ComponentEventDetail.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentEventDetail.module.css",
           "scheme": "blackbox",
           "componentType": "component"
         }
@@ -4519,6 +4653,11 @@
           "id": "nipqwz5RnqR7",
           "name": "Icon9Icon",
           "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Icon9.jsx"
+        },
+        {
+          "id": "RL7-l-m3w1ha",
+          "name": "Line32Icon",
+          "moduleFilePath": "plasmic/assh_home/icons/PlasmicIcon__Line32.jsx"
         }
       ],
       "images": [
@@ -4966,6 +5105,16 @@
           "id": "SiR6IjJV2zdC",
           "name": "surg_rehab.png",
           "filePath": "../public/plasmic/assh_home/images/surgRehabPng.png"
+        },
+        {
+          "id": "ZCY6btZy_0ID",
+          "name": "NewsPublication-ASSHJournals_v1.png",
+          "filePath": "../public/plasmic/assh_home/images/newsPublicationAsshJournalsV1Png.png"
+        },
+        {
+          "id": "JuzCckM_4axF",
+          "name": "NewsPublication-ASSHJournals_v1.png 2",
+          "filePath": "../public/plasmic/assh_home/images/newsPublicationAsshJournalsV1Png2.png"
         }
       ],
       "indirect": false,

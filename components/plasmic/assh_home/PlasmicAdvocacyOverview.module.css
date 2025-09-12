@@ -151,7 +151,7 @@
   justify-content: center;
   align-items: center;
   min-width: 0;
-  padding: 0px;
+  padding: 20px;
 }
 .img {
   object-fit: none;
@@ -170,7 +170,7 @@
   justify-content: center;
   align-items: center;
   min-width: 0;
-  padding: 0px;
+  padding: 20px;
 }
 .embedHtml:global(.__wab_instance) {
   max-width: 100%;

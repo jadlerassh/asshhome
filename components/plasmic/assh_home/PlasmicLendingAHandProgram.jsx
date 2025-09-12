@@ -22,6 +22,7 @@ import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
+import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -172,13 +173,28 @@ function PlasmicLendingAHandProgram__RenderFunc(props) {
             className={classNames(projectcss.all, sty.freeBox)}
           >
             <HtmlContentfulHtmlLoader
-              data-plasmic-name={"htmlContentfulHtmlLoader"}
-              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
               className={classNames(
                 "__wab_instance",
-                sty.htmlContentfulHtmlLoader
+                sty.htmlContentfulHtmlLoader__qrdYu
               )}
-              title={"Lending a Hand Program"}
+              title={"Lending a Hand Program - History"}
+            />
+
+            <BlockTanCtaBlock
+              data-plasmic-name={"blockTanCtaBlock"}
+              data-plasmic-override={overrides.blockTanCtaBlock}
+              className={classNames("__wab_instance", sty.blockTanCtaBlock)}
+              linkText={``}
+              text2={``}
+              title={"Tan CTA Block - Lending a Hand Program"}
+            />
+
+            <HtmlContentfulHtmlLoader
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader__sEwVh
+              )}
+              title={"Lending a Hand Program - Goals Contact"}
             />
           </div>
           <SectionAdPlaceholder
@@ -208,14 +224,14 @@ const PlasmicDescendants = {
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "freeBox",
-    "htmlContentfulHtmlLoader",
+    "blockTanCtaBlock",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  freeBox: ["freeBox", "htmlContentfulHtmlLoader"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
+  freeBox: ["freeBox", "blockTanCtaBlock"],
+  blockTanCtaBlock: ["blockTanCtaBlock"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -256,7 +272,7 @@ export const PlasmicLendingAHandProgram = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     freeBox: makeNodeComponent("freeBox"),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
+    blockTanCtaBlock: makeNodeComponent("blockTanCtaBlock"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicLendingAHandProgram
     internalVariantProps: PlasmicLendingAHandProgram__VariantProps,

@@ -192,7 +192,7 @@
   padding: 20px;
 }
 .img {
-  object-fit: fill;
+  object-fit: scale-down;
   max-width: 100%;
   width: 100%;
   object-position: center center;
@@ -200,6 +200,6 @@
   border-radius: var(--token-mj_AjoGEZNER);
 }
 .img > picture > img {
-  object-fit: fill;
+  object-fit: scale-down;
   object-position: center center;
 }

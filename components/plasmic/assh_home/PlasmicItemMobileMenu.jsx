@@ -17,7 +17,8 @@ import {
   get as $stateGet,
   hasVariant,
   set as $stateSet,
-  useDollarState
+  useDollarState,
+  useTrigger
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
@@ -103,6 +104,13 @@ function PlasmicItemMobileMenu__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const [isMenuIconHover, triggerMenuIconHoverProps] = useTrigger(
+    "useHover",
+    {}
+  );
+  const triggers = {
+    hover_menuIcon: isMenuIconHover
+  };
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -123,6 +131,7 @@ function PlasmicItemMobileMenu__RenderFunc(props) {
         styleTokensClassNames_antd_5_hostless,
         styleTokensClassNames_plasmic_rich_components,
         sty.menuIcon,
+        hasVariant($state, "opened", "opened") ? `` : ``,
         { [sty.menuIconopened]: hasVariant($state, "opened", "opened") }
       )}
       onClick={async event => {
@@ -155,36 +164,63 @@ function PlasmicItemMobileMenu__RenderFunc(props) {
           $steps["openMenu"] = await $steps["openMenu"];
         }
       }}
+      data-plasmic-trigger-props={[triggerMenuIconHoverProps]}
     >
       <div
         data-plasmic-name={"menuIcon2"}
         data-plasmic-override={overrides.menuIcon2}
-        className={classNames(projectcss.all, sty.menuIcon2, {
-          [sty.menuIcon2opened]: hasVariant($state, "opened", "opened")
-        })}
+        className={classNames(
+          projectcss.all,
+          sty.menuIcon2,
+          hasVariant($state, "opened", "opened")
+            ? "plasmicdropdown  ddl_mobileClosed"
+            : "plasmicdropdown  ddl_mobileOpen",
+          { [sty.menuIcon2opened]: hasVariant($state, "opened", "opened") }
+        )}
       >
         <div
           data-plasmic-name={"topbar"}
           data-plasmic-override={overrides.topbar}
-          className={classNames(projectcss.all, sty.topbar, {
-            [sty.topbaropened]: hasVariant($state, "opened", "opened")
-          })}
+          className={classNames(
+            projectcss.all,
+            sty.topbar,
+            hasVariant($state, "opened", "opened") && triggers.hover_menuIcon
+              ? "ddl_mobileClosed"
+              : triggers.hover_menuIcon
+              ? "ddl_mobileOpen"
+              : undefined,
+            { [sty.topbaropened]: hasVariant($state, "opened", "opened") }
+          )}
         />
 
         <div
           data-plasmic-name={"midbar"}
           data-plasmic-override={overrides.midbar}
-          className={classNames(projectcss.all, sty.midbar, {
-            [sty.midbaropened]: hasVariant($state, "opened", "opened")
-          })}
+          className={classNames(
+            projectcss.all,
+            sty.midbar,
+            hasVariant($state, "opened", "opened") && triggers.hover_menuIcon
+              ? "ddl_mobileClosed"
+              : triggers.hover_menuIcon
+              ? "ddl_mobileOpen"
+              : undefined,
+            { [sty.midbaropened]: hasVariant($state, "opened", "opened") }
+          )}
         />
 
         <div
           data-plasmic-name={"bottombar"}
           data-plasmic-override={overrides.bottombar}
-          className={classNames(projectcss.all, sty.bottombar, {
-            [sty.bottombaropened]: hasVariant($state, "opened", "opened")
-          })}
+          className={classNames(
+            projectcss.all,
+            sty.bottombar,
+            hasVariant($state, "opened", "opened") && triggers.hover_menuIcon
+              ? "plasmicdropdown  ddl_mobileClosed"
+              : triggers.hover_menuIcon
+              ? "ddl_mobileOpen"
+              : undefined,
+            { [sty.bottombaropened]: hasVariant($state, "opened", "opened") }
+          )}
         />
       </div>
     </div>

@@ -44,6 +44,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 240px) {
+  .asshHome > * {
+    grid-column: 4;
+  }
+}
 .sectionHomeHeroBannerWithLinkItems:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
@@ -139,9 +144,14 @@
   min-width: 0;
 }
 .sectionUpcomingCouresEventsSection:global(.__wab_instance) {
-  max-width: 100%;
+  max-width: 1320px;
   width: 100%;
   min-width: 0;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .sectionUpcomingCouresEventsSection:global(.__wab_instance) {
+    max-width: 100%;
+  }
 }
 .itemAd__lTfPm:global(.__wab_instance) {
   max-width: 100%;

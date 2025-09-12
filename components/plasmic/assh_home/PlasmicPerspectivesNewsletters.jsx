@@ -14,14 +14,17 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
-import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import SectionNewsListItems from "../../SectionNewsListItems"; // plasmic-import: 5-ayHp8nG4OH/component
+import ItemPagination from "../../ItemPagination"; // plasmic-import: CVYojOYzb5cM/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
@@ -66,13 +69,80 @@ function PlasmicPerspectivesNewsletters__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   let [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "pageSize",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 20
+      },
+      {
+        path: "itemPagination.totalRecords",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $queries.getContent.data.response.total;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return 1;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "itemPagination.currentPage",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 3
+      },
+      {
+        path: "itemPagination.pageSize",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.pageSize;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return 10;
+              }
+              throw e;
+            }
+          })()
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: $queries,
+    $refs
+  });
   const new$Queries = {
     getContent: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "766bf801-e40d-4ce6-9887-d12f2197d1ab",
-        userArgs: {},
-        cacheKey: `plasmic.$.766bf801-e40d-4ce6-9887-d12f2197d1ab.$.`,
+        opId: "5e5c131b-cfa6-48ff-a5e9-966064391c60",
+        userArgs: {
+          params: [
+            $state.pageSize,
+            $state.pageSize * ($state.itemPagination.currentPage - 1)
+          ]
+        },
+        cacheKey: `plasmic.$.5e5c131b-cfa6-48ff-a5e9-966064391c60.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -131,17 +201,6 @@ function PlasmicPerspectivesNewsletters__RenderFunc(props) {
             title={"Hero: Perspectives Newsletters - Title Card"}
           />
 
-          <div className={classNames(projectcss.all, sty.freeBox___5Kd0E)}>
-            <HtmlContentfulHtmlLoader
-              data-plasmic-name={"htmlContentfulHtmlLoader"}
-              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
-              className={classNames(
-                "__wab_instance",
-                sty.htmlContentfulHtmlLoader
-              )}
-              title={"Perspectives Newsletters"}
-            />
-          </div>
           {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
             (() => {
               try {
@@ -214,6 +273,64 @@ function PlasmicPerspectivesNewsletters__RenderFunc(props) {
               </div>
             );
           })}
+          <div className={classNames(projectcss.all, sty.freeBox__tpnn)}>
+            <ItemPagination
+              data-plasmic-name={"itemPagination"}
+              data-plasmic-override={overrides.itemPagination}
+              className={classNames("__wab_instance", sty.itemPagination)}
+              currentPage={generateStateValueProp($state, [
+                "itemPagination",
+                "currentPage"
+              ])}
+              onCurrentPageChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "itemPagination",
+                  "currentPage"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              onPageSizeChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "itemPagination",
+                  "pageSize"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              onTotalRecordsChange={async (...eventArgs) => {
+                generateStateOnChangeProp($state, [
+                  "itemPagination",
+                  "totalRecords"
+                ]).apply(null, eventArgs);
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              pageSize={generateStateValueProp($state, [
+                "itemPagination",
+                "pageSize"
+              ])}
+              totalRecords={generateStateValueProp($state, [
+                "itemPagination",
+                "totalRecords"
+              ])}
+            />
+          </div>
           <SectionAdPlaceholder
             className={classNames(
               "__wab_instance",
@@ -239,14 +356,14 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionInternalHeroTitleSectionV2",
-    "htmlContentfulHtmlLoader",
     "sectionNewsListItems",
+    "itemPagination",
     "blockAsshMissionBlueBlock"
   ],
 
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   sectionNewsListItems: ["sectionNewsListItems"],
+  itemPagination: ["itemPagination"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
 
@@ -285,8 +402,8 @@ export const PlasmicPerspectivesNewsletters = Object.assign(
     sectionInternalHeroTitleSectionV2: makeNodeComponent(
       "sectionInternalHeroTitleSectionV2"
     ),
-    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     sectionNewsListItems: makeNodeComponent("sectionNewsListItems"),
+    itemPagination: makeNodeComponent("itemPagination"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicPerspectivesNewsletters
     internalVariantProps: PlasmicPerspectivesNewsletters__VariantProps,

@@ -7,6 +7,9 @@
   justify-content: center;
   position: relative;
 }
+.menuIconopened:hover {
+  padding-bottom: 0px;
+}
 .menuIcon2 {
   width: 30px;
   height: 27px;

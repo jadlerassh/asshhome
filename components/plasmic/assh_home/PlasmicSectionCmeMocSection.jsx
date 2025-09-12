@@ -65,6 +65,7 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const stateSpecs = React.useMemo(
     () => [
@@ -181,7 +182,6 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -226,20 +226,7 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
                 "__wab_instance",
                 sty.itemSectionTitleDescriptionItem
               )}
-              descriptionSection={(() => {
-                try {
-                  return $queries.getCmemocLinks.data.response.items[0].fields
-                    .subText;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return undefined;
-                  }
-                  throw e;
-                }
-              })()}
+              descriptionSection={``}
               title={(() => {
                 try {
                   return $queries.getCmemocLinks.data.response.items[0].fields
@@ -352,7 +339,6 @@ function PlasmicSectionCmeMocSection__RenderFunc(props) {
             data-plasmic-name={"sectionQuicklinksTable"}
             data-plasmic-override={overrides.sectionQuicklinksTable}
             className={classNames("__wab_instance", sty.sectionQuicklinksTable)}
-            columns={"_4Column"}
           />
         </div>
       </div>

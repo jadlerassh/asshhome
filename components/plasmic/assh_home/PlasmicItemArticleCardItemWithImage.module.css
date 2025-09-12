@@ -75,7 +75,6 @@
   -webkit-transition-timing-function: ease-in-out;
   -webkit-transition-duration: 0.3s;
   border-radius: 10px;
-  padding: 10px;
 }
 .root:hover .image {
   padding: 0px;

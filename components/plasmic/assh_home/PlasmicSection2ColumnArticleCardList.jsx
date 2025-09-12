@@ -243,6 +243,19 @@ function PlasmicSection2ColumnArticleCardList__RenderFunc(props) {
                     throw e;
                   }
                 })()}
+                showExternalIcon={(() => {
+                  try {
+                    return currentItem.openInNewTab;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return false;
+                    }
+                    throw e;
+                  }
+                })()}
               />
             </div>
           );

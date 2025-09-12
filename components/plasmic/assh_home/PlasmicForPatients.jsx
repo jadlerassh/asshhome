@@ -140,7 +140,7 @@ function PlasmicForPatients__RenderFunc(props) {
                 sty.itemSectionTitleDescriptionItem
               )}
               descriptionSection={
-                "The American Society for Surgery of the Hand (ASSH) helps patients in several key ways, primarily by advancing the science and practice of hand and upper extremity surgery through education, research, and advocacy. "
+                "ASSH works to advance the science and practice of hand and upper extremity surgery through education, research, and advocacy, ultimately improving the quality of care for patients."
               }
               title={"How ASSH Helps Patients"}
             />
@@ -205,13 +205,14 @@ function PlasmicForPatients__RenderFunc(props) {
                     )}
                   >
                     {
-                      "Learn about hand surgery and common conditions of the hand."
+                      "Learn about hand surgery and common conditions of the hand, wrist, arm, elbow, and shoulder."
                     }
                   </div>
                   <ButtonPrimary
                     data-plasmic-name={"buttonPrimary"}
                     data-plasmic-override={overrides.buttonPrimary}
                     className={classNames("__wab_instance", sty.buttonPrimary)}
+                    newTab={true}
                     secondaryInteractions={"secondary"}
                     text={"Learn about Conditions"}
                     url={"https://www.assh.org/handcare/conditions"}
@@ -226,10 +227,11 @@ function PlasmicForPatients__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__giNB
                   )}
                   description={
-                    "Detailed information on common conditions like carpal tunnel syndrome, arthritis, fractures, and nerve injuries, as well as less common ones."
+                    "Detailed information on common conditions and injuries such as carpal tunnel syndrome, arthritis, fractures, nerve injuries, and more."
                   }
                   heading={"Resources"}
                   linkUrl={"https://www.assh.org/handcare/conditions"}
+                  newTab={true}
                 />
 
                 <ItemArticleCardItemWithDescription
@@ -239,10 +241,11 @@ function PlasmicForPatients__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__keMsF
                   )}
                   description={
-                    "Explanations of what these specialties entail and what patients can expect."
+                    "More information on hand surgery and hand therapy, including when they're needed and what to expect during treatment."
                   }
                   heading={"Resources"}
                   linkUrl={"https://www.assh.org/handcare/about"}
+                  newTab={true}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__gjB8B)}>
@@ -253,10 +256,11 @@ function PlasmicForPatients__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__bEVdu
                   )}
                   description={
-                    "Tips and resources on preventing hand injuries."
+                    "Tips and resources on preventing hand injuries during daily activities and while practicing hobbies."
                   }
                   heading={"Resources"}
-                  linkUrl={"https://www.assh.org/handcare/blog"}
+                  linkUrl={"https://www.assh.org/handcare/hand-safety"}
+                  newTab={true}
                 />
 
                 <ItemArticleCardItemWithDescription
@@ -266,10 +270,11 @@ function PlasmicForPatients__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__jRklP
                   )}
                   description={
-                    "Learn hand anatomy including bones, joints, muscles and more."
+                    "Detailed images and descriptions on anatomy of the hands and fingers, including bones, joints, muscles, nerves, tendons, and vessels."
                   }
                   heading={"Resources"}
                   linkUrl={"https://www.assh.org/handcare/anatomy"}
+                  newTab={true}
                 />
               </div>
             </div>

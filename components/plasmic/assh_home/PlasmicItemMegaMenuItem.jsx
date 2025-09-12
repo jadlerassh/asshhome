@@ -73,6 +73,7 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -98,7 +99,6 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
     $queries: {},
     $refs
   });
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -119,6 +119,7 @@ function PlasmicItemMegaMenuItem__RenderFunc(props) {
         styleTokensClassNames_antd_5_hostless,
         styleTokensClassNames_plasmic_rich_components,
         sty.root,
+        ``,
         { [sty.rootopen]: hasVariant($state, "open", "open") }
       )}
     >

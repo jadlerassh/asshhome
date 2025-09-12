@@ -12,6 +12,7 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts
@@ -22,11 +23,12 @@ import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
+import ItemArticleCardItemWithDescription from "../../ItemArticleCardItemWithDescription"; // plasmic-import: m6xY8jJvNbEQ/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
+import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageLeftRightSection from "../../SectionMidPageLeftRightSection"; // plasmic-import: ooBF5SQo3_hl/component
 import SectionPublication from "../../SectionPublication"; // plasmic-import: CnWCC_7WGfjm/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -205,16 +207,107 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
               title={"ASSH Journals"}
             />
 
-            <BlockArticleCardList
-              className={classNames(
-                "__wab_instance",
-                sty.blockArticleCardList__da65
-              )}
-              name={
-                "Mega Menu - News & Publications - News & Publication Overview"
-              }
-            />
-
+            <div
+              data-plasmic-name={"columns"}
+              data-plasmic-override={overrides.columns}
+              className={classNames(projectcss.all, sty.columns)}
+            >
+              <div className={classNames(projectcss.all, sty.column__eapXn)}>
+                <PlasmicImg__
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
+                  alt={
+                    "Cover of an edition of The Journal of Hand Surgery publication."
+                  }
+                  className={classNames(sty.img)}
+                  displayHeight={"200px"}
+                  displayMaxHeight={"271px"}
+                  displayMaxWidth={"407px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/assh_home/images/newsPublicationAsshJournalsV1Png2.png",
+                    fullWidth: 611,
+                    fullHeight: 300,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column___8QvC)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Our Journals"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription___2YWmd
+                  )}
+                  description={
+                    "Learn more about ASSH's two hand and upper extremity surgery journals, including answers to frequently asked questions."
+                  }
+                  heading={"Webpage"}
+                  linkUrl={"/s/news-publications/jhs"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__w1FfR)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Access JHS"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription___6G5JW
+                  )}
+                  description={
+                    "Access The Journal of Hand Surgery directly by logging into your ASSH account and clicking here to begin reading."
+                  }
+                  heading={"JHS"}
+                  linkUrl={"https://www.jhandsurg.org"}
+                  newTab={true}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__lz22W)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Access JHS GO"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__rHgUm
+                  )}
+                  description={
+                    "Start browsing ASSH's open access journal, the Journal of Hand Surgery Global Online, a companion to JHS."
+                  }
+                  heading={"JHS GO"}
+                  linkUrl={"https://www.jhsgo.org/"}
+                  newTab={true}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__bidBi)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Journal CME Credit"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription___3DTjm
+                  )}
+                  description={
+                    "Earn CME credit year-round by reading articles from JHS and JHS GO, a convenient way to earn credit."
+                  }
+                  heading={"Resource"}
+                  linkUrl={"/s/news-publications/journal-cme-credit-exams"}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__lnUuo)}>
+                <ItemArticleCardItemWithDescription
+                  articleTitle={"Contact Us"}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.itemArticleCardItemWithDescription__ng8Ti
+                  )}
+                  description={
+                    "Contact us at jhs@assh.org for information about your member subscription, accessing our journal club, and more."
+                  }
+                  heading={"Webpage"}
+                  linkUrl={"/s/about/contact-us"}
+                />
+              </div>
+            </div>
             <SectionQuicklinksTable
               data-plasmic-name={"sectionQuicklinksTable"}
               data-plasmic-override={overrides.sectionQuicklinksTable}
@@ -227,6 +320,7 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
 
             <ButtonPrimary
               className={classNames("__wab_instance", sty.buttonPrimary__teBs)}
+              quicklinkOption={true}
               text={"View all Textbooks"}
               textArrowButton={true}
               url={"/s/store"}
@@ -261,6 +355,7 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
 
           <ButtonPrimary
             className={classNames("__wab_instance", sty.buttonPrimary__nHzVl)}
+            quicklinkOption={true}
             text={"View all News"}
             textArrowButton={true}
             url={"/s/news-publications/member-news"}
@@ -277,10 +372,9 @@ function PlasmicNewsPublicationsOverview__RenderFunc(props) {
           />
 
           <BlockArticleCardList
-            className={classNames(
-              "__wab_instance",
-              sty.blockArticleCardList__alS5C
-            )}
+            data-plasmic-name={"blockArticleCardList"}
+            data-plasmic-override={overrides.blockArticleCardList}
+            className={classNames("__wab_instance", sty.blockArticleCardList)}
             name={"News & Publications: Latest Perspectives Articles"}
           />
         </div>
@@ -327,9 +421,12 @@ const PlasmicDescendants = {
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "asshJournalsSection",
+    "columns",
+    "img",
     "sectionQuicklinksTable",
     "sectionMidPageCtaSection",
     "cardListLatestAsshNewsCardList",
+    "blockArticleCardList",
     "sectionMidPageLeftRightSection",
     "sectionPublication",
     "blockAsshMissionBlueBlock"
@@ -337,10 +434,19 @@ const PlasmicDescendants = {
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
-  asshJournalsSection: ["asshJournalsSection", "sectionQuicklinksTable"],
+  asshJournalsSection: [
+    "asshJournalsSection",
+    "columns",
+    "img",
+    "sectionQuicklinksTable"
+  ],
+
+  columns: ["columns", "img"],
+  img: ["img"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
+  blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageLeftRightSection: ["sectionMidPageLeftRightSection"],
   sectionPublication: ["sectionPublication"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
@@ -384,11 +490,14 @@ export const PlasmicNewsPublicationsOverview = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     asshJournalsSection: makeNodeComponent("asshJournalsSection"),
+    columns: makeNodeComponent("columns"),
+    img: makeNodeComponent("img"),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
     cardListLatestAsshNewsCardList: makeNodeComponent(
       "cardListLatestAsshNewsCardList"
     ),
+    blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageLeftRightSection: makeNodeComponent(
       "sectionMidPageLeftRightSection"
     ),

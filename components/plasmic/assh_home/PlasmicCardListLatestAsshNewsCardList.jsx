@@ -61,14 +61,15 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
     getLatestAsshNews: usePlasmicDataOp(() => {
       return {
         sourceId: "tbVV8SR67UpQ6Z9zuPcDPB",
-        opId: "7f2e364f-ee70-4097-acf8-7f10067b3351",
+        opId: "9b6789c3-8ac1-4080-9c4e-1179726d7db5",
         userArgs: {},
-        cacheKey: `plasmic.$.7f2e364f-ee70-4097-acf8-7f10067b3351.$.`,
+        cacheKey: `plasmic.$.9b6789c3-8ac1-4080-9c4e-1179726d7db5.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -78,7 +79,6 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -156,14 +156,14 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget scelerisque urna.";
+                      return ``;
                     }
                     throw e;
                   }
                 })()}
                 heading={(() => {
                   try {
-                    return currentItem.fields.source;
+                    return currentItem.fields.type;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -195,7 +195,7 @@ function PlasmicCardListLatestAsshNewsCardList__RenderFunc(props) {
                       e instanceof TypeError ||
                       e?.plasmicType === "PlasmicUndefinedDataError"
                     ) {
-                      return "https://www.assh.org";
+                      return ``;
                     }
                     throw e;
                   }

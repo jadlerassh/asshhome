@@ -191,16 +191,22 @@
   }
 }
 .freeBox__v0LlI {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
+  border-left-width: 0px;
+  border-bottom-width: 1px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  grid-row-end: span 1;
   align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
   min-width: 0;
-  border-bottom: 1px solid var(--token-C5aY7m0H85JJ);
+  border-style: solid;
+  border-color: var(--token-C5aY7m0H85JJ);
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .freeBoxcolumns__3Column__v0LlIe7MI {

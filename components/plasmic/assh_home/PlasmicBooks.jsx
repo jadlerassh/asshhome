@@ -24,6 +24,7 @@ import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TP
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import ButtonPrimary from "../../ButtonPrimary"; // plasmic-import: -2HqLDJqJBwh/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
@@ -69,6 +70,7 @@ function PlasmicBooks__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
@@ -86,7 +88,6 @@ function PlasmicBooks__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -247,151 +248,184 @@ function PlasmicBooks__RenderFunc(props) {
               title={"Books: Bunnell Biography"}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__jn5D)}>
-              <div className={classNames(projectcss.all, sty.freeBox___57F4)}>
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__mlqsk)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://images.ctfassets.net/k626j787po4v/6fOALn0tpQfaOhK7Bi8GrC/66ee76568e7c3be0ef8940f109d0ebe0/handbook.png"
-                  }
-                />
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={``}
+              title={"Explore AFSH-Supported Titles"}
+            />
 
-                <h3
-                  data-plasmic-name={"h3"}
-                  data-plasmic-override={overrides.h3}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h3,
-                    projectcss.__wab_text,
-                    sty.h3
-                  )}
-                >
-                  {
-                    "The Hand Book: An Informational Guide for Parents of Children With Hand Differences"
-                  }
-                </h3>
-                <ButtonPrimary
-                  className={classNames(
-                    "__wab_instance",
-                    sty.buttonPrimary__rw0M0
-                  )}
-                  fullWidthBlueInteractions={"brandBlue"}
-                  text={"Learn More and Purchase"}
-                  url={
-                    "https://www.assh.org/s/product-details?id=a135b000009dLhyAAE"
-                  }
-                />
+            <div className={classNames(projectcss.all, sty.columns__bJzPh)}>
+              <div className={classNames(projectcss.all, sty.column__taSnu)}>
+                <div className={classNames(projectcss.all, sty.freeBox___57F4)}>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__mlqsk)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://images.ctfassets.net/k626j787po4v/6fOALn0tpQfaOhK7Bi8GrC/66ee76568e7c3be0ef8940f109d0ebe0/handbook.png"
+                    }
+                  />
+
+                  <h3
+                    data-plasmic-name={"h3"}
+                    data-plasmic-override={overrides.h3}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h3,
+                      projectcss.__wab_text,
+                      sty.h3
+                    )}
+                  >
+                    {
+                      "The Hand Book: An Informational Guide for Parents of Children With Hand Differences"
+                    }
+                  </h3>
+                  <ButtonPrimary
+                    className={classNames(
+                      "__wab_instance",
+                      sty.buttonPrimary__rw0M0
+                    )}
+                    fullWidthBlueInteractions={"brandBlue"}
+                    text={"Learn More and Purchase"}
+                    url={
+                      "https://www.assh.org/s/product-details?id=a135b000009dLhyAAE"
+                    }
+                  />
+                </div>
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox___3Hjok)}>
-                <div className={classNames(projectcss.all, sty.freeBox__q4Q4F)}>
+              <div className={classNames(projectcss.all, sty.column__wV5Ub)}>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___3Hjok)}
+                >
                   <div
-                    className={classNames(projectcss.all, sty.columns___4JM3P)}
+                    className={classNames(projectcss.all, sty.freeBox__q4Q4F)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.column__p6Aw7)}
-                    >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__fi2VN)}
-                        displayHeight={"auto"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"auto"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/assh_home/images/littlerlegacyPng.png",
-                          fullWidth: 1352,
-                          fullHeight: 576,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__npBwr)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.columns___4JM3P
+                      )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___8Ke8
+                          sty.column__p6Aw7
                         )}
                       >
-                        {"The Littler Legacy"}
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__fi2VN)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/assh_home/images/littlerlegacyPng.png",
+                            fullWidth: 1352,
+                            fullHeight: 576,
+                            aspectRatio: undefined
+                          }}
+                        />
                       </div>
-                      <ButtonPrimary
+                      <div
                         className={classNames(
-                          "__wab_instance",
-                          sty.buttonPrimary__xhaq
+                          projectcss.all,
+                          sty.column__npBwr
                         )}
-                        fullWidthBlueInteractions={"brandBlue"}
-                        text={"Learn More"}
-                        url={
-                          "https://www.assh.org/s/product-details?id=a130a000006opvAAAQ"
-                        }
-                      />
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___8Ke8
+                          )}
+                        >
+                          {"The Littler Legacy"}
+                        </div>
+                        <ButtonPrimary
+                          className={classNames(
+                            "__wab_instance",
+                            sty.buttonPrimary__xhaq
+                          )}
+                          fullWidthBlueInteractions={"brandBlue"}
+                          text={"Learn More"}
+                          url={
+                            "https://www.assh.org/s/product-details?id=a130a000006opvAAAQ"
+                          }
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__aWtwt)}>
                   <div
-                    className={classNames(projectcss.all, sty.columns__oVjVx)}
+                    className={classNames(projectcss.all, sty.freeBox__aWtwt)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.column__sZZb)}
+                      className={classNames(projectcss.all, sty.columns__oVjVx)}
                     >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__yoaSc)}
-                        displayHeight={"auto"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"auto"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/assh_home/images/surgRehabPng.png",
-                          fullWidth: 1352,
-                          fullHeight: 576,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.column__iZomT)}
-                    >
+                      <div
+                        className={classNames(projectcss.all, sty.column__sZZb)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__yoaSc)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/assh_home/images/surgRehabPng.png",
+                            fullWidth: 1352,
+                            fullHeight: 576,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </div>
                       <div
                         className={classNames(
                           projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__wPrDq
+                          sty.column__iZomT
                         )}
                       >
-                        {
-                          "Surgical Rehabilitation of the Upper Limb in Tetraplegia, 2nd Ed"
-                        }
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wPrDq
+                          )}
+                        >
+                          {
+                            "Surgical Rehabilitation of the Upper Limb in Tetraplegia, 2nd Ed"
+                          }
+                        </div>
+                        <ButtonPrimary
+                          className={classNames(
+                            "__wab_instance",
+                            sty.buttonPrimary__bi5Iz
+                          )}
+                          fullWidthBlueInteractions={"brandBlue"}
+                          text={"Learn More"}
+                          url={
+                            "https://www.assh.org/s/product-details?id=a135b000009ddQEAAY"
+                          }
+                        />
                       </div>
-                      <ButtonPrimary
-                        className={classNames(
-                          "__wab_instance",
-                          sty.buttonPrimary__bi5Iz
-                        )}
-                        fullWidthBlueInteractions={"brandBlue"}
-                        text={"Learn More"}
-                        url={
-                          "https://www.assh.org/s/product-details?id=a135b000009ddQEAAY"
-                        }
-                      />
                     </div>
                   </div>
                 </div>
@@ -425,6 +459,7 @@ const PlasmicDescendants = {
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "sectionAccordionSectionTemplate",
+    "itemSectionTitleDescriptionItem",
     "h3",
     "blockAsshMissionBlueBlock"
   ],
@@ -432,6 +467,7 @@ const PlasmicDescendants = {
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   h3: ["h3"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -474,6 +510,9 @@ export const PlasmicBooks = Object.assign(
     ),
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
+    ),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
     ),
     h3: makeNodeComponent("h3"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),

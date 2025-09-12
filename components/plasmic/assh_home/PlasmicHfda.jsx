@@ -21,7 +21,7 @@ import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
-import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
+import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
@@ -163,13 +163,14 @@ function PlasmicHfda__RenderFunc(props) {
               title={"About the HFDA"}
             />
 
-            <BlockQuicklinksTanBox
-              data-plasmic-name={"blockQuicklinksTanBox"}
-              data-plasmic-override={overrides.blockQuicklinksTanBox}
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
               className={classNames(
                 "__wab_instance",
-                sty.blockQuicklinksTanBox
+                sty.sectionQuicklinksTable
               )}
+              columns={"_3Column"}
               name={"HFDA Home Quicklinks"}
             />
 
@@ -208,7 +209,7 @@ const PlasmicDescendants = {
     "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "htmlContentfulHtmlLoader",
-    "blockQuicklinksTanBox",
+    "sectionQuicklinksTable",
     "blockArticleCardList",
     "blockAsshMissionBlueBlock"
   ],
@@ -218,12 +219,12 @@ const PlasmicDescendants = {
   freeBox: [
     "freeBox",
     "htmlContentfulHtmlLoader",
-    "blockQuicklinksTanBox",
+    "sectionQuicklinksTable",
     "blockArticleCardList"
   ],
 
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
-  blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
+  sectionQuicklinksTable: ["sectionQuicklinksTable"],
   blockArticleCardList: ["blockArticleCardList"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -266,7 +267,7 @@ export const PlasmicHfda = Object.assign(
     ),
     freeBox: makeNodeComponent("freeBox"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
-    blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
+    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicHfda

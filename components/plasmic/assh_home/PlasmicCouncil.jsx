@@ -20,6 +20,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
+import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockListPersonWithImages from "../../BlockListPersonWithImages"; // plasmic-import: ELOUh3SPRHxF/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
@@ -140,6 +141,16 @@ function PlasmicCouncil__RenderFunc(props) {
             })()}
           />
 
+          <SectionInternalHeroTitleSectionV2
+            data-plasmic-name={"sectionInternalHeroTitleSectionV2"}
+            data-plasmic-override={overrides.sectionInternalHeroTitleSectionV2}
+            className={classNames(
+              "__wab_instance",
+              sty.sectionInternalHeroTitleSectionV2
+            )}
+            title={"Hero: Council - Title Card"}
+          />
+
           <div
             data-plasmic-name={"freeBox"}
             data-plasmic-override={overrides.freeBox}
@@ -190,6 +201,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "sectionBreadcrumbs",
+    "sectionInternalHeroTitleSectionV2",
     "freeBox",
     "htmlContentfulHtmlLoader",
     "blockListPersonWithImages",
@@ -197,6 +209,7 @@ const PlasmicDescendants = {
   ],
 
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
+  sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   freeBox: ["freeBox", "htmlContentfulHtmlLoader", "blockListPersonWithImages"],
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockListPersonWithImages: ["blockListPersonWithImages"],
@@ -236,6 +249,9 @@ export const PlasmicCouncil = Object.assign(
   {
     // Helper components rendering sub-elements
     sectionBreadcrumbs: makeNodeComponent("sectionBreadcrumbs"),
+    sectionInternalHeroTitleSectionV2: makeNodeComponent(
+      "sectionInternalHeroTitleSectionV2"
+    ),
     freeBox: makeNodeComponent("freeBox"),
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockListPersonWithImages: makeNodeComponent("blockListPersonWithImages"),

@@ -23,7 +23,7 @@
   display: flex;
   overflow: hidden;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   column-gap: 30px;
   min-width: 0;
@@ -56,7 +56,7 @@
   overflow: hidden;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-shrink: 0;
   border-radius: 10px;
 }
@@ -118,14 +118,17 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-self: stretch;
+  row-gap: 10px;
   min-width: 0;
 }
 .description {
   display: block;
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 0em;
   line-height: 28px;
   color: rgba(49, 51, 55, 1);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 .description2 {
   display: block;
@@ -136,4 +139,5 @@
   align-self: stretch;
   position: relative;
   font-style: italic;
+  font-family: "Inter", sans-serif;
 }

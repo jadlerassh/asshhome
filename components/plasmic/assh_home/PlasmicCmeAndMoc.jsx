@@ -22,6 +22,7 @@ import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
+import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
 import BlockTanCtaBlock from "../../BlockTanCtaBlock"; // plasmic-import: YJsN7RAC0P0B/component
@@ -69,6 +70,7 @@ function PlasmicCmeAndMoc__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   let [$queries, setDollarQueries] = React.useState({});
   const new$Queries = {
     getHtmlContent: usePlasmicDataOp(() => {
@@ -86,7 +88,6 @@ function PlasmicCmeAndMoc__RenderFunc(props) {
     setDollarQueries(new$Queries);
     $queries = new$Queries;
   }
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -178,6 +179,19 @@ function PlasmicCmeAndMoc__RenderFunc(props) {
                 sty.sectionQuicklinksTable
               )}
               name={"CME and MOC Quicklinks"}
+            />
+
+            <ItemSectionTitleDescriptionItem
+              data-plasmic-name={"itemSectionTitleDescriptionItem"}
+              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+              className={classNames(
+                "__wab_instance",
+                sty.itemSectionTitleDescriptionItem
+              )}
+              descriptionSection={
+                "Each board has different rules and requirements when reporting CME credits. Easily find what steps you may need to take for each board below."
+              }
+              title={"CME Credit Reporting by Board"}
             />
 
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
@@ -300,6 +314,7 @@ const PlasmicDescendants = {
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "sectionQuicklinksTable",
+    "itemSectionTitleDescriptionItem",
     "sectionAccordionSectionTemplate",
     "sectionUpcomingCouresEventsSection",
     "blockTanCtaBlock",
@@ -309,6 +324,7 @@ const PlasmicDescendants = {
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
+  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
   blockTanCtaBlock: ["blockTanCtaBlock"],
@@ -352,6 +368,9 @@ export const PlasmicCmeAndMoc = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
+    itemSectionTitleDescriptionItem: makeNodeComponent(
+      "itemSectionTitleDescriptionItem"
+    ),
     sectionAccordionSectionTemplate: makeNodeComponent(
       "sectionAccordionSectionTemplate"
     ),

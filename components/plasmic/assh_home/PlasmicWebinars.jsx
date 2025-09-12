@@ -22,7 +22,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
-import ItemAsshSelectNew from "../../ItemAsshSelectNew"; // plasmic-import: n30EpbAc0Gwf/component
+import ItemAsshMultiSelectNew from "../../ItemAsshMultiSelectNew"; // plasmic-import: n30EpbAc0Gwf/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
@@ -192,7 +192,7 @@ function PlasmicWebinars__RenderFunc(props) {
                 />
 
                 <div className={classNames(projectcss.all, sty.freeBox__eHD4)}>
-                  <ItemAsshSelectNew
+                  <ItemAsshMultiSelectNew
                     data-plasmic-name={"itemAsshSelectNew"}
                     data-plasmic-override={overrides.itemAsshSelectNew}
                     className={classNames(

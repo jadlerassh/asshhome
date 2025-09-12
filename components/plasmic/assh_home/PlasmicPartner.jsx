@@ -218,7 +218,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "Reach engaged hand and upper extremity specialists through accredited, peer-reviewed learning opportunities."
                   }
                   heading={"Engagement"}
-                  linkUrl={"https://www.assh.org/s/about/partner/education"}
+                  linkUrl={"/s/about/partner/education"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__hzXl6)}>
@@ -232,21 +232,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "Whether in the ASSH's weekly member newsletter or a standalone email, we offer customized email advertising opportunities."
                   }
                   heading={"Advertising"}
-                  linkUrl={"https://www.assh.org/s/about/partner/email"}
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__t320R)}>
-                <ItemArticleCardItemWithDescription
-                  articleTitle={"Hand.e"}
-                  className={classNames(
-                    "__wab_instance",
-                    sty.itemArticleCardItemWithDescription__j6Mt4
-                  )}
-                  description={
-                    "Collaborate with our surgical video library to promote your brand alongside thousands of hand and upper extremity videos."
-                  }
-                  heading={"Advertising"}
-                  linkUrl={"https://www.assh.org/s/about/partner/hande"}
+                  linkUrl={"/s/about/partner/email"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__vUq0Y)}>
@@ -260,7 +246,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "This opportunity allows partners to share their message with our highly engaged surgeon and medical professionals."
                   }
                   heading={"Advertising"}
-                  linkUrl={"https://www.assh.org/s/about/partner/handp-podcast"}
+                  linkUrl={"/s/about/partner/handp-podcast"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__idsfi)}>
@@ -290,7 +276,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "Connect with targeted audiences in both hand and upper extremity care by renting the ASSH's detailed mailing lists."
                   }
                   heading={"Engagement"}
-                  linkUrl={"https://www.assh.org/s/about/partner/mailing-lists"}
+                  linkUrl={"/s/about/partner/mailing-lists"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__azLV)}>
@@ -320,7 +306,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "Support scholarships to trainees and active duty military surgeons to attend the ASSH Annual Meeting."
                   }
                   heading={"Sponsorship"}
-                  linkUrl={"https://www.assh.org/s/about/partner/scholarship"}
+                  linkUrl={"/s/about/partner/scholarship"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__mmBHx)}>
@@ -334,7 +320,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "Learn how to send a survey to ASSH membership, giving you unique access to response data."
                   }
                   heading={"Sponsorship"}
-                  linkUrl={"https://www.assh.org/s/about/partner/surveys"}
+                  linkUrl={"/s/about/partner/sponsored-surveys"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__u0Z6I)}>
@@ -345,10 +331,10 @@ function PlasmicPartner__RenderFunc(props) {
                     sty.itemArticleCardItemWithDescription__qUeIt
                   )}
                   description={
-                    "Highlight your products and services by advertising on ASSH.org, which serves as a website both for the public and our members."
+                    "Highlight your products and services by advertising on the ASSH's different websites, which are accessible by both the public and our members."
                   }
                   heading={"Advertising"}
-                  linkUrl={"https://www.assh.org/s/about/partner/web"}
+                  linkUrl={"/s/about/partner/web"}
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__lMixd)}>
@@ -362,7 +348,7 @@ function PlasmicPartner__RenderFunc(props) {
                     "Support the growth of future leaders in hand surgery by partnering with ASSH\u2019s Young Leaders Program."
                   }
                   heading={"Sponsorship"}
-                  linkUrl={"https://www.assh.org/s/about/partner/young-leaders"}
+                  linkUrl={"/s/about/partner/young-leaders"}
                 />
               </div>
             </div>

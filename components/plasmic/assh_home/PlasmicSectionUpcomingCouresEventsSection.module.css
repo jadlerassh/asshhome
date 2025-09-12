@@ -123,6 +123,7 @@
     height: auto;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 100%;
     min-width: 0;
     --plsmc-rc-col-gap: 40px;
   }

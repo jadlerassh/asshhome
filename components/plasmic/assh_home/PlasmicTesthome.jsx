@@ -21,7 +21,7 @@ import {
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
-import SectionHomeMenuSection from "../../SectionHomeMenuSection"; // plasmic-import: Lqz3M24J43AC/component
+import SectionHomeMenuSectionOld95 from "../../SectionHomeMenuSectionOld95"; // plasmic-import: Lqz3M24J43AC/component
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
@@ -88,7 +88,8 @@ function PlasmicTesthome__RenderFunc(props) {
         path: "sectionHomeMenuSectionJaRedo.openMenu",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "NONE"
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          "Mega Menu - Membership"
       },
       {
         path: "sectionHomeMenuSectionJaRedo.activeVariant",
@@ -174,7 +175,7 @@ function PlasmicTesthome__RenderFunc(props) {
             sty.asshHome
           )}
         >
-          <SectionHomeMenuSection
+          <SectionHomeMenuSectionOld95
             data-plasmic-name={"sectionHomeMenuSectionJaRedo"}
             data-plasmic-override={overrides.sectionHomeMenuSectionJaRedo}
             activeMobileVariant={generateStateValueProp($state, [
@@ -215,7 +216,7 @@ function PlasmicTesthome__RenderFunc(props) {
                 return;
               }
             }}
-            onOpenDropdownChange={async (...eventArgs) => {
+            onOpenDropdownChange2={async (...eventArgs) => {
               generateStateOnChangeProp($state, [
                 "sectionHomeMenuSectionJaRedo",
                 "openDropdown"
@@ -228,7 +229,7 @@ function PlasmicTesthome__RenderFunc(props) {
                 return;
               }
             }}
-            onOpenMenuChange={async (...eventArgs) => {
+            onOpenMenuChange2={async (...eventArgs) => {
               generateStateOnChangeProp($state, [
                 "sectionHomeMenuSectionJaRedo",
                 "openMenu"

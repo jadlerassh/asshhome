@@ -63,7 +63,11 @@ export const PlasmicButtonPrimary__VariantProps = new Array(
   "eventNameLink"
 );
 
-export const PlasmicButtonPrimary__ArgProps = new Array("text", "url");
+export const PlasmicButtonPrimary__ArgProps = new Array(
+  "text",
+  "url",
+  "newTab"
+);
 
 const $$ = {};
 
@@ -81,7 +85,8 @@ function PlasmicButtonPrimary__RenderFunc(props) {
       Object.assign(
         {
           text: "Button Text",
-          url: "https://www.assh.org"
+          url: "https://www.assh.org/",
+          newTab: false
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -97,6 +102,7 @@ function PlasmicButtonPrimary__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -241,7 +247,6 @@ function PlasmicButtonPrimary__RenderFunc(props) {
   const triggers = {
     hover_root: isRootHover
   };
-  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -536,6 +541,19 @@ function PlasmicButtonPrimary__RenderFunc(props) {
           }
         })()}
         platform={"nextjs"}
+        target={(() => {
+          try {
+            return $props.newTab;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return undefined;
+            }
+            throw e;
+          }
+        })()}
       >
         <div
           data-plasmic-name={"icon12X12"}

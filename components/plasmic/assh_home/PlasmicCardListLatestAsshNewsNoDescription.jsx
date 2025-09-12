@@ -154,7 +154,7 @@ function PlasmicCardListLatestAsshNewsNoDescription__RenderFunc(props) {
                 description={``}
                 heading={(() => {
                   try {
-                    return currentItem.fields.source;
+                    return currentItem.fields.type;
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
