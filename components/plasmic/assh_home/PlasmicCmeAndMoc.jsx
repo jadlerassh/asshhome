@@ -22,6 +22,7 @@ import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import
 import SectionBreadcrumbs from "../../SectionBreadcrumbs"; // plasmic-import: TPxxugejEIaa/component
 import SectionInternalHeroTitleSectionV2 from "../../SectionInternalHeroTitleSectionV2"; // plasmic-import: xL1xlGlXhY87/component
 import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
+import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import SectionAccordionSectionTemplate from "../../SectionAccordionSectionTemplate"; // plasmic-import: RAMfSAUHc9g1/component
 import SectionUpcomingCouresEventsSection from "../../SectionUpcomingCouresEventsSection"; // plasmic-import: aDAIm3T_wfOv/component
@@ -181,6 +182,16 @@ function PlasmicCmeAndMoc__RenderFunc(props) {
               name={"CME and MOC Quicklinks"}
             />
 
+            <HtmlContentfulHtmlLoader
+              data-plasmic-name={"htmlContentfulHtmlLoader"}
+              data-plasmic-override={overrides.htmlContentfulHtmlLoader}
+              className={classNames(
+                "__wab_instance",
+                sty.htmlContentfulHtmlLoader
+              )}
+              title={"CME Resources"}
+            />
+
             <ItemSectionTitleDescriptionItem
               data-plasmic-name={"itemSectionTitleDescriptionItem"}
               data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
@@ -314,6 +325,7 @@ const PlasmicDescendants = {
     "sectionBreadcrumbs",
     "sectionInternalHeroTitleSectionV2",
     "sectionQuicklinksTable",
+    "htmlContentfulHtmlLoader",
     "itemSectionTitleDescriptionItem",
     "sectionAccordionSectionTemplate",
     "sectionUpcomingCouresEventsSection",
@@ -324,6 +336,7 @@ const PlasmicDescendants = {
   sectionBreadcrumbs: ["sectionBreadcrumbs"],
   sectionInternalHeroTitleSectionV2: ["sectionInternalHeroTitleSectionV2"],
   sectionQuicklinksTable: ["sectionQuicklinksTable"],
+  htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
   sectionAccordionSectionTemplate: ["sectionAccordionSectionTemplate"],
   sectionUpcomingCouresEventsSection: ["sectionUpcomingCouresEventsSection"],
@@ -368,6 +381,7 @@ export const PlasmicCmeAndMoc = Object.assign(
       "sectionInternalHeroTitleSectionV2"
     ),
     sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
+    htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     itemSectionTitleDescriptionItem: makeNodeComponent(
       "itemSectionTitleDescriptionItem"
     ),

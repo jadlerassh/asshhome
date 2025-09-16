@@ -32,7 +32,7 @@ createPlasmicElementProxy;
 
 export const PlasmicMyAccount__VariantProps = new Array();
 
-export const PlasmicMyAccount__ArgProps = new Array();
+export const PlasmicMyAccount__ArgProps = new Array("userdetails");
 
 const $$ = {};
 
@@ -189,6 +189,63 @@ function PlasmicMyAccount__RenderFunc(props) {
                 return;
               }
             }}
+            userdetails={(() => {
+              try {
+                return $props.userdetails;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return {
+                    Webrole: "test",
+                    userDashboard: {
+                      yearsOfMembership: 0,
+                      totalDonations: 0,
+                      meetingAttendance: 0,
+                      FASHViews: 0,
+                      FAHSMostViewed: 0,
+                      educationActivities: 0,
+                      cards: [
+                        {
+                          name: "myepubs",
+                          cardItems: [
+                            {
+                              name: "Epub - Fractures and Dislocations of the Hand and Fingers",
+                              id: "a13j000000091zjAAA"
+                            },
+                            {
+                              name: "Epub - Fractures and Dislocations of the Hand and Fingers",
+                              id: "a13j000000091zjAAA"
+                            },
+                            {
+                              name: "Epub - Fractures and Dislocations of the Hand and Fingers",
+                              id: "a13j000000091zjAAA"
+                            }
+                          ]
+                        }
+                      ],
+
+                      averageDonation: 0
+                    },
+                    donationLevel: "",
+                    Photo:
+                      "https://handsociety.s3.amazonaws.com/members_photo/profile/127185.png",
+                    PersonTitle:
+                      "Director of Finger, Hand, Wrist and Shoulder Surgery",
+                    Name: null,
+                    MemberType: "Active Member",
+                    JoinDate: "01/01/1999",
+                    Fullname: "Dr. Thomas F Crain",
+                    FirstName: "Thomas",
+                    FAHSEligible: true,
+                    Designation: "MD",
+                    ASSHID: ""
+                  };
+                }
+                throw e;
+              }
+            })()}
           />
         </div>
       </div>

@@ -46,7 +46,8 @@ export const PlasmicSectionMyDashboard__ArgProps = new Array(
   "accountMemberType",
   "averageAccountTypeDonations",
   "fahsViews",
-  "percentMostViewed"
+  "percentMostViewed",
+  "userdetails"
 );
 
 const $$ = {};
@@ -63,7 +64,52 @@ function PlasmicSectionMyDashboard__RenderFunc(props) {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          userdetails: {
+            Webrole: "test",
+            userDashboard: {
+              yearsOfMembership: 0,
+              totalDonations: 0,
+              meetingAttendance: 0,
+              FASHViews: 0,
+              FAHSMostViewed: 0,
+              educationActivities: 0,
+              cards: [
+                {
+                  name: "myepubs",
+                  cardItems: [
+                    {
+                      name: "Epub - Fractures and Dislocations of the Hand and Fingers",
+                      id: "a13j000000091zjAAA"
+                    },
+                    {
+                      name: "Epub - Fractures and Dislocations of the Hand and Fingers",
+                      id: "a13j000000091zjAAA"
+                    },
+                    {
+                      name: "Epub - Fractures and Dislocations of the Hand and Fingers",
+                      id: "a13j000000091zjAAA"
+                    }
+                  ]
+                }
+              ],
+
+              averageMemberDonation: 0
+            },
+            donationLevel: null,
+            Photo:
+              "https://handsociety.s3.amazonaws.com/members_photo/profile/127185.png",
+            PersonTitle: "Director of Finger, Hand, Wrist and Shoulder Surgery",
+            Name: null,
+            MemberType: "Active Member",
+            JoinDate: "01/01/1999",
+            Fullname: "Dr. Thomas F Crain",
+            FirstName: "Thomas",
+            FAHSEligible: true,
+            Designation: "MD",
+            ASSHID: ""
+          }
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -279,7 +325,7 @@ function PlasmicSectionMyDashboard__RenderFunc(props) {
                   {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                     (() => {
                       try {
-                        return $props.committees.committees;
+                        return $props.committees;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -491,7 +537,7 @@ function PlasmicSectionMyDashboard__RenderFunc(props) {
                   {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                     (() => {
                       try {
-                        return $props.ePubs.ebooks;
+                        return $props.ePubs;
                       } catch (e) {
                         if (
                           e instanceof TypeError ||
@@ -517,7 +563,7 @@ function PlasmicSectionMyDashboard__RenderFunc(props) {
                         component={Link}
                         href={(() => {
                           try {
-                            return currentItem.url;
+                            return $props.ePubs;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||

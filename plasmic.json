@@ -4091,6 +4091,32 @@
           "cssFilePath": "plasmic/assh_home/PlasmicComponentEventDetail.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "UTZ2_BdAOq81",
+          "name": "ComponentMyAccountGapura",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicComponentMyAccountGapura.jsx",
+          "importSpec": {
+            "modulePath": "ComponentMyAccountGapura.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicComponentMyAccountGapura.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "ZPktcpo6NHg1",
+          "name": "SectionCmeMoc",
+          "type": "managed",
+          "projectId": "34tvEQuyqfK98iGCjMbawB",
+          "renderModuleFilePath": "plasmic/assh_home/PlasmicSectionCmeMoc.jsx",
+          "importSpec": {
+            "modulePath": "SectionCmeMoc.jsx"
+          },
+          "cssFilePath": "plasmic/assh_home/PlasmicSectionCmeMoc.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

@@ -378,7 +378,8 @@ function PlasmicSectionMidPageBannerWithQuicklinks__RenderFunc(props) {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__em5RI
+                              sty.text__em5RI,
+                              "homequicklink-highlight"
                             )}
                           >
                             <React.Fragment>

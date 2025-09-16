@@ -102,6 +102,11 @@
 .columns > :nth-child(3n + 3) {
   width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 4 / 12);
 }
+@media (max-width: 1535px) {
+  .columns {
+    --plsmc-rc-col-gap: 0px;
+  }
+}
 @media (max-width: 1023px) {
   .columns {
     --plsmc-rc-col-gap: 0px;
@@ -135,8 +140,13 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .column__a7TYz {
-    border-top: 1px solid var(--token-qlu48Znff4s0);
-    border-bottom: 1px solid var(--token-qlu48Znff4s0);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-color: var(--token-C5aY7m0H85JJ);
+    border-bottom-color: var(--token-C5aY7m0H85JJ);
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-style: solid;
   }
 }
 .itemCalloutItem__cgEtv:global(.__wab_instance) {
@@ -151,15 +161,34 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: center;
+  border-left-width: 1px;
+  border-bottom-width: 0px;
+  border-right-width: 1px;
+  border-top-width: 0px;
   min-width: 0;
-  border: 1px solid var(--token-dhz6eQ3B9RE7);
+  border-style: solid;
+  border-color: var(--token-dhz6eQ3B9RE7);
+}
+@media (max-width: 1535px) {
+  .column__ukLpz {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-color: var(--token-dhz6eQ3B9RE7);
+  }
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .column__ukLpz {
     border-top-width: 1px;
+    border-right-width: 0px;
     border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-top-color: var(--token-dhz6eQ3B9RE7);
+    border-bottom-color: var(--token-dhz6eQ3B9RE7);
     border-style: solid;
-    border-color: var(--token-qlu48Znff4s0);
   }
 }
 @media (max-width: 480px) {
@@ -184,7 +213,15 @@
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .column__sbr33 {
-    border: 1px solid var(--token-qlu48Znff4s0);
+    border-top-width: 1px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-top-color: var(--token-C5aY7m0H85JJ);
+    border-right-color: var(--token-qlu48Znff4s0);
+    border-bottom-color: var(--token-C5aY7m0H85JJ);
+    border-left-color: var(--token-qlu48Znff4s0);
+    border-style: solid;
   }
 }
 .itemCalloutItem__tdZa:global(.__wab_instance) {

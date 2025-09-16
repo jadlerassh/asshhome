@@ -717,6 +717,7 @@
   flex-shrink: 1;
   text-align: left;
   padding-right: 0px;
+  height: auto;
 }
 @media (max-width: 1023px) {
   .text2 {
@@ -778,6 +779,7 @@
 }
 .text2fullWidthSecondary {
   font-weight: 500;
+  line-height: 30px;
 }
 .text2smallTextLink {
   color: var(--token-py5R6wetCsNw);

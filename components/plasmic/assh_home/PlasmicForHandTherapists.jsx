@@ -24,7 +24,7 @@ import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionIt
 import HtmlContentfulHtmlLoader from "../../HtmlContentfulHtmlLoader"; // plasmic-import: yo4cxXaLxoOm/component
 import BlockArticleCardList from "../../BlockArticleCardList"; // plasmic-import: HfgRxg6hxFsA/component
 import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmic-import: yV5r8KM9AbUW/component
-import BlockQuicklinksTanBox from "../../BlockQuicklinksTanBox"; // plasmic-import: 58JBrSEW4yoW/component
+import SectionQuicklinksTable from "../../SectionQuicklinksTable"; // plasmic-import: dzBXgCr_C9up/component
 import BlockPublicationHighlight from "../../BlockPublicationHighlight"; // plasmic-import: UkJ-zcT0QvMv/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
@@ -202,13 +202,14 @@ function PlasmicForHandTherapists__RenderFunc(props) {
           />
 
           <div className={classNames(projectcss.all, sty.freeBox__pOpFj)}>
-            <BlockQuicklinksTanBox
-              data-plasmic-name={"blockQuicklinksTanBox"}
-              data-plasmic-override={overrides.blockQuicklinksTanBox}
+            <SectionQuicklinksTable
+              data-plasmic-name={"sectionQuicklinksTable"}
+              data-plasmic-override={overrides.sectionQuicklinksTable}
               className={classNames(
                 "__wab_instance",
-                sty.blockQuicklinksTanBox
+                sty.sectionQuicklinksTable
               )}
+              columns={"_3Column"}
               name={"For Hand Therapists Quicklinks: Resources"}
             />
 
@@ -254,7 +255,7 @@ const PlasmicDescendants = {
     "htmlContentfulHtmlLoader",
     "blockArticleCardList",
     "sectionMidPageCtaSection",
-    "blockQuicklinksTanBox",
+    "sectionQuicklinksTable",
     "blockPublicationHighlight",
     "blockAsshMissionBlueBlock"
   ],
@@ -267,7 +268,7 @@ const PlasmicDescendants = {
   htmlContentfulHtmlLoader: ["htmlContentfulHtmlLoader"],
   blockArticleCardList: ["blockArticleCardList"],
   sectionMidPageCtaSection: ["sectionMidPageCtaSection"],
-  blockQuicklinksTanBox: ["blockQuicklinksTanBox"],
+  sectionQuicklinksTable: ["sectionQuicklinksTable"],
   blockPublicationHighlight: ["blockPublicationHighlight"],
   blockAsshMissionBlueBlock: ["blockAsshMissionBlueBlock"]
 };
@@ -316,7 +317,7 @@ export const PlasmicForHandTherapists = Object.assign(
     htmlContentfulHtmlLoader: makeNodeComponent("htmlContentfulHtmlLoader"),
     blockArticleCardList: makeNodeComponent("blockArticleCardList"),
     sectionMidPageCtaSection: makeNodeComponent("sectionMidPageCtaSection"),
-    blockQuicklinksTanBox: makeNodeComponent("blockQuicklinksTanBox"),
+    sectionQuicklinksTable: makeNodeComponent("sectionQuicklinksTable"),
     blockPublicationHighlight: makeNodeComponent("blockPublicationHighlight"),
     blockAsshMissionBlueBlock: makeNodeComponent("blockAsshMissionBlueBlock"),
     // Metadata about props expected for PlasmicForHandTherapists

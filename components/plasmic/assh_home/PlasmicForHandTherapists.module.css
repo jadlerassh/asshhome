@@ -26,6 +26,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 1279px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 @media (max-width: 1023px) {
   .root > * {
     grid-column: 4;
@@ -179,11 +184,14 @@
     margin: 50px 0px;
   }
 }
-.blockQuicklinksTanBox:global(.__wab_instance) {
+.sectionQuicklinksTable:global(.__wab_instance) {
   max-width: 100%;
-  width: 100%;
-  min-width: 0;
-  margin: 0px 0px 50px;
+  margin: 0px 0px 70px;
+}
+@media (max-width: 1279px) {
+  .sectionQuicklinksTable:global(.__wab_instance) {
+    margin: 0px 0px 50px;
+  }
 }
 .blockPublicationHighlight:global(.__wab_instance) {
   max-width: 100%;

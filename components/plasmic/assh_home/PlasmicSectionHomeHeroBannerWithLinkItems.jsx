@@ -168,7 +168,7 @@ function PlasmicSectionHomeHeroBannerWithLinkItems__RenderFunc(props) {
                       )}
                       darkInteractions={"dark"}
                       text={"Join ASSH"}
-                      url={"https://www.assh.org/membership/join-assh"}
+                      url={"/s/membership"}
                     />
                   </div>
                 </div>

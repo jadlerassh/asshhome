@@ -292,30 +292,71 @@ function PlasmicSectionAccordionSectionTemplate__RenderFunc(props) {
           <div
             data-plasmic-name={"membershipContentGroup"}
             data-plasmic-override={overrides.membershipContentGroup}
-            className={classNames(projectcss.all, sty.membershipContentGroup)}
+            className={classNames(projectcss.all, sty.membershipContentGroup, {
+              [sty.membershipContentGroupopenInteractions_open]: hasVariant(
+                $state,
+                "openInteractions",
+                "open"
+              )
+            })}
           >
             <div
               data-plasmic-name={"content"}
               data-plasmic-override={overrides.content}
-              className={classNames(projectcss.all, sty.content)}
+              className={classNames(
+                projectcss.all,
+                sty.content,
+                hasVariant($state, "openInteractions", "open")
+                  ? "html-contentful-wrapper"
+                  : undefined,
+                {
+                  [sty.contentopenInteractions_open]: hasVariant(
+                    $state,
+                    "openInteractions",
+                    "open"
+                  )
+                }
+              )}
             >
               <Embed
                 data-plasmic-name={"embedHtml"}
                 data-plasmic-override={overrides.embedHtml}
-                className={classNames("__wab_instance", sty.embedHtml)}
-                code={(() => {
-                  try {
-                    return $props.bodyContent;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "<div>Paste your embed code via the right sidebar</div>";
-                    }
-                    throw e;
-                  }
-                })()}
+                className={classNames("__wab_instance", sty.embedHtml, {
+                  [sty.embedHtmlopenInteractions_open]: hasVariant(
+                    $state,
+                    "openInteractions",
+                    "open"
+                  )
+                })}
+                code={
+                  hasVariant($state, "openInteractions", "open")
+                    ? (() => {
+                        try {
+                          return $props.bodyContent;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()
+                    : (() => {
+                        try {
+                          return $props.bodyContent;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "<div>Paste your embed code via the right sidebar</div>";
+                          }
+                          throw e;
+                        }
+                      })()
+                }
               />
 
               <div

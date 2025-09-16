@@ -20,7 +20,6 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import { usePlasmicDataOp } from "@plasmicapp/react-web/lib/data-sources";
 import SectionHomeHeroBannerWithLinkItems from "../../SectionHomeHeroBannerWithLinkItems"; // plasmic-import: KrK4IjZZwAsd/component
 import ItemAd from "../../ItemAd"; // plasmic-import: GN0Rszdi6Y-X/component
-import ItemSectionTitleDescriptionItem from "../../ItemSectionTitleDescriptionItem"; // plasmic-import: jaOmCC9X_Oxf/component
 import CardListLatestAsshNewsCardList from "../../CardListLatestAsshNewsCardList"; // plasmic-import: LYSFypEhTAsc/component
 import CardListLatestAsshNewsNoDescription from "../../CardListLatestAsshNewsNoDescription"; // plasmic-import: U6mPAYwUm4oe/component
 import SectionMidPageBannerWithQuicklinks from "../../SectionMidPageBannerWithQuicklinks"; // plasmic-import: hQw6wQfUz2Ua/component
@@ -144,19 +143,31 @@ function PlasmicHomepage__RenderFunc(props) {
 
           <ItemAd className={classNames("__wab_instance", sty.itemAd__ah4Ac)} />
           <div className={classNames(projectcss.all, sty.freeBox__r0558)}>
-            <ItemSectionTitleDescriptionItem
-              data-plasmic-name={"itemSectionTitleDescriptionItem"}
-              data-plasmic-override={overrides.itemSectionTitleDescriptionItem}
+            <h2
+              data-plasmic-name={"h2"}
+              data-plasmic-override={overrides.h2}
               className={classNames(
-                "__wab_instance",
-                sty.itemSectionTitleDescriptionItem
+                projectcss.all,
+                projectcss.h2,
+                projectcss.__wab_text,
+                sty.h2
               )}
-              descriptionSection={
-                "Welcome to your source for the latest findings, research, and news impacting upper extremity surgery. "
+            >
+              {"News from ASSH"}
+            </h2>
+            <div
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text
+              )}
+            >
+              {
+                "Welcome to your source for the latest updates impacting ASSH and the field of hand and upper extremity surgery."
               }
-              title={"News from ASSH"}
-            />
-
+            </div>
             <CardListLatestAsshNewsCardList
               data-plasmic-name={"cardListLatestAsshNewsCardList"}
               data-plasmic-override={overrides.cardListLatestAsshNewsCardList}
@@ -236,7 +247,8 @@ const PlasmicDescendants = {
   asshHome: [
     "asshHome",
     "sectionHomeHeroBannerWithLinkItems",
-    "itemSectionTitleDescriptionItem",
+    "h2",
+    "text",
     "cardListLatestAsshNewsCardList",
     "cardListLatestAsshNewsNoDescription",
     "sectionMidPageBannerWithQuicklinks",
@@ -247,7 +259,8 @@ const PlasmicDescendants = {
   ],
 
   sectionHomeHeroBannerWithLinkItems: ["sectionHomeHeroBannerWithLinkItems"],
-  itemSectionTitleDescriptionItem: ["itemSectionTitleDescriptionItem"],
+  h2: ["h2"],
+  text: ["text"],
   cardListLatestAsshNewsCardList: ["cardListLatestAsshNewsCardList"],
   cardListLatestAsshNewsNoDescription: ["cardListLatestAsshNewsNoDescription"],
   sectionMidPageBannerWithQuicklinks: ["sectionMidPageBannerWithQuicklinks"],
@@ -292,9 +305,8 @@ export const PlasmicHomepage = Object.assign(
     sectionHomeHeroBannerWithLinkItems: makeNodeComponent(
       "sectionHomeHeroBannerWithLinkItems"
     ),
-    itemSectionTitleDescriptionItem: makeNodeComponent(
-      "itemSectionTitleDescriptionItem"
-    ),
+    h2: makeNodeComponent("h2"),
+    text: makeNodeComponent("text"),
     cardListLatestAsshNewsCardList: makeNodeComponent(
       "cardListLatestAsshNewsCardList"
     ),

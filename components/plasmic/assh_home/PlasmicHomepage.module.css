@@ -87,8 +87,21 @@
     margin: 50px 0px;
   }
 }
-.itemSectionTitleDescriptionItem:global(.__wab_instance) {
+.h2 {
+  width: 100%;
+  height: auto;
   max-width: 100%;
+  font-family: "Manrope", sans-serif;
+  min-width: 0;
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  min-width: 0;
 }
 .cardListLatestAsshNewsCardList:global(.__wab_instance) {
   max-width: 100%;

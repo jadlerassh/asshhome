@@ -213,7 +213,12 @@ function PlasmicSectionMidPageLeftRightSection__RenderFunc(props) {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__jAIF
+                    sty.text__jAIF,
+                    hasVariant(globalVariants, "screen", "largeMobile")
+                      ? "mobile-left-header"
+                      : hasVariant(globalVariants, "screen", "tablet")
+                      ? "mobile-left-header"
+                      : undefined
                   )}
                 >
                   <React.Fragment>

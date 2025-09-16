@@ -282,7 +282,8 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.navigationItem
+                          sty.navigationItem,
+                          "homefeaturededucation-highlight"
                         )}
                       >
                         {"New Handthology Chapter: Wound Management"}
@@ -437,7 +438,8 @@ function PlasmicSectionFeaturedEducation__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.navigationItem2
+                            sty.navigationItem2,
+                            "homefeaturededucation-highlight"
                           )}
                         >
                           <React.Fragment>

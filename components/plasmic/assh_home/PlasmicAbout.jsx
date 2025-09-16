@@ -14,7 +14,8 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import SectionAdPlaceholder from "../../SectionAdPlaceholder"; // plasmic-import: MWRaB-Trol6D/component
@@ -26,6 +27,7 @@ import SectionMidPageCtaSection from "../../SectionMidPageCtaSection"; // plasmi
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 import BlockQuoteBlock from "../../BlockQuoteBlock"; // plasmic-import: pkNfPBeJPFGR/component
 import BlockAsshMissionBlueBlock from "../../BlockAsshMissionBlueBlock"; // plasmic-import: oMTPDeBb_fES/component
+import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 34tvEQuyqfK98iGCjMbawB/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_antd_5_hostless } from "../antd_5_hostless/PlasmicStyleTokensProvider"; // plasmic-import: ohDidvG9XsCeFumugENU3J/styleTokensProvider
 import { _useStyleTokens as useStyleTokens_plasmic_rich_components } from "../plasmic_rich_components/PlasmicStyleTokensProvider"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/styleTokensProvider
@@ -68,6 +70,7 @@ function PlasmicAbout__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const globalVariants = _useGlobalVariants();
   const styleTokensClassNames = _useStyleTokens();
   const styleTokensClassNames_antd_5_hostless =
     useStyleTokens_antd_5_hostless();
@@ -166,7 +169,11 @@ function PlasmicAbout__RenderFunc(props) {
                 "__wab_instance",
                 sty.sectionQuicklinksTable
               )}
-              columns={"_4Column"}
+              columns={
+                hasVariant(globalVariants, "screen", "tablet")
+                  ? undefined
+                  : "_4Column"
+              }
               name={"ASSH About Quicklinks"}
             />
           </div>

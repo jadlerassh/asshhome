@@ -89,23 +89,12 @@ function PlasmicContentfulContents__RenderFunc(props) {
         code={(() => {
           try {
             return (() => {
-              let html = "";
-              if ($props.contents) {
-                $props.contents.forEach(item => {
-                  if (item.content) {
-                    item.content.forEach(citem => {
-                      if (citem.nodeType == "hyperlink") {
-                        citem.content.forEach(itemnode => {
-                          html += `<span class="${citem.nodeType}"><a href="${citem.data.uri}">${itemnode.value}</a></span>`;
-                        });
-                      } else {
-                        html += `<span class="${item.nodeType}">${citem.value}</span>`;
-                      }
-                    });
-                  }
-                });
+              let cards = $props.userdetails?.userDashboard?.cards;
+              if (cards) {
+                const card = cards.find(item => item.name === "myepubs");
+                return card ? card.cardItems : null;
               }
-              return `<div class="contentfulcontents">${html}</div>`;
+              return null;
             })();
           } catch (e) {
             if (

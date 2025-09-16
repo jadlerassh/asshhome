@@ -46,6 +46,11 @@
     grid-column: 4;
   }
 }
+@media (max-width: 240px) {
+  .root > * {
+    grid-column: 4;
+  }
+}
 .sectionAdPlaceholder__vpnjz:global(.__wab_instance) {
   max-width: 100%;
   width: 100%;
@@ -100,8 +105,12 @@
     margin: 0px 0px 50px;
   }
 }
+.htmlContentfulHtmlLoader:global(.__wab_instance) {
+  max-width: 100%;
+}
 .itemSectionTitleDescriptionItem:global(.__wab_instance) {
   max-width: 100%;
+  margin: 20px 0px;
 }
 .freeBox__kc7Pq {
   display: flex;
